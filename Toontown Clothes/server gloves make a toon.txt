@@ -1,0 +1,7 @@
+mport toontown
+try:newToonRandom
+except:newToonRandom = toontown.toon.ToonDNA.ToonDNA.newToonRandom
+def createNewRandomToon(self, **kwds):
+    newToonRandom(self)
+    self.gloveColor=2;self.gender=kwds['gender']
+toontown.toon.ToonDNA.ToonDNA.newToonRandom = createNewRandomToon

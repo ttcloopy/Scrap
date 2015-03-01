@@ -1,0 +1,66 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def emote01():
+   base.localAvatar.b_setEmoteState(01,1)
+def emote03():
+   base.localAvatar.b_setEmoteState(03,1)
+def emote04():
+   base.localAvatar.b_setEmoteState(04,1)
+def emote05():
+   base.localAvatar.b_setEmoteState(05,1)
+def emote06():
+   base.localAvatar.b_setEmoteState(06,1)
+def emote07():
+   base.localAvatar.b_setEmoteState(07,1)
+def emote10():
+   base.localAvatar.b_setEmoteState(10,1)
+def emote11():
+   base.localAvatar.b_setEmoteState(11,1)
+def emote12():
+   base.localAvatar.b_setEmoteState(12,1)
+def emote13():
+   base.localAvatar.b_setEmoteState(13,1)
+def emote14():
+   base.localAvatar.b_setEmoteState(14,1)
+def emote15():
+   base.localAvatar.b_setEmoteState(15,1)
+def emote17():
+   base.localAvatar.b_setEmoteState(17,1)
+def emote18():
+   base.localAvatar.b_setEmoteState(18,1)
+def emote20():
+   base.localAvatar.b_setEmoteState(20,1)
+def emote21():
+   base.localAvatar.b_setEmoteState(21,1)
+def emote22():
+   base.localAvatar.b_setEmoteState(22,1)
+def emote23():
+   base.localAvatar.b_setEmoteState(23,1)
+def emote24():
+   base.localAvatar.b_setEmoteState(24,1)
+def about():
+   base.localAvatar.setSystemMessage(0, 'All Emotes Button Code Made by Nikki. Subscribe to my YouTube Channel: Dary27 And my aim: NikkiNomsRawr.')
+
+b1 = DirectButton(text = ("Happy", "Happy", "Happy ", "Happy"), scale=.05, pos = (.07,0,-.9), command=emote01)
+b3 = DirectButton(text = ("Angry", "Angry", "Angry", "Angry"), scale=.05, pos = (.22,0,-.9), command=emote03)
+b4 = DirectButton(text = ("Sleep", "Sleep", "Sleep", "Sleep"), scale=.05, pos = (.35,0,-.9), command=emote04)
+b5 = DirectButton(text = ("Shrug", "Shrug", "Shrug", "Shrug"), scale=.05, pos = (.48,0,-.9), command=emote05)
+b6 = DirectButton(text = ("Dance", "Dance", "Dance", "Dance"), scale=.05, pos = (-.08,0,-.9), command=emote06)
+b7 = DirectButton(text = ("Think", "Think", "Think", "Think"), scale=.05, pos = (-.22,0,-.9), command=emote07)
+b10 = DirectButton(text = ("Cringe", "Cringe", "Cringe", "Cringe"), scale=.05, pos = (-.35,0,-.9), command=emote10)
+b11 = DirectButton(text = ("Confused", "Confused", "Confused", "Confused"), scale=.05, pos = (-.53,0,-.9), command=emote11)
+b12 = DirectButton(text = ("Belly Flop", "Belly Flop", "Belly Flop", "Belly Flop"), scale=.05, pos = (-.74,0,-.9), command=emote12)
+b13 = DirectButton(text = ("Bow", "Bow", "Bow", "Bow"), scale=.05, pos = (.62,0,-.9), command=emote13)
+b14 = DirectButton(text = ("Banana Peel", "Banana Peel", "Banana Peel", "Banana Peel"), scale=.05, pos = (-.74,0,-.97), command=emote14)
+b15 = DirectButton(text = ("Resisance Salute", "Resisance Salute", "Resisance Salute", "Resisance Salute"), scale=.05, pos = (-.41,0,-.97), command=emote15)
+b17 = DirectButton(text = ("Yes", "Yes", "Yes", "Yes"), scale=.05, pos = (-.17,0,-.97), command=emote17)
+b18 = DirectButton(text = ("No", "No", "No", "No"), scale=.05, pos = (-.08,0,-.97), command=emote18)
+b20 = DirectButton(text = ("Surprised", "Surprised", "Surprised", "Surprised"), scale=.05, pos = (.07,0,-.97), command=emote20)
+b21 = DirectButton(text = ("Cry", "Cry", "Cry", "Cry"), scale=.05, pos = (.22,0,-.97), command=emote21)
+b22 = DirectButton(text = ("Delighted", "Delighted", "Delighted", "Delighted"), scale=.05, pos = (.39,0,-.97), command=emote22)
+b23 = DirectButton(text = ("Furious", "Furious", "Furious", "Furious"), scale=.05, pos = (.59,0,-.97), command=emote23)
+b24 = DirectButton(text = ("Laugh", "Laugh", "Laugh", "Laugh"), scale=.05, pos = (-.92,0,-.9), command=emote24)
+b25 = DirectButton(text = ("About Nikki's Emote Buttons...", "About Nikki's Emote Buttons...", "About Nikki's Emote Buttons...", "About Nikki's Emote Buttons..."), scale=.05, pos = (-.00,0,.9), command=about)

@@ -1,0 +1,237 @@
+base.accept("0", base.localAvatar.collisionsOff, [])
+base.accept("9", base.localAvatar.collisionsOn, [])
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f3',self.Control)
+  def Control(self):
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.book.pages[1].showPop = 1 
+    base.localAvatar.setSystemMessage(0, 'Gloabal Teleport Activated')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f4',self.Control)
+  def Control(self):
+    import toontown 
+    def new(): 
+     return True 
+    def new2(*a,**k): 
+     return 2 
+    base.cr.isPaid = new 
+    base.cr.isParentPasswordSet = new 
+    toontown.toon.LocalToon.LocalToon.getGameAccess = new2 
+    base.localAvatar.setSystemMessage(0, 'Membership Activated')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f7',self.Control)
+  def Control(self):
+    base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+    base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+    base.localAvatar.setSystemMessage(0, 'All Pet Trick Phrases And All Emotions Activated')
+c = Control()
+
+
+
+base.localAvatar.setSystemMessage(1,'Hello, You want to jump off the land? Need a parachute? Heres the parachute info!')
+base.localAvatar.setSystemMessage(1,'First, Jump off the land, Then, press 0 and 9 rapidly :-D ')
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(0)
+    base.localAvatar.setSystemMessage(0, 'Cog Disguise Activated')
+i = Index()
+
+
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(-1)
+    base.localAvatar.setSystemMessage(0, 'Cog Disguise De-Activated')
+i = Index()
+
+
+
+
+
+peel = loader.loadModel('phase_5/models/props/banana-peel-mod.bam')
+peel.reparentTo(render)
+peel.setPos(9.217,169.440,134.269)
+peel.setHpr(-212,0,0)
+peel.setScale(1)
+hub1 = loader.loadModel("phase_8/models/neighborhoods/daisys_garden.bam")
+hub1.reparentTo(render)
+hub1.setPos(66.975,318.344,133.717)
+hub1.setHpr(0,0,0)
+hub1.setScale(1)
+hub1.setColor(0.3,0.3,0.3)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(49.264,242.925,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(52.973,253.330,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(55.614,264.864,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(58.372,278.934,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(60.797,291.643,133.717)
+environ.setScale(1) 
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+environ.reparentTo(render) 
+environ.setPos(62.573,305.715,133.717) 
+environ.setHpr(74,0,0) 
+environ.setScale(1) 
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(105.237,412.920,133.742)
+goon2.setHpr(180,0,0) 
+goon2.setScale(2)
+environ = loader.loadModel('phase_6/models/neighborhoods/minnies_melody_land.bam')
+environ.reparentTo(render)
+environ.setPos(66.204,411.173,138.204)
+environ.setHpr(74,0,0)
+environ.setScale(0.1)
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+ceo.setPos(22.379,358.211,133.742)
+ceo.loop("walk")
+ceo.setHpr(120,0,0)
+ceo.setScale(1)
+
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(42.540,360.929,133.742)
+goon2.setHpr(180,0,0) 
+goon2.setScale(1)
+goon2 = Actor("phase_9/models/char/Cog_Goonie-zero.bam",{"walk":"phase_9/models/char/Cog_Goonie-walk.bam"}) 
+goon2.reparentTo(render) 
+goon2.loop("walk") 
+goon2.setPos(7.568,375.957,133.742)
+goon2.setHpr(180,0,0) 
+goon2.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(62.760,276.718,133.742)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(87.688,274.047,137.659)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(111.225,266.293,142.126)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(132.184,254.703,146.360)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(161.507,248.202,150.835)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(204.029,251.757,150.694)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+elepaint1 = loader.loadModel("phase_11/models/lawbotHQ/LB_couchA.bam")
+elepaint1.reparentTo(render)
+elepaint1.setHpr(90,0,0)
+elepaint1.setPos(160.938,262.165,150.848)
+elepaint1.setColor(0,1,0)
+elepaint1 = loader.loadModel("phase_11/models/lawbotHQ/LB_couchA.bam")
+elepaint1.reparentTo(render)
+elepaint1.setHpr(90,0,0)
+elepaint1.setPos(160.390,238.673,150.880)
+elepaint1.setColor(0,1,0)
+cheese1 = Actor("phase_3.5/models/char/suitA-mod.bam",{"walk":"phase_4/models/char/suitA-neutral.bam"})
+cheese1.reparentTo(render)
+cheese1.loop("walk")
+j = cheese1.find('**/joint_head')
+mole = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+bigcheese = mole.find('**/bigcheese')
+bigcheese.setColor(0,0,3)
+bigcheese.reparentTo(j)
+hands = cheese1.find('**/hands')
+hands.setColor(0.345, 0.333, 1, 0.000)
+cheese1.setPos(209.385,249.971,150.763)
+cheese1.setScale(1)
+cheese1.setHpr(420,0,0)
+environ = loader.loadModel('phase_3.5/models/props/explosion.bam')
+environ.reparentTo(render)
+environ.setPos(209.385,249.971,150.763)
+environ.setHpr(315,0,0)
+environ.setScale(3.5)
+lobby1 = loader.loadModel("phase_10/models/cashbotHQ/ZONE31a.bam")
+lobby1.reparentTo(render)
+lobby1.setPos(-84.207,306.108,133.169)
+lobby1.setHpr(270,0,0)
+lobby1.setScale(1)
+lobby1.setColor(0.3,0.3,0.3)
+crate10 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+crate10.reparentTo(render)
+crate10.setPos(-68.406,326.685,133.194)
+crate10.setHpr(0,0,0)
+crate10.setScale(1)
+crate11 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+crate11.reparentTo(render)
+crate11.setPos(-73.477,326.573,133.194)
+crate11.setHpr(0,0,0)
+crate11.setScale(1)
+crate12 = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+crate12.reparentTo(render)
+crate12.setPos(-74.492,319.494,133.194)
+crate12.setHpr(0,0,0)
+crate12.setScale(0.6)
+table1 = loader.loadModel('phase_12/models/bossbotHQ/BanquetTableChairs.bam')
+table1.reparentTo(render)
+table1.setPos(-85.490,306.368,133.194)
+table1.setHpr(0,0,0)
+table1.setScale(1)

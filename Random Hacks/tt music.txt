@@ -1,0 +1,116 @@
+bgMusic1 = base.loader.loadSfx("phase_11/audio/bgm/LB_courtyard.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+ 
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/BossBot_CEO_v2.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+ 
+
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/Bossbot_Entry_v1.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+ 
+ 
+ 
+bgMusic1 = base.loader.loadSfx("phase_4/audio/bgm/new_years_fireworks_music.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+ 
+
+from direct.interval.IntervalGlobal import *
+def wakeUp():
+    base.localAvatar.wakeUp()
+def onTime():
+  seq = Sequence()
+  seq.append(Func(wakeUp))
+  seq.append(Wait(.1))
+  seq.append(Func(onTime))
+  seq.start()
+onTime()
+ 
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('1',self.Index)
+  def Index(self):
+    base.localAvatar.putOnSuit('hh')
+    base.localAvatar.setSystemMessage(0, 'Head Hunter Disguise Activated.')
+    base.localAvatar.cogLevels=[9, 9, 9, 9]
+i = Index()
+ 
+
+from direct.showbase import DirectObject
+class Bob(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('2',self.Index)
+  def Bob(self):
+    base.localAvatar.putOnSuit('j')
+    base.localAvatar.setSystemMessage(0, 'Head Hunter Disguise Deactivated.')
+x = Bob()
+ 
+
+from direct.showbase import DirectObject
+class Bob(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('3',self.Index)
+  def Bob(self):
+    base.localAvatar.d_setAnimState("Disconnected")
+    base.localAvatar.setSystemMessage(0, 'District Disconnected.')
+x = Bob()
+ 
+
+base.localAvatar.d_setAnimState("Disconnected")
+ 
+base.localAvatar.cogLevels=[999, 999, 999, 999]
+base.localAvatar.putOnSuit('hh')
+base.localAvatar.putOnSuit('mh')
+base.localAvatar.putOnSuit('rb')
+base.localAvatar.putOnSuit('bs')
+base.localAvatar.putOnSuit('tm')
+base.localAvatar.putOnSuit('m')
+base.localAvatar.putOnSuit('pp')
+base.localAvatar.putOnSuit('bw')
+base.localAvatar.putOnSuit('hh')
+base.localAvatar.putOnSuit('sd')
+base.localAvatar.putOnSuit('cr')
+base.localAvatar.putOnSuit('b')
+base.localAvatar.putOnSuit('ls')
+base.localAvatar.putOnSuit('ym')
+base.localAvatar.putOnSuit('mm')
+base.localAvatar.putOnSuit('ds')
+base.localAvatar.putOnSuit('dt')
+base.localAvatar.putOnSuit('nc')
+base.localAvatar.putOnSuit('tf')
+base.localAvatar.putOnSuit('ms')
+base.localAvatar.putOnSuit('p')
+ 
+base.localAvatar.showHpText('you suck')
+base.localAvatar.showHpString('you suck')
+ 
+base.localAvatar.showAllBounds()
+ 
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/Bossbot_Factory_v1.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+ 
+ 
+ 
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setInvasionStatus(msgType=0, cogType="mm", numRemaining=1000, skeleton=1)
+    
+import random
+cogs = base.cr.doFindAllMatching("render")
+cogs.remove(base.localAvatar)
+for cogs in cogs:
+    level = random.randint(50,50)
+    cogs.setSkelecog(True)
+    cogs.setSkeleRevives(1)
+    cogs.setName("Salty's Slave\nSlavebot\nLevel " + str(level))
+    cogs.setColor(1, 0, 0)
+ 
+base.localAvatar.d_setAnimState("Disconnected")
+ 
+base.talkAssistant.sendOpenTalk(' \n' * 100) 

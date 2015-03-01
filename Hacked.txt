@@ -1,0 +1,25 @@
+base.localAvatar.setPos(-1480, 944, 504)
+
+start = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+start.reparentTo(render)
+start.setPos(-1476, 947, 504)
+start.setHpr(60, 0, 0)
+start.setScale(5)
+
+tunnel = loader.loadModel("phase_12/models/bossbotHQ/Connector_Tunnel_A")
+tunnel.reparentTo(render)
+tunnel.setPos(-1508, 969, 504)
+tunnel.setHpr(90,0,0) 
+
+#Textures
+first = start.findAllMatches('**/')
+firstk = loader.loadTexture("Design/rainbow_smoke_1116.jpg")
+first.setTexture(firstk, 1)
+
+first = pier.findAllMatches('**/')
+firstk = loader.loadTexture("Design/digital_rainbow_1115.jpg")
+first.setTexture(firstk, 1)
+
+first = Gear.findAllMatches('**/')
+firstk = loader.loadTexture("Design/New.input.gear-smaller.jpg")
+first.setTexture(firstk, 1)

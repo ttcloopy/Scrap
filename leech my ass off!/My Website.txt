@@ -1,0 +1,26 @@
+Account Information 
+Domain frenzyhacks.net46.net 
+Username a8080389 
+Password owxuxbhw1  
+Disk Usage 0 / 1500.0 MB 
+Bandwidth 100000 MB (100GB) 
+Home Root /home/a8080389 
+Server Name server12.000webhost.com 
+IP Address 173.212.215.162 
+Apache ver. 2.2.13 (Unix) 
+PHP version 5.2.* 
+MySQL ver. 5.0.81-community 
+Activated On Setup in Progress.. 
+Status Verification in progress  
+
+
+
+
+Cpanel Username:        fees0_7297022
+Cpanel Password:        owxuxbhw
+Your URL:               http://frenzyhacks.0fees.net or http://www.frenzyhacks.0fees.net
+FTP Server :            ftp.0fees.net
+FTP Login :             fees0_7297022
+FTP Password :          owxuxbhw
+MySQL Database Name:    MUST CREATE IN CPANEL
+MySQL Username :        fees0_7297022

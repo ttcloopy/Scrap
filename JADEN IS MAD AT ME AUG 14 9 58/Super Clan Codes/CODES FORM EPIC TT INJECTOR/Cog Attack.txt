@@ -1,0 +1,42 @@
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+
+cheesesss = Actor("phase_3.5/models/char/suitA-mod.bam",{"walk":"phase_4/models/char/suitA-neutral.bam"})
+cheesesss.reparentTo(render)
+cheesesss.loop("walk")
+mole = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+bigcheese = mole.find('**/bigcheese')
+bigcheese.setColor(0,0,3)
+hands = cheesesss.find('**/hands')
+hands.setColor(255,0,0)
+cheesesss.setPos(42.663,-84.125,1.533)
+cheesesss.setScale(1.9)
+cheesesss.setHpr((0,0,0))
+
+
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+{"head":{"cogwave":"phase_9/models/char/bossCog-head-wave.bam", \
+"run":"phase_9/models/char/bossCog-head-wave.bam"}, \
+"torso":{"cogwave":"phase_9/models/char/bossCog-torso-wave.bam", \
+"run":"phase_9/models/char/bossCog-torso-wave.bam"}, \
+"legs":{"cogwave":"phase_9/models/char/bossCog-legs-wave.bam", \
+"run":"phase_9/models/char/bossCog-legs-wave.bam"} \
+})
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+ceotreads = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+ceorear = ceo.find('**/joint_axle')
+ceotreads.reparentTo(ceorear)
+ceo.setPos(-413.104,-731.761,-499.975)
+ceo.loop("cogwave")
+ceo.setHpr(0,0,0)

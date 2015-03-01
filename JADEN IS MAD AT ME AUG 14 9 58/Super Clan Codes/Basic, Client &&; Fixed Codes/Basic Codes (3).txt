@@ -1,0 +1,188 @@
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1
+
+base.localAvatar.b_setAnimState(('Died'))
+base.localAvatar.b_setAnimState('Sad')
+base.localAvatar.takeDamage((500))
+base.localAvatar.b_setAnimState(('neutral'))
+base.localAvatar.setAnimState(('Sleep'))
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.b_setAnimState('CatchEating')
+base.localAvatar.b_setAnimState('Flattened')
+base.localAvatar.b_setAnimState('Squish')
+base.localAvatar.b_setAnimState('swim')	
+base.localAvatar.b_setAnimState(('dive'))
+base.localAvatar.enterSitStart()
+base.localAvatar.b_setAnimState(('cringe'))
+base.localAvatar.b_setAnimState('Push')
+base.localAvatar.b_setAnimState(('victory'))
+base.localAvatar.b_setAnimState(('jumpSquat'))
+base.localAvatar.b_setAnimState(('FallDown'))
+base.localAvatar.loop('reel')
+base.localAvatar.b_setAnimState('walk')
+base.localAvatar.b_setAnimState('run')
+base.localAvatar.b_setAnimState(('CogThiefRunning'))
+base.localAvatar.b_setAnimState(('OpenBook'))
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.b_setAnimState('TeleportOut')
+base.localAvatar.b_setAnimState('TeleportIn')
+base.localAvatar.b_setAnimState(('TeleportingOut'))
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setAnimState('ScientistLessWork')
+base.localAvatar.b_setAnimState(('ScientistJealous'))
+base.localAvatar.b_setAnimState('GolfPuttLoop')
+base.localAvatar.b_setAnimState(('GolfPuttSwing'))
+base.localAvatar.b_setAnimState(('GolfRotateRight'))
+base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+base.localAvatar.b_setAnimState('GolfGoodPutt')
+base.localAvatar.b_setAnimState('GolfBadPutt')
+
+CLIENT LOOPS
+base.localAvatar.loop('swing')
+base.localAvatar.loop('throw')
+base.localAvatar.loop('swing')
+base.localAvatar.loop('climb')
+base.localAvatar.loop('juggle')
+base.localAvatar.loop('hypnotize')
+base.localAvatar.loop('tickle')
+base.localAvatar.loop("sprinkle-dust")
+base.localAvatar.loop("happy-dance")
+base.localAvatar.loop("hold-bottle")
+base.localAvatar.loop("hold-magnet")
+base.localAvatar.loop("water-gun")
+base.localAvatar.loop("hypnotize")
+base.localAvatar.loop("firehose")
+base.localAvatar.loop("struggle")
+base.localAvatar.loop("juggle")
+base.localAvatar.loop("smooch")
+base.localAvatar.loop("tickle")
+base.localAvatar.loop("climb")
+base.localAvatar.loop("melt")
+base.localAvatar.loop("spit")
+base.localAvatar.loop("lose")
+
+
+base.localAvatar.collisionsOff()
+base.localAvatar.collisionson()
+
+base.wireframeOn()
+base.wireframeOff()
+
+base.localAvatar.physControls.avatarControlForwardSpeed=200
+base.localAvatar.physControls.avatarControlRotateSpeed=1000
+base.localAvatar.physControls.avatarControlReverseSpeed=200
+base.localAvatar.physControls.avatarControlJumpForce = 150
+
+messenger.send([base.localAvatar.b_setAnimState('victory', 25)])
+messenger.send([base.localAvatar.b_setAnimState('victory', 0.2)])
+
+base.cr.sendSetZoneMsg(7000) 
+
+base.localAvatar.setHpr(0,90,0)
+
+Steal Clothes:
+messenger.send('clear out toon interior')
+
+Man skirt!
+closetn = base.cr.doFindAll("closet")
+for closetn in base.cr.doFindAll("closet"):
+ messenger.send("purchaseDone-" + str(closetn.doId))
+
+base.localAvatar.setSCResistance(100) 
+base.localAvatar.setSCResistance(1) 
+base.localAvatar.setSCResistance(200) 
+
+base.localAvatar.setName(('whatevernameuwant'))
+base.localAvatar.setCheesyEffect(14,0,0)
+base.localAvatar.setCheesyEffect(1, 0, 0) - Big Head
+base.localAvatar.setCheesyEffect(2, 0, 0) - Small Head
+base.localAvatar.setCheesyEffect(3, 0, 0) - Big Legs
+base.localAvatar.setCheesyEffect(4, 0, 0) - Small legs
+base.localAvatar.setCheesyEffect(5, 0, 0) - big toon
+base.localAvatar.setCheesyEffect(6, 0, 0) - Small toon
+base.localAvatar.setCheesyEffect(7, 0, 0) - Flat toon with face
+base.localAvatar.setCheesyEffect(8, 0, 0) - Flat toon with no face
+base.localAvatar.setCheesyEffect(9, 0, 0) - See through toon
+base.localAvatar.setCheesyEffect(10, 0, 0) - No color
+base.localAvatar.setCheesyEffect(11, 0, 0) - Ghost
+base.localAvatar.setCheesyEffect(12, 0, 0) - Pumkin head
+base.localAvatar.setCheesyEffect(13, 0, 0) - Big and white polar bear
+base.localAvatar.setCheesyEffect(14, 0, 0) - Snow man head
+base.localAvatar.setCheesyEffect(15, 0, 0) - nothing
+
+PIES!!
+base.localAvatar.numPies = 99 
+base.localAvatar.setPieType(7)
+base.localAvatar.setNumPies(120)
+base.localAvatar.setPieType(-3)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = false
+base.localAvatar.setPieType(-7)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = false
+base.localAvatar.ThrowGagButtonMaxed = true
+base.localAvatar.setPieType(0, 1, 2, 3, 4, or 5)
+base.localAvatar.setNumPies(20, 25, 30, 35, 40, or 80)
+base.localAvatar.ThrowGagButtonMaxed = false
+base.localAvatar.setPieType(7)
+base.localAvatar.setNumPies(12000)
+base.localAvatar.ThrowGagButtonMaxed = true
+base.localAvatar.setPieType(7)
+base.localAvatar.setPieType(5)
+base.localAvatar.setPieType(1-7)
+base.localAvatar.setEvidenceThrow = 0
+base.localAvatar.setRefillThrow()
+base.localAvatar.ThrowGagButtonMaxed = false 
+
+COG SUIT!
+
+base.localAvatar.takeOffSuit()
+base.localAvatar.setCogIndex(1) = lawbot suit
+base.localAvatar.setCogIndex(2) = cash bot suit
+base.localAvatar.setCogIndex(3) = sellbot suit
+base.localAvatar.setCogIndex(0) = bossbot suit
+
+CHANGE COLORS
+
+base.localAvatar.setColor(1, 2)
+base.localAvatar.setColor(1,1,0)
+base.localAvatar.setColor(1,0,0) - red
+base.localAvatar.setColor(0,1,0) - green
+base.localAvatar.setColor(0,0,1) - blue
+base.localAvatar.setColor(0,1,1) - yellow
+base.localAvatar.setColor(0,0,0) - black
+base.localAvatar.setColor(1,1,1) - white
+base.localAvatar.setColor(1,0,1) - purple
+
+base.localAvatar.setControlEffect('sit', 0.65)
+base.localAvatar.setControlEffect('swim', 0.8)
+
+
+GHOST!
+
+base.localAvatar.setGhostMode(8)
+base.localAvatar.setGhostMode(2)
+base.localAvatar.setGhostMode(0)
+base.localAvatar.setGhostMode(22)
+
+
+base.localAvatar.enableBlend()
+base.localAvatar.setScale(<size you want to be, 1 is normal.>)
+base.localAVatar.setStyle(<?>)
+base.localAvatar.setHeight(<Default value varies with character>)
+base.localAvatar.stunToon()
+base.oobe()
+

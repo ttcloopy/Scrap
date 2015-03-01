@@ -1,0 +1,305 @@
+
+base.cr.sendSetZoneMsg(1000000)
+base.camLens.setFar(100000000)
+base.localAvatar.setPos(0, 6, 0.025)
+base.localAvatar.setH(183)
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from direct.showbase.DirectObject import DirectObject
+from pandac.PandaModules import CollisionTraverser, CollisionHandlerEvent
+from pandac.PandaModules import CollisionNode, CollisionSphere
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.gui.DirectGui import DirectFrame
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+accessID = 903129
+
+newsLine1 = "Welcome to TTGlobal! V.BETA \n \n This is where we will post the latest about the land. \n"
+newsLine2 = "Such as New Areas, Features, and More! \n Be sure to keep checking, as we update often. \n"
+newsLine3 = "You will always be able to get the Version here. \n \n Until next time. \n ~ Team FD ~"
+getLatestNews = newsLine1 + newsLine2 + newsLine3
+blankTextNode = ""
+
+newsFrame = DirectFrame(frameColor=(1, 1, 1, 1),
+frameSize=(-1, 1, -0.3, 1),
+pos=(-0.010, 0.013, 0.5))
+
+
+newsText = OnscreenText(text = blankTextNode, pos = (-0.010, 0.9),
+scale = 0.07,fg=(0,0,0,1),align=TextNode.ACenter,mayChange=1)
+newsFrame.hide()
+
+def openNews():
+    newsFrame.show()
+    newsText.setText(getLatestNews)
+    mnuBtn1.hide()
+    nwsCloseBtn.show()
+
+def closeNews():
+    newsFrame.hide()
+    newsText.setText(blankTextNode)
+    mnuBtn1.show()
+    nwsCloseBtn.hide()
+
+mnuBtn1 = DirectButton(text = ("NEWS", "news", "news", "NEWS"), scale=0.07, pos = (-1.24, 0.710, 0.710), command=openNews)
+nwsCloseBtn = DirectButton(text = ("CLOSE", "close", "close", "close"), scale=.06, pos = (0, 0, 0.25), command=closeNews)
+nwsCloseBtn.hide()
+
+environ1 = loader.loadModel("phase_8/models/minigames/tag_arena_DG.bam")
+environ1.reparentTo(render)
+
+sky1 = loader.loadModel("phase_3.5/models/props/TT_sky.bam")
+sky1.reparentTo(render)
+
+gfdHead = loader.loadModel("phase_3/models/char/cat-heads-1000.bam")
+gfdHead.setPos(9999,9999,9999)
+gfdHead.setHpr(180,0,0)
+
+gfdHead.find('**/head-short').setColor(0.242, 0.742, 0.516, 1)
+gfdHead.find('**/head-front-short').setColor(0.242, 0.742, 0.516, 1)
+gfdHead.find('**/ears-short').setColor(0.242, 0.742, 0.516, 1)
+
+gfdBody = Actor({"torso":"phase_3/models/char/dogLL_Skirt-torso-1000.bam", \
+"legs":"phase_3/models/char/dogSS_Shorts-legs-1000.bam"}, \
+
+{"torso":{"neutral":"phase_3/models/char/dogLL_Skirt-torso-neutral.bam"}, \
+"legs":{"neutral":"phase_3/models/char/dogSS_Shorts-legs-neutral.bam"} \
+})
+
+gfdShirt = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+gfdSleeves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+gfdManSkirt = loader.loadTexture("phase_3/maps/desat_shorts_10.jpg")
+gfdBody.find('**/torso-bot').setColor(0.996, 0.695, 0.512, 1)
+
+gfdBody.find('**/torso-top').setTexture(gfdShirt, 1)
+gfdBody.find('**/torso-bot').setTexture(gfdManSkirt, 1)
+gfdBody.find('**/sleeves').setTexture(gfdSleeves, 1)
+
+gfdBody.attach("torso", "legs", "joint_hips")
+
+gfdGloves = gfdBody.find('**/hands')
+gfdGloves.setColor(0.97,0.3,0.3,1)
+
+gfdBody.reparentTo(render)
+gfdBody.loop("neutral")
+
+neck = gfdBody.find('**/neck')
+neck.setColor(0.242, 0.742, 0.516, 1)
+gfdBody.setScale(0.76)
+
+gfdBody.find('**/arms').setColor(0.242, 0.742, 0.516, 1)
+gfdBody.find('**/legs').setColor(0.242, 0.742, 0.516, 1)
+gfdBody.find('**/feet').setColor(0.242, 0.742, 0.516, 1)
+
+gfdHeadJoint = gfdBody.find('**/joint_head')
+gfdHead.find('**/muzzle-short-neutral').reparentTo(gfdHeadJoint)
+gfdHead.find('**/joint_pupilR_short').reparentTo(gfdHeadJoint)
+gfdHead.find('**/joint_pupilL_short').reparentTo(gfdHeadJoint)
+gfdHead.find('**/ears-short').reparentTo(gfdHeadJoint)
+gfdHead.find('**/head-front-short').reparentTo(gfdHeadJoint)
+gfdHead.find('**/head-short').reparentTo(gfdHeadJoint)
+gfdHead.find('**/eyes-short').reparentTo(gfdHeadJoint)
+
+gfdc1 = gfdBody.attachNewNode(CollisionNode('colNode'))
+gfdc1.node().addSolid(CollisionSphere(0,0,4,1))
+
+gfdp1 = CollisionHandlerPusher()
+gfdp1.addCollider(gfdc1, gfdBody)
+
+gfdc2 = gfdBody.attachNewNode(CollisionNode('colNode'))
+gfdc2.node().addSolid(CollisionSphere(0,0,6,1))
+
+gfdp2 = CollisionHandlerPusher()
+gfdp2.addCollider(gfdc2, gfdBody)
+
+gfdc3 = gfdBody.attachNewNode(CollisionNode('colNode'))
+gfdc3.node().addSolid(CollisionSphere(0,0,1,1))
+
+gfdp3 = CollisionHandlerPusher()
+gfdp3.addCollider(gfdc3, gfdBody)
+
+getEmblemSource = loader.loadModel("phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle.bam")
+getEmblemSource.reparentTo(render)
+emblemSourceText = loader.loadTexture("TTGlobal/Textures/gamegui_palette_3clla_1.jpg")
+getEmblemSource.setTexture(emblemSourceText, 1)
+getEmblemSource.hide()
+emblem = getEmblemSource.find('**/whistleIcon')
+emblem.reparentTo(gfdBody)
+emblem.show()
+emblem.setScale(3)
+emblem.setZ(2)
+emblemSpin = emblem.hprInterval(3, Vec3(360, 0, 0))
+emblemSpin.loop()
+emblemText = loader.loadTexture("TTGlobal/Textures/gamegui_palette_3clla_1.jpg")
+emblem.setTexture(emblemText, 1)
+
+kartTransport1 = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport1.reparentTo(render)
+kartTransport1.setPos(13, 16, 0.025)
+kartTransport1.setH(142)
+kartTransport1.setScale(0.8)
+
+kartTransport2 = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport2.reparentTo(render)
+kartTransport2.setPos(-13, 17, 0.025)
+kartTransport2.setH(219)
+kartTransport2.setScale(0.8)
+
+kartTransport3 = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport3.reparentTo(render)
+kartTransport3.setPos(-21, -5.5, 0.025)
+kartTransport3.setH(-72)
+kartTransport3.setScale(0.8)
+
+kartTransport4 = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport4.reparentTo(render)
+kartTransport4.setPos(-0.107,-22,0.025)
+kartTransport4.setH(0)
+kartTransport4.setScale(0.8)
+
+kartTransport5 = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport5.reparentTo(render)
+kartTransport5.setPos(20,-6,0.025)
+kartTransport5.setH(75)
+kartTransport5.setScale(0.8)
+
+counter1 = loader.loadModel("phase_3.5/models/modules/counterShort.bam")
+counter1.reparentTo(gfdBody)
+counter1.setY(3)
+counter1.setX(5.75)
+
+counterc1 = counter1.attachNewNode(CollisionNode('colNode'))
+counterc1.node().addSolid(CollisionSphere(-2,-0.5,1,1))
+
+counterp1 = CollisionHandlerPusher()
+counterp1.addCollider(counterc1, counter1)
+
+counterc2 = counter1.attachNewNode(CollisionNode('colNode'))
+counterc2.node().addSolid(CollisionSphere(-4,-0.5,1,1))
+
+counterp2 = CollisionHandlerPusher()
+counterp2.addCollider(counterc2, counter1)
+
+counterc3 = counter1.attachNewNode(CollisionNode('colNode'))
+counterc3.node().addSolid(CollisionSphere(-6,-0.5,1,1))
+
+counterp3 = CollisionHandlerPusher()
+counterp3.addCollider(counterc3, counter1)
+
+counterc4 = counter1.attachNewNode(CollisionNode('colNode'))
+counterc4.node().addSolid(CollisionSphere(-8,-0.5,1,1))
+
+counterp4 = CollisionHandlerPusher()
+counterp4.addCollider(counterc4, counter1)
+
+counterc5 = counter1.attachNewNode(CollisionNode('colNode'))
+counterc5.node().addSolid(CollisionSphere(-9.3,-0.5,1,1))
+
+counterp5 = CollisionHandlerPusher()
+counterp5.addCollider(counterc5, counter1)
+
+environ1.find('**/hedge').setColor(0.8, 0.3, 0.7)
+environ1.find('**/ground').setColor(0.8, 0.3, 0.7)
+environ1.find('**/trellis').setColor(0.8, 0.3, 0.7)
+environ1.find('**/trellis1').setColor(0.8, 0.3, 0.7)
+environ1.find('**/trellis2').setColor(0.8, 0.3, 0.7)
+environ1.find('**/trellis3').setColor(0.8, 0.3, 0.7)
+environ1.find('**/trellis4').setColor(0.8, 0.3, 0.7)
+environ1.find('**/trees').setColor(0.8, 0.3, 0.7)
+environ1.find('**/g15').setColor(0.8, 0.3, 0.7)
+environ1.find('**/shadow').setColor(0.8, 0.3, 0.7)
+sky1.setColor(0.8, 0.3, 0.1)
+kartTransport1.setColor(1,1,1)
+kartTransport2.setColor(1,1,1)
+kartTransport3.setColor(1,1,1)
+kartTransport4.setColor(1,1,1)
+kartTransport5.setColor(1,1,1)
+counter1.setColorScale(0.5)
+
+def kartTransport2CollCheck():
+    x = int(base.localAvatar.getX())
+    y = int(base.localAvatar.getY())
+    z = int(base.localAvatar.getZ())
+    
+    if x >= -16 and x <= -9 and z <= 4 and z >= 0 and y <= 20 and y >=11 :
+        print "Land Collisions: \'localAvatar\' has collided with \'kartTransport2\'"
+        mnuBtn1.hide()
+        base.localAvatar.collisionsOff()
+        base.localAvatar.physControls.disableAvatarControls()
+        base.localAvatar.b_setAnimState('Sit')
+        base.localAvatar.setPosHpr(9985,17,0,40,0,0)
+        base.cam.setPos(1, -3, 0)
+        base.camera.setHpr(0.0391477, -0.15114, 0)
+        base.localAvatar.hideBooks()
+
+def waitTillCheckCollisions():
+  seq = Sequence()
+  seq.append(Wait(0.1))
+  seq.append(Func(kartTransport2CollCheck))
+  seq.append(Func(waitTillCheckCollisions))
+  seq.start()
+
+waitTillCheckCollisions()
+
+sky1copy = loader.loadModel("phase_3.5/models/props/TT_sky.bam")
+sky1copy.reparentTo(render)
+sky1copy.setX(9999)
+
+environ1copy = loader.loadModel("phase_8/models/minigames/tag_arena_DG.bam")
+environ1copy.reparentTo(render)
+environ1copy.setX(9999)
+
+kartTransport1copy = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport1copy.reparentTo(render)
+kartTransport1copy.setPos(10012, 16, 0.025)
+kartTransport1copy.setH(142)
+kartTransport1copy.setScale(0.8)
+
+kartTransport2copy = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport2copy.reparentTo(render)
+kartTransport2copy.setPos(9986, 17, 0.025)
+kartTransport2copy.setH(219)
+kartTransport2copy.setScale(0.8)
+
+kartTransport3copy = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport3copy.reparentTo(render)
+kartTransport3copy.setPos(9978, -5.5, 0.025)
+kartTransport3copy.setH(-72)
+kartTransport3copy.setScale(0.8)
+
+kartTransport4copy = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport4copy.reparentTo(render)
+kartTransport4copy.setPos(9998.893,-22,0.025)
+kartTransport4copy.setH(0)
+kartTransport4copy.setScale(0.8)
+
+kartTransport5copy = loader.loadModel("phase_12/models/bossbotHQ/Coggolf_cart3.bam")
+kartTransport5copy.reparentTo(render)
+kartTransport5copy.setPos(10019,-6,0.025)
+kartTransport5copy.setH(75)
+kartTransport5copy.setScale(0.8)
+
+environ1copy.find('**/hedge').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/ground').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/trellis').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/trellis1').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/trellis2').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/trellis3').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/trellis4').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/trees').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/g15').setColor(0.8, 0.3, 0.7)
+environ1copy.find('**/shadow').setColor(0.8, 0.3, 0.7)
+sky1copy.setColor(0.8, 0.3, 0.1)
+kartTransport1copy.setColor(1,1,1)
+kartTransport2copy.setColor(1,1,1)
+kartTransport3copy.setColor(1,1,1)
+kartTransport4copy.setColor(1,1,1)
+kartTransport5copy.setColor(1,1,1)

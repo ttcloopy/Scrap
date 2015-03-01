@@ -1,0 +1,496 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Hacks Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Hacks Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Cold Caller"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 4]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 0
+
+def setText2():
+    bk_text = "Telemarketer"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+    
+
+def setText3():
+    bk_text = "Name Dropper"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 2]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 6]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText4():
+    bk_text = "Glad Hander"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 3]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 7]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText5():
+    bk_text = "Mover Shaker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 4]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 8]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 0
+
+def setText6():
+    bk_text = "Two Face"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 5]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 9]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText7():
+    bk_text = "The Mingler"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 6]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 10]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText8():
+    bk_text = "Mr. Hollywood"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 7]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 11]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText9():
+    bk_text = "Remove"
+    textObject.setText(bk_text)
+    base.localAvatar.takeOffSuit()
+    var = 1
+
+def setText10():
+    bk_text = "Short Change"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 5, 4, 4]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 0
+
+def setText11():
+    bk_text = "Penny Pincher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+    
+
+def setText12():
+    bk_text = "Tightwad"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 2, 2]) 
+    base.localAvatar.setCogLevels([5, 5, 6, 6]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText13():
+    bk_text = "Bean Counter"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 3, 3]) 
+    base.localAvatar.setCogLevels([5, 5, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText14():
+    bk_text = "Number Cruncher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 4, 4]) 
+    base.localAvatar.setCogLevels([5, 5, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 0
+
+def setText15():
+    bk_text = "Money Bags"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 5, 5]) 
+    base.localAvatar.setCogLevels([5, 5, 9, 9]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText16():
+    bk_text = "Loan Shark"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 6, 6]) 
+    base.localAvatar.setCogLevels([5, 5, 10, 10]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText17():
+    bk_text = "Robber Baron"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 7, 7]) 
+    base.localAvatar.setCogLevels([5, 5, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText18():
+    bk_text = "Bottom Feeder"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 4, 4, 4]) 
+    base.localAvatar.setCogParts([99999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 0
+
+def setText19():
+    bk_text = "Bloodsucker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 1, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+    
+
+def setText20():
+    bk_text = "Double Talker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 2, 2, 2]) 
+    base.localAvatar.setCogLevels([5, 6, 6, 6]) 
+    base.localAvatar.setCogParts([999999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText21():
+    bk_text = "Ambulance Chaser"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 3, 3, 3]) 
+    base.localAvatar.setCogLevels([5, 7, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999999, 9999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText22():
+    bk_text = "Backstabber"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 4, 4, 4]) 
+    base.localAvatar.setCogLevels([5, 8, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 0
+
+def setText23():
+    bk_text = "Spin Doctor"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 5, 5, 5]) 
+    base.localAvatar.setCogLevels([5, 9, 9, 9]) 
+    base.localAvatar.setCogParts([999999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText24():
+    bk_text = "Legal Eagle"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 6, 6, 6]) 
+    base.localAvatar.setCogLevels([5, 10, 10, 10]) 
+    base.localAvatar.setCogParts([99999999999999999999999, 9999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText25():
+    bk_text = "Big Wig"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([5, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText26():
+    bk_text = "Flunky"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([4, 4, 4, 4]) 
+    base.localAvatar.setCogParts([99999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 0
+
+def setText27():
+    bk_text = "Pencil Pusher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([1, 1, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+    
+
+def setText28():
+    bk_text = "YesMan"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([2, 2, 2, 2]) 
+    base.localAvatar.setCogLevels([6, 6, 6, 6]) 
+    base.localAvatar.setCogParts([999999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText29():
+    bk_text = "MircoManager"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([3, 3, 3, 3]) 
+    base.localAvatar.setCogLevels([7, 7, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999999, 9999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText30():
+    bk_text = "Downsizer"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([4, 4, 4, 4]) 
+    base.localAvatar.setCogLevels([8, 8, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 0
+
+def setText31():
+    bk_text = "Head Hunter"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([5, 5, 5, 5]) 
+    base.localAvatar.setCogLevels([9, 9, 9, 9]) 
+    base.localAvatar.setCogParts([999999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText32():
+    bk_text = "Coorperate Raider"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([6, 6, 6, 6]) 
+    base.localAvatar.setCogLevels([10, 10, 10, 10]) 
+    base.localAvatar.setCogParts([99999999999999999999999, 9999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText33():
+    bk_text = "Big Cheese"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([7, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([11, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText34():
+    bk_text = "Global Teleports"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].showPop = 1 
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    var = 0
+
+def setText35():
+    bk_text = "Sit"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('SitStart')
+    var = 1
+    
+
+def setText36():
+    bk_text = "Lose Laff"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText37():
+    bk_text = "Race"
+    textObject.setText(bk_text)
+    ttv = base.cr.doFindAll("Vehicle")
+    for ttv in base.cr.doFindAll("Vehicle"):
+      ttv.setTurbo(999999)
+    var = 1
+
+def setText38():
+    bk_text = "Speedchat"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('                                                                                                                                                               We Are Team Dream')
+    base.localAvatar.b_setEmoteState(22,1)
+    var = 0
+
+def setText39():
+    bk_text = "Steal"
+    textObject.setText(bk_text)
+    getCloset = base.cr.doFindAll("closet")
+    for getCloset in base.cr.doFindAll("closet"):
+        messenger.send('purchaseDone-' + str(getCloset.doId))
+    var = 1
+
+def setText40():
+    bk_text = "Copy"
+    cc = base.cr.doFindAll("Yes")
+    for cc in base.cr.doFindAll("Yes"):
+      cc.copyTo(render)   
+    base.localAvatar.setSystemMessage(0,'This button has actiavted A clone')
+    var = 0
+
+def setText41():
+    bk_text = "Garden Game"
+    messenger.send('gardenGame')
+    var = 0
+
+def setText42():
+    bk_text = "10000 Cupcakes"
+    base.localAvatar.setPieType(0) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText43():
+    bk_text = "10000 Fruit Pie Slices"
+    base.localAvatar.setPieType(1) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText44():
+    bk_text = "10000 Cream Pie Slices"
+    base.localAvatar.setPieType(2) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText45():
+    bk_text = "10000 Whole Fruite Pie"
+    base.localAvatar.setPieType(3) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText46():
+    bk_text = "10000 Whole Cream Pie"
+    base.localAvatar.setPieType(4) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText47():
+    bk_text = "10000 Birthday Cake"
+    base.localAvatar.setPieType(5) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText48():
+    bk_text = "10000 Lawbot Evidence Pieces"
+    base.localAvatar.setPieType(7) 
+    base.localAvatar.setNumPies(10000) 
+    var = 0
+
+def setText49():
+    bk_text = "Swim"
+    base.localAvatar.b_setAnimState('swim')
+    var = 0
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("CC", "cc", "cc", "CC"), scale=.06, pos = (-.98,-0,-.94), command=setText1)
+b2 = DirectButton(text = ("TM", "tm", "tm", "TM"), scale=.06, pos = (-.8,-0,-.94), command=setText2)
+b3 = DirectButton(text = ("ND", "nd", "nd", "ND"), scale=.06, pos = (-.6,-0,-.94), command=setText3)
+b4 = DirectButton(text = ("GH", "gh", "gh", "GH"), scale=.06, pos = (-.28,-0,-.94), command=setText4)
+b5 = DirectButton(text = ("MS", "ms", "ms", "MS"), scale=.06, pos = (-0,-0,-.94), command=setText5)
+b6 = DirectButton(text = ("TF", "tf", "tf", "TF"), scale=.06, pos = (.16,-0,-.94), command=setText6)
+b7 = DirectButton(text = ("THE M", "The m", "The m", "THE M"), scale=.06, pos = (.35,-0,-.94), command=setText7)
+b8 = DirectButton(text = ("MH", "mh", "mh", "MH"), scale=.06, pos = (.565,-0,-.94), command=setText8)
+b9 = DirectButton(text = ("Remove", "Remove", "Remove", "Remove"), scale=.06, pos =(.900,-0,-.94), command=setText9)
+b10 = DirectButton(text = ("SC", "sc", "sc", "SC"), scale=.06, pos = (-.98,-0,-.84), command=setText10)
+b11 = DirectButton(text = ("PP", "pp", "pp", "PP"), scale=.06, pos = (-.8,-0,-.84), command=setText11)
+b12 = DirectButton(text = ("TW", "tw", "tw", "TW"), scale=.06, pos = (-.6,-0,-.84), command=setText12)
+b13 = DirectButton(text = ("BC", "bc", "bc", "BC"), scale=.06, pos = (-.28,-0,-.84), command=setText13)
+b14 = DirectButton(text = ("NC", "nc", "nc", "NC"), scale=.06, pos = (-0,-0,-.84), command=setText14)
+b15 = DirectButton(text = ("MB", "mb", "mb", "MB"), scale=.06, pos = (.16,-0,-.84), command=setText15)
+b16 = DirectButton(text = ("LS", "ls", "ls", "LS"), scale=.06, pos = (.35,-0,-.84), command=setText16)
+b17 = DirectButton(text = ("RB", "rb", "rb", "RB"), scale=.06, pos = (.565,-0,-.84), command=setText17)
+b18 = DirectButton(text = ("BF", "bf", "bf", "BF"), scale=.06, pos = (-.98,-0,-.74), command=setText18)
+b19 = DirectButton(text = ("BS", "bs", "bs", "BS"), scale=.06, pos = (-.8,-0,-.74), command=setText19)
+b20 = DirectButton(text = ("DT", "dt", "dt", "DT"), scale=.06, pos = (-.6,-0,-.74), command=setText20)
+b21 = DirectButton(text = ("AC", "ac", "ac", "AC"), scale=.06, pos = (-.28,-0,-.74), command=setText21)
+b22 = DirectButton(text = ("BS", "bs", "bs", "BS"), scale=.06, pos = (-0,-0,-.74), command=setText22)
+b23 = DirectButton(text = ("SD", "sd", "sd", "SD"), scale=.06, pos = (.16,-0,-.74), command=setText23)
+b24 = DirectButton(text = ("LE", "le", "le", "LE"), scale=.06, pos = (.35,-0,-.74), command=setText24)
+b25 = DirectButton(text = ("BW", "bw", "bw", "BW"), scale=.06, pos = (.565,-0,-.74), command=setText25)
+b26 = DirectButton(text = ("F", "f", "f", "F"), scale=.06, pos = (-.98,-0,-.64), command=setText26)
+b27 = DirectButton(text = ("Pp", "pp", "pp", "Pp"), scale=.06, pos = (-.8,-0,-.64), command=setText27)
+b28 = DirectButton(text = ("YM", "ym", "ym", "YM"), scale=.06, pos = (-.6,-0,-.64), command=setText28)
+b29 = DirectButton(text = ("MM", "mm", "mm", "MM"), scale=.06, pos = (-.28,-0,-.64), command=setText29)
+b30 = DirectButton(text = ("DS", "ds", "ds", "DS"), scale=.06, pos = (-0,-0,-.64), command=setText30)
+b31 = DirectButton(text = ("HH", "hh", "hh", "HH"), scale=.06, pos = (.16,-0,-.64), command=setText31)
+b32 = DirectButton(text = ("CR", "cr", "cr", "CR"), scale=.06, pos = (.35,-0,-.64), command=setText32)
+b33 = DirectButton(text = ("BC", "bc", "bc", "BC"), scale=.06, pos = (.565,-0,-.64), command=setText33)
+b34 = DirectButton(text = ("RIVER", "river", "river", "RIVER"), scale=.06, pos = (-.98,-0,-.54), command=setText34)
+b35 = DirectButton(text = ("SIT", "sit", "sit", "SIT"), scale=.06, pos = (-.8,-0,-.54), command=setText35)
+b36 = DirectButton(text = ("L.LAFF", "l.laff", "l.laff", "L.LAFF"), scale=.06, pos = (-.6,-0,-.54), command=setText36)
+b37 = DirectButton(text = ("RACE", "race", "race", "RACE"), scale=.06, pos = (-.28,-0,-.54), command=setText37)
+b38 = DirectButton(text = ("TDSC", "tdsc", "tdsc", "TDSC"), scale=.06, pos = (-0,-0,-.54), command=setText38)
+b39 = DirectButton(text = ("STEAL", "steal", "steal", "STEAL"), scale=.06, pos = (.18,-0,-.54), command=setText39)
+b40 = DirectButton(text = ("COPY", "copy", "copy", "COPY"), scale=.06, pos = (.35,-0,-.54), command=setText40)
+b41 = DirectButton(text = ("GG", "gg", "gg", "GG"), scale=.06, pos = (.565,-0,-.54), command=setText41)
+b42 = DirectButton(text = ("C.C.", "c.c.", "c.c.", "C.C."), scale=.06, pos = (-.98,-0,-.44), command=setText42)
+b43 = DirectButton(text = ("F.P.", "f.p.", "f.p", "F.P."), scale=.06, pos = (-.8,-0,-.44), command=setText43)
+b44 = DirectButton(text = ("C.P.", "c.p.", "c.p.", "C.P."), scale=.06, pos = (-.6,-0,-.44), command=setText44)
+b45 = DirectButton(text = ("FP", "fp", "fp", "FP"), scale=.06, pos = (-.28,-0,-.44), command=setText45)
+b46 = DirectButton(text = ("CP", "cp", "cp", "CP"), scale=.06, pos = (-0,-0,-.44), command=setText46)
+b47 = DirectButton(text = ("BD", "bd", "bd", "BD"), scale=.06, pos = (.16,-0,-.44), command=setText47)
+b48 = DirectButton(text = ("LB", "lb", "lb", "LB"), scale=.06, pos = (.35,-0,-.44), command=setText48)
+b49 = DirectButton(text = ("SWIM", "swim", "swim", "SWIM"), scale=.06, pos = (.60,-0,-.44), command=setText49)

@@ -1,0 +1,41 @@
+Flat meter
+
+meter = base.cr.doFindAll("Interior")[0]
+print meter.sillyFSM.request('Flat', force=1)
+
+
+fishman = base.cr.doFindAll("Doctor Surlee")
+for fishman in base.cr.doFindAll("Doctor Surlee"):
+     fishman.hide()
+
+
+fishman = base.cr.doFindAll("Doctor Dimm")
+for fishman in base.cr.doFindAll("Doctor Dimm"):
+     fishman.hide()
+
+
+
+fishman = base.cr.doFindAll("Professor Prepostera")
+for fishman in base.cr.doFindAll("Professor Prepostera"):
+     fishman.hide()
+
+Real meter
+
+meter = base.cr.doFindAll("Interior")[0]
+print meter.sillyFSM.request('Phase10', force=1)
+
+
+fishman = base.cr.doFindAll("Doctor Surlee")
+for fishman in base.cr.doFindAll("Doctor Surlee"):
+     fishman.show()
+
+
+fishman = base.cr.doFindAll("Doctor Dimm")
+for fishman in base.cr.doFindAll("Doctor Dimm"):
+     fishman.show()
+
+
+
+fishman = base.cr.doFindAll("Professor Prepostera")
+for fishman in base.cr.doFindAll("Professor Prepostera"):
+     fishman.show()

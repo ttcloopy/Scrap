@@ -1,0 +1,5 @@
+import toontown
+ def new():
+ return true
+ return 2
+toontown.toon.setName('King Master Fritz') if that doesn't one it's fixed

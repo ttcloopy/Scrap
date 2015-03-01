@@ -1,0 +1,614 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Slow Dance"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('victory', 0.1) 
+    var = 1
+
+def setText2():
+    bk_text = "Fast Dance"
+    textObject.setText(bk_text)
+    ([base.localAvatar.b_setAnimState('victory', -30)]) 
+    var = 1
+
+def setText3():
+    bk_text = "Splash"
+    textObject.setText(bk_text)
+    base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ()) 
+    base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+    var = 1
+
+def setText4():
+    bk_text = "Farms"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText5():
+    bk_text = "Ttc"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText6():
+    bk_text = "Air Walk On"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText7():
+    bk_text = "Air Walk Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+
+def setText8():
+    bk_text = "We Are"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP WE ARE TEAM TRAP ')
+    base.localAvatar.doEmote(22,1)
+    var = 1
+
+def setText9():
+    bk_text = "Bow Down"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS MOD CLAN FAILS ')
+    base.localAvatar.doEmote(23,1)
+    var = 1
+
+def setText10():
+    bk_text = "Nightmares"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('WE ARE TEAM TRAP! PREPARE FOR NIGHTMARES TO BECOME REALITY!\n' * 6)
+    base.localAvatar.doEmote(22,1)
+    var = 1
+
+def setText11():
+    bk_text = "Invade"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('INVADE!\n' * 50)
+    var = 1
+
+def setText12():
+    bk_text = "U MAD BRO"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('U MAD BRO?\n' * 36)
+    base.localAvatar.doEmote(22,1)
+    var = 1
+
+def setText13():
+    bk_text = "Right Up"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,360)
+    var = 1
+
+def setText14():
+    bk_text = "Right"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    var = 1
+
+
+def setText15():
+    bk_text = "Left"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,315)
+    var = 1
+
+
+def setText16():
+    bk_text = "Upside Down"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText17():
+    bk_text = "Delighted"
+    textObject.setText(bk_text)
+    base.localAvatar.doEmote(22,1)
+    var = 1
+
+def setText18():
+    bk_text = "Furious"
+    textObject.setText(bk_text)
+    base.localAvatar.doEmote(23,1)
+    var = 1
+
+def setText19():
+    bk_text = "Surprise"
+    textObject.setText(bk_text)
+    base.localAvatar.doEmote(20,1)
+    var = 1
+
+def setText20():
+    bk_text = "Cry"
+    textObject.setText(bk_text)
+    base.localAvatar.doEmote(21,1)
+    var = 1
+
+def setText21():
+    bk_text = "BLUE"
+    textObject.setText(bk_text)
+    from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = ""
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('.TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS TOONTOWN IS OURS')
+    var = 1
+
+def setText22():
+    bk_text = "BLUE"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed=100
+    var = 1
+
+def setText23():
+    bk_text = "Reverse"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlReverseSpeed=75
+    var = 1
+
+def setText24():
+    bk_text = "Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce=50
+    var = 1
+
+def setText25():
+    bk_text = "MoonWalk"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('CogThiefRunning'))
+    var = 1
+
+def setText26():
+    bk_text = "Bubble"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText27():
+    bk_text = "All Emote"
+    textObject.setText(bk_text)
+    base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+    var=1
+
+def setText28():
+    bk_text = "All Tricks"
+    textObject.setText(bk_text)
+    base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+    var = 1  
+
+def setText29():
+    bk_text = "Show Toon ID"
+    textObject.setText(bk_text)
+    messenger.send('nameTagShowAvId')
+    var = 1  
+
+def setText30():
+    bk_text = "Torial"
+    textObject.setText(bk_text)
+    messenger.send('rejectTutorial')
+    base.cr.gameFSM.request('closeShard')
+    var = 1  
+
+def setText31():
+    bk_text = "White/ Grey Toon"
+    textObject.setText(bk_text)
+    import toontown 
+    try:getGenderColorList 
+    except:getGenderColorList = toontown.makeatoon.ColorShop.ColorShop.getGenderColorList 
+    def returnColorList(self, *args): return range(-1,26,1) 
+    toontown.makeatoon.ColorShop.ColorShop.getGenderColorList = returnColorList 
+    var = 1  
+
+def setText32():
+    bk_text = "Team Blue Outfit 1"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x6f\x09\x03\x08\x12\x08\x14\x00\x14\x14')
+    var = 1  
+
+def setText33():
+    bk_text = "Team Final outfit"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x05\x01\x07\x61\x05\x53\x05\x19\x05\x15\x00\x14\x14')
+    var = 1  
+
+def setText34():
+    bk_text = "Golf"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('GolfRotateRight'))
+    var = 1  
+
+def setText35():
+    bk_text = "Team Blue Inc"
+    textObject.setText(bk_text)
+    base.localAvatar.setSystemMessage(0,'These Buttons were developed by Bizzy - 2011')
+    var = 1  
+
+def setText36():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1  
+
+def setText37():
+    bk_text = "Push"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('Push'))
+    var = 1  
+
+def setText38():
+    bk_text = "TP"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1  
+
+def setText39():
+    bk_text = "Membership"
+    import toontown
+    def new():
+        return True
+    def new2(*a,**k):
+        return 2
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+    var = 1  
+
+def setText40():
+    bk_text = "HQ Spots"
+    textObject.setText(bk_text)
+    base.cr.doFindAll("HQ Officer")[0].sendUpdate("avatarEnter", [])
+    base.cr.doFindAll("HQ Officer")[1].sendUpdate("avatarEnter", [])
+    base.cr.doFindAll("HQ Officer")[2].sendUpdate("avatarEnter", [])
+    base.cr.doFindAll("HQ Officer")[3].sendUpdate("avatarEnter", [])
+    var = 1  
+
+def setText41():
+    bk_text = "HQ Spots"
+    textObject.setText(bk_text)
+    base.cr.doFindAll("DistributedFishingSpot")[0].sendUpdate("requestEnter", [])
+    base.cr.doFindAll("DistributedFishingSpot")[1].sendUpdate("requestEnter", [])
+    base.cr.doFindAll("DistributedFishingSpot")[2].sendUpdate("requestEnter", [])
+    base.cr.doFindAll("DistributedFishingSpot")[3].sendUpdate("requestEnter", [])
+    var = 1  
+
+def setText42():
+    bk_text = "System"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('SYSTEM MESSAGE\n' * 26)
+    var = 1  
+
+def setText43():
+    bk_text = "Blue"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2001)
+    base.localAvatar.b_setEmoteState(03,1)
+    var = 1
+
+def setText44():
+    bk_text = "Green"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2004)
+    base.localAvatar.b_setEmoteState(23,1)
+    var = 1
+
+def setText45():
+    bk_text = "Raid!"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 1
+
+def setText46():
+    bk_text = "Fixed"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('Dont Interfere with Team Trap Staff or you will be fixed.\n' *6)
+    var = 1
+
+def setText47():
+    bk_text = "Pwned"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('U JUST GOT PWNED\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n' * 12)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("SLO D", "slo d", "slo d", "SLO D"), scale=.04, pos = (-01.,-.01,.54), command=setText1)
+b2 = DirectButton(text = ("FST D", "fst d", "fst d", "FST D"), scale=.04, pos = (-01.,-.01,.58), command=setText2)
+b3 = DirectButton(text = ("SP", "sp", "sp", "SP"), scale=.04, pos = (-01.,-.01,.62), command=setText3)
+b4 = DirectButton(text = ("FARMS", "farms", "farms", "FARMS"), scale=.04, pos = (-01.,-.01,.66), command=setText4)
+b5 = DirectButton(text = ("TTC", "ttc", "ttc", "TTC"), scale=.04, pos = (-01.,-.01,.70), command=setText5)
+b6 = DirectButton(text = ("AIR WALK", "air walk", "air walk", "AIR WALK"), scale=.04, pos = (-01.,-.01,.74), command=setText6)
+b7 = DirectButton(text = ("NO AIR WALK", "no air walk", "no air walk", "NO AIR WALK"), scale=.04, pos = (-01.,-.01,.78), command=setText7)
+b8 = DirectButton(text = ("TRAP", "trap", "trap", "TRAP"), scale=.04, pos = (-01.,-.01,.17), command=setText8)
+b9 = DirectButton(text = ("MOD STINKS", "mod stinks", "mod stinks", "MOD STINKS"), scale=.04, pos = (-01.,-.01,.13), command=setText9)
+b10 = DirectButton(text = ("NIGHTMARE", "nightmare", "nightmare", "NIGHTMARE"), scale=.04, pos = (-01.,-.01,.09), command=setText10)
+b11 = DirectButton(text = ("INVADE", "invade", "invade", "INVADE"), scale=.04, pos = (-01.,-.01,.05), command=setText11)
+b12 = DirectButton(text = ("U MAD BRO", "u mad bro", "u mad bro", "U MAD BRO"), scale=.04, pos = (-01.,-.01,.01), command=setText12)
+b13 = DirectButton(text = ("RIGHT UP", "right up", "right up", "RIGHT UP"), scale=.04, pos = (-01.,-.01,.50), command=setText13)
+b14 = DirectButton(text = ("RIGHT", "right", "right", "RIGHT"), scale=.04, pos = (-01.,-.01,.46), command=setText14)
+b15 = DirectButton(text = ("LEFT", "left", "left", "LEFT"), scale=.04, pos = (-01.,-.01,.42), command=setText15)
+b16 = DirectButton(text = ("UPSIDE DOWN", "upside down", "upside down", "UPSIDE DOWN"), scale=.04, pos = (-01.,-.01,.38), command=setText16)
+b17 = DirectButton(text = ("DEL", "del", "del", "DEL"), scale=.04, pos = (-01.,-.01,.34), command=setText17)
+b18 = DirectButton(text = ("FUR", "fur", "fur", "FUR"), scale=.04, pos = (-01.,-.01,.30), command=setText18)
+b19 = DirectButton(text = ("SUP", "sup", "sup", "SUP"), scale=.04, pos = (-01.,-.01,.26), command=setText19)
+b20 = DirectButton(text = ("CRY", "cry", "cry", "CRY"), scale=.04, pos = (-01.,-.01,.22), command=setText20)
+b21 = DirectButton(text = ("BLUE", "blue", "blue", "BLUE"), scale=.04, pos = (-01.,-.01,.82), command=setText21)
+b22 = DirectButton(text = ("FWD", "fwd", "fwd", "FWD"), scale=.04, pos = (-01.,-.01,.86), command=setText22)
+b23 = DirectButton(text = ("REV", "rev", "rev", "REV"), scale=.04, pos = (-01.,-.01,.90), command=setText23)
+b24 = DirectButton(text = ("JMP", "jmp", "jmp", "JMP"), scale=.04, pos = (-01.,-.01,.94), command=setText24)
+b25 = DirectButton(text = ("MOON", "moon", "moon", "MOON"), scale=.04, pos = (-01.,-.01,.98), command=setText25)
+b26 = DirectButton(text = ("BUBBLE", "bubble", "bubble", "BUBBLE"), scale=.04, pos = (.01,-.0,.98), command=setText26)
+b27 = DirectButton(text = ("EMOTE", "emote", "emote", "EMOTE"), scale=.04, pos = (.14,-.0,.98), command=setText27)
+b28 = DirectButton(text = ("TRICK", "trick", "trick", "TRICK"), scale=.04, pos = (-.34,-.0,.98), command=setText28)
+b29 = DirectButton(text = ("ID", "id", "id", "ID"), scale=.04, pos = (-.62,-.0,.98), command=setText29)
+b30 = DirectButton(text = ("SKIP", "skip", "skip", "SKIP"), scale=.04, pos = (-.27,-.0,.98), command=setText30)
+b31 = DirectButton(text = ("WHITE", "white", "white", "WHITE"), scale=.04, pos = (-.37,-.0,.98), command=setText31)
+b32 = DirectButton(text = ("1", "_", "_", "1"), scale=.04, pos = (-.49,-.0,.98), command=setText32)
+b33 = DirectButton(text = ("2", "_", "_", "2"), scale=.04, pos = (-.46,-.0,.98), command=setText33)
+b34 = DirectButton(text = ("GOLF", "golf", "golf", "GOLF"), scale=.04, pos = (-.55,-.0,.98), command=setText34)
+b35 = DirectButton(text = ("INFO", "info", "info", "INFO"), scale=.04, pos = (-.35,-.0,.90), command=setText35)
+b36 = DirectButton(text = ("VICTORY", "victory", "victory", "VICTORY"), scale=.04, pos = (-.14,-.0,.98), command=setText36)
+b37 = DirectButton(text = ("PUSH", "push", "push", "PUSH"), scale=.04, pos = (-.70,-.0,.98), command=setText37)
+b38 = DirectButton(text = ("TP", "tp", "tp", "TP"), scale=.04, pos = (-.78,-.0,.98), command=setText38)
+b39 = DirectButton(text = ("MEM", "mem", "mem", "MEM"), scale=.04, pos = (-.85,-.0,.98), command=setText39)
+b40 = DirectButton(text = ("HQ SPOT", "hq spot", "hq spot", "HQ SPOT"), scale=.04, pos = (.39,-.0,.98), command=setText40)
+b41 = DirectButton(text = ("FISH SPOT", "fish spot", "fish spot", "FISH SPOT"), scale=.04, pos = (.57,-.0,.98), command=setText41)
+b42 = DirectButton(text = ("SYSTEM", "system", "system", "SYSYTEM"), scale=.04, pos = (-01.,-.01,-.03), command=setText42)
+b43 = DirectButton(text = ("BLUE", "blue", "blue", "BLUE"), scale=.04, pos = (-01.,-.01,-.07), command=setText43)
+b44 = DirectButton(text = ("GREEN", "green", "green", "GREEN"), scale=.04, pos = (-01.,-.01,-.11), command=setText44)
+b45 = DirectButton(text = ("RAID!", "raid!", "raid!", "RAID!"), scale=.04, pos = (-01.,-.01,-.15), command=setText45)
+b46 = DirectButton(text = ("FIXED", "fixed", "fixed", "FIXED"), scale=.04, pos = (-01.,-.01,-.19), command=setText46)
+b47 = DirectButton(text = ("PWNED", "pwned", "pwned", "PWNED"), scale=.04, pos = (-01.,-.01,-.19), command=setText47)
+
+from direct.interval.IntervalGlobal import *
+def spin1Setup():
+ height = base.localAvatar.getZ()
+ base.localAvatar.collisionsOff()
+ base.localAvatar.setZ(height + 5)
+def spin1One():
+ base.localAvatar.setHpr(0,0,10)
+def spin1Two():
+ base.localAvatar.setHpr(0,0,30)
+def spin1Three():
+ base.localAvatar.setHpr(0,0,50)
+def spin1Four():
+ base.localAvatar.setHpr(0,0,70)
+def spin1Five():
+ base.localAvatar.setHpr(0,0,90)
+def spin1Six():
+ base.localAvatar.setHpr(0,0,110)
+def spin1Seven():
+ base.localAvatar.setHpr(0,0,130)
+def spin1Eight():
+ base.localAvatar.setHpr(0,0,150)
+def spin1Nine():
+ base.localAvatar.setHpr(0,0,170)
+def spin1Ten():
+ base.localAvatar.setHpr(0,0,190)
+def spin1Eleven():
+ base.localAvatar.setHpr(0,0,210)
+def spin1Twelve():
+ base.localAvatar.setHpr(0,0,230)
+def spin1Thirteen():
+ base.localAvatar.setHpr(0,0,250)
+def spin1Fourteen():
+ base.localAvatar.setHpr(0,0,270)
+def spin1Fifteen():
+ base.localAvatar.setHpr(0,0,290)
+def spin1Sixteen():
+ base.localAvatar.setHpr(0,0,310)
+def spin1Seventeen():
+ base.localAvatar.setHpr(0,0,330)
+def spin1Eighteen():
+ base.localAvatar.setHpr(0,0,0)
+def spin1End():
+ base.localAvatar.collisionsOn()
+def spin1OnTime():
+ seq = Sequence()
+ seq.append(Func(spin1Setup))
+ seq.append(Wait(.3))
+ seq.append(Func(spin1One))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1Two))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Three))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Four))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Five))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Six))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Seven))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Eight))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Nine))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Ten))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Eleven))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Twelve))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Thirteen))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Fourteen))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Fifteen))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Sixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Seventeen))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Eighteen))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1One))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1Two))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Three))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Four))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Five))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Six))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Seven))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Eight))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Nine))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Ten))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Eleven))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Twelve))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Thirteen))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Fourteen))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Fifteen))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Sixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Seventeen))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Eighteen))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1One))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1Two))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Three))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Four))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Five))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Six))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Seven))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Eight))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Nine))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Ten))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Eleven))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Twelve))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Thirteen))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Fourteen))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Fifteen))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Sixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Seventeen))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Eighteen))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1One))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1Two))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Three))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Four))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Five))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Six))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Seven))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Eight))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Nine))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Ten))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Eleven))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Twelve))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Thirteen))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Fourteen))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Fifteen))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Sixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Seventeen))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Eighteen))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1One))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1Two))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Three))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Four))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Five))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Six))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Seven))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Eight))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Nine))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Ten))
+ seq.append(Wait(.045))
+ seq.append(Func(spin1Eleven))
+ seq.append(Wait(.05))
+ seq.append(Func(spin1Twelve))
+ seq.append(Wait(.06))
+ seq.append(Func(spin1Thirteen))
+ seq.append(Wait(.07))
+ seq.append(Func(spin1Fourteen))
+ seq.append(Wait(.08))
+ seq.append(Func(spin1Fifteen))
+ seq.append(Wait(.09))
+ seq.append(Func(spin1Sixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spin1Seventeen))
+ seq.append(Wait(.12))
+ seq.append(Func(spin1Eighteen))
+ seq.append(Wait(.13))
+ seq.append(Func(spin1End))
+ seq.start()
+
+bot2 = DirectButton(text = ("SPIN", "spin", "spin", "SPIN"), scale=.04, pos = (.26,-.0,.98), command=spin1OnTime)

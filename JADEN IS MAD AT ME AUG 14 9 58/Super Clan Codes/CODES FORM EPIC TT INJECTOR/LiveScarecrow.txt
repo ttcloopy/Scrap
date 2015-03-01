@@ -1,0 +1,4 @@
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.d_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)

@@ -1,0 +1,39 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "ZoneFound"
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+
+b = DirectButton(text = ("Raid House", "Activate", "Activate", "Raid House"), scale=.06, pos = (-.28,-0,-.95), command=setText)
+
+_____________________________________________________________________________________________________________________________________________________________
+   #open the log file    DONT USE THESE CODES... IDK WHAT THERE FOR......ONLY USE THE TOP!!!!!!! THATS WHY THERES A LINE
+   filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/"
+   #you need to fill in the rest of the path above with a filename, it needs the full path name between the quotes
+   
+
+   file_to_read_from = open('%s'%(filepath),'r')
+   trash = file_to_read_from.read()  #skips to end of file so only new messages are processed
+   del trash
+
+   while True:    
+       #the next line of the log is read    
+       line_to_parse = file_to_read_from.readline()
+
+       if string.find(line_to_parse.lower(), 'command') != -1:
+           message = line_to_parse[string.find(line_to_parse.lower(), 'command')+8:]
+           if len(message) != 0:
+               base.localAvatar.b_setAnimState(message)
+               break
+       else:
+           continue   

@@ -1,0 +1,316 @@
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+
+grounds = loader.loadModel("phase_13/models/parties/partyGrounds.bam")
+grounds.reparentTo(render)
+grounds.setPos(-100.000,-100.000,-1000.000)
+grounds.setHpr(0,0,0)
+grounds.setScale(1.5)
+
+rope = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope.reparentTo(render)
+rope.setPos(-129.087,-82.320,-999.975)
+rope.setHpr(0,0,0)
+rope.setScale(0.4)
+
+mickey = Actor("phase_3/models/char/mickey-800.bam",{"mickeyneutral":"phase_3/models/char/mickey-wait.bam"})
+mickey.reparentTo(render)
+mickey.loop("mickeyneutral")
+mickey.setPos(-128.777,-84.400,-999.975)
+mickey.setHpr(180,0,0)
+mickey.setScale(1.5)
+
+rope2 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope2.reparentTo(render)
+rope2.setPos(-116.087,-86.320,-999.975)
+rope2.setHpr(0,0,0)
+rope2.setScale(0.4)
+
+minnie = Actor("phase_3/models/char/minnie-1200.bam",{"minnieneutral":"phase_3/models/char/minnie-wait.bam"})
+minnie.reparentTo(render)
+minnie.loop("minnieneutral")
+minnie.setPos(-116.777,-88.400,-999.975)
+minnie.setHpr(180,0,0)
+minnie.setScale(1.5)
+
+rope3 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope3.reparentTo(render)
+rope3.setPos(-134.087,-96.320,-999.975)
+rope3.setHpr(0,0,0)
+rope3.setScale(0.4)
+
+donald = Actor("phase_6/models/char/DL_donald-1000.bam",{"donaldsleep":"phase_6/models/char/DL_donald-neutral.bam"})
+donald.reparentTo(render)
+donald.loop("donaldsleep")
+donald.setPos(-134.777,-96.400,-999.975)
+donald.setHpr(180,0,0)
+donald.setScale(1.5)
+
+rope4 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope4.reparentTo(render)
+rope4.setPos(-120.087,-99.320,-999.975)
+rope4.setHpr(0,0,0)
+rope4.setScale(0.4)
+
+daisy = Actor("phase_4/models/char/daisyduck_1600.bam",{"daisyneutral":"phase_4/models/char/daisyduck_idle.bam"})
+daisy.reparentTo(render)
+daisy.loop("daisyneutral")
+daisy.setPos(-120.777,-100.400,-999.975)
+daisy.setHpr(180,0,0)
+daisy.setScale(1.5)
+
+rope5 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope5.reparentTo(render)
+rope5.setPos(-130.087,-109.320,-999.975)
+rope5.setHpr(0,0,0)
+rope5.setScale(0.4)
+
+chip = Actor("phase_6/models/char/chip_1000.bam",{"chipneutral":"phase_6/models/char/chip_idle.bam"})
+chip.reparentTo(render)
+chip.loop("chipneutral")
+chip.setPos(-131.777,-110.400,-999.975)
+chip.setHpr(180,0,0)
+chip.setScale(1.5)
+
+dale = Actor("phase_6/models/char/dale_1000.bam",{"daleneutral":"phase_6/models/char/dale_idle.bam"})
+dale.reparentTo(render)
+dale.loop("daleneutral")
+dale.setPos(-129.777,-110.400,-999.975)
+dale.setHpr(180,0,0)
+dale.setScale(1.5)
+
+rope6 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope6.reparentTo(render)
+rope6.setPos(-145.087,-118.320,-999.975)
+rope6.setHpr(0,0,0)
+rope6.setScale(0.4)
+
+pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutosit":"phase_6/models/char/pluto-neutral.bam"})
+pluto.reparentTo(render)
+pluto.loop("plutosit")
+pluto.setPos(-144.777,-120.400,-999.975)
+pluto.setHpr(180,0,0)
+pluto.setScale(1.5)
+
+rope7 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope7.reparentTo(render)
+rope7.setPos(-134.087,-128.320,-999.975)
+rope7.setHpr(0,0,0)
+rope7.setScale(0.4)
+
+goofy = Actor("phase_6/models/char/TT_G-1500.bam",{"goofyneutral":"phase_6/models/char/TT_GWait.bam"})
+goofy.reparentTo(render)
+goofy.loop("goofyneutral")
+goofy.setPos(-135.777,-128.400,-999.975)
+goofy.setHpr(120,0,0)
+goofy.setScale(1.5)
+
+rope8 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope8.reparentTo(render)
+rope8.setPos(-156.087,-93.151,-999.975)
+rope8.setHpr(0,0,0)
+rope8.setScale(0.6)
+
+sillymt = Actor("phase_4/models/props/tt_a_ara_ttc_sillyMeter_default.bam",{"sillier":"phase_4/models/props/tt_a_ara_ttc_sillyMeter_phaseFour.bam"})
+sillymt.reparentTo(render)
+sillymt.loop("sillier")
+sillymt.setPos(-153.070,-96.151,-999.975)
+sillymt.setHpr(360,0,0)
+sillymt.setScale(1)
+
+scientist1 = Actor({"head":"phase_3/models/char/dogSS_Shorts-head-1000.bam", \
+"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+{"head":{"neutralsc1":"phase_3/models/char/dogSS_Shorts-head-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-head-neutral.bam"}, \
+"torso":{"neutralsc1":"phase_3/models/char/dogLL_Shorts-torso-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-neutral.bam"}, \
+"legs":{"neutralsc1":"phase_3/models/char/dogMM_Shorts-legs-neutral.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-legs-neutral.bam"} \
+})
+
+scientist1.attach("head", "torso", "joint_head")
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistC.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistA.jpg")
+scientist1.find('**/torso-top').setTexture(shirts, 1)
+scientist1.find('**/torso-bot').setTexture(shorts, 1)
+scientist1.find('**/torso-bot-cap').setTexture(shorts, 1)
+scientist1.find('**/sleeves').setTexture(sleve, 1)
+gloves = scientist1.find('**/hands')
+gloves.setColor(1.0,1.0,1.0)
+scientist1.find('**/head').setColor(1,0.95,0.3)
+scientist1.find('**/head-front').setColor(1,0.95,0.3)
+scientist1.find('**/neck').setColor(1,0.95,0.3)
+scientist1.find('**/torso-top').setColor(1.0,1.0,1.0)
+scientist1.find('**/torso-bot').setColor(1.0,1.0,1.0)
+scientist1.find('**/arms').setColor(1,0.95,0.3)
+scientist1.find('**/legs').setColor(1,0.95,0.3)
+scientist1.find('**/feet').setColor(1,0.95,0.3)
+scientist1.find('**/torso-bot-cap').setColor(1.0,1.0,1.0)
+scientist1.attach("torso", "legs", "joint_hips")
+scientist1.loop("neutralsc1")
+scientist1.reparentTo(render)
+scientist1.setPos(-155.044,-88.889,-999.975)
+scientist1.setHpr(410,0,0)
+scientist1.setScale(1.5)
+
+scientist2 = Actor({"head":"phase_3/models/char/dogLL_Shorts-head-1000.bam", \
+"torso":"phase_3/models/char/dogMM_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogSS_Shorts-legs-1000.bam"}, \
+{"head":{"neutralsc2":"phase_3/models/char/dogLL_Shorts-head-neutral.bam", \
+"run":"phase_3/models/char/dogLL_Shorts-head-neutral.bam"}, \
+"torso":{"neutralsc2":"phase_3/models/char/dogMM_Shorts-torso-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-neutral.bam"}, \
+"legs":{"neutralsc2":"phase_3/models/char/dogSS_Shorts-legs-neutral.bam", \
+"run":"phase_5/models/char/dogSS_Shorts-legs-neutral.bam"} \
+})
+
+scientist2.attach("head", "torso", "joint_head")
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistC.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistC.jpg")
+scientist2.find('**/torso-top').setTexture(shirts, 1)
+scientist2.find('**/torso-bot').setTexture(shorts, 1)
+scientist2.find('**/torso-bot-cap').setTexture(shorts, 1)
+scientist2.find('**/sleeves').setTexture(sleve, 1)
+gloves = scientist2.find('**/hands')
+gloves.setColor(1.0,1.0,1.0)
+scientist2.find('**/head').setColor(0.72,0.36,0.36)
+scientist2.find('**/head-front').setColor(0.72,0.36,0.36)
+scientist2.find('**/neck').setColor(0.72,0.36,0.36)
+scientist2.find('**/torso-top').setColor(1.0,1.0,1.0)
+scientist2.find('**/torso-bot').setColor(1.0,1.0,1.0)
+scientist2.find('**/arms').setColor(0.72,0.36,0.36)
+scientist2.find('**/legs').setColor(0.72,0.36,0.36)
+scientist2.find('**/feet').setColor(0.72,0.36,0.36)
+scientist2.find('**/torso-bot-cap').setColor(1.0,1.0,1.0)
+scientist2.attach("torso", "legs", "joint_hips")
+scientist2.loop("neutralsc2")
+scientist2.reparentTo(render)
+scientist2.setPos(-160.620,-97.929,-999.975)
+scientist2.setHpr(410,0,0)
+scientist2.setScale(1.5)
+
+crate1 = loader.loadModel("phase_5/models/props/crate.bam")
+crate1.reparentTo(render)
+crate1.setPos(-153.223,-162.865,-999.975)
+crate1.setHpr(0,0,0)
+crate1.setScale(15)
+
+crate2 = loader.loadModel("phase_5/models/props/crate.bam")
+crate2.reparentTo(render)
+crate2.setPos(-124.223,-162.865,-999.975)
+crate2.setHpr(0,0,0)
+crate2.setScale(15)
+
+crate3 = loader.loadModel("phase_5/models/props/crate.bam")
+crate3.reparentTo(render)
+crate3.setPos(-94.223,-162.865,-999.975)
+crate3.setHpr(0,0,0)
+crate3.setScale(15)
+
+crate4 = loader.loadModel("phase_5/models/props/crate.bam")
+crate4.reparentTo(render)
+crate4.setPos(-66.223,-162.865,-999.975)
+crate4.setHpr(0,0,0)
+crate4.setScale(15)
+
+crate5 = loader.loadModel("phase_5/models/props/crate.bam")
+crate5.reparentTo(render)
+crate5.setPos(-65.144,-132.806,-999.975)
+crate5.setHpr(180,0,0)
+crate5.setScale(15)
+
+crate6 = loader.loadModel("phase_5/models/props/crate.bam")
+crate6.reparentTo(render)
+crate6.setPos(-65.144,-102.806,-999.975)
+crate6.setHpr(180,0,0)
+crate6.setScale(15)
+
+crate7 = loader.loadModel("phase_5/models/props/crate.bam")
+crate7.reparentTo(render)
+crate7.setPos(-65.144,-72.806,-999.975)
+crate7.setHpr(180,0,0)
+crate7.setScale(15)
+
+crate8 = loader.loadModel("phase_5/models/props/crate.bam")
+crate8.reparentTo(render)
+crate8.setPos(-65.144,-42.806,-999.975)
+crate8.setHpr(180,0,0)
+crate8.setScale(15)
+
+crate9 = loader.loadModel("phase_5/models/props/crate.bam")
+crate9.reparentTo(render)
+crate9.setPos(-94.565,-29.814,-999.975)
+crate9.setHpr(180,0,0)
+crate9.setScale(15)
+
+crate10 = loader.loadModel("phase_5/models/props/crate.bam")
+crate10.reparentTo(render)
+crate10.setPos(-124.565,-29.814,-999.975)
+crate10.setHpr(180,0,0)
+crate10.setScale(15)
+
+crate11 = loader.loadModel("phase_5/models/props/crate.bam")
+crate11.reparentTo(render)
+crate11.setPos(-154.565,-29.814,-999.975)
+crate11.setHpr(180,0,0)
+crate11.setScale(15)
+
+crate12 = loader.loadModel("phase_5/models/props/crate.bam")
+crate12.reparentTo(render)
+crate12.setPos(-184.565,-29.814,-999.975)
+crate12.setHpr(180,0,0)
+crate12.setScale(15)
+
+crate13 = loader.loadModel("phase_5/models/props/crate.bam")
+crate13.reparentTo(render)
+crate13.setPos(-184.565,-59.814,-999.975)
+crate13.setHpr(180,0,0)
+crate13.setScale(15)
+
+crate14 = loader.loadModel("phase_5/models/props/crate.bam")
+crate14.reparentTo(render)
+crate14.setPos(-184.565,-119.814,-999.975)
+crate14.setHpr(180,0,0)
+crate14.setScale(15)
+
+crate15 = loader.loadModel("phase_5/models/props/crate.bam")
+crate15.reparentTo(render)
+crate15.setPos(-184.565,-149.814,-999.975)
+crate15.setHpr(180,0,0)
+crate15.setScale(15)
+
+crate16 = loader.loadModel("phase_5/models/props/crate.bam")
+crate16.reparentTo(render)
+crate16.setPos(-174.565,-149.814,-999.975)
+crate16.setHpr(180,0,0)
+crate16.setScale(15)
+
+crate17 = loader.loadModel("phase_5/models/props/crate.bam")
+crate17.reparentTo(render)
+crate17.setPos(-172.322,-178.344,-999.975)
+crate17.setHpr(180,0,0)
+crate17.setScale(15)
+
+crate18 = loader.loadModel("phase_5/models/props/crate.bam")
+crate18.reparentTo(render)
+crate18.setPos(-168.322,-162.934,-999.975)
+crate18.setHpr(180,0,0)
+crate18.setScale(15)
+
+crate19 = loader.loadModel("phase_5/models/props/crate.bam")
+crate19.reparentTo(render)
+crate19.setPos(-184.815,-90.143,-999.975)
+crate19.setHpr(180,0,0)
+crate19.setScale(15)
+
+base.localAvatar.setXYZH(-142.913,-138.989,-999.975,-33.975)

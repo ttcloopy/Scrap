@@ -1,0 +1,27 @@
+import toontown
+try:newToonRandom
+except:newToonRandom = toontown.toon.ToonDNA.ToonDNA.newToonRandom
+def createNewRandomToon(self, **kwds): newToonRandom(self) self.gloveColor=2;self.gender=kwds['gender']
+toontown.toon.ToonDNA.ToonDNA.newToonRandom = createNewRandomToon
+
+toon = base.cr.doFindAll("Fd Hi Fd")[0]
+toon.sendUpdate("setWhisperSCEmoteFrom", [toon.doId, 25])
+
+Members:
+
+import otp, toontown
+def returnGameAccess(*args):return 2
+base.cr._OTPClientRepository__isPaid = True
+otp.otpbase.OTPGlobals.AccessVelvetRope = 2
+otp.otpbase.OTPGlobals.AccessFull = 2
+toontown.toon.LocalToon.LocalToon.gameAccess = 2
+base.launcher.setValue(base.launcher.PaidUserLoggedInKey, '1')
+toontown.toon.LocalToon.LocalToon.getGameAccess = returnGameAccess
+def returnAllowedSecretChat(*args, **kwds):return True
+base.cr.allowSecretChat = returnAllowedSecretChat
+base.cr.isParentPasswordSet = returnAllowedSecretChat
+
+Name Hack, go on your toon, use this code:
+
+base.cr.sendWishName(base.localAvatar.doId, 'Freckleslam')
+def approveName(pos, currentName, acceptName): base.cr.avList[pos].name = currentName base.cr.avList[pos].wantName = '' base.cr.avList[pos].wishName

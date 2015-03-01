@@ -1,0 +1,65 @@
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+from direct.gui.OnscreenText import OnscreenText
+currentGlove = 0
+npc = base.cr.doFindAll("Tailor")[0]
+defaultChatAbsolute = npc.setChatAbsolute
+base.localAvatar.b_setAnimState('swim')
+npc.handleCollisionSphereEnter(base.localAvatar.doId)
+npc.handleCollisionSphereEnter(base.localAvatar.doId)
+npc.afkTimeout = pow(100, 100)
+gloveList = ['\x00', '\x01', '\x02', '\x03', '\x04', '\x05', '\x06', '\x07', '\x08',\
+'\x09', '\x10', '\x11', '\x12', '\x13', '\x14', '\x15', '\x16', '\x17', '\x18', '\x19',\
+'\x0d', '\x0b', '\x0c', '\x0d', '\x0e', '\x0f', '\x1a']
+def addGloveIndex(dnaString='t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e'):
+    global gloveList, currentGlove, npc
+    if currentGlove != 26:
+        currentGlove += 1
+        npc.sendUpdate("setDNA", [dnaString[:12] + gloveList[currentGlove] + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + gloveList[currentGlove] + dnaString[13:])
+    else:
+        currentGlove = 0
+        npc.sendUpdate("setDNA", [dnaString[:12] + '\x00' + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + '\x00' + dnaString[13:])
+def subtractGloveIndex(dnaString='t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e'):
+    global gloveList, currentGlove, npc
+    if currentGlove != 0:
+        currentGlove -= 1
+        npc.sendUpdate("setDNA", [dnaString[:12] + gloveList[currentGlove] + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + gloveList[currentGlove] + dnaString[13:])
+    else:
+        currentGlove = 26
+        npc.sendUpdate("setDNA", [dnaString[:12] + '\x26' + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + '\x26' + dnaString[13:])
+def disconnectThroughDNA(dnaString='t\x05\x06\x00\x00\x50\x1b\x45\x1b\x26\x1b\x0e\x02\x0e\x0e'):
+    try:
+        npc = base.cr.doFindAll("Tailor")[0]
+        npc.sendUpdate("setDNA", [dnaString, 0, 3])
+    except:pass
+def removeGui():
+    try:npc = base.cr.doFindAll("Tailor")[0]
+    except:pass
+    try:
+        addGloveB.removeNode()
+        subtractGloveB.removeNode()
+        disconnectB.removeNode()
+        glovetxt_object.removeNode()
+        removeGuiB.removeNode()
+    except:pass
+    try:npc._DistributedNPCTailor__handleButton()
+    except:pass
+def hookExit(chatString, chatFlags, dialogue=None, interrupt=1, quiet=0):
+    global npc, defaultChatAbsolute
+    if chatString == 'Need more time to think?':
+        npc.handleCollisionSphereEnter(base.localAvatar.doId)
+        npc.handleCollisionSphereEnter(base.localAvatar.doId)
+        npc.afkTimeout = pow(100, 100)
+    else:
+        defaultChatAbsolute(chatString, chatFlags, dialogue, interrupt, quiet)
+npc.setChatAbsolute = hookExit
+glove_text = 'Glove Color'
+glovetxt_object = OnscreenText(text = glove_text, pos = (0.95,0.2), scale = 0.07, fg=(0, 0, 0, 0.6), align=TextNode.ACenter, mayChange=1)
+addGloveB = DirectButton(text = (">>", ">>", ">>", ">>"), scale=.06, pos = (1.22,0,0.2), command=addGloveIndex)
+subtractGloveB = DirectButton(text = ("<<", "<<", "<<", "<<"), scale=.06, pos = (0.7,0,0.2), command=subtractGloveIndex)
+disconnectB = DirectButton(text = ("Disconnect", "Disconnect", "Disconnect", "Disconnect"), scale=.06, pos=(0.96,0,0.3), command=disconnectThroughDNA)
+removeGuiB = DirectButton(text = ("No More Disconnect", "No More Disconnect", "No More Disconnect", "No More Disconnect"), scale=.06, pos=(0.96,0,0.4), command=removeGui)

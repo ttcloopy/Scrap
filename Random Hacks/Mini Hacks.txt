@@ -1,0 +1,195 @@
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6]) - All Doodle Tricks
+
+# Central
+base.cr.sendSetZoneMsg(2000)
+base.cr.sendSetZoneMsg(2520) 
+base.cr.sendSetZoneMsg(2513) 
+base.cr.sendSetZoneMsg(2520) 
+base.cr.sendSetZoneMsg(2521) 
+base.cr.sendSetZoneMsg(2522) 
+base.cr.sendSetZoneMsg(2519)
+base.cr.sendSetZoneMsg(2518)
+base.cr.sendSetZoneMsg(2516)
+base.cr.sendSetZoneMsg(2514)
+
+#Chip 'n' Dale's Acorn Acres
+base.cr.sendSetZoneMsg(6000)
+
+#Donald's Dock
+base.cr.sendSetZoneMsg(1507) 
+base.cr.sendSetZoneMsg(1508) 
+base.cr.sendSetZoneMsg(1506)
+
+#Daisy Garden
+base.cr.sendSetZoneMsg(5501)
+base.cr.sendSetZoneMsg(5502)
+base.cr.sendSetZoneMsg(5503)
+
+#Minnie's Melodyland
+base.cr.sendSetZoneMsg(4503) 
+base.cr.sendSetZoneMsg(4504) 
+base.cr.sendSetZoneMsg(4506)
+
+#The Brrrgh
+base.cr.sendSetZoneMsg(3507) 
+base.cr.sendSetZoneMsg(3508) 
+base.cr.sendSetZoneMsg(3509) 
+base.cr.sendSetZoneMsg(324112)
+
+#Donald's Dreamland
+base.cr.sendSetZoneMsg(9504) 
+base.cr.sendSetZoneMsg(9501) 
+base.cr.sendSetZoneMsg(9503) 
+base.cr.sendSetZoneMsg(9505)
+
+#Sellbot HQ
+base.cr.sendSetZoneMsg(11200) 
+base.cr.sendSetZoneMsg(11500) 
+base.cr.sendSetZoneMsg(11100)
+
+#Cashbot HQ
+base.cr.sendSetZoneMsg(12100)
+
+#Lawbot HQ
+base.cr.sendSetZoneMsg(13100) 
+base.cr.sendSetZoneMsg(13200)
+
+#Bossbot HQ
+base.cr.sendSetZoneMsg(14100) 
+
+
+base.localAvatar.b_setAnimState(('swim')) - Swim at place
+base.localAvatar.b_setAnimState(('run')) - Run at place
+base.localAvatar.b_setAnimState(('walk')) - Walk at place
+base.localAvatar.b_setAnimState(('cringe')) - Cringe (like Emote)
+base.localAvatar.b_setAnimState(('Died')) - You will die
+base.localAvatar.b_setAnimState(('Push')) - Push something
+base.localAvatar.b_setAnimState(('Squish')) - Get squished
+base.localAvatar.b_setAnimState(('victory')) - Dance after Cog Battle
+base.localAvatar.b_setAnimState(('ScientistPlay')) - From Scientists by the Silly Meter
+base.localAvatar.b_setAnimState(('ScientistWork')) - From Scientists by the Silly Meter
+base.localAvatar.b_setAnimState(('ScientistEmcee')) - From Scientists by the Silly Meter
+base.localAvatar.b_setAnimState(('ScientistJealous')) - From Scientists by the Silly Meter
+base.localAvatar.b_setAnimState(('GolfPuttLoop')) - From Minigolf
+base.localAvatar.b_setAnimState(('GolfPuttSwing')) - From Minigolf
+base.localAvatar.b_setAnimState(('Catching')) - From Catch Game
+base.localAvatar.b_setAnimState(('dive')) - Dive like in "Treasure Dive"-Minigame
+base.localAvatar.b_setAnimState(('GolfRotateRight')) - From Minigolf
+base.localAvatar.b_setAnimState(('GolfRotateLeft')) - From Minigolf
+base.localAvatar.b_setAnimState(('TeleportOut')) - Don't Work?
+base.localAvatar.b_setAnimState(('CogThiefRunning')) - Weird Running
+base.localAvatar.b_setAnimState(('jumpSquat')) - Jump and Stuck in Air
+base.localAvatar.b_setAnimState(('OpenBook')) - Opens Book
+base.localAvatar.b_setAnimState(('CloseBook')) - Closes Book
+base.localAvatar.b_setAnimState(('FallDown')) - Like "Banana Peel"
+base.localAvatar.b_setAnimState("Sit")
+base.localAvatar.b_setAnimState("Push")
+base.localAvatar.b_setAnimState("Sad")
+base.localAvatar.b_setAnimState("Sleep")
+base.localAvatar.b_setAnimState('teleport') - Don't work?
+base.localAvatar.b_setAnimState('Flattened') - You're Flat
+base.localAvatar.b_setAnimState('ReadBook') - Open Book
+base.localAvatar.b_setAnimState('CatchEating') - From Catch Game
+base.localAvatar.b_setAnimState('TeleportOut') - Teleport
+base.localAvatar.b_setAnimState('TeleportIn') - Teleport
+base.localAvatar.b_setAnimState('CatchEating') - From Catch Game
+base.localAvatar.enterSitStart() - Sit in Air
+base.localAvatar.loop('reel') - Fishing?
+
+base.localAvatar.setEmoteAccess([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]) - All Emotes
+
+base.localAvatar.setBankMoney(10000) - Get 10000 Beans into your Bean Bank
+base.localAvatar.setMaxBankMoney(10000) - Set Max Beans
+
+base.localAvatar.find('**/hands').removeNode() - Do this one first
+base.localAvatar.find('**/hands').setColor(1,0,0) - Red Gloves
+base.localAvatar.find('**/hands').setColor(0,1,0) - Green Gloves
+base.localAvatar.find('**/hands').setColor(0,0,1) - Blue Gloves
+base.localAvatar.find('**/hands').setColor(1,1,0) - Yellow Gloves 
+base.localAvatar.find('**/hands').setColor(0,1,1) - Cyan Gloves
+base.localAvatar.find('**/hands').setColor(1,0,1) - Purple Gloves
+base.localAvatar.find('**/hands').setColor(0,0,0) - Black Gloves 
+base.localAvatar.find('**/hands').setColor(1,1,1) - White Gloves
+
+base.talkAssistant.sendOpenTalk('You can enter a text - it will be as big you want')
+
+base.localAvatar.physControls.avatarControlForwardSpeed=100
+base.localAvatar.physControls.avatarControlRotateSpeed=130
+base.localAvatar.physControls.avatarControlReverseSpeed=75
+base.localAvatar.physControls.avatarControlJumpForce=50
+
+base.localAvatar.setCogLevels([49,49,49,49]) - set's your disguise levels
+base.localAvatar.setCogTypes([77,77,77,77]) - needs to be testing
+base.localAvatar.setCogParts([0,0,0,0]) - Change the numbers = change the disguise parts
+base.localAvatar.setCogMerits([0,0,0,0]) - Change the numbers = change the merits
+base.localAvatar.setCogIndex(2) - Cog Suit Client Sided
+
+Client Cog Suit
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(3)
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(2)
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(1)
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(0)
+i = Index()
+
+
+base.localAvatar.setFishingRod(3) - Changes the rod
+base.localAvatar.setFishingTrohpies([1,2,3,4,5,6,7]) - All fishing trophies
+
+Client Picture Gloves
+gloves = loader.loadTexture("phase_4/maps/it.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/top').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/muzzle-short-neutral').setTexture(gloves, 1)
+
+base.wireframeOn() 
+base.wireframeOff() 
+
+TTGloves = base.localAvatar.findAllMatches('**/hands')
+TTGloves.setColor(0.97,0.3,0.3) 
+TTGloves.setColor(0.96,0.7,0.7) 
+TTGloves.setColor(0.69,0.29,0.95) 
+TTGloves.setColor(0.38,0.98,0.43) 
+TTGloves.setColor(1,0.90,0.30) 
+TTGloves.setColor(0.35,0.35,0.85) 
+TTGloves.setColor(0.3,0.64,0.85) 
+TTGloves.setColor(1,0.5,0.18) 
+TTGloves.setColor(1,1,0.57) 
+TTGloves.setColor(0.55,0.55,1) 
+TTGloves.setColor(0.25,0.25,0.3) 
+TTGloves.setColor(1,1,1)
+
+messenger.send([base.localAvatar.b_setAnimState('victory', 10)])
+messenger.send([base.localAvatar.b_setAnimState(('swim', 10))])

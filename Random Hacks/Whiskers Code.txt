@@ -1,0 +1,24 @@
+base.talkAssistant.sendOpenTalk('Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Im not interested in cry babies like you. Nah ah ah.')
+
+
+base.talkAssistant.sendOpenTalk('DoraDO The Explorer is the answer. DoraDO The Explorer is the answer. DoraDO The Explorer is the answer. DoraDO The Explorer is the answer. DoraDO The Explorer is the answer. Yup Yup Yup :D')
+
+base.talkAssistant.sendOpenTalk('What would it take? For things to be quiet, quiet like the snow... What would it take? For things to be quiet, quiet like the snow... What would it take? For things to be quiet, quiet like the snow... What would it take? For things to be quiet, quiet like the snow... What would it take for things to be Quiet.... Song is Louder than thunder xD')
+
+base.talkAssistant.sendOpenTalk('Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! Party Rock!!?!?! PARTY ROCK IT TO THE HOUSE TONIGHT!!! IM GONNA MAKE YOU LOSE YOUR MIND! Song? Party Rocky xD')
+
+base.talkAssistant.sendOpenTalk('Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this... Let me ask you this...')
+
+base.talkAssistant.sendOpenTalk('YO GONNA MAKE SUGAR CUPCAKES?!!?!! YO GONNA MAKE SUGAR CUPCAKES?!!?!! YO GONNA MAKE SUGAR CUPCAKES?!!?!! YO GONNA MAKE SUGAR CUPCAKES?!!?!! YO GONNA MAKE SUGAR CUPCAKES?!!?!! YO GONNA MAKE SUGAR CUPCAKES?!!?!! or... are you gonna make biscuits?')
+
+base.talkAssistant.sendOpenTalk('NO! NO! NO! MY CHURROS!!! I LOVED THEM LIKE THEY WERE ME OWN!!! oh, I smells pancakes. :D NO! NO! NO! MY CHURROS!! I LOVED THEM LIKE THEY WERE ME OWN!!! oh, I smells pancakes. :D yay')
+
+base.talkAssistant.sendOpenTalk('I AM WHISKERS. I AM WHISKERS. I AM WHISKERS. I AM WHISKERS. I AM WHISKERS.')
+
+base.talkAssistant.sendOpenTalk('GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! GUESS WHO MADE PANCAKES?! Not me. :P')
+
+base.talkAssistant.sendOpenTalk('OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON! OH NO! HE HAS A SPOON!')
+
+base.talkAssistant.sendOpenTalk('CARL!!! THERES A DEED BODY IN OUR HOUSE! CARL!!! THERES A DEED BODY IN OUR HOUSE! CARL!!! THERES A DEED BODY IN OUR HOUSE! CARL!!! THERES A DEED BODY IN OUR HOUSE! CARL!!! THERES A DEED BODY IN OUR HOUSE!')
+
+base.talkAssistant.sendOpenTalk('WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?! WHO HERE HAS A TRAINED MONKEY?!')

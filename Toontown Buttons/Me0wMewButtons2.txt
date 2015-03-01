@@ -1,0 +1,197 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def bOne():
+ import toontown 
+ def new(): 
+     return True 
+ def new2(*a,**k): 
+     return 2 
+ base.cr.isPaid = new 
+ base.cr.isParentPasswordSet = new 
+ toontown.toon.LocalToon.LocalToon.getGameAccess = new2 
+ base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+def bSeven():
+ base.talkAssistant.sendOpenTalk('....')
+def bEight():
+  base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+  base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+  base.localAvatar.book._ShtikerBook__pageChange(1)
+  base.localAvatar.book._ShtikerBook__pageChange(-1)
+def bNine():
+ base.talkAssistant.sendOpenTalk('No Comment...')
+def bTen():
+ base.talkAssistant.sendOpenTalk('- sPOKE -')
+def bEleven():
+ base.talkAssistant.sendOpenTalk('                                   ')
+def bTwelve():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+def bThirteen():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bFourteen():
+ base.localAvatar.physControls.setGravity(.1)
+def bFifteen():
+ base.localAvatar.physControls.avatarControlJumpForce = 1
+def bSixteen():
+ base.localAvatar.physControls.avatarControlRotateSpeed=125
+def bSeventeen():
+ base.localAvatar.physControls.avatarControlReverseSpeed=80
+def bEighteen():
+ base.localAvatar._LocalToon__handleClarabelleButton()
+ base.localAvatar.showHpString('Going To Estate...', duration=2, scale=0.5)
+def bNineteen():
+ base.localAvatar.physControls.setGravity(50)
+ base.localAvatar.showHpString('Gravity - Reset', duration=2, scale=0.5)
+def bTwenty():
+ base.cr.gameFSM.request('closeShard')
+ base.localAvatar.setSystemMessage(1,'Exiting Game...')
+def bTwentyone():
+ houseZoneGet = base.localAvatar.getZoneId()
+ houseZoneGet += 10
+ houseZoneGet = int(houseZoneGet)
+ base.cr.sendSetZoneMsg(houseZoneGet)
+def whisperall(message="", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+def bTwentytwo():
+ base.talkAssistant.sendOpenTalk('- Cough -')
+def bTwentythree():
+ base.localAvatar.b_setAnimState('ScientistWork')
+def bTwentyfour():
+ base.localAvatar.setDNAString('t\x01\x02\x00\x01\x56\x1d\x54\x1c\x24\x1d\x00\x00\x14\x14')
+def bTwentyfive():
+ word = base.localAvatar.getZoneId()
+ base.localAvatar.collisionsOff()
+ base.cr.sendSetZoneMsg(7000)
+ base.localAvatar.b_setAnimState('chat')
+ base.cr.sendSetZoneMsg(word)
+def bTwentysix():
+ ttd = base.cr.doFindAll("DivingGame")
+ for ttd in base.cr.doFindAll("DivingGame"):
+     ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+def bTwentyseven():
+ zone = base.localAvatar.getZoneId()
+ zone = str(zone)
+ base.localAvatar.setSystemMessage(1, zone)
+def bTwentyeight():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bTwentynine():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+
+b1 = DirectButton(text = ("Member", "Ship", "Ship", "Member"), scale=.053, pos = (-1.244,0,.79), command=bOne)
+b7 = DirectButton(text = ("Me0w", "...", "...", "Me0w"), scale=.06, pos = (-1.26,0,.6), command=bSeven)
+b8 = DirectButton(text = ("~Tp~", "All", "All", "~Tp~"), scale=.05, pos = (-1.27,0,.1), command=bEight)
+b9 = DirectButton(text = ("Me0w", "No C.", "No C.", "Me0w"), scale=.06, pos = (-1.26,0,.4), command=bNine)
+b22 = DirectButton(text = ("Me0w", "- C -", "- C -", "Me0w"), scale=.06, pos = (-1.26,0,.3), command=bTwentytwo)
+b10 = DirectButton(text = ("Me0w", "Poke", "Poke", "Me0w"), scale=.06, pos = (-1.26,0,.2), command=bTen)
+b11 = DirectButton(text = ("Me0w", "     ", "      ", "Me0w"), scale=.06, pos = (-1.26,0,.5), command=bEleven)
+b12 = DirectButton(text = ("Jump1", "100", "100", "Jump1"), scale=.05, pos = (-1.27,0,-.1), command=bTwelve)
+b13 = DirectButton(text = ("Speed", "100", "100", "Speed"), scale=.05, pos = (-1.27,0,-.2), command=bThirteen)
+b16 = DirectButton(text = ("Rotate", "125", "125", "Rotate"), scale=.05, pos = (-1.26,0,-.3), command=bSixteen)
+b17 = DirectButton(text = ("Reverse", "80", "80", "Reverse"), scale=.05, pos = (-1.25,0,-.4), command=bSeventeen)
+b14 = DirectButton(text = ("Gravity", ".1", ".1", "Gravity"), scale=.05, pos = (-1.26,0,-.5), command=bFourteen)
+b15 = DirectButton(text = ("Jump2", "1", "1", "Jump2"), scale=.05, pos = (-1.26,0,-.6), command=bFifteen)
+b18 = DirectButton(text = ("House", "Tp", "Tp", "House"), scale=.055, pos = (-1.26,0,.7), command=bEighteen)
+b19 = DirectButton(text = ("Gravity", "RESET", "RESET", "Gravity"), scale=.05, pos = (-1.26,0,-.7), command=bNineteen)
+b20 = DirectButton(text = ("EXIT", "GO", "GO", "EXIT"), scale=.07, pos = (-1.27,0,-.98), command=bTwenty)
+
+from direct.interval.IntervalGlobal import *
+def spinSetup():
+ height = base.localAvatar.getZ()
+ base.localAvatar.collisionsOff()
+ base.localAvatar.setZ(height + 6)
+def spinOne():
+ base.localAvatar.setHpr(0,10,0)
+def spinTwo():
+ base.localAvatar.setHpr(0,30,0)
+def spinThree():
+ base.localAvatar.setHpr(0,50,0)
+def spinFour():
+ base.localAvatar.setHpr(0,70,0)
+def spinFive():
+ base.localAvatar.setHpr(0,90,0)
+def spinSix():
+ base.localAvatar.setHpr(0,110,0)
+def spinSeven():
+ base.localAvatar.setHpr(0,130,0)
+def spinEight():
+ base.localAvatar.setHpr(0,150,0)
+def spinNine():
+ base.localAvatar.setHpr(0,170,0)
+def spinTen():
+ base.localAvatar.setHpr(0,190,0)
+def spinEleven():
+ base.localAvatar.setHpr(0,210,0)
+def spinTwelve():
+ base.localAvatar.setHpr(0,230,0)
+def spinThirteen():
+ base.localAvatar.setHpr(0,250,0)
+def spinFourteen():
+ base.localAvatar.setHpr(0,270,0)
+def spinFifteen():
+ base.localAvatar.setHpr(0,290,0)
+def spinSixteen():
+ base.localAvatar.setHpr(0,310,0)
+def spinSeventeen():
+ base.localAvatar.setHpr(0,330,0)
+def spinEighteen():
+ base.localAvatar.setHpr(0,0,0)
+def spinEnd():
+ base.localAvatar.collisionsOn()
+def spinOnTime():
+ seq = Sequence()
+ seq.append(Func(spinSetup))
+ seq.append(Wait(.5))
+ seq.append(Func(spinOne))
+ seq.append(Wait(.5))
+ seq.append(Func(spinTwo))
+ seq.append(Wait(.5))
+ seq.append(Func(spinThree))
+ seq.append(Wait(.5))
+ seq.append(Func(spinFour))
+ seq.append(Wait(.5))
+ seq.append(Func(spinFive))
+ seq.append(Wait(.5))
+ seq.append(Func(spinSix))
+ seq.append(Wait(.5))
+ seq.append(Func(spinSeven))
+ seq.append(Wait(.5))
+ seq.append(Func(spinEight))
+ seq.append(Wait(.5))
+ seq.append(Func(spinNine))
+ seq.append(Wait(.5))
+ seq.append(Func(spinTen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinEleven))
+ seq.append(Wait(.5))
+ seq.append(Func(spinTwelve))
+ seq.append(Wait(.5))
+ seq.append(Func(spinThirteen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinFourteen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinFifteen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinSixteen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinSeventeen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinEighteen))
+ seq.append(Wait(.5))
+ seq.append(Func(spinEnd))
+ seq.start()
+
+
+bot1 = DirectButton(text = ("SPIN", "Start", "Start", "SPIN"), scale=.05, pos = (-1.28,0,-.0), command=spinOnTime)

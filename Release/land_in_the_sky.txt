@@ -1,0 +1,381 @@
+base.cr.sendSetZoneMsg(215192)
+
+
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+
+
+
+
+environ = loader.loadModel("phase_4/models/minigames/tag_arena.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,99)
+environ.setHpr(0,0,0)
+environ.setScale(2)
+
+
+G = loader.loadModel("phase_4/models/modules/gazebo.bam")
+G.reparentTo(render)
+G.setPos(5,53,99)
+G.setHpr(0,0,0)
+G.setScale(1)
+
+
+
+
+
+F = loader.loadModel("phase_4/models/props/toontown_central_fountain.bam")
+F.reparentTo(render)
+F.setPos(90,-60,99)
+F.setHpr(0,0,0)
+F.setScale(1)
+
+
+
+F2 = loader.loadModel("phase_4/models/props/toontown_central_fountain.bam")
+F2.reparentTo(render)
+F2.setPos(-90,-60,99)
+F2.setHpr(0,0,0)
+F2.setScale(1)
+
+
+
+
+TH = loader.loadModel("phase_4/models/modules/toonhall.bam")
+TH.reparentTo(render)
+TH.setPos(40,130,99)
+TH.setHpr(0,0,0)
+TH.setScale(0.7)
+
+
+TH2 = loader.loadModel("phase_4/models/modules/toonhall.bam")
+TH2.reparentTo(render)
+TH2.setPos(-70,130,99)
+TH2.setHpr(0,0,0)
+TH2.setScale(0.7)
+
+table = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table.reparentTo(render)
+table.setPos(70,-27,99)
+table.setHpr(0,0,0)
+table.setScale(0.5)
+
+
+table2 = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table2.reparentTo(render)
+table2.setPos(70,27,99)
+table2.setHpr(0,0,0)
+table2.setScale(0.5)
+
+table3 = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table3.reparentTo(render)
+table3.setPos(-70,27,99)
+table3.setHpr(0,0,0)
+table3.setScale(0.5)
+
+
+table4 = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table4.reparentTo(render)
+table4.setPos(-70,-27,99)
+table4.setHpr(0,0,0)
+table4.setScale(0.5)
+
+
+
+up = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up.reparentTo(render)
+up.setPos(0,-50,101)
+up.setHpr(0,0,0)
+up.setScale(0.5)
+
+
+
+up2 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up2.reparentTo(render)
+up2.setPos(0,-54,104)
+up2.setHpr(0,0,0)
+up2.setScale(0.5)
+
+
+up3 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up3.reparentTo(render)
+up3.setPos(0,-58,106)
+up3.setHpr(0,0,0)
+up3.setScale(0.5)
+
+
+
+up4 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up4.reparentTo(render)
+up4.setPos(0,-62,108)
+up4.setHpr(0,0,0)
+up4.setScale(0.5)
+
+
+
+up5 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up5.reparentTo(render)
+up5.setPos(0,-66,110)
+up5.setHpr(0,0,0)
+up5.setScale(0.5)
+
+
+up6 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up6.reparentTo(render)
+up6.setPos(0,-70,112)
+up6.setHpr(0,0,0)
+up6.setScale(0.5)
+
+up7 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up7.reparentTo(render)
+up7.setPos(0,-74,114)
+up7.setHpr(0,0,0)
+up7.setScale(0.5)
+
+
+up8 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up8.reparentTo(render)
+up8.setPos(0,-78,116)
+up8.setHpr(0,0,0)
+up8.setScale(0.5)
+
+
+up9 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up9.reparentTo(render)
+up9.setPos(0,-82,118)
+up9.setHpr(0,0,0)
+up9.setScale(0.5)
+
+up10 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up10.reparentTo(render)
+up10.setPos(0,-86,120)
+up10.setHpr(0,0,0)
+up10.setScale(0.5)
+
+
+up11 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up11.reparentTo(render)
+up11.setPos(0,-200,124)
+up11.setHpr(0,0,0)
+up11.setScale(0.5)
+
+
+up12 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up12.reparentTo(render)
+up12.setPos(0,-204,128)
+up12.setHpr(0,0,0)
+up12.setScale(0.5)
+
+up12 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up12.reparentTo(render)
+up12.setPos(0,-208,132)
+up12.setHpr(0,0,0)
+up12.setScale(0.5)
+
+up13 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up13.reparentTo(render)
+up13.setPos(0,-212,136)
+up13.setHpr(0,0,0)
+up13.setScale(0.5)
+
+
+up14 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up14.reparentTo(render)
+up14.setPos(0,-216,140)
+up14.setHpr(0,0,0)
+up14.setScale(0.5)
+
+
+up15 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up15.reparentTo(render)
+up15.setPos(0,-220,144)
+up15.setHpr(0,0,0)
+up15.setScale(0.5)
+
+
+up16 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up16.reparentTo(render)
+up16.setPos(0,-224,148)
+up16.setHpr(0,0,0)
+up16.setScale(0.5)
+
+
+up17 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up17.reparentTo(render)
+up17.setPos(0,-228,152)
+up17.setHpr(0,0,0)
+up17.setScale(0.5)
+
+
+up18 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up18.reparentTo(render)
+up18.setPos(0,-232,152)
+up18.setHpr(0,0,0)
+up18.setScale(0.5)
+
+
+up19 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up19.reparentTo(render)
+up19.setPos(0,-236,152)
+up19.setHpr(0,0,0)
+up19.setScale(0.5)
+
+up20 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up20.reparentTo(render)
+up20.setPos(0,-250,152)
+up20.setHpr(0,0,0)
+up20.setScale(0.5)
+
+up21 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up21.reparentTo(render)
+up21.setPos(0,-260,148)
+up21.setHpr(0,0,0)
+up21.setScale(0.5)
+
+
+up22 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up22.reparentTo(render)
+up22.setPos(0,-270,144)
+up22.setHpr(0,0,0)
+up22.setScale(0.5)
+
+
+up23 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up23.reparentTo(render)
+up23.setPos(0,-280,140)
+up23.setHpr(0,0,0)
+up23.setScale(0.5)
+
+up24 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up24.reparentTo(render)
+up24.setPos(0,-290,136)
+up24.setHpr(0,0,0)
+up24.setScale(0.5)
+
+
+up25 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up25.reparentTo(render)
+up25.setPos(0,-300,132)
+up25.setHpr(0,0,0)
+up25.setScale(0.5)
+
+
+
+up26 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up26.reparentTo(render)
+up26.setPos(0,-310,128)
+up26.setHpr(0,0,0)
+up26.setScale(0.5)
+
+up27 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+up27.reparentTo(render)
+up27.setPos(0,-320,124)
+up27.setHpr(0,0,0)
+up27.setScale(0.5)
+
+
+
+
+
+
+
+room1 = loader.loadModel("phase_10/models/cashbotHQ/ZONE15a.bam")
+room1.reparentTo(render)
+room1.setPos(0,-135,121)
+room1.setHpr(90,0,0)
+room1.setScale(1.1)
+
+
+
+
+
+
+door1 = loader.loadModel("phase_10/models/cashbotHQ/DoorFrame.bam")
+door1.reparentTo(render)
+door1.setPos(0,-163,121)
+door1.setHpr(0,0,0)
+door1.setScale(0.6)
+
+
+
+
+
+
+room2 = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam")
+room2.reparentTo(render)
+room2.setPos(0,-233,121)
+room2.setHpr(180,0,0)
+room2.setScale(0.6)
+
+
+trampoline3=loader.loadModel("phase_13/models/parties/trampoline_model.bam")
+trampoline3.reparentTo(render)
+trampoline3.setPos(-40,-430,121)
+
+trampoline2=loader.loadModel("phase_13/models/parties/trampoline_model.bam")
+trampoline2.reparentTo(render)
+trampoline2.setPos(0,-430,121)
+
+trampoline=loader.loadModel("phase_13/models/parties/trampoline_model.bam")
+trampoline.reparentTo(render)
+trampoline.setPos(40,-430,121)
+
+
+dancefloor=loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dancefloor.reparentTo(render)
+dancefloor.setPos(-40,-310,121)
+carouselSpin=dancefloor.hprInterval(20, Vec3(360, 0, 0))
+carouselSpin.loop()
+
+
+
+merrygoround=loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+merrygoround.reparentTo(render)
+merrygoround.setPos(-50,-400,121)
+merrygoround.setScale(1)
+carouselSpin = merrygoround.hprInterval(2, Vec3(360, 0, 0))
+carouselSpin.loop()
+
+
+
+
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(-20,57.688,0.034)
+pandaPosInterval22 = e.posInterval(13,Point3(-20,57.688,0.034),
+startPos=Point3(-20,57.688,100))
+pandaPosInterval33 = e.posInterval(13,Point3(-20,57.688,100),
+startPos=Point3(-20,57.688,0.034))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c.setPos(-9.98,139.11,117.38)
+c.setHpr(0,340.30,0)
+c.hide()
+c.reparentTo(render)
+c.find('**/wall_back').removeNode()
+c.find('**/wall_front').removeNode()
+c.find('**/wall_left').removeNode()
+c.find('**/wall_right').removeNode()
+c.find('**/ceiling').removeNode()

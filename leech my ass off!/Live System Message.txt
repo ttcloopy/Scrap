@@ -1,0 +1,11 @@
+def broadcast(message="I just hacked system message, but I'll never say who I am :-). And don't think I'm Freckleslam, I'm not.", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.setSystemMessage(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1

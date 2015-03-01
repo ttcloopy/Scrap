@@ -1,0 +1,11 @@
+toon = base.cr.doFindAll("Fisherman")[0]
+toon.reparentTo(render)
+toon.setPosHpr(3, 0, 4.035, 90, 0, 0)
+toon.setDNAString('t\x05\x05\x00\x01\x56\x06\x3d\x03\31\x07\x0e\x00\x0e\x0e')
+toon.loop('neutral')
+toon.setDisplayName('Fd Green Cat Fd')
+toon.nametag.setColorCode(0)
+toon.find('**/distAvatarCollNode-751100032').removeNode()
+toon.find('**/NPCToon-751100032').removeNode()
+
+print base.localAvatar.getAccountDays()

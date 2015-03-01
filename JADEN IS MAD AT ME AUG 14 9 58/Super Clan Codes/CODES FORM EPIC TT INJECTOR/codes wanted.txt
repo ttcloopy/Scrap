@@ -1,0 +1,206 @@
+Ban Block1:
+
+def blockBan(log):
+    ftf = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + str(log)
+    rf = open('%s'%(ftf),'r')
+    del rf.read()
+    def blockBan():
+        ltp = str(rf.readline())
+        if "Server is booting us out" in ltp:
+            messenger.send('pandaRenderError')
+        else:
+            None
+    def loopBanCheck():
+      seq.append(Func(blockBan))
+      seq.append(Wait(0.1))
+      seq.append(Func(loopBanCheck))
+      seq.start()
+    loopBanCheck()
+
+After Ban Block1 do:
+banBlock('toontown-2010201-2032812.log')
+
+With your log in it
+
+
+Anim Tracker:
+
+from direct.interval.IntervalGlobal import *
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+from direct.task import Task
+
+animStateText = OnscreenText(text='', style=1, fg=(1,1,1,1), align=TextNode.ALeft, pos=(-1.15, .8), scale=.07)
+
+def animUpdateText(str):
+    animStateText.setText(str)
+
+def gotoanimUpdateText():
+    animUpdateText(str(base.localAvatar.getCurrentAnim()))
+
+def alwaysGoAnUp():
+  seq = Sequence()
+  seq.append(Func(gotoanimUpdateText))
+  seq.append(Wait(0.1))
+  seq.append(Func(alwaysGoAnUp))
+  seq.start()
+
+alwaysGoAnUp()
+
+
+Buttons:
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Swimming"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('swim')
+    b1.hide()
+    b2.show()
+    b3.show()
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 0
+
+def setText2():
+    bk_text = "Sitting"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('SitStart')
+    b1.show()
+    b2.hide()
+    b3.show()
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Catching"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Catching')
+    b1.show()
+    b2.show()
+    b3.hide()
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 1
+
+def setText4():
+    bk_text = "Fast RC"
+    textObject.setText(bk_text)
+    ttv = base.cr.doFindAll("Vehicle")
+    for ttv in base.cr.doFindAll("Vehicle"):
+        tid = ttv.doId
+    
+    lttv = base.cr.doFindAll("vehicle-" + str(tid))
+    for lttv in base.cr.doFindAll("vehicle-" + str(tid)):
+        lttv.windResistance.setAmplitude(-190)
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.hide()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 1
+
+def setText5():
+    bk_text = ""
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Died')
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.hide()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 0
+
+def setText6():
+    bk_text = "Racing Code"
+    textObject.setText(bk_text)
+    ttv = base.cr.doFindAll("Vehicle")
+    for ttv in base.cr.doFindAll("Vehicle"):
+      ttv.setTurbo(999999)
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.show()
+    b6.hide()
+    b7.show()
+    b8.show()
+    var = 1
+
+def setText7():
+    bk_text = "Nutty River"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].showPop = 1
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.hide()
+    b8.show()
+    var = 1
+
+def setText8():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.hide()
+    var = 1
+
+base.accept("escape", normal1, [])
+sw = "swim"
+b1 = DirectButton(text = (sw, sw, sw, sw), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+si = "sit"
+b2 = DirectButton(text = (si, si, si, si), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+ct = "catch"
+b3 = DirectButton(text = (ct, ct, ct, ct), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+gr = "golf rotate"
+b4 = DirectButton(text = (gr, gr, gr, gr), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+di = "die"
+b5 = DirectButton(text = (di, di, di, di), scale=.06, pos = (-0,-0,-.95), command=setText5)
+rc = "r c"
+b6 = DirectButton(text = (rc, rc, rc, rc), scale=.06, pos = (.16,-0,-.95), command=setText6)
+rv = "river"
+b7 = DirectButton(text = (rv, rv, rv, rv), scale=.06, pos = (.35,-0,-.95), command=setText7)
+mb = "member"
+b8 = DirectButton(text = (mb, mb, mb, mb), scale=.06, pos = (.565,-0,-.95), command=setText8)

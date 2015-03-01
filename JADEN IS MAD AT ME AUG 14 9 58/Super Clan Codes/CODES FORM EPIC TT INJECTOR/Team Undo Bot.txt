@@ -1,0 +1,48 @@
+from direct.interval.IntervalGlobal import *
+def intro():
+    messenger.send([base.localAvatar.b_setAnimState('victory',32.01)])
+    base.talkAssistant.sendOpenTalk('Hello, Toons!')
+def part2():
+    base.talkAssistant.sendOpenTalk('We are Team UNDO!')
+    base.localAvatar.setHpr(12,120,247)
+def part3():
+    base.talkAssistant.sendOpenTalk('YOU ALL HAVE FAILED!!')
+    base.localAvatar.setHpr(26,67,315)
+def part4():
+    base.talkAssistant.sendOpenTalk('YOU ALL WILL NOT SUCCEED!!')
+    base.localAvatar.setHpr(145,0,270)
+def part5():
+    base.talkAssistant.sendOpenTalk('BUT')
+    base.localAvatar.setHpr(78,12,170)
+def part6():
+    base.talkAssistant.sendOpenTalk('WE WILL SUCCEED!!')
+    base.localAvatar.setHpr(221,122,225)
+def part7():
+    base.talkAssistant.sendOpenTalk('AND WE WILL NOT BE FINISHED!!!')
+    base.localAvatar.setHpr(0,0,360)
+def part8():
+    base.talkAssistant.sendOpenTalk('For we are Team UNDO!')
+    base.localAvatar.b_setAnimState(('TeleportOut'))
+def part9():
+    base.cr.sendSetZoneMsg(7000)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(5))
+  seq.append(Func(part2))
+  seq.append(Wait(5))
+  seq.append(Func(part3))
+  seq.append(Wait(5))
+  seq.append(Func(part4))
+  seq.append(Wait(5))
+  seq.append(Func(part5))
+  seq.append(Wait(5))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(5))
+  seq.append(Func(part8))
+  seq.append(Wait(5))
+  seq.append(Func(part9))
+  seq.start()
+onTime()

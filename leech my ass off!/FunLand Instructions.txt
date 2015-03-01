@@ -1,0 +1,5 @@
+extract to C:\
+open RemoteDLL.exe
+choose Toontown.exe as proccess
+choose C:\SmartHacks\FunLand.dll as inject dll
+then inject the DLL

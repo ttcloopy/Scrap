@@ -1,0 +1,14 @@
+
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex= loader.loadTexture("phase_4/maps/robber-baron.jpg")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex= loader.loadTexture("phase_4/maps/robber-baron.jpg")
+short.setTexture(shorttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex= loader.loadTexture("phase_4/maps/robber-baron.jpg")
+sleeves.setTexture(sleevestex, 1)
+
+gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)

@@ -1,0 +1,1810 @@
+------Server Bot-------
+import toontown
+NumToonBots = 0
+from direct.distributed.PyDatagram import PyDatagram
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+from toontown.distributed.ToontownMsgTypes import CLIENT_SET_AVATAR
+def createAvatarAndAvList():
+    try:base.cr.exitWaitForAvatarList()
+    except:pass
+    ToonDNA = toontown.toon.ToonDNA.ToonDNA()
+    ToonDNA.makeFromNetString('t\x09\x01\x00\x01\x00\x1b\x00\x1b\x00\x1b\x09\x00\x09\x09')
+    base.cr.sendCreateAvatarMsg(ToonDNA, 'Toon', 5)
+    base.cr.enterWaitForAvatarList()
+def createAvatarNPCBot():
+    try:
+        global NumToonBots
+        NumToonBots += 1
+        base.cr.exitWaitForAvatarList()
+        LocalX = base.localAvatar.getX()
+        LocalY = base.localAvatar.getY()
+        LocalZ = base.localAvatar.getZ()
+        base.localAvatar.stopPosHprBroadcast()
+        ToonAvatarId = base.cr.avList[1].id
+        NORMAL_TOON_ID = base.localAvatar.doId
+        NORMAL_TOON_ZONE = base.localAvatar.getZoneId()
+        RefreshAvatar = PyDatagram()
+        RefreshAvatar.addUint16(CLIENT_SET_AVATAR)
+        RefreshAvatar.addUint32(ToonAvatarId)
+        base.localAvatar.doId = ToonAvatarId
+        base.cr.avData.id = ToonAvatarId
+        base.cr.sendDatagram(RefreshAvatar)
+        base.cr.sendSetZoneMsg(NORMAL_TOON_ZONE)
+        base.localAvatar.d_setParent(2)
+        base.localAvatar.sendUpdate('setPos', [LocalX, LocalY, LocalZ])
+        RefreshAvatar = PyDatagram()
+        RefreshAvatar.addUint16(CLIENT_SET_AVATAR)
+        RefreshAvatar.addUint32(NORMAL_TOON_ID)
+        base.localAvatar.doId = NORMAL_TOON_ID
+        base.cr.avData.id = NORMAL_TOON_ID
+        base.cr.sendDatagram(RefreshAvatar)
+        base.cr.sendSetZoneMsg(NORMAL_TOON_ZONE)
+        base.localAvatar.d_setParent(2)
+        base.localAvatar.startPosHprBroadcast()
+    except:pass
+def deleteCreatedAvatar():
+    try:
+        ToonAvatarId = base.cr.avList[1].id
+        base.cr.sendDeleteAvatarMsg(ToonAvatarId)
+        base.cr.enterWaitForAvatarList()
+    except:pass
+def createAvatarInCurrPosition():
+    avt = Sequence()
+    avt.append(Func(createAvatarAndAvList))
+    avt.append(Wait(1))
+    avt.append(Func(createAvatarNPCBot))
+    avt.append(Wait(1))
+    avt.append(Func(deleteCreatedAvatar))
+    avt.append(Wait(1))
+    avt.loop()
+createAvatarInCurrPosition()
+
+
+----My DNA----
+
+base.localAvatar.setDNAString(''t\x05\x05\x00\x01\x56\x06\x3d\x03\31\x07\x0e\x00\x0e\x0e'')
+base.localAvatar.setDNAString('t\x09\x02\x02\x01\x00\x1b\x00\x1b\x00\x1b\x1b\x00\x1b\x1b')
+base.localAvatar.setDNAString('t\x09\x01\x00\x01\x63\x1b\x00\x1b\x27\x1b\x09\x00\x09\x09')
+
+---DC Code-----
+import toontown
+try:newToonRandom
+except:newToonRandom = toontown.toon.ToonDNA.ToonDNA.newToonRandom
+def createNewRandomToon(self, **kwds):
+ newToonRandom(self)
+ self.torso='s';self.gender=kwds['gender']
+toontown.toon.ToonDNA.ToonDNA.newToonRandom = createNewRandomToon
+
+
+-----Server Transfer Money To Bank-----
+base.cr.doFindAll("DistributedBank")[0].sendUpdate("transferMoney", [21])
+
+---Server Invisible----
+base.cr.doFindAll("DistributedFurnitureManager")[0].d_avatarEnter()
+base.cr.sendSetZoneMsg(6000)
+
+-----Server Party List Gui-----
+base.cr.doFindAll("DistributedPartyGate")[0].sendUpdate("getPartyList", [base.localAvatar.doId])
+
+
+----Server Needs Help In Battle Message---
+messenger.send('nameTagShowAvId')
+
+def broadcast(includingSelf=True):
+        startingToon = 0
+        toonOn = 0
+        listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+        endingToon = len(listToonIds)
+        print listToonIds
+        while startingToon != endingToon:
+            base.localAvatar.d_battleSOS(435100057, listToonIds[toonOn])
+            print toonOn
+            toonOn = toonOn + 1
+            startingToon = startingToon + 1
+
+
+broadcast(True)
+
+
+-----Server Toon Up-----
+base.cr.doFindAll("Treasure")[0].d_requestGrab()
+base.cr.doFindAll("Treasure")[1].d_requestGrab()
+base.cr.doFindAll("Treasure")[2].d_requestGrab()
+base.cr.doFindAll("Treasure")[3].d_requestGrab()
+
+
+
+
+
+-----Server Take Over Pond-----
+base.cr.doFindAll("DistributedFishingSpot")[0].sendUpdate("requestEnter", [])
+base.cr.doFindAll("DistributedFishingSpot")[1].sendUpdate("requestEnter", [])
+base.cr.doFindAll("DistributedFishingSpot")[2].sendUpdate("requestEnter", [])
+base.cr.doFindAll("DistributedFishingSpot")[3].sendUpdate("requestEnter", [])
+
+-----Server Take Over Toon HQ-----
+base.cr.doFindAll("HQ Officer")[0].sendUpdate("avatarEnter", [])
+base.cr.doFindAll("HQ Officer")[1].sendUpdate("avatarEnter", [])
+base.cr.doFindAll("HQ Officer")[2].sendUpdate("avatarEnter", [])
+base.cr.doFindAll("HQ Officer")[3].sendUpdate("avatarEnter", [])
+
+
+-----Server Scarecrow-----
+from direct.distributed.PyDatagram import PyDatagram
+from direct.distributed.MsgTypes import CLIENT_SET_AVATAR
+RefreshedAvatar = PyDatagram()
+base.localAvatar.collisionsOff()
+RefreshedAvatar.addUint16(CLIENT_SET_AVATAR)
+RefreshedAvatar.addUint32(base.localAvatar.doId)
+base.cr.sendDatagram(RefreshedAvatar)
+base.cr.sendSetZoneMsg(base.localAvatar.getZoneId())
+base.localAvatar.b_setParent(2)
+base.localAvatar.b_setAnimState('off')
+
+
+
+-----Server Name Pattern List-----
+[{'Sir': 6, 'Little': 23, 'Baron': 0, 'Cool': 15, 'Doctor': 20, 'Colonel': 16, 'Master': 3, 'Weird': 33, 'Sheriff': 28, 'Big': 13, 'Fat': 21, 'Dippy': 19, 'Prof.': 27, 'Noisy': 26, 
+'King': 2, 'Ugly': 32, 'Silly': 30, 'Skinny': 29, 'Loud': 25, 'Duke': 1, 'Crazy': 17, "Good ol'": 22, 'Deputy': 18, 'Super': 31, 'Loopy': 24, 'Captain': 14, 'Mister': 4, 
+'Prince': 5}, {'Barney': 35, 'Curly': 156, 'Murky': 186, 'Furball': 175, 'Dudley': 52, 'Lefty': 181, 'Slappy': 201, 'Spike': 89, 'Cricket': 154, 'Tubby': 214, 'Oscar': 75,
+ 'Buford': 39, 'Skipper': 87, 'Fleabag': 168, 'Huddles': 177, 'Poppy': 194, 'Binky': 136, 'Corky': 150, 'Moe': 70, 'Tricky': 213, 'Winky': 218, 'Dinky': 159, 'Wilbur': 94,
+'Cuckoo': 157, 'Buzz': 43, 'Batty': 132, 'Fireball': 167, 'Louie': 67, 'Bizzy': 141, 'Coconut': 148, 'Chirpy': 146, 'Zowie': 226, 'Skip': 86, 'Orville': 74, 'Crumbly': 155, 
+'Zilly': 223, 'Buster': 41, 'Freckles': 173, 'Oswald': 76, 'Pickles': 191, 'Milton': 72, 'Drippy': 162, 'Butch': 42, 'Knuckles': 62, 'Flapjack': 169, 'Rhubarb': 195, 'Peanut': 189,
+ 'Ned': 73, 'C.J.': 144, 'C.W.': 145, 'Lionel': 65, 'Bert': 37, 'Goopy': 176, 'Cranky': 152, 'Rusty': 84, 'Romeo': 83, 'Dizzy': 160, 'Lollipop': 182, 'Zippety': 225, 'Soupy': 200, 
+'Dusty': 164, 'Biscuit': 137, 'Flip': 171, 'Ziggy': 222, 'Chipper': 47, 'Chester': 45, 'Bunky': 40, 'Skippy': 88, 'Smirky': 204, 'Loopy': 184, 'Beany': 133, 'Alvin': 34,
+ 'Bonzo': 38, 'Chip': 46, 'Peppy': 190, 'Sammie': 85, 'Fangs': 166, 'J.C.': 178, 'Fluffy': 172, 'Graham': 56, 'Monty': 71, 'Bingo': 135, 'Zippy': 224, 'Harvey': 57, 'Scooter':
+ 197, 'Clyde': 51, 'Zany': 221, 'Tom': 91, 'Beppo': 36, 'Skimpy': 199, 'Mildew': 185, 'Clarence': 49, 'Stripey': 211, 'Spunky': 210, 'Fritz': 55, 'Loony': 183, 'Clancy': 48, 'Yippie': 219, 'Wally': 93, 'Reggie': 79, 'Rocco': 81, 'Stinky': 90, 'Sniffy': 206, 'Blinky': 142, 'Rollie': 82, 'Waldo': 92, 'Lancelot': 63, 'Spotty': 209, 'B.D.': 130, 'Bonkers': 140, 'Duke': 53, 'Crazy': 153, 'Nutty': 187, 'Von': 215, 'Wacky': 216, 'Boo Boo': 139, 'Pinky': 192, 'Chunky': 147, 'Salty': 196, 'Corny': 151, 'Wacko': 217, 'Cecil': 44, 'Droopy': 163, 'Z.Z.': 220, 'Ernie': 54, 'Slippy': 202, 'Ricky': 80, 'Hector': 58, 'Snappy': 205, 'Huey': 59, 'Spiffy': 208, 'Bebop': 134, 'Banjo': 131, 'Max': 69, 'Mac': 68, 'Snuffy': 207, 'Frizzy': 174, 'Pancake': 188, 'Bumpy': 143, 'Cliff': 50, 'Slumpy': 203, 'Flappy': 170, 'Leroy': 64, 'Jake': 61, 'Popcorn': 193, 'Comet': 149, 'Ozzie': 77, 'Skids': 198, 'Jacques': 60, 'Bongo': 138, 'Kippy': 180, 'Stubby': 212, 'Domino': 161, 'Pierre': 78, 'Fancy': 165, 'Daffy': 158, 'Lloyd': 66, 'Jellyroll': 179}, {'Bizzen': 234, 'Funny': 259, 'Nickel': 275, 'Lemon': 269, 'Purple': 287, 'Twinkle': 302, 'Huckle': 263, 'Thunder': 298, 'Poodle': 285, 'Paddle': 278, 'Pinker': 284, 'Bagel': 229, 'Boingen': 236, 'Fumble': 258, 'Crunchen': 243, 'Mizzen': 274, 'Blubber': 235, 'Feather': 252, 'Electro': 251, 'Banana': 230, 'Ruffle': 291, 'Zippen': 311, 'Bumble': 238, 'Biggen': 233, 'Dingle': 246, 'Hula': 264, 'Mega': 273, 'Whistle': 306, 'Poppen': 288, 'Sparkle': 295, 'Mac': 271, 'Octo': 277, 'Bean': 231, 'Snorkel': 293, 'Jeeper': 266, 'Dyno': 250, 'Fuzzy': 260, 'Precious': 286, 'Wrinkle': 309, 'Super': 296, 'Pedal': 280, 'Frinkel': 254, 'Giggle': 261, 'Beanie': 232, 'Bumpen': 239, 'Ziller': 310, 'Flippen': 256, 'Mc': 272, 'Dandy': 245, 'Tricky': 300, 'Crunchy': 244, 'Pepper': 281, 'Cheezy': 240, 'Zooble': 312, 'Sour': 294, 'Fiddle': 253, 'Pale': 279, 'Dizzen': 247, 'Crinkle': 241, 'Wild': 307, 'Flipper': 257, 'Whisker': 305, 'Rhino': 289, 'Pickle': 283, 'Spackle': 297, 'Petal': 282, 'Kooky': 268, 'Google': 262, 'Wacky': 303, 'Sniffle': 292, 'Nutty': 276, 'Bumber': 237, 'Jumble': 267, 'Doggen': 249, 'Crumble': 242, 'Rocken': 290, 'Dizzy': 248, 'Weasel': 304, 'Twiddle': 301, 'Loopen': 270, 'Fizzle': 255, 'Toppen': 299, 'Jabber': 265, 'Wonder': 308}, {'flapper': 340, 'muffin': 365, 'hopper': 355, 'fink': 341, 'crumbs': 330, 'speed': 389, 'phooey': 372, 'scooter': 381, 'spinner': 390, 'woof': 404, 'crash': 329, 'klunk': 357, 'gadget': 347, 'muddle': 364, 'pocket': 373, 'socks': 388, 'foot': 345, 'flinger': 342, 'nugget': 370, 'pretzel': 376, 'zaner': 405, 'nose': 369, 'gloop': 350, 'gargle': 348, 'grooven': 353, 'bump': 324, 'fish': 337, 'chomp': 327, 'goose': 352, 'burger': 326, 'whip': 402, 'pounce': 377, 'knees': 358, 'smirk': 384, 'crunch': 332, 'toes': 397, 'corn': 328, 'snooker': 386, 'dorf': 334, 'phew': 371, 'fuddy': 339, 'quack': 379, 'mash': 360, 'screech': 382, 'berry': 314, 'bumper': 325, 'poof': 378, 'blabber': 315, 'wig': 403, 'pow': 375, 'pop': 374, 'zap': 406, 'mooch': 362, 'roni': 380, 'monkey': 361, 'snoop': 385, 'zilla': 408, 'doodle': 333, 'ton': 398, 'bubble': 322, 'bumble': 323, 'mush': 366, 'flap': 338, 'toon': 399, 'brains': 321, 'bounce': 319, 'fussen': 346, 'tooth': 400, 'flip': 343, 'bee': 313, 'crump': 331, 'marble': 359, 'stink': 393, 'sticks': 392, 'jinks': 356, 'twist': 401, 'seed': 383, 'zapper': 407, 'thud': 396, 'nerd': 367, 'hoffer': 354, 'snout': 387, 'boom': 318, 'swirl': 394, 'goober': 351, 'boing': 317, 'mouth': 363, 'flipper': 344, 'glop': 349, 'splat': 391, 'noodle': 368, 'bouncer': 320, 'face': 335, 'bocker': 316, 'teeth': 395, 'fidget': 336}]
+
+
+
+-----Server White Toon-----
+import toontown
+try:getGenderColorList
+except:getGenderColorList = toontown.makeatoon.ColorShop.ColorShop.getGenderColorList
+def returnColorList(self, *args):
+ return range(-1, 26, 1)
+toontown.makeatoon.ColorShop.ColorShop.getGenderColorList = returnColorList
+
+
+-----Server No Name Ingame-----
+base.localAvatar.setName('') #Set name for appending
+from direct.distributed.PyDatagram import PyDatagram
+from toontown.makeatoon.NameGenerator import NameGenerator
+from direct.distributed.MsgTypes import CLIENT_SET_NAME_PATTERN, CLIENT_SET_AVATAR
+ToontownNameDictionary = NameGenerator().nameDictionary
+ToontownNameIndexList = list(NameGenerator().nameDictionary)
+PatternList = [-1, 4, -1, 4, -1]
+NamePatternDatagram = PyDatagram()
+NamePatternDatagram.addUint16(CLIENT_SET_NAME_PATTERN)
+NamePatternDatagram.addUint32(base.localAvatar.getDoId())
+for PatternItem in PatternList:
+    if PatternItem != -1:
+        if PatternItem != 4:
+            base.localAvatar.name += ToontownNameDictionary[PatternItem][1]
+            if PatternList.index(PatternItem) <= 2:base.localAvatar.name += ' '
+    NamePatternDatagram.addInt16(PatternItem)
+base.localAvatar.setName(base.localAvatar.name)
+base.cr.sendDatagram(NamePatternDatagram)
+RefreshedAvatar = PyDatagram()
+RefreshedAvatar.addUint16(CLIENT_SET_AVATAR)
+RefreshedAvatar.addUint32(base.localAvatar.doId)
+base.cr.sendDatagram(RefreshedAvatar)
+base.cr.sendSetZoneMsg(base.localAvatar.getZoneId())
+base.localAvatar.b_setParent(2)
+base.localAvatar.b_setAnimState('neutral')
+
+
+----Server Name Pattern Ingame Changer----
+base.localAvatar.setName('') #Set name for appending
+from direct.distributed.PyDatagram import PyDatagram
+from toontown.makeatoon.NameGenerator import NameGenerator
+from direct.distributed.MsgTypes import CLIENT_SET_NAME_PATTERN, CLIENT_SET_AVATAR
+ToontownNameDictionary = NameGenerator().nameDictionary
+ToontownNameIndexList = list(NameGenerator().nameDictionary)
+PatternList = [2, 4, 3, 4, 84]
+NamePatternDatagram = PyDatagram()
+NamePatternDatagram.addUint16(CLIENT_SET_NAME_PATTERN)
+NamePatternDatagram.addUint32(base.localAvatar.getDoId())
+for PatternItem in PatternList:
+    if PatternItem != -1:
+        if PatternItem != 4:
+            base.localAvatar.name += ToontownNameDictionary[PatternItem][1]
+            if PatternList.index(PatternItem) <= 2:base.localAvatar.name += ' '
+    NamePatternDatagram.addInt16(PatternItem)
+base.localAvatar.setName(base.localAvatar.name)
+base.cr.sendDatagram(NamePatternDatagram)
+RefreshedAvatar = PyDatagram()
+RefreshedAvatar.addUint16(CLIENT_SET_AVATAR)
+RefreshedAvatar.addUint32(base.localAvatar.doId)
+base.cr.sendDatagram(RefreshedAvatar)
+base.cr.sendSetZoneMsg(base.localAvatar.getZoneId())
+base.localAvatar.b_setParent(2)
+base.localAvatar.b_setAnimState('neutral')
+
+-----Server Goon Stun-----
+base.cr.doFindAll("Goon")[0].sendUpdate("requestStunned", [1])
+
+---My Yellow Buttons----
+from direct.gui.DirectGui import DirectButton
+def ServerGrabLaff():
+   base.cr.doFindAll("Treasure")[0].d_requestGrab()
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Server Grab Laff', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=ServerGrabLaff, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.85,-0,-.93), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+
+
+---Yellow Buttons---
+from pandac.PandaModules import VBase4
+from direct.gui.DirectGui import DirectButton
+LAFFMETER_COLORS = {"LIGHTPINK":VBase4(0.969, 0.691, 0.699, 1), "RED":VBase4(0.934, 0.266, 0.281, 1), 
+"MAROON":VBase4(0.863, 0.406, 0.418, 1), "CRANBERRY":VBase4(0.711, 0.234, 0.438, 1), 
+"WOOD":VBase4(0.57, 0.449, 0.164, 1), "BROWN":VBase4(0.641, 0.355, 0.27, 1), 
+"TAN":VBase4(0.996, 0.695, 0.512, 1), "CARAMEL":VBase4(0.832, 0.5, 0.297, 1), 
+"ORANGE":VBase4(0.992, 0.48, 0.168, 1), "YELLOW":VBase4(0.996, 0.898, 0.32, 1), 
+"CREAM":VBase4(0.996, 0.957, 0.598, 1), "LIME":VBase4(0.855, 0.934, 0.492, 1), 
+"GRASS":VBase4(0.551, 0.824, 0.324, 1), "SEAGREEN":VBase4(0.242, 0.742, 0.516, 1), 
+"NEONGREEN":VBase4(0.305, 0.969, 0.402, 1), "CYAN":VBase4(0.434, 0.906, 0.836, 1), 
+"SKY":VBase4(0.348, 0.82, 0.953, 1), "NAVY":VBase4(0.191, 0.563, 0.773, 1), 
+"Periwinkle":VBase4(0.559, 0.59, 0.875, 1), "DARKBLUE":VBase4(0.285, 0.328, 0.727, 1), 
+"VIOLET":VBase4(0.461, 0.379, 0.824, 1), "PURPLE":VBase4(0.547, 0.281, 0.75, 1), 
+"PINK":VBase4(0.727, 0.473, 0.859, 1), "ROSEPINK":VBase4(0.898, 0.617, 0.906, 1), 
+"GRAY":VBase4(0.7, 0.7, 0.8, 1), "BLACK":VBase4(0.3, 0.3, 0.35, 1)}
+LAFFMETER_COLOR_LIST = list(LAFFMETER_COLORS)
+LAFFMETER_COLOR_ON = 0
+def ToggleToonColor():
+    try: # To avoid errors if at the Title Screen
+        global LAFFMETER_COLOR_ON, LAFFMETER_COLORS, LAFFMETER_COLOR_LIST
+        base.localAvatar.laffMeter.color = LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]]
+        base.localAvatar.laffMeter.adjustFace(base.localAvatar.hp, base.localAvatar.maxHp)
+        base.localAvatar.findAllMatches('**/head-front').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/head-front-short').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/head').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/head-short').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/ears').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/ears-short').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/neck').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/arms').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/legs').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        base.localAvatar.findAllMatches('**/feet').setColor(LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]])
+        if LAFFMETER_COLOR_ON != 25:LAFFMETER_COLOR_ON += 1
+        else:LAFFMETER_COLOR_ON = 0
+    except:pass
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Toggle Colors', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=ToggleToonColor, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.85,-0,-.93), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+
+
+-----Server Furniture Manager Hacks-----
+base.cr.doFindAll("DistributedFurnitureManager")[0].d_suggestDirector(base.localAvatar.doId)
+
+
+
+----Server Cog Suit Hacks----
+Remove Suit:
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 10000, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(-1)
+
+Bossbot Cog Suit:
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 10100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(0)
+
+Lawbot Cog Suit:
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 13100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(1)
+
+Cashbot Cog Suit:
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 12100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(2)
+
+Sellbot Cog Suit:
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 11100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(3)
+
+-----Buy Gags In Battle Bot-----
+base.localAvatar.setSystemMessage(1,'Buy Gags In Battle Bot Activated!')
+
+from direct.interval.IntervalGlobal import *
+def SwitchZone():
+   base.cr.sendSetZoneMsg(2519)
+def BuyGags():
+   Clerk = base.cr.doFindAll("Clerk")[0]
+   Clerk.popupPurchaseGUI(True)
+def GoBackToBattle():
+   base.cr.sendSetZoneMsg(2301)
+def GagsInBattle():
+   Battle = Sequence()
+   Battle.append(Func(SwitchZone))
+   Battle.append(Wait(2))
+   Battle.append(Func(BuyGags))
+   Battle.append(Wait(5))
+   Battle.append(Func(GoBackToBattle))
+   Battle.append(Wait(1))
+   Battle.append(Func(GagsInBattle))
+   Battle.start()
+GagsInBattle()
+
+-----Recover Laff In Battle Hack-----
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 60000, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("Treasure")[0].d_requestGrab()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+
+---Party Hacks---
+
+Jump Super High On Trampoline:
+PartyTent = base.cr.doFindAll("PartyManager")[0]
+PartyTent.sendAvatarToParty(base.localAvatar.doId)
+
+
+----Membership Hack-----
+import otp, toontown
+def returnGameAccess(*args):
+    return 2
+base.cr._OTPClientRepository__isPaid = True
+otp.otpbase.OTPGlobals.AccessVelvetRope = True
+otp.otpbase.OTPGlobals.AccessFull = 2
+otp.otpbase.OTPGlobals.createFriendsWithChat = True
+toontown.toon.LocalToon.LocalToon.gameAccess = 2
+base.launcher.setValue(base.launcher.PaidUserLoggedInKey, '1')
+toontown.toon.LocalToon.LocalToon.getGameAccess = returnGameAccess
+def returnAllowedSecretChat(*args, **kwds):return True
+base.cr.allowSecretChat = returnAllowedSecretChat
+base.cr.isParentPasswordSet = returnAllowedSecretChat
+
+---Buy Gags In Battle Hack---
+
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 2519, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("Clerk")[0].popupPurchaseGUI(True)
+use This After You Buy Gags:base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+
+-----SBHQ Lobby Raid-----
+base.localAvatar.setPos(0,0,0)
+
+lobby = loader.loadModel("phase_9/models/cogHQ/SellbotHQLobby.bam")
+lobby.reparentTo(render)
+lobby.setPos(0, 0, 0)
+lobby.setHpr(0,0,0)
+
+elevator = loader.loadModel("phase_9/models/cogHQ/cogHQ_elevator.bam")
+elevator.reparentTo(render)
+elevator.setPos(-1, -78, 28)
+elevator.setHpr(-180,0,0)
+elevator.setScale(1)
+
+
+base.cr.sendSetZoneMsg(11100)
+
+render.find('**/toontownCentral').removeNode()
+
+base.localAvatar.putOnSuit('mh')
+
+
+
+----Server Name Hacks-----
+toonName = 'Fd hi Fd';avListPos = 0;
+from direct.distributed.PyDatagram import PyDatagram 
+datagram1, datagram2 = PyDatagram(), PyDatagram()
+CLIENT_SET_WISHNAME, CLIENT_SET_WISHNAME_RESP = 70, 71
+datagram1.addUint16(CLIENT_SET_WISHNAME)
+datagram2.addUint16(CLIENT_SET_WISHNAME_RESP)
+datagram1.addUint32(base.cr.avList[avListPos].id)
+datagram2.addUint32(base.cr.avList[avListPos].id)
+datagram1.addString(toonName);datagram2.addString(toonName)
+base.cr.send(datagram1);base.cr.send(datagram2)
+
+import toontown, otp
+try:_NameShop__handleDone
+except:_NameShop__handleDone = toontown.makeatoon.NameShop.NameShop._NameShop__handleDone
+def T__NameShop__handleDone(self):
+ self.acceptName()
+toontown.makeatoon.NameShop.NameShop._NameShop__handleDone = T__NameShop__handleDone
+
+
+------Clerk Hacks-------
+Clerk = base.cr.doFindAll("Clerk")[0]
+Clerk._DistributedNPCClerk__handlePurchaseDone()
+
+Clerk = base.cr.doFindAll("Clerk")[0]
+Clerk.freeAvatar()
+
+
+------Pond Hacks------
+Pond = base.cr.doFindAll("DistributedFishingSpot")[0]
+Pond.d_requestEnter()
+
+----Report Button Hacks----
+import toontown
+try:handleReport
+except:handleReport = toontown.toon.AvatarPanelBase.AvatarPanelBase.handleReport
+def ReporterRusty(self):self.alreadyReported()
+toontown.toon.AvatarPanelBase.AvatarPanelBase.handleReport = ReporterRusty
+
+
+-------Cheesy Effects-------
+base.localAvatar.setCheesyEffect(1, 0, 0) - Big Head
+base.localAvatar.setCheesyEffect(2, 0, 0) -Small Head
+base.localAvatar.setCheesyEffect(3, 0, 0) -Big Feet
+base.localAvatar.setCheesyEffect(4, 0, 0) -Small Feet
+base.localAvatar.setCheesyEffect(5, 0, 0) -Big Toon
+base.localAvatar.setCheesyEffect(6, 0, 0) -Small Toon
+base.localAvatar.setCheesyEffect(7, 0, 0) -Flat Toon Foward
+base.localAvatar.setCheesyEffect(8, 0, 0) -Flat Toon Side way
+base.localAvatar.setCheesyEffect(9, 0, 0) -Invisible Toon
+base.localAvatar.setCheesyEffect(10, 0, 0) -White Toon
+base.localAvatar.setCheesyEffect(11, 0, 0) -No Head
+base.localAvatar.setCheesyEffect(12, 0, 0) -Pumpkin Head
+base.localAvatar.setCheesyEffect(13, 0, 0) -Big White Toon
+base.localAvatar.setCheesyEffect(14, 0, 0) -Snowman Head
+base.localAvatar.setCheesyEffect(15, 0, 0) -Green Toon
+
+Party Gate Custom Message Hack:
+Party = base.cr.doFindAll("DistributedPartyGate")[0]
+Party.showMessage("Balls Of steel")
+
+----Server Fast Kart----
+speed = -100
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in ttv:
+    try:ttv.windResistance.setAmplitude(speed)
+    except:pass
+
+Cannot Leave playground Laff Meter Message Code:
+from toontown.toon.HealthForceAcknowledge import HealthForceAcknowledge
+health = HealthForceAcknowledge(None)
+health.enter(100)
+
+Have All Throw Gags And Squirt Gags:
+base.localAvatar.experience.maxOutExp()
+
+Activate Chat Manager:
+from otp.uberdog.DistributedChatManager import DistributedChatManager
+chat = DistributedChatManager(base.cr)
+chat.online()
+
+Client Random Toon Generator:
+from toontown.toon.ToonDNA import ToonDNA
+tdna = ToonDNA()
+tdna.newToonRandom()
+tdna.torso = 's'
+base.localAvatar.setDNA(tdna)
+
+Server Cog Summons:
+base.localAvatar.d_reqCogSummons('f', 1)
+
+Custom SC Menu For FD Nation:
+import toontown, otp
+otp.speedchat.SCStaticTextTerminal.SpeedChatStaticText[39000] = 'Team FD Rules!'
+otp.speedchat.SCStaticTextTerminal.SpeedChatStaticText[39001] = 'Welcome to FD Nation!'
+otp.speedchat.SCStaticTextTerminal.SpeedChatStaticText[39002] = 'Check this out.'
+otp.speedchat.SCStaticTextTerminal.SpeedChatStaticText[39003] = 'Team FD Has Balls Of Steel Cuz There Just That Epic'
+FDNationCustomIndices = (39000, 39001, 39002, 39003)
+FDNationSCCustomMenu = toontown.speedchat.TTSCCogMenu.TTSCCogMenu(FDNationCustomIndices)
+base.localAvatar.chatMgr.chatInputSpeedChat.fdNationMenu = otp.speedchat.SCMenuHolder.SCMenuHolder('FD NATION', FDNationSCCustomMenu)
+base.localAvatar.chatMgr.chatInputSpeedChat.speedChat[2] = base.localAvatar.chatMgr.chatInputSpeedChat.fdNationMenu
+
+Flashing Laff Meter:
+base.localAvatar.setSystemMessage(1,'Laff Meter Flash Bot Activated!') 
+
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.laffMeter.setColor(0.97,0.3,0.3)
+def pink():
+    base.localAvatar.laffMeter.setColor(0.96,0.7,0.7)
+def purple():    
+    base.localAvatar.laffMeter.setColor(0.69,0.29,0.95)
+def green():    
+    base.localAvatar.laffMeter.setColor(0.4,1,0.4)
+def yellow():    
+    base.localAvatar.laffMeter.setColor(0.96,0.7,0.7)
+def dblue():    
+    base.localAvatar.laffMeter.setColor(0.35,0.35,0.85)
+def blue():
+    base.localAvatar.laffMeter.setColor(0.3,0.64,0.85)
+def orange():
+    base.localAvatar.laffMeter.setColor(1,0.5,0.18)
+def cream():    
+    base.localAvatar.laffMeter.setColor(1,1,0.57)
+def perwk():    
+    base.localAvatar.laffMeter.setColor(0.55,0.55,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.1))
+  rain.append(Func(pink))
+  rain.append(Wait(0.1))
+  rain.append(Func(purple))
+  rain.append(Wait(0.1))
+  rain.append(Func(green))
+  rain.append(Wait(0.1))
+  rain.append(Func(yellow))
+  rain.append(Wait(0.1))
+  rain.append(Func(dblue))
+  rain.append(Wait(0.1))
+  rain.append(Func(blue))
+  rain.append(Wait(0.1))
+  rain.append(Func(orange))
+  rain.append(Wait(0.1))
+  rain.append(Func(cream))
+  rain.append(Wait(0.1))
+  rain.append(Func(perwk))
+  rain.append(Wait(0.1))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+Animate Laff Meter Code:
+base.localAvatar.laffMeter.animatedEffect(True)
+
+Team FD Spin Bot:
+base.localAvatar.stopLookAround()
+from pandac.PandaModules import Vec3
+base.localAvatar.laffMeter.hprInterval(0.3, Vec3(0, 0, base.localAvatar.laffMeter.getR() + 360)).loop()
+base.localAvatar.book.hprInterval(5, Vec3(0, 0, base.localAvatar.book.getR() + 360)).loop()
+base.localAvatar.getPart('head', '1000').hprInterval(0.3,  Vec3(base.localAvatar.getPart('head', '1000').getH() + 360, 0, 0)).loop()
+base.localAvatar.getPart('head', '500').hprInterval(0.3,  Vec3(base.localAvatar.getPart('head', '500').getH() + 360, 0, 0)).loop()
+base.localAvatar.bFriendsList.hprInterval(0.3, Vec3(0, 0, base.localAvatar.bFriendsList.getR() + 360)).loop()
+base.localAvatar.book.bookOpenButton.hprInterval(0.3, Vec3(0, 0, base.localAvatar.book.bookOpenButton.getR() + 360)).loop()
+base.localAvatar.chatMgr.scButton.hprInterval(0.5, Vec3(0, 0, base.localAvatar.chatMgr.scButton.getR() + 360)).loop()
+base.localAvatar.chatMgr.normalButton.hprInterval(0.5, Vec3(0, 0, base.localAvatar.chatMgr.normalButton.getR() + 360)).loop()
+
+120 Laff Meter Code:
+import toontown
+try:adjustText
+except:adjustText = toontown.toon.LaffMeter.LaffMeter.adjustText
+def TextAdjustment(self):self.animatedEffect(True)
+toontown.toon.LaffMeter.LaffMeter.adjustText = TextAdjustment
+
+Server Go Back To PLayground in Purchase Manager:
+Purchase = base.cr.doFindAll("PurchaseManager")[0]
+Purchase.d_requestExit()
+
+Global TP:
+import toontown
+base.localAvatar.setTeleportAccess(toontown.toonbase.ToontownGlobals.HoodsForTeleportAll)
+base.localAvatar.setHoodsVisited(toontown.toonbase.ToontownGlobals.HoodsForTeleportAll)
+base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+base.localAvatar.book.pages[1].showPop = 1
+
+
+Make A Toon DC your self code:
+import toontown, otp
+try:_NameShop__handleDone
+except:_NameShop__handleDone = toontown.makeatoon.NameShop.NameShop._NameShop__handleDone
+def T__NameShop__handleDone(self):self.waitForServer()
+toontown.makeatoon.NameShop.NameShop._NameShop__handleDone = T__NameShop__handleDone
+
+
+Rustys Reject Name Hack:
+import toontown, otp
+try:_NameShop__handleDone
+except:_NameShop__handleDone = toontown.makeatoon.NameShop.NameShop._NameShop__handleDone
+def T__NameShop__handleDone(self):self.rejectName("Your Name Has Been Rejected By Master Rusty !")
+toontown.makeatoon.NameShop.NameShop._NameShop__handleDone = T__NameShop__handleDone
+
+
+---Accessory Hack---
+AccessoryTrunk = base.cr.doFindAll("Trunk")[0]
+AccessoryTrunk.hatList = [16, 0, 0]
+AccessoryTrunk.backpackList = [6, 0, 0]
+AccessoryTrunk.glassesList = [10, 0, 0]
+AccessoryTrunk.shoesList = [2, 8, 0]
+AccessoryTrunk._handleYesImSure()
+
+------Server Skip Tutorial In Make A Toon------
+import toontown, otp
+try:_NameShop__handleDone
+except:_NameShop__handleDone = toontown.makeatoon.NameShop.NameShop._NameShop__handleDone
+def T__NameShop__handleDone(self):self.promptTutorial()
+toontown.makeatoon.NameShop.NameShop._NameShop__handleDone = T__NameShop__handleDone
+
+Server Skip Tutorial:
+Tut = base.cr.doFindAll("TutorialManager")[0]
+Tut.d_requestSkipTutorial()
+base.cr.gameFSM.request('closeShard')
+
+
+Server kart:
+base.localAvatar.requestKartDNAFieldUpdate(0, 1)
+
+Server Fish Grab:
+pond = base.cr.doFindAll("FishingPond")[0]
+fish = base.cr.doFindAll("FishingTarget")[0]
+pond.d_hitTarget(fish)
+
+Client Enter Sell Fish:
+Pond = base.cr.doFindAll("DistributedFishingSpot")[0]
+Pond.enterSellFish()
+
+Server Exit Pond:
+Pond = base.cr.doFindAll("DistributedFishingSpot")[0]
+Pond.d_requestExit()
+
+Server Enter Pond From Anywhere In Playground:
+Pond = base.cr.doFindAll("DistributedFishingSpot")[0]
+Pond.d_requestEnter()
+
+District Reset:
+dpda = base.cr.doFindAll("DistributedPartyDanceActivity")[0]
+dpda.d_toonExitDemand();dpda.d_toonExitDemand();dpda.d_toonExitDemand()
+
+Sub Button Pop Up Code:
+base.localAvatar._LocalToon__handlePurchase()
+
+Maze Game Hacks:
+Maze = base.cr.doFindAll("Maze")
+Maze[0].claimTreasure(251)
+
+Log More stuff ur toon does:
+base.cr.wantUpdateCalls = True
+
+Control Door Codes:
+Door = base.cr.doFindAll("DistributedDoor")
+Door[0].setState("opening", -15925)
+
+Control Clerk Codes:
+Clerk = base.cr.doFindAll("Clerk")
+Clerk[0].setMovie(2, 2006, 292922198, -26702)
+
+Clerk = base.cr.doFindAll("Clerk")
+Clerk[0].setMovie(1, 2006, 288297323, -6931)
+
+Leave Building Code:
+Interior = base.cr.doFindAll("Interior")
+Interior[0].enterBeingTakenOver(1)
+
+Walk Around With Closet Open:
+Closet = base.cr.doFindAll("closet")
+Closet[0].freeAvatar()
+
+Server Set DNA:
+Closet = base.cr.doFindAll("closet")
+Closet[0].d_setDNA('t\x01\x02\x01\x01\x62\x12\x00\x12\x24\x1b\x14\x00\x14\x14',True,3)
+
+Buy Gags In battle code:
+from toontown.toon.DistributedNPCClerk import *
+Gags = DistributedNPCClerk(base.cr)
+Gags.popupPurchaseGUI(True)
+
+Popup Gui In Gag Shop:
+Clerk = base.cr.doFindAll("Clerk")
+Clerk[0].popupPurchaseGUI(True)
+
+Enter Random Doors your Nearby:
+Door = base.cr.doFindAll("DistributedDoor")
+Door[0].avatarEnter(base.localAvatar.doId)
+
+Client Grab Treasure (Alternate version):
+Treasure = base.cr.doFindAll("Treasure")
+Treasure[0].setGrab(base.localAvatar.doId)
+
+Client Grab Treasure:
+Treasure = base.cr.doFindAll("Treasure")
+Treasure[0].handleGrab(base.localAvatar.doId)
+
+Server Gain Laff:
+Treasure = base.cr.doFindAll("Treasure")
+Treasure[0].d_requestGrab()
+
+Set Clouds In Estate:
+base.cr.doFindAll("Estate")
+Estate[0].setClouds(100)
+
+Make Flower GUI Appear In Estate:
+Estate = base.cr.doFindAll("Estate")
+Estate[0].popupFlowerGUI()
+
+Server Whisper To Avatar:
+sendWhisperTalk(self, message, receiverAvId)
+
+Server Speedchat:
+base.talkAssistant.sendOpenSpeedChat(1,4)
+
+Make Message Appear In Log:
+base.talkAssistant.execMessage('Hmm')
+
+Server Open Talk:
+base.talkAssistant.sendOpenTalk("Hi")
+
+Garble code:
+import otp
+def garble(self, avatar, message):
+ otp.chat.ChatInputNormal.sendChat("Balls")
+
+garble('Master Rusty',"Balls")
+
+CLient Cog Suit:
+base.localAvatar.putOnSuit("f",True,True)
+
+client Ghost Mode:
+base.localAvatar.setGhostMode(1)
+
+Fancy Nametag Font:
+base.localAvatar.setFancyNametag("Master Rusty")
+
+Client Set Friends List Code:
+base.localAvatar.setFriendsList([(292947983, 1), (292924149, 1), (292947248, 1), (292925379, 1), (287697056, 1), (292930874, 1), (292029467, 1), (259769325, 1), (292911041, 1), (292878465, 1), (292862934, 1), (292722512, 1), (292952505, 1), (292325782, 1), (267395328, 1)])
+
+Client Whisper:
+base.localAvatar.displayWhisper(None,"Fuck",3)
+
+-----Server Cog Suit Buttons-----
+base.localAvatar.b_setSC(5000)
+base.localAvatar.b_setSC(1)
+base.localAvatar.b_setSC(2)
+base.localAvatar.b_setSC(1000)
+base.localAvatar.b_setSC(100)
+base.localAvatar.b_setSC(20136)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def bOne():
+ CurrZone = base.localAvatar.getZoneId()
+ from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+ parentId = base.localAvatar.defaultShard
+ event = base.cr.getNextSetZoneDoneEvent()
+ base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 13100, 'OldSetZoneEmulator'], event)
+ base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+ base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+ base.localAvatar.setCogIndex(1)
+def bTwo():
+ base.localAvatar.b_setSC(3010)
+def  bThree():
+ base.localAvatar.b_setSC(2)
+def bFour():
+ base.localAvatar.b_setSC(1000)
+def bFive():
+ base.localAvatar.b_setSC(20136)
+def bSix():
+ base.localAvatar.b_setSC(3301)
+
+bOne = DirectButton(text = ("Lawbot", "Lawbot", "Lawbot", "Lawbot"), scale=.05, pos = (-.90,0,-.9), command=bOne)
+bTwo = DirectButton(text = ("Race", "Race", "Race", "Race"), scale=.05, pos = (.01,0,-.9), command=bTwo)
+bThree = DirectButton(text = ("No", "No", "No", "No"), scale=.05, pos = (.19,0,-.9), command=bThree)
+bFour = DirectButton(text = ("Lets Go", "Lets Go", "Lets Go", "Lets Go"), scale=.05, pos = (.38,0,-.9), command=bFour)
+bFive = DirectButton(text = ("RAID!", "RAID!", "RAID!", "RAID!"), scale=.05, pos = (.59,0,-.9), command=bFive)
+bSix = DirectButton(text = ("Fast", "Fast", "Fast", "Fast"), scale=.05, pos = (-.60,0,-.9), command=bSix)
+
+Client Say Anything:
+base.localAvatar.displayTalk("Pussy Is Yummy")
+
+Client Big Nametag:
+base.localAvatar.setNametagScale(5)
+
+Client No Nametag:
+base.localAvatar.setNameVisible(False)
+
+Client Change Avatar Size:
+base.localAvatar.setAvatarScale(0.75)
+
+Client Name Change:
+base.localAvatar.setDisplayName("Balls")
+
+client System Warning:
+base.localAvatar.systemWarning("Balls Of Steel")
+
+All Animations:
+['right-hand-start', 'firehose', 'rotateL-putt', 'slip-forward', 'catch-eatnrun', 'tickle', 'water-gun', 'leverNeutral', 'swim', 'catch-run', 'sad-neutral', 'pet-loop', 'jump-squat', 'wave', 'reel-neutral', 'pole-neutral', 'bank', 'scientistGame', 'takePhone', 'good-putt', 'victory', 'lose', 'cringe', 'right', 'headdown-putt', 'conked', 'jump', 'into-putt', 'fish-end', 'running-jump-land', 'shrug', 'sprinkle-dust', 'hold-bottle', 'right-hand', 'melt', 'pet-start', 'look-putt', 'loop-putt', 'lookloop-putt', 'juggle', 'run', 'pushbutton', 'sidestep-right', 'water', 'right-point-start', 'jump-land', 'struggle', 'running-jump', 'callPet', 'throw', 'catch-eatneutral', 'tug-o-war', 'bow', 'swing', 'climb', 'scientistWork', 'think', 'catch-intro-throw', 'walk', 'down', 'pole', 'periscope', 'duck', 'curtsy', 'bad-putt', 'loop-dig', 'angry', 'bored', 'swing-putt', 'pet-end', 'spit', 'right-point', 'start-dig', 'castlong', 'running-jump-squat', 'neutral', 'jump-idle', 'reel', 'slip-backward', 'sound', 'sidestep-left', 'up', 'fish-again', 'cast', 'phoneBack', 'phoneNeutral', 'scientistJealous', 'battlecast', 'sit-start', 'toss', 'happy-dance', 'confused', 'teleport', 'sit', 'sad-walk', 'give-props-start', 'book', 'fish-neutral', 'scientistEmcee', 'leverPull', 'tutorial-neutral', 'badloop-putt', 'give-props', 'hold-magnet', 'hypnotize', 'left-point', 'leverReach', 'feedPet', 'reel-H', 'applause', 'smooch', 'rotateR-putt', 'running-jump-idle', 'push', 'catch-neutral', 'left']
+
+Client System Message:
+base.localAvatar.setSystemMessage(None,"I Have Balls Of Steel",2)
+
+Server Cog Suit:
+base.localAvatar.wearCogSuit()
+base.localAvatar.getCogParts()
+base.localAvatar.isDisguised = True
+base.localAvatar.isPaidSuitComplete = True
+
+Client Jellybeans:
+base.localAvatar.setMoney(9999)
+
+Rustys Custom Postions:
+base.localAvatar.setSmXYZH(13.6, -59.8, 1.4, 72.9, -802)
+
+Server Animations:
+base.localAvatar.b_setAnimState("ReadBook")
+base.localAvatar.b_setAnimState("jumpAirborne")
+
+Client Animations:
+base.localAvatar.loop("phoneBack")
+base.localAvatar.loop("battlecast")
+
+Log Everything your toon does + anything around your toon:
+base.cr.toggleVerbose()
+
+Server Teleport Greeting:
+teleportToon = base.cr.doFindAll("Tutorial Tom")
+base.localAvatar.d_teleportGreeting(teleportToon[0].doId)
+base.localAvatar.setSystemMessage(None, "Teleport Greeting has been sent to " + str(teleportToon[0].getName()))
+
+Server Teleport Greeting Open Talk:
+base.localAvatar.b_teleportGreeting str(teleportToon[0].getName()))
+base.localAvatar.setCogIndex(2)
+
+-Client Colored Name Tags-
+Red:base.localAvatar.setDisplayName('\x01red\x01Master Rusty')
+3D:base.localAvatar.setDisplayName('\x01shadow\x01Master Rusty')
+Default:base.localAvatar.setDisplayName('\x01purple\x01Master Rusty')
+Green:base.localAvatar.setDisplayName('\x01green\x01Master Rusty')
+Black:base.localAvatar.setDisplayName('\x01black\x01Master Rusty')
+Blue:base.localAvatar.setDisplayName('\x01blue\x01Master Rusty')
+Yellow:base.localAvatar.setDisplayName('\x01yellow\x01Master Rusty')
+
+-Client Colored HP Strings-
+Yellow:base.localAvatar.showHpString('\x01yellow\x01Master Rusty', duration=1, scale=0.5)
+
+
+
+IN-game Toon Switcher:
+from direct.distributed.MsgTypes import *
+from direct.distributed.PyDatagram import PyDatagram
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+def switchServerToon(avatarId, zoneId):
+ Switch = Sequence()
+ Switch.append(Func(runSwitchDatagram, avatarId))
+ Switch.append(Wait(0.1))
+ Switch.append(Func(runSwitchZone, zoneId))
+ Switch.start()
+def runSwitchDatagram(avatarId):
+ Avatar = PyDatagram()
+ Avatar.addUint16(CLIENT_SET_AVATAR)
+ Avatar.addUint32(avatarId)
+ base.cr.sendDatagram(Avatar)
+def runSwitchZone(zoneId):
+ base.cr.sendSetZoneMsg(zoneId)
+ base.localAvatar.d_setParent(2)
+ avatarId = base.localAvatar.doId
+ base.localAvatar.doId = avatarId
+ zoneId = base.localAvatar.getZoneId()
+ switchServerToon(avatarId, zoneId)
+
+DNA Strings For CLothes in Make a Toon:
+base.localAvatar.setDNAString('t\x01\x02\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01')
+base.localAvatar.setDNAString('t\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+
+
+Red Chat Text:
+try:T_displayTalkNormal
+except:T_displayTalkNormal = base.talkAssistant.sendOpenTalk
+def displayRedTalk(displayText):
+    if str(displayText) == '\x01WLDisplay\x01.\x02' or str(displayText) == '.' or str(displayText) == ' ':
+        T_displayTalkNormal('')
+    else:
+        textArray = ['\x01WLRed\x01']
+        textArray.append(displayText)
+        textArray.append('\x02')
+        displayText = ''
+        for text in textArray:
+            displayText += text
+        T_displayTalkNormal(displayText)
+base.talkAssistant.sendOpenTalk = displayRedTalk
+
+----Ban Blocker----
+aSendUpdate = base.localAvatar.sendUpdate
+def sendUpdateHook(fieldName, args=[], sendToId=None):
+    if fieldName == "logSuspiciousEvent":
+        pass
+    else:
+        aSendUpdate(fieldName, args)
+def keepConnection():
+    pass
+def denyDisconnectDetails(newCode, newMsg):
+    pass
+base.cr.lostConnection = keepConnection
+base.cr.disconnect = keepConnection
+base.localAvatar.sendUpdate = sendUpdateHook
+base.cr.launcher.setDisconnectDetails = denyDisconnectDetails
+
+Server Whisper:
+def broadcastWhisper(message="", includingSelf=True):
+    nearbyToonIds = base.localAvatar.getNearbyPlayers(pow(10, 10), includingSelf)
+    for nearbyToonIds in nearbyToonIds:base.talkAssistant.sendWhisperTalk(str(message), nearbyToonIds)
+
+broadcastWhisper("Hi", True)
+
+Server Rainbow Whisper:
+def broadcastWhisper(message="", includingSelf=True):
+    nearbyToonIds = base.localAvatar.getNearbyPlayers(pow(10, 10), includingSelf)
+    for nearbyToonIds in nearbyToonIds:base.talkAssistant.sendWhisperTalk(str(message), nearbyToonIds)
+
+broadcastWhisper("\x01blue\x01We\x01red\x01are\x01green\x01Team\x01blue\x01FeD\x01red\x01", True)
+
+
+Sparkle Effect Code:
+from toontown.effects.SparksTrail import *
+Me = base.localAvatar
+st = SparksTrail()
+st.setPos(Me.getX(), Me.getY(), Me.getZ())
+st.play()
+
+Create Your Own NPC:
+TTChar = toontown.toon.Toon.Toon();TTChar.reparentTo(render)
+TTChar.doId = base.localAvatar.doId;TTChar.setupToonNodes();TTChar.setName('~ Team FD NPC ~')
+TTChar.setPosHpr(0, -4, 4, 90, 0, 0)
+TTChar.initializeNametag3d();TTChar.startBlink();TTChar.startLookAround();
+TTChar.showNametag3d();TTChar.showNametag2d();TTChar.adjustNametag3d();
+TTChar.initializeBodyCollisions('FD_NPC-Collisions_' + str(TTChar.doId))
+TTChar.setDNAString('t\x05\x05\x00\x01\x56\x06\x3d\x03\31\x07\x0e\x00\x0e\x0e')
+TTChar.loop('neutral')
+
+Create Your Own District:
+from toontown.distributed import ToontownDistrict
+FDNation = ToontownDistrict.ToontownDistrict(base.cr)
+FDNation.generate();FDNation.generateInit();
+FDNation.setName('FD Nation')
+FDNation.doId = 49990000
+FDNation.parentId = 4999
+FDNation.setAvailable(1)
+FDNation.postGenerateMessage();
+base.cr.activeDistrictMap[49990000] = FDNation
+base.localAvatar.book.pages[1].updateScrollList()
+
+Server Gloves (Make A Toon Version):
+import toontown
+try:newToonRandom
+except:newToonRandom = toontown.toon.ToonDNA.ToonDNA.newToonRandom
+def createNewRandomToon(self, **kwds):
+ newToonRandom(self)
+ self.gloveColor=26;self.gender=kwds['gender']
+toontown.toon.ToonDNA.ToonDNA.newToonRandom = createNewRandomToon
+
+Server Cog Suit:
+playground = base.cr.doFindAll("render/")
+for toon in playground:
+if toon.doId != base.localAvatar.doId:
+serverCogSuit = base.localAvatar.dclass.clientFormatUpdate("setCogIndex", toon.doId, [0])
+base.cr.send(serverCogSuit)
+
+-----Client Fireworks Show-----
+import toontown
+from toontown.effects.DistributedFireworkShow import DistributedFireworkShow
+fireworks = DistributedFireworkShow(base.cr)
+fireworks.startShow(toontown.toonbase.ToontownGlobals.JULY4_FIREWORKS, 1, 0, render)
+
+
+Tailor Disconnect Buttons + Tailor Gloves Button Changer:
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+from direct.gui.OnscreenText import OnscreenText
+currentGlove = 0
+npc = base.cr.doFindAll("Tailor")[0]
+defaultChatAbsolute = npc.setChatAbsolute
+base.localAvatar.b_setAnimState('swim')
+npc.handleCollisionSphereEnter(base.localAvatar.doId)
+npc.handleCollisionSphereEnter(base.localAvatar.doId)
+npc.afkTimeout = pow(100, 100)
+gloveList = ['\x00', '\x01', '\x02', '\x03', '\x04', '\x05', '\x06', '\x07', '\x08',\
+'\x09', '\x10', '\x11', '\x12', '\x13', '\x14', '\x15', '\x16', '\x17', '\x18', '\x19',\
+'\x0d', '\x0b', '\x0c', '\x0d', '\x0e', '\x0f', '\x1a']
+def addGloveIndex(dnaString='t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e'):
+    global gloveList, currentGlove, npc
+    if currentGlove != 26:
+        currentGlove += 1
+        npc.sendUpdate("setDNA", [dnaString[:12] + gloveList[currentGlove] + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + gloveList[currentGlove] + dnaString[13:])
+    else:
+        currentGlove = 0
+        npc.sendUpdate("setDNA", [dnaString[:12] + '\x00' + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + '\x00' + dnaString[13:])
+def subtractGloveIndex(dnaString='t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e'):
+    global gloveList, currentGlove, npc
+    if currentGlove != 0:
+        currentGlove -= 1
+        npc.sendUpdate("setDNA", [dnaString[:12] + gloveList[currentGlove] + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + gloveList[currentGlove] + dnaString[13:])
+    else:
+        currentGlove = 26
+        npc.sendUpdate("setDNA", [dnaString[:12] + '\x26' + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + '\x26' + dnaString[13:])
+def disconnectThroughDNA(dnaString='t\x05\x06\x00\x00\x50\x1b\x45\x1b\x26\x1b\x0e\x02\x0e\x0e'):
+    try:
+        npc = base.cr.doFindAll("Tailor")[0]
+        npc.sendUpdate("setDNA", [dnaString, 0, 3])
+    except:pass
+def removeGui():
+    try:npc = base.cr.doFindAll("Tailor")[0]
+    except:pass
+    try:
+        addGloveB.removeNode()
+        subtractGloveB.removeNode()
+        disconnectB.removeNode()
+        glovetxt_object.removeNode()
+        removeGuiB.removeNode()
+    except:pass
+    try:npc._DistributedNPCTailor__handleButton()
+    except:pass
+def hookExit(chatString, chatFlags, dialogue=None, interrupt=1, quiet=0):
+    global npc, defaultChatAbsolute
+    if chatString == 'Need more time to think?':
+        npc.handleCollisionSphereEnter(base.localAvatar.doId)
+        npc.handleCollisionSphereEnter(base.localAvatar.doId)
+        npc.afkTimeout = pow(100, 100)
+    else:
+        defaultChatAbsolute(chatString, chatFlags, dialogue, interrupt, quiet)
+npc.setChatAbsolute = hookExit
+glove_text = 'Glove Color'
+glovetxt_object = OnscreenText(text = glove_text, pos = (0.95,0.2), scale = 0.07, fg=(0, 0, 0, 0.6), align=TextNode.ACenter, mayChange=1)
+addGloveB = DirectButton(text = (">>", ">>", ">>", ">>"), scale=.06, pos = (1.22,0,0.2), command=addGloveIndex)
+subtractGloveB = DirectButton(text = ("<<", "<<", "<<", "<<"), scale=.06, pos = (0.7,0,0.2), command=subtractGloveIndex)
+disconnectB = DirectButton(text = ("Disconnect", "Disconnect", "Disconnect", "Disconnect"), scale=.06, pos=(0.96,0,0.3), command=disconnectThroughDNA)
+removeGuiB = DirectButton(text = ("No More Disconnect", "No More Disconnect", "No More Disconnect", "No More Disconnect"), scale=.06, pos=(0.96,0,0.4), command=removeGui)
+
+Server Splash:
+toon = base.cr.doFindAll("Put Toon name here")
+base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+base.localAvatar.playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+
+
+Server Dust Cloud:
+toon = base.cr.doFindAll("Put Toon name here")
+base.localAvatar.d_playDustCloudEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+base.localAvatar.playDustCloudEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+
+Server Friend Notify Whispers:
+def notifyFriend(friendName, notifyId):
+    toon = base.cr.doFindAll(friendName)[0]
+    toon.sendUpdate("friendsNotify", [base.localAvatar.doId, notifyId])
+    base.localAvatar.friendsNotify(toon.doId, notifyId)
+
+notifyFriend('Royal Blue Monkey', 1)
+notifyFriend('Royal Blue Monkey', 2)
+
+Server Control Toons Test:
+toon = base.cr.doFindAll("Mister Rusty")
+base.localAvatar.b_setAnimState("Sit",toon[0].getX(), toon[0].getY(), toon[0].getZ())
+
+Server Fast Victory Dance:
+messenger.send([base.localAvatar.b_setAnimState('victory', 10)])
+
+Server Teleport Greeting Code:
+base.localAvatar.b_teleportGreeting(Toon ID # Here)
+
+Server Teleport Messages:
+teleportToon = base.cr.doFindAll("ToonName")
+base.localAvatar.d_teleportQuery(base.localAvatar.doId, teleportToon[0].doId)
+base.localAvatar.setSystemMessage(None, "Teleport message has been sent to " + str(teleportToon[0].getName()))
+
+teleportToon = base.cr.doFindAll("ToonName")
+base.localAvatar.d_teleportGiveup(base.localAvatar.doId, teleportToon[0].doId)
+base.localAvatar.setSystemMessage(None, "Teleport Give Up message has been sent to " + str(teleportToon[0].getName()))
+
+Client Mickey Hacks:
+mickey = base.cr.doFindAll("render/mickey")
+for mickey in base.cr.doFindAll("render/mickey"):
+    mickey.setName('Ghost Mickey')
+    mickey.hideShadow()
+    mickey.loop('right-point')
+    mickey.setColorScale(0.3)
+    mickey.setChatAbsolute('Fuckers!', 1, None, True)
+    mickey.find('**/MickeycRay').removeNode()
+    mickey.find('**/distAvatarCollNode-415100656').removeNode()
+    mickey.find('**/MickeyBlatherSphere').setScale(5000)
+
+Server Rainbow Open Chat:
+base.talkAssistant.sendOpenTalk('\x01blue\x01We\x01red\x01are\x01green\x01Team\x01blue\x01FeD\x01red\x01')
+base.talkAssistant.sendOpenTalk('\x01blue\x01\x01\x01we are team FeD\x01green\x01\x01blue\x01\x01red\x01')
+
+Client 3D Rainbow Chat:
+base.localAvatar.displayTalk("\x01shadow\x01We\x01red\x01are\x01green\x01Team\x01blue\x01FD\x01red\x01", mods=True)
+
+Client HP String:
+base.localAvatar.showHpString('Master Rusty pwns', duration=1, scale=0.5)
+
+Client Lose Laff:
+base.localAvatar.takeDamage(10, bonus=0)
+
+
+
+Get Karts Current Dna String:
+zone = base.localAvatar.getKartDNA()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your House ID #:
+zone = base.localAvatar.getHouseId()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Max # Of NPC Friends:
+zone = base.localAvatar.getMaxNPCFriends()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your Toons Current Location:
+zone = base.localAvatar.getLocation()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your Request ID #:
+zone = base.localAvatar.getRequestID()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your Pet  ID #:
+zone=base.localAvatar.lookupPetDNA()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your Geom Info:
+zone=base.localAvatar.getGeomNode()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your Zone ID #:
+zone = base.localAvatar.getZoneId()
+zone = str(zone)
+base.localAvatar.displayTalk('.I am in Zone : ' + zone)
+
+Toon Valley Shard:
+base.localAvatar.book.pages[1].choseShard(450000000)
+
+Get Never Disable Args?:
+zone = base.localAvatar.getNeverDisable()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Your Shard Name:
+zone = base.cr.getShardName(664000000)
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get Wish Name Response:
+zone = base.cr.getWishNameResultMsg()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Get All Intrests Event:
+zone = base.cr.getAllInterestsCompleteEvent()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+
+Warning Message Box  Code:
+Toon = base.cr.doFindAll("ToonName")
+base.localAvatar.systemWarning("Your ass is Gone",Toon[0].doId)
+
+Client Lose Laff:
+base.localAvatar.takeDamage(10)
+
+Server Lose Laff:
+base.localAvatar.d_squish(5)
+
+Client Name Change (Alternate Version):
+base.localAvatar.setDisplayName('Name You Want Here')
+
+Start Chat Code:
+base.localAvatar.startChat()
+
+Server Teleport Greeting (Self Version):
+base.localAvatar.b_teleportGreeting(base.localAvatar.doId)
+
+Get Field Name And Arguments in Log Code:
+base.cr.wantUpdateCalls = True
+
+Client Silly Meter:
+---Cardboard Meter---
+meter = base.cr.doFindAll("Interior")[0]
+print meter.sillyFSM.request('Flat', force=1)
+
+
+fishman = base.cr.doFindAll("Doctor Surlee")
+for fishman in base.cr.doFindAll("Doctor Surlee"):
+     fishman.hide()
+
+
+fishman = base.cr.doFindAll("Doctor Dimm")
+for fishman in base.cr.doFindAll("Doctor Dimm"):
+     fishman.hide()
+
+
+
+fishman = base.cr.doFindAll("Professor Prepostera")
+for fishman in base.cr.doFindAll("Professor Prepostera"):
+     fishman.hide()
+
+---Real Meter---
+meter = base.cr.doFindAll("Interior")[0]
+print meter.sillyFSM.request('Phase10', force=1)
+
+
+fishman = base.cr.doFindAll("Doctor Surlee")
+for fishman in base.cr.doFindAll("Doctor Surlee"):
+     fishman.show()
+
+
+fishman = base.cr.doFindAll("Doctor Dimm")
+for fishman in base.cr.doFindAll("Doctor Dimm"):
+     fishman.show()
+
+
+
+fishman = base.cr.doFindAll("Professor Prepostera")
+for fishman in base.cr.doFindAll("Professor Prepostera"):
+     fishman.show()
+
+Auto River Button:
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+   bk_text = "River"
+   base.localAvatar.book.pages[1].choseShard(414000000)
+b = DirectButton(text = ("River", "River", "River", "River"), scale=.06, pos = (.75,-0,-.85), command=setText)
+
+Skip Toontorial:
+messenger.send('rejectTutorial')
+base.cr.gameFSM.request('closeShard')
+
+
+Server Gloves (Tailor Version):
+Make sure to go to the clerk.
+Enter this first.
+
+base.localAvatar.setDNAString('t\x18\x01\x00\x01\x70\x1b\x63\x1b\x22\x1b\x18\x00\x18\x18')
+
+
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__enterConfirmLoss(34, 34)
+
+
+then enter this.
+
+
+base.localAvatar.setDNAString('t\x01\x01\x00\x00\x27\x1b\x42\x1b\x23\x1b\x08\x02\x08\x08')
+
+
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__enterConfirmLoss(34, 34)
+
+Server Go Sad:
+base.localAvatar.enterDied(base.localAvatar.doId)
+
+Shutdown Toontown:
+base.cr.enterShutdown()
+
+Close Shard:
+base.cr.enterCloseShard()
+
+Turn Off Virtual Toon:
+base.localAvatar._Toon__doUnVirtual()
+
+Turn On Virtual Toon:
+base.localAvatar._Toon__doVirtual()
+
+Abort Game Code:
+base.cr.gameFSM.request('closeShard')
+
+
+Instant House Teleport:
+base.localAvatar._LocalToon__handleClarabelleButton()
+
+Crash Yourself Codes:
+base.cr._OTPClientRepository__giveUpWaitingForDatabase(True)
+base.cr._OTPClientRepository__showWaitingForDatabase(True)
+base.cr._OTPClientRepository__handleCancelWaiting(True)
+base.cr._OTPClientRepository_handleOldShardGone(True)
+
+AFK Timeout Codes:
+base.localAvatar._Toon__handleAfkTimeout(True)
+base.localAvatar._Toon__handleAfkExitTeleport(True)
+base.localAvatar._LocalToon__handleSwimExitTeleport(True)
+
+Server Choose Any Disney Approved Name Code:
+base.cr.sendWishName(base.localAvatar.doId,("FD Master Rusty FD"))
+base.cr.gameFSM.request('closeShard')
+
+
+Shows All Active Shards:
+zone = base.cr.listActiveShards()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+
+Membership Code:
+base.cr.setIsPaid(True)
+
+Toon Steal:
+base.cr.sendCreateAvatarMsg(avDNA, avName, avPosition)
+
+Possible Delete Toons Code?:
+def sendDeleteAvatarMsg(avId):
+ pass
+
+sendDeleteAvatarMsg(Base.localAvatar.doId)
+
+Make SOS Page Appear In Your Book:
+base.localAvatar.loadSosPages()
+
+Exit Tailor Codes:
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handlePurchaseDone()
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handleCancel()
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handleConfirmLossOK(1,1)
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handleConfirmLossCancel()
+
+Tailor Crash Code:
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handleUnexpectedExit()
+
+Tailor Steal Code:
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__enterConfirmLoss(1, 1)
+
+Trolley Code:
+Trolley = base.cr.doFindAll("Trolley")
+Trolley[0]._handleOffTrolly()
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handleSwap()
+
+Control battles code?:
+setWantBattles(self, wantBattles)
+
+Client Winter Carol Bean Code:
+base.localAvatar.winterCarolingTargetMet(Bean Amount Here)
+
+Client Trick Or Treat Bean Code:
+base.localAvatar.trickOrTreatTargetMet(Bean Amount Here)
+
+Tutorial Tom Message Box:
+door = base.cr.doFindAll("Door")
+door[0].rejectEnter(True)
+
+Show Not Owner Of Closet Panel:
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__popupNotOwnerPanel()
+
+Close Closet Door::
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__closeDoors()
+
+Open Closet Door:
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__openDoors()
+
+Cancel Closet Code:
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__handleCancel()
+
+Closet Are You Sure Panel Code:
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__popupAreYouSurePanel()
+
+Closet Timeout Panel Code:
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__popupTimeoutPanel()
+
+Closet Swap Code:
+clothes = base.cr.doFindAll("closet")
+clothes[0]._DistributedCloset__handleSwap()
+
+Disconnect Toons (Tailor Version):
+base.localAvatar.setDNAString('t\x01\x07\x00\x00\x50\x1b\x45\x1b\x21\x1b\x08\x02\x08\x08')
+npc = base.cr.doFindAll("Tailor")[0]
+npc[0]._DistributedNPCTailor__enterConfirmLoss(34, 34)
+
+Disconnect Toons (Estate Version):
+closet = base.cr.doFindAll("closet")[0]
+closet.sendUpdate("setDNA", ['t\x00\x08\x01\x00\x50\x1b\x45\x1b\x26\x1b\x0e\x04\x0e\x0e', 34, 34])
+
+Server 3D Rainbow Open Chat:
+base.talkAssistant.sendOpenTalk('\x01shadow\x01WE\x01red\x01ARE\x01green\x01TEAM\x01blue\x01FeD!\x01red\x01')
+
+
+pond = base.cr.doFindAll("FishingPond")[0]
+pond.handleBingoCatch()
+
+Server SC Wrapper:
+class SCWrapper:
+        SCDictionary = {}
+        global defaultDecode
+
+        def encrypt(self, message):
+            encryption = md5.new()
+            encryption.update(message)
+            return encryption.digest()
+        
+        def registerMessage(self, SpeedchatID, SpeedchatText):
+            self.SCDictionary[SpeedchatID] = SpeedchatText
+
+        def unregisterMessage(self, SpeedchatID):
+            try:del self.SCDictionary[SpeedchatID]
+            except:print "No Speedchat ID", SpeedchatID
+
+        def returnDecoded(self, msgIndex):
+            if msgIndex in self.SCDictionary:return str(self.SCDictionary[msgIndex])
+            else:return defaultDecode(msgIndex)
+
+        def __init__(self):
+            otp.speedchat.SCDecoders.decodeSCStaticTextMsg = self.returnDecoded
+
+Script To Run Multihacks:
+script_path = "C:/Program Files/Disney/Disney Online/ToontownOnline/multihack.py"
+script_to_run = open(script_path, 'r')
+full_script = script_to_run.read()
+exec full_script
+
+
+direct.gui.OnscreenText 
+
+Estate Manager:
+base.cr.doFindAll("Estate")[0]
+
+Server Name Change:
+name = 'FD Green Cat FD'
+from direct.distributed.PyDatagram import PyDatagram 
+CLIENT_SET_WISHNAME,CLIENT_SET_WISHNAME_RESP = 70,71
+datagram = PyDatagram()
+datagram.addUint16(CLIENT_SET_WISHNAME)
+datagram.addUint16(CLIENT_SET_WISHNAME_RESP)
+datagram.addUint16(70)
+datagram.addUint16(71)
+datagram.addString(name)
+base.cr.send(datagram)
+
+
+Master Rustys Buttons:
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def bOne():
+ base.localAvatar.collisionsOn()
+def bTwo():
+ base.localAvatar.collisionsOff()
+def  bThree():
+ base.localAvatar.b_setAnimState('dive')
+def bFour():
+ base.localAvatar.b_setAnimState('swim')
+def bFive():
+ base.localAvatar.b_setSC(20136)
+def bSix():
+ base.cr.sendSetZoneMsg(7000)
+def bSeven():
+ base.cr.sendSetZoneMsg(2000)
+def bEight():
+  base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+  base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+  base.localAvatar.book._ShtikerBook__pageChange(1)
+  base.localAvatar.book._ShtikerBook__pageChange(-1)
+def bNine():
+ base.talkAssistant.sendOpenTalk('\n' * 200)
+def bTen():
+ base.localAvatar.d_squish(3)
+def bEleven():
+ ttt = base.cr.doFindAll("TTTreasure")
+ for ttt in base.cr.doFindAll("TTTreasure"):
+     ttt.d_requestGrab()
+def bTwelve():
+ base.localAvatar.b_setAnimState('TeleportOut')
+def bThirteen():
+ base.localAvatar.b_setAnimState('TeleportIn')
+def bFourteen():
+ base.localAvatar.enterSitStart()
+def bFifteen():
+ messenger.send('nameTagShowAvId')
+def bSixteen():
+ toon = base.localAvatar.getX()
+ toon2 = base.localAvatar.getY()
+ toon3 = base.localAvatar.getZ()
+ base.localAvatar.d_playSplashEffect(toon, toon2, toon3)
+ base.localAvatar.playSplashEffect(toon, toon2, toon3)
+def bSeventeen():
+ base.localAvatar.b_setAnimState("victory", 10)
+def bEighteen():
+ base.localAvatar.loop('swing')
+def bNineteen():
+ base.localAvatar.b_setAnimState("ScientistEmcee")
+def bTwenty():
+ messenger.send("minigameAbort")
+def bTwentyone():
+ houseZoneGet = base.localAvatar.getZoneId()
+ houseZoneGet += 10
+ houseZoneGet = int(houseZoneGet)
+ base.cr.sendSetZoneMsg(houseZoneGet)
+def whisperall(message="", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+def bTwentytwo():
+ whisperall('TP TO ME \n' * 13, True)
+def bTwentythree():
+ base.localAvatar.b_setAnimState('ScientistWork')
+def bTwentyfour():
+ base.localAvatar.setDNAString('t\x01\x02\x00\x01\x56\x1d\x54\x1c\x24\x1d\x00\x00\x14\x14')
+def bTwentyfive():
+ word = base.localAvatar.getZoneId()
+ base.localAvatar.collisionsOff()
+ base.cr.sendSetZoneMsg(7000)
+ base.localAvatar.b_setAnimState('chat')
+ base.cr.sendSetZoneMsg(word)
+def bTwentysix():
+ ttd = base.cr.doFindAll("DivingGame")
+ for ttd in base.cr.doFindAll("DivingGame"):
+     ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+def bTwentyseven():
+ zone = base.localAvatar.getZoneId()
+ zone = str(zone)
+ base.localAvatar.setSystemMessage(1, zone)
+def bTwentyeight():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bTwentynine():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+
+b1 = DirectButton(text = ("CO-on", "CO-on", "CO-on", "CO-on"), scale=.05, pos = (-.1,0,-.9), command=bOne)
+b2 = DirectButton(text = ("CO-off", "CO-off", "CO-off", "CO-off"), scale=.05, pos = (.08,0,-.9), command=bTwo)
+b3 = DirectButton(text = ("Dive", "Dive", "Dive", "Dive"), scale=.05, pos = (.22,0,-.9), command=bThree)
+b4 = DirectButton(text = ("Swim", "Swim", "Swim", "Swim"), scale=.05, pos = (.34,0,-.9), command=bFour)
+b5 = DirectButton(text = ("RAID!", "RAID!", "RAID!", "RAID!"), scale=.05, pos = (.48,0,-.9), command=bFive)
+b6 = DirectButton(text = ("Farm", "Farm", "Farm", "Farm"), scale=.05, pos = (-.26,0,-.9), command=bSix)
+b7 = DirectButton(text = ("TTC", "TTC", "TTC", "TTC"), scale=.05, pos = (-.37,0,-.9), command=bSeven)
+b8 = DirectButton(text = ("Teleport", "Teleport", "Teleport", "Teleport"), scale=.05, pos = (-.515,0,-.9), command=bEight)
+b9 = DirectButton(text = ("Bubble", "Bubble", "Bubble", "Bubble"), scale=.05, pos = (-.7,0,-.9), command=bNine)
+b10 = DirectButton(text = ("Die", "Die", "Die", "Die"), scale=.05, pos = (-.84,0,-.9), command=bTen)
+b11 = DirectButton(text = ("Laff", "Laff", "Laff", "Laff"), scale=.05, pos = (-.94,0,-.9), command=bEleven)
+b12 = DirectButton(text = ("T-out", "T-out", "T-out", "T-out"), scale=.05, pos = (-.94,0,-.96), command=bTwelve)
+b13 = DirectButton(text = ("T-in", "T-in", "T-in", "T-in"), scale=.05, pos = (-.82,0,-.96), command=bThirteen)
+b14 = DirectButton(text = ("Sit", "Sit", "Sit", "Sit"), scale=.05, pos = (.6,0,-.9), command=bFourteen)
+b15 = DirectButton(text = ("AVID", "AVID", "AVID", "AVID"), scale=.05, pos = (.72,0,-.9), command=bFifteen)
+b16 = DirectButton(text = ("Splash", "Splash", "Splash", "Splash"), scale=.05, pos = (-.55,0,-.96), command=bSixteen)
+b17 = DirectButton(text = (">>Victory", ">>Victory", ">>Victory", ">>Victory"), scale=.05, pos = (-.36,0,-.96), command=bSeventeen)
+b18 = DirectButton(text = ("Swing", "Swing", "Swing", "Swing"), scale=.05, pos = (-.17,0,-.96), command=bEighteen)
+b19 = DirectButton(text = ("Emcee", "Emcee", "Emcee", "Emcee"), scale=.05, pos = (-.7,0,-.96), command=bNineteen)
+b20 = DirectButton(text = ("Skip", "Skip", "Skip", "Skip"), scale=.05, pos = (-.06,0,-.96), command=bTwenty)
+b21 = DirectButton(text = ("Raid", "Raid", "Raid", "Raid"), scale=.05, pos = (.05,0,-.96), command=bTwentyone)
+b22 = DirectButton(text = ("TP", "TP", "TP", "TP"), scale=.05, pos = (.14,0,-.96), command=bTwentytwo)
+b23 = DirectButton(text = ("SciW", "SciW", "SciW", "SciW"), scale=.05, pos = (.23,0,-.96), command=bTwentythree)
+b24 = DirectButton(text = ("Suit", "Suit", "Suit", "Suit"), scale=.05, pos = (.34,0,-.96), command=bTwentyfour)
+b25 = DirectButton(text = ("ScaC", "ScaC", "ScaC", "ScaC"), scale=.05, pos = (.45,0,-.96), command=bTwentyfive)
+b26 = DirectButton(text = ("DiveG", "DiveG", "DiveG", "DiveG"), scale=.05, pos = (-.94,0,-.84), command=bTwentysix)
+b27 = DirectButton(text = ("Zone", "Zone", "Zone", "Zone"), scale=.05, pos = (-.66,0,-.84), command=bTwentyseven)
+b28 = DirectButton(text = ("Run", "Run", "Run", "Run"), scale=.05, pos = (-.36,0,-.84), command=bTwentyeight)
+b29 = DirectButton(text = ("Jump", "Jump", "Jump", "Jump"), scale=.05, pos = (-.22,0,-.84), command=bTwentynine)
+
+from direct.interval.IntervalGlobal import *
+def spinSetup():
+ height = base.localAvatar.getZ()
+ base.localAvatar.collisionsOff()
+ base.localAvatar.setZ(height + 6)
+def spinOne():
+ base.localAvatar.setHpr(0,10,0)
+def spinTwo():
+ base.localAvatar.setHpr(0,30,0)
+def spinThree():
+ base.localAvatar.setHpr(0,50,0)
+def spinFour():
+ base.localAvatar.setHpr(0,70,0)
+def spinFive():
+ base.localAvatar.setHpr(0,90,0)
+def spinSix():
+ base.localAvatar.setHpr(0,110,0)
+def spinSeven():
+ base.localAvatar.setHpr(0,130,0)
+def spinEight():
+ base.localAvatar.setHpr(0,150,0)
+def spinNine():
+ base.localAvatar.setHpr(0,170,0)
+def spinTen():
+ base.localAvatar.setHpr(0,190,0)
+def spinEleven():
+ base.localAvatar.setHpr(0,210,0)
+def spinTwelve():
+ base.localAvatar.setHpr(0,230,0)
+def spinThirteen():
+ base.localAvatar.setHpr(0,250,0)
+def spinFourteen():
+ base.localAvatar.setHpr(0,270,0)
+def spinFifteen():
+ base.localAvatar.setHpr(0,290,0)
+def spinSixteen():
+ base.localAvatar.setHpr(0,310,0)
+def spinSeventeen():
+ base.localAvatar.setHpr(0,330,0)
+def spinEighteen():
+ base.localAvatar.setHpr(0,0,0)
+def spinEnd():
+ base.localAvatar.collisionsOn()
+def spinOnTime():
+ seq = Sequence()
+ seq.append(Func(spinSetup))
+ seq.append(Wait(.1))
+ seq.append(Func(spinOne))
+ seq.append(Wait(.1))
+ seq.append(Func(spinTwo))
+ seq.append(Wait(.1))
+ seq.append(Func(spinThree))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFour))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFive))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSix))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSeven))
+ seq.append(Wait(.1))
+ seq.append(Func(spinEight))
+ seq.append(Wait(.1))
+ seq.append(Func(spinNine))
+ seq.append(Wait(.1))
+ seq.append(Func(spinTen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinEleven))
+ seq.append(Wait(.1))
+ seq.append(Func(spinTwelve))
+ seq.append(Wait(.1))
+ seq.append(Func(spinThirteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFourteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFifteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSeventeen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinEighteen))
+ seq.append(Wait(.2))
+ seq.append(Func(spinEnd))
+ seq.start()
+
+def stealthGo():
+ zone = base.localAvatar.getZoneId()
+ base.cr.sendSetZoneMsg(zone + 10)
+ base.localAvatar.collisionsOff()
+def stealthBack():
+ zone = base.localAvatar.getZoneId()
+ base.cr.sendSetZoneMsg(zone - 10)
+ base.localAvatar.collisionsOn()
+def stealthOnTime():
+ seq = Sequence()
+ seq.append(Func(stealthGo))
+ seq.append(Wait(15))
+ seq.append(Func(stealthBack))
+ seq.start()
+
+bot1 = DirectButton(text = ("Spin", "Spin", "Spin", "Spin"), scale=.05, pos = (.57,0,-.96), command=spinOnTime)
+bot2 = DirectButton(text = ("Stealth", "Stealth", "Stealth", "Stealth"), scale=.05, pos = (-.50,0,-.84), command=stealthOnTime)
+
+
+Rustys Test Area:
+import toontown
+Def enterMakeMovie(self, ts=0):
+  toontown.battle.DistributedBattleBase.DistributedBattleBase = enterMakeMovie(0)
+
+ChatFeedback_OpenChat = 128
+    ChatFeedback_PassedBlacklist = 32
+    ChatFeedback_Whitelist = 64
+
+Red Chat Text:
+try:T_displayTalkNormal
+except:T_displayTalkNormal = base.talkAssistant.sendOpenTalk
+def displayRedTalk(displayText):
+    if str(displayText) == '\x01WLDisplay\x01.\x02' or str(displayText) == '.' or str(displayText) == ' ':
+        T_displayTalkNormal('')
+    else:
+        textArray = ['\x01WLRed\x01']
+        textArray.append(displayText)
+        textArray.append('\x02')
+        displayText = ''
+        for text in textArray:
+            displayText += text
+        T_displayTalkNormal(displayText)
+base.talkAssistant.sendOpenTalk = displayRedTalk
+
+Blue Chat Text:
+COming Soon
+
+Codes i get from Ruberts logs:
+base.talkAssistant.sendOpenTalk('\x01blue\x01WE WE WE WE WE WE WE WE WE WE WE WE WE WE WE WE WE WE WE \x01red\x01ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE ARE \x01green\x01TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM TEAM \x01blue\x01TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! TRAP! \x01yellow\x01We Are DOMINANT')
+base.localAvatar.setDNAString('t\x01\x02\x01\x01\x42\x11\x54\x11\x0d\x14\x14\x00\x14\x14')
+
+My Kart Dna:
+[-1, -1, -1, -1, -1, -1, -1, -1, -1]
+
+My Request ID:
+14
+
+My Friends List:
+[(292947983, 0), (292924149, 0), (292947248, 0), (292925379, 0), (287697056, 0), (292930874, 0), (292029467, 0), (259769325, 0), (292911041, 0), (292878465, 0), (292862934, 0), (292722512, 0), (292952505, 0), (292325782, 0), (267395328, 0)]
+
+MY Toon Part Names:
+['head', 'legs', 'torso']
+
+
+MY test code
+base.localAvatar.SendUpdate([base.localAvatar.displayTalk("\x01shadow\x01We\x01red\x01are\x01green\x01Team\x01blue\x01FD\x01red\x01", mods=True)])
+
+
+
+MY location:
+(636000000, 2000)
+
+datagram2.addUint16(CLIENT_SET_NAME_PATTERN_ANSWER)
+
+Server System Message:
+from direct.distributed.MsgTypes import *
+Message = "I have balls of steel"
+from direct.distributed.PyDatagram import PyDatagram 
+datagram1, datagram2 = PyDatagram(), PyDatagram()
+datagram1.addUint16(CLIENT_SYSTEM_MESSAGE)
+datagram2.addUint16(CLIENT_SYSTEMMESSAGE_AKNOWLEDGE)
+datagram1.addString(Message);datagram2.addString(Message)
+base.cr.send(datagram1);base.cr.send(datagram2)
+
+Server Name Code:
+from direct.distributed.MsgTypes import *
+Name = 'FD Hi FD'
+ID = base.localAvatar.doId
+base.cr.sendWishName(ID, Name)
+from direct.distributed.PyDatagram import PyDatagram 
+datagram1, datagram2 = PyDatagram(), PyDatagram()
+datagram1.addUint16(CLIENT_SET_WISHNAME)
+datagram2.addUint16(CLIENT_SET_WISHNAME_RESP)
+datagram1.addUint32(ID);datagram2.Uint32(ID)
+datagram1.addString(Name);datagram2.addString(Name)
+base.cr.send(datagram1);base.cr.send(datagram2)

@@ -1,0 +1,19 @@
+Big Cheese Head
+
+avHead = base.localAvatar.find('**/head-short')
+bAvHead = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+avBigCheeseHead = bAvHead.find('**/bigcheese')
+avBigCheeseHead.reparentTo(avHead)
+avBigCheeseHead.setScale(2.3)
+avBigCheeseHead.setPos(0,.3,-1)
+
+List:
+
+backstabber
+bigwig
+headhunter
+legaleagle
+numbercruncher
+pennypincher
+yesman
+twoface

@@ -1,0 +1,8 @@
+import toontown
+def new():
+ return True
+def new2(*a,**k):
+ return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2

@@ -1,0 +1,7 @@
+base.accept("1", base.localAvatar.b_setAnimState, ['ScientistWork'])
+base.accept("2", base.localAvatar.b_setAnimState, ['ScientistEmcee'])
+base.accept("3", base.localAvatar.b_setAnimState, ['ScientistJealous'])
+base.accept("4", base.localAvatar.b_setAnimState, ['dive'])
+base.accept("5", base.localAvatar.b_setAnimState, ['victory'])
+base.accept("6", base.localAvatar.b_setAnimState, ['Sit'])
+base.accept("7", base.localAvatar.b_setAnimState, ['swim'])

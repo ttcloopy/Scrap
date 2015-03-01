@@ -1,0 +1,10 @@
+# Press 1 to log
+# C:C:\Users\christian\Desktop\log.txt
+lmc = str(messenger.send)
+fp = "C:\Users\christian\Desktop\log.txt"
+def log():
+    wrf = open(fp, "w")
+    wrf.write(lmc + "\n")
+    wrf.close()
+    base.localAvatar.setSystemMessage(1, 'Logging...')
+base.accept("1", log, [])

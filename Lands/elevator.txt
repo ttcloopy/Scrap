@@ -1,0 +1,33 @@
+f = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+f.reparentTo(render)
+f.setHpr(90,0,0)
+f.setPos(First)
+pandaPosInterval22 = f.posInterval(13,Point3(First),
+startPos=Point3(Second))
+pandaPosInterval33 = f.posInterval(13,Point3(Second),
+startPos=Point3(First))
+pandaHprInterval11 = f.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = f.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+f.find('**/wall_back').removeNode()
+f.find('**/wall_front').removeNode()
+f.find('**/wall_left').removeNode()
+f.find('**/wall_right').removeNode()
+f.find('**/ceiling').removeNode()
+r = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+r.setPos(12.931,0.839,4.024)
+r.setHpr(0,340.30,0)
+r.hide()
+r.reparentTo(render)
+r.find('**/wall_back').removeNode()
+r.find('**/wall_front').removeNode()
+r.find('**/wall_left').removeNode()
+r.find('**/wall_right').removeNode()
+r.find('**/ceiling').removeNode()

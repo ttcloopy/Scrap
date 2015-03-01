@@ -1,0 +1,2732 @@
+------------------------Animations-------------------------------------------------------
+base.localAvatar.enterJump()
+messenger.send('purchaseDone-451201442')
+messenger.send('DistributedBlackCatMgr-activate')
+base.localAvatar.enterPush()
+base.localAvatar.enterRun()
+base.localAvatar.enterSquish
+base.localAvatar.getCogSuit
+base.localAvatar.setHpr((9))
+base.localAvatar.setHpr(0,27
+base.localAvatar.setHpr(0,90
+base.localAvatar.setHpr(315,
+base.localAvatar.maxHp = 137
+base.localAvatar.numPies = 99
+base.localAvatar.enterHappy()
+base.localAvatar.b_setAnimState(('swim')) - swim in air
+base.localAvatar.b_setAnimState(('run')) - run in place
+base.localAvatar.b_setAnimState(('walk')) - walk in place
+base.localAvatar.b_setAnimState(('cringe')) - cringe in place lol
+base.localAvatar.enterSitStart()is sit - sit in air
+base.localAvatar.setZ(150/10)    Super Jump
+base.localAvatar.takeDamage(500) - go sad wit full laff (will say u have no laff but u rly have full)
+base.localAvatar.collisionsOff() - boundaries off walk through everything
+base.localAvatar.collisionsOn()  - Back To Normal 
+base.localAvatar.setHpr(0,0,315) - sideways (alter th last number for degree)
+base.localAvatar.b_setAnimState('teleport')
+base.localAvatar.b_setAnimState(('ScientistJealous'))
+base.localAvatar.b_setAnimState(('Push'))
+base.localAvatar.b_setAnimState(('flat'))
+base.localAvatar.b_setAnimState(('Squish'))
+base.localAvatar.b_setAnimState(('CogThiefRunning')) Run Back Words
+base.localAvatar.b_setAnimState(('victory'))
+base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState('ScientistLessWork')
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+base.localAvatar.b_setAnimState(('GolfGoodPutt')
+base.localAvatar.b_setAnimState(('GolfPuttSwing'))
+base.localAvatar.b_setAnimState(('GolfBadPutt'))
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.b_setAnimState(('Flattened'))
+base.localAvatar.b_setAnimState(('neutral'))
+base.localAvatar.b_setAnimState(('Died'))
+base.localAvatar.b_setAnimState(('dive'))
+base.localAvatar.b_setAnimState(('Sleep'))
+base.localAvatar.b_setAnimState(('run'))
+base.localAvatar.b_setAnimState(('swim'))
+base.localAvatar.b_setAnimState(('Sit'))          Sit 
+base.localAvatar.b_setAnimState(('walk'))       Walk in Place
+base.localAvatar.b_setAnimState(('Squish'))  Flat For Like 5 Seconds
+base.localAvatar.b_setAnimState(('Flattened'))   Flat
+base.localAvatar.b_setAnimState('CatchEating')   Catch and Eating
+base.localAvatar.b_setAnimState('Catching')       Catch 
+base.localAvatar.b_setAnimState('TeleportOut')  Invisible Until Move
+base.localAvatar.b_setAnimState('TeleportIn')     Come From A Whole
+base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+base.localAvatar.b_setAnimState(('CogThiefRunning'))
+base.localAvatar.b_setAnimState(('jumpSquat'))
+base.localAvatar.b_setAnimState(('OpenBook'))
+base.localAvatar.b_setAnimState(('FallDown'))
+base.localAvatar.b_setAnimState(('TeleportingOut'))
+base.localAvatar.disableBlend()
+base.localAvatar.enableBlend()
+base.localAvatar.b_setAnimState(('Sad'))
+base.localAvatar.b_setAnimState(('GolfRotateRight'))
+base.localAvatar.b_setAnimState('TeleportOut')   Leaveing Come Back
+base.localAvatar.b_setAnimState('TeleportIn')    Leaveing Come Back Faster
+base.localAvatar.setPos(0,0,5)
+base.localAvatar.setHpr (0,270,0) 
+base,localAvatar.setHPr(0,40
+base.localAvatar.setHpr(0,0,180)    Upside Down  (NeedToBeHigh)
+base.localAvatar.setHpr(0,0,315)    Side Ways
+base.localAvatar.collisionsOff()    Walk Through Anything
+base.localAvatar.b_setAnimState('ScientistEmcee') 
+base.localAvatar.b_setAnimState('Push')
+base.localAvatar.b_setAnimStatcats 
+--------------------------------------Loops-------------------------------------------------------
+base.localAvatar.loop('neutral')
+
+base.localAvatar.loop('run')
+
+base.localAvatar.loop('angry')
+
+base.localAvatar.loop('book')
+
+base.localAvatar.loop('conked')
+
+base.localAvatar.loop('cringe')
+
+base.localAvatar.loop('duck')
+
+base.localAvatar.loop('jump')
+
+base.localAvatar.loop('jump-back-right')
+
+base.localAvatar.loop('jump-z')
+
+base.localAvatar.loop('jump-zend')
+
+base.localAvatar.loop('jump-zhang')
+
+base.localAvatar.loop('jump-zstart')
+
+base.localAvatar.loop('leap-Z')
+
+base.localAvatar.loop('leap-zend')
+
+base.localAvatar.loop('leap-zhang')
+
+base.localAvatar.loop('leap-zhanglong')
+
+base.localAvatar.loop('leap-zstart')
+
+base.localAvatar.loop('throw')
+
+base.localAvatar.loop('press-button')
+
+base.localAvatar.loop('running-jump')
+
+base.localAvatar.loop('shrug')
+
+base.localAvatar.loop('sidestep-left')
+
+base.localAvatar.loop('teleport')
+
+base.localAvatar.loop('victory-dance')
+
+base.localAvatar.loop('walk')
+
+base.localAvatar.loop('applause')
+
+base.localAvatar.loop('begCycle')
+
+base.localAvatar.loop('begOut')
+
+base.localAvatar.loop('bored')
+
+base.localAvatar.loop('bow')
+
+base.localAvatar.loop('cast')
+
+base.localAvatar.loop('castlong')
+
+base.localAvatar.loop('confused')
+
+base.localAvatar.loop('down')
+
+base.localAvatar.loop('eat-neutral')
+
+base.localAvatar.loop('eat-n-run')
+
+base.localAvatar.loop('fish')
+
+base.localAvatar.loop('fishAGAIN')
+
+base.localAvatar.loop('fishEND')
+
+base.localAvatar.loop('fish-neutral')
+
+base.localAvatar.loop('game-neutral')
+
+base.localAvatar.loop('game-run')
+
+base.localAvatar.loop('gameThrow')
+
+base.localAvatar.loop('give')
+
+base.localAvatar.loop('intoBeg')
+
+base.localAvatar.loop('intoSit')
+
+base.localAvatar.loop('left')
+
+base.localAvatar.loop('lose-walk')
+
+base.localAvatar.loop('pet-end')
+
+base.localAvatar.loop('pet-in')
+
+base.localAvatar.loop('pet-loop')
+
+base.localAvatar.loop('pole')
+
+base.localAvatar.loop('pole-neutral')
+
+base.localAvatar.loop('reel')
+
+base.localAvatar.loop('reel-H')
+
+base.localAvatar.loop('reel-neutral')
+
+base.localAvatar.loop('right')
+
+base.localAvatar.loop('sad-neutral')
+
+base.localAvatar.loop('sit')
+
+base.localAvatar.loop('slip-backward')
+
+base.localAvatar.loop('slip-forward')
+
+base.localAvatar.loop('swim')
+
+base.localAvatar.loop('swing')
+
+base.localAvatar.loop('taunt')
+
+base.localAvatar.loop('think')
+
+base.localAvatar.loop('curtsy')
+
+base.localAvatar.loop('tug-o-war')
+base.localAvatar.loop('up')
+
+base.localAvatar.loop('climb')
+
+base.localAvatar.loop('fire-hose')
+
+base.localAvatar.loop('happy-dance')
+
+base.localAvatar.loop('hold-bottle')
+
+base.localAvatar.loop('hold-magnet')
+
+base.localAvatar.loop('hypnotize')
+
+base.localAvatar.loop('juggle')
+
+base.localAvatar.loop('lose')
+
+base.localAvatar.loop('melt')
+
+base.localAvatar.loop('shout')
+
+base.localAvatar.loop('smooch')
+
+base.localAvatar.loop('spit')
+
+base.localAvatar.loop('sprinkle-dust')
+
+base.localAvatar.loop('struggle')
+
+base.localAvatar.loop('tickle')
+
+base.localAvatar.loop('toss')
+
+base.localAvatar.loop('water-gun')
+
+base.localAvatar.loop('sound')
+
+base.localAvatar.loop('callPet')
+
+base.localAvatar.loop('feedPet')
+
+base.localAvatar.loop('into-dig')
+
+base.localAvatar.loop('jellybeanJar')
+
+base.localAvatar.loop('loop-dig')
+
+base.localAvatar.loop('phoneBack')
+
+base.localAvatar.loop('takePhone')
+
+base.localAvatar.loop('water')
+
+base.localAvatar.loop('callPet')
+
+base.localAvatar.loop('feedPet')
+
+base.localAvatar.loop('into-dig')
+
+base.localAvatar.loop('phoneNeutral')
+
+base.localAvatar.loop('badloop-putt')
+
+base.localAvatar.loop('bad-putt')
+
+base.localAvatar.loop('good-putt')
+
+base.localAvatar.loop('headdown-putt')
+
+base.localAvatar.loop('into-putt')
+
+base.localAvatar.loop('lookloop-putt')
+
+base.localAvatar.loop('look-putt')
+
+base.localAvatar.loop('loop-putt')
+
+base.localAvatar.loop('rotateL-putt')
+
+base.localAvatar.loop('rotateR-putt')
+
+base.localAvatar.loop('swing-putt')
+
+base.localAvatar.loop('block')
+
+base.localAvatar.loop('push')
+
+base.localAvatar.loop('leverNeutral')
+
+base.localAvatar.loop('leverPull')
+
+base.localAvatar.loop('leverReach')
+
+base.localAvatar.loop('scientistGame')
+
+base.localAvatar.loop('scientistWork')
+
+base.localAvatar.loop('scientistWorkLess')
+
+base.localAvatar.loop('scientistEmcee')
+
+----------------------------------------------Collisions------------------------------------
+base.localAvatar.collisionsOff()
+base.localAvatar.collisionsOn()
+----------------------------------------------------Phases------------------------------------------
+Take Out Singing Like This base.localAvatar.b_setSC(50701)
+base.localAvatar.b_setSCSinging(1)
+base.localAvatar.b_setSCSinging(2)   
+base.localAvatar.b_setSCSinging(3)
+base.localAvatar.b_setSCSinging(4) = speedchatplus!  
+base.localAvatar.b_setSCSinging(1700)
+base.localAvatar.b_setSCSinging(1701)
+base.localAvatar.b_setSCSinging(1702)
+base.localAvatar.b_setSCSinging(1703)
+base.localAvatar.b_setSCSinging(1704)
+base.localAvatar.b_setSCSinging(1700)
+base.localAvatar.b_setSCSinging(2000)
+base.localAvatar.b_setSCSinging(2001)
+base.localAvatar.b_setSCSinging(2002)
+base.localAvatar.b_setSCSinging(2003)
+base.localAvatar.b_setSCSinging(2004)
+base.localAvatar.b_setSCSinging(2005)
+base.localAvatar.b_setSCSinging(2006)
+base.localAvatar.b_setSCSinging(2007)
+base.localAvatar.b_setSCSinging(2008)
+base.localAvatar.b_setSCSinging(2009)   
+base.localAvatar.b_setSCSinging(2100)
+base.localAvatar.b_setSCSinging(2101)
+base.localAvatar.b_setSCSinging(2102)
+base.localAvatar.b_setSCSinging(2103)
+base.localAvatar.b_setSCSinging(2104)
+base.localAvatar.b_setSCSinging(2105)
+base.localAvatar.b_setSCSinging(2106)
+base.localAvatar.b_setSCSinging(2107)
+base.localAvatar.b_setSCSinging(2108)
+base.localAvatar.b_setSCSinging(2109)
+base.localAvatar.b_setSCSinging(2200)
+base.localAvatar.b_setSCSinging(2201)
+base.localAvatar.b_setSCSinging(2202)
+base.localAvatar.b_setSCSinging(2203)
+base.localAvatar.b_setSCSinging(2204)
+base.localAvatar.b_setSCSinging(2205)
+base.localAvatar.b_setSCSinging(2206)
+base.localAvatar.b_setSCSinging(2207)
+base.localAvatar.b_setSCSinging(2208)
+base.localAvatar.b_setSCSinging(2209)
+base.localAvatar.b_setSCSinging(2300)
+base.localAvatar.b_setSCSinging(2301)
+base.localAvatar.b_setSCSinging(2302)
+base.localAvatar.b_setSCSinging(2303)
+base.localAvatar.b_setSCSinging(2304)
+base.localAvatar.b_setSCSinging(2305)
+base.localAvatar.b_setSCSinging(2306)
+base.localAvatar.b_setSCSinging(2307)
+base.localAvatar.b_setSCSinging(2308)
+base.localAvatar.b_setSCSinging(2309)
+base.localAvatar.b_setSCSinging(3200)
+base.localAvatar.b_setSCSinging(3201)
+base.localAvatar.b_setSCSinging(3300)
+base.localAvatar.b_setSCSinging(3301)
+base.localAvatar.b_setSCSinging(3400)
+base.localAvatar.b_setSCSinging(3600)
+base.localAvatar.b_setSCSinging(3601)
+base.localAvatar.b_setSCSinging(3602)
+base.localAvatar.b_setSCSinging(3603)
+base.localAvatar.b_setSCSinging(4000)
+base.localAvatar.b_setSCSinging(4001)
+base.localAvatar.b_setSCSinging(4002)
+base.localAvatar.b_setSCSinging(4100)
+base.localAvatar.b_setSCSinging(4101)
+base.localAvatar.b_setSCSinging(4102)
+base.localAvatar.b_setSCSinging(4103)
+base.localAvatar.b_setSCSinging(4104)
+base.localAvatar.b_setSCSinging(4105)
+base.localAvatar.b_setSCSinging(4200)
+base.localAvatar.b_setSCSinging(4201)
+base.localAvatar.b_setSCSinging(4202)
+base.localAvatar.b_setSCSinging(4203)
+base.localAvatar.b_setSCSinging(4204)
+base.localAvatar.b_setSCSinging(4205)
+base.localAvatar.b_setSCSinging(4206)
+base.localAvatar.b_setSCSinging(4207)
+base.localAvatar.b_setSCSinging(4300)
+base.localAvatar.b_setSCSinging(4301)
+base.localAvatar.b_setSCSinging(4302)
+base.localAvatar.b_setSCSinging(4303)
+base.localAvatar.b_setSCSinging(4304)
+base.localAvatar.b_setSCSinging(4305)
+base.localAvatar.b_setSCSinging(4306)
+base.localAvatar.b_setSCSinging(4307)
+base.localAvatar.b_setSCSinging(4400)
+base.localAvatar.b_setSCSinging(5000)
+base.localAvatar.b_setSCSinging(5100)
+base.localAvatar.b_setSCSinging(5200)
+base.localAvatar.b_setSCSinging(5300)
+base.localAvatar.b_setSCSinging(10000)
+base.localAvatar.b_setSCSinging(10001)
+base.localAvatar.b_setSCSinging(10002)
+base.localAvatar.b_setSCSinging(10003)
+base.localAvatar.b_setSCSinging(10004)
+base.localAvatar.b_setSCSinging(10005)
+base.localAvatar.b_setSCSinging(10006)
+base.localAvatar.b_setSCSinging(10007)
+base.localAvatar.b_setSCSinging(20000)
+base.localAvatar.b_setSCSinging(20001)
+base.localAvatar.b_setSCSinging(20002)
+base.localAvatar.b_setSCSinging(20003)
+base.localAvatar.b_setSCSinging(20004)
+base.localAvatar.b_setSCSinging(20005)
+base.localAvatar.b_setSCSinging(20006)
+base.localAvatar.b_setSCSinging(20007)
+base.localAvatar.b_setSCSinging(20008)
+base.localAvatar.b_setSCSinging(20009)
+base.localAvatar.b_setSCSinging(50200)
+base.localAvatar.b_setSCSinging(50201)
+base.localAvatar.b_setSCSinging(50202)
+base.localAvatar.b_setSCSinging(50203)
+base.localAvatar.b_setSCSinging(50204)
+base.localAvatar.b_setSCSinging(50205)
+base.localAvatar.b_setSCSinging(50206)
+base.localAvatar.b_setSCSinging(50207)
+base.localAvatar.b_setSCSinging(50208)
+base.localAvatar.b_setSCSinging(50209)
+base.localAvatar.b_setSCSinging(50210)
+base.localAvatar.b_setSCSinging(50211)
+base.localAvatar.b_setSCSinging(60501) = weird phrases
+base.localAvatar.announceBingo()
+---------------------------------------------------Cords--------------------------------------------
+estate
+
+base.localAvatar.setXYZH(44.834, 82.225, 22.190, 284.419) - Pink House
+base.localAvatar.setXYZH(65.880, 10.842, 31.965, 262.562) - Blue House
+base.localAvatar.setXYZH(84.289, -79.017, 24.069, 120.691) - Green House
+base.localAvatar.setXYZH(-69.684, -125.659, 23.254, 477.882) - Purple House
+base.localAvatar.setXYZH(-32.025, 27.665, 11.477, 105.826) - Yellow House
+base.localAvatar.setXYZH(-56.939, -34.610, 28.106, -717.942) - Red House
+base.localAvatar.setXYZH(17.722, -143.701, -9.975, -710.815) - Pond
+base.localAvatar.setXYZH(46.800, -113.700, 0.458, 135.000) - Fishing Slot 1
+base.localAvatar.setXYZH(46.100, -124.800, 0.343, 90.000) - Fishing Slot 2
+base.localAvatar.setXYZH(46.800, -113.700, 0.458, 135.000) - Fishing Slot 3
+base.localAvatar.setXYZH(46.800, -113.700, 0.458, 135.000) - Fishing Slot 4
+
+toontown central
+
+base.localAvatar.setXYZH(-60.173, -8.817, 1.227, 99.147) - Gazeebo
+base.localAvatar.setXYZH(0.197, -1.698, 3.362, 90.737) - Stairs
+base.localAvatar.setXYZH(-118.583, 62.454, 24.603,-1219.699) - Pet Shop
+base.localAvatar.setXYZH(-83.642, -90.233, 25.336, -728.746) - Gag Shop 
+base.localAvatar.setXYZH(33.977, -150.424, 3.025, 143.147) - Silly Street tunnel
+base.localAvatar.setXYZH(-144.263, 4.647, 0.252, 84.718 ) - Loopy Lane tunnel
+base.localAvatar.setXYZH(-48.280, 87.749, 0.525, -13.600) - Punchline Place tunnel
+base.localAvatar.setXYZH(75.864, 32.121, 26.683, -193.404) - Bank
+base.localAvatar.setXYZH(33.007, 30.181, 3.698, 141.066) - Toon HQ
+base.localAvatar.setXYZH(-61.060, -8.576, 18.255, 119.111)
+base.localAvatar.collisionsOff() - Standing on the top of the gazeebo
+base.localAvatar.setXYZH(-90.862, -83.304, 0.525, -1819.017) - Gag Shop rip
+base.localAvatar.setXYZH(60.613, -28.162, 38.265, 811.075) - Roof of Library
+base.localAvatar.setXYZH(118.364, 1.339, 67.339, 1172.075) - Roof of Toon Hall
+base.localAvatar.setXYZH(18.581, -49.105, 12.045, 1453.850) - Flower Pot
+base.localAvatar.setXYZH(75.263, 25.442, 24.960, 1193.982) - Roof of Bank
+
+cashbot HQ
+
+base.localAvatar.setXYZH(116.313, -588.933, -47.487, -3602.539) - entrance/exit
+base.localAvatar.setXYZH(-124.621, -431.833, -23.439, -3678.455) - coin mint entrance
+base.localAvatar.setXYZH(183.927, -175.511, -63.244, -3873.301) - dollar mint entrance
+base.localAvatar.setXYZH(-122.759, 64.938, -23.439, -3679.968) - bullion mint entrance
+
+lawbot HQ
+
+base.localAvatar.setXYZH(-665.871, -760.701, -1076.234, -763.170)
+base.localAvatar.collisionsOff() - ink pool
+base.localAvatar.setXYZH(73.848, 260.136, -68.502, -178.364) - entrance/exit
+base.localAvatar.setXYZH(326.951, -176.112, -42.923, -630.759) - CJ entrance
+base.localAvatar.setXYZH(346.954, -174.917, 11.706, -1340.549)
+base.localAvatar.collisionsOff() - standing at the CJ door
+base.localAvatar.setXYZH(-94.038, -78.369, -28.602, -1420.069) - jail
+base.localAvatar.setXYZH(-173.364, -187.466, -15.169, -1165.527) - DA entrance
+base.localAvatar.setXYZH(-178.532, -186.915, 30.806, -2233.790)
+base.localAvatar.collisionsOff() - standing at the DA door
+base.localAvatar.setXYZH(67.091, -368.555, -68.367, -2154.905) - statue
+base.localAvatar.setXYZH(109.804, -388.964, -18.242, -2890.850)
+base.localAvatar.collisionsOff() - standing at the statue's body
+base.localAvatar.setXYZH(94.458, -402.656, 102.942, -3594.188)
+base.localAvatar.collisionsOff() - standing at the statue's head
+----------------------------------colored gloves---------------------------------------------
+base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.2,0.2) - RED
+base.localAvatar.findAllMatches('**/hands').setColor(0.95,0.6,0.8) - PINK
+base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.27,0.92) - PURPLE
+base.localAvatar.findAllMatches('**/hands').setColor(0.38,0.85,0.33) - GREEN
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.87,0.32) - YELLOW
+base.localAvatar.findAllMatches('**/hands').setColor(0.18,0.24,0.88) - BLUE
+base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.79,0.98) - CYAN
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18) - ORANGE
+base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57) - CREAM
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1) - PERIWINKLE
+base.localAvatar.findAllMatches('**/hands').setColor(0.25,0.25,0.3) BLACK
+base.localAvatar.findAllMatches('**/hands').setColor(1,1,1) - WHITE
+base.localAvatar.findAllMatches('**/hands').setColor(1.0,0.0,0.1) - BLOODY RED
+base.localAvatar.findAllMatches('**/hands').setColor(0.66,0.7,0.8) - GRAY
+base.localAvatar.findAllMatches('**/hands').setColor(0.95,0.7,0.5) - PEACH
+----------------colored feet-----------------------
+base.localAvatar.findAllMatches('**/feet').setColor(0.97,0.3,0.3)
+base.localAvatar.findAllMatches('**/feet').setColor(0.96,0.7,0.7)
+base.localAvatar.findAllMatches('**/feet').setColor(0.69,0.29,0.95)
+base.localAvatar.findAllMatches('**/feet').setColor(0.38,0.98,0.43)
+base.localAvatar.findAllMatches('**/feet').setColor(1,0.90,0.30)
+base.localAvatar.findAllMatches('**/feet').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/feet').setColor(0.3,0.64,0.85)
+base.localAvatar.findAllMatches('**/feet').setColor(1,0.5,0.18)
+base.localAvatar.findAllMatches('**/feet').setColor(1,1,0.57)
+base.localAvatar.findAllMatches('**/feet').setColor(0.55,0.55,1)
+base.localAvatar.findAllMatches('**/feet').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/feet').setColor(1,1,1)
+base.localAvatar.findAllMatches('**/feet').setColor(1.0,0.0,0.1) 
+-------------------------colored legs----------------------------------------
+base.localAvatar.findAllMatches('**/legs').setColor(0.97,0.3,0.3)
+base.localAvatar.findAllMatches('**/legs').setColor(0.96,0.7,0.7)
+base.localAvatar.findAllMatches('**/legs').setColor(0.69,0.29,0.95)
+base.localAvatar.findAllMatches('**/legs').setColor(0.38,0.98,0.43)
+base.localAvatar.findAllMatches('**/legs').setColor(1,0.90,0.30)
+base.localAvatar.findAllMatches('**/legs').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/legs').setColor(0.3,0.64,0.85)
+base.localAvatar.findAllMatches('**/legs').setColor(1,0.5,0.18)
+base.localAvatar.findAllMatches('**/legs').setColor(1,1,0.57)
+base.localAvatar.findAllMatches('**/legs').setColor(0.55,0.55,1)
+base.localAvatar.findAllMatches('**/legs').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/legs').setColor(1,1,1)
+base.localAvatar.findAllMatches('**/legs').setColor(1.0,0.0,0.1) 
+------------------------------------colored arms-----------------------------------
+base.localAvatar.findAllMatches('**/arms').setColor(0.97,0.3,0.3)
+base.localAvatar.findAllMatches('**/arms').setColor(0.96,0.7,0.7)
+base.localAvatar.findAllMatches('**/arms').setColor(0.69,0.29,0.95)
+base.localAvatar.findAllMatches('**/arms').setColor(0.38,0.98,0.43)
+base.localAvatar.findAllMatches('**/arms').setColor(1,0.90,0.30)
+base.localAvatar.findAllMatches('**/arms').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/arms').setColor(0.3,0.64,0.85)
+base.localAvatar.findAllMatches('**/arms').setColor(1,0.5,0.18)
+base.localAvatar.findAllMatches('**/arms').setColor(1,1,0.57)
+base.localAvatar.findAllMatches('**/arms').setColor(0.55,0.55,1)
+base.localAvatar.findAllMatches('**/arms').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/arms').setColor(1,1,1)
+base.localAvatar.findAllMatches('**/arms').setColor(1.0,0.0,0.1) 
+----------------------------------Super Speed and ...----------------------------------
+def sjasshk1():
+    base.localAvatar.physControls.avatarControlReverseSpeed=50
+    base.localAvatar.physControls.avatarControlRotateSpeed=140
+    base.localAvatar.physControls.avatarControlJumpForce = 45
+    base.localAvatar.physControls.setGravity(35)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 60
+    base.localAvatar.setSystemMessage(1, 'Super Jump/Super Speed/Reverse Speed Activated')
+    base.accept("f2", sjasshk2, [])
+def sjasshk2():
+    base.localAvatar.physControls.avatarControlReverseSpeed=10
+    base.localAvatar.physControls.avatarControlRotateSpeed=80
+    base.localAvatar.physControls.avatarControlJumpForce = 20
+    base.localAvatar.physControls.setGravity(40)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 17
+    base.localAvatar.setSystemMessage(1, 'Super Jump/Super Speed/Reverse Speed De-Activated')
+    base.accept("f2", sjasshk1, [])
+base.accept("f2", sjasshk1, [])
+------------------------Hot Key Anims1-----------------------------------
+base.accept("f1", base.localAvatar.b_setAnimState, ['swim']) 
+base.accept("f2", base.localAvatar.b_setAnimState, ['SitStart']) 
+base.accept("f3", base.localAvatar.b_setAnimState, ['Died']) 
+base.accept("f4", base.localAvatar.collisionsOff, [])
+base.accept("f5", base.localAvatar.b_setAnimState, ['Flattened']) 
+base.accept("f6", base.localAvatar.b_setAnimState, ['CatchEating']) 
+base.accept("f9", base.localAvatar.b_setAnimState, ['TeleportIn']) 
+base.accept("f10", base.localAvatar.b_setAnimState, ['TeleportOut']) 
+base.accept("f11", base.localAvatar.b_setAnimState, ['Push']) 
+base.accept("f12", base.localAvatar.b_setAnimState, ['ReadBook']) 
+----------------------------------------------hot key anims 2------------------------------------
+base.accept("f1", base.localAvatar.b_setAnimState, ['ScientistEmcee'])  
+base.accept("f2", base.localAvatar.b_setAnimState, ['ScientistJealous'])
+base.accept("f3", base.localAvatar.b_setAnimState, ['ScientistWork'])
+base.accept("f4", base.localAvatar.b_setAnimState, ['ScientistPlay'])
+base.accept("f5", base.localAvatar.b_setAnimState, ['ScientistLessWork'])
+base.accept("f6", base.localAvatar.b_setAnimState, ['GolfGoodPutt'])
+base.accept("f7", base.localAvatar.b_setAnimState, ['GolfBadPutt'])
+base.accept("1", base.localAvatar.b_setAnimState, ['Flattened'])
+base.accept("2", base.localAvatar.b_setAnimState, ['swim'])
+base.accept("3", base.localAvatar.b_setAnimState, ['victory'])
+base.accept("4", base.localAvatar.b_setAnimState, ['Sit'])
+base.accept("5", base.localAvatar.setZ, [2])
+base.accept("6", base.localAvatar.collisionsOff, [])
+base.accept("7", base.localAvatar.b_setAnimState, ['jumpSquat'])
+base.accept("8", base.localAvatar.b_setAnimState, ['victory', -1])
+-----------------------------Invisiible Codes--------------------------------------------------------
+base.localAvatar.hide()
+word = base.localAvatar.getZoneId()
+word += 10
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+base.localAvatar.setSystemMessage(1,'Invisibility Activated')
+disable:
+base.localAvatar.show()
+word = base.localAvatar.getZoneId()
+word -= 10
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+base.localAvatar.setSystemMessage(1,'Invisibility Deactivated')
+-----------------------------------Zones----------------------------------------
+base.cr.sendSetZoneMsg(1000)
+base.cr.sendSetZoneMsg(2000)
+base.cr.sendSetZoneMsg(6000) - chip and dales
+base.cr.sendSetZoneMsg(7000) - funny farm
+base.cr.sendSetZoneMsg(2513) - flippy office 
+base.cr.sendSetZoneMsg(2520) - ttc hq  
+base.cr.sendSetZoneMsg(11100)   Go To Vp Grouping (NEEDRIVER (DOwn) )
+base.cr.sendSetZoneMsg(11100) - sellbot vp lobby
+base.cr.sendSetZoneMsg(13000) - lawbot cj lawby 
+base.cr.sendSetZoneMsg(13300) - da office lawby
+base.cr.sendSetZoneMsg(11200) - factory sellbot hq lobby
+base.cr.sendSetZoneMsg(11500)- factory sellbot hq
+base.cr.sendSetZoneMsg(459349) cashbot cfo lobby
+base.cr.sendSetZoneMsg(10100) bossbot ceo lobby	
+base.cr.sendSetZoneMsg(66666) - no where 
+base.cr.sendSetZoneMsg(??????)  shift and f1 copy every thing besides last to make to dig for last to 
+base.cr.sendSetZoneMsg(5300) 
+base.cr.sendSetZoneMsg(3000)
+base.cr.sendSetZoneMsg(4000)
+base.cr.sendSetZoneMsg(5000)
+base.cr.sendSetZoneMsg(8000)
+base.cr.sendSetZoneMsg(11500)  
+base.cr.sendSetZoneMsg(10000)
+base.cr.sendSetZoneMsg(13100)
+base.cr.sendSetZoneMsg(9000)
+base.cr.sendSetZoneMsg(9504) - ddl gag shop
+base.cr.sendSetZoneMsg(2519) - ttc gag shop
+base.cr.sendSetZoneMsg(1507) - dock gag shop
+base.cr.sendSetZoneMsg(9504) - ddl gag shop 
+base.cr.sendSetZoneMsg(2519) - ttc
+base.cr.sendSetZoneMsg(11100) sellbot lobby
+base.cr.sendSetZoneMsg(12100) cashbot lobby
+base.cr.sendSetZoneMsg(10100) bossbot lobby
+base.cr.sendSetZoneMsg(13100) lawbot lobby
+------------------------------------Member Ship-----------------------------
+import toontown
+def new():
+ return True
+def new2(*a,**k):
+ return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+--------------------------------------------SBHQ BAT------------------------------------------
+base.localAvatar.collisionsOff()     
+base.localAvatar.setXYZH(0.464, -300.716, 18.521, -717.875)
+base.localAvatar.setHpr(0,0,180)
+base.cr.sendSetZoneMsg(7000) 
+base.localAvatar.b_setAnimState('teleport')
+base.cr.sendSetZoneMsg(11000)    
+--------------------Tp Any Where ---------------------
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+base.localAvatar.book.pages[1].showPop = 1 
+----------------Scare Crow Upside Down------------Use In TTC Only 
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.b_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+base.localAvatar.setHpr(0,0,550)
+-------------------Scare Crow Normal--------------Use In TTC Only
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.b_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+--------------Flip In Circles--------------------------
+from direct.interval.IntervalGlobal import *
+def start():
+    base.localAvatar.setZ(7)
+def anim1():
+    base.localAvatar.b_setAnimState(('jumpLand'))
+    base.localAvatar.collisionsOff()
+def anim2():
+    base.localAvatar.b_setAnimState('ScientistEmcee')
+def flip1():
+    base.localAvatar.setP(90)
+def flip2():
+    base.localAvatar.setP(180)
+def flip3():
+    base.localAvatar.setP(270)
+def flip4():
+    base.localAvatar.setP(360)
+def end():
+    base.localAvatar.collisionsOn()
+def onTime():
+  seq = Sequence()
+  seq.append(Func(anim1))
+  seq.append(Wait(.45))
+  seq.append(Func(anim2))
+  seq.append(Func(start))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Func(end))
+  seq.start()
+onTime() 
+----------------------------flip-----------------------------------
+from direct.interval.IntervalGlobal import *
+def start():
+    base.localAvatar.setZ(7)
+def anim1():
+    base.localAvatar.b_setAnimState(('jumpLand'))
+    base.localAvatar.collisionsOff()
+def anim2():
+    base.localAvatar.b_setAnimState('ScientistEmcee')
+def flip1():
+    base.localAvatar.setH(90)
+def flip2():
+    base.localAvatar.setH(180)
+def flip3():
+    base.localAvatar.setH(270)
+def flip4():
+    base.localAvatar.setH(360)
+def end():
+    base.localAvatar.collisionsOn()
+def onTime():
+  seq = Sequence()
+  seq.append(Func(anim1))
+  seq.append(Wait(.45))
+  seq.append(Func(anim2))
+  seq.append(Func(start))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Func(end))
+  seq.start()
+onTime() 
+-------------Camara Codes--------------------------------------------
+base.useTrackball()
+base.useDrive()render.clearFog()
+base.localAvatar.pageDown()
+base.localAvatar.pageUp()
+base.localAvatar.setBillboardPointEye()
+base.localAvatar.setBillboardPointWorld() 
+base.camLens.setNear(9) lens.setFov(100, 20)actor = 
+base.localAvatar actor.removeNode() 
+base.camLens.setFov(150) 
+base.camLens.setFar(2000) 
+base.localAvatar.printCamPos() 
+base.localAvatar.nextCameraPos(0) 
+base.localAvatar.clearBillboard() 
+base.localAvatar.lookAt(1,1,1)
+base.camLens.setFov(150000000000000000000) Upside Down View 
+base.camLens.setFov(1500000000000000)      Normal
+------------------Scale Codes-----------------------------------------------
+base.localAvatar.setScale(1,2,5)
+base.localAvatar.setScale(3,3,3)
+base.localAvatar.setScale(2,2,2)
+base.localAvatar.setScale(1,2,2)
+base.localAvatar.setScale(.6,.6,.6)
+base.localAvatar.setScale(1)
+----------------BillBoards---------------------------------------------
+base.localAvatar.setBillboardAxis(10)
+base.localAvatar.setBillboardAxis(5)
+base.localAvatar.clearBillboard()
+----------------Options Codes-------------------------------------------
+base.disableAllAudio() 
+base.enableAllAudio() 
+base.enableMusic(False) 
+base.enableSoundEffects(True)
+-----------------Toon Id/Tp To Some Won--------------------------------
+base.localAvatar.setGhostMode(2)
+messenger.send('gotoAvatar', [245681021, 'Meownaise', 1])
+------------------------Get Id----------------------------------
+messenger.send('nameTagShowAvId')
+----------------------------bot-----------------------------
+---------------------My Bot 1----------------------------------------------
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(0,0)
+    base.localAvatar.b_setSCSinging(50202)
+def part2():
+    base.talkAssistant.sendOpenTalk('YOU FAIL')
+    base.localAvatar.b_setEmoteState(23,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('YES YOU ALL DO')
+    base.localAvatar.b_setEmoteState(22,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('WE ARE TEAM PURPLE')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('AND YOU CANT STOP US')
+    base.localAvatar.b_setEmoteState(22,1)
+def part6():
+     base.talkAssistant.sendOpenTalk('PEACE!')
+     base.localAvatar.b_setAnimState('TeleportOut')
+def part7():
+     base.talkAssistant.sendOpenTalk('IM BACK!!!')
+     base.localAvatar.b_setAnimState('TeleportIn')
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(3))
+  seq.append(Func(part2))
+  seq.append(Wait(3))
+  seq.append(Func(part3))
+  seq.append(Wait(3))
+  seq.append(Func(part4))
+  seq.append(Wait(3))
+  seq.append(Func(part5))
+  seq.append(Wait(3))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()
+-------------------Force Friend List Code?------------------------------------
+base.localAvatar.setFriendsList(285638390)
+
+base.localAvatar.setFriendsList([id, id, id, id])
+
+base.localAvatar.setFriendsList([])
+-------------------Flippy Is Alive!-----------------------------------
+base.localAvatar.setWhisperSCFrom(415100056, 4)
+------------------Cog Suit Silent----------------------------------------
+base.localAvatar.setCogIndex(0) 0-3
+base.localAvatar.takeOffSuit()
+---------------Cog Summon--------------------------------------------
+base.localAvatar.setCogSummonsEarned([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) 
+1 = summons cog
+2 = building
+3 = invasion
+--------------Cog Level-----------------------------------------
+base.localAvatar.setCogLevels([49, 49, 49, 49])
+--------------Cog Parts-------------------------------------------
+base.localAvatar.setCogParts([0, 0, 56447, 56411])
+---------------Cog Battle-------------------------------------------------
+base.localAvatar.setHP(1)                 (cog battle)
+base.localAvatar.setBrushOff(10)         (cog battle)
+base.localAvatar.setLevelDist(10)          (cog battle)
+base.localAvatar.setSkelecog(1)            (cog battle)
+base.localAvatar.setInteractivePropTrackBonus(100)
+base.localAvatar.rewardDone()      (cog battle)
+base.localAvatar.movieDone()        (cog battle)
+base.localAvatar.timeout()         (cog battle)
+base.localAvatar.denyLocalToonJoin()          (cog battle)
+--------------Pink Slips-------------------------------------
+base.localAvatar.setPinkSlips((10000)) - pink slips change 1 - 10000
+-------------Closet Tickets/Clothes----------------------------------------------
+base.localAvatar.setTickets(800) - ticket code change 800 - 100000
+base.localAvatar.setMaxClothes(500)
+--------------------Ghost Mode--------------------------------------
+base.localAvatar.setGhostMode(2) - enable Hold Ctrl and Left Or Right To Slide That Way
+base.localAvatar.setGhostMode(0) - Disable
+-----------------Emotes Access-------------------------------------------
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]) - all emotes
+---------------------Change Name Silent-----------------------------------------
+base.localAvatar.setName(('put the name here')) = change name
+---------------------------Bank Money -----------------------------------------
+base.localAvatar.setBankMoney(10000) - jelly bean
+base.localAvatar.setMaxBankMoney(10000) - another jelly bean
+base.localAvatar.setMaxMoney(800) [thats your max gag money]
+base.localAvatar.setMoney(800) [thats making your gag money to 800]
+------------Max Laff--------------------------------------
+base.localAvatar.maxHp = 137 max laff
+
+Have 137 laff, have to do both codes to work-
+base.localAvatar.setMaxHp(137)
+base.localAvatar.setHp(137)
+
+base.localAvatar.toonUp(<toon yourself up by>)
+-------------------Change Name Silent----------------------
+base.localAvatar.setName(('put the name here'))
+---------------Gags--------------------
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setExperience('999999999999')
+base.localAvatar.setMaxCarry(9999)
+base.localAvatar.setTrackBonusLevel([7,7,7,7,7,7,7])
+------------FunStuff/Animatians-----------------------------------------  
+base.localAvatar.setCheesyEffect(0, 0, 0) Change First Number 0-14 For Big Head Tall ETC 
+base.localAvatar.numPies = 99
+---------------Cog Suit---------------------
+1  for chqd in 
+base.cr.doFindAll("CogHQDoor"):
+chqd.rejectEnter = chqd.avatarEnter(base.localAvatar.doId)
+chqd.setOtherZoneIdAndDoId(11100,113592520)
+GagShopWindow= (-83.642, -90.233, 25.336, -728.746)
+
+2  base.localAvatar.setCogIndex(2) non live cog suit
+base.localAvatar.b_setAnimState(('CogIndex')) scare crow
+2513 Toon hall zone for cog suit
+----------------Change Toon Color --------------------------------------------------
+base.localAvatar.setColor(0,0,0,0,0)
+-----------------Chat/TT Whisper/Avater Chat---------------------------------------------------------
+base.talkAssistant.sendOpenTalk('fill me with alot of words ')
+base.localAvatar.setNearbyAvatarChat('HEY!')
+base.localAvatar.setSystemMessage(0,'Put text for a whisper here.')  
+base.talkAssistant.sendWhisperTalk('LOL ' * 50, 285668882)  
+---------------Cog Suit Merits ----------
+base.cr.sendSetZoneMsg(9504)
+base.localAvatar.cogMerits=[40, 80, 120, 200] 
+-------------------Trick Or Treat Target???-------------------------------------------------------
+base.localAvatar.trickOrTreatTargetMet(20)
+messenger.send('leavingRace')
+-------------------Name Tag On Feet Server----------------------------------------------------------------------
+base.localAvatar.setHeight(200)
+base.localAvatar.setHeight(0)
+--------------Sounds------------------------------------------------------------------------------------
+base.localAvatar.playSplashEffect(1, 0, 0) Water Splash 
+--------------Toontask 1-4------------------------------------------------------------
+base.localAvatar.setQuestCarryLimit(1)
+base.localAvatar.setQuestCarryLimit(2)
+base.localAvatar.setQuestCarryLimit(3)
+base.localAvatar.setQuestCarryLimit(4)
+---------------------------------Gardening/Games/Pet-------------------------------------
+messenger.send('gardenGame')
+base.localAvatar.setShovelSkill(30)
+base.localAvatar.promoteShovel(3) 
+base.localAvatar.promoteWateringCan(3)
+ase.localAvatar.setWateringCanSkill(30)
+base.localAvatar.setGardenStarted()
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6]) 
+base.localAvatar.setMinigameZone()
+------------------------------	Animate State-------------------------------------------------------
+base.localAvatar.b_setAnimState(('Words go here'))
+-----------------------------------------Flip----------------------------------------------------
+Flip 1-base.localAvatar.setHpr(0,0,90)
+Flip 2-base.localAvatar.setHpr(0,0,135)
+Flip 3-base.localAvatar.setHpr(0,0,180)
+flip 4-base.localAvatar.setHpr(0,0,225)
+flip 5-base.localAvatar.setHpr(0,0,270)
+flip 6-base.localAvatar.setHpr(0,0,315)
+flip 7-base.localAvatar.setHpr(0,0,360)
+---------------------------------------Toon Modification-------------------------------
+Be the next Hulk/Tiny Tim! [Most likely client-side] [This can cause graphics problems]
+base.localAvatar.setScale(<size you want to be, 1 is normal.>)
+
+Change Toon Style [This could probably be used to modify ANYTHING about your Toon]:
+base.localAVatar.setStyle(<?>)
+
+How tall are you? Change it all with this function:
+base.localAvatar.setHeight(<Default value varies with character>)
+
+---------------------------------------Pie Type??????-----------------------------------
+
+base.localAvatar.setEvidenceThrow = 0
+
+base.localAvatar.setRefillThrow()
+
+base.localAvatar.setPieType(7)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = true
+
+base.localAvatar.setPieType(-3)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = false
+
+base.localAvatar.setPieType(-7)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = false
+
+base.localAvatar.setPieType(0, 1, 2, 3, 4, or 5)
+base.localAvatar.setNumPies(20, 25, 30, 35, 40, or 80)
+base.localAvatar.ThrowGagButtonMaxed = false
+
+base.localAvatar.setPieType(7)
+base.localAvatar.setNumPies(12000)
+base.localAvatar.ThrowGagButtonMaxed = true
+
+base.localAvatar.setPieType(7)
+
+base.localAvatar.setPieType(5)
+--------------------------------------Super Man ----------------------------------
+base.localAvatar.collisionsOff() 
+base.localAvatar.setPos(0,0,5)
+base.localAvatar.setHpr (0,270,0)
+------------------------------------Super Speed-------------------
+base.localAvatar.physControls.avatarControlForwardSpeed = 100 		
+----------------------------------Super Jump-----------------------------
+base.localAvatar.physControls.avatarControlJumpForce = 100 
+----------------------------------Rotate Speed------------------------------
+base.localAvatar.physControls.avatarControlRotateSpeed=1000
+---------------------------------Reverse Speed--------------------
+base.localAvatar.physControls.avatarControlReverseSpeed=75
+-------------------Rocket Ship----------------------------------------------------
+localAvatar.setHpr(0,50,0)
+---------------DC Ip--------------------------------------------------------------
+base.Disconnect('Enter.Ip.Addresshere')
+base.Disconnect('20.20.20')322374messenger.send('<<name/toonid>>')
+------------------------------some cool stuf-------------------------
+messenger.send('rejectTutorial')
+messenger.send('enterStickerBook')
+messenger.send('openFriendsList')
+messenger.send('kickToPlayground', [1])
+base.localAvatar.setNametagStyle(11)
+base.localAvatar.setCogMerits([100,60,40,20])
+base.localAvatar.setMaxClothes(5000)
+base.localAvatar.setSleepAutoReply(0)
+base.localAvatar.setMaxNPCFriends(5000)
+base.localAvatar.playSplashEffect(0,0,0)
+base.localAvatar.setMaxFishTank(500)
+base.localAvatar.setMaxFlowerBasket(500)
+base.localAvatar.trickOrTreatTargetMet(100)
+base.localAvatar.winterCarolingTargetMet(100)
+base.localAvatar.hitBoss(1000)
+base.localAvatar.destroyGoon()
+base.localAvatar.setVelocity(0)
+base.localAvatar.setAffection(1))
+base.localAvatar.setPlayfullness(1))
+base.localAvatar.setSCResistance(1)
+base.localAvatar.physControls.avatarControlReverseSpeed = 50
+base.localAvatar.b_setToonWillLandInWater(int32/100)
+base.localAvatar.setInventory('49000')
+base.localAvatar.setMaxCarry('49000')
+base.localAvatar.setCogParts([20, 80, 56447, 56411])
+base.localAvatar.cogMerits=([40, 80, 120, 200])
+base.localAvatar.promoteShovel(3)
+base.localAvatar.promoteWateringCan(3)
+base.localAvatar.setWateringCanSkill(9999)
+base.localAvatar.setShovelSkill(9999)
+base.localAvatar.pageDown()
+base.localAvatar.pageUp()
+render.clearFog()
+base.localAvatar.setBillboardPointEye()
+base.localAvatar.setBillboardPointWorld()
+base.camLens.setNear(9) 
+base.camLens.setFov(100, 20)
+base.camLens.setFov(150)
+base.camLens.setFar(2000)
+base.localAvatar.printCamPos()
+base.localAvatar.nextCameraPos(0)
+base.localAvatar.clearBillboard()
+base.localAvatar.lookAt(1,1,1)
+base.disableAllAudio()
+base.enableAllAudio()
+base.enableMusic(False)
+base.enableSoundEffects(True)
+base.camLens.setNear(9)
+base.localAvatar.setBillboardAxis()
+base.localAvatar.setEmoteState(22,1)
+base.localAvatar.setWhisperSCCustomFrom(NPC's ID, 90)
+base.localAvatar.getName(285869846)
+base.localAvatar.receiveAcceptGetName('Flippy')
+base.localAvatar.addName(285869846, 'Flippy')
+base.localAvatar.receiveAcceptAddName(285869846)
+lighting = AmbientLight('lighting')
+lighting.setColor(VBase4(.5, .5, .5, 5))
+linp = render.attachNewNode(lighting)
+render.setLight(linp)
+sky = loader.loadModel("phase_8/models/props/DL_sky.bam")
+sky.reparentTo(render)
+sky.setPos(9, -1, 4)
+sky.setHpr(0,0,0)
+sky.setScale(40)
+messenger.send('periodTimerExpired')
+Michael Browner key is :0711-8756-7426-2713
+---------------------Black cat client sided------------------------
+
+base.localAvatar.findAllMatches('**/head').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/head-front').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/neck').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/arms').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/feet').setColor(0.25,0.25,0.3)
+base.localAvatar.findAllMatches('**/legs').setColor(0.25,0.25,0.3)
+---------------------------tye die gloves----------------------------------
+gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+from toontown.shtiker.MapPage import MapPage
+gohome = MapPage()
+gohome.goHome()
+
+base.oobe()
+
+base.localAvatar.setColorScale(3)
+
+
+messenger.send('rejectTutorial')
+
+messenger.send([base.cr,sendSetZoneMsg(7000)], [base.localAvatar.doId, '284475854', 1])
+
+base.localAvatar.stunToon()
+
+base.localAvatar.takeOffSuit()
+
+base.localAvatar.movieDone() 
+
+base.localAvatar.setLevelDist(10)
+
+base.localAvatar.setMinigameZone()
+
+base.localAvatar.setNearbyAvatarChat('HEY!')
+
+base.localAvatar.rewardDone() 
+
+base.localAvatar.timeout() 
+
+base.localAvatar.denyLocalToonJoin()
+
+base.localAvatar.setAwardNotify(1)
+
+
+base.localAvatar.setSpeedChatStyleIndex(15)
+--------------------toon tutorial zone!!!----------------------------------------
+
+base.cr.sendSetZoneMsg(61361)
+
+Pie Throw Server Sided
+
+
+1. Go in vp
+2. On pie round grab some pies and put this code in: base.cr.sendSetZoneMsg(2513)
+3. When at the Toon Hall open your book and teleport to ToonTownCentral
+4. When at ToonTownCentral teleport to a new District
+5. Now go back to the District you were in
+
+
+Free SOS (2 SOS Cards)
+
+1. Go in vp
+2. On pie round grab some pies and put this code in: base.cr.sendSetZoneMsg(2513)
+3. When at the Toon Hall press Shift + F1.
+4. Skip down to the part that says Zone
+5. Now enter it the zone in the () marks: base.cr.sendSetZoneMsg()
+6. Now go back and enter the code: base.cr.sendSetZoneMsg(2513)
+7. Wait till your toon starts dancing and go back to the vp zone.
+8. You will now have 2 SOS Cards instead of one.
+
+
+Tranformastion :)
+
+
+base.localAvatar.setCheesyEffect(14, 0, 0) 
+
+base.localAvatar.setCogIndex(2) 
+
+base.localAvatar.setCogIndex(-1)
+
+base.localAvatar.setGhostMode(2) 
+
+base.localAvatar.setName('Name')
+Gardening
+
+base.localAvatar.setShovelSkill(30) 
+
+base.localAvatar.setWateringCanSkill(50)
+
+base.localAvatar.promoteWateringCan(3)
+
+base.localAvatar.promoteShovel(3)
+
+
+Other
+
+base.localAvatar.setSystemMessage(1,'(NAME): (TEXT)')
+
+Invisible Book:
+
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.b_setAnimState('ScientistEmcee')
+
+base.localAvatar.b_setEmoteState(1,0) 
+
+---------------Tie Die Your Slef!--------------------------------------------------
+base.localAvatar.setColor(3.30,0.30,0.3)
+
+neck = base.localAvatar.findAllMatches('**/neck')
+
+neck.setColor(0,0,0)
+
+feet = loader.loadTexture("phase_3/maps/Humanist.rgb")
+
+base.localAvatar.findAllMatches('**/feet').setTexture(feet, 1)
+
+legs = loader.loadTexture("phase_3/maps/Humanist.rgb")
+
+base.localAvatar.findAllMatches('**/legs').setTexture(legs, 1)
+
+arms = loader.loadTexture("phase_3/maps/Humanist.rgb")
+
+base.localAvatar.findAllMatches('**/arms').setTexture(arms, 1)
+
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25)
+
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25)
+
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistB.jpg")
+
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts, 1)
+
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts, 1)
+
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 1)
+
+mouth = base.localAvatar.findAllMatches('**/muzzle-short-neutral')
+
+mouthtext = loader.loadTexture("phase_3/maps/Humanist.rgb")
+
+mouth.setTexture(mouthtext, 1)
+
+mole3 = loader.loadModel('phase_12/models/bossbotHQ/mole_hit.bam')
+mole3.reparentTo(render) 
+mole3.setPos(75,530,194) 
+mole3.setHpr(0,0,0) 
+mole3.setScale(4)
+
+kart1 = loader.loadModel('phase_6/models/golf/golf_cart3.bam')
+kart1.reparentTo(render) 
+kart1.setPos(56,524,196) 
+kart1.setHpr(180,0,0) 
+kart1.setScale(2)
+
+st1 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st1.reparentTo(render) 
+st1.setPos(-539,25,225) 
+st1.setHpr(0,0,0) 
+st1.setScale(2)
+
+st2 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st2.reparentTo(render) 
+st2.setPos(-555,51,225) 
+st2.setHpr(20,0,0) 
+st2.setScale(2)
+
+st3 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st3.reparentTo(render) 
+st3.setPos(-570,75,225) 
+st3.setHpr(20,0,0) 
+st3.setScale(2)
+
+st4 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st4.reparentTo(render) 
+st4.setPos(-585,100,225) 
+st4.setHpr(20,0,0) 
+st4.setScale(2)
+
+st5 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st5.reparentTo(render) 
+st5.setPos(-595,125,230) 
+st5.setHpr(0,0,0) 
+st5.setScale(2)
+
+st6 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st6.reparentTo(render) 
+st6.setPos(-605,145,235) 
+st6.setHpr(0,0,0) 
+st6.setScale(2)
+
+st7 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st7.reparentTo(render) 
+st7.setPos(-615,165,240) 
+st7.setHpr(0,0,0) 
+st7.setScale(2)
+
+st8 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st8.reparentTo(render) 
+st8.setPos(-625,185,245) 
+st8.setHpr(0,0,0) 
+st8.setScale(2)
+
+st9 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st9.reparentTo(render) 
+st9.setPos(-635,205,250) 
+st9.setHpr(0,0,0) 
+st9.setScale(2)
+
+st10 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st10.reparentTo(render) 
+st10.setPos(-645,225,255) 
+st10.setHpr(0,0,0) 
+st10.setScale(2)
+
+st11 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st11.reparentTo(render) 
+st11.setPos(-655,245,260) 
+st11.setHpr(0,0,0) 
+st11.setScale(2)
+
+st12 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+st12.reparentTo(render) 
+st12.setPos(-665,265,265) 
+st12.setHpr(0,0,0) 
+st12.setScale(2)
+
+nc = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam")
+nc.reparentTo(render)
+nc.setPos(-728,338,265)
+nc.setHpr(40,0,0)
+nc.setScale(1)
+
+g1 = loader.loadModel("phase_4/models/modules/gazebo.bam")
+g1.reparentTo(render)
+g1.setPos(-732,316,265)
+g1.setHpr(120,0,0)
+g1.setScale(1)
+
+g2 = loader.loadModel("phase_4/models/modules/gazebo.bam")
+g2.reparentTo(render)
+g2.setPos(-707,339,265)
+g2.setHpr(140,0,0)
+g2.setScale(1)
+
+tb1 = loader.loadModel("phase_5.5/models/estate/trolley_bed.bam")
+tb1.reparentTo(render)
+tb1.setPos(-687,358,265)
+tb1.setHpr(40,0,0)
+tb1.setScale(2)
+
+tb2 = loader.loadModel("phase_5.5/models/estate/popcornCart.bam")
+tb2.reparentTo(render)
+tb2.setPos(-669,336,265)
+tb2.setHpr(127,0,0)
+tb2.setScale(4)
+
+tb3 = loader.loadModel("phase_5.5/models/estate/Organ.bam")
+tb3.reparentTo(render)
+tb3.setPos(-655,321,265)
+tb3.setHpr(310,0,0)
+tb3.setScale(2)
+
+tb4 = loader.loadModel("phase_5.5/models/estate/BanannaSplitShower.bam")
+tb4.reparentTo(render)
+tb4.setPos(-730,263,265)
+tb4.setHpr(310,0,0)
+tb4.setScale(4)
+
+tb5 = loader.loadModel("phase_5.5/models/estate/cabinetRwood.bam")
+tb5.reparentTo(render)
+tb5.setPos(-749,290,265)
+tb5.setHpr(135,0,0)
+tb5.setScale(4)
+
+dance1 = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dance1.reparentTo(render)
+dance1.setPos(-698.026,302.033,265.025)
+dance1.setHpr(120,0,0)
+dance1.setScale(1)
+
+floor1 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+floor1.reparentTo(render) 
+floor1.setPos(-751,366,270) 
+floor1.setHpr(20,0,0) 
+floor1.setScale(3)
+
+catch3 = loader.loadModel('phase_13/models/parties/partyCatchTree')
+catch3.reparentTo(render) 
+catch3.setPos(-913,563,265) 
+catch3.setHpr(130,0,0) 
+catch3.setScale(1)
+
+cogpin1 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin1.reparentTo(render)
+cogpin1.loop('idle')
+cogpin1.setPos(-751,366,270)
+cogpin1.setHpr(40,0,0) 
+cogpin1.setScale(2)
+
+cogpinr1 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+cogpinr1.reparentTo(render)
+cogpinr1.setPos(-751,366,270)
+cogpinr1.setHpr(40,0,0) 
+cogpinr1.setScale(.5)
+
+cogpin2 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin2.reparentTo(render)
+cogpin2.loop('idle')
+cogpin2.setPos(-752,349,270)
+cogpin2.setHpr(40,0,0) 
+cogpin2.setScale(1)
+
+cogpin3 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin3.reparentTo(render)
+cogpin3.loop('idle')
+cogpin3.setPos(-746,353,270)
+cogpin3.setHpr(40,0,0) 
+cogpin3.setScale(1)
+
+cogpin4 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin4.reparentTo(render)
+cogpin4.loop('idle')
+cogpin4.setPos(-739,360,270)
+cogpin4.setHpr(40,0,0) 
+cogpin4.setScale(1)
+
+cogpin5 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin5.reparentTo(render)
+cogpin5.loop('idle')
+cogpin5.setPos(-734,363,270)
+cogpin5.setHpr(40,0,0) 
+cogpin5.setScale(1)
+
+cogpin6 = Actor("phase_13/models/parties/tt_m_ara_pty_cakeTower.bam")
+cogpin6.reparentTo(render)
+cogpin6.setPos(-760,376,270)
+cogpin6.setHpr(40,0,0) 
+cogpin6.setScale(3)
+
+game1 = loader.loadModel("phase_13/models/parties/cogPieArena_model.bam")
+game1.reparentTo(render)
+game1.setPos(-861,506,265)
+game1.setHpr(130,0,0) 
+game1.setScale(1)
+
+
+
+max = Actor({"head":"phase_3/models/char/dogSS_Shorts-head-1000.bam", \
+
+
+"torso":"phase_3/models/char/dogMM_Shorts-torso-1000.bam", \
+
+
+"legs":"phase_3/models/char/dogSS_Shorts-legs-1000.bam"},
+
+# dictionary of anim dictionaries
+
+{"head":{"walk":"phase_5/models/char/dogSS_Shorts-head-happy-dance.bam", \
+
+"run":"phase_5/models/char/dogSS_Shorts-head-sad-neutral.bam"}, \
+
+"torso":{"walk":"phase_5/models/char/dogMM_Shorts-torso-happy-dance.bam", \
+
+"run":"phase_5/models/char/dogSS_Shorts-torso-sad-neutral.bam"}, \
+
+"legs":{"walk":"phase_5/models/char/dogSS_Shorts-legs-happy-dance.bam", \
+
+"run":"phase_5/models/char/dogSS_Shorts-legs-sad-neutral.bam"} \
+
+})
+
+
+
+feet = max.find('**/feet')
+
+feettext = loader.loadTexture("phase_3/maps/Humanist.rgb")
+
+feet.setTexture(feettext, 1)
+
+max.attach("head", "torso", "joint_head")
+
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistB.jpg")
+
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+
+max.find('**/torso-top').setTexture(shirts, 1)
+
+max.find('**/torso-bot').setTexture(shorts, 1)
+
+max.find('**/torso-bot-cap').setTexture(shorts, 1)
+
+max.find('**/sleeves').setTexture(sleve, 1)
+
+max.attach("torso", "legs", "joint_hips")
+
+gloves = max.find('**/hands')
+
+glovestext = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+
+gloves.setTexture(glovestext, 1)
+
+max.loop("walk")
+
+max.reparentTo(render)
+
+muz=max.find('**/joint_toHead')
+
+nose = max.find('**/nose')
+
+mouth = loader.loadModel("phase_3/models/char/dogMM_Shorts-headMuzzles-1000.bam")
+
+Fireball = mouth.find('**/muzzle-short-laugh')
+
+Fireball.reparentTo(muz)
+
+nose.reparentTo(Fireball)
+
+nose.setY(-0.35)
+
+head = max.find('**/head')
+
+head.setColor(0.25,0.25,0.3)
+
+headf = max.find('**/head-front')
+
+headf.setColor(0.25,0.25,0.3)
+
+neck = max.find('**/neck')
+
+neck.setColor(0.25,0.25,0.3)
+
+max.find('**/muzzle').hide()
+
+max.find('**/arms').setColor(0.25,0.25,0.3)
+
+max.find('**/legs').setColor(0.25,0.25,0.3)
+
+max.find('**/feet').setColor(0.25,0.25,0.3)
+
+max.find('**/torso-bot').setColor(255,255,255)
+
+max.setPos(-698,302,265.5)
+
+max.setHpr(200,0,0)
+
+max.setScale(1)
+
+game2 = loader.loadModel("phase_6/models/golf/findfour_game.bam")
+game2.reparentTo(render)
+game2.setPos(-807,483,265)
+game2.setHpr(190,0,0) 
+game2.setScale(10)
+
+game3 = loader.loadModel("phase_6/models/golf/findfour_game.bam")
+game3.reparentTo(render)
+game3.setPos(-846,445,265)
+game3.setHpr(70,0,0) 
+game3.setScale(10)
+
+game4 = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+game4.reparentTo(render)
+game4.setPos(-795,427,265)
+game4.setHpr(0,0,0) 
+game4.setScale(2)
+
+l = loader.loadModel("phase_4/models/modules/library.bam")
+l.reparentTo(render)
+l.setPos(-724,507,265)
+l.setHpr(310,0,0)
+l.setScale(1)
+
+gs = loader.loadModel("phase_4/models/modules/gagShop_TT.bam")
+gs.reparentTo(render)
+gs.setPos(-738,514,265)
+gs.setHpr(130,0,0)
+gs.setScale(1)
+
+mickeyg = loader.loadModel('phase_3.5/models/props/glow.bam')
+mickeyg.reparentTo(render) 
+mickeyg.setPos(-507.867,-59.050,225.995) 
+mickeyg.setHpr(90,0,0) 
+mickeyg.setScale(10.7)
+
+minnieg = loader.loadModel('phase_3.5/models/props/glow.bam')
+minnieg.reparentTo(render) 
+minnieg.setPos(-486.485,-51.431,226.075) 
+minnieg.setHpr(90,0,0) 
+minnieg.setScale(10.7)
+
+dd2g = loader.loadModel('phase_3.5/models/props/glow.bam')
+dd2g.reparentTo(render) 
+dd2g.setPos(-486.497,-7.691,226.076) 
+dd2g.setHpr(90,0,0) 
+dd2g.setScale(10.7)
+
+dd1g = loader.loadModel('phase_3.5/models/props/glow.bam')
+dd1g.reparentTo(render)
+dd1g.setPos(-507.929,3.536,226.051) 
+dd1g.setHpr(90,0,0) 
+dd1g.setScale(10.7)
+
+chip1g = loader.loadModel('phase_3.5/models/props/glow.bam')
+chip1g.reparentTo(render)
+chip1g.setPos(-530.552,-4.198,226.057)
+chip1g.setHpr(90,0,0) 
+chip1g.setScale(6.7)
+
+dale1g = loader.loadModel('phase_3.5/models/props/glow.bam')
+dale1g.reparentTo(render)
+dale1g.setPos(-530.552,-52.467,226.069)
+dale1g.setHpr(90,0,0) 
+dale1g.setScale(6.7)
+
+sh = loader.loadModel("phase_4/models/modules/school_house.bam")
+sh.reparentTo(render)
+sh.setPos(-765,554,265)
+sh.setHpr(315,0,0)
+sh.setScale(1)
+
+ts = loader.loadModel("phase_4/models/modules/trolley_station_TT.bam")
+ts.reparentTo(render)
+ts.setPos(-805,570,265)
+ts.setHpr(315,0,0)
+ts.setScale(1)
+
+
+---------------Victory Back Words Try Use Another Code Too--------------------------
+Click 1
+Normal base.accept("1", base.localAvatar.b_setAnimState, ['victory', -1])
+Speed base.accept("1", base.localAvatar.b_setAnimState, ['victory', -3])
+Slow base.accept("1", base.localAvatar.b_setAnimState, ['victory', -.1])
+Auto 
+messenger.send([base.localAvatar.b_setAnimState('victory', -1)])
+
+
+NEW CODES-----------------------------------------------
+messenger.send('leavingRace')
+
+    base.localAvatar.setWhisperSCCustomFrom(NPC's ID, 90)
+    base.localAvatar.getName(285869846)
+    base.localAvatar.receiveAcceptGetName('Flippy')
+    base.localAvatar.addName(285869846, 'Flippy')
+    base.localAvatar.receiveAcceptAddName(285869846)
+
+
+MAN SKIRT STEAL
+
+closetn = base.cr.doFindAll("closet")
+for closetn in base.cr.doFindAll("closet"):
+ messenger.send("purchaseDone-" + str(closetn.doId))    
+
+
+TURBO CODE
+ttv = base.cr.doFindAll("Vehicle") 
+for ttv in base.cr.doFindAll("Vehicle"):ttv.setTurbo(9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
+base.accept("1", ttv.startTurbo, []) 
+
+
+FAST CAR
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+    ttvid = ttv.doId
+ttv = base.cr.doFindAll("vehicle-" + str(ttvid))
+for ttv in base.cr.doFindAll("vehicle-" + str(ttvid)):
+    ttv.windResistance.setAmplitude(-10)
+
+
+
+base.localAvatar.physControls.avatarControlJumpForce = .1
+base.localAvatar.physControls.setGravity(.00001) 
+
+
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.talkAssistant.sendOpenTalk('HELLO TOONTOWN!')
+    base.localAvatar.b_setAnimState('ScientistEmcee') 
+def part2():
+    base.talkAssistant.sendOpenTalk('YOU LOSE')
+    base.localAvatar.d_squish(2)
+def part3():
+    base.talkAssistant.sendOpenTalk('THATS RIGHT')
+    base.localAvatar.d_squish(2)
+def part4():
+    base.talkAssistant.sendOpenTalk('We DESTROY!')
+    base.localAvatar.d_squish(2)
+def part5():
+    base.talkAssistant.sendOpenTalk('We are SUPER EPIC')
+    base.localAvatar.d_squish(2)
+def part6():
+    base.talkAssistant.sendOpenTalk('We Are The Chain Clan!')
+def part7():    
+    base.talkAssistant.sendOpenTalk('WE STICK TOGETHER')
+def part8():    
+    base.talkAssistant.sendOpenTalk('                                                                                                                                                              We Are Chain Clan')
+    base.localAvatar.b_setEmoteState(22,1)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(4))
+  seq.append(Func(part2))
+  seq.append(Wait(2))
+  seq.append(Func(part3))
+  seq.append(Wait(2))
+  seq.append(Func(part4))
+  seq.append(Wait(2))
+  seq.append(Func(part5))
+  seq.append(Wait(2))
+  seq.append(Func(part6))
+  seq.append(Wait(2))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(part8))
+  seq.append(Wait(2))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()
+
+
+ON SCREEN
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Swimming"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('swim')
+    var = 0
+
+def setText2():
+    bk_text = "Sitting"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('SitStart')
+    var = 1
+    
+
+def setText3():
+    bk_text = "Catching"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Catching')
+    var = 1
+
+def setText4():
+    bk_text = "Golf Turning Right"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('GolfRotateRight')
+    var = 1
+
+def setText5():
+    bk_text = "Dying"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Died')
+    var = 0
+
+def setText6():
+    bk_text = "Sad"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Sad')
+    var = 1
+
+def setText7():
+    bk_text = "Pushing"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Push')
+    var = 1
+
+def setText8():
+    bk_text = "Scientist Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('ScientistPlay')
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("SWIM", "swim", "swim", "SWIM"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("SIT", "sit", "sit", "SIT"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("CATCH", "catch", "catch", "CATCH"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("GOLF ROTATE", "golf rotate", "golf rotate", "GOLF ROTATE"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("DIE", "die", "die", "DIE"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("SAD", "sad", "sad", "SAD"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("PUSH", "push", "push", "PUSH"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("R-P-C", "r-p-c", "r-p-c", "R-P-C"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+
+Anim Tracker:
+
+from direct.interval.IntervalGlobal import *
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+from direct.task import Task
+
+animStateText = OnscreenText(text='', style=1, fg=(1,1,1,1), align=TextNode.ALeft, pos=(-1.15, .8), scale=.07)
+
+def animUpdateText(str):
+    animStateText.setText(str)
+
+def gotoanimUpdateText():
+    animUpdateText(str(base.localAvatar.getCurrentAnim()))
+
+def alwaysGoAnUp():
+  seq = Sequence()
+  seq.append(Func(gotoanimUpdateText))
+  seq.append(Wait(0.1))
+  seq.append(Func(alwaysGoAnUp))
+  seq.start()
+
+alwaysGoAnUp()
+
+
+Fisherman
+base.localAvatar.physControls.avatarControlJumpForce = .1
+base.localAvatar.physControls.setGravity(.00001) 
+
+fishman = base.cr.doFindAll("Fisherman")
+for fishman in base.cr.doFindAll("Fisherman"):
+    fishman.displayTalk('Anything u want him to say')
+   
+fishman = base.cr.doFindAll("Fisherman")
+for fishman in base.cr.doFindAll("Fisherman"):
+    fishman.setAnimState('Sit u can change it')
+
+
+
+Grab
+ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+
+----------------Change Cogs------------------------------------
+cogs=base.cr.doFindAll("render")  its either render or Cog use in lawbot
+for cogs in cogs:
+ cogs.setSkelecog(True)
+ cogs.setColor(255,0.30,0.3)
+ cogs.setLevel(0.5)
+
+

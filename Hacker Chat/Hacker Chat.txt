@@ -1,0 +1,283 @@
+import toontown, otp
+
+__builtins__.__hcm__ = 0
+
+try:decodeTTSCToontaskMsg
+except:decodeTTSCToontaskMsg = toontown.speedchat.TTSCDecoders.decodeTTSCToontaskMsg
+
+try:ToonTown_sendSetZoneMsgOriginal
+except:ToonTown_sendSetZoneMsgOriginal = base.cr.sendSetZoneMsg
+
+class HackerChat:
+
+    TextToNum = {'a':750,'b':751,'c':752,'d':753,
+                 'e':754,'f':755,'g':756,'h':757,
+                 'i':758,'j':759,'k':760,'l':761,
+                 'm':762,'n':763,'o':764,'p':765,
+                 'q':766,'r':767,'s':768,'t':769,
+                 'u':770,'v':771,'w':772,'x':773,
+                 'y':774,'z':775,'A':776,'B':777,
+                 'C':778,'D':779,'E':780,'F':781,
+                 'G':782,'H':783,'I':784,'J':785,
+                 'K':786,'L':787,'M':788,'N':789,
+                 'O':790,'P':791,'Q':792,'R':793,
+                 'S':794,'T':795,'U':796,'V':797,
+                 'W':798,'X':799,'Y':800,'Z':801,
+                 '1':804,'2':805,'3':806,'4':807,
+                 '5':808,'6':809,'7':810,'8':811,
+                 '9':812,'0':813,'!':814,'@':815,
+                 '#':816,'$':817,'%':818,'^':819,
+                 '&':820,'*':821,'(':822,')':823,
+                 '-':824,'_':825,'+':826,'=':827,
+                 '~':828,'`':829,'<':830,'>':831,
+                 ',':832,'.':833,'/':834,'\\':835,
+                 '"':836,'\'':837,':':838,';':839,
+                 '[':840,'{':841,']':842,'}':843,
+                 '|':844,'\n':845,'?':846," ":847}
+
+    def clearHackerchat(self, OpenString):
+
+        exec("self.HackerchatString_" + str(OpenString) + " = ''")
+
+    def appendHackerchat(self, letter, OpenString):
+
+        exec("self.HackerchatString_" + str(OpenString) + " += letter")
+
+    def playHackerChat(self, ToonId, OpenString):
+
+        if ToonId in list(base.cr.doId2do):
+
+            CFTimeout, CFThought = 8, 2
+            CFQuicktalker, CFSpeech = 4, 1
+
+            base.localAvatar.nametag.setColorCode(3)
+
+            self.updateNametag(ToonId)
+            DistToon = base.cr.doId2do.get(ToonId)
+
+            QTColor = DistToon.nametag.getQtColor()
+
+            from pandac.PandaModules import VBase4
+            DistToon.nametag.setQtColor(VBase4(0.5, 0.5, 0.5, 1))
+
+            chatFlags = CFQuicktalker
+
+            # if self.HackerchatString_2.startswith('.'):chatFlags +=
+            exec("if self.HackerchatString_" + str(OpenString) + ".startswith('.'):chatFlags += CFThought")
+            exec("if self.HackerchatString_" + str(OpenString) + ".startswith('.') != True:chatFlags += CFSpeech + CFTimeout")
+            exec("if self.HackerchatString_" + str(OpenString) + ".startswith('.'):self.HackerchatString_" + str(OpenString) + " = self.HackerchatString_" + str(OpenString) + "[1:]")
+
+            exec("DistToon.setChatAbsolute(self.HackerchatString_" + str(OpenString) + ", chatFlags)")
+
+            DistToon.nametag.setQtColor(QTColor)
+
+    def sendServerString(self, OpenString, NumList):
+
+        for number in NumList:
+            base.localAvatar.b_setSCToontask(number, 0, OpenString, 83)
+
+    def sendServerClear(self, OpenString):
+
+        base.localAvatar.b_setSCToontask(802, 0, OpenString, 83)
+
+    def sendHackerChat(self, OpenString):
+
+        base.localAvatar.b_setSCToontask(803, base.localAvatar.doId, OpenString, 83)
+
+    def translateString(self, string):
+
+        NumList = []
+
+        for letter in string:
+            try:
+                NumList.append(self.TextToNum[letter])
+            except:
+                NumList.append(846)
+
+        return NumList
+
+    def getOpenString(self):
+
+        if self.HackerchatString_1 == '':
+            return 1
+        elif self.HackerchatString_2 == '':
+            return 2
+        elif self.HackerchatString_3 == '':
+            return 3
+        elif self.HackerchatString_4 == '':
+            return 4
+        elif self.HackerchatString_5 == '':
+            return 5
+        else: # No open strings
+            return 0
+
+    def sayHackerChat(self, string):
+
+        NumList = self.translateString(string)
+        OpenString = self.getOpenString()
+
+        if OpenString != 0:
+            self.sendServerString(OpenString, NumList)
+            self.sendHackerChat(OpenString)
+
+            self.sendServerClear(OpenString)
+
+    def updateNametag(self, ToonId):
+
+        if ToonId in list(base.cr.doId2do):
+            DistToon = base.cr.doId2do.get(ToonId)
+            DistToon.nametag.setColorCode(3)
+
+    def handleZoneSwitch(self, ZoneId, VizualZones=None):
+
+        global ToonTown_sendSetZoneMsgOriginal
+
+        ToonTown_sendSetZoneMsgOriginal(ZoneId, VizualZones)
+        self.requestUpdate()
+
+    def requestUpdate(self):
+
+        base.localAvatar.b_setSCToontask(804, 0, 6, 83)
+
+    def __init__(self):
+
+        base.cr.sendSetZoneMsg = self.handleZoneSwitch
+
+        base.localAvatar.nametag.setColorCode(3)
+
+        self.HackerchatString_1 = ''
+        self.HackerchatString_2 = ''
+        self.HackerchatString_3 = ''
+        self.HackerchatString_4 = ''
+        self.HackerchatString_5 = ''
+
+base.localAvatar.chatMgr.chatInputWhiteList.HackerChat = HackerChat()
+del HackerChat # Delete Global HackerChat Class
+
+class ChatListener:
+
+    global decodeTTSCToontaskMsg
+
+    def interpretTask(self, taskId, toNpcId, toonProgress, msgIndex):
+
+        if msgIndex == 83:
+            if toonProgress == 1:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 1)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(1)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 1)
+            elif toonProgress == 2:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 2)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(2)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 2)
+            elif toonProgress == 3:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 3)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(3)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 3)
+            elif toonProgress == 4:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 4)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(4)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 4)
+            elif toonProgress == 5:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 5)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(5)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 5)
+            elif toonProgress == 6:
+                if taskId == 804: # Request Update
+                    base.localAvatar.b_setSCToontask(805, base.localAvatar.doId, 6, 83)
+                elif taskId == 805: # Send Update
+                    try:
+                        DistToon = base.cr.doId2do.get(toNpcId)
+                        DistToon.nametag.setColorCode(3)
+
+                        if __builtins__.__hcm__ == True:
+                            base.localAvatar.b_setSCToontask(806, base.localAvatar.doId, 6, 83)
+                    except: # Couldn't set Nametag
+                        pass
+                elif taskId == 806: # Black Admin Gloves
+                    try:
+                        DistToon = base.cr.doId2do.get(toNpcId)
+                        DistHands = DistToon.findAllMatches('**/hands')
+                        DistHands.setColor(0.4, 0.4, 0.4, 1)
+                    except:
+                        pass
+            else:
+                return decodeTTSCToontaskMsg(taskId, toNpcId, toonProgress, msgIndex)
+        else:
+            return decodeTTSCToontaskMsg(taskId, toNpcId, toonProgress, msgIndex)
+
+    def __init__(self):
+
+        self.NumToText = {}
+
+        for item in base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.TextToNum.items():
+            self.NumToText[item[1]] = item[0]
+
+        toontown.speedchat.TTSCDecoders.decodeTTSCToontaskMsg = self.interpretTask
+
+base.localAvatar.chatMgr.chatInputWhiteList.ChatListener = ChatListener()
+del ChatListener # Delete Global ChatListener Class
+
+class ChatHook:
+
+    from toontown.chat.TTTalkAssistant import TTTalkAssistant
+    _sendOpenTalk = TTTalkAssistant.sendOpenTalk
+
+    from toontown.chat.TTWhiteList import TTWhiteList
+    _isPrefix = TTWhiteList.isPrefix
+    _isWord = TTWhiteList.isWord
+
+    def sendOpenTalk(self, message):
+
+        if message.startswith('/'):
+
+            message = message[1:]
+
+            if message != '':
+                base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.sayHackerChat(message)
+        else:
+            self._sendOpenTalk(base.talkAssistant, message)
+
+    def isWord(self, text):
+
+        if text.startswith('/'):
+            return True
+        elif base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get(1).startswith(':'):
+            return True
+        else:
+            return self._isWord(base.whiteList, text)
+
+    def isPrefix(self, text):
+
+        if text.startswith('/'):
+            return True
+        elif base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get(1).startswith(':'):
+            return True
+        else:
+            return self._isPrefix(base.whiteList, text)
+
+    def __init__(self):
+
+        toontown.chat.TTTalkAssistant.TTTalkAssistant.sendOpenTalk = self.sendOpenTalk
+        toontown.chat.TTWhiteList.TTWhiteList.isPrefix = self.isPrefix
+        toontown.chat.TTWhiteList.TTWhiteList.isWord = self.isWord
+
+        base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.requestUpdate()
+        base.localAvatar.b_setSCToontask(805, base.localAvatar.doId, 6, 83)
+
+base.localAvatar.chatMgr.chatInputWhiteList.ChatHook = ChatHook()
+del ChatHook # Delete Global ChatHook Class

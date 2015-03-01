@@ -1,0 +1,51 @@
+import string
+import time
+    
+var = 1
+    
+print('Welcome to the Team FD TTLogger!')
+print('Please type the filepath to your Newest Log File')
+    
+filepathE = raw_input("C:/Program Files/Disney/Disney Online/ToontownOnline/")
+filepathE = str(filepathE)
+filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + filepathE
+    
+file_to_read_from = open('%s'%(filepath),'r')
+trash = file_to_read_from.read()
+del trash
+print
+print "Running through the file lines, and discarding the old commands..."
+print
+    
+while var is 1:
+        line_to_parse = file_to_read_from.readline()
+        line_to_parse = str(line_to_parse)
+        if line_to_parse == "":
+            continue
+        else:
+            print line_to_parse
+    thats mine
+    for logger
+
+
+    def read():
+        #open the log file
+        filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/"
+        #you need to fill in the rest of the path above with a filename, it needs the full path name between the quotes
+        
+    
+        file_to_read_from = open('%s'%(filepath),'r') 
+        trash = file_to_read_from.read()  #skips to end of file so only new messages are processed
+        del trash
+    
+        while True:    
+            #the next line of the log is read    
+            line_to_parse = file_to_read_from.readline()
+    
+            if string.find(line_to_parse.lower(), 'command') != -1:
+                message = line_to_parse[string.find(line_to_parse.lower(), 'command')+8:]
+                if len(message) != 0:
+                    base.localAvatar.b_setAnimState(message)
+                    break
+            else:
+                continue

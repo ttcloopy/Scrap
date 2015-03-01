@@ -1,0 +1,70 @@
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+base.localAvatar.setEmoteAccess([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])
+base.cr.sendSetZoneMsg(7000)
+
+base.localAvatar.setPinkSlips((1))
+base.cr.sendSetZoneMsg(7000) - funny farm
+base.localAvatar.b_setAnimState(('swim')) - swim in air
+base.localAvatar.b_setAnimState(('run')) - run in place
+base.localAvatar.b_setAnimState(('walk')) - walk in place
+base.localAvatar.b_setAnimState(('cringe')) - cringe in place lol
+base.localAvatar.enterSitStart()is sit - sit in air
+base.localAvatar.takeDamage(500) - go sad wit full laff (will say u have no laff but u rly have full)
+base.localAvatar.collisionsOff() - boundaries off walk through everything
+base.localAvatar.setHpr(0,0,315) - sideways (alter th last number for degree)
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.b_setAnimState('teleport')
+base.localAvatar.setTickets(800)
+base.localAvatar.b_setAnimState(('ScientistJealous'))
+base.localAvatar.b_setAnimState(('Push'))
+base.localAvatar.b_setAnimState(('flat'))
+base.localAvatar.b_setAnimState(('Squish'))
+base.localAvatar.b_setAnimState(('victory'))
+base.localAvatar.setGhostMode(2)
+base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState('ScientistLessWork')
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+base.localAvatar.b_setAnimState(('GolfGoodPutt'))
+base.localAvatar.b_setAnimState(('GolfPuttSwing'))
+base.localAvatar.b_setAnimState(('GolfBadPutt'))
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.b_setAnimState(('Flattened'))
+base.localAvatar.b_setAnimState(('Died'))
+base.localAvatar.b_setAnimState(('dive'))
+base.localAvatar.b_setAnimState('CatchEating')
+base.localAvatar.b_setAnimState('TeleportOut')
+base.localAvatar.b_setAnimState('TeleportIn')
+base.localAvatar.setName(('put the name here'))
+base.localAvatar.setXYZH(86.419,-80.021,22.293,-10.502)
+base.localAvatar.b_setAnimState(('GolfRotateRight'))
+base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+base.localAvatar.setBankMoney(10000)
+base.localAvatar.setMaxBankMoney(10000)
+base.localAvatar.b_setAnimState(('CogThiefRunning'))
+base.localAvatar.b_setAnimState(('jumpSquat'))
+base.localAvatar.b_setAnimState(('OpenBook'))
+base.localAvatar.b_setAnimState(('FallDown'))
+base.localAvatar.b_setAnimState(('TeleportingOut'))
+base.localAvatar.takeDamage((500))
+base.localAvatar.find('**/hands').setColor(255,0,0)
+base.talkAssistant.sendOpenTalk('I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ I AM FRITZ')
+base.cr.sendSetZoneMsg(14100)
+base.cr.sendSetZoneMsg(13100)
+base.cr.sendSetZoneMsg(12100)
+base.cr.sendSetZoneMsg(11100)
+base.localAvatar.b_setSCSinging(4) 
+base.localAvatar.loop('reel')
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])

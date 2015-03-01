@@ -1,0 +1,56 @@
+cathead = loader.loadModel("phase_3/models/char/cat-heads-1000.bam")
+cathead.setPos(0,18,0)
+cathead.setHpr(180,0,0)
+cathead.find('**/head-short').setColor(0.4,1,0.4)
+cathead.find('**/head-front-short').setColor(0.4,1,0.4)
+cathead.find('**/ears-short').setColor(0.4,1,0.4)
+cathead.find('**/muzzle-short-angry').removeNode()
+cathead.find('**/muzzle-short-surprise').removeNode()
+cathead.find('**/muzzle-short-laugh').removeNode()
+cathead.find('**/muzzle-short-sad').removeNode()
+cathead.find('**/muzzle-short-smile').removeNode()
+cathead.find('**/muzzle-long-surprise').removeNode()
+cathead.find('**/muzzle-long-neutral').removeNode()
+cathead.find('**/muzzle-long-angry').removeNode()
+cathead.find('**/muzzle-long-sad').removeNode()
+cathead.find('**/muzzle-long-smile').removeNode()
+cathead.find('**/muzzle-long-laugh').removeNode()
+cathead.find('**/head-long').removeNode()
+cathead.find('**/head-front-long').removeNode()
+cathead.find('**/ears-long').removeNode()
+cathead.find('**/eyes-long').removeNode()
+cathead.find('**/joint_pupilL_long').removeNode()
+cathead.find('**/joint_pupilR_long').removeNode()
+
+catbody = Actor("head":cathead, \
+"torso":"phase_3/models/char/dogMM_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogSS_Shorts-legs-1000.bam"},
+{"head":{"guard1neutral":"phase_3/models/char/dogSS_Shorts-head-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-head-neutral.bam"}, \
+"torso":{"guard1neutral":"phase_3/models/char/dogMM_Shorts-torso-water-gun.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-neutral.bam"}, \
+"legs":{"guard1neutral":"phase_3/models/char/dogSS_Shorts-legs-water-gun.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-legs-neutral.bam"} \
+})
+
+catbody.attach("head", "torso", "joint_head")
+catbody.find('**/torso-top').setTexture(loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween5.jpg"), 1)
+catbody.find('**/sleeves').setTexture(loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween5.jpg"), 1)
+catshortz=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_halloween5.jpg")
+catbody.find('**/torso-bot').setTexture(catshortz, 1)
+catbody.find('**/torso-bot-cap').setTexture(catshortz, 1)
+catbody.attach("torso", "legs", "joint_hips")
+catbody.reparentTo(render)
+catbody.find('**/neck').setColor(0.4,1,0.4)
+catbody.find('**/arms').setColor(0.4,1,0.4)
+catbody.find('**/legs').setColor(0.4,1,0.4)
+catbody.find('**/feet').setColor(0.4,1,0.4)
+catbody.find('**/torso-bot').setColor(1,1,1)
+catbody.find('**/torso-bot-cap').setColor(1,1,1)
+catbody.find('**/torso-top').setColor(1,1,1)
+catbody.setPos(0,17,-2)
+catbody.setHpr(200,0,0)
+catbody.setScale(0.75)
+catwatg = loader.loadModel("phase_4/models/props/water-gun.bam")
+catwatg.reparentTo(catbody)
+catwatg.setPos(0,2,3)

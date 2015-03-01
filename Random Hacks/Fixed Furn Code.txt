@@ -1,0 +1,4 @@
+steal furnite code
+
+    base.cr.doFindAll("DistributedFurnitureManager")[0].d_avatarEnter()
+    base.cr.sendSetZoneMsg(6000)

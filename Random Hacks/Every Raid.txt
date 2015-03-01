@@ -1,0 +1,34 @@
+    -----------RAID TROLLEY-------
+    
+    zone = base.localAvatar.getZoneId()
+    zone = str(zone)
+    base.localAvatar.setSystemMessage(1, zone)
+    
+                   then
+    
+    base.cr.sendSetZoneMsg(260251)
+    
+    
+    -----RAID GOLF--------------
+    
+    zone = base.localAvatar.getZoneId()
+    zone = str(zone)
+    base.localAvatar.setSystemMessage(1, zone) - GET ZONE
+    
+               then          
+    
+    base.cr.sendSetZoneMsg(660251)
+    
+    
+    -----RAID RACE--------------
+    
+    zone = base.localAvatar.getZoneId()
+    zone = str(zone)
+    base.localAvatar.setSystemMessage(1, zone) - GET ZONE
+    
+               then          
+    
+    base.cr.sendSetZoneMsg(860251)
+    
+    
+    ----------------------

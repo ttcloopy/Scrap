@@ -1,0 +1,3694 @@
+MEMBERSHIP CODE:
+
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+
+KEEP ALIVE:
+
+from direct.interval.IntervalGlobal import *
+def wakeUp():
+   base.localAvatar.wakeUp()
+def onTime():
+ seq = Sequence()
+ seq.append(Func(wakeUp))
+ seq.append(Wait(.1))
+ seq.append(Func(onTime))
+ seq.start()
+onTime()  
+
+
+BANNED CODE:
+
+def banBlock(log):
+fileToRead = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + str(log)
+readFile = open('%s'%(fileToRead),'r')
+trash = readFile.read()
+del trash
+def blockBan():
+    line_to_parse = readFile.readline()
+    line_to_parse = str(line_to_parse)
+    if "Server is booting us out" in line_to_parse:
+        messenger.send('pandaRenderError')
+    else:
+        None
+def alwaysGo():
+  seq.append(Func(blockBan))
+  seq.append(Wait(0.1))
+  seq.append(Func(alwaysGo))
+  seq.start()
+alwaysGo()
+
+
+NOOBS CODES:
+
+base.localAvatar.b_setSC(20237) 
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+base.localAvatar.setEmoteAccess([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])
+base.cr.sendSetZoneMsg(7000)
+base.cr.sendSetZoneMsg(2520)
+base.localAvatar.enterSitStart()
+base.localAvatar.b_setAnimState('swim')	
+base.localAvatar.b_setAnimState(('Died'))
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.enterSitStart()
+base.localAvatar.collisionsOff()
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setTickets(100000)
+base.localAvatar.b_setAnimState('Flattened')
+base.localAvatar.b_setAnimState('Squish')
+base.localAvatar.b_setAnimState('walk')
+base.localAvatar.b_setAnimState('run')
+base.localAvatar.b_setAnimState('GolfPuttLoop')
+base.localAvatar.b_setAnimState('GolfGoodPutt')
+base.localAvatar.b_setAnimState('GolfBadPutt')
+base.localAvatar.b_setAnimState('Push')
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.setGhostMode(8)
+base.localAvatar.setGhostMode(0)
+base.localAvatar.setGhostMode(22)
+base.localAvatar.setCogIndex(0)
+base.wireframeOn()
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1
+base.localAvatar.physControls.avatarControlJumpForce = 100
+
+
+MOD CLAN BOT:
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(0,0)
+def part2():
+    base.talkAssistant.sendOpenTalk('MOD CLAN IS COMING FOR U!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('YES YOU ALL WILL FALL WITH TOONTOWN')
+    base.localAvatar.b_setEmoteState(20,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('WE R MOD CLAN!!')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('FRECKLES IS BACK UR NOT SAFE!')
+    base.localAvatar.b_setEmoteState(21,1)
+def part6():
+     base.talkAssistant.sendOpenTalk('TELL UR FRIENDS!!')
+     base.localAvatar.b_setAnimState('TeleportOut')
+def part7():
+     base.talkAssistant.sendOpenTalk('THAT MOD CLAN IS COMING!!!')
+     base.localAvatar.b_setAnimState('TeleportIn')
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(3))
+  seq.append(Func(part2))
+  seq.append(Wait(3))
+  seq.append(Func(part3))
+  seq.append(Wait(3))
+  seq.append(Func(part4))
+  seq.append(Wait(3))
+  seq.append(Func(part5))
+  seq.append(Wait(3))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(addzone))
+  seq.start()
+onTime() 
+
+sIT AND SPIN:
+
+base.localAvatar.enterSitStart()
+
+base.localAvatar.physControls.avatarControlForwardSpeed=200
+base.localAvatar.physControls.avatarControlRotateSpeed=1000
+base.localAvatar.physControls.avatarControlReverseSpeed=200
+base.localAvatar.physControls.avatarControlJumpForce = 150
+
+
+GLOBAL TP:
+
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1
+base.localAvatar.setSystemMessage(0, 'Global Teleport Activated Mac Hack Version 1')
+
+
+TROLLY SKIP: 
+
+messenger.send('minigameAbort')
+
+
+DISAPEAR CODE:
+
+base.localAvatar.setSystemMessage(0, 'Thank you For using the disapear code Made by Mod')
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.b_setAnimState(('Flattened'))
+base.localAvatar.b_setAnimState(('Died'))
+base.localAvatar.b_setAnimState(('dive'))
+base.localAvatar.b_setAnimState('ScientistEmcee')
+
+
+SOME HOTKEYS:
+
+base.accept("f1", base.localAvatar.b_setAnimState, ['ScientistEmcee'])  
+base.accept("f2", base.localAvatar.b_setAnimState, ['ScientistJealous'])
+base.accept("f3", base.localAvatar.b_setAnimState, ['ScientistWork'])
+base.accept("f4", base.localAvatar.b_setAnimState, ['ScientistPlay'])
+base.accept("f5", base.localAvatar.b_setAnimState, ['ScientistLessWork'])
+base.accept("f6", base.localAvatar.b_setAnimState, ['GolfGoodPutt'])
+base.accept("f7", base.localAvatar.b_setAnimState, ['GolfBadPutt'])
+base.accept("1", base.localAvatar.b_setAnimState, ['Flattened'])
+base.accept("2", base.localAvatar.b_setAnimState, ['swim'])
+base.accept("3", base.localAvatar.b_setAnimState, ['victory'])
+base.accept("4", base.localAvatar.b_setAnimState, ['Sit'])
+base.accept("5", base.localAvatar.setZ, [2])
+base.accept("6", base.localAvatar.collisionsOff, [])
+base.accept("7", base.localAvatar.b_setAnimState, ['jumpSquat'])
+base.accept("8", base.localAvatar.b_setAnimState, ['victory', -1])
+
+
+STEAL CLOTHES CODE:
+
+closetn = base.cr.doFindAll("closet")
+for closetn in base.cr.doFindAll("closet"):
+ messenger.send("purchaseDone-" + str(closetn.doId)) 
+
+
+
+MAKE A TOON DISAPEAR:
+
+d = base.cr.doFindAll("render/Name of toon u want to leave")
+for d in base.cr.doFindAll("render/Name of toon u want to leave"):
+ d.setGhostMode(8) 
+
+
+MICKEY:
+mickey = base.cr.doFindAll("render/mickey")
+for mickey in base.cr.doFindAll("render/mickey"):
+    mickey.setName('Ghost Mickey')
+    mickey.hideShadow()
+    mickey.loop('right-point')
+    mickey.setColorScale(0.3)
+    mickey.setChatAbsolute('Fuckers!', 1, None, True)
+    mickey.find('**/MickeycRay').removeNode()
+    mickey.find('**/distAvatarCollNode-415100656').removeNode()
+    mickey.find('**/MickeyBlatherSphere').setScale(5000)
+
+
+AUTO HOUSE RAID BUTTON:
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "ZoneFound"
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+
+b = DirectButton(text = ("Raid House", "Activate", "Activate", "Raid House"), scale=.06, pos = (-.28,-0,-.95), command=setText)
+
+
+FLIP 9:
+
+from direct.interval.IntervalGlobal import *
+def start():
+    base.localAvatar.setZ(7)
+def anim1():
+    base.localAvatar.b_setAnimState(('jumpLand'))
+    base.localAvatar.collisionsOff()
+def anim2():
+    base.localAvatar.b_setAnimState('ScientistEmcee')
+def flip1():
+    base.localAvatar.setP(90)
+def flip2():
+    base.localAvatar.setP(180)
+def flip3():
+    base.localAvatar.setP(270)
+def flip4():
+    base.localAvatar.setP(360)
+def end():
+    base.localAvatar.collisionsOn()
+def onTime():
+  seq = Sequence()
+  seq.append(Func(anim1))
+  seq.append(Wait(.45))
+  seq.append(Func(anim2))
+  seq.append(Func(start))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Wait(.1))
+  seq.append(Func(flip1))
+  seq.append(Wait(.1))
+  seq.append(Func(flip2))
+  seq.append(Wait(.1))
+  seq.append(Func(flip3))
+  seq.append(Wait(.1))
+  seq.append(Func(flip4))
+  seq.append(Func(end))
+  seq.start()
+onTime() 
+
+
+AWESOME TIE DYE SUIT:
+
+base.localAvatar.setSystemMessage(0, 'Welcome To My Tie Dye Suit Made By GABE Aim: gabedog13@yahoo.com')
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+short.setTexture(shorttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+sleeves.setTexture(sleevestex, 1)
+
+gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1) 
+
+
+
+
+SICK ASS CHANGING SUIT:
+
+
+base.localAvatar.setSystemMessage(0, 'Made By Mod Marc Only Friends Can Have It!')
+from direct.interval.IntervalGlobal import *
+def Saturn():
+    gloves = loader.loadTexture("phase_5.5/maps/Saturn2.jpg") 
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_5.5/maps/Saturn2.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_5.5/maps/Saturn2.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_5.5/maps/Saturn2.jpg")
+    sleeves.setTexture(sleevestex, 1) 
+def BeeSuit():
+    gloves = loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    sleeves.setTexture(sleevestex, 1)
+def WeirdSuit():
+    gloves = loader.loadTexture("phase_3/maps/Humanist.rgb")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+    sleeves.setTexture(sleevestex, 1)
+def Money():
+    gloves = loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    sleeves.setTexture(sleevestex, 1)
+def TieDye():
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    sleeves.setTexture(sleevestex, 1) 
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(Saturn))
+  rain.append(Wait(0.5))
+  rain.append(Func(BeeSuit))
+  rain.append(Wait(0.5))
+  rain.append(Func(WeirdSuit))
+  rain.append(Wait(0.5))
+  rain.append(Func(Money))
+  rain.append(Wait(0.5))
+  rain.append(Func(TieDye))
+  rain.append(Wait(0.5))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+
+FUNNY BOT:
+
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setAnimState('ScientistEmcee')
+    base.talkAssistant.sendOpenTalk('Congratulations Toons! Something JUST HAPPENED U JUST **** ed YOUR MOM ')
+def part2():
+    base.talkAssistant.sendOpenTalk('You all FAIL!!! and **** U!!!')
+def part3():
+    base.talkAssistant.sendOpenTalk('You all have not successfully held off the Cog Invasions So know there gonna **** your mom happy DAYS ')
+def part4():
+    base.talkAssistant.sendOpenTalk('With a little help from our **** ed up newly animated friends that some how think its fun to **** there mom')
+def part5():
+    base.talkAssistant.sendOpenTalk('And brought Toontown back to its usual **** ed up  self!')
+def part6():
+    base.talkAssistant.sendOpenTalk('We hope to get the Silly Meter rising again soon so u all can break it again!!! -_- u **** Grr')
+def part7():
+    base.talkAssistant.sendOpenTalk('So in the meantime, keep up the Cog fight While i take a break and watch tv and eat bacon')
+def part8():
+    base.talkAssistant.sendOpenTalk('And enjoy the silliest place ever, Hawk town  YAY **** u all none hawk ARe leave toontown')
+def part9():
+    base.talkAssistant.sendOpenTalk('So while we take over u can all **** ur self ')
+def part10():
+    base.talkAssistant.sendOpenTalk('So **** u all and a happy new year WOO')
+def part11():
+    base.talkAssistant.sendOpenTalk(' Remember u are all ******* in the inside So anyways ')
+def part12():
+    base.talkAssistant.sendOpenTalk('So thanks for listening **** this ')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(10))
+  seq.append(Func(part2))
+  seq.append(Wait(15))
+  seq.append(Func(part3))
+  seq.append(Wait(15))
+  seq.append(Func(part4))
+  seq.append(Wait(15))
+  seq.append(Func(part5))
+  seq.append(Wait(5))
+  seq.append(Func(part6))
+  seq.append(Wait(15))
+  seq.append(Func(part7))
+  seq.append(Wait(10))
+  seq.append(Func(part8))
+  seq.append(Wait(10))
+  seq.append(Func(part9))
+  seq.append(Wait(5))
+  seq.append(Func(part10))
+  seq.append(Wait(5))
+  seq.append(Func(part11))
+  seq.append(Wait(5))
+  seq.append(Func(part12))
+  seq.start()
+onTime()
+
+
+TOON CONTROL:
+
+
+ttd = base.cr.doFindAll("render")
+for ttd in base.cr.doFindAll("render"):
+    ttd.setHpr(0,0,315)
+
+ttd = base.cr.doFindAll("render")
+for ttd in base.cr.doFindAll("render"):
+    ttd.displayTalk('LOL')
+
+ttd = base.cr.doFindAll("TagGame")
+for ttd in base.cr.doFindAll("TagGame"):
+    ttd.setIt()
+
+ttd = base.cr.doFindAll("DivingGame")
+for ttd in base.cr.doFindAll("DivingGame"):
+    ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+
+ttd = base.cr.doFindAll("TargetGame")
+for ttd in base.cr.doFindAll("TargetGame"):
+    ttd.speedForward = 2000
+    ttd.speedLaunch = 2000
+
+render/ for all toons:
+
+
+
+MOD MAGIC:
+
+
+base.localAvatar.physControls.avatarControlJumpForce = .1
+base.localAvatar.physControls.setGravity(.00001) 
+
+
+Music Code:
+
+music1 = base.loader.loadSfx("phase_9/audio/bgm/CHQ_FACT_bg.mid")
+music1.setLoop(True)
+music1.play()
+
+music1 = base.loader.loadSfx("Custom/Sfx/Losing You.mp3")
+music1.setVolume(.2)
+music1.setLoop(True)
+music1.play()
+
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/Bossbot_Factory_v3.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+music1.setLoopCount(3)
+
+music1.setPlayRate(.5)
+
+music1.setTime(20)
+
+music1.getTime()
+
+music1.length()
+
+
+
+Bank Customization :
+
+bank = base.cr.doFindAll("Bank")
+for bank in base.cr.doFindAll("Bank"):
+    bank.find('**/pigBody').setColor(0.242, 0.742, 0.516, 1)
+    bank.find('**/pigHead').setColor(0.242, 0.742, 0.516, 1)
+    bank.find('**/earR').setColor(0.242, 0.742, 0.516, 1)
+    bank.find('**/earL').setColor(0.242, 0.742, 0.516, 1)
+    bank.find('**/bowl').setColor(0.97,0.3,0.3,1)
+    bank.find('**/pedal').setColor(0.97,0.3,0.3,1)
+    bank.find('**/base').setColor(0,0,255)
+    bank.find('**/main_base').setColor(0,0,255)
+    bank.find('**/label').setColor(0,0,255)
+    bank.find('**/lid').setColor(0,0,255)
+    bank.find('**/jellybeans').removeNode()
+
+
+
+
+WEIRD SUIT:
+
+
+base.localAvatar.setSystemMessage(0, 'Welcome To My Weird Suit Made By Mod Marc Aim: Rvinevine')
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+short.setTexture(shorttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+sleeves.setTexture(sleevestex, 1)
+
+gloves = loader.loadTexture("phase_3/maps/Humanist.rgb")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1) 
+
+
+
+AWESOME ON SCREEN BUTTONS:
+
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Collisions"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "RAID"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 0
+
+def setText6():
+    bk_text = "Big"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n' * 256)
+    var = 1
+
+def setText7():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText9():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText10():
+    bk_text = "Funny"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "DC"
+    textObject.setText(bk_text)
+    localAvatar.d_setAnimState('Disconneted')
+    var = 1
+
+def setText12():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText13():
+    bk_text = "Work"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText15():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText17():
+    bk_text = "Port In"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText18():
+    bk_text = "Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    var = 1
+
+def setText19():
+    bk_text = "Emcee"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistEmcee'))
+    var = 1
+
+def setText20():
+    bk_text = "Jealous"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistJealous'))
+    var = 1
+
+def setText21():
+    bk_text = "UpsideD"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText22():
+    bk_text = "OnFace"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-50,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText23():
+    bk_text = "OnBack"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,90,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText24():
+    bk_text = "FU"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('We are TEAM FeD \n' *10)
+    var = 1
+
+def setText25():
+    bk_text = "SIDE"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText26():
+    bk_text = "Invis"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2090)
+    var = 1
+
+def setText27():
+    bk_text = "000"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk(' \000' *200)
+    var = 1
+
+def setText28():
+    bk_text = "annoy"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText29():
+    bk_text = "Tw"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('TEAM FeD WILL RULE!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText30():
+    bk_text = "Cheese"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('CHEESE IS THE ANSWER\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText31():
+    bk_text = "RULE"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('WE ARE THE RULERS!!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText32():
+    bk_text = "MUAHAHAHA"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MUAHAHA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText33():
+    bk_text = "No sleep"
+    textObject.setText(bk_text)
+    base.localAvatar.wakeUp()
+    var = 1
+
+def setText34():
+    bk_text = "Red"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+    var = 1
+
+def setText35():
+    bk_text = "bg"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.30,54.34564,0.23)
+    var = 1
+
+def setText36():
+    bk_text = "by"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(4.30,54.564,0.123)
+    var = 1
+
+def setText37():
+    bk_text = "Tie dye"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText38():
+    bk_text = "Tie dye2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText39():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText40():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText41():
+    bk_text = "nose"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText42():
+    bk_text = "head"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/head').setTexture(gloves, 1)
+    var = 1
+
+def setText43():
+    bk_text = "head2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/clothes').setTexture(gloves, 1)
+    var = 1
+
+def setText44():
+    bk_text = "arms2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText45():
+    bk_text = "legs2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText46():
+    bk_text = "feet2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+    var = 1
+
+def setText47():
+    bk_text = "eyes"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/eyes').setTexture(gloves, 1)
+    var = 1
+
+def setText48():
+    bk_text = "nose2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText49():
+    bk_text = "neck"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+    var = 1
+
+def setText50():
+    bk_text = "Shirt"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+    var = 1
+
+def setText51():
+    bk_text = "pants"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sky"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sleeves"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("COff", "coff", "coff", "COff"), scale=.05, pos = (-.92,-0,-.98), command=setText1)
+b2 = DirectButton(text = ("COn", "Con", "Con", "COn"), scale=.05, pos = (-.8,-0,-.98), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.05, pos = (-.7,-0,-.98), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.05, pos = (-.58,-0,-.98), command=setText4)
+b5 = DirectButton(text = ("RAID", "RAID", "RAID", "RAID"), scale=.05, pos = (-.4,0,-.98), command=setText5)
+b6 = DirectButton(text = ("BIG", "big", "big", "BIG"), scale=.05, pos = (-.2,-0,-.98), command=setText6)
+b7 = DirectButton(text = ("Global", "global", "global", "Global"), scale=.05, pos = (-.0,-0,-.98), command=setText7)
+b8 = DirectButton(text = ("Clothes", "clothes", "clothes", "Clothes"), scale=.05, pos = (.180,-0,-.98), command=setText8)
+b9 = DirectButton(text = ("Mem", "Mem", "Mem", "Mem"), scale=.05, pos = (.39,-10,-.92), command=setText9)
+b10 = DirectButton(text = ("Funny", "Funny", "Funny", "Funny"), scale=.05, pos = (.4,-1,-.98), command=setText10)
+b11 = DirectButton(text = ("DC", "DC", "DC", "DC"), scale=.05, pos = (.55,-41,-.98), command=setText11)
+b12 = DirectButton(text = ("ttc", "ttc", "ttc", "ttc"), scale=.05, pos = (.64,-0,-.98), command=setText12)
+b13 = DirectButton(text = ("sw", "sw", "sw", "sw"), scale=.05, pos = (.28,-0,-.92), command=setText13)
+b14 = DirectButton(text = ("v", "v", "v", "v"), scale=.05, pos = (-.10,-0,-.98), command=setText14)
+b15 = DirectButton(text = ("d", "d", "d", "d"), scale=.05, pos = (-.50,-0,-.98), command=setText15)
+b16 = DirectButton(text = ("to", "to", "to", "to"), scale=.05, pos = (.55,-0,-.92), command=setText16)
+b17 = DirectButton(text = ("ti", "ti", "ti", "ti"), scale=.05, pos = (.63,-0,-.92), command=setText17)
+b18 = DirectButton(text = ("Sp", "Sp", "Sp", "Sp"), scale=.05, pos = (.20,-0,-.91), command=setText18)
+b19 = DirectButton(text = ("Se", "Se", "Se", "Se"), scale=.05, pos = (.12,-0,-.91), command=setText19)
+b20 = DirectButton(text = ("Sj", "Sj", "Sj", "Sj"), scale=.05, pos = (.7,-0,-.91), command=setText20)
+b21 = DirectButton(text = ("UpD", "upd", "upd", "Upd"), scale=.05, pos = (-.9,-0,-.91), command=setText21)
+b22 = DirectButton(text = ("FOF", "FOF", "FOF", "FOF"), scale=.05, pos = (-.7,-0,-.91), command=setText22)
+b23 = DirectButton(text = ("BOF", "bof", "bof", "BOF"), scale=.05, pos = (-.6,-0,-.91), command=setText23)
+b24 = DirectButton(text = ("FU", "fu", "fu", "FU"), scale=.05, pos = (.8,-0,-.91), command=setText24)
+b25 = DirectButton(text = ("SID", "sid", "sid", "SID"), scale=.05, pos = (-.8,-0,-.91), command=setText25)
+b26 = DirectButton(text = ("INV", "inv", "inv", "INV"), scale=.05, pos = (.78,-0,-.98), command=setText26) 
+b27 = DirectButton(text = ("000", "000", "000", "000"), scale=.05, pos = (.90,-0,-.98), command=setText27) 
+b28 = DirectButton(text = ("annoy", "annoy", "annoy", "annoy"), scale=.05, pos = (.94,-0,-.91), command=setText28) 
+b29 = DirectButton(text = ("Tw", "Tw", "Tw", "tw"), scale=.05, pos = (-.99,-0,-.96), command=setText29) 
+b30 = DirectButton(text = ("Cheese", "Cheese", "Cheese", "Cheese"), scale=.05, pos = (-.99,-0,-.86), command=setText30) 
+b31 = DirectButton(text = ("RULERS", "RULERS", "RULERS", "RULERS"), scale=.05, pos = (-.90,-0,-.80), command=setText31) 
+b32 = DirectButton(text = ("MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA"), scale=.05, pos = (-.70,-0,-.86), command=setText32)
+b33 = DirectButton(text = ("No sleep", "No sleep", "No sleep", "No sleep"), scale=.05, pos = (-.44,-0,-.86), command=setText33) 
+b34 = DirectButton(text = ("Red", "Red", "Red", "Red"), scale=.05, pos = (-.29,-0,-.86), command=setText34)   
+b35 = DirectButton(text = ("bg", "bg", "bg", "bg"), scale=.05, pos = (-.20,-0,-.86), command=setText35)
+b36 = DirectButton(text = ("by", "by", "by", "by"), scale=.05, pos = (-.10,-0,-.86), command=setText36)
+b37 = DirectButton(text = ("Tie dye", "Tie dye", "Tie dye", "Tie dye"), scale=.05, pos = (.39,-10,-.84), command=setText37)
+b38 = DirectButton(text = ("Tie dye2", "Tie dye2", "Tie dye2", "Tie dye2"), scale=.05, pos = (.20,-10,-.84), command=setText38)
+b39 = DirectButton(text = ("Arms", "Arms", "Arms", "Arms"), scale=.05, pos = (.54,-10,-.84), command=setText39)
+b40 = DirectButton(text = ("legs", "legs", "legs", "legs"), scale=.05, pos = (.70,-10,-.84), command=setText40)
+b41 = DirectButton(text = ("nose", "nose", "nose", "nose"), scale=.05, pos = (.87,-10,-.84), command=setText41)
+b42 = DirectButton(text = ("head", "head", "head", "head"), scale=.05, pos = (-.70,-0,-.80), command=setText42)
+b43 = DirectButton(text = ("head2", "head2", "head2", "head2"), scale=.05, pos = (-.50,-0,-.80), command=setText43)
+b44 = DirectButton(text = ("arms2", "arms2", "arms2", "arms2"), scale=.05, pos = (-.33,-0,-.80), command=setText44)
+b45 = DirectButton(text = ("legs2", "legs2", "legs2", "legs2"), scale=.05, pos = (-.16,-0,-.80), command=setText45)
+b46 = DirectButton(text = ("feet2", "feet2", "feet2", "feet2"), scale=.05, pos = (.20,-10,-.80), command=setText46)
+b47 = DirectButton(text = ("eyes", "eyes", "eyes", "eyes"), scale=.05, pos = (.39,-10,-.79), command=setText47)
+b48 = DirectButton(text = ("nose2", "nose2", "nose2", "nose2"), scale=.05, pos = (.54,-10,-.79), command=setText48)
+b49 = DirectButton(text = ("neck", "neck", "neck", "neck"), scale=.05, pos = (.71,-10,-.79), command=setText49)
+b50 = DirectButton(text = ("shirt", "shirt", "shirt", "shirt"), scale=.05, pos = (.87,-10,-.79), command=setText50)
+b51 = DirectButton(text = ("pants", "pants", "pants", "pants"), scale=.05, pos = (-.90,-0,-.74), command=setText51)
+b52 = DirectButton(text = ("sky", "sky", "sky", "sky"), scale=.05, pos = (-.73,-0,-.74), command=setText52)
+b52 = DirectButton(text = ("sleeves", "sleeves", "sleeves", "sleeves"), scale=.05, pos = (-.55,-0,-.74), command=setText52)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText1():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+def setText2():
+    bk_text = "Hi Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce = 150
+
+def setText3():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Peppy")
+    for cc in base.cr.doFindAll("Peppy"):
+      cc.copyTo(render)   
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.05, pos = (-.4,-0,-.91), command=setText1)
+b2 = DirectButton(text = ("Jump", "Jump", "jump", "Jump"), scale=.05, pos = (-.2,-0,-.91), command=setText2)
+b3 = DirectButton(text = ("Clone", "Clone", "Cloned", "Cloned"), scale=.05, pos = (0,-2.93,-.91), command=setText3)
+
+
+fast dance:
+
+messenger.send([base.localAvatar.b_setAnimState('victory',5)])
+
+
+
+base.localAvatar.Disconnect_toon('The bitch')
+
+
+
+
+
+
+
+
+
+LIVE SUIT!!:
+
+
+Change x02 To change body
+base.localAvatar.setDNAString('t\x01\x02\x01\x01\x62\x1c\x02\x1c\x27\x1c\x14\x00\x14\x14')
+
+Fat Toon Body
+base.localAvatar.setDNAString('t\x01\x00\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Live Scientist Suit
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Skirt Mode
+base.localAvatar.setDNAString('t\x01\x04\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Extra
+base.localAvatar.setDNAString('t\x02\x01\x02\x01\x62\x1b\x00\x1b\x27\x5b\x10\x00\x10\x10')
+
+Test Town Shirt
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x01\x1b\x01\x1b\x27\x1b\x14\x00\x14\x14')
+
+White Flippy Clothes
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x03\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Garden Clothes
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x07\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Star
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x07\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+VP Shorts
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x47\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Clown Fish
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x48\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Boot
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x49\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Green Vine Down
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x25\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Race Shirt
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x27\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+3D Text Form
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x28\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Cow Boy Red/Blue
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Lure
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x44\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+Sun
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x50\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Sand
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x51\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Bubble Shirt
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x53\x1b\x48\x1b\x29\x1b\x14\x00\x14\x14')
+
+Bee
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x54\x1b\x49\x1b\x29\x1b\x14\x00\x14\x14')
+
+Medal Shirt
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x54\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Building Saver
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x57\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Building Saver Suit
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x58\x1b\x55\x1b\x21\x1b\x14\x00\x14\x14')
+
+Calendar
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x59\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Red Bow Paint Scientist Suit
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x61\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Purple Tie Scientist Suit
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+Green Tie Scientist Suit
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x63\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+All Blue Scienitst
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1c\x02\x1c\x27\x1c\x14\x00\x14\x14')
+
+Vp Sleeve
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x58\x1b\x62\x1b\x21\x1b\x14\x00\x14\x14')
+
+base.localAvatar.setDNAString('t\x01\x04\x01\x01\32\x1d\x23\x1d\x11\x1c\x14\x00\x14\x14')
+
+localAvatar.setDNAString('t\x01\x01\x01\x01\x52\x1c\x02\x1c\x28\x1e\x14\x00\x14\x14')
+
+base.localAvatar.setDNAString('t\x05\x02\x00\x01\x58\x1d\x26\x1c\x16\x1d\x0e\x00\x0e\x0e')
+
+NEW LIFE SCARECROW:
+
+
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.d_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+
+
+
+Maybe live goves:
+
+
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x25\1b\x00\x1b\x25\x1b\x14\x00\x14\x14')
+
+
+
+
+
+
+AWESOME BUTTONS:
+
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Collisions"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "RAID"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 0
+
+def setText6():
+    bk_text = "Big"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n' * 256)
+    var = 1
+
+def setText7():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText9():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText10():
+    bk_text = "Funny"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "DC"
+    textObject.setText(bk_text)
+    localAvatar.d_setAnimState('Disconneted')
+    var = 1
+
+def setText12():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText13():
+    bk_text = "Work"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText15():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText17():
+    bk_text = "Port In"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText18():
+    bk_text = "Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    var = 1
+
+def setText19():
+    bk_text = "Emcee"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistEmcee'))
+    var = 1
+
+def setText20():
+    bk_text = "Jealous"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistJealous'))
+    var = 1
+
+def setText21():
+    bk_text = "UpsideD"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText22():
+    bk_text = "OnFace"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-50,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText23():
+    bk_text = "OnBack"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,90,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText24():
+    bk_text = "FU"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('We are TEAM FeD \n' *10)
+    var = 1
+
+def setText25():
+    bk_text = "SIDE"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText26():
+    bk_text = "Invis"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2090)
+    var = 1
+
+def setText27():
+    bk_text = "000"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk(' \000' *200)
+    var = 1
+
+def setText28():
+    bk_text = "annoy"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText29():
+    bk_text = "Tw"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('TEAM FeD WILL RULE!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText30():
+    bk_text = "Cheese"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('CHEESE IS THE ANSWER\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText31():
+    bk_text = "RULE"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('WE ARE THE RULERS!!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText32():
+    bk_text = "MUAHAHAHA"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MUAHAHA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText33():
+    bk_text = "No sleep"
+    textObject.setText(bk_text)
+    base.localAvatar.wakeUp()
+    var = 1
+
+def setText34():
+    bk_text = "Red"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+    var = 1
+
+def setText35():
+    bk_text = "bg"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.30,54.34564,0.23)
+    var = 1
+
+def setText36():
+    bk_text = "by"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(4.30,54.564,0.123)
+    var = 1
+
+def setText37():
+    bk_text = "Tie dye"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText38():
+    bk_text = "Tie dye2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText39():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText40():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText41():
+    bk_text = "nose"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText42():
+    bk_text = "head"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/head').setTexture(gloves, 1)
+    var = 1
+
+def setText43():
+    bk_text = "head2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/clothes').setTexture(gloves, 1)
+    var = 1
+
+def setText44():
+    bk_text = "arms2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText45():
+    bk_text = "legs2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText46():
+    bk_text = "feet2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+    var = 1
+
+def setText47():
+    bk_text = "eyes"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/eyes').setTexture(gloves, 1)
+    var = 1
+
+def setText48():
+    bk_text = "nose2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText49():
+    bk_text = "neck"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+    var = 1
+
+def setText50():
+    bk_text = "Shirt"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+    var = 1
+
+def setText51():
+    bk_text = "pants"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sky"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sleeves"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("COff", "coff", "coff", "COff"), scale=.05, pos = (-.92,-0,-.98), command=setText1)
+b2 = DirectButton(text = ("COn", "Con", "Con", "COn"), scale=.05, pos = (-.8,-0,-.98), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.05, pos = (-.7,-0,-.98), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.05, pos = (-.58,-0,-.98), command=setText4)
+b5 = DirectButton(text = ("RAID", "RAID", "RAID", "RAID"), scale=.05, pos = (-.4,0,-.98), command=setText5)
+b6 = DirectButton(text = ("BIG", "big", "big", "BIG"), scale=.05, pos = (-.2,-0,-.98), command=setText6)
+b7 = DirectButton(text = ("Global", "global", "global", "Global"), scale=.05, pos = (-.0,-0,-.98), command=setText7)
+b8 = DirectButton(text = ("Clothes", "clothes", "clothes", "Clothes"), scale=.05, pos = (.180,-0,-.98), command=setText8)
+b9 = DirectButton(text = ("Mem", "Mem", "Mem", "Mem"), scale=.05, pos = (.39,-10,-.92), command=setText9)
+b10 = DirectButton(text = ("Funny", "Funny", "Funny", "Funny"), scale=.05, pos = (.4,-1,-.98), command=setText10)
+b11 = DirectButton(text = ("DC", "DC", "DC", "DC"), scale=.05, pos = (.55,-41,-.98), command=setText11)
+b12 = DirectButton(text = ("ttc", "ttc", "ttc", "ttc"), scale=.05, pos = (.64,-0,-.98), command=setText12)
+b13 = DirectButton(text = ("sw", "sw", "sw", "sw"), scale=.05, pos = (.28,-0,-.92), command=setText13)
+b14 = DirectButton(text = ("v", "v", "v", "v"), scale=.05, pos = (-.10,-0,-.98), command=setText14)
+b15 = DirectButton(text = ("d", "d", "d", "d"), scale=.05, pos = (-.50,-0,-.98), command=setText15)
+b16 = DirectButton(text = ("to", "to", "to", "to"), scale=.05, pos = (.55,-0,-.92), command=setText16)
+b17 = DirectButton(text = ("ti", "ti", "ti", "ti"), scale=.05, pos = (.63,-0,-.92), command=setText17)
+b18 = DirectButton(text = ("Sp", "Sp", "Sp", "Sp"), scale=.05, pos = (.20,-0,-.91), command=setText18)
+b19 = DirectButton(text = ("Se", "Se", "Se", "Se"), scale=.05, pos = (.12,-0,-.91), command=setText19)
+b20 = DirectButton(text = ("Sj", "Sj", "Sj", "Sj"), scale=.05, pos = (.7,-0,-.91), command=setText20)
+b21 = DirectButton(text = ("UpD", "upd", "upd", "Upd"), scale=.05, pos = (-.9,-0,-.91), command=setText21)
+b22 = DirectButton(text = ("FOF", "FOF", "FOF", "FOF"), scale=.05, pos = (-.7,-0,-.91), command=setText22)
+b23 = DirectButton(text = ("BOF", "bof", "bof", "BOF"), scale=.05, pos = (-.6,-0,-.91), command=setText23)
+b24 = DirectButton(text = ("FU", "fu", "fu", "FU"), scale=.05, pos = (.8,-0,-.91), command=setText24)
+b25 = DirectButton(text = ("SID", "sid", "sid", "SID"), scale=.05, pos = (-.8,-0,-.91), command=setText25)
+b26 = DirectButton(text = ("INV", "inv", "inv", "INV"), scale=.05, pos = (.78,-0,-.98), command=setText26) 
+b27 = DirectButton(text = ("000", "000", "000", "000"), scale=.05, pos = (.90,-0,-.98), command=setText27) 
+b28 = DirectButton(text = ("annoy", "annoy", "annoy", "annoy"), scale=.05, pos = (.94,-0,-.91), command=setText28) 
+b29 = DirectButton(text = ("Tw", "Tw", "Tw", "tw"), scale=.05, pos = (-.99,-0,-.96), command=setText29) 
+b30 = DirectButton(text = ("Cheese", "Cheese", "Cheese", "Cheese"), scale=.05, pos = (-.99,-0,-.86), command=setText30) 
+b31 = DirectButton(text = ("RULERS", "RULERS", "RULERS", "RULERS"), scale=.05, pos = (-.90,-0,-.80), command=setText31) 
+b32 = DirectButton(text = ("MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA"), scale=.05, pos = (-.70,-0,-.86), command=setText32)
+b33 = DirectButton(text = ("No sleep", "No sleep", "No sleep", "No sleep"), scale=.05, pos = (-.44,-0,-.86), command=setText33) 
+b34 = DirectButton(text = ("Red", "Red", "Red", "Red"), scale=.05, pos = (-.29,-0,-.86), command=setText34)   
+b35 = DirectButton(text = ("bg", "bg", "bg", "bg"), scale=.05, pos = (-.20,-0,-.86), command=setText35)
+b36 = DirectButton(text = ("by", "by", "by", "by"), scale=.05, pos = (-.10,-0,-.86), command=setText36)
+b37 = DirectButton(text = ("Tie dye", "Tie dye", "Tie dye", "Tie dye"), scale=.05, pos = (.39,-10,-.84), command=setText37)
+b38 = DirectButton(text = ("Tie dye2", "Tie dye2", "Tie dye2", "Tie dye2"), scale=.05, pos = (.20,-10,-.84), command=setText38)
+b39 = DirectButton(text = ("Arms", "Arms", "Arms", "Arms"), scale=.05, pos = (.54,-10,-.84), command=setText39)
+b40 = DirectButton(text = ("legs", "legs", "legs", "legs"), scale=.05, pos = (.70,-10,-.84), command=setText40)
+b41 = DirectButton(text = ("nose", "nose", "nose", "nose"), scale=.05, pos = (.87,-10,-.84), command=setText41)
+b42 = DirectButton(text = ("head", "head", "head", "head"), scale=.05, pos = (-.70,-0,-.80), command=setText42)
+b43 = DirectButton(text = ("head2", "head2", "head2", "head2"), scale=.05, pos = (-.50,-0,-.80), command=setText43)
+b44 = DirectButton(text = ("arms2", "arms2", "arms2", "arms2"), scale=.05, pos = (-.33,-0,-.80), command=setText44)
+b45 = DirectButton(text = ("legs2", "legs2", "legs2", "legs2"), scale=.05, pos = (-.16,-0,-.80), command=setText45)
+b46 = DirectButton(text = ("feet2", "feet2", "feet2", "feet2"), scale=.05, pos = (.20,-10,-.80), command=setText46)
+b47 = DirectButton(text = ("eyes", "eyes", "eyes", "eyes"), scale=.05, pos = (.39,-10,-.79), command=setText47)
+b48 = DirectButton(text = ("nose2", "nose2", "nose2", "nose2"), scale=.05, pos = (.54,-10,-.79), command=setText48)
+b49 = DirectButton(text = ("neck", "neck", "neck", "neck"), scale=.05, pos = (.71,-10,-.79), command=setText49)
+b50 = DirectButton(text = ("shirt", "shirt", "shirt", "shirt"), scale=.05, pos = (.87,-10,-.79), command=setText50)
+b51 = DirectButton(text = ("pants", "pants", "pants", "pants"), scale=.05, pos = (-.90,-0,-.74), command=setText51)
+b52 = DirectButton(text = ("sky", "sky", "sky", "sky"), scale=.05, pos = (-.73,-0,-.74), command=setText52)
+b52 = DirectButton(text = ("sleeves", "sleeves", "sleeves", "sleeves"), scale=.05, pos = (-.55,-0,-.74), command=setText52)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText1():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+def setText2():
+    bk_text = "Hi Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce = 150
+
+def setText3():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Peppy")
+    for cc in base.cr.doFindAll("Peppy"):
+      cc.copyTo(render)   
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.05, pos = (-.4,-0,-.91), command=setText1)
+b2 = DirectButton(text = ("Jump", "Jump", "jump", "Jump"), scale=.05, pos = (-.2,-0,-.91), command=setText2)
+b3 = DirectButton(text = ("Clone", "Clone", "Cloned", "Cloned"), scale=.05, pos = (0,-2.93,-.91), command=setText3)
+
+
+FISHING CODE:
+
+
+fishCaught = 0
+from direct.interval.IntervalGlobal import *
+def catch():
+    fish = base.cr.doFindAll("FishingTarget")
+    for fish in fish:
+        print "Activated"
+    
+    fp = base.cr.doFindAll("FishingPond")
+    for fp in fp:
+        fp.d_hitTarget(fish)
+def sell():
+    base.localAvatar.setMaxFishTank(fishCaught)
+    fishman = base.cr.doFindAll("Fisherman")
+    for fishman in fishman:
+        fishid = fishman.doId
+    base.localAvatar.setMoney(base.localAvatar.bankMoney)
+    messenger.send('enterNPCToon-' + str(fishid), [1])
+def onGo():
+  seq = Sequence()
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Wait(1))
+  seq.append(Func(sell))
+  seq.start()
+onGo()
+
+
+NEW LIVE SCARECROW:
+
+
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.d_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+
+
+IMPROVED MOD CLAN SUIT:
+
+
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex= loader.loadTexture("phase_4/maps/robber-baron.jpg")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex= loader.loadTexture("phase_4/maps/robber-baron.jpg")
+short.setTexture(shorttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex= loader.loadTexture("phase_4/maps/robber-baron.jpg")
+sleeves.setTexture(sleevestex, 1)
+
+gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+
+
+
+Flippy Tricker:
+
+
+flippy.showHpString('Heh...')
+flippy.findAllMatches('**/hands').setColor(0.3,0.3,0.35)
+flippy.findAllMatches('**/head').setColor(0.97,0.3,0.3,1)
+flippy.findAllMatches('**/head-front').setColor(0.97,0.3,0.3,1)
+flippy.findAllMatches('**/ears-short').setColor(0.97,0.3,0.3,1)
+flippy.findAllMatches('**/neck').setColor(0.97,0.3,0.3,1)
+flippy.findAllMatches('**/arms').setColor(0.97,0.3,0.3,1)
+flippy.findAllMatches('**/legs').setColor(0.97,0.3,0.3,1)
+flippy.findAllMatches('**/feet').setColor(0.97,0.3,0.3,1)
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import * 
+ttHat = loader.loadModel("phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle.bam")
+ttHat.reparentTo(flippy)
+ttHat.setZ(5)
+ttHat.setColorScale(25)
+ttHatSpin = ttHat.find('**/whistleIcon').hprInterval(3, Vec3(360, 0, 0))
+ttHatSpin.loop()
+flippy.setName('~ Toon Troop ~ Flippy')
+flippy.setSC(4)
+flippy.setEmoteState(0,0)
+
+
+DC CODE I GUESS: CODE FIXED!!!!! FIXED ON 3-11-11 -_-
+
+
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.d_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+
+
+
+TOONTOWN SPLASH LIVE:
+
+
+toon = base.cr.doFindAll("put.toon.name.here")
+base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ(
+    
+    
+
+MEETING:
+
+
+Kookytown 3 pm wed LBHQ
+
+
+
+
+
+
+SWING!:
+
+toontown.toon.LocalToon.LocalToon.play(base.localAvatar, 'swing')
+
+
+ONSCREEN COG SUIT:
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Cog Suit Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Cog Suit Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Cold Caller"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 4]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 0
+
+def setText2():
+    bk_text = "Telemarketer"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+    
+
+def setText3():
+    bk_text = "Name Dropper"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 2]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 6]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText4():
+    bk_text = "Glad Hander"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 3]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 7]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText5():
+    bk_text = "Mover Shaker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 4]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 8]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 0
+
+def setText6():
+    bk_text = "Two Face"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 5]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 9]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText7():
+    bk_text = "The Mingler"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 6]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 10]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText8():
+    bk_text = "Mr. Hollywood"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 7]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 11]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText9():
+    bk_text = "Remove"
+    textObject.setText(bk_text)
+    base.localAvatar.takeOffSuit()
+    var = 1
+
+def setText10():
+    bk_text = "Short Change"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 5, 4, 4]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 0
+
+def setText11():
+    bk_text = "Penny Pincher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+    
+
+def setText12():
+    bk_text = "Tightwad"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 2, 2]) 
+    base.localAvatar.setCogLevels([5, 5, 6, 6]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText13():
+    bk_text = "Bean Counter"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 3, 3]) 
+    base.localAvatar.setCogLevels([5, 5, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText14():
+    bk_text = "Number Cruncher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 4, 4]) 
+    base.localAvatar.setCogLevels([5, 5, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 0
+
+def setText15():
+    bk_text = "Money Bags"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 5, 5]) 
+    base.localAvatar.setCogLevels([5, 5, 9, 9]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText16():
+    bk_text = "Loan Shark"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 6, 6]) 
+    base.localAvatar.setCogLevels([5, 5, 10, 10]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText17():
+    bk_text = "Robber Baron"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 7, 7]) 
+    base.localAvatar.setCogLevels([5, 5, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText18():
+    bk_text = "Bottom Feeder"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 4, 4, 4]) 
+    base.localAvatar.setCogParts([99999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 0
+
+def setText19():
+    bk_text = "Bloodsucker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 1, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+    
+
+def setText20():
+    bk_text = "Double Talker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 2, 2, 2]) 
+    base.localAvatar.setCogLevels([5, 6, 6, 6]) 
+    base.localAvatar.setCogParts([999999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText21():
+    bk_text = "Ambulance Chaser"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 3, 3, 3]) 
+    base.localAvatar.setCogLevels([5, 7, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999999, 9999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText22():
+    bk_text = "Backstabber"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 4, 4, 4]) 
+    base.localAvatar.setCogLevels([5, 8, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 0
+
+def setText23():
+    bk_text = "Spin Doctor"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 5, 5, 5]) 
+    base.localAvatar.setCogLevels([5, 9, 9, 9]) 
+    base.localAvatar.setCogParts([999999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText24():
+    bk_text = "Legal Eagle"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 6, 6, 6]) 
+    base.localAvatar.setCogLevels([5, 10, 10, 10]) 
+    base.localAvatar.setCogParts([99999999999999999999999, 9999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText25():
+    bk_text = "Big Wig"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([5, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText26():
+    bk_text = "Flunky"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([4, 4, 4, 4]) 
+    base.localAvatar.setCogParts([99999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 0
+
+def setText27():
+    bk_text = "Pencil Pusher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([1, 1, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+    
+
+def setText28():
+    bk_text = "YesMan"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([2, 2, 2, 2]) 
+    base.localAvatar.setCogLevels([6, 6, 6, 6]) 
+    base.localAvatar.setCogParts([999999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText29():
+    bk_text = "MircoManager"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([3, 3, 3, 3]) 
+    base.localAvatar.setCogLevels([7, 7, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999999, 9999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText30():
+    bk_text = "Downsizer"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([4, 4, 4, 4]) 
+    base.localAvatar.setCogLevels([8, 8, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 0
+
+def setText31():
+    bk_text = "Head Hunter"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([5, 5, 5, 5]) 
+    base.localAvatar.setCogLevels([9, 9, 9, 9]) 
+    base.localAvatar.setCogParts([999999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText32():
+    bk_text = "Legal Eagle"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([6, 6, 6, 6]) 
+    base.localAvatar.setCogLevels([10, 10, 10, 10]) 
+    base.localAvatar.setCogParts([99999999999999999999999, 9999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText33():
+    bk_text = "Big Wig"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([7, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([11, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("CC", "cc", "cc", "CC"), scale=.06, pos = (-.98,-0,-.94), command=setText1)
+b2 = DirectButton(text = ("TM", "tm", "tm", "TM"), scale=.06, pos = (-.8,-0,-.94), command=setText2)
+b3 = DirectButton(text = ("ND", "nd", "nd", "ND"), scale=.06, pos = (-.6,-0,-.94), command=setText3)
+b4 = DirectButton(text = ("GH", "gh", "gh", "GH"), scale=.06, pos = (-.28,-0,-.94), command=setText4)
+b5 = DirectButton(text = ("MS", "ms", "ms", "MS"), scale=.06, pos = (-0,-0,-.94), command=setText5)
+b6 = DirectButton(text = ("TF", "tf", "tf", "TF"), scale=.06, pos = (.16,-0,-.94), command=setText6)
+b7 = DirectButton(text = ("THE M", "The m", "The m", "THE M"), scale=.06, pos = (.35,-0,-.94), command=setText7)
+b8 = DirectButton(text = ("MH", "mh", "mh", "MH"), scale=.06, pos = (.565,-0,-.94), 
+command=setText8)
+b9 = DirectButton(text = ("Remove", "Remove", "Remove", "Remove"), scale=.06, pos =(.900,-0,-.94), 
+command=setText9)
+b10 = DirectButton(text = ("SC", "sc", "sc", "SC"), scale=.06, pos = (-.98,-0,-.84), command=setText10)
+b11 = DirectButton(text = ("PP", "pp", "pp", "PP"), scale=.06, pos = (-.8,-0,-.84), command=setText11)
+b12 = DirectButton(text = ("TW", "tw", "tw", "TW"), scale=.06, pos = (-.6,-0,-.84), command=setText12)
+b13 = DirectButton(text = ("BC", "bc", "bc", "BC"), scale=.06, pos = (-.28,-0,-.84), command=setText13)
+b14 = DirectButton(text = ("NC", "nc", "nc", "NC"), scale=.06, pos = (-0,-0,-.84), command=setText14)
+b15 = DirectButton(text = ("MB", "mb", "mb", "MB"), scale=.06, pos = (.16,-0,-.84), command=setText15)
+b16 = DirectButton(text = ("LS", "ls", "ls", "LS"), scale=.06, pos = (.35,-0,-.84), command=setText16)
+b17 = DirectButton(text = ("RB", "rb", "rb", "RB"), scale=.06, pos = (.565,-0,-.84), command=setText17)
+b18 = DirectButton(text = ("BF", "bf", "bf", "BF"), scale=.06, pos = (-.98,-0,-.74), command=setText18)
+b19 = DirectButton(text = ("BS", "bs", "bs", "BS"), scale=.06, pos = (-.8,-0,-.74), command=setText19)
+b20 = DirectButton(text = ("DT", "dt", "dt", "DT"), scale=.06, pos = (-.6,-0,-.74), command=setText20)
+b21 = DirectButton(text = ("AC", "ac", "ac", "AC"), scale=.06, pos = (-.28,-0,-.74), command=setText21)
+b22 = DirectButton(text = ("BS", "bs", "bs", "BS"), scale=.06, pos = (-0,-0,-.74), command=setText22)
+b23 = DirectButton(text = ("SD", "sd", "sd", "SD"), scale=.06, pos = (.16,-0,-.74), command=setText23)
+b24 = DirectButton(text = ("LE", "le", "le", "LE"), scale=.06, pos = (.35,-0,-.74), command=setText24)
+b25 = DirectButton(text = ("BW", "bw", "bw", "BW"), scale=.06, pos = (.565,-0,-.74), command=setText25)
+b26 = DirectButton(text = ("F", "f", "f", "F"), scale=.06, pos = (-.98,-0,-.64), command=setText26)
+b27 = DirectButton(text = ("Pp", "pp", "pp", "Pp"), scale=.06, pos = (-.8,-0,-.64), command=setText27)
+b28 = DirectButton(text = ("YM", "ym", "ym", "YM"), scale=.06, pos = (-.6,-0,-.64), command=setText28)
+b29 = DirectButton(text = ("MM", "mm", "mm", "MM"), scale=.06, pos = (-.28,-0,-.64), command=setText29)
+b30 = DirectButton(text = ("DS", "ds", "ds", "DS"), scale=.06, pos = (-0,-0,-.64), command=setText30)
+b31 = DirectButton(text = ("HH", "hh", "hh", "HH"), scale=.06, pos = (.16,-0,-.64), command=setText31)
+b32 = DirectButton(text = ("CR", "cr", "cr", "CR"), scale=.06, pos = (.35,-0,-.64), command=setText32)
+b33 = DirectButton(text = ("BC", "bc", "bc", "BC"), scale=.06, pos = (.565,-0,-.64), command=setText33)
+
+
+Fix CODE:
+
+messenger.send('clearOutToonInterior')
+
+
+
+bANNED CODE STILL WORKING ON BUT NOT WORKING..
+
+
+b = base.cr.doFindAll("render/Toons Name To ban")
+for b in base.cr.doFindAll("render/Toons Name To ban"):
+ b.setSCSinging(4)
+
+
+
+old dc:
+NOT WORKING
+
+all = base.cr.doFindAll("render/")
+for all in base.cr.doFindAll("render/"):
+all.setSCSinging(4)
+
+
+
+
+COMMAND BOT:
+
+
+
+#command_bot.txt
+#Bot created for Team FD by FD Green Cat FD
+#Logs all whispers made to you and splits them into different pieces of data
+import string
+import StringIO
+from direct.interval.IntervalGlobal import *
+
+#Import these modules - String for splitting strings, IntervalGlobal for the bot
+#An Example of what a whisper in the log will look like
+#Along with a Diagram of what to keep and what to split
+#receiveWhisperTalk 247026937 The Toons Name 308435897 None Command Swim
+#==================-------------------------================-------------
+#   DELETE THIS       KEEP THIS KEEP THIS     DELETE THIS     KEEP THIS
+#Take out some of the spacing In Between so that we may use the name and command properly
+
+#Change the path to your newest Toontown.log file
+#Set up the log file to read from
+filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/toontown-000000_000000.log"
+file_to_read_from = open(filepath,'r')
+
+#Delete whats in the log so that we dont do a command upon running the bot
+trash = file_to_read_from.read()
+del trash
+
+#Tell them when the bot is Activated so that they know that there were know errors in the first half of the script
+print
+print "Command Bot Activated"
+print
+#Create a loop that runs forever to check for new commands
+def CheckCommands():
+    #Load a line to check for Whispers
+    line_to_parse = file_to_read_from.readline()
+    if line_to_parse == "": #If we get nothing the the line, do nothing
+        pass
+    elif "receiveWhisperTalk" in line_to_parse: #If we get a whisper made to us in the loaded file line
+        if "Command" in line_to_parse.title(): #If we are dealing with a Command Whisper, start splitting the string
+            chunk_to_get = string.split(line_to_parse, "receiveWhisperTalk ")[1] #Take out the first part of the string
+            chunk_id = string.split(str(chunk_to_get), " ")[0] #Take out the Toon's DoId for later use
+            print "Toon ID: " + str(chunk_id) #Announce the Toon ID
+            chunk_to_get = string.split(chunk_to_get, str(chunk_id) + " ")[1] #Cut the ID out of the file line
+            chunk_to_get = string.replace(chunk_to_get, "0", "-") #Change the Shard to all -'s
+            chunk_to_get = string.replace(chunk_to_get, "1", "-")
+            chunk_to_get = string.replace(chunk_to_get, "2", "-")
+            chunk_to_get = string.replace(chunk_to_get, "3", "-")
+            chunk_to_get = string.replace(chunk_to_get, "4", "-")
+            chunk_to_get = string.replace(chunk_to_get, "5", "-")
+            chunk_to_get = string.replace(chunk_to_get, "6", "-")
+            chunk_to_get = string.replace(chunk_to_get, "7", "-")
+            chunk_to_get = string.replace(chunk_to_get, "8", "-")
+            chunk_to_get = string.replace(chunk_to_get, "9", "-")
+            chunk_name = string.split(chunk_to_get, " -")[0] #Cut out the Toon's Name for later use
+            print "Toons Name: " + chunk_name #Announce the toons name
+            chunk_to_get = string.split(chunk_to_get, " -")[1] #Cut their name out of the file line
+            chunk_to_get = string.replace(chunk_to_get, "- ", "") #Split out the empty shard, including the extra space
+            chunk_to_get = string.replace(chunk_to_get, "-", "")
+            chunk_to_get = string.split(chunk_to_get, "None ")[1] #Cut out the whisper, and keep it
+            command_chunk = chunk_to_get[8:] #Cut the command out of the whisper
+            command_chunk = string.replace(command_chunk, "\n", "") #Replace the New Line simbol in the command
+            print "Command: " + command_chunk #Announce the command
+            final_info_list = [int(chunk_id), str(chunk_name), str(command_chunk)] #Set up the information list
+            print "Final Info List: " + str(final_info_list) #Show the Final Product
+            CommandList = final_info_list #Set up a quick-access copy variable
+            if "Splash" in CommandList[2].title(): #If the command is a command for the word Splash
+                #Send open-talk text with who the toons name, and the command they sent
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+                base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+            if "Add Me" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + " Told me to ' Add Them '")
+                messenger.send('friendAvatar', [CommandList[0], str(CommandList[1]), 1])
+            elif "Sit" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('SitStart')
+	    elif "Victory" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+		base.localAvatar.b_setAnimState('victory')
+            elif "Sad" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to go ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Sad')
+            elif "Swim" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('swim')
+            elif "Swimming" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Begin ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('swim')
+            elif "Run" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('run')
+            elif "Walk" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('walk')
+            elif "Off" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('off')
+            elif "Exit" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('off')
+            elif "Neutral" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('neutral')
+            elif "Happy" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Happy')
+            elif "Catching" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Begin ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Catching')
+            elif "Catch Eating" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('CatchEating')
+            elif "Sleep" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Sleep')
+            elif "Jump Squat" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jumpSquat')
+            elif "Jump" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jump')
+            elif "Jumping" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jump')
+            elif "Jump Airborne" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jumpAirborne')
+            elif "Jump Land" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jumpLand')
+            elif "Swim Hold" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('swimhold')
+            elif "Cringe" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('cringe')
+            elif "Open Book" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('OpenBook')
+            elif "Close Book" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('CloseBook')
+            elif "Teleport Out" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleport Away" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleporting Out" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleporting Away" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleporting" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleport" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleport In" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Here" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Back" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Now" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Start" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Die" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Died" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Lose All" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Lose All Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Loss All" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Loss All Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Emote" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Emote')
+            elif "Sitting" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Sit')
+            elif "Push" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Push')
+            elif "Flatten" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Flattened')
+            elif "Flattened" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Flattened')
+            elif "Flat" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Flattened')
+            elif "Fall Down" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('FallDown')
+            elif "Banana Peel" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('FallDown')
+            elif "Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfPuttLoop')
+            elif "Golf Turn" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfRotateRight')
+            elif "Golfing" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfPuttSwing')
+            elif "Golf Win" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Golf Lose" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Golf Loss" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Lose Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Loss Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Lost Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Golf Lost" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Golf Won" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Win Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Won Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Scientist" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistJealous')
+            elif "Scientist Working" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistWork')
+            elif "Scientist Work" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistWork')
+            elif "Scientist Game" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistPlay')
+            elif "Loss Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Lose Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Lost Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Laff Lose" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Laff Loss" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Laff Lost" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Gain Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Earn Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Get Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Recieve Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Request Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Grab Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Eat Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Big Bubble" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 5)
+            elif "Dictionary" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Show Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Hide Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "All Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Write Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Tell Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Say Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Give Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Give Me Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+	    elif "Say" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + str(CommandList[2]))
+	    else:
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told an Incorrect Command ' + str(CommandList[2]))
+def ContinueCheck():
+  fil = Sequence()
+  fil.append(Func(CheckCommands))
+  fil.append(Wait(0.001))
+  fil.append(Func(ContinueCheck))
+  fil.start()
+ContinueCheck()
+
+
+
+
+
+
+
+
+
+
+
+TT LOG FILES THAT YOU CAN CHANGE:
+
+
+
+
+Starting Toontown...
+Current time: Mon Mar 14 22:27:28 2011 Pacific Standard Time
+sys.path =  ['']
+sys.argv =  ['Toontown']
+os.environ =  {'TMP': 'C:\\Users\\MARCRA~1.000\\AppData\\Local\\Temp', 'DOWNLOAD_SERVER': 'http://download.toontown.com/english/currentVersionWIN/content', 'COMPUTERNAME': 'RAMZI-PC3', 'PROCESSOR_REVISION': '0304', 'USERDOMAIN': 'ramzi-PC3', 'GAME_USERNAME': 'Pan0699', 'PSMODULEPATH': 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\', 'CHATTERBOX': '', 'PROCESSOR_IDENTIFIER': 'x86 Family 15 Model 3 Stepping 4, GenuineIntel', 'CFG_PATH': '.', 'PROGRAMFILES': 'C:\\Program Files', 'CHAT': '', 'SYSTEMROOT': 'C:\\Windows', 'PATH': ';.', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'USER_TOONTOWN_ACCESS': 'FULL', 'GAME_ADFRAME_BUTTON_3': 'http://toontown.go.com/toon-hq/top-toons', 'TEMP': 'C:\\Users\\MARCRA~1.000\\AppData\\Local\\Temp', 'LOGIN_TOKEN': 'U2FsdGVkX1/Ej7gFSjKWL0rLqvw4lL2PrBdtSerRaDkVLCpu8Mq83VbBCukGzP9hMnpgw0LPRNf/p1OBIZxaA8LlsYwzPPZqBK+rD4cYJ+a898MvTtwnZ7FfyEtx8ySWxYzGAG/LrsnBwAcL0bSJLpbvnqlgI+2R+Hd/kSYRlZiCTgvJAp5RUPdzKbBGH6i2Od72+M9dZzc7xQTO3Nhn8Kabk2FMvdKXUAkvqjkSK9v9z7Se+S5G3gKHq6BVafFxsmH7aJwnmT+V4un9G5yOcbMKGBAYYtCxZB1wSEdYxLsF3DAThBCVLw5LGlmjL1TDEXIaNbMsXPl4YAwXjp7pcMhXe8eNX0ekpNTWCYmG+IDlVcoTeg9ULTW20it9lLJ1LcX3C16CgRaHBNSoCQ8vY9Ip7vaEuwuLBs+lG3bdRUNJFMnMClOR6tF9PkL6WfS7ZQJaSFRa5lQaUbn2qVU371xdYdd+v/2fP5f/qCBIRvQFCRzNdCyNs+MzVRH39lv9ztPczoONk3AgNgg5mwV400RcLEGZakDwZckMd+0nx3g+y7lvy3breYMxph/qhM877m8ChEhOHXgdnXDAtydyRfjP4UtUi9ifw4PtwsD7OYKbPtcRkcMs5rHDx+g3987T', 'PROCESSOR_ARCHITECTURE': 'x86', 'GAME_ADFRAME_BUTTON_5': '', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'GAME_ADFRAME_BUTTON_1': '', 'PLAYTOKEN': '', 'GAME_ADFRAME_BUTTON_6': 'http://toontown.go.com/membership/account-management/', 'LOCALAPPDATA': 'C:\\Users\\marc.ramzi-PC3.000\\AppData\\Local', 'ACCOUNT_SERVER': 'https://toontown.go.com', 'HOMEPATH': '\\Users\\marc.ramzi-PC3.000', 'GAME_ADFRAME_BUTTON_7': 'http://toontown.go.com/help/report-bug', 'GAME_SERVER': 'https://gameserver-lv.toontown.com', 'USERNAME': 'marc', 'FP_NO_HOST_CHECK': 'NO', 'LOGONSERVER': '\\\\RAMZI-PC3', 'CLASSPATH': '.;C:\\Program Files\\Java\\jre6\\lib\\ext\\QTJava.zip', 'SESSIONNAME': 'Console', 'PROGRAMDATA': 'C:\\ProgramData', 'PYTHONPATH': '.', 'ADFRAME_125X125': '', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'GAME_ADFRAME_BUTTON_2': '', 'ASL.LOG': 'Destination=file', 'GAME_ADFRAME_BUTTON_4': 'http://toontown.go.com/help/players-guide/', 'IS_TEST_SERVER': '0', 'WEB_ACCT_PARAMS': '', 'GAME_CHAT_ELIGIBLE': '1', 'LGID': '', 'WINDIR': 'C:\\Windows', 'ADFRAME_728X90': '', 'GAME_DISL_ID': '421983190', 'DISLTOKEN': 'U2FsdGVkX1/Ej7gFSjKWL0rLqvw4lL2PrBdtSerRaDkVLCpu8Mq83VbBCukGzP9hMnpgw0LPRNf/p1OBIZxaA8LlsYwzPPZqBK+rD4cYJ+a898MvTtwnZ7FfyEtx8ySWxYzGAG/LrsnBwAcL0bSJLpbvnqlgI+2R+Hd/kSYRlZiCTgvJAp5RUPdzKbBGH6i2Od72+M9dZzc7xQTO3Nhn8Kabk2FMvdKXUAkvqjkSK9v9z7Se+S5G3gKHq6BVafFxsmH7aJwnmT+V4un9G5yOcbMKGBAYYtCxZB1wSEdYxLsF3DAThBCVLw5LGlmjL1TDEXIaNbMsXPl4YAwXjp7pcMhXe8eNX0ekpNTWCYmG+IDlVcoTeg9ULTW20it9lLJ1LcX3C16CgRaHBNSoCQ8vY9Ip7vaEuwuLBs+lG3bdRUNJFMnMClOR6tF9PkL6WfS7ZQJaSFRa5lQaUbn2qVU371xdYdd+v/2fP5f/qCBIRvQFCRzNdCyNs+MzVRH39lv9ztPczoONk3AgNgg5mwV400RcLEGZakDwZckMd+0nx3g+y7lvy3breYMxph/qhM877m8ChEhOHXgdnXDAtydyRfjP4UtUi9ifw4PtwsD7OYKbPtcRkcMs5rHDx+g3987T', 'HOMEDRIVE': 'C:', 'SESSION_TOKEN': '', 'OS': 'Windows_NT', 'SYSTEMDRIVE': 'C:', 'NUMBER_OF_PROCESSORS': '2', 'APPDATA': 'C:\\Users\\marc.ramzi-PC3.000\\AppData\\Roaming', 'GAME_VERSION_TEXT': 'sv1.0.44.2', 'PROCESSOR_LEVEL': '15', 'CONFIG_CONFIG': ':configpath=CFG_PATH', 'USERPROFILE': 'C:\\Users\\marc.ramzi-PC3.000', '__COMPAT_LAYER': 'ElevateCreateProcess', 'PUBLIC': 'C:\\Users\\Public', 'QTJAVA': 'C:\\Program Files\\Java\\jre6\\lib\\ext\\QTJava.zip'}
+generating standard configrc
+CONFIG_CONFIG is set to: :configpath=CFG_PATH
+Resetting CONFIG_CONFIG
+:03-14-2011 22:27:28 Launcher: isTestServer: 0
+:03-14-2011 22:27:28 Launcher: Download Server List http://download.toontown.com/english/currentVersionWIN/content
+:03-14-2011 22:27:28 Launcher: Using download server http://download.toontown.com/english/currentVersionWIN/content.
+:03-14-2011 22:27:28 Launcher: Game Server https://gameserver-lv.toontown.com
+:03-14-2011 22:27:28 Launcher: patch directory is 0
+:03-14-2011 22:27:28 Launcher: Starting Disney's Toontown Online... 
+:03-14-2011 22:27:28 :downloader(warning): Could not read gameserver.txt.
+:03-14-2011 22:27:28 Launcher: Proxy spec is: 
+:03-14-2011 22:27:28 :downloader: [04531540] created.
+:03-14-2011 22:27:28 Launcher: No proxy for download.
+:03-14-2011 22:27:28 :downloader: [04531540] begin HEAD [ http://download.toontown.com/english/currentVersionWIN/content/patcher.ver?248669489 ]
+:03-14-2011 22:27:28 :downloader: [04531540] reset_to_new.
+:03-14-2011 22:27:28 :downloader: [04531540] reset_to_new.
+:03-14-2011 22:27:28 :downloader: [04531540] reset_to_new.
+:03-14-2011 22:27:28 :downloader: [04531540] Connected to download.toontown.com:80
+:03-14-2011 22:27:28 Launcher: Download server: http://download.toontown.com/english/currentVersionWIN/content
+:03-14-2011 22:27:28 Launcher: foreground: Launcher now operating in foreground
+:03-14-2011 22:27:28 Launcher: prepareClient: Preparing client for install
+:03-14-2011 22:27:28 Launcher: Downloading launcherFileDb
+:03-14-2011 22:27:28 Launcher: Download request: http://download.toontown.com/english/currentVersionWIN/content/patcher.ver?248669489
+:03-14-2011 22:27:28 :downloader: [04531540] begin GET [ http://download.toontown.com/english/currentVersionWIN/content/patcher.ver?248669489 ]
+useTTSpecificLogin=1
+:03-14-2011 22:27:28 Launcher: getRegistry ('WEB_ACCT_PARAMS', None)
+:03-14-2011 22:27:28 Launcher: self.VISTA = True
+:03-14-2011 22:27:28 Launcher: checking env
+:03-14-2011 22:27:28 Launcher: webAcctParams = 
+:03-14-2011 22:27:28 Launcher(warning): no secretNeedsParentPassword token in webAcctParams
+:03-14-2011 22:27:28 Launcher(warning): no chatEligible token in webAcctParams
+:03-14-2011 22:27:28 Launcher: maybeStartGame: starting game
+:03-14-2011 22:27:28 Launcher: Starting Toontown...
+:03-14-2011 22:27:28 Launcher: background: Launcher now operating in background
+ToontownStart: Polling for game2 to finish...
+ToontownStart: Game2 is finished.
+ToontownStart: Starting the game.
+ToontownStart: setting default font
+:03-14-2011 22:27:28 Launcher: setting panda error code to 7
+:03-14-2011 22:27:28 :display: loading display module: libpandadx9.dll
+:03-14-2011 22:27:28 :display(warning): Unable to load: Module not found
+:03-14-2011 22:27:28 :display: loading display module: libpandadx8.dll
+:03-14-2011 22:27:28 :display: loading display module: libpandagl.dll
+:03-14-2011 22:27:29 :display: loading display module: libtinydisplay.dll
+:03-14-2011 22:27:29 :display(warning): Unable to load: Path not found
+Known pipe types:
+  wdxGraphicsPipe8
+  wglGraphicsPipe
+(all display modules loaded.)
+:03-14-2011 22:27:29 :display:windisplay: OS version: 6.1.2.7600 
+:03-14-2011 22:27:29 :display:windisplay:   
+:03-14-2011 22:27:29 :display:windisplay: max Mhz 3000000000, current Mhz 3000000000 
+:03-14-2011 22:27:30 :display:wdxdisplay8: GetAvailableVidMem (including AGP) returns Total: 57503744, Free: 57421824 for device #0
+:03-14-2011 22:27:30 :display:wdxdisplay8: GetAvailableVidMem (no AGP) returns Total: 57503744, Free: 57421824 for device #0
+:03-14-2011 22:27:30 :display:wdxdisplay8: SetLowVidMem flag to 0 based on adjusted VidMemTotal: 67108864
+:03-14-2011 22:27:30 ToonBase: Default graphics pipe is wdxGraphicsPipe8 (DirectX8).
+:03-14-2011 22:27:30 :display:wdxdisplay8: D3D8.1 Adapter[0]: Intel(R) 82915G/GV/910GL Express Chipset Family, Driver: igxprd32.dll, DriverVersion: (6.14.10.4704)
+VendorID: 0x00008086 DeviceID: 0x00002582 SubsysID: 0x4037107B Revision: 0x00000004
+:03-14-2011 22:27:30 :display:windisplay(warning): SetForegroundWindow() failed!
+:03-14-2011 22:27:30 :display:wdxdisplay8(warning): SetForegroundWindow() failed!
+:03-14-2011 22:27:30 :display:wdxdisplay8: walla: device04581098:2
+:03-14-2011 22:27:30 :display: Unable to set window properties: !undecorated !fixed_size icon:toontown.ico 
+:03-14-2011 22:27:30 ToonBase: Successfully opened window of type wdxGraphicsWindow8 (DirectX8)
+:03-14-2011 22:27:31 :audio:   using Miles software midi
+:03-14-2011 22:27:31 ShowBase: __dev__ == 0
+:03-14-2011 22:27:31 Launcher: setting panda error code to 11
+:03-14-2011 22:27:31 :text: Loading font /c/Program Files/Disney/Disney Online/ToontownOnline/phase_3/models/fonts/ImpressBT.ttf
+:03-14-2011 22:27:31 :pnmtext: Loaded font Impress Regular
+:03-14-2011 22:27:31 Launcher: setting panda error code to 0
+ToontownStart: Loading default gui sounds
+ToontownStart: serverVersion:  sv1.0.44.2
+:03-14-2011 22:27:31 Loader: starting bulk load of block 'init'
+TTAccount: accountServer from launcher:  https://toontown.go.com
+:03-14-2011 22:27:33 OTPClientRepository: Using connect method 'http'
+:03-14-2011 22:27:34 :text: Loading font phase_3/models/fonts/MickeyFont
+:03-14-2011 22:27:35 Launcher: getRegistry ('DEPLOYMENT', None)
+:03-14-2011 22:27:35 Launcher: self.VISTA = True
+:03-14-2011 22:27:35 Launcher: checking env
+:03-14-2011 22:27:35 Launcher: getRegistry ('GAME_DEPLOYMENT', None)
+:03-14-2011 22:27:35 Launcher: self.VISTA = True
+:03-14-2011 22:27:35 Launcher: checking env
+:03-14-2011 22:27:35 OTPClientRepository: reg_deployment=
+:03-14-2011 22:27:35 LoginWebPlayTokenAccount: self.useTTSpecificLogin =1
+:03-14-2011 22:27:35 OTPClientRepository: loginInterface: LoginWebPlayTokenAccount
+:03-14-2011 22:27:35 Launcher: getNeedPwForSecretKey using tt-specific-login
+:03-14-2011 22:27:35 Launcher: getParentPasswordSet using tt-specific-login
+:03-14-2011 22:27:35 Loader: loader.loadModelNode() is deprecated; use loader.loadModel() instead.
+:03-14-2011 22:27:35 Loader: loader.loadModelNode() is deprecated; use loader.loadModel() instead.
+:03-14-2011 22:27:35 Loader: loader.loadModelNode() is deprecated; use loader.loadModel() instead.
+:03-14-2011 22:27:35 Loader: At end of block 'init', expected 138, loaded 24
+:03-14-2011 22:27:35 ToonBase: Using gameServer from launcher: https://gameserver-lv.toontown.com 
+:03-14-2011 22:27:35 OTPClientRepository: Connecting to gameserver directly (no proxy).
+:03-14-2011 22:27:35 :downloader: [08EDE5D8] created.
+:03-14-2011 22:27:35 OTPClientRepository: Connecting to s://gameserver-lv.toontown.com:6667 via HTTP interface.
+:03-14-2011 22:27:35 :downloader: [08EDE5D8] begin CONNECT [ s://gameserver-lv.toontown.com:6667 ]
+:03-14-2011 22:27:35 :downloader: [08EDE5D8] reset_to_new.
+:03-14-2011 22:27:35 :downloader: [08EDE5D8] reset_to_new.
+:03-14-2011 22:27:35 :downloader: [08EDE5D8] reset_to_new.
+:03-14-2011 22:27:35 Launcher: Downloading update for Initialization (0 of 15): 0%
+:03-14-2011 22:27:35 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 22:27:35 :downloader: [04531540] Connected to download.toontown.com:80
+:03-14-2011 22:27:35 :downloader: [08EDE5D8] Connected to gameserver-lv.toontown.com:6667
+:03-14-2011 22:27:40 Launcher: HTTP status 200: OK
+:03-14-2011 22:27:40 Launcher: Downloading update for Initialization (0 of 15): 100%
+:03-14-2011 22:27:40 Launcher: downloadTask: Download done: http://download.toontown.com/english/currentVersionWIN/content/patcher.ver?248669489
+:03-14-2011 22:27:40 Launcher: fileName: phase_1.mf, flag:=3 directions= 0000 0000 0000 0000 0000 0000 0000 0011
+, extract=1 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_2.mf, flag:=3 directions= 0000 0000 0000 0000 0000 0000 0000 0011
+, extract=1 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_3.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_3.5.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_4.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_5.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_5.5.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_6.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_7.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_8.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_9.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_10.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_11.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_12.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: fileName: phase_13.mf, flag:=2 directions= 0000 0000 0000 0000 0000 0000 0000 0010
+, extract=0 required=1 optDownload=0
+:03-14-2011 22:27:40 Launcher: requiredInstallFiles: ['phase_1.mf', 'phase_2.mf', 'phase_3.mf', 'phase_3.5.mf', 'phase_4.mf', 'phase_5.mf', 'phase_5.5.mf', 'phase_6.mf', 'phase_7.mf', 'phase_8.mf', 'phase_9.mf', 'phase_10.mf', 'phase_11.mf', 'phase_12.mf', 'phase_13.mf']
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_1.mf] = ('v1.119', 37827379, '9661e4590836ad194fda832391877fdb')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_2.mf] = ('v1.119', 22766337, '728796a16a7554091644dafbd81d7d8e')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_3.mf] = ('v1.44', 7219675, 'f43845bece6723e447e1913d72faf79b')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_3.5.mf] = ('v1.53', 77594494, '97b32cd38fc2d8718de91440a9112cb5')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_4.mf] = ('v1.47', 33627225, '2dc40315fab9ca0c2f97fbf58d9eb6c9')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_5.mf] = ('v1.37', 37558741, '2a9490e95c20741331466354a9e67d29')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_5.5.mf] = ('v1.35', 9612551, '362c968b97a7f03ca763e7f34e410518')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_6.mf] = ('v1.42', 29425745, '641e6bd1c445c76a0d690c026abb9bd4')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_7.mf] = ('v1.24', 305256, '2380b467c01ab67cbf199be303c10a55')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_8.mf] = ('v1.42', 17505175, '208b3b9181ad697f37f9a527be2199e9')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_9.mf] = ('v1.31', 7220840, '7074f23bb07632791fc945d14689147f')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_10.mf] = ('v1.27', 3489246, '74b3d469402b797323d85873cc1b5eba')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_11.mf] = ('v1.26', 2827958, 'e20704a8ecd95079e314c2fd8d944c73')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_12.mf] = ('v1.26', 5289389, 'dd36faaa84c42a328953037257f22add')
+:03-14-2011 22:27:40 Launcher: mfDetails[phase_13.mf] = ('v1.23', 5350023, '90a9e92f673babcfcfb1b243934e856b')
+:03-14-2011 22:27:40 Launcher: working on: ./phase_1.mf
+:03-14-2011 22:27:40 Launcher: file exists
+:03-14-2011 22:27:42 Launcher: clientMd5: 9661e4590836ad194fda832391877fdb expectedMd5: 9661e4590836ad194fda832391877fdb
+:03-14-2011 22:27:42 Launcher: clientSize: 37827379 expectedSize: 37827379
+:03-14-2011 22:27:42 Launcher: file is up to date
+:03-14-2011 22:27:42 Launcher: phase updating 1, 100
+:03-14-2011 22:27:42 Launcher: working on: ./phase_2.mf
+:03-14-2011 22:27:42 Launcher: file exists
+:03-14-2011 22:27:43 Launcher: clientMd5: 728796a16a7554091644dafbd81d7d8e expectedMd5: 728796a16a7554091644dafbd81d7d8e
+:03-14-2011 22:27:43 Launcher: clientSize: 22766337 expectedSize: 22766337
+:03-14-2011 22:27:43 Launcher: file is up to date
+:03-14-2011 22:27:43 Launcher: phase updating 2, 100
+:03-14-2011 22:27:43 Launcher: working on: ./phase_3.mf
+:03-14-2011 22:27:43 Launcher: file exists
+:03-14-2011 22:27:44 Launcher: clientMd5: f43845bece6723e447e1913d72faf79b expectedMd5: f43845bece6723e447e1913d72faf79b
+:03-14-2011 22:27:44 Launcher: clientSize: 7219675 expectedSize: 7219675
+:03-14-2011 22:27:44 Launcher: file is up to date
+:03-14-2011 22:27:44 Launcher: phase updating 3, 100
+:03-14-2011 22:27:44 Launcher: working on: ./phase_3.5.mf
+:03-14-2011 22:27:44 Launcher: file exists
+:03-14-2011 22:27:48 Launcher: clientMd5: 97b32cd38fc2d8718de91440a9112cb5 expectedMd5: 97b32cd38fc2d8718de91440a9112cb5
+:03-14-2011 22:27:48 Launcher: clientSize: 77594494 expectedSize: 77594494
+:03-14-2011 22:27:48 Launcher: file is up to date
+:03-14-2011 22:27:48 Launcher: phase updating 3.5, 100
+:03-14-2011 22:27:48 Launcher: working on: ./phase_4.mf
+:03-14-2011 22:27:48 Launcher: file exists
+:03-14-2011 22:27:49 Launcher: clientMd5: 2dc40315fab9ca0c2f97fbf58d9eb6c9 expectedMd5: 2dc40315fab9ca0c2f97fbf58d9eb6c9
+:03-14-2011 22:27:49 Launcher: clientSize: 33627225 expectedSize: 33627225
+:03-14-2011 22:27:49 Launcher: file is up to date
+:03-14-2011 22:27:50 Launcher: phase updating 4, 100
+:03-14-2011 22:27:50 Launcher: working on: ./phase_5.mf
+:03-14-2011 22:27:50 Launcher: file exists
+:03-14-2011 22:27:51 Launcher: clientMd5: 2a9490e95c20741331466354a9e67d29 expectedMd5: 2a9490e95c20741331466354a9e67d29
+:03-14-2011 22:27:51 Launcher: clientSize: 37558741 expectedSize: 37558741
+:03-14-2011 22:27:51 Launcher: file is up to date
+:03-14-2011 22:27:52 Launcher: phase updating 5, 100
+:03-14-2011 22:27:52 Launcher: working on: ./phase_5.5.mf
+:03-14-2011 22:27:52 Launcher: file exists
+:03-14-2011 22:27:52 Launcher: clientMd5: 362c968b97a7f03ca763e7f34e410518 expectedMd5: 362c968b97a7f03ca763e7f34e410518
+:03-14-2011 22:27:52 Launcher: clientSize: 9612551 expectedSize: 9612551
+:03-14-2011 22:27:52 Launcher: file is up to date
+:03-14-2011 22:27:52 Launcher: phase updating 5.5, 100
+:03-14-2011 22:27:52 Launcher: working on: ./phase_6.mf
+:03-14-2011 22:27:52 Launcher: file exists
+:03-14-2011 22:27:53 Launcher: clientMd5: 641e6bd1c445c76a0d690c026abb9bd4 expectedMd5: 641e6bd1c445c76a0d690c026abb9bd4
+:03-14-2011 22:27:53 Launcher: clientSize: 29425745 expectedSize: 29425745
+:03-14-2011 22:27:53 Launcher: file is up to date
+:03-14-2011 22:27:54 Launcher: phase updating 6, 100
+:03-14-2011 22:27:54 Launcher: working on: ./phase_7.mf
+:03-14-2011 22:27:54 Launcher: file exists
+:03-14-2011 22:27:54 Launcher: clientMd5: 2380b467c01ab67cbf199be303c10a55 expectedMd5: 2380b467c01ab67cbf199be303c10a55
+:03-14-2011 22:27:54 Launcher: clientSize: 305256 expectedSize: 305256
+:03-14-2011 22:27:54 Launcher: file is up to date
+:03-14-2011 22:27:54 Launcher: phase updating 7, 100
+:03-14-2011 22:27:54 Launcher: working on: ./phase_8.mf
+:03-14-2011 22:27:54 Launcher: file exists
+:03-14-2011 22:27:54 Launcher: clientMd5: 208b3b9181ad697f37f9a527be2199e9 expectedMd5: 208b3b9181ad697f37f9a527be2199e9
+:03-14-2011 22:27:54 Launcher: clientSize: 17505175 expectedSize: 17505175
+:03-14-2011 22:27:54 Launcher: file is up to date
+:03-14-2011 22:27:54 Launcher: phase updating 8, 100
+:03-14-2011 22:27:54 Launcher: working on: ./phase_9.mf
+:03-14-2011 22:27:54 Launcher: file exists
+:03-14-2011 22:27:54 Launcher: clientMd5: 7074f23bb07632791fc945d14689147f expectedMd5: 7074f23bb07632791fc945d14689147f
+:03-14-2011 22:27:54 Launcher: clientSize: 7220840 expectedSize: 7220840
+:03-14-2011 22:27:54 Launcher: file is up to date
+:03-14-2011 22:27:55 Launcher: phase updating 9, 100
+:03-14-2011 22:27:55 Launcher: working on: ./phase_10.mf
+:03-14-2011 22:27:55 Launcher: file exists
+:03-14-2011 22:27:55 Launcher: clientMd5: 74b3d469402b797323d85873cc1b5eba expectedMd5: 74b3d469402b797323d85873cc1b5eba
+:03-14-2011 22:27:55 Launcher: clientSize: 3489246 expectedSize: 3489246
+:03-14-2011 22:27:55 Launcher: file is up to date
+:03-14-2011 22:27:55 Launcher: phase updating 10, 100
+:03-14-2011 22:27:55 Launcher: working on: ./phase_11.mf
+:03-14-2011 22:27:55 Launcher: file exists
+:03-14-2011 22:27:55 Launcher: clientMd5: e20704a8ecd95079e314c2fd8d944c73 expectedMd5: e20704a8ecd95079e314c2fd8d944c73
+:03-14-2011 22:27:55 Launcher: clientSize: 2827958 expectedSize: 2827958
+:03-14-2011 22:27:55 Launcher: file is up to date
+:03-14-2011 22:27:55 Launcher: phase updating 11, 100
+:03-14-2011 22:27:55 Launcher: working on: ./phase_12.mf
+:03-14-2011 22:27:55 Launcher: file exists
+:03-14-2011 22:27:55 Launcher: clientMd5: dd36faaa84c42a328953037257f22add expectedMd5: dd36faaa84c42a328953037257f22add
+:03-14-2011 22:27:55 Launcher: clientSize: 5289389 expectedSize: 5289389
+:03-14-2011 22:27:55 Launcher: file is up to date
+:03-14-2011 22:27:55 Launcher: phase updating 12, 100
+:03-14-2011 22:27:55 Launcher: working on: ./phase_13.mf
+:03-14-2011 22:27:55 Launcher: file exists
+:03-14-2011 22:27:55 Launcher: clientMd5: 90a9e92f673babcfcfb1b243934e856b expectedMd5: 90a9e92f673babcfcfb1b243934e856b
+:03-14-2011 22:27:55 Launcher: clientSize: 5350023 expectedSize: 5350023
+:03-14-2011 22:27:55 Launcher: file is up to date
+:03-14-2011 22:27:55 Launcher: phase updating 13, 100
+:03-14-2011 22:27:55 Launcher: ALL PHASES COMPLETE
+:03-14-2011 22:27:55 Launcher: cleanup: cleaning up Launcher
+:03-14-2011 22:27:55 :downloader: [04531540] destroyed.
+:03-14-2011 22:27:55 Launcher: Stopping mini task manager.
+:03-14-2011 22:27:55 :downloader: [08EDE5D8] Self-signed certificate from gameserver-lv.toontown.com:6667
+:03-14-2011 22:27:55 :downloader: [08EDE5D8] reset_to_new.
+:03-14-2011 22:27:55 OTPClientRepository: Successfully connected to s://gameserver-lv.toontown.com:6667.
+:03-14-2011 22:27:55 Launcher: Setting Disconnect Details normal
+:03-14-2011 22:27:55 OTPClientRepository(warning): new installation
+:03-14-2011 22:27:55 :downloader: [08EDE5D8] destroyed.
+0000  7e 00 00 06 00 41 6c 6c 20 6f 6b d6 f3 26 19 0e  ~....All ok..&..
+0010  00 47 75 65 73 74 34 32 31 39 38 33 31 39 30 00  .Guest421983190.
+0020  02 00 4e 4f 02 00 4e 4f 02 00 4e 4f c6 ea 7e 4d  ..NO..NO..NO..~M
+0030  20 f3 06 00 04 00 46 55 4c 4c 03 00 59 45 53 13   .....FULL..YES.
+0040  00 32 30 31 31 2d 30 33 2d 31 34 20 32 31 3a 32  .2011-03-14 21:2
+0050  35 3a 32 34 4f 00 00 00 13 00 57 49 54 48 5f 50  5:24O.....WITH_P
+0060  41 52 45 4e 54 5f 41 43 43 4f 55 4e 54 07 00 50  ARENT_ACCOUNT..P
+0070  61 6e 30 36 39 39                                an0699
+:03-14-2011 22:27:56 LoginScreen: CREATE_FRIENDS_WITH_CHAT from game server login: NO False
+:03-14-2011 22:27:56 LoginScreen: Chat code creation rule = NO
+:03-14-2011 21:27:50 LoginScreen: Notify clock adjusted by -1:00:06 (and timezone adjusted by 0 hours) to synchronize with server.
+:03-14-2011 21:27:50 LoginScreen: Paid from game server login: True
+:03-14-2011 21:27:50 LoginScreen: toonAccountType=WITH_PARENT_ACCOUNT
+:03-14-2011 21:27:50 LoginScreen: Login response return code 0
+:03-14-2011 21:27:50 OTPClientRepository: *** ACCOUNT INFO ***
+:03-14-2011 21:27:50 OTPClientRepository: username: Pan0699
+:03-14-2011 21:27:50 OTPClientRepository: paid: True
+{316000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF133A0>, 360000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF131E8>, 688000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1CB98>, 434000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13AD0>, 568000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF138A0>, 662000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF138F0>, 712000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1CA80>, 620000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13850>, 414000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF132D8>, 364000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13210>, 734000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1C990>, 450000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13EB8>, 756000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1C7D8>, 650000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13F30>, 664000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13300>, 522000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13EE0>, 530000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13FA8>, 636000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13AA8>, 686000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13B98>, 608000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13A08>, 658000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13F80>, 750000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1C1E8>, 726000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1CA08>, 616000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13F58>, 410000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13238>, 432000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13440>, 454000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13940>, 632000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF13828>, 362000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF133F0>, 754000000: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x0BF1C8A0>}
+:03-14-2011 21:27:51 StateData: AvatarChooser.enter
+:03-14-2011 21:27:51 DisplayOptions: settingsFullScreen = False, embedded = 0 width=800 height=600
+:03-14-2011 21:27:51 StateData: calling self.displayOptions.restrictToEmbedded(False)
+:03-14-2011 21:28:00 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen !foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 21:28:42 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 21:28:44 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen !foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 21:29:58 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 21:29:59 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen !foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 21:30:55 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+:03-14-2011 21:30:59 ToonBase: Got window event: size=(800, 600) title="Toontown" !undecorated !fixed_size !fullscreen !foreground !minimized open !cursor_hidden icon:toontown.ico cursor:toonmono.cur absolute 
+
+
+
+LIVE SYSTEM MESSAGE:
+
+
+def broadcast(message="Hey its Salty, the yellow horse. Im in the scientist clothes, what up?"includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+
+
+
+
+After you used that code erase from the injector then use:
+
+broadcast("Hey its Salty, the yellow horse. Im in the scientist clothes, what up?", True) 
+
+
+
+
+
+
+
+UPDATED LIVE SUITS: Still working on:
+
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Collisions"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "RAID"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 0
+
+def setText6():
+    bk_text = "Big"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n' * 256)
+    var = 1
+
+def setText7():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText9():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText10():
+    bk_text = "Funny"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "SUIT"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+    var = 1
+
+def setText12():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText13():
+    bk_text = "Work"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "testtownbody"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x01\x1b\x01\x1b\x27\x1b\x14\x00\x14\x14')
+
+    var = 1
+
+def setText15():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText17():
+    bk_text = "VINE"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x25\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+    var = 1
+
+def setText18():
+    bk_text = "Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    var = 1
+
+def setText19():
+    bk_text = "whiteflippy"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x03\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+    var = 1
+
+def setText20():
+    bk_text = "BLUE SCIENCE"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1c\x02\x1c\x27\x1c\x14\x00\x14\x14')
+    var = 1
+
+def setText21():
+    bk_text = "UpsideD"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText22():
+    bk_text = "OnFace"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-50,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText23():
+    bk_text = "EXTRA"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x02\x01\x02\x01\x62\x1b\x00\x1b\x27\x5b\x10\x00\x10\x10')
+
+    var = 1
+
+def setText24():
+    bk_text = "MD"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('We are MOD CLAN \n' *10)
+    var = 1
+
+def setText25():
+    bk_text = "SIDE"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText26():
+    bk_text = "Invis"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2090)
+    var = 1
+
+def setText27():
+    bk_text = "000"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk(' \000' *200)
+    var = 1
+
+def setText28():
+    bk_text = "annoy"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText29():
+    bk_text = "COWBOY"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+    var = 1
+
+def setText30():
+    bk_text = "skirt"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x04\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+
+    var = 1
+
+def setText31():
+    bk_text = "RULE"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('WE ARE THE RULERS!!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText32():
+    bk_text = "MUAHAHAHA"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MUAHAHA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText33():
+    bk_text = "No sleep"
+    textObject.setText(bk_text)
+    base.localAvatar.wakeUp()
+    var = 1
+
+def setText34():
+    bk_text = "Red"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+    var = 1
+
+def setText35():
+    bk_text = "Garden"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x07\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+    var = 1
+
+def setText36():
+    bk_text = "by"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(4.30,54.564,0.123)
+    var = 1
+
+def setText37():
+    bk_text = "Tie dye"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText38():
+    bk_text = "Tie dye2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText39():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText40():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText41():
+    bk_text = "nose"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText42():
+    bk_text = "head"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/head').setTexture(gloves, 1)
+    var = 1
+
+def setText43():
+    bk_text = "head2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/clothes').setTexture(gloves, 1)
+    var = 1
+
+def setText44():
+    bk_text = "arms2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText45():
+    bk_text = "legs2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText46():
+    bk_text = "feet2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+    var = 1
+
+def setText47():
+    bk_text = "eyes"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/eyes').setTexture(gloves, 1)
+    var = 1
+
+def setText48():
+    bk_text = "nose2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText49():
+    bk_text = "neck"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+    var = 1
+
+def setText50():
+    bk_text = "Shirt"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+    var = 1
+
+def setText51():
+    bk_text = "pants"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sky"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sleeves"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("COff", "coff", "coff", "COff"), scale=.05, pos = (-.92,-0,-.98), command=setText1)
+b2 = DirectButton(text = ("COn", "Con", "Con", "COn"), scale=.05, pos = (-.8,-0,-.98), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.05, pos = (-.7,-0,-.98), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.05, pos = (-.58,-0,-.98), command=setText4)
+b5 = DirectButton(text = ("RAID", "RAID", "RAID", "RAID"), scale=.05, pos = (-.4,0,-.98), command=setText5)
+b6 = DirectButton(text = ("BIG", "big", "big", "BIG"), scale=.05, pos = (-.2,-0,-.98), command=setText6)
+b7 = DirectButton(text = ("Global", "global", "global", "Global"), scale=.05, pos = (-.0,-0,-.98), command=setText7)
+b8 = DirectButton(text = ("Clothes", "clothes", "clothes", "Clothes"), scale=.05, pos = (.180,-0,-.98), command=setText8)
+b9 = DirectButton(text = ("Mem", "Mem", "Mem", "Mem"), scale=.05, pos = (.39,-10,-.92), command=setText9)
+b10 = DirectButton(text = ("Funny", "Funny", "Funny", "Funny"), scale=.05, pos = (.4,-1,-.98), command=setText10)
+b11 = DirectButton(text = ("SUIT", "SUIT", "SUIT", "SUIT"), scale=.05, pos = (.55,-41,-.98), command=setText11)
+b12 = DirectButton(text = ("ttc", "ttc", "ttc", "ttc"), scale=.05, pos = (.64,-0,-.98), command=setText12)
+b13 = DirectButton(text = ("sw", "sw", "sw", "sw"), scale=.05, pos = (.28,-0,-.92), command=setText13)
+b14 = DirectButton(text = ("testownbody", "testownbody", "testownbody", "testownbody"), scale=.05, pos = (-.10,-0,-.98), command=setText14)
+b15 = DirectButton(text = ("d", "d", "d", "d"), scale=.05, pos = (-.50,-0,-.98), command=setText15)
+b16 = DirectButton(text = ("to", "to", "to", "to"), scale=.05, pos = (.55,-0,-.92), command=setText16)
+b17 = DirectButton(text = ("VINE", "VINE", "VINE", "VINE"), scale=.05, pos = (.63,-0,-.92), command=setText17)
+b18 = DirectButton(text = ("Sp", "Sp", "Sp", "Sp"), scale=.05, pos = (.20,-0,-.91), command=setText18)
+b19 = DirectButton(text = ("whiteflippy", "whiteflippy", "whiteflippy", "whiteflippy"), scale=.05, pos = (.12,-0,-.91), command=setText19)
+b20 = DirectButton(text = ("BS", "BS", "BS", "BS"), scale=.05, pos = (.7,-0,-.91), command=setText20)
+b21 = DirectButton(text = ("UpD", "upd", "upd", "Upd"), scale=.05, pos = (-.9,-0,-.91), command=setText21)
+b22 = DirectButton(text = ("FOF", "FOF", "FOF", "FOF"), scale=.05, pos = (-.7,-0,-.91), command=setText22)
+b23 = DirectButton(text = ("EXTRA", "EXTRA", "EXTRA", "EXTRA"), scale=.05, pos = (-.6,-0,-.91), command=setText23)
+b24 = DirectButton(text = ("FU", "fu", "fu", "FU"), scale=.05, pos = (.8,-0,-.91), command=setText24)
+b25 = DirectButton(text = ("SID", "sid", "sid", "SID"), scale=.05, pos = (-.8,-0,-.91), command=setText25)
+b26 = DirectButton(text = ("INV", "inv", "inv", "INV"), scale=.05, pos = (.78,-0,-.98), command=setText26) 
+b27 = DirectButton(text = ("000", "000", "000", "000"), scale=.05, pos = (.90,-0,-.98), command=setText27) 
+b28 = DirectButton(text = ("annoy", "annoy", "annoy", "annoy"), scale=.05, pos = (.94,-0,-.91), command=setText28) 
+b29 = DirectButton(text = ("cowboy", "cowboy", "cowboy", "cowboy"), scale=.05, pos = (-.99,-0,-.96), command=setText29) 
+b30 = DirectButton(text = ("Skirt", "Skirt", "Skirt", "Skirt"), scale=.05, pos = (-.99,-0,-.86), command=setText30) 
+b31 = DirectButton(text = ("RULERS", "RULERS", "RULERS", "RULERS"), scale=.05, pos = (-.90,-0,-.80), command=setText31) 
+b32 = DirectButton(text = ("MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA"), scale=.05, pos = (-.70,-0,-.86), command=setText32)
+b33 = DirectButton(text = ("No sleep", "No sleep", "No sleep", "No sleep"), scale=.05, pos = (-.44,-0,-.86), command=setText33) 
+b34 = DirectButton(text = ("Red", "Red", "Red", "Red"), scale=.05, pos = (-.29,-0,-.86), command=setText34)   
+b35 = DirectButton(text = ("Garden", "Garden", "Garden", "Garden"), scale=.05, pos = (-.20,-0,-.86), command=setText35)
+b36 = DirectButton(text = ("by", "by", "by", "by"), scale=.05, pos = (-.10,-0,-.86), command=setText36)
+b37 = DirectButton(text = ("Tie dye", "Tie dye", "Tie dye", "Tie dye"), scale=.05, pos = (.39,-10,-.84), command=setText37)
+b38 = DirectButton(text = ("Tie dye2", "Tie dye2", "Tie dye2", "Tie dye2"), scale=.05, pos = (.20,-10,-.84), command=setText38)
+b39 = DirectButton(text = ("Arms", "Arms", "Arms", "Arms"), scale=.05, pos = (.54,-10,-.84), command=setText39)
+b40 = DirectButton(text = ("legs", "legs", "legs", "legs"), scale=.05, pos = (.70,-10,-.84), command=setText40)
+b41 = DirectButton(text = ("nose", "nose", "nose", "nose"), scale=.05, pos = (.87,-10,-.84), command=setText41)
+b42 = DirectButton(text = ("head", "head", "head", "head"), scale=.05, pos = (-.70,-0,-.80), command=setText42)
+b43 = DirectButton(text = ("head2", "head2", "head2", "head2"), scale=.05, pos = (-.50,-0,-.80), command=setText43)
+b44 = DirectButton(text = ("arms2", "arms2", "arms2", "arms2"), scale=.05, pos = (-.33,-0,-.80), command=setText44)
+b45 = DirectButton(text = ("legs2", "legs2", "legs2", "legs2"), scale=.05, pos = (-.16,-0,-.80), command=setText45)
+b46 = DirectButton(text = ("feet2", "feet2", "feet2", "feet2"), scale=.05, pos = (.20,-10,-.80), command=setText46)
+b47 = DirectButton(text = ("eyes", "eyes", "eyes", "eyes"), scale=.05, pos = (.39,-10,-.79), command=setText47)
+b48 = DirectButton(text = ("nose2", "nose2", "nose2", "nose2"), scale=.05, pos = (.54,-10,-.79), command=setText48)
+b49 = DirectButton(text = ("neck", "neck", "neck", "neck"), scale=.05, pos = (.71,-10,-.79), command=setText49)
+b50 = DirectButton(text = ("shirt", "shirt", "shirt", "shirt"), scale=.05, pos = (.87,-10,-.79), command=setText50)
+b51 = DirectButton(text = ("pants", "pants", "pants", "pants"), scale=.05, pos = (-.90,-0,-.74), command=setText51)
+b52 = DirectButton(text = ("sky", "sky", "sky", "sky"), scale=.05, pos = (-.73,-0,-.74), command=setText52)
+b52 = DirectButton(text = ("sleeves", "sleeves", "sleeves", "sleeves"), scale=.05, pos = (-.55,-0,-.74), command=setText52)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText1():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+def setText2():
+    bk_text = "Hi Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce = 150
+
+def setText3():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Mod")
+    for cc in base.cr.doFindAll("Mod"):
+      cc.copyTo(render)   
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.05, pos = (-.4,-0,-.91), command=setText1)
+b2 = DirectButton(text = ("Jump", "Jump", "jump", "Jump"), scale=.05, pos = (-.2,-0,-.91), command=setText2)
+b3 = DirectButton(text = ("Clone", "Clone", "Cloned", "Cloned"), scale=.05, pos = (0,-2.93,-.91), command=setText3)
+
+

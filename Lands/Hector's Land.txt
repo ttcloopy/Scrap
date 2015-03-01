@@ -1,0 +1,940 @@
+base.cr.sendSetZoneMsg(7000)
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+from direct.gui.OnscreenText import OnscreenText
+
+environ = loader.loadModel("phase_4/models/minigames/tag_arena.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,0)
+environ.setHpr(0,0,0)
+environ.setScale(3)
+
+hall = loader.loadModel("phase_4/models/modules/toonhall.bam")
+hall.reparentTo(render)
+hall.setPos(-56.763,137.830,0.025)
+hall.setHpr(0,0,0)
+hall.setScale(3)
+
+
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(10.389,85.279,0.025)
+
+pandaPosInterval22 = e.posInterval(13,Point3(10.389,85.279,0.025),
+startPos=Point3(0,114.03,127.50))
+pandaPosInterval33 = e.posInterval(13,Point3(10.389,85.279,150.50),
+startPos=Point3(10.389,85.279,0.025))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c.setPos(-9.98,139.11,117.38)
+c.setHpr(0,340.30,0)
+c.hide()
+c.reparentTo(render)
+c.find('**/wall_back').removeNode()
+c.find('**/wall_front').removeNode()
+c.find('**/wall_left').removeNode()
+c.find('**/wall_right').removeNode()
+c.find('**/ceiling').removeNode()
+
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam")
+castle.reparentTo(render)
+castle.setPos(-75.215,-196.153,0.025)
+castle.setHpr(2218,0,0)
+castle.setScale(10)
+
+mail1 = Actor("phase_5/models/char/tt_r_ara_ttc_mailbox.bam",{"cheer":"phase_5/models/char/tt_a_ara_ttc_mailbox_fightCheer.bam"})
+mail1.reparentTo(render)
+mail1.loop("cheer")
+mail1.setPos(-41.727,-105.031,0.025)
+mail1.setHpr(100.490,0,0)
+mail1.setScale(1)
+
+evsign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+evsign.reparentTo(render)
+evsign.setPos(-3.082,85.281,0.025)
+evsign.setHpr(0,0,0)
+evsign.setScale(2)
+
+cogplat = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat.reparentTo(render)
+cogplat.setPos(9,80.153,150)
+cogplat.setHpr(0,0,0)
+cogplat.setScale(5)
+
+cogplat1 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat1.reparentTo(render)
+cogplat1.setPos(9,40.153,150)
+cogplat1.setHpr(0,0,0)
+cogplat1.setScale(1)
+
+cogstairs6 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs6.reparentTo(render)
+cogstairs6.setPos(15,34.153,150)
+cogstairs6.setHpr(270,0,0)
+cogstairs6.setScale(25)
+
+cogstairs2 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs2.reparentTo(render)
+cogstairs2.setPos(15,16.153,158)
+cogstairs2.setHpr(270,0,0)
+cogstairs2.setScale(25)
+
+cogplat5 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat5.reparentTo(render)
+cogplat5.setPos(9,-20,166)
+cogplat5.setHpr(0,0,0)
+cogplat5.setScale(8)
+
+cogplat3 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat3.reparentTo(render)
+cogplat3.setPos(9,-82,166)
+cogplat3.setHpr(0,0,0)
+cogplat3.setScale(8)
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat4.reparentTo(render)
+cogplat4.setPos(65,-82,166)
+cogplat4.setHpr(0,0,0)
+cogplat4.setScale(8)
+
+nc = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam")
+nc.reparentTo(render)
+nc.setPos(300,-82,166)
+nc.setHpr(270,0,0)
+nc.setScale(2)
+
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat4.reparentTo(render)
+cogplat4.setPos(125,-82,166)
+cogplat4.setHpr(0,0,0)
+cogplat4.setScale(8)
+
+nc.find('**/doorwood').setHpr(90,0,0)
+
+ceosign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+ceosign.reparentTo(render)
+ceosign.setPos(289.082,-62.281,166.025)
+ceosign.setHpr(270,0,0)
+ceosign.setScale(2)
+
+dance = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dance.reparentTo(render)
+dance.setPos(618.082,-109.281,166.025)
+dance.setHpr(270,0,0)
+dance.setScale(8)
+
+hydro = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",{"dance":"phase_5/models/char/tt_a_ara_ttc_hydrant_victoryDance.bam"})
+hydro.reparentTo(render)
+hydro.loop("dance")
+hydro.setPos(620.727,-108.852,170.025)
+hydro.setHpr(0,0,0)
+hydro.setScale(2)
+
+pandaActor = Actor({"head":"phase_3/models/char/dogMM_Shorts-head-1000.bam", \
+"torso":"phase_3/models/char/dogMM_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_5/models/char/dogMM_Shorts-head-happy-dance.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-head-sad-neutral.bam"}, \
+"torso":{"walk":"phase_5/models/char/dogMM_Shorts-torso-happy-dance.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-torso-sad-neutral.bam"}, \
+"legs":{"walk":"phase_5/models/char/dogMM_Shorts-legs-happy-dance.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-legs-sad-neutral.bam"} \
+})
+
+pandaActor.attach("head", "torso", "joint_head")
+shirts=loader.loadTexture("phase_4/maps/PJBlueBanana2.jpg")
+sleve=loader.loadTexture("phase_4/maps/PJSleeveBlue.jpg")
+shorts=loader.loadTexture("phase_4/maps/Blue_shorts_1.jpg")
+pandaActor.find('**/torso-top').setTexture(shirts, 1)
+pandaActor.find('**/torso-bot').setTexture(shorts, 1)
+pandaActor.find('**/sleeves').setTexture(sleve, 1)
+pandaActor.attach("torso", "legs", "joint_hips")
+gloves = pandaActor.find('**/hands')
+gloves.setColor(0.4,1,0.4)
+pandaActor.loop("walk")
+pandaActor.reparentTo(render)
+pandaActor.setPos(610,-144,170.567)
+
+hydro1 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",{"bdance":"phase_5/models/char/tt_a_ara_ttc_hydrant_victoryDance.bam"})
+hydro1.reparentTo(render)
+hydro1.loop("bdance")
+hydro1.setPos(654.727,-36.031,170.267)
+hydro1.setHpr(0,0,0)
+hydro1.setScale(1)
+
+music = loader.loadMusic("phase_13/audio/bgm/party_generic_theme.mid")
+music.play()
+music.setLoop()
+
+nc.find('**/pSphere14').setPos(54545454545,45555454545,45454545)
+
+b2 = Actor("phase_5/models/char/tt_r_ara_ttc_B2.bam",{"b2dance":"phase_5/models/char/tt_a_ara_ttc_B2_dance.bam"})
+b2.reparentTo(render)
+b2.loop("b2dance")
+b2.setPos(148.727,-22.031,0.025)
+b2.setHpr(270,0,0)
+b2.setScale(1)
+
+b21 = Actor("phase_5/models/char/tt_r_ara_ttc_B2.bam",{"b21dance":"phase_5/models/char/tt_a_ara_ttc_B2_dance.bam"})
+b21.reparentTo(render)
+b21.loop("b21dance")
+b21.setPos(148.727,-47.031,0.025)
+b21.setHpr(270,0,0)
+b21.setScale(1)
+
+b22 = Actor("phase_5/models/char/tt_r_ara_ttc_B2.bam",{"b22dance":"phase_5/models/char/tt_a_ara_ttc_B2_dance.bam"})
+b22.reparentTo(render)
+b22.loop("b22dance")
+b22.setPos(148.727,12.031,0.025)
+b22.setHpr(270,0,0)
+b22.setScale(1)
+
+max = Actor({"head":"phase_3/models/char/dogSS_Shorts-head-1000.bam", \
+"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_5/models/char/dogSS_Shorts-head-happy-dance.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-head-sad-neutral.bam"}, \
+"torso":{"walk":"phase_5/models/char/dogLL_Shorts-torso-happy-dance.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-torso-sad-neutral.bam"}, \
+"legs":{"walk":"phase_5/models/char/dogMM_Shorts-legs-happy-dance.bam", \
+"run":"phase_5/models/char/dogMM_Shorts-legs-sad-neutral.bam"} \
+})
+
+max.attach("head", "torso", "joint_head")
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistC.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistA.jpg")
+max.find('**/torso-top').setTexture(shirts, 1)
+max.find('**/torso-bot').setTexture(shorts, 1)
+max.find('**/torso-bot-cap').setTexture(shorts, 1)
+max.find('**/sleeves').setTexture(sleve, 1)
+max.attach("torso", "legs", "joint_hips")
+gloves = max.find('**/hands')
+gloves.setColor(0.97,0.3,0.3)
+max.loop("walk")
+max.reparentTo(render)
+muz=max.find('**/joint_toHead')
+nose = max.find('**/nose')
+mouth = loader.loadModel("phase_3/models/char/dogMM_Shorts-headMuzzles-1000.bam")
+bob = mouth.find('**/muzzle-short-laugh')
+bob.reparentTo(muz)
+nose.reparentTo(bob)
+nose.setY(-0.35)
+head = max.find('**/head')
+head.setColor(0.514, 0.761, 0.314)
+headf = max.find('**/head-front')
+headf.setColor(0.514, 0.761, 0.314)
+neck = max.find('**/neck')
+neck.setColor(0.514, 0.761, 0.314)
+max.find('**/muzzle').hide()
+max.find('**/arms').setColor(0.514, 0.761, 0.314)
+max.find('**/legs').setColor(0.514, 0.761, 0.314)
+max.find('**/feet').setColor(0.514, 0.761, 0.314)
+max.find('**/torso-bot').setColor(255,255,255)
+max.setPos(501,-67,170.567)
+max.setHpr(90,0,0)
+
+e1 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e1.reparentTo(render)
+e1.setHpr(0,0,0)
+e1.setPos(-99,134,0.025)
+
+pandaPosInterval22 = e1.posInterval(13,Point3(-99,134,200.025),
+startPos=Point3(-99,134,0.025))
+pandaPosInterval33 = e1.posInterval(13,Point3(-200,134,200.025),
+startPos=Point3(-99,134,200.025))
+pandaPosInterval44 = e1.posInterval(13,Point3(-99,134,0.025),
+startPos=Point3(-200,134.03,200.025))
+pandaHprInterval11 = e1.hprInterval(3,Point3(0,30,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e1.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 30, 0))
+pandaPace2 = Sequence(pandaHprInterval11,
+pandaPosInterval22,
+pandaPosInterval33,
+pandaHprInterval22,
+pandaPosInterval44,
+name="pandaPace2")
+pandaPace2.loop()
+
+e1.find('**/wall_front').removeNode()
+
+c1 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c1.setPos(-99,134,0.025)
+c1.setHpr(0,240,0)
+c1.hide()
+c1.reparentTo(render)
+c1.find('**/wall_back').removeNode()
+c1.find('**/wall_front').removeNode()
+c1.find('**/wall_left').removeNode()
+c1.find('**/wall_right').removeNode()
+c1.find('**/ceiling').removeNode()
+
+cogplat5 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat5.reparentTo(render)
+cogplat5.setPos(-235,135,200)
+cogplat5.setHpr(0,0,0)
+cogplat5.setScale(8)
+
+tr = loader.loadModel("phase_6/models/karting/RT_SpeedwayA.bam")
+tr.reparentTo(render)
+tr.setPos(-3500,135,597)
+tr.setHpr(0,0,0)
+tr.setScale(2)
+
+e2 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e2.reparentTo(render)
+e2.setHpr(0,0,0)
+e2.setPos(-271.212,129.736,203.476)
+e2.setScale(4)
+
+pandaPosInterval22 = e2.posInterval(13,Point3(-271.212,129.736,203.476),
+startPos=Point3(-993,102,200.025))
+pandaPosInterval33 = e2.posInterval(13,Point3(-993.212,102.736,200.025),
+startPos=Point3(-271.212,129.736,203.476))
+pandaHprInterval11 = e2.hprInterval(3,Point3(0,180,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e2.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 180, 0))
+pandaPace3 = Sequence(pandaPosInterval22,
+pandaPosInterval33,
+pandaHprInterval11,
+pandaHprInterval22,
+name="pandaPace3")
+pandaPace3.loop()
+
+e2.find('**/ceiling').removeNode()
+
+c2 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c2.setPos(-271.212,129.736,203.476)
+c2.setHpr(0,0,0)
+c2.hide()
+c2.reparentTo(render)
+c2.find('**/wall_front').removeNode()
+c2.find('**/wall_left').removeNode()
+c2.find('**/wall_right').removeNode()
+c2.find('**/ceiling').removeNode()
+
+nc.find('**/pCube125').setHpr(90,0,0)
+tr.find('**/seats2').remove()
+base.localAvatar.physControls.avatarControlForwardSpeed=80
+base.localAvatar.physControls.avatarControlJumpForce=80
+
+sky = loader.loadModel("phase_6/models/props/MM_sky.bam")
+sky.reparentTo(render)
+sky.setHpr(0,0,0)
+sky.setPos(0,100,80)
+sky.setScale(2)
+ttr = loader.loadModel("phase_5/models/props/traintrack2.bam")
+ttr.reparentTo(render)
+ttr.setHpr(0,0,0)
+ttr.setPos(-3586.351,1000.250,593.906)
+ttr.setScale(2)
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+environ = loader.loadModel("phase_4/models/minigames/tag_arena.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,0)
+environ.setHpr(0,0,0)
+environ.setScale(2)
+
+mail1 = Actor("phase_5/models/char/tt_r_ara_ttc_mailbox.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_mailbox_fightCheer.bam"})
+mail1.reparentTo(render)
+mail1.loop("cheer")
+mail1.setPos(-127.813,67.728,0.025)
+mail1.setHpr(100.490,0,0)
+mail1.setScale(1)
+
+mail2 = Actor("phase_5/models/char/tt_r_ara_ttc_mailbox.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_mailbox_fightCheer.bam"})
+mail2.reparentTo(render)
+mail2.loop("cheer")
+mail2.setPos(-127.813,70.728,0.025)
+mail2.setHpr(100.490,0,0)
+mail2.setScale(1)
+
+evsign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+evsign.reparentTo(render)
+evsign.setPos(-114.259,36.803,0.025)
+evsign.setHpr(540,0,0)
+evsign.setScale(2)
+
+evsignsecret = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+evsignsecret.reparentTo(render)
+evsignsecret.setPos(-114.259,36.803,0.025)
+evsignsecret.setHpr(0,0,0)
+evsignsecret.setScale(2)
+
+hydrant1 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant1.reparentTo(render)
+hydrant1.loop("cheer")
+hydrant1.setPos(-130.723,36.720,0.025)
+hydrant1.setHpr(540,0,0)
+hydrant1.setScale(1)
+
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(-123.414,36.807,0.025)
+
+pandaPosInterval22 = e.posInterval(13,Point3(-123.414,36.807,0.025),
+startPos=Point3(0,114.03,127.50))
+pandaPosInterval33 = e.posInterval(13,Point3(-123.414,36.807,110.50),
+
+
+startPos=Point3(-123.414,36.807,0.025))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+
+
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+
+
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+e.find('**/wall_left').removeNode()
+e.find('**/wall_right').removeNode()
+e.find('**/ceiling').removeNode()
+
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c.setPos(-123.414,36.807,0.025)
+c.setHpr(0,340.30,0)
+c.hide()
+c.reparentTo(render)
+c.find('**/wall_back').removeNode()
+c.find('**/wall_front').removeNode()
+c.find('**/wall_left').removeNode()
+c.find('**/wall_right').removeNode()
+c.find('**/ceiling').removeNode()
+
+cogstairs1 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs1.reparentTo(render)
+cogstairs1.setPos(-122.194,29.331,110.525)
+cogstairs1.setHpr(270,0,0)
+cogstairs1.setScale(25)
+
+cogplat1 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat1.reparentTo(render)
+cogplat1.setPos(-129.260,9.008,119.208)
+cogplat1.setHpr(0,0,0)
+cogplat1.setScale(1)
+
+cogplat2 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat2.reparentTo(render)
+cogplat2.setPos(-129.709,4.571,119.664)
+cogplat2.setHpr(0,0,0)
+cogplat2.setScale(1)
+
+cogplat3 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat3.reparentTo(render)
+cogplat3.setPos(-129.992,0.160,120.120)
+cogplat3.setHpr(0,0,0)
+cogplat3.setScale(1)
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat4.reparentTo(render)
+cogplat4.setPos(-76.400,79.479,0.025)
+cogplat4.setHpr(0,0,0)
+cogplat4.setScale(1)
+
+cogplat5 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat5.reparentTo(render)
+cogplat5.setPos(-81.400,79.80,0.025)
+cogplat5.setHpr(0,0,0)
+cogplat5.setScale(1)
+
+cogplat6 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat6.reparentTo(render)
+cogplat6.setPos(-86.400,79.80,0.025)
+cogplat6.setHpr(0,0,0)
+cogplat6.setScale(1)
+
+cogplat7 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat7.reparentTo(render)
+cogplat7.setPos(-91.400,79.80,0.025)
+cogplat7.setHpr(0,0,0)
+cogplat7.setScale(1)
+
+cogplat8 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat8.reparentTo(render)
+cogplat8.setPos(-96.400,79.80,0.025)
+cogplat8.setHpr(0,0,0)
+cogplat8.setScale(1)
+
+cogplat9 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat9.reparentTo(render)
+cogplat9.setPos(-99.437,74.769,0.025)
+cogplat9.setHpr(0,0,0)
+cogplat9.setScale(1)
+
+cogplat10 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat10.reparentTo(render)
+cogplat10.setPos(-99.636,69.523,0.025)
+cogplat10.setHpr(0,0,0)
+cogplat10.setScale(1)
+
+cogplat11 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat11.reparentTo(render)
+cogplat11.setPos(-99.487,64.523,0.025)
+cogplat11.setHpr(0,0,0)
+cogplat11.setScale(1)
+
+cogplat12 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat12.reparentTo(render)
+cogplat12.setPos(-99.487,58.523,0.025)
+cogplat12.setHpr(0,0,0)
+cogplat12.setScale(1)
+
+cogplat13 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat13.reparentTo(render)
+cogplat13.setPos(-99.487,53.523,0.025)
+cogplat13.setHpr(0,0,0)
+cogplat13.setScale(1)
+
+cogplat14 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat14.reparentTo(render)
+cogplat14.setPos(-99.487,48.523,0.025)
+cogplat14.setHpr(0,0,0)
+cogplat14.setScale(1)
+
+cogplat15 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat15.reparentTo(render)
+cogplat15.setPos(-99.487,43.523,0.025)
+cogplat15.setHpr(0,0,0)
+cogplat15.setScale(1)
+
+cogplat16 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat16.reparentTo(render)
+cogplat16.setPos(-99.487,39.523,0.025)
+cogplat16.setHpr(0,0,0)
+cogplat16.setScale(1)
+
+cogplat17 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat17.reparentTo(render)
+cogplat17.setPos(-99.487,34.523,0.025)
+cogplat17.setHpr(0,0,0)
+cogplat17.setScale(1)
+
+cogplat18 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat18.reparentTo(render)
+cogplat18.setPos(-99.487,29.523,0.025)
+cogplat18.setHpr(0,0,0)
+cogplat18.setScale(1)
+
+cogplat19 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat19.reparentTo(render)
+cogplat19.setPos(-92.408,43.600,0.025)
+cogplat19.setHpr(0,0,0)
+cogplat19.setScale(1)
+
+cogplat20 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat20.reparentTo(render)
+cogplat20.setPos(-92.408,38.600,0.025)
+cogplat20.setHpr(0,0,0)
+cogplat20.setScale(1)
+
+cogplat21 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat21.reparentTo(render)
+cogplat21.setPos(-92.408,33.600,0.025)
+cogplat21.setHpr(0,0,0)
+cogplat21.setScale(1)
+
+cogplat22 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat22.reparentTo(render)
+cogplat22.setPos(-92.408,28.600,0.025)
+cogplat22.setHpr(0,0,0)
+cogplat22.setScale(1)
+
+cogplat23 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat23.reparentTo(render)
+cogplat23.setPos(-87.213,113.428,0.025)
+cogplat23.setHpr(0,0,0)
+cogplat23.setScale(1)
+
+cogplat24 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat24.reparentTo(render)
+cogplat24.setPos(-91.213,113.428,0.025)
+cogplat24.setHpr(0,0,0)
+cogplat24.setScale(1)
+
+cogplat25 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat25.reparentTo(render)
+cogplat25.setPos(-91.213,109.428,0.025)
+cogplat25.setHpr(0,0,0)
+cogplat25.setScale(1)
+
+cogplat26 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat26.reparentTo(render)
+cogplat26.setPos(-93.213,109.428,0.025)
+cogplat26.setHpr(0,0,0)
+cogplat26.setScale(1)
+
+
+cogplat27 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat27.reparentTo(render)
+cogplat27.setPos(-81.2940,113.600,0.025)
+cogplat27.setHpr(0,0,0)
+cogplat27.setScale(1)
+
+cogplat28 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat28.reparentTo(render)
+cogplat28.setPos(-76.2940,113.600,0.025)
+cogplat28.setHpr(0,0,0)
+cogplat28.setScale(1)
+
+cogplat29 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat29.reparentTo(render)
+cogplat29.setPos(-81.2940,109.600,0.025)
+cogplat29.setHpr(0,0,0)
+cogplat29.setScale(1)
+
+cogplat30 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat30.reparentTo(render)
+cogplat30.setPos(-76.2940,109.600,0.025)
+cogplat30.setHpr(0,0,0)
+cogplat30.setScale(1)
+
+cogplat31 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat31.reparentTo(render)
+cogplat31.setPos(-104.880,26.400,0.025)
+cogplat31.setHpr(0,0,0)
+cogplat31.setScale(1)
+
+cogplat32 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat32.reparentTo(render)
+cogplat32.setPos(-107.880,26.400,0.025)
+cogplat32.setHpr(0,0,0)
+cogplat32.setScale(1)
+
+cogplat33 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat33.reparentTo(render)
+cogplat33.setPos(-112.880,26.400,0.025)
+cogplat33.setHpr(0,0,0)
+cogplat33.setScale(1)
+
+cogplat34 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat34.reparentTo(render)
+cogplat34.setPos(-117.880,26.400,0.025)
+cogplat34.setHpr(0,0,0)
+cogplat34.setScale(1)
+
+cogplat35 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat35.reparentTo(render)
+cogplat35.setPos(-122.880,26.400,0.025)
+cogplat35.setHpr(0,0,0)
+cogplat35.setScale(1)
+
+cogplat36 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat36.reparentTo(render)
+cogplat36.setPos(-127.880,26.400,0.025)
+cogplat36.setHpr(0,0,0)
+cogplat36.setScale(1)
+
+cogplat37 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat37.reparentTo(render)
+cogplat37.setPos(-127.880,26.400,0.025)
+cogplat37.setHpr(0,0,0)
+cogplat37.setScale(1)
+
+cogplat38 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat38.reparentTo(render)
+cogplat38.setPos(-99.880,79.400,0.025)
+cogplat38.setHpr(0,0,0)
+cogplat38.setScale(1)
+
+mc = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam")
+mc.reparentTo(render)
+mc.setPos(-130.000,-80.125,120.576)
+mc.setHpr(180,0,0)
+mc.setScale(1)
+
+trash = Actor("phase_5/models/char/tt_r_ara_ttc_trashcan.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_trashcan_fightCheer.bam"})
+trash.reparentTo(render)
+trash.loop("cheer")
+trash.setPos(-92.789,28.496,0.481)
+trash.setHpr(245,0,0)
+trash.setScale(1)
+
+ce = loader.loadModel("phase_4/models/modules/elevator.bam")
+ce.reparentTo(render)
+ce.setPos(-123.513,36.076,0.025)
+ce.setHpr(180,0,0)
+ce.setScale(1)
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam")
+castle.reparentTo(render)
+castle.setPos(-175.602,-12.228,120.601)
+castle.setHpr(0,0,0)
+castle.setScale(1)
+
+tiki = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam")
+tiki.reparentTo(render)
+tiki.setPos(-175.113,-31.989,120.601)
+tiki.setHpr(0,0,0)
+tiki.setScale(1)
+
+cupcake = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_cupcake.bam")
+cupcake.reparentTo(render)
+cupcake.setPos(-175.695,-55.210,120.601)
+cupcake.setHpr(0,0,0)
+cupcake.setScale(1)
+
+mgr2 = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+mgr2.reparentTo(render)
+mgr2.setPos(-129.154,-38.785,120.601)
+mgr2.setHpr(0,0,0)
+mgr2.setScale(3)
+pandaHprInterval1 = mgr2.hprInterval(3,Point3(0,0,0),
+
+
+startHpr=Point3(270, 0, 0))
+pandaHprInterval2 = mgr2.hprInterval(3,Point3(270, 0, 0),
+
+
+startHpr=Point3(0, 0, 0))
+# Create and play the sequence that coordinates the intervals.
+maryspin = Sequence(pandaHprInterval1,
+name="maryspin")
+maryspin.loop()
+
+dsign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+dsign.reparentTo(render)
+dsign.setPos(-82.433,-15.141,120.601)
+dsign.setHpr(270,0,0)
+dsign.setScale(2)
+
+hydrant2 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant2.reparentTo(render)
+hydrant2.loop("cheer")
+hydrant2.setPos(-83.066,-23.255,120.601)
+hydrant2.setHpr(270,0,0)
+hydrant2.setScale(2)
+
+hydrant3 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant3.reparentTo(render)
+hydrant3.loop("cheer")
+hydrant3.setPos(-83.438,-30.792,120.601)
+hydrant3.setHpr(270,0,0)
+hydrant3.setScale(2)
+
+hydrant4 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant4.reparentTo(render)
+hydrant4.loop("cheer")
+hydrant4.setPos(-83.610,-37.638,120.601)
+hydrant4.setHpr(270,0,0)
+hydrant4.setScale(2)
+
+hydrant5 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant5.reparentTo(render)
+hydrant5.loop("cheer")
+hydrant5.setPos(-83.542,-44.114,120.601)
+hydrant5.setHpr(270,0,0)
+hydrant5.setScale(2)
+
+hydrant6 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant6.reparentTo(render)
+hydrant6.loop("cheer")
+hydrant6.setPos(-83.990,-51.594,120.601)
+hydrant6.setHpr(270,0,0)
+hydrant6.setScale(2)
+
+hydrant7 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant7.reparentTo(render)
+hydrant7.loop("cheer")
+hydrant7.setPos(-83.287,-58.708,120.601)
+hydrant7.setHpr(270,0,0)
+hydrant7.setScale(2)
+
+hydrant8 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant8.reparentTo(render)
+hydrant8.loop("cheer")
+hydrant8.setPos(-83.761,-65.645,120.601)
+hydrant8.setHpr(270,0,0)
+hydrant8.setScale(2)
+
+hydrant9 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hydrant9.reparentTo(render)
+hydrant9.loop("cheer")
+hydrant9.setPos(-83.916,-70.939,120.601)
+hydrant9.setHpr(270,0,0)
+hydrant9.setScale(2)
+
+hall = loader.loadModel("phase_4/models/modules/toonhall.bam")
+hall.reparentTo(render)
+hall.setPos(-68.369,-16.720,120.601)
+hall.setHpr(270,0,0)
+hall.setScale(1)
+
+Remove Bob's land
+
+environ.removeNode()
+hall.removeNode()
+e.removeNode()
+c.removeNode()
+castle.removeNode()
+mail1.removeNode()
+mgr1.removeNode()
+evsign.removeNode()
+cogplat.removeNode()
+cogplat1.removeNode()
+cogstairs6.removeNode()
+cogstairs2.removeNode()
+cogplat5.removeNode()
+cogplat3.removeNode()
+cogplat4.removeNode()
+nc.removeNode()
+cogplat4.removeNode()
+nc.removeNode()
+ceosign.removeNode()
+dance.removeNode()
+hydro.removeNode()
+pandaActor.removeNode()
+hydro1.removeNode()
+music.removeNode()
+nc.removeNode()
+b2.removeNode()
+b21.removeNode()
+b22.removeNode()
+max.removeNode()
+e1.removeNode()
+c1.removeNode()
+cogplat5.removeNode()
+tr.removeNode()
+e2.removeNode()
+c2.removeNode()
+nc.removeNode()
+tr.removeNode()
+sky.removeNode()
+ttr.removeNode()
+environ.removeNode()
+mail1.removeNode()
+mail2.removeNode()
+evsign.removeNode()
+evsignsecret.removeNode()
+hydrant1.removeNode()
+e.removeNode()
+c.removeNode()
+cogstairs1.removeNode()
+cogplat1.removeNode()
+cogplat2.removeNode()
+cogplat3.removeNode()
+cogplat4.removeNode()
+cogplat5.removeNode()
+cogplat6.removeNode()
+cogplat7.removeNode()
+cogplat8.removeNode()
+cogplat9.removeNode()
+cogplat10.removeNode()
+cogplat11.removeNode()
+cogplat12.removeNode()
+cogplat13.removeNode()
+cogplat14.removeNode()
+cogplat15.removeNode()
+cogplat16.removeNode()
+cogplat17.removeNode()
+cogplat18.removeNode()
+cogplat19.removeNode()
+cogplat20.removeNode()
+cogplat21.removeNode()
+cogplat22.removeNode()
+cogplat23.removeNode()
+cogplat24.removeNode()
+cogplat25.removeNode()
+cogplat26.removeNode()
+cogplat27.removeNode()
+cogplat28.removeNode()
+cogplat29.removeNode()
+cogplat30.removeNode()
+cogplat31.removeNode()
+cogplat32.removeNode()
+cogplat33.removeNode()
+cogplat34.removeNode()
+cogplat35.removeNode()
+cogplat36.removeNode()
+cogplat37.removeNode()
+cogplat38.removeNode()
+mc.removeNode()
+trash.removeNode()
+ce.removeNode()
+castle.removeNode()
+tiki.removeNode()
+cupcake.removeNode()
+mgr2.removeNode()
+dsign.removeNode()
+hydrant2.removeNode()
+hydrant3.removeNode()
+hydrant4.removeNode()
+hydrant5.removeNode()
+hydrant6.removeNode()
+hydrant7.removeNode()
+hydrant8.removeNode()
+hydrant9.removeNode()
+hall.removeNode()

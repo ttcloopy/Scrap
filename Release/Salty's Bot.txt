@@ -1,0 +1,28 @@
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.talkAssistant.sendOpenTalk('Greetings, Toons!')
+def part2():
+    base.talkAssistant.sendOpenTalk('I am Sal ty.')
+def part3():
+    base.talkAssistant.sendOpenTalk('There is a new ageD of Toontown')
+def part4():
+    base.talkAssistant.sendOpenTalk('Freckles failed.')
+def part5():
+    base.talkAssistant.sendOpenTalk('Lets just say,')
+def part6():
+    base.talkAssistant.sendOpenTalk('Goodbye')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(2))
+  seq.append(Func(part2))
+  seq.append(Wait(2))
+  seq.append(Func(part3))
+  seq.append(Wait(4))
+  seq.append(Func(part4))
+  seq.append(Wait(5))
+  seq.append(Func(part5))
+  seq.append(Wait(4))
+  seq.append(Func(part6))
+  seq.start()
+onTime()

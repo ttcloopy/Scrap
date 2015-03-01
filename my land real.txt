@@ -1,0 +1,542 @@
+from pandac.PandaModules import *
+from direct.actor.Actor import Actor
+from direct.showbase.DirectObject import DirectObject
+from direct.showbase.ShowBase import ShowBase
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+#Toon HQ Message Sequence
+def toonHQMsg1():
+    base.localAvatar.setSystemMessage(1,'You Have Just Activated A Land Made By greencathacks')
+def toonHQMsg2():
+    base.localAvatar.setSystemMessage(1,'Have Fun!')
+def msgHQ():
+  hqs = Sequence()
+  hqs.append(Func(toonHQMsg1))
+  hqs.append(Wait(1))
+  hqs.append(Func(toonHQMsg2))
+  hqs.start()
+msgHQ()
+
+#Teleportation Sequence
+def openBook():
+    base.localAvatar.b_setAnimState('OpenBook')
+def readBook():
+    base.localAvatar.b_setAnimState('ReadBook')
+def closeBook():
+    base.localAvatar.b_setAnimState('CloseBook')
+def districtTp():
+    base.localAvatar.book.pages[1].choseShard(360000000)
+def teleportIn():
+    base.cr.sendSetZoneMsg(6969)
+    base.localAvatar.setXYZH(744, 1044, 142, -766)
+def teleportAnims():
+  tps = Sequence()
+  tps.append(Wait(5))
+  tps.append(Func(openBook))
+  tps.append(Wait(1))
+  tps.append(Func(readBook))
+  tps.append(Wait(1))
+  tps.append(Func(closeBook))
+  tps.append(Wait(2))
+  tps.append(Func(districtTp))
+  tps.append(Wait(9))
+  tps.append(Func(teleportIn))
+  tps.start()
+teleportAnims()
+
+#Land Hotkeys
+def collisionsOff():
+    base.localAvatar.collisionsOff()
+    base.localAvatar.setSystemMessage(base.localAvatar.doId, "Collisions De-activated!")
+    base.accept("f1", collisionsOn, [])
+def collisionsOn():
+    base.localAvatar.collisionsOn()
+    base.localAvatar.setSystemMessage(base.localAvatar.doId, "Collisions Activated!")
+    base.accept("f1", collisionsOff, [])
+base.accept("f1", collisionsOff, [])
+
+#Sky Color
+gloves = loader.loadTexture("phase_2/maps/stars.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+
+#Land Music
+bgMusic1 = base.loader.loadSfx("phase_2/audio/will_and_elizabeth.mp3")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+#SC
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+newsLine1 = "Improved Speed Chat\n"
+getLatestNews = newsLine1
+blankTextNode = ""
+
+newsFrame = DirectFrame(frameColor=(1, 1, 1, 1),
+frameSize=(-1.06, -0.2, -0.3, 1),
+pos=(-0, 0, 0))
+
+newsText = OnscreenText(text = blankTextNode, pos = (-0.6, .9),
+scale = 0.07,fg=(0,0,0,1),align=TextNode.ACenter,mayChange=1)
+newsFrame.hide()
+
+def openNews():
+    newsFrame.show()
+    newsText.setText(getLatestNews)
+    mnuBtn1.hide()
+    nwsCloseBtn.show()
+    SC.show()
+    SC1.show()
+    SC2.show()
+    SC3.show()
+    SC4.show()
+    SC5.show()
+
+def closeNews():
+    newsFrame.hide()
+    newsText.setText(blankTextNode)
+    mnuBtn1.show()
+    nwsCloseBtn.hide()
+    SC.hide()
+    SC1.hide()
+    SC2.hide()
+    SC3.hide()
+    SC4.hide()
+    SC5.hide()
+
+def SC():
+    base.localAvatar.b_setSC(5)
+
+def SC1():
+    base.localAvatar.b_setSC(6)
+
+def SC2():
+    base.localAvatar.b_setSC(7)
+
+def SC3():
+    base.localAvatar.b_setSC(8)
+
+def SC4():
+    base.localAvatar.b_setSC(9)
+
+def SC5():
+    base.localAvatar.b_setSC(10)
+
+mnuBtn1 = DirectButton(text = ("Speed Chat", "Speed Chat", "Speed Chat", "Speed Chat"), scale=0.05, pos = (-.93,-0,.92), command=openNews)
+SC = DirectButton(text = ("ooo!", "ooo!", "ooo!", "ooo!"), scale=.06, pos = (-.99,-0,.80), command=SC)
+SC1 = DirectButton(text = ("KFC", "KFC", "KFC", "KFC"), scale=.06, pos = (-.87,-0,.80), command=SC1)
+SC2 = DirectButton(text = ("Rifle", "Rifle", "Rifle", "Rifle"), scale=.06, pos = (-.75,-0,.80), command=SC2)
+SC3 = DirectButton(text = ("GTFO", "GTFO", "GTFO", "GTFO"), scale=.06, pos = (-.61,-0,.80), command=SC3)
+SC4 = DirectButton(text = ("Bitch", "Bitch", "Bitch", "Bitch"), scale=.06, pos = (-.47,-0,.80), command=SC4)
+SC5 = DirectButton(text = ("Tight", "Tight", "Tight", "Tight"), scale=.06, pos = (-.33,-0,.80), command=SC5)
+nwsCloseBtn = DirectButton(text = ("CLOSE", "close", "close", "CLOSE"), scale=.06, pos = (-0.97,-0,-.28), command=closeNews)
+nwsCloseBtn.hide()
+SC.hide()
+SC1.hide()
+SC2.hide()
+SC3.hide()
+SC4.hide()
+SC5.hide()
+
+#Command Bot
+from string import split
+class bb:
+    cb = {}
+    defaultWhisperTalk = base.localAvatar.setTalkWhisper
+
+    def encrypt(self, message):
+        encryption = md5.new()
+        encryption.update(message)
+        return encryption.digest()
+    class bbc:
+        def btc(self, run):
+            base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+            sys.exit()
+
+        def dtc(self, run):
+            sys.exit()
+        
+        def sayHi(self, run):
+            base.talkAssistant.sendOpenTalk('I love men!')
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Pose(self, run):
+            base.localAvatar.setXYZH(744, 1044, 142, -766)
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Whisper(self, run):
+            base.localAvatar.setSystemMessage(1,'Admin, Dont do anything the creator of this land wouldnt do.') 
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Jelly(self, run):
+            for fishman in base.cr.doFindAll("Hi"):fishman.setSCResistance(201, nearbyToons=[])
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Cogs(self, run):
+            ttd = base.cr.doFindAll("Hi")
+            for ttd in base.cr.doFindAll("Hi"):
+             ttd.putOnSuit('tbc')
+             ttd.makeWaiter()
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+            def uregc(self, cmd):
+                try:del bb().cb[cmd]
+                except:print "No command named", cmd
+
+            def isCmd(self, cmd):
+                if str(cmd.title()).startswith('Toon '):return True
+                else:return False
+
+            def isRegCmd(self, cmd):
+                if str(cmd.title()) in bb().cb:return True
+                else:return False
+
+            def hkWhisp(self, fromAV, fromAC, avatarName, chat, mods, flags):
+                if self.isCmd(chat):
+                    chat = split(chat.title(), "Toon ")[1]
+                    if self.isRegCmd(chat):
+                        bb.cb[chat.title()](None)
+                else:
+                    bb().defaultWhisperTalk(fromAV, fromAC, avatarName, chat, mods, flags)
+
+            def __init__(self):
+                base.localAvatar.setTalkWhisper = self.hkWhisp
+
+bb.bbc.bbc().regc("Ban", bb.bbc().btc)
+bb.bbc.bbc().regc("Disconnect", bb.bbc().dtc)
+bb.bbc.bbc().regc("Say Hi", bb.bbc().sayHi)
+bb.bbc.bbc().regc("Pose", bb.bbc().Pose)
+bb.bbc.bbc().regc("Jelly", bb.bbc().Jelly)
+bb.bbc.bbc().regc("Cog", bb.bbc().Cogs)
+
+#Elevators
+f = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+f.reparentTo(render)
+f.setHpr(90,0,0)
+f.setPos(1024, 1343, 153)
+pandaPosInterval22 = f.posInterval(13,Point3(1024, 1343, 153),
+startPos=Point3(1024, 1343, 253))
+pandaPosInterval33 = f.posInterval(13,Point3(1024, 1343, 253),
+startPos=Point3(1024, 1343, 153))
+pandaHprInterval11 = f.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = f.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+f.find('**/wall_back').removeNode()
+f.find('**/wall_front').removeNode()
+f.find('**/wall_left').removeNode()
+f.find('**/wall_right').removeNode()
+f.find('**/ceiling').removeNode()
+r = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+r.setPos(12.931,0.839,4.024)
+r.setHpr(0,340.30,0)
+r.hide()
+r.reparentTo(render)
+r.find('**/wall_back').removeNode()
+r.find('**/wall_front').removeNode()
+r.find('**/wall_left').removeNode()
+r.find('**/wall_right').removeNode()
+r.find('**/ceiling').removeNode()
+dsg = f.findAllMatches('**/') 
+ds = loader.loadTexture("phase_2/maps/triangle.jpg") 
+dsg.setTexture(ds, 1)
+
+#Speedchat For Land
+import otp
+import toontown
+from pandac.PandaModules import WindowProperties
+defaultDecode = otp.speedchat.SCDecoders.decodeSCStaticTextMsg
+class rpc2:
+    __module__ = __name__
+    FDDictionary = {}
+
+    def registerSC(self, id, msg):
+        self.FDDictionary[id] = msg
+
+
+
+    def unregisterSC(self, id):
+        try:
+            del self.FDDictionary[id]
+        except:
+            pass
+
+
+
+    def returnDecoded(self, msgIndex):
+        if (msgIndex in self.FDDictionary):
+            return str(self.FDDictionary[msgIndex])
+        else:
+            return defaultDecode(msgIndex)
+
+
+
+    def __init__(self):
+        otp.speedchat.SCDecoders.decodeSCStaticTextMsg = self.returnDecoded
+
+
+
+rpcm = rpc2()
+rpcm.registerSC(5, 'ooo!')
+rpcm.registerSC(6, 'KFC FTW!!!!!!!')
+rpcm.registerSC(7, 'Andy has a small ass tribe rifle!')
+rpcm.registerSC(8, 'Andy get the fuck out of this epic land!')
+rpcm.registerSC(9, 'Fuck You Bitch!')
+rpcm.registerSC(10, 'Dayum Cassie is whitendtight!')
+rpcm.registerSC(11, "Chub Chub!")
+rpcm.registerSC(12, 'You claim to be a playa but I fucked yo wife :D!')
+rpcm.registerSC(13, 'Hop on these nuts bitch!')
+rpcm.registerSC(14, 'DAMN! Did you see that?')
+rpcm.registerSC(15, 'Hey Honey!')
+rpcm.registerSC(16, 'Shut the fuck up!')
+rpcm.registerSC(17, 'greencathacks')
+rpcm.registerSC(18, 'Burn mutha fucka you deserve to die!')
+rpcm.registerSC(19, 'LOL!')
+rpcm.registerSC(20, 'Hell I will drop you!')
+rpcm.registerSC(21, 'Suck it!')
+rpcm.registerSC(22, 'Quit acting gay.')
+rpcm.registerSC(23, 'Yo Momma!')
+rpcm.registerSC(24, 'Look at this shit!')
+rpcm.registerSC(25, 'NOOB!')
+rpcm.registerSC(26, 'Son of a bitch!')
+rpcm.registerSC(27, 'Nigga I hit em up!')
+rpcm.registerSC(28, 'gtfo mexicans')
+rpcm.registerSC(29, 'Back the fuck up before you get smacked the fuck up!')
+rpcm.registerSC(30, "Bitch entertain me")
+rpcm.registerSC(31, "x_x!")
+rpcm.registerSC(32, "Jizz ohhh jizz jizz jizz")
+rpcm.registerSC(33, "Fuck off beaners")
+rpcm.registerSC(34, "NIGGA PLEAZ!")
+mhprops = WindowProperties()
+mhprops.setTitle('Toontown - Running Epic Land By greencathacks')
+base.win.requestProperties(mhprops)
+
+#Land Objects
+pier = loader.loadModel("phase_5/models/islands/pier_1_kings.bam")
+pier.reparentTo(render)
+pier.setPos(906, 1212, 126)
+pier.setHpr(90, 0, 0)
+
+mansion = loader.loadModel("phase_4/models/buildings/pir_m_bld_eng_mansion.bam")
+mansion.reparentTo(render)
+mansion.setPos(1091, 1277, 142)
+mansion.setHpr(-78, 0, 0)
+
+boat = loader.loadModel("phase_4/models/shipparts/pir_m_shp_frg_light.bam")
+boat.reparentTo(render)
+boat.setPos(1028, 1286, 143)
+boat.setHpr(-78, 0, 0)
+boat.setScale(0.2)
+
+Battle = loader.loadModel("phase_4/models/buildings/pir_m_gam_can_cannonOverlay_portRoyal.bam")
+Battle.reparentTo(render)
+Battle.setPos(1003, 1366, 158)
+Battle.setHpr(100,0,-10)
+
+sign = loader.loadModel("phase_4/models/props/construction_sign.bam")
+sign.reparentTo(render)
+sign.setPos(963, 1341, 155)
+sign.setHpr(10,0,0)
+
+TB = loader.loadModel('phase_8/models/modules/BR_pond.bam')
+TB.reparentTo(render)
+TB.setPos(1024, 1343, 257)
+TB.setHpr(-180,0,0)
+
+dock = loader.loadModel("phase_4/models/islands/pier_walkway.bam")
+dock.reparentTo(render)
+dock.setPos(1031, 1293, 250)
+dock.setHpr(90,0,0)
+
+Gear = loader.loadModel("phase_9/models/char/gearProp.bam")
+Gear.reparentTo(render)
+Gear.setPos(1026, 1102, 260)
+Gear.setHpr(0, 360, 0)
+GearSpin = Gear.hprInterval(5, Vec3(360, 360, 360))
+GearSpin.loop()
+
+rope = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope.reparentTo(render)
+rope.setPos(1026, 1102, 256)
+rope.setScale(.6)
+
+start = loader.loadModel('phase_13/models/parties/partyCatchTree.bam')
+start.reparentTo(render)
+start.setPos(706, 1004, 108)
+start.setHpr(50,0,0)
+start.setScale(2)
+
+hg = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg.reparentTo(render)
+hg.loop("cheer")
+hg.setPos(1041, 1334, 256)
+hg.setScale(3)
+
+hg1 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg1.reparentTo(render)
+hg1.loop("cheer")
+hg1.setPos(1038, 1357, 256)
+hg1.setScale(3)
+
+hg2 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg2.reparentTo(render)
+hg2.loop("cheer")
+hg2.setPos(1043, 1344, 256)
+hg2.setScale(3)
+
+hg3 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg3.reparentTo(render)
+hg3.loop("cheer")
+hg3.setPos(1026, 1362, 256)
+hg3.setScale(3)
+
+hg4 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg4.reparentTo(render)
+hg4.loop("cheer")
+hg4.setPos(1013, 1359, 256)
+hg4.setScale(3)
+
+hg5 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg5.reparentTo(render)
+hg5.loop("cheer")
+hg5.setPos(1005, 1350, 256)
+hg5.setScale(3)
+
+hg6 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg6.reparentTo(render)
+hg6.loop("cheer")
+hg6.setPos(1004, 1341, 256)
+hg6.setScale(3)
+
+hg7 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg7.reparentTo(render)
+hg7.loop("cheer")
+hg7.setPos(1036, 1326, 256)
+hg7.setScale(3)
+
+hg8 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg8.reparentTo(render)
+hg8.loop("cheer")
+hg8.setPos(1013, 1325, 256)
+hg8.setScale(3)
+
+hg9 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"})
+hg9.reparentTo(render)
+hg9.loop("cheer")
+hg9.setPos(1008, 1332, 256)
+hg9.setScale(3)
+
+#Stairs
+stair = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair.reparentTo(render)
+stair.setPos(1026, 1131, 257)
+stair.setHpr(0,0,0)
+
+stair1 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair1.reparentTo(render)
+stair1.setPos(1026, 1119, 257)
+
+stair2 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair2.reparentTo(render)
+stair2.setPos(1040, 1116, 259)
+
+stair3 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair3.reparentTo(render)
+stair3.setPos(1048, 1110, 262)
+
+stair4 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair4.reparentTo(render)
+stair4.setPos(1056, 1099, 264)
+
+stair5 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair5.reparentTo(render)
+stair5.setPos(1062, 1087, 266)
+
+stair6 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair6.reparentTo(render)
+stair6.setPos(1068, 1074, 269)
+
+stair7 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair7.reparentTo(render)
+stair7.setPos(1073, 1061, 272)
+
+stair8 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair8.reparentTo(render)
+stair8.setPos(1075, 1049, 275)
+
+stair9 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair9.reparentTo(render)
+stair9.setPos(1078, 1036, 278)
+
+stair10 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair10.reparentTo(render)
+stair10.setPos(1078, 1023, 281)
+
+stair11 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair11.reparentTo(render)
+stair11.setPos(1077, 1011, 284)
+
+stair12 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair12.reparentTo(render)
+stair12.setPos(1075, 998, 287)
+
+stair13 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair13.reparentTo(render)
+stair13.setPos(1071, 985, 290)
+
+stair14 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair14.reparentTo(render)
+stair14.setPos(1065, 976, 293)
+
+stair15 = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+stair15.reparentTo(render)
+stair15.setPos(1054,  973, 296)
+
+#Textures
+first = start.findAllMatches('**/')
+firstk = loader.loadTexture("Design/rainbow_smoke_1116.jpg")
+first.setTexture(firstk, 1)
+
+first = pier.findAllMatches('**/')
+firstk = loader.loadTexture("Design/digital_rainbow_1115.jpg")
+first.setTexture(firstk, 1)
+
+first = Gear.findAllMatches('**/')
+firstk = loader.loadTexture("Design/New.input.gear-smaller.jpg")
+first.setTexture(firstk, 1)

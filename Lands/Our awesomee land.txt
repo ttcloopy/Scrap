@@ -1,0 +1,92 @@
+shirts=loader.loadTexture("phase_4/maps/pir_t_are_cav_lava.jpg")
+sleve=loader.loadTexture("phase_4/maps/pir_t_are_cav_lava.jpg")
+short=loader.loadTexture("phase_4/maps/pir_t_are_cav_lava.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(short,1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 1)
+base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.73,0.3)
+base.localAvatar.setSystemMessage(1,'Welcome To The Land!, Created by No, Hi and Furball!')
+base.localAvatar.setSystemMessage(1,'Hotkeys:      Collisions Off - f1           Collisions On - f2.')
+base.cr.sendSetZoneMsg(10000000)
+base.localAvatar.setPos(1.818,112.288,127.525)
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from direct.showbase.DirectObject import DirectObject
+from pandac.PandaModules import CollisionTraverser, CollisionHandlerEvent
+from pandac.PandaModules import CollisionNode, CollisionSphere
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.gui.DirectGui import DirectFrame
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+sky1 = loader.loadModel("phase_8/models/props/DL_sky.bam")
+sky1.reparentTo(render)
+
+environ = loader.loadModel("phase_4/models/buildings/pir_m_gam_can_cannonOverlay_portRoyal.bam")
+environ.reparentTo(render)
+environ.setPos(1.818,112.288,127.525)
+environ.setHpr(90,0,0)
+environ.setScale(1)
+
+bgMusic1 = base.loader.loadSfx("phase_2/audio/will_and_elizabeth.mp3")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Control)
+  def Control(self):
+    base.localAvatar.collisionsOff()
+    base.localAvatar.setSystemMessage(0, 'Collisions Off')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Control)
+  def Control(self):
+    base.localAvatar.collisionsOn()
+    base.localAvatar.setSystemMessage(0, 'Collisions On')
+c = Control()
+
+newsLine1 = "Welcome to our awesome land!  \n \n This is where we will tell you when we update. \n"
+newsLine2 = "We update everyday.  \n Be sure to keep waiting, as we update often. \n"
+newsLine3 = "You will never stop gasping at how wonderful this is! \n \n Brought to you faithfully. \n ~ Furball, Hi, No ~"
+getLatestNews = newsLine1 + newsLine2 + newsLine3
+blankTextNode = ""
+hideUpAv = base.localAvatar.getZoneId()
+hideUpAv += 10
+
+newsFrame = DirectFrame(frameColor=(1, 1, 1, 1),
+frameSize=(-1, 1, -0.3, 1),
+pos=(-0.010, 0.013, 0.5))
+
+
+newsText = OnscreenText(text = blankTextNode, pos = (-0.010, 0.9),
+scale = 0.07,fg=(0,0,0,1),align=TextNode.ACenter,mayChange=1)
+newsFrame.hide()
+
+def openNews():
+    newsFrame.show()
+    newsText.setText(getLatestNews)
+    mnuBtn1.hide()
+    nwsCloseBtn.show()
+
+def closeNews():
+    newsFrame.hide()
+    newsText.setText(blankTextNode)
+    mnuBtn1.show()
+    nwsCloseBtn.hide()
+
+mnuBtn1 = DirectButton(text = ("INFO", "info", "info", "INFO"), scale=0.07, pos = (-1.24, 0.710, 0.710), command=openNews)
+nwsCloseBtn = DirectButton(text = ("CLOSE", "close", "close", "close"), scale=.06, pos = (0, 0, 0.25), command=closeNews)
+nwsCloseBtn.hide()
+

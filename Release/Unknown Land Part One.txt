@@ -1,0 +1,186 @@
+ttracks.removeNode()
+cathead.removeNode()
+catbody.removeNode()
+locomotive.removeNode()
+locomotiveP1.removeNode()
+locomotiveP2.removeNode()
+locomotiveP3.removeNode()
+locomotiveP4.removeNode()
+locomotiveP5.removeNode()
+thall.removeNode()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.collisionsOff()
+hypnoSfx1 = base.loader.loadSfx("phase_5/audio/sfx/TL_hypnotize.mp3")
+# Load the train tracks and hide it
+
+ttracks = loader.loadModel("phase_5/models/props/traintrack2.bam")
+ttracks.reparentTo(render)
+ttracks.setPos(0,17,-2.1)
+ttracks.setScale(0.9,0.9,3)
+ttracks.setColor(0,0,0)
+
+cathead = loader.loadModel("phase_3/models/char/cat-heads-1000.bam")
+cathead.setPos(0,18,0)
+cathead.setHpr(180,0,0)
+
+# Load the locomotive
+
+locomotive = loader.loadModel("phase_10/models/cogHQ/CashBotLocomotive.bam")
+locomotive.reparentTo(render)
+locomotive.setPos(65,17,-4)
+locomotive.setScale(0.15)
+
+# Add the parts
+
+locomotiveP1 = loader.loadModel("phase_10/models/cogHQ/CashBotTankCar.bam")
+locomotiveP1.reparentTo(locomotive)
+locomotiveP1.setX(82.5)
+
+locomotiveP3 = loader.loadModel("phase_10/models/cogHQ/CashBotBoxCar.bam")
+locomotiveP3.reparentTo(locomotiveP1)
+locomotiveP3.setX(82.5)
+
+locomotiveP2 = loader.loadModel("phase_10/models/cogHQ/CashBotFlatCar.bam")
+locomotiveP2.reparentTo(locomotiveP3)
+locomotiveP2.setX(153.5)
+locomotiveP2.setH(180)
+
+locomotiveP4 = loader.loadModel("phase_5.5/models/estate/popcornCart.bam")
+locomotiveP4.reparentTo(locomotiveP2)
+locomotiveP4.setZ(15)
+locomotiveP4.setX(65.55)
+locomotiveP4.setScale(8)
+locomotiveP4.setH(180)
+
+locomotiveP5 = loader.loadModel("phase_5.5/models/estate/garden_donald.bam")
+locomotiveP5.reparentTo(locomotiveP2)
+locomotiveP5.setZ(15)
+locomotiveP5.setX(35.55)
+locomotiveP5.setScale(0.8)
+locomotiveP5.setH(180)
+
+
+# Add the colors
+
+cathead.find('**/head-short').setColor(0.3,0.3,0.35)
+cathead.find('**/head-front-short').setColor(0.3,0.3,0.35)
+cathead.find('**/ears-short').setColor(0.3,0.3,0.35)
+
+# Remove the unecessary parts
+
+cathead.find('**/muzzle-short-angry').removeNode()
+cathead.find('**/muzzle-short-surprise').removeNode()
+cathead.find('**/muzzle-short-laugh').removeNode()
+cathead.find('**/muzzle-short-sad').removeNode()
+cathead.find('**/muzzle-short-smile').removeNode()
+cathead.find('**/muzzle-long-surprise').removeNode()
+cathead.find('**/muzzle-long-neutral').removeNode()
+cathead.find('**/muzzle-long-angry').removeNode()
+cathead.find('**/muzzle-long-sad').removeNode()
+cathead.find('**/muzzle-long-smile').removeNode()
+cathead.find('**/muzzle-long-laugh').removeNode()
+cathead.find('**/head-long').removeNode()
+cathead.find('**/head-front-long').removeNode()
+cathead.find('**/ears-long').removeNode()
+cathead.find('**/eyes-long').removeNode()
+cathead.find('**/joint_pupilL_long').removeNode()
+cathead.find('**/joint_pupilR_long').removeNode()
+
+catbody = Actor({
+
+"head":cathead, \
+
+
+"torso":"phase_3/models/char/dogMM_Shorts-torso-1000.bam", \
+
+
+"legs":"phase_3/models/char/dogSS_Shorts-legs-1000.bam"},
+
+
+{"torso":{"hypnotize":"phase_5/models/char/dogMM_Shorts-torso-hypnotize.bam", \
+"neutral":"phase_3/models/char/dogMM_Shorts-torso-neutral.bam", \
+"happy-dance":"phase_5/models/char/dogMM_Shorts-torso-happy-dance.bam", \
+"smooch":"phase_5/models/char/dogMM_Shorts-torso-smooch.bam"}, \
+"legs":{"hypnotize":"phase_5/models/char/dogSS_Shorts-legs-hypnotize.bam", \
+"neutral":"phase_3/models/char/dogSS_Shorts-legs-neutral.bam", \
+"smooch":"phase_5/models/char/dogSS_Shorts-legs-smooch.bam", \
+"happy-dance":"phase_5/models/char/dogSS_Shorts-legs-happy-dance.bam"} \
+})
+
+
+catbody.attach("head", "torso", "joint_head")
+
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween5.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween5.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_halloween5.jpg")
+
+catbody.find('**/torso-top').setTexture(shirts, 1)
+catbody.find('**/torso-bot').setTexture(shorts, 1)
+catbody.find('**/sleeves').setTexture(sleve, 1)
+
+catbody.attach("torso", "legs", "joint_hips")
+
+gloves = catbody.find('**/hands')
+glovestext = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+gloves.setTexture(glovestext, 1)
+
+catbody.reparentTo(render)
+
+neck = catbody.find('**/neck')
+neck.setColor(0.3,0.3,0.35)
+
+catbody.find('**/arms').setColor(0.3,0.3,0.35)
+catbody.find('**/legs').setColor(0.3,0.3,0.35)
+catbody.find('**/feet').setColor(0.3,0.3,0.35)
+catbody.find('**/torso-bot').setColor(1,1,1)
+
+catbody.setPos(0,17,-2)
+catbody.setHpr(200,0,0)
+catbody.setScale(0.75)
+
+thall = loader.loadModel("phase_3.5/models/modules/tt_m_ara_int_toonhall.bam")
+thall.reparentTo(render)
+thall.setPos(0,17,-2)
+
+def intro():
+    catbody.play("hypnotize")
+    hypnoSfx1.setPlayRate(5)
+    hypnoSfx1.play()
+def load():
+    catbody.loop("neutral")
+def flat():
+    catbody.setScale(1.5,1.5,0.001)
+    catbody.setZ(-1.9)
+def catOnTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(4.5))
+  seq.append(Func(load))
+  seq.append(Wait(1.6))
+  seq.append(Func(flat))
+  seq.start()
+
+def lmintro():
+    lmrun = locomotive.posInterval(2.5, Vec3(-162,17,-2))
+    lmrun.start()
+    lmMusic = base.loader.loadSfx("phase_10/audio/sfx/CBHQ_TRAIN_pass.mp3")
+    lmMusic.setTime(5)
+    lmMusic.setPlayRate(0.4)
+    lmMusic.play()
+    catMusic = base.loader.loadSfx("phase_3.5/audio/dial/AV_cat_exclaim.mp3")
+    catMusic.play()
+def lmremove():
+    locomotive.removeNode()
+def stop():
+    lmMusic.stop()
+def lmOnTime():
+  seq = Sequence()
+  seq.append(Wait(4.9))
+  seq.append(Func(lmintro))
+  seq.append(Wait(2.5))
+  seq.append(Func(lmremove))
+  seq.start()
+    
+    
+catOnTime()
+lmOnTime()

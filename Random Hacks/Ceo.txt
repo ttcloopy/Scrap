@@ -1,0 +1,42 @@
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+ceo.setPos(-816, -365, 65)
+ceo.loop("walk")
+ceo.setHpr(-121,0,0)
+ceo.setScale(1)
+
+    from direct.interval.IntervalGlobal import *
+    from pandac.PandaModules import Point3
+    from pandac.PandaModules import *
+    
+    
+    e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+    e.reparentTo(render)
+    e.setHpr(0,0,0)
+    e.setPos(0,0,0)
+    pandaPosInterval22 = e.posInterval(13,Point3(0,0,0),
+    startPos=Point3(0,0,25))
+    pandaPosInterval33 = e.posInterval(13,Point3(0,0,25),
+    startPos=Point3(0,0,0))
+    pandaPace = Sequence(pandaPosInterval22,
+    pandaPosInterval33,
+    name="pandaPace")
+    pandaPace.loop()
+    e.find('**/wall_back').removeNode()
+    e.find('**/wall_front').removeNode()

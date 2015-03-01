@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\b\f0\fs24 ------------TOON TROOP HAT----------------\par
+\par
+from direct.actor.Actor import Actor \par
+from pandac.PandaModules import * \par
+from direct.task import Task \par
+import math \par
+from math import pi, sin, cos \par
+from direct.showbase.ShowBase import ShowBase \par
+from direct.task import Task \par
+from direct.interval.IntervalGlobal import Sequence \par
+from pandac.PandaModules import Point3 \par
+from pandac.PandaModules import * \par
+ttHat = loader.loadModel("phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle.bam")\par
+ttHat.reparentTo(localAvatar)\par
+ttHat.setZ(4)\par
+ttHat.setColorScale(25)\par
+ttHatSpin = ttHat.find('**/whistleIcon').hprInterval(3, Vec3(360, 0, 0))\par
+ttHatSpin.loop()\par
+}
+ 

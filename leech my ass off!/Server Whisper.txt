@@ -1,0 +1,21 @@
+def broadcast(message="Hi, I'm Frenzy! I like to eat chedder!", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+
+
+
+
+After you used that code erase from the injector then use:
+
+broadcast("Your message to whisper to people", True)
+
+
+First parameter = The Message you whisper to everyone, second parameter is if you include yourself inthe whisper, leave it at True if you want it to also whisper to you...

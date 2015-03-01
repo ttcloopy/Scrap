@@ -1,0 +1,36 @@
+Making Buttons
+
+Well here is a one button code
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+def setText1():
+    base.localAvatar.collisionsOff()
+
+b = DirectButton(text = ("Col Off", "CO", "CO", "Col Off"), scale=.06, pos = (-.75,-0,-.94), command=setText1)
+
+Copy and paste that into the injector and press the button when it pops up!
+when you press it your collisions should be off.
+
+Now just copy and paste it example:
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+def setText1():
+    base.localAvatar.collisionsOff()
+
+def setText2():
+    base.localAvatar.collisionsOn()
+
+b1 = DirectButton(text = ("Col Off", "CO", "CO", "Col Off"), scale=.06, pos = (-.75,-0,-.94), command=setText1)
+b2 = DirectButton(text = ("Col On", "CO", "CO", "Col On"), scale=.06, pos = (-.75,-0,-.84), command=setText2)
+
+Just keep doing the pattern
+
+here is the position
+
+(-.left and right,i have no idea just keep it the same,-.height)

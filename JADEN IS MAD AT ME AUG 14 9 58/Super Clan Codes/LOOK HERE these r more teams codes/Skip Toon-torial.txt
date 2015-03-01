@@ -1,0 +1,2 @@
+messenger.send('rejectTutorial')
+base.cr.gameFSM.request('closeShard')

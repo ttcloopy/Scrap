@@ -1,0 +1,12 @@
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.d_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+
+
+
+Option Strict Off
+Option Explicit On
+Imports System
+Imports System.Reflection
+<Assembly: Global.System.Runtime.Versioning.TargetFrameworkAttribute(".NETFramework,Version=v5.0,Profile=Client", FrameworkDisplayName:=".NET Framework 5 Client Profile")> 

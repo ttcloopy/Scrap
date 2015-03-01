@@ -1,0 +1,361 @@
+SMILE
+
+from direct.interval.IntervalGlobal import * 
+def intro(): 
+base.localAvatar.b_setEmoteState(22,1) 
+def part2(): 
+base.localAvatar.setCheesyEffect(13, 0, 0) 
+def part3(): 
+base.localAvatar.setCheesyEffect(0, 0, 0) 
+def onTime(): 
+seq = Sequence() 
+seq.append(Func(intro)) 
+seq.append(Wait(3)) 
+seq.append(Func(part2)) 
+seq.append(Wait(1)) 
+seq.append(Func(part3)) 
+seq.start() 
+onTime() 
+
+base.localAvatar.setSCResistance(100) 
+base.localAvatar.setSCResistance(1) 
+base.localAvatar.setSCResistance(200) 
+
+Big Cheese Head blue:
+
+avHead = base.localAvatar.find('**/head-short')
+bAvHead = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+avBigCheeseHead = bAvHead.find('**/bigcheese')
+avBigCheeseHead.setColor(0,0,1)
+avBigCheeseHead.reparentTo(avHead)
+avBigCheeseHead.setScale(2.3)
+avBigCheeseHead.setPos(0,.3,-1)
+
+List:
+
+backstabber
+bigwig
+headhunter
+legaleagle
+numbercruncher
+pennypincher
+yesman
+twoface
+
+
+
+base.wireframeOn()
+base.localAvatar.showAllBounds()
+base.localAvatar.find('**/GW.cWallSphereNode').show()
+base.localAvatar.find('**/GW.cEventSphereNode').show()
+base.localAvatar.find('**/ccLineNode').show()
+
+base.localAvatar.find('**/GW.cWallSphereNode').hide()
+base.localAvatar.find('**/GW.cEventSphereNode').hide()
+base.localAvatar.find('**/ccLineNode').hide()
+base.localAvatar.hideAllBounds()
+base.wireframeOff()
+
+base.localAvatar.showHpString('Fuck u ')
+base.localAvatar.showHpText('Fuck u ')
+
+
+base.localAvatar.setName(('whatevernameuwant'))
+base.localAvatar.nametag.setName('Fd Green Cat Fd')
+base.localAvatar.setCheesyEffect(14,0,0)
+base.localAvatar.setCheesyEffect(1, 0, 0) - Big Head
+base.localAvatar.setCheesyEffect(2, 0, 0) - Small Head
+base.localAvatar.setCheesyEffect(3, 0, 0) - Big Legs
+base.localAvatar.setCheesyEffect(4, 0, 0) - Small legs
+base.localAvatar.setCheesyEffect(5, 0, 0) - big toon
+base.localAvatar.setCheesyEffect(6, 0, 0) - Small toon
+base.localAvatar.setCheesyEffect(7, 0, 0) - Flat toon with face
+base.localAvatar.setCheesyEffect(8, 0, 0) - Flat toon with no face
+base.localAvatar.setCheesyEffect(9, 0, 0) - See through toon
+base.localAvatar.setCheesyEffect(10, 0, 0) - No color
+base.localAvatar.setCheesyEffect(11, 0, 0) - Ghost
+base.localAvatar.setCheesyEffect(12, 0, 0) - Pumkin head
+base.localAvatar.setCheesyEffect(13, 0, 0) - Big and white polar bear
+base.localAvatar.setCheesyEffect(14, 0, 0) - Snow man head
+base.localAvatar.setCheesyEffect(15, 0, 0) - nothing
+
+
+PIES!!
+base.localAvatar.numPies = 99 
+base.localAvatar.setPieType(7)
+base.localAvatar.setNumPies(120)
+base.localAvatar.setPieType(-3)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = false
+base.localAvatar.setPieType(-7)
+base.localAvatar.setNumPies(120)
+base.localAvatar.ThrowGagButtonMaxed = false
+base.localAvatar.ThrowGagButtonMaxed = true
+base.localAvatar.setPieType(0, 1, 2, 3, 4, or 5)
+base.localAvatar.setNumPies(20, 25, 30, 35, 40, or 80)
+base.localAvatar.ThrowGagButtonMaxed = false
+base.localAvatar.setPieType(7)
+base.localAvatar.setNumPies(12000)
+base.localAvatar.ThrowGagButtonMaxed = true
+base.localAvatar.setPieType(7)
+base.localAvatar.setPieType(5)
+base.localAvatar.setPieType(1-7)
+base.localAvatar.setEvidenceThrow = 0
+base.localAvatar.setRefillThrow()
+base.localAvatar.ThrowGagButtonMaxed = false 
+
+COG SUIT!
+
+base.localAvatar.takeOffSuit()
+base.localAvatar.setCogIndex(1) = lawbot suit
+base.localAvatar.setCogIndex(2) = cash bot suit
+base.localAvatar.setCogIndex(3) = sellbot suit
+base.localAvatar.setCogIndex(0) = bossbot suit
+
+CHANGE COLORS
+
+base.localAvatar.setColor(1, 2)
+base.localAvatar.setColor(1,1,0)
+base.localAvatar.setColor(1,0,0) - red
+base.localAvatar.setColor(0,1,0) - green
+base.localAvatar.setColor(0,0,1) - blue
+base.localAvatar.setColor(0,1,1) - yellow
+base.localAvatar.setColor(0,0,0) - black
+base.localAvatar.setColor(1,1,1) - white
+base.localAvatar.setColor(1,0,1) - purple
+
+base.localAvatar.setControlEffect('sit', 0.65)
+base.localAvatar.setControlEffect('swim', 0.8)
+
+
+base.localAvatar.setSystemMessage(0,'Put text for a whisper here.')
+base.localAvatar.setSystemMessage(1,'I like Girls that are pretty like you **** Lady!')
+base.localAvatar.setSystemMessage(1,'**** = Sexy')
+base.localAvatar.setSystemMessage(1,'This message was by : Chris552299')
+base.localAvatar.setSystemMessage(1,'This is Rated R not for children!')
+base.localAvatar.setSystemMessage(1,'Welcome to the new movie "Girls Gone Wild!"')
+base.localAvatar.setSystemMessage(1,'Wait hey you Kid named Chris this is for 12 and older but i am 12 so i dont give a damn get the fuck out bitch!')
+base.localAvatar.setSystemMessage(1,'ADMIN : Toontown is going down for maintence in 10 min.')
+
+GHOST!
+
+base.localAvatar.setGhostMode(8)
+base.localAvatar.setGhostMode(2)
+base.localAvatar.setGhostMode(0)
+base.localAvatar.setGhostMode(22)
+
+base.localAvatar.cogLevels=[999, 999, 999, 999]
+base.localAvatar.putOnSuit('hh')
+base.localAvatar.putOnSuit('mh')
+base.localAvatar.putOnSuit('rb')
+base.localAvatar.putOnSuit('bs')
+base.localAvatar.putOnSuit('tm')
+base.localAvatar.putOnSuit('m')
+base.localAvatar.putOnSuit('pp')
+base.localAvatar.putOnSuit('bw')
+base.localAvatar.putOnSuit('hh')
+base.localAvatar.putOnSuit('sd')
+base.localAvatar.putOnSuit('cr')
+base.localAvatar.putOnSuit('b')
+base.localAvatar.putOnSuit('ls')
+base.localAvatar.putOnSuit('j')
+base.localAvatar.putOnSuit('ym')
+base.localAvatar.putOnSuit('mm')
+base.localAvatar.putOnSuit('ds')
+base.localAvatar.putOnSuit('dt')
+base.localAvatar.putOnSuit('nc')
+base.localAvatar.putOnSuit('tf')
+base.localAvatar.putOnSuit('ms')
+base.localAvatar.putOnSuit('p')
+
+messenger.send('hpChange-286412384', [137,137])
+base.acceptOnce("escape", sys.exit )
+messenger.send('hpChange-286313331', [137, 137])
+messenger.send('enterFurnitureManager', [1, 1])
+messenger.send('friendOnline', [286313331])
+messenger.send('friendOffline', [286313331])
+messenger.send('nameTagShowAvId', [286313331])
+messenger.send('playerFriendInvitationEvent', [])
+messenger.send('avatarNewFriendAddEvent', [273515701])
+messenger.send('entertrolley_sphere', [1])
+messenger.send('enterMickeyBlatherSphere', [1])
+messenger.send('requestSkipTutorial')
+messenger.send('rejectTutorial')
+
+Anim Control:
+
+ac1 = base.localAvatar.getAllAnimControl('swing', 'legs')
+ac1.setPlayRate(5)
+ac1.loop(True)
+
+ac1.stop()
+ac1.loop(True)
+ac1.pose(8)
+ac1.setPlayRate(5)
+
+
+Music Code:
+
+music1 = base.loader.loadSfx("phase_9/audio/bgm/CHQ_FACT_bg.mid")
+music1.setLoop(True)
+music1.play()
+
+music1 = base.loader.loadSfx("Custom/Sfx/Losing You.mp3")
+music1.setVolume(.2)
+music1.setLoop(True)
+music1.play()
+
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/Bossbot_Factory_v3.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+music1.setLoopCount(3)
+
+music1.setPlayRate(.5)
+
+music1.setTime(20)
+
+music1.getTime()
+
+music1.length()
+
+
+Music Loggers:
+
+time = music1.getTime()
+time = int(time)
+time = str(time)
+print time
+
+length = music1.length()
+length = int(length)
+length = str(length)
+print length
+
+from pandac.PandaModules import Point3
+base.cam.lookAt(Point3(0, 0, 0))
+
+base.localAvatar.thinkPos()
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import * 
+sky = loader.loadModel("phase_8/models/props/DL_sky.bam")
+sky.reparentTo(render)
+sky.setPos(0,0,0)
+sky.setHpr(0,0,0)
+sky.setScale(1.5)
+
+chatBox1 = loader.loadModel("phase_3/models/props/chatbox.bam")
+chatBox1.reparentTo(render)
+chatBox1.setPos(54,6,7)
+chatBox1.setHpr(90,0,0)
+chatBox1.setScale(.5)
+
+
+
+CLIENT LOOPS
+base.localAvatar.b_setAnimState(('jumpAirborne')) 
+base.localAvatar.b_setAnimState(('jumpLand'))
+base.localAvatar.b_setAnimState(('jumpSquat'))
+base.localAvatar.loop('climb')
+base.localAvatar.loop('running-jump')
+base.localAvatar.loop('callPet')
+base.localAvatar.loop('feedPet')
+base.localAvatar.loop('phoneBack')
+base.localAvatar.loop('phoneNeutral')
+base.localAvatar.loop('takePhone')
+base.localAvatar.loop('sidestep-left')
+base.localAvatar.loop('sidestep-right')
+base.localAvatar.loop('lookloop-putt')
+base.localAvatar.loop('loop-dig')
+base.localAvatar.loop('leverNeutral')
+base.localAvatar.loop('leverReach')
+base.localAvatar.loop('leverPull')
+base.localAvatar.loop('duck')
+base.localAvatar.loop('spit')
+base.localAvatar.loop('struggle')
+base.localAvatar.loop('toss')
+base.localAvatar.loop('water-gun')
+base.localAvatar.loop('smooch')
+base.localAvatar.loop('firehose')
+base.localAvatar.loop('hold-bottle')
+base.localAvatar.loop('hold-magnet')
+base.localAvatar.loop('melt') - quick sand
+base.localAvatar.loop('happy-dance')
+base.localAvatar.loop('hypnotize')
+base.localAvatar.loop('tickle')
+base.localAvatar.loop('sprinkle-dust')
+base.localAvatar.loop('reel-H')
+base.localAvatar.loop('tug-o-war')
+base.localAvatar.loop('pet-end')
+base.localAvatar.loop('catch-intro-throw')
+base.localAvatar.loop('catch-eatnrun')
+base.localAvatar.loop('fish-end')
+base.localAvatar.loop('fish-again')
+base.localAvatar.loop('push')
+base.localAvatar.loop('swing')
+base.localAvatar.loop('reel')
+base.localAvatar.loop('throw')
+base.localAvatar.loop('left')
+base.localAvatar.loop('right')
+base.localAvatar.loop('sound')
+base.localAvatar.loop('pole')
+base.localAvatar.loop('cast')
+base.localAvatar.loop('pole-neutral')
+base.localAvatar.loop('pet-loop')
+base.localAvatar.loop('castlong')
+base.localAvatar.loop('slip-forward')
+base.localAvatar.loop('slip-backward')
+base.localAvatar.loop('scientistGame')
+base.localAvatar.loop('scientistWork')
+base.localAvatar.loop('sad-neutral')
+base.localAvatar.loop('reel-neutral')
+base.localAvatar.loop('curtsy')
+base.localAvatar.loop('down')
+base.localAvatar.loop('up')
+base.localAvatar.loop('think')
+base.localAvatar.loop('lose')
+base.localAvatar.loop('swim')
+base.localAvatar.loop('cringe')
+base.localAvatar.loop('applause')
+base.localAvatar.loop('confused')
+base.localAvatar.loop('run')
+base.localAvatar.loop('walk')
+base.localAvatar.loop('juggle')
+base.localAvatar.loop('bored')
+base.localAvatar.loop('jump')
+base.localAvatar.loop('bow')
+base.localAvatar.loop('teleport') 
+base.localAvatar.loop('wave') 
+base.localAvatar.loop('angry')
+base.localAvatar.loop('shrug')
+base.localAvatar.loop('book')
+base.localAvatar.loop('sit')
+
+
+base.localAvatar.play('happy-dance')
+base.localAvatar.stop()
+base.localAvatar.pose('climb', 30)
+base.localAvatar.play('melt', fromFrame = 30)
+base.localAvatar.loop('melt', fromFrame = 30)
+base.localAvatar.loop('throw', fromFrame = 24, toFrame = 80)
+base.localAvatar.play('throw', fromFrame = 24, toFrame = 80)
+base.localAvatar.loop('swing', restart = 1, fromFrame = 24, toFrame = 36)
+base.localAvatar.play('swing', restart = 1, fromFrame = 24, toFrame = 36)
+base.localAvatar.pose('swing', 30)
+
+
+base.localAvatar.enableBlend()
+base.localAvatar.setScale(<size you want to be, 1 is normal.>)
+base.localAVatar.setStyle(<?>)
+base.localAvatar.setHeight(<Default value varies with character>)
+base.localAvatar.stunToon()
+base.oobe()

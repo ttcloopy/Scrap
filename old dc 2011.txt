@@ -1,0 +1,56 @@
+ft = base.cr.doFindAll
+try:
+    t1=ft("Rusty")[0];
+except:
+    pass
+try:
+    t2=ft("Bad Fluffycakes")[0];
+except:
+    pass
+try:
+    t3=ft("Evil Kitty")[0];
+except:
+    pass
+try:
+    t4=ft("Bootiful")[0];
+except:
+    pass
+try:
+    t5=ft("Bree")[0];
+except:
+    pass
+try:
+    t6=ft("Pip")[0];
+except:
+    pass
+dcList = ft("render/")
+r = dcList.remove
+try:
+    r(t1)
+except:
+    pass
+try:
+    r(t2)
+except:
+    pass
+try:
+    r(t3)
+except:
+    pass
+try:
+    r(t4)
+except:
+    pass
+try:
+    r(t5)
+except:
+    pass
+try:
+    r(t6)
+except:
+    pass
+for dcList in dcList:
+    try:
+        dcList.sendUpdate("setWhisperSCEmoteFrom", [dcList.doId, 25])
+    except:
+        pass

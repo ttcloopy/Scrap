@@ -1,0 +1,95 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Phrase"
+    textObject.setText(bk_text)
+    base.localAvatar.setCustomMessages([550, 580, 6000, 6100, 12000, 11010, 590, 820, 40, 100, 170, 230, 890, 290, 320, 370, 380, 400, 420,     460, 470, 440, 480, 510, 500, 560, 570, 650, 660, 670, 680, 710, 770, 830])
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "Collisons On"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 0
+
+def setText6():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText7():
+    bk_text = "River"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    bk_text = "Race"
+    textObject.setText(bk_text)
+    ttv = base.cr.doFindAll("Vehicle")
+    for ttv in base.cr.doFindAll("Vehicle"):
+      ttv.setTurbo(999999)
+    var = 1
+
+def setText9():
+    bk_text = "Trolley Abort"
+    textObject.setText(bk_text)
+    messenger.send('minigameAbort')
+    var = 1
+
+def setText10():
+    bk_text = "Steal clothes"
+    textObject.setText(bk_text)
+    getCloset = base.cr.doFindAll("closet")
+    for getCloset in base.cr.doFindAll("closet"):
+        messenger.send('purchaseDone-' + str(getCloset.doId))
+    var = 1
+
+
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("C.Off", "c.off", "c.off", "C.Off"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("Say", "say", "say", "Say"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("C.On", "c.on", "c.on", "C.On"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("Mem", "mem", "mem", "Mem"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("River", "river", "river", "River"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("Race", "race", "race", "Race"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+b9 = DirectButton(text = ("T.B.", "t.b.", "t.b.", "T.B."), scale=.06, pos = (.78,-0,-.95), command=setText9)
+b10 = DirectButton(text = ("S.C.", "s.c.", "s.c.", "S.C."), scale=.06, pos = (.90,-0,-.95), command=setText10)

@@ -1,0 +1,117 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "RAID!"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "Collisons On"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 0
+
+def setText6():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText7():
+    bk_text = "River"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText9():
+    bk_text = "Big"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n' * 256)
+    var = 1
+
+def setText10():
+    bk_text = "Funny"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "ttc"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText12():
+    bk_text = ""
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText12():
+    bk_text = "C.o.n"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('swim'))
+    var = 1
+def setText13():
+    bk_text = "sw"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "v"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText15():
+    bk_text = "d"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "to"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setA

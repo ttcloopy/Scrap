@@ -1,0 +1,110 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.98,-0.98),
+scale = 0.07,fg=(3,0.5,0.5,3),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "ZoneFound"
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+
+b = DirectButton(text = ("Raid House", "Activate", "Activate", "Raid House"), scale=.06, pos = (-.28,-0,-.95), command=setText)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+def setText1():
+    base.localAvatar.collisionsOff()
+
+b = DirectButton(text = ("Col Off", "CO", "CO", "Col Off"), scale=.06, pos = (-.75,-0,-.94), command=setText1)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+def setText1():
+    base.localAvatar.collisionsOff()
+
+def setText2():
+    base.localAvatar.collisionsOn()
+
+b1 = DirectButton(text = ("Col Off", "CO", "CO", "Col Off"), scale=.06, pos = (-.75,-0,-.94), command=setText1)
+b2 = DirectButton(text = ("Col On", "CO", "CO", "Col On"), scale=.06, pos = (-.75,-0,-.84), command=setText2)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Swimming"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('swim')
+    var = 0
+
+def setText2():
+    bk_text = "Sitting"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('SitStart')
+    var = 1
+    
+
+def setText3():
+    bk_text = "Catching"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Catching')
+    var = 1
+
+def setText4():
+    bk_text = "Golf Turning Right"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('GolfRotateRight')
+    var = 1
+
+def setText5():
+    bk_text = "Dying"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Died')
+    var = 0
+
+def setText6():
+    bk_text = "Sad"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Sad')
+    var = 1
+
+def setText7():
+    bk_text = "Pushing"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Push')
+    var = 1
+
+def setText8():
+    bk_text = "Scientist Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('ScientistPlay')
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("SWIM", "swim", "swim", "SWIM"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("SIT", "sit", "sit", "SIT"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("CATCH", "catch", "catch", "CATCH"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("GOLF ROTATE", "golf rotate", "golf rotate", "GOLF ROTATE"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("DIE", "die", "die", "DIE"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("SAD", "sad", "sad", "SAD"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("PUSH", "push", "push", "PUSH"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("R-P-C", "r-p-c", "r-p-c", "R-P-C"), scale=.06, pos = (.565,-0,-.95), command=setText8)

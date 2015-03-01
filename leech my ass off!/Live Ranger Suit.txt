@@ -1,0 +1,14 @@
+AW = base.cr.doFindAll("render/")
+for AW in base.cr.doFindAll("render/"):
+            AW.findAllMatches('**/hands').setColor(250,0,0)
+
+AW.findAllMatches('**/torso-top').setColorScale(25)
+AW.findAllMatches('**/sleeves').setColorScale(25)
+AW.findAllMatches('**/torso-bot').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_sellbotCrusher.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_sellbotCrusher.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_sellbotCrusher.jpg")
+gloves=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+AW.findAllMatches('**/torso-top').setTexture(shirts, 2)
+AW.findAllMatches('**/sleeves').setTexture(sleve, 2)
+AW.findAllMatches('**/torso-bot').setTexture(shorts, 2)

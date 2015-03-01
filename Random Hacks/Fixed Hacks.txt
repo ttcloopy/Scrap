@@ -1,0 +1,154 @@
+Do these codes for Scare Crow - DON'T USE
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.b_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+
+
+Organic All gags: base.localAvatar.setTrackBonusLevel([1,1,1,1,1,1,1])
+base.localAvatar.setExperience('9999999999999')
+
+messenger.send('rejectTutorial')
+base.localAvatar.setCogIndex()
+base.localAvatar.setCogLevels([49, 49, 49, 49])
+base.localAvatar.setCogTypes([7, 7, 7, 7])
+base.localAvatar.setCogParts([0, 0, 56447, 56411])
+base.localAvatar.cogMerits=[40, 80, 120, 200]
+base.localAvatar.setEarnedExperience([100])
+base.localAvatar,setCogSummonsEarned(1)
+base.localAvatar.setCogParts([105,60,40,20])
+base.localAvatar.setPinkSlips((1)) - DON'T USE!!
+base.localAvatar.setTickets(100000)
+base.localAvatar.setTickets(800)
+base.localAvatar.setMaxMoney(800) [thats your max gag money]
+base.localAvatar.setBankMoney(10000)
+base.localAvatar.setMaxBankMoney(10000)
+base.localAvatar.setMaxHp(<desired maxmimum HP>)
+base.localAvatar.setHp(<desired current HP>
+base.localAvatar.toonUp(<toon yourself up by>)
+base.localAvatar.toonUp(137)
+
+Disconnection code:
+base.Disconnect('20.20.20')322374messenger.send('<<name/toonid>>')
+
+base.localAvatar.setHeight(200)
+base.localAvatar.setQuestCarryLimit(4)
+base.localAvatar.setMaxClothes(500)
+base.localAvatar.setGardenStarted() 
+base.localAvatar.setShovelSkill(30)
+base.localAvatar.setFishingRod(4) (1-4)
+base.localAvatar.promoteShovel(3) 
+base.localAvatar.setKartBodyType(3)
+base.localAvatar.promoteWateringCan(3)base.localAvatar.setWateringCanSkill(30)
+base.localAvatar.promoteShovel(3)base.localAvatar.trickOrTreatTargetMet(9999)
+base.localAvatar.setZ(150/10)
+base.localAVatar.setStyle(<?>) 
+base.localAvatar.setHeight(<Default value varies with character>)
+
+base.localAvatar.setMaxHp(137) 
+base.localAvatar.setHp(137)
+base.localAvatar.toonUp(137) 
+base.localAvatar.setMaxCarry(9999)
+base.localAvatar.setTickets(800)
+base.localAvatar.setBankMoney(10000)
+base.localAvatar.setMaxBankMoney(10000)
+base.localAvatar.setMoney(800)
+base.localAvatar.setMaxMoney(800)
+
+
+FREE MEMBERSHIP STUFF!!!!
+
+def getmembers(object, predicate=None):
+
+"""Return all members of an object as (name, value) pairs sorted by name.
+
+Optionally, only return members that satisfy a given predicate."""
+
+results = []
+
+for key in dir(object):
+
+value = getattr(object, key)
+
+if not predicate or predicate(value):
+
+results.append((key, value))
+
+print key,value
+
+results.sort()
+
+return results
+
+getmembers(<>)
+
+RANDOM CODES!
+
+base.localAvatar.b_setEarnedExperience(('100'))
+base.cr.sendingclientLogout()
+base.cr.sendclientLogout()
+base.cr.sending clientLogout()
+base.cr.send clientLogout()
+base.localAvatar.sendingclientLogout()
+base.localAvatar.sendclientLogout()
+base.localAvatar.sending clientLogout()
+base.localAvatar.send clientLogout()
+base.localAvatar.b_sendingclientLogout()
+base.localAvatar.b_sendclientLogout()
+base.localAvatar.b_sending clientLogout()
+base.localAvatar.b_send clientLogout()
+base.localAvatar.b_sendclientLogout(ToonName)(('It'))
+
+base.localAVatar.setStyle(<?>) 
+base.localAvatar.setHeight(<Default value varies with character>)
+base.localAvatar.stunToon()
+base.localAvatar.setGloveColor = X
+base.localAvatar.inventory.itemIsUsable = new
+base.localAvatar.setControlEffect('sit', 0.65)
+
+base.localAvatar.announceBingo()
+base.localAvatar.playSplashEffect(1, 0, 0)      (Sound Of Hitting Water)
+base.localAvatar.setNearbyAvatarChat('HEY!')
+base.localAvatar.setMinigameZone()
+base.localAvatar.setHP(1)                 (cog battle)
+base.localAvatar.setBrushOff(10)         (cog battle)
+base.localAvatar.setLevelDist(10)          (cog battle)
+base.localAvatar.setSkelecog(1)            (cog battle)
+base.localAvatar.setInteractivePropTrackBonus(100)
+base.localAvatar.rewardDone()      (cog battle)
+base.localAvatar.movieDone()        (cog battle)
+base.localAvatar.timeout()         (cog battle)
+base.localAvatar.denyLocalToonJoin()          (cog battle)
+
+
+base.localAvatar.hide()
+word = base.localAvatar.getZoneId()
+word += 10
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+messenger.send('rejectTutorial')
+base.accept("f1", base.localAvatar.b_setAnimState, ['swim'])
+base.talkAssistant.sendOpenTalk('.Status : Swimming')
+base.accept("f2", base.localAvatar.b_setAnimState, ['Push'])
+base.talkAssistant.sendOpenTalk('.Status : Pushing Nothing..........')
+base.accept("f3", base.localAvatar.b_setAnimState, ['Sad'])
+base.talkAssistant.sendOpenTalk('.Status : Sad thats all..........')
+base.accept("f4", base.localAvatar.b_setAnimState, ['GolfPuttLoop'])
+base.talkAssistant.sendOpenTalk('.Status : Golfing..........')
+
+
+base.localAvatar.playSplashEffect(1, 0, 0)      (Sound Of Hitting Water)
+base.localAvatar.setNearbyAvatarChat('HEY!')
+base.localAvatar.setMinigameZone()
+base.localAvatar.setHP(1)                 (cog battle)
+base.localAvatar.setBrushOff(10)         (cog battle)
+base.localAvatar.setLevelDist(10)          (cog battle)
+base.localAvatar.setSkelecog(1)            (cog battle)
+base.localAvatar.setInteractivePropTrackBonus(100)
+base.localAvatar.rewardDone()      (cog battle)
+base.localAvatar.movieDone()        (cog battle)
+base.localAvatar.timeout()         (cog battle)
+base.localAvatar.denyLocalToonJoin()          (cog battle)
+
+for chqd in base.cr.doFindAll("CogHQDoor"):
+chqd.rejectEnter = chqd.avatarEnter (base.localAvatar.doId)
+chqd.setOtherZoneIdAndDoId(11100,451103054)

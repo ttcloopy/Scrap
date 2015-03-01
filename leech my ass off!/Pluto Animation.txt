@@ -1,0 +1,136 @@
+avatar = base.localAvatar
+avatar.setXYZH(-500.000,-500.000,-500.000,-1000.000)
+
+from direct.interval.IntervalGlobal import *
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+
+grounds = loader.loadModel("phase_13/models/parties/partyGrounds.bam")
+grounds.reparentTo(render)
+grounds.setPos(-500.000,-500.000,-1000.000)
+grounds.setHpr(0,0,0)
+grounds.setScale(1)
+
+pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutointosit":"phase_6/models/char/pluto-sit.bam"})
+pluto.reparentTo(render)
+pluto.setPos(-500.777,-500.44,-999.975)
+pluto.loop("plutointosit")
+pluto.setHpr(180,0,0)
+pluto.setScale(1.5)
+
+def plutosit():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutosit":"phase_6/models/char/pluto-neutral.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutosit")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+def plutostandup():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutostandup":"phase_6/models/char/pluto-stand.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutostandup")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+def plutowalk():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutowalk":"phase_6/models/char/pluto-walk.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutowalk")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+    plutoWalk1 = pluto.posInterval(5,Point3(10.389,85.279,0.025),
+    startPos=Point3(0,114.03,127.50))
+    plutoTurn1 = pluto.hprInterval(Point3(0, 0, 0),
+    startHpr=Point3(180, 0, 0))
+    plutoWalk2 = pluto.posInterval(5,Point3(10.389,85.279,0.025),
+    startPos=Point3(0,114.03,127.50))
+    plutoTurn2 = pluto.hprInterval(Point3(180,0,0),
+    startHpr=Point3(270, 0, 0))
+    plutoWalk3 = pluto.posInterval(5,Point3(10.389,85.279,0.025),
+    startPos=Point3(0,114.03,127.50))
+    plutototoon = Sequence(plutoWalk1,
+    plutoTurn1,
+    plutoWalk2,
+    plutoTurn2,
+    plutoWalk3,
+    name="plutototoon")
+    plutototoon.start()
+def plutointosit():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutointosit":"phase_6/models/char/pluto-sit.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutointosit")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+def plutosit2():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutosit":"phase_6/models/char/pluto-neutral.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutosit")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+def plutostandup2():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutostand":"phase_6/models/char/pluto-stand.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutostand")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+def plutowalk2():
+    pluto.removeNode()
+    pluto = Actor("phase_6/models/char/pluto-1000.bam",{"plutowalk":"phase_6/models/char/pluto-walk.bam"})
+    pluto.reparentTo(render)
+    pluto.setPos(-128.777,-84.400,-999.975)
+    pluto.loop("plutowalk")
+    pluto.setHpr(180,0,0)
+    pluto.setScale(1.5)
+    plutoTurn3 = pluto.hprInterval(2,Point3(180,0,0),
+    startHpr=Point3(0, 0, 0))
+    plutoWalk4 = pluto.posInterval(5,Point3(10.389,85.279,0.025),
+    startPos=Point3(0,114.03,127.50))
+    plutoTurn4 = pluto.hprInterval(2,Point3(0, 0, 0),
+    startHpr=Point3(180, 0, 0))
+    plutoWalk5 = pluto.posInterval(5,Point3(10.389,85.279,0.025),
+    startPos=Point3(0,114.03,127.50))
+    plutoTurn5 = pluto.hprInterval(2,Point3(270,0,0),
+    startHpr=Point3(180,0,0))
+    plutoback = Sequence(plutoTurn3,
+    plutoWalk4,
+    plutoTurn4,
+    plutoWalk5,
+    plutoTurn5,
+    name="plutoback")
+    plutoback.start()
+def pluto():
+  seq = Sequence()
+  seq.append(Func(plutosit))
+  seq.append(Wait(5))
+  seq.append(Func(plutostandup))
+  seq.append(Wait(1.5))
+  seq.append(Func(plutowalk))
+  seq.append(Wait(19))
+  seq.append(Func(plutointosit))
+  seq.append(Wait(1.5))
+  seq.append(Func(plutosit2))
+  seq.append(Wait(5))
+  seq.append(Func(plutostandup2))
+  seq.append(Wait(1.5))
+  seq.append(Func(plutowalk2))
+  seq.append(Wait(16))
+  seq.append(Func(pluto))
+  seq.start()
+pluto()

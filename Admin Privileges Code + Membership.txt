@@ -1,0 +1,16 @@
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 1
+base.cr.isPaid = new
+base.cr.allowSecretChat = new
+base.cr.isParentPasswordSet = new
+base.cr.isAdmin = False
+base.cr.isAdmin = True
+base.cr.isParentPasswordSet = Admin
+base.cr.isPaidFromGameServer = True
+base.cr.toons.hide()
+base.cr.toons.delete()
+base.localAvatar.setHpr(0,0,31)
+base.localAvatar.getGameAccess = new2

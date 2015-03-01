@@ -1,0 +1,18 @@
+def banBlock(log):
+fileToRead = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + str(log)
+readFile = open('%s'%(fileToRead),'r')
+trash = readFile.read()
+del trash
+def blockBan():
+line_to_parse = readFile.readline()
+line_to_parse = str(line_to_parse)
+if "Server is booting us out" in line_to_parse:
+messenger.send('pandaRenderError')
+else:
+None
+def alwaysGo():
+seq.append(Func(blockBan))
+seq.append(Wait(0.1))
+seq.append(Func(alwaysGo))
+seq.start()
+alwaysGo()

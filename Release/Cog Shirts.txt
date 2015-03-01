@@ -1,0 +1,22 @@
+shirts3=loader.loadTexture("phase_3.5/maps/waiter_m_blazer.jpg")
+sleve3=loader.loadTexture("phase_3.5/maps/waiter_m_sleeve.jpg")
+shorts3=loader.loadTexture("phase_3.5/maps/waiter_m_leg.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts3, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts3, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve3, 1)
+
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25) 
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25) 
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+
+shirts3=loader.loadTexture("phase_3.5/maps/c_blazer.jpg")
+sleve3=loader.loadTexture("phase_3.5/maps/c_sleeve.jpg")
+shorts3=loader.loadTexture("phase_3.5/maps/c_leg.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts3, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts3, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve3, 1)
+
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25) 
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25) 
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+

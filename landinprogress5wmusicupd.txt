@@ -1,0 +1,662 @@
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg") 
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg") 
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg") 
+base.localAvatar.findAllMatches('**/Sky').setColorScale(25) 
+base.localAvatar.findAllMatches('**/Sky').setTexture(sleve, 1)
+
+environ = loader.loadModel("phase_8/models/neighborhoods/the_burrrgh.bam")
+environ.reparentTo(render)
+environ.setPos(300,115,127)
+environ.setHpr(0,0,0)
+environ.setScale(2.2)
+
+
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/Bossbot_Factory_v3.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam")
+castle.reparentTo(render)
+castle.setPos(105.215,-200.153,0.025)
+castle.setHpr(100,0,0)
+castle.setScale(18)
+
+environ = loader.loadModel('phase_13/models/parties/rocket_model.bam') 
+environ.reparentTo(render) 
+environ.setPos(-141,40,133.5) 
+environ.setHpr(131,0,0) 
+environ.setScale(6)
+
+a = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+a.reparentTo(render)
+a.setPos(-120.577,195.300,132.554)  
+a.setHpr(51,0,0)
+a.setScale(1)
+
+
+environ = loader.loadModel('phase_6/models/neighborhoods/donalds_dock.bam')
+environ.reparentTo(render)
+environ.setPos(-0.291,111.382,127.5250)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+
+environ = loader.loadModel('phase_6/models/golf/golf_cart3.bam')
+environ.reparentTo(render)
+environ.setPos(65.110,229.863,132.718)
+environ.setHpr(510,0,0)
+environ.setScale(20)
+
+environ = loader.loadModel('phase_7/models/modules/cubicle_room.bam')
+environ.reparentTo(render)
+environ.setPos(-120.577,195.300,132.554)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+
+
+environ.setScale(1)
+environ = loader.loadModel('phase_6/models/golf/golf_geyser_model.bam')
+environ.reparentTo(render)
+environ.setPos(151.421,278.208,132.810)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_3.5/models/props/explosion.bam')
+environ.reparentTo(render)
+environ.setPos(-58.507,387.105,132.557)
+environ.setHpr(315,0,0)
+environ.setScale(35)
+
+environ = loader.loadModel('phase_12/models/bossbotHQ/BanquetInterior_1.bam') 
+environ.reparentTo(render) 
+environ.setPos(-110,-50,100) 
+environ.setHpr(131,0,0) 
+environ.setScale(0.8) 
+
+base.localAvatar.setPos(0,0,290)
+base.localAvatar.setSystemMessage(0,'Welcome To Pwnage  Land!')
+
+base.localAvatar.findAllMatches('**/Sky').setColor(255,0,0)
+base.localAvatar.setPos(0,0,290)
+base.localAvatar.setSystemMessage(0,'Welcome To Pwnage Land. Press F1 For Ur Suit F2 To Take It Off!')
+
+base.talkAssistant.sendOpenTalk('Welcome to Pwnage Land! ')
+
+base.cr.sendSetZoneMsg(7000)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Collisions"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "RAID"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 0
+
+def setText6():
+    bk_text = "Big"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n' * 256)
+    var = 1
+
+def setText7():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText9():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText10():
+    bk_text = "Funny"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "FInv"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7090)
+    var = 1
+
+def setText12():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText13():
+    bk_text = "Work"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText15():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText17():
+    bk_text = "Port In"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText18():
+    bk_text = "Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    var = 1
+
+def setText19():
+    bk_text = "Emcee"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistEmcee'))
+    var = 1
+
+def setText20():
+    bk_text = "Jealous"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistJealous'))
+    var = 1
+
+def setText21():
+    bk_text = "UpsideD"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText22():
+    bk_text = "OnFace"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-50,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText23():
+    bk_text = "OnBack"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,90,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText24():
+    bk_text = "FU"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('**** DISNEY FOR BANNING MY MAIN\n' * 12)
+    var = 1
+
+def setText25():
+    bk_text = "SIDE"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText26():
+    bk_text = "TInv"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2090)
+    var = 1
+
+def setText27():
+    bk_text = "Normal"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,0) 
+    var = 1
+
+
+def setText28():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Died')
+    var = 1
+
+
+def setText29():
+    bk_text = "Sit"
+    textObject.setText(bk_text)
+    base.localAvatar.enterSitStart()
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("COff", "coff", "coff", "COff"), scale=.05, pos = (-.95,-0,-.98), command=setText1)
+b2 = DirectButton(text = ("COn", "Con", "Con", "COn"), scale=.05, pos = (-.81,-0,-.98), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.05, pos = (-.7,-0,-.98), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.05, pos = (-.58,-0,-.98), command=setText4)
+b5 = DirectButton(text = ("RAID", "RAID", "RAID", "RAID"), scale=.05, pos = (-.47,0,-.98), command=setText5)
+b6 = DirectButton(text = ("BIG", "big", "big", "BIG"), scale=.05, pos = (-.36,-0,-.98), command=setText6)
+b7 = DirectButton(text = ("Global", "global", "global", "Global"), scale=.05, pos = (-.0,-0,-.98), command=setText7)
+b8 = DirectButton(text = ("Clothes", "clothes", "clothes", "Clothes"), scale=.05, pos = (.180,-0,-.98), command=setText8)
+b9 = DirectButton(text = ("Mem", "Mem", "Mem", "Mem"), scale=.05, pos = (.43,-10,-.92), command=setText9)
+b10 = DirectButton(text = ("Funny", "Funny", "Funny", "Funny"), scale=.05, pos = (.35,-1,-.98), command=setText10)
+b11 = DirectButton(text = ("FINV", "FINV", "FINV", "FINV"), scale=.05, pos = (.49,-41,-.98), command=setText11)
+b12 = DirectButton(text = ("ttc", "ttc", "ttc", "ttc"), scale=.05, pos = (.60,-0,-.98), command=setText12)
+b13 = DirectButton(text = ("sw", "sw", "sw", "sw"), scale=.05, pos = (.30,-0,-.92), command=setText13)
+b14 = DirectButton(text = ("v", "v", "v", "v"), scale=.05, pos = (-.1,-0,-.98), command=setText14)
+b15 = DirectButton(text = ("d", "d", "d", "d"), scale=.05, pos = (.77,-0,-.91), command=setText15)
+b16 = DirectButton(text = ("to", "to", "to", "to"), scale=.05, pos = (.55,-0,-.92), command=setText16)
+b17 = DirectButton(text = ("ti", "ti", "ti", "ti"), scale=.05, pos = (.63,-0,-.92), command=setText17)
+b18 = DirectButton(text = ("Sp", "Sp", "Sp", "Sp"), scale=.05, pos = (.20,-0,-.91), command=setText18)
+b19 = DirectButton(text = ("Se", "Se", "Se", "Se"), scale=.05, pos = (.12,-0,-.91), command=setText19)
+b20 = DirectButton(text = ("Sj", "Sj", "Sj", "Sj"), scale=.05, pos = (.7,-0,-.91), command=setText20)
+b21 = DirectButton(text = ("UpD", "upd", "upd", "Upd"), scale=.05, pos = (-.84,-0,-.91), command=setText21)
+b22 = DirectButton(text = ("FOF", "FOF", "FOF", "FOF"), scale=.05, pos = (-.64,-0,-.91), command=setText22)
+b23 = DirectButton(text = ("BOF", "bof", "bof", "BOF"), scale=.05, pos = (-.51,-0,-.91), command=setText23)
+b24 = DirectButton(text = ("FU", "fu", "fu", "FU"), scale=.05, pos = (-.28,-0,-.98), command=setText24)
+b25 = DirectButton(text = ("SID", "sid", "sid", "SID"), scale=.05, pos = (-.74,-0,-.91), command=setText25)
+b26 = DirectButton(text = ("TINV", "tinv", "tinv", "TINV"), scale=.05, pos = (.72,-0,-.98), command=setText26) 
+b27 = DirectButton(text = ("NoP", "nop", "Nop", "NoP"), scale=.05, pos = (-.97,-0,-.91), command=setText27) 
+b28 = DirectButton(text = ("DIE", "die", "die", "DIE"), scale=.05, pos = (-.12,-0,-.91), command=setText28) 
+b29 = DirectButton(text = ("SIT", "sit", "sit", "SIT"), scale=.05, pos = (-.19,-0,-.98), command=setText29) 
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText1():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+def setText2():
+    bk_text = "Hi Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce = 200
+
+def setText3():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Big Winky")
+    for cc in base.cr.doFindAll("Big Winky"):
+      cc.copyTo(render)   
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.05, pos = (-.38,-0,-.91), command=setText1)
+b2 = DirectButton(text = ("Jump", "Jump", "jump", "Jump"), scale=.05, pos = (-.23,-0,-.91), command=setText2)
+b3 = DirectButton(text = ("Clone", "Clone", "Cloned", "Cloned"), scale=.05, pos = (0,-.93,-.91), command=setText3)
+
+from direct.interval.IntervalGlobal import *
+def Saturn():
+    gloves = loader.loadTexture("phase_5.5/maps/Saturn2.jpg") 
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_5.5/maps/Saturn2.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_5.5/maps/Saturn2.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_5.5/maps/Saturn2.jpg")
+    sleeves.setTexture(sleevestex, 1) 
+def BeeSuit():
+    gloves = loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_10/maps/CBStationStripes2.jpg")
+    sleeves.setTexture(sleevestex, 1)
+def WeirdSuit():
+    gloves = loader.loadTexture("phase_3/maps/Humanist.rgb")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_3/maps/Humanist.rgb")
+    sleeves.setTexture(sleevestex, 1)
+def Money():
+    gloves = loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+    sleeves.setTexture(sleevestex, 1)
+def TieDye():
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex= loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    sleeves.setTexture(sleevestex, 1) 
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(Saturn))
+  rain.append(Wait(0.5))
+  rain.append(Func(BeeSuit))
+  rain.append(Wait(0.5))
+  rain.append(Func(WeirdSuit))
+  rain.append(Wait(0.5))
+  rain.append(Func(Money))
+  rain.append(Wait(0.5))
+  rain.append(Func(TieDye))
+  rain.append(Wait(0.5))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+
+
+    
+a = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+a.reparentTo(render)
+a.setPos(-120.577,195.300,132.554)  
+a.setHpr(51,0,0)
+a.setScale(1)
+
+environ = loader.loadModel('phase_12/models/bossbotHQ/BossbotMazex1_C.bam') 
+environ.reparentTo(render) 
+environ.setPos(-300,200,110)  
+environ.setHpr(75,0,0) 
+environ.setScale(1)
+
+environ = loader.loadModel('phase_5/models/char/cogB_robot-lose-mod.bam') 
+environ.reparentTo(render) 
+environ.setPos(-620,-775,210)  
+environ.setHpr(-15,0,0)
+
+environ = loader.loadModel('phase_4/models/modules/TT_pond.bam') 
+environ.reparentTo(render) 
+environ.setPos(-615,-730,210) 
+environ.setHpr(-15,0,0) 
+environ.setScale(1)
+
+c4 = loader.loadModel("phase_4/models/modules/suit_landmark_legal.bam") 
+c4.reparentTo(render) 
+c4.setPos(-100.577,153.300,132.554) 
+c4.setHpr(50,0,0) 
+c4.setScale(1) 
+
+b = loader.loadModel("phase_12/models/char/bossbotBoss-legs-zero.bam") 
+b.reparentTo(render) 
+b.setPos(45,444,196) 
+b.setHpr(0,0,0) 
+b.setScale(1) 
+
+c = loader.loadModel("phase_12/models/char/bossbotBoss-torso-zero.bam") 
+c.reparentTo(render) 
+c.setPos(45,444,206) 
+c.setHpr(0,0,0) 
+c.setScale(1) 
+
+d = loader.loadModel("phase_12/models/char/bossbotBoss-head-zero.bam") 
+d.reparentTo(render) 
+d.setPos(45,444,214.2) 
+d.setHpr(90,0,-90) 
+d.setScale(1) 
+
+
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(160,-105,153)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(140,-105,139)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(160,-95,148)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(150,-100,145)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(130,-105,135)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(140,-114,131)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(140,-125,127)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(120,-125,118)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(110,-125,112)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(100,-125,107)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(100,-125,107)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(90,-125,101)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(80,-125,97)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(80,-130,92)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(80,-157,76)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(70,-153,67)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(70,-100,60)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(70,-130,57)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(60,-130,48)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(50,-110,38)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(53,-100,33)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(60,-99,26)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(67,-90,22)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(74,-83,16)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(74,-100,6)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(74,-90,10)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+
+base.localAvatar.b_setAnimState('TeleportOut')
+
+
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(0)
+    base.localAvatar.setSystemMessage(0, 'fuck yea ur a cog...')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(-1)
+    base.localAvatar.setSystemMessage(0, 'Ur not a cog anymore yay lol?')
+i = Index()
+

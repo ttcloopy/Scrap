@@ -1,0 +1,262 @@
+TURBO SPEED
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+   def __init__(self):
+     self.accept('f6',self.Control)
+   def Control(self):    
+     ttv = base.cr.doFindAll("Vehicle")
+     for ttv in base.cr.doFindAll("Vehicle"):
+         ttv.setTurbo(999999)
+c = Control()
+
+FULL SPEED
+
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+    tid = ttv.doId
+lttv = base.cr.doFindAll("vehicle-" + str(tid))
+for lttv in base.cr.doFindAll("vehicle-" + str(tid)):
+    lttv.windResistance.setAmplitude(-200)
+
+messenger.send('leavingRace')
+
+HOT KEYS!
+
+
+base.accept("`", base.localAvatar.b_setAnimState, ['Died']) 
+base.accept("1", base.localAvatar.b_setAnimState, ['dive']) 
+base.accept("2", base.localAvatar.b_setAnimState, ['swim']) 
+base.accept("3", base.localAvatar.b_setAnimState, ['CatchEating']) 
+base.accept("4", base.localAvatar.b_setAnimState, ['Flattened']) 
+base.accept("5", base.localAvatar.b_setAnimState, ['Push']) 
+base.accept("6", base.localAvatar.b_setAnimState, ['SitStart']) 
+base.accept("7", base.localAvatar.b_setAnimState, ['GolfPuttSwing']) 
+base.accept("8", base.localAvatar.b_setAnimState, ['GolfRotateRight']) 
+base.accept("9", base.localAvatar.b_setAnimState, ['TeleportOut']) 
+base.accept("0", base.localAvatar.b_setAnimState, ['TeleportIn']) 
+base.accept("f1", base.localAvatar.collisionsOff, []) 
+base.accept("f2", base.cr.sendSetZoneMsg, [7000]) 
+base.accept("f3", base.localAvatar.b_setAnimState, ['teleport']) 
+base.accept("f4", base.cr.sendSetZoneMsg, [2000]) 
+base.accept("f5", base.localAvatar.collisionsOn, [])
+base.accept("f6", base.localAvatar.b_setAnimState, ['victory']) 
+base.accept("f7", base.localAvatar.b_setAnimState, ['ScientistEmcee']) 
+base.accept("f9", base.localAvatar.b_setAnimState, ['ScientistPlay']) 
+base.accept("f10", base.localAvatar.b_setAnimState, ['ScientistWork']) 
+base.accept("f11", base.localAvatar.b_setAnimState, ['ScientistJealous']) 
+base.accept("f12", base.localAvatar.b_setAnimState, ['GolfGoodPutt']) 
+base.accept("]", base.localAvatar.b_setAnimState, ['Sad'])
+base.accept("[", base.cr.sendSetZoneMsg, [2090]) 
+
+
+TIE DYE CLOTHES
+
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25)
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25)
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 1)
+
+BLACK CLOTHES
+
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(0)
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(0)
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(0)
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 1)
+TTGloves = base.localAvatar.findAllMatches('**/hands')
+base.accept('f1', TTGloves.setColor, [0.0,0.0,0.0])
+
+SCIENCE!!
+
+base.localAvatar.find('**/torso-bot').removeNode()
+base.localAvatar.find('**/torso-bot').removeNode()
+base.localAvatar.find('**/torso-top').removeNode()
+base.localAvatar.find('**/torso-top').removeNode()
+base.localAvatar.find('**/sleeves').removeNode()
+base.localAvatar.find('**/sleeves').removeNode()
+base.localAvatar.find('**/torso-bot').setColorScale(25)
+base.localAvatar.find('**/torso-top').setColorScale(25)
+base.localAvatar.find('**/sleeves').setColorScale(25)  
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistB.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+base.localAvatar.find('**/torso-top').setTexture(shirts, 1)
+base.localAvatar.find('**/torso-bot').setTexture(shorts, 1)
+base.localAvatar.find('**/sleeves').setTexture
+
+Black Cat
+
+base.localAvatar.find('**/ears-short').setColor(0.25,0.25,0.3) 
+base.localAvatar.find('**/head-short').setColor(0.25,0.25,0.3) 
+base.localAvatar.find('**/head-front-short').setColor(0.25,0.25,0.3) 
+base.localAvatar.find('**/neck').setColor(0.25,0.25,0.3) 
+base.localAvatar.find('**/arms').removeNode() 
+base.localAvatar.find('**/arms').removeNode() 
+base.localAvatar.find('**/arms').setColor(0.25,0.25,0.3) 
+base.localAvatar.find('**/legs').removeNode() 
+base.localAvatar.find('**/legs').removeNode() 
+base.localAvatar.find('**/legs').setColor(0.25,0.25,0.3) 
+base.localAvatar.find('**/feet').removeNode() 
+base.localAvatar.find('**/feet').removeNode() 
+base.localAvatar.find('**/feet').setColor(0.25,0.25,0.3) 
+
+
+GLOVE CODES
+
+
+
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+base.localAvatar.find('**/hands').setColor(255,0,0) - red
+base.localAvatar.find('**/hands').setColor(0,0,0) - black
+base.localAvatar.find('**/hands').setColor(0,1,0) - green
+base.localAvatar.find('**/hands').setColor(0,0,1) - blue
+base.localAvatar.find('**/hands').setColor(1,1,1) - white
+base.localAvatar.find('**/hands').setColor(1,0,1) - purple
+base.localAvatar.find('**/hands').setColor(0,255,255) Cyan
+
+TTGloves = base.localAvatar.findAllMatches('**/hands')
+base.accept('f1', TTGloves.setColor, [0.97,0.43,0.53]) - red
+base.accept('f1', TTGloves.setColor, [0.97,0.73,0.3]) - gold
+base.accept('f1', TTGloves.setColor, [0.97,0.73,0.9]) - pink
+base.accept('f1', TTGloves.setColor, [0.97,0.83,70.3]) - cotton candy
+base.accept('f1', TTGloves.setColor, [70.82,0.3,0.73]) - dark pink
+base.accept('f1', TTGloves.setColor, [0.97,0.73,0.8]) - peach
+base.accept('f1', TTGloves.setColor, [40.60,0.63,0.4]) - tan
+base.accept('f1', TTGloves.setColor, [0.90,0.53,0.3]) - tan-brownish
+base.accept('f1', TTGloves.setColor, [0.100,0.73,0.8]) - semi light blue
+base.accept('f1', TTGloves.setColor, [0.100,0.73,0.9]) - bright blue
+base.accept('f1', TTGloves.setColor, [0.100,0.73,0.1]) - green
+base.accept('f1', TTGloves.setColor, [0.10,0.73,0.48]) - granny green
+base.accept('f1', TTGloves.setColor, [70.00,0.53,0.1]) - orange
+base.accept('f1', TTGloves.setColor, [700.90,70.53,0.3]) - highlighter yellow
+base.accept('f1', TTGloves.setColor, [700.90,70.53,0.1) - yellow
+base.accept('f1', TTGloves.setColor, [700.950,70.53,0.1]) - bold yellow
+base.accept('f1', TTGloves.setColor, [700.90,70.53,0.9]) - white
+base.accept('f1', TTGloves.setColor, [0.60,0.63,0.1]) - snot green
+base.accept('f1', TTGloves.setColor, [0.0,0.0,0.0]) - black
+base.accept('f1', TTGloves.setColor, [00.0,0.23,0.4]) - dark blue
+base.accept('f1', TTGloves.setColor, [0.39,0.0,0.0]) - dark red
+base.accept('f1', TTGloves.setColor, [0.09,0.0,0.0]) - dark brown
+base.accept('f1', TTGloves.setColor, [0.4,0.3,0.2]) - brown
+
+
+BOT!
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(0,0)
+    base.localAvatar.b_setSCSinging(50701)
+def part2():
+    base.talkAssistant.sendOpenTalk('LOOK I CAN DO IT TOO')
+    base.localAvatar.b_setEmoteState(23,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('I AM NOT THE ANTIS DONT GIVE THEM CREDIT')
+    base.localAvatar.b_setEmoteState(22,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('THE ANTIS FAIL THEY CANT DO ANYTHING DONT BE AFRAID')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('YOUR FRIENDS')
+def part6():
+    base.talkAssistant.sendOpenTalk('TEAM AWESOME')
+    base.localAvatar.b_setEmoteState(22,1)
+def part7():
+    base.localAvatar.b_setSC(50202)
+    base.localAvatar.b_setEmoteState(0,0)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(5))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part3))
+  seq.append(Wait(5))
+  seq.append(Func(part4))
+  seq.append(Wait(5))
+  seq.append(Func(part5))
+  seq.append(Wait(5))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(4))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()
+
+
+from direct.interval.IntervalGlobal import * 
+def intro(): 
+    base.localAvatar.b_setEmoteState(0,0) 
+    base.localAvatar.b_setSCSinging(50702) 
+def part2(): 
+    base.talkAssistant.sendOpenTalk('WE ARE TEAM AWESOME, YOU CANNOT STOP US!') 
+    base.localAvatar.b_setEmoteState(24,1) 
+def part3(): 
+    base.talkAssistant.sendOpenTalk('MUAHAHA') 
+    base.localAvatar.b_setEmoteState(24,1) 
+def part4(): 
+    base.talkAssistant.sendOpenTalk('GOODBYE, YOU NOOBS') 
+    base.localAvatar.b_setEmoteState(3,1) 
+def part5(): 
+    base.talkAssistant.sendOpenTalk('AND REMEMBER') 
+def part6(): 
+    base.talkAssistant.sendOpenTalk('TOONTOWN FAILS AT STOPPING HAWK ERRS!') 
+    base.localAvatar.b_setAnimState('ScientistPlay') 
+def part7(): 
+    base.localAvatar.b_setSC(50800) 
+    base.localAvatar.b_setEmoteState(0,0) 
+def addzone(): 
+    word = base.localAvatar.getZoneId() 
+    word += 10 
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word) 
+def onTime(): 
+  seq = Sequence() 
+  seq.append(Func(intro)) 
+  seq.append(Wait(5)) 
+  seq.append(Func(part2)) 
+  seq.append(Wait(1)) 
+  seq.append(Func(part2)) 
+  seq.append(Wait(1)) 
+  seq.append(Func(part2)) 
+  seq.append(Wait(1)) 
+  seq.append(Func(part2)) 
+  seq.append(Wait(1)) 
+  seq.append(Func(part2)) 
+  seq.append(Wait(1)) 
+  seq.append(Func(part3)) 
+  seq.append(Wait(5)) 
+  seq.append(Func(part4)) 
+  seq.append(Wait(5)) 
+  seq.append(Func(part5)) 
+  seq.append(Wait(5)) 
+  seq.append(Func(part6)) 
+  seq.append(Wait(5)) 
+  seq.append(Func(part7)) 
+  seq.append(Wait(4)) 
+  seq.append(Func(addzone)) 
+  seq.start() 
+onTime() 
+

@@ -1,0 +1,141 @@
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Index)
+  def Index(self):
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    base.localAvatar.setSystemMessage(1,'Global Teleportation Activated')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Index)
+  def Index(self):
+    base.localAvatar.physControls.avatarControlReverseSpeed =50
+    base.localAvatar.physControls.avatarControlJumpForce = 50
+    base.localAvatar.physControls.avatarControlForwardSpeed = 60
+    base.localAvatar.setSystemMessage(1,'Fast toon and april fools gravity enabled.')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f3',self.Index)
+  def Index(self):
+    base.localAvatar.physControls.avatarControlReverseSpeed =10
+    base.localAvatar.physControls.avatarControlJumpForce = 30
+    base.localAvatar.physControls.avatarControlForwardSpeed = 17
+    base.localAvatar.setSystemMessage(1,'Controls back to normal.')
+i = Index()
+
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f4',self.Index)
+  def Index(self):
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.3)
+    base.localAvatar.setSystemMessage(1,'Black gloves enabled!')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f5',self.Index)
+  def Index(self):
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([7, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([49, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    base.localAvatar.setSystemMessage(1,'Toon HQ: CHEEZY POWERS ACTIVATE!!!')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f6',self.Index)
+  def Index(self):
+    base.localAvatar.takeOffSuit()
+    base.localAvatar.setSystemMessage(1,'Cog Suit off.')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('delete',self.Index)
+  def Index(self):
+    gloves = loader.loadTexture("phase_5.5/maps/windowView_Stars2.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/head-short').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/head-front-short').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/head-long').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/head-front-long').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/ears-short').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/ears-long').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/top').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/muzzle-short-neutral').setTexture(gloves, 1)
+    base.localAvatar.setSystemMessage(1,'Starry animal activate.')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('home',self.Index)
+  def Index(self):
+   base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-short').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-front-short').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-long').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-front-long').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/ears-short').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/ears-long').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/neck').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/arms').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/feet').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/legs').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/torso-bot').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/torso-top').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/sleeves').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/feet').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/arms').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/neck').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/legs').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/top').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/muzzle-short-neutral').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-front-short').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-long').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/head-front-long').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/ears-short').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/ears-long').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/neck').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/arms').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/feet').setColor(0.35,0.35,0.3)
+   base.localAvatar.findAllMatches('**/legs').setColor(0.35,0.35,0.3)
+   base.localAvatar.setSystemMessage(1,'Black animal activated.')
+i = Index()

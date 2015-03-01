@@ -1,0 +1,56 @@
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setSC(5308)
+def part2():
+    base.talkAssistant.sendOpenTalk('That's right, Toons!')
+def part3():
+    base.talkAssistant.sendOpenTalk('It's almost time!')
+def part4():
+    base.talkAssistant.sendOpenTalk('If Toontown doesn't fix our tools...')
+def part5():
+    base.talkAssistant.sendOpenTalk(':-) \n ' * 35)
+    base.localAvatar.d_squish(14)
+def part6():
+    base.talkAssistant.sendOpenTalk('See you on Monday.')
+def part7():
+    base.talkAssistant.sendOpenTalk('Your Good Old Friends,')
+def part8():
+    base.talkAssistant.sendOpenTalk('Team Smart')
+def part9():
+    base.localAvatar.b_setSC(20038)
+def part10():
+    base.localAvatar.b_setAnimState(('TeleportOut'))
+def part11():
+    base.localAvatar.b_setAnimState(('TeleportIn'))
+    base.cr.sendSetZoneMsg(2090)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(6))
+  seq.append(Func(part2))
+  seq.append(Wait(3))
+  seq.append(Func(part3))
+  seq.append(Wait(3))
+  seq.append(Func(part4))
+  seq.append(Wait(3))
+  seq.append(Func(part5))
+  seq.append(Wait(4))
+  seq.append(Func(part6))
+  seq.append(Wait(4))
+  seq.append(Func(part7))
+  seq.append(Wait(2))
+  seq.append(Func(part8))
+  seq.append(Wait(4))
+  seq.append(Func(part9))
+  seq.append(Wait(6))
+  seq.append(Func(part10))
+  seq.append(Wait(6))
+  seq.append(Func(part11))
+  seq.append(Wait(6))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()

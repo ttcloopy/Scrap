@@ -1,0 +1,2 @@
+battle = base.cr.doFindAll("battle")
+    print battle[0].startTimer(-40000000)

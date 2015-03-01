@@ -1,0 +1,17 @@
+base.localAvatar.collisionsOff()
+base.localAvatar.b_setAnimState('walk')
+from direct.interval.IntervalGlobal import *
+toonFollowing = base.cr.doFindAll("Blank")
+def updatePos():
+    base.localAvatar.setX(toonFollowing[0].getX() + 0.5)
+    base.localAvatar.setY(toonFollowing[0].getY())
+    base.localAvatar.setZ(toonFollowing[0].getZ())
+    base.localAvatar.setH(toonFollowing[0].getH())
+    base.localAvatar.setP(toonFollowing[0].getP())
+    base.localAvatar.setR(toonFollowing[0].getR())
+def onMovment():
+  mov = Sequence()
+  mov.append(Func(updatePos))
+  mov.append(Func(onMovment))
+  mov.start()
+onMovment()

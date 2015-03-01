@@ -1,0 +1,120 @@
+base.accept('f1', base.localAvatar.setHpr, [0,0,315])
+base.accept('f2', base.localAvatar.setHpr, [0,0,45])
+base.accept('f3', base.localAvatar.setHpr, [0,0,90])
+base.accept('f4', base.localAvatar.setHpr, [0,0,-250])
+base.accept('f5', base.localAvatar.setHpr, [0,0,-230])
+base.accept('f6', base.localAvatar.setHpr, [0,0,-210])
+base.accept('f7', base.localAvatar.setHpr, [0,0,-180])
+base.accept('f9', base.localAvatar.setHpr, [0,0,-160])
+base.accept('f10', base.localAvatar.setHpr, [0,0,-140])
+base.accept('f11', base.localAvatar.setHpr, [0,0,-120])
+base.accept('f12', base.localAvatar.setHpr, [0,0,-100])
+base.accept('1', base.localAvatar.setHpr, [0,0,-80])
+base.accept('2', base.localAvatar.setHpr, [0,0,-60])
+base.accept('3', base.localAvatar.setHpr, [0,0,-40])
+base.accept('4', base.localAvatar.setHpr, [0,0,-20])
+base.accept('5', base.localAvatar.setHpr, [0,0,-0])
+base.accept('6', base.localAvatar.collisionsOff, [])
+base.accept('7', base.localAvatar.collisionsOn, [])
+
+
+base.accept('f3', base.localAvatar.setSC, [20004]) 
+
+base.accept('f1', base.talkAssistant.sendOpenTalk, ['Join Team Makers!'])
+
+base.accept('f2', base.localAvatar.b_setEmoteState, [22,1])
+
+
+base.accept('f4', base.localAvatar.b_setEmoteState, [0,0])
+ 
+base.accept('f5', base.localAvatar.collisionsOff, [])
+
+base.accept('f6', base.localAvatar.collisionsOn, [])
+
+base.accept('f7', base.localAvatar.b_setAnimState, ['victory', .1])
+
+base.accept('f9', base.localAvatar.b_setAnimState, ['victory', -3])
+
+
+messenger.send([base.localAvatar.b_setAnimState('victory', .3)]) 
+- slow dance
+
+messenger.send([base.localAvatar.b_setAnimState('victory', -9)]) 
+-fast dance
+
+base.localAvatar.clearBillboard() 
+- take off bill board
+
+base.localAvatar.setBillboardAxis() 
+- turns it on 
+
+
+messenger.send('clearOutToonInterior')
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+base.localAvatar.setEmoteAccess([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])
+base.cr.sendSetZoneMsg(1830)
+base.cr.sendSetZoneMsg(7000)
+base.cr.sendSetZoneMsg(2520)
+base.localAvatar.enterSitStart()
+base.localAvatar.b_setAnimState('swim')	
+base.localAvatar.b_setAnimState(('Died'))
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.collisionsOff()
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setTickets(100000)
+base.localAvatar.b_setAnimState('Flattened')
+base.localAvatar.b_setAnimState('Squish')
+base.localAvatar.b_setAnimState('walk')
+base.localAvatar.b_setAnimState('run')
+base.localAvatar.b_setAnimState('GolfPuttLoop')
+base.localAvatar.b_setAnimState('GolfGoodPutt')
+base.localAvatar.physControls.avatarControlRotateSpeed=400
+base.localAvatar.b_setAnimState('GolfBadPutt')
+base.localAvatar.b_setAnimState('Push')
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.setGhostMode(8)
+base.localAvatar.setGhostMode(0)
+base.localAvatar.setGhostMode(22)
+base.localAvatar.setCogIndex(0)
+base.wireframeOn()
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1
+base.localAvatar.physControls.avatarControlJumpForce = 100
+Congratulations Toons!
+You all successfully held off the Cog Invasions...
+With a little help from our newly animated friends...
+And brought Toontown back to its usual silly self!
+We hope to get the Silly Meter rising again soon...
+So in the meantime, keep up the Cog fight...
+And enjoy the silliest place ever, Toontown!
+
+
+base.accept("f1", base.localAvatar.b_setAnimState, ['Squish'])
+base.accept("f2", base.localAvatar.b_setAnimState, ['ScientistEmcee'])
+base.accept("f3", base.localAvatar.b_setAnimState, ['TeleportOut'])
+base.accept("f4", base.localAvatar.b_setAnimState, ['ScientistWork'])
+base.accept("f5", base.localAvatar.b_setAnimState, ['Push'])
+base.accept("f6", base.localAvatar.b_setAnimState, ['FallDown'])
+base.accept("f7", base.localAvatar.b_setAnimState, ['TeleportIn'])
+base.accept("f8", base.localAvatar.b_setAnimState, ['victory'])
+base.accept("f9", base.localAvatar.b_setAnimState, ['swim'])
+base.accept("f10", base.localAvatar.b_setAnimState, ['Sad'])
+base.accept("f11", base.localAvatar.b_setAnimState, ['Died'])
+base.accept("f12", base.localAvatar.collisionOff [])
+
+
+
+
+
+

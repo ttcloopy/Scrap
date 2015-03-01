@@ -1,0 +1,1 @@
+base.localAvatar.d_setAnimState('BananaPeel', -1)

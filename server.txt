@@ -1,0 +1,16 @@
+setLiveTailorDNA('t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e')
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+def setLiveTailorDNA(dnaString):
+    dna = Sequence()
+    dna.append(Func(setDNATailorLive, dnaString))
+    dna.append(Wait(2))
+    dna.append(Func(setDNATailorClient, dnaString))
+    dna.start()
+def setDNATailorLive(dnaString):
+    base.localAvatar.b_setAnimState('swim')
+    base.localAvatar.setDNAString(dnaString)
+    npc = base.cr.doFindAll("Tailor")[0]
+    npc.handleCollisionSphereEnter(base.localAvatar.doId)
+    npc._DistributedNPCTailor__enterConfirmLoss(34, 34)
+def setDNATailorClient(dnaString):
+    base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:])

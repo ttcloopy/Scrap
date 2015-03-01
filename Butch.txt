@@ -1,0 +1,154 @@
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+environ = loader.loadModel("phase_4/models/minigames/tag_arena.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,0)
+environ.setHpr(0,0,0)
+environ.setScale(3)
+
+hall = loader.loadModel("phase_4/models/modules/toonhall.bam")
+hall.reparentTo(render)
+hall.setPos(-56.763,137.830,0.025)
+hall.setHpr(0,0,0)
+hall.setScale(3) 
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(10.389,85.279,0.025)
+
+pandaPosInterval22 = e.posInterval(13,Point3(10.389,85.279,0.025),
+startPos=Point3(0,114.03,127.50))
+pandaPosInterval33 = e.posInterval(13,Point3(10.389,85.279,150.50),
+startPos=Point3(10.389,85.279,0.025))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+ pandaHprInterval11,
+ pandaPosInterval33,
+ pandaHprInterval22,
+ name="pandaPace")
+pandaPace.loop()
+
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c.setPos(-9.98,139.11,117.38)
+c.setHpr(0,340.30,0)
+c.hide()
+c.reparentTo(render)
+c.find('**/wall_back').removeNode()
+c.find('**/wall_front').removeNode()
+c.find('**/wall_left').removeNode()
+c.find('**/wall_right').removeNode()
+c.find('**/ceiling').removeNode() 
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam")
+castle.reparentTo(render)
+castle.setPos(-75.215,-196.153,0.025)
+castle.setHpr(2218,0,0)
+castle.setScale(10)
+
+mail1 = Actor("phase_5/models/char/tt_r_ara_ttc_mailbox.bam",{"cheer":"phase_5/models/char/tt_a_ara_ttc_mailbox_fightCheer.bam"})
+mail1.reparentTo(render)
+mail1.loop("cheer")
+mail1.setPos(-41.727,-105.031,0.025)
+mail1.setHpr(100.490,0,0)
+mail1.setScale(1)
+
+mgr = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+mgr.reparentTo(render)
+mgr.setPos(-174.215,-35.153,0.025)
+mgr.setHpr(0,0,0)
+mgr.setScale(5) 
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(270, 0, 0))
+pandaHprInterval2 = mgr.hprInterval(3,Point3(270, 0, 0),
+startHpr=Point3(0, 0, 0)) 
+# Create and play the sequence that coordinates the intervals.
+maryspin = Sequence(pandaHprInterval1,
+ name="maryspin")
+maryspin.loop() 
+evsign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+evsign.reparentTo(render)
+evsign.setPos(-3.082,85.281,0.025)
+evsign.setHpr(0,0,0)
+evsign.setScale(2)
+
+cogplat = loader.loadModel("phase_9/models/cogHQ/platform2.bam")
+cogplat.reparentTo(render)
+cogplat.setPos(9,80.153,150)
+cogplat.setHpr(0,0,0)
+cogplat.setScale(5)
+
+cogplat1 = loader.loadModel("phase_9/models/cogHQ/platform2.bam")
+cogplat1.reparentTo(render)
+cogplat1.setPos(9,40.153,150)
+cogplat1.setHpr(0,0,0)
+cogplat1.setScale(1)
+
+cogstairs6 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs6.reparentTo(render)
+cogstairs6.setPos(15,34.153,150)
+cogstairs6.setHpr(270,0,0)
+cogstairs6.setScale(25)
+cogstairs2 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs2.reparentTo(render)
+cogstairs2.setPos(15,16.153,158)
+cogstairs2.setHpr(270,0,0)
+cogstairs2.setScale(25)
+
+cogplat5 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat5.reparentTo(render)
+cogplat5.setPos(9,-20,166)
+cogplat5.setHpr(0,0,0)
+cogplat5.setScale(8)
+
+cogplat3 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat3.reparentTo(render)
+cogplat3.setPos(9,-82,166)
+cogplat3.setHpr(0,0,0)
+cogplat3.setScale(8)
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat4.reparentTo(render)
+cogplat4.setPos(65,-82,166)
+cogplat4.setHpr(0,0,0)
+cogplat4.setScale(8)
+nc = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam")
+nc.reparentTo(render)
+nc.setPos(300,-82,166)
+nc.setHpr(270,0,0)
+nc.setScale(2)
+
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam")
+cogplat4.reparentTo(render)
+cogplat4.setPos(125,-82,166)
+cogplat4.setHpr(0,0,0)
+cogplat4.setScale(8)
+
+nc.find('**/doorwood').setHpr(90,0,0)
+
+ceosign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+ceosign.reparentTo(render)
+ceosign.setPos(289.082,-62.281,166.025)
+ceosign.setHpr(270,0,0)
+ceosign.setScale(2)
+
+dance = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dance.reparentTo(render)
+dance.setPos(618.082,-109.281,166.025)
+dance.setHpr(270,0,0)
+dance.setScale(8)

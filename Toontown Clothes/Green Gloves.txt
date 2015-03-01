@@ -1,0 +1,7 @@
+base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)# - green
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,1,0)# - neon green 1
+base.localAvatar.findAllMatches('**/hands').setColor(0.0,1.0,0.0)# - neon green 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.2,0.3,0.11)# - rusty green
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.82,0.32)# - lime green
+base.localAvatar.findAllMatches('**/hands').setColor(0.72,1,0.36)# - olive
+base.localAvatar.findAllMatches('**/hands').setColor(0.57,0.45,0.16)# - swamp

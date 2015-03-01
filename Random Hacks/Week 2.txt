@@ -1,0 +1,12 @@
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f4',self.Index)
+  def Index(self):
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.3)
+    base.localAvatar.setSystemMessage(1,'Black gloves enabled!')
+i = Index()
+
+If you dont want to use the shortcut:
+
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.3)

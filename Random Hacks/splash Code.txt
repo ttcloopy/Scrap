@@ -1,0 +1,4 @@
+splash code
+toon = base.cr.doFindAll("put.toon.name.here")
+base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())

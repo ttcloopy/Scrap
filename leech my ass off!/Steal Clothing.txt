@@ -1,0 +1,3 @@
+closetn = base.cr.doFindAll("closet")
+for closetn in base.cr.doFindAll("closet"):
+    messenger.send("purchaseDone-" + str(closetn.doId))

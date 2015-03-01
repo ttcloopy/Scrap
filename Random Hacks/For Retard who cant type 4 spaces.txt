@@ -1,0 +1,4 @@
+ttd = base.cr.doFindAll("DivingGame")
+for ttd in base.cr.doFindAll("DivingGame"):
+    ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+#HOW FUCKING HARD IS THAT!?

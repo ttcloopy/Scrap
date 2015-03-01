@@ -1,0 +1,36 @@
+Black Animal (For fat and short torso.)
+
+
+base.localAvatar.find('**/ears-short').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/head-short').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/head-front-short').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/neck').removeNode()
+base.localAvatar.find('**/neck').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/arms').removeNode()
+base.localAvatar.find('**/arms').removeNode()
+base.localAvatar.find('**/arms').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/legs').removeNode()
+base.localAvatar.find('**/legs').removeNode()
+base.localAvatar.find('**/legs').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/feet').removeNode()
+base.localAvatar.find('**/feet').removeNode()
+base.localAvatar.find('**/feet').setColor(0.25,0.25,0.3)
+
+
+-----------------------------------------------------
+Black Animal (For tall torso.)
+
+
+base.localAvatar.find('**/head').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/head-front').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/neck').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/arms').removeNode()
+base.localAvatar.find('**/arms').removeNode()
+base.localAvatar.find('**/arms').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/legs').removeNode()
+base.localAvatar.find('**/legs').removeNode()
+base.localAvatar.find('**/legs').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/feet').removeNode()
+base.localAvatar.find('**/feet').removeNode()
+base.localAvatar.find('**/feet').setColor(0.25,0.25,0.3)
+base.localAvatar.find('**/feet').setColor(0.25,0.25,0.3)

@@ -1,0 +1,1343 @@
+---------------------FIRST HALF------------------------------
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam')
+environ.reparentTo(render)
+environ.setPos(0,0,80)
+environ.setHpr(60,0,0)
+environ.setScale(10)
+
+ceosign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+ceosign.reparentTo(render)
+ceosign.setPos(40,55,80)
+ceosign.setHpr(375,0,0)
+ceosign.setScale(5)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(20,-110,-2)
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(33,-110,-2)
+
+environ = loader.loadModel('phase_4/models/char/nurseShark-zero.bam')
+environ.reparentTo(render)
+environ.setPos(20,-125,-1)
+environ.setHpr(-115,0,0)
+environ.setScale(5)
+environ.setHpr(74,0,0)
+environ.setScale(1.6)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(9,-110,-3)
+environ.setHpr(74,0,0)
+environ.setScale(1.6)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(88,-45,-2)
+environ.setHpr(74,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(88,-98,-2)
+environ.setHpr(74,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(70,-110,-2)
+environ.setHpr(74,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(12,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(11,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(10,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(9,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(8,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(7,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(6,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(5,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(4,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(3,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(2,-110,-2)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(1,-110,-2)
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam")
+castle.reparentTo(render)
+castle.setPos(82,-75,-2)
+castle.setHpr(140,0,0)
+castle.setScale(2.1)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(20,-125,-1)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+base.localAvatar.findAllMatches('**/hands').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(sleve, 2) 
+
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(sleve, 2) 
+
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(sleve, 2) 
+
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 2)
+
+base.localAvatar.findAllMatches('**/hands').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/torso-bot').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/torso-top').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/sleeves').setColor(0,1,0) 
+
+environ = loader.loadModel('phase_5/models/props/geyser.bam')
+environ.reparentTo(render)
+environ.setPos(25,-15,-2)
+environ.setHpr(-89,0,0)
+environ.setScale(3)
+
+environ = loader.loadModel('phase_5/models/props/geyser.bam')
+environ.reparentTo(render)
+environ.setPos(25,-15,-2)
+environ.setHpr(-89,0,0)
+environ.setScale(7)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(30,22,81)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_7/models/modules/suit_interior.bam')
+environ.reparentTo(render)
+environ.setPos(7,-15,-2)
+environ.setHpr(-89,0,0)
+environ.setScale(3)
+
+environ = loader.loadModel('phase_5/models/props/geyser.bam')
+environ.reparentTo(render)
+environ.setPos(65,-75,-2)
+environ.setHpr(-89,0,0)
+environ.setScale(5)
+
+environ = loader.loadModel("phase_6/models/char/chip_1000.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,86)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_5/models/props/geyser.bam')
+environ.reparentTo(render)
+environ.setPos(75,-53,-2)
+environ.setHpr(-89,0,0)
+environ.setScale(5)
+
+environ = loader.loadModel('phase_4/models/modules/PetShopExterior_TT.bam')
+environ.reparentTo(render)
+environ.setPos(25,-156,-2)
+environ.setHpr(150,0,0)
+environ.setScale(0.7)
+
+environ = loader.loadModel('phase_5.5/models/estate/houseB.bam')
+environ.reparentTo(render)
+environ.setPos(100,-20,-1)
+environ.setHpr(250,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_4/models/minigames/toon_cannon_water_tower.bam')
+environ.reparentTo(render)
+environ.setPos(10,-80,-2)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+
+mgr = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+mgr.reparentTo(render)
+mgr.setPos(-60,070,0)
+mgr.setHpr(0,0,0)
+mgr.setScale(3)
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),
+
+startHpr=Point3(270, 0, 0))
+pandaHprInterval2 = mgr.hprInterval(3,Point3(270, 0, 0),
+
+
+startHpr=Point3(0, 0, 0))
+# Create and play the sequence that coordinates the intervals.
+maryspin = Sequence(pandaHprInterval1,
+name="maryspin")
+maryspin.loop()
+
+mail1 = Actor("phase_3/models/char/minnie-1200.bam",{"wait":"phase_3/models/char/minnie-wait.bam"}) 
+mail1.reparentTo(render) 
+mail1.loop("wait") 
+mail1.setPos(15,-24,83.6)
+mail1.setHpr(0,0,0) 
+mail1.setScale(1) 
+
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+ceo.setPos(0,-50,82)
+ceo.loop("walk")
+ceo.setHpr(120,0,0)
+ceo.setScale(1.8)
+
+cj = Actor({"head":"phase_11/models/char/lawbotBoss-head-zero.bam", \
+"torso":"phase_11/models/char/lawbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+cj.attach("head", "torso", "joint34")
+cj.attach("torso", "legs", "joint_legs")
+cj.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+cj.setPos(20,-92,35)
+cj.loop("walk")
+cj.setHpr(450,0,0)
+cj.setScale(0.4)
+
+mail2 = Actor("phase_3/models/char/mickey-1200.bam",{"cheer":"phase_3/models/char/mickey-wait.bam"})
+mail2.reparentTo(render)
+mail2.loop("cheer")
+mail2.setPos(-201,70,81.5)
+mail2.setHpr(500,0,0)
+mail2.setScale(1)
+
+dance = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dance.reparentTo(render)
+dance.setPos(0,0,80)
+dance.setHpr(270,0,0)
+dance.setScale(4)
+
+environ = loader.loadModel('phase_5.5/models/estate/popcornCart.bam')
+environ.reparentTo(render)
+environ.setPos(0,0,81)
+environ.setHpr(-115,0,0)
+environ.setScale(1.8)
+
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(11,-80,35)
+environ.setHpr(74,0,0)
+environ.setScale(3)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(40,-95,10)
+environ.setHpr(74,0,0)
+environ.setScale(1.6)
+
+cogstairs6 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs6.reparentTo(render)
+cogstairs6.setPos(55,-80,1)
+cogstairs6.setHpr(270,0,0)
+cogstairs6.setScale(25)
+cogstairs2 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam")
+cogstairs2.reparentTo(render)
+cogstairs2.setPos(55,-80,1)
+cogstairs2.setHpr(270,0,0)
+cogstairs2.setScale(25)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(30,-95,12)
+environ.setHpr(74,0,0)
+environ.setScale(1.6)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(30,-88,14)
+environ.setHpr(74,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(30,-88,18)
+environ.setHpr(74,0,0)
+environ.setScale(1.6)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(30,-88,21)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(30,-88,25)
+environ.setHpr(74,0,0)
+environ.setScale(0.6)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(30,-88,30)
+environ.setHpr(74,0,0)
+environ.setScale(0.4)
+
+
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(0,0,0)
+
+pandaPosInterval22 = e.posInterval(13,Point3(0,0,0),
+startPos=Point3(0,0,0))
+pandaPosInterval33 = e.posInterval(13,Point3(0,0,80),
+
+
+startPos=Point3(0,0,0))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+
+
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+c.setPos(0,0,80)
+c.setHpr(0,340.30,0)
+c.hide()
+c.reparentTo(render)
+c.find('**/wall_back').removeNode()
+c.find('**/wall_front').removeNode()
+c.find('**/wall_left').removeNode()
+c.find('**/wall_right').removeNode()
+c.find('**/ceiling').removeNode()
+
+environ = loader.loadModel('phase_13/models/parties/jukebox_model.bam')
+environ.reparentTo(render)
+environ.setPos(50,0,80)
+environ.setHpr(250,0,0)
+environ.setScale(7)
+
+dance = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dance.reparentTo(render)
+dance.setPos(0,0,6)
+dance.setHpr(270,0,0)
+dance.setScale(0.5)
+
+environ = loader.loadModel('phase_4/models/char/seaHorse-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-150,0,0)
+environ.setHpr(-250,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-150,0,0)
+environ.setHpr(0,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_4/models/char/pianoTuna-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-130,0,2)
+environ.setHpr(-115,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-130,0,1)
+environ.setHpr(0,0,0)
+environ.setScale(0.3)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-130,15,1)
+environ.setHpr(0,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_4/models/char/BearAcuda-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-130,15,1)
+environ.setHpr(-320,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_4/models/char/kingCrab-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-120,0,2)
+environ.setHpr(-115,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-120,0,2)
+environ.setHpr(0,0,0)
+environ.setScale(0.3)
+
+environ = loader.loadModel('phase_4/models/char/nurseShark-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-122,-15,4)
+environ.setHpr(-250,0,0)
+environ.setScale(3)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-122,-15,3)
+environ.setHpr(0,0,0)
+environ.setScale(0.6)
+
+environ = loader.loadModel('phase_4/models/char/clownFish-zero.bam')
+environ.reparentTo(render)
+environ.setPos(8-140,-20,3)
+environ.setHpr(-115,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(8-140,-20,2)
+environ.setHpr(0,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_4/models/char/poolShark-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-133,-10,1.5)
+environ.setHpr(-302,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-133,-10,1.5)
+environ.setHpr(0,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_4/models/char/starFish-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-120,15,3)
+environ.setHpr(-245,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+environ.reparentTo(render)
+environ.setPos(-120,15,1)
+environ.setHpr(0,0,0)
+environ.setScale(0.3)
+
+environ = loader.loadModel('phase_6/models/golf/findfour_game.bam')
+environ.reparentTo(render)
+environ.setPos(19,0,82)
+environ.setHpr(-174,0,0)
+environ.setScale(5)
+
+environ = loader.loadModel('phase_6/models/golf/checker_game.bam') 
+environ.reparentTo(render) 
+environ.setPos(5,19,82) 
+environ.setHpr(-323,0,0) 
+environ.setScale(3) 
+
+environ = loader.loadModel('phase_6/models/golf/checker_game.bam') 
+environ.reparentTo(render) 
+environ.setPos(5,38,82) 
+environ.setHpr(-323,0,0) 
+environ.setScale(3) 
+
+environ = loader.loadModel('phase_6/models/golf/findfour_game.bam')
+environ.reparentTo(render)
+environ.setPos(19,50,82)
+environ.setHpr(-174,0,0)
+environ.setScale(5)
+
+environ = loader.loadModel('phase_4/models/minigames/tag_arena.bam')
+environ.reparentTo(render)
+environ.setPos(1-205,65,80)
+environ.setHpr(-602,0,0)
+environ.setScale(0.6)
+
+daisy = Actor("phase_4/models/char/daisyduck_1600.bam",{"idle":"phase_4/models/char/daisyduck_idle.bam"})
+daisy.reparentTo(render)
+daisy.loop("idle")
+daisy.setPos(25,-80,35)
+daisy.setHpr(250,0,0)
+daisy.setScale(2)
+
+tiki = loader.loadModel("phase_5.5/models/char/Clarabelle-zero.bam")
+tiki.reparentTo(render)
+tiki.setPos(-15,12,82.1)
+tiki.setHpr(100,0,0)
+tiki.setScale(1.4)
+
+mail3 = Actor("phase_6/models/char/pluto-1000.bam",{"neutral":"phase_6/models/char/pluto-neutral.bam"}) 
+mail3.reparentTo(render) 
+mail3.loop("neutral") 
+mail3.setPos(20,-15,82.5) 
+mail3.setHpr(250,0,0) 
+mail3.setScale(0.9) 
+
+environ = loader.loadModel("phase_8/models/neighborhoods/the_burrrgh.bam") 
+environ.reparentTo(render) 
+environ.setPos(22,-19,82) 
+environ.setHpr(0,0,0) 
+environ.setScale(0.1) 
+
+environ = loader.loadModel("phase_6/models/neighborhoods/donalds_dock.bam")
+environ.reparentTo(render)
+environ.setPos(0,-50,82)
+environ.setHpr(0,0,0)
+environ.setScale(0.3)
+
+environ = loader.loadModel('phase_13/models/parties/trampoline_model.bam')
+environ.reparentTo(render)
+environ.setPos(20,42,83)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_13/models/parties/trampoline_model.bam')
+environ.reparentTo(render)
+environ.setPos(20,30,83)
+environ.setHpr(50,0,0)
+environ.setScale(0.8)
+
+environ = loader.loadModel('phase_13/models/parties/trampoline_model.bam')
+environ.reparentTo(render)
+environ.setPos(20,15,82)
+environ.setHpr(50,0,0)
+environ.setScale(0.7)
+
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam')
+environ.reparentTo(render) 
+environ.setPos(-153,10,81) 
+environ.setHpr(330,0,0) 
+environ.setScale(0.6) 
+
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_cupcake.bam')
+environ.reparentTo(render) 
+environ.setPos(-139,24,81.3) 
+environ.setHpr(-50,0,0) 
+environ.setScale(0.5) 
+
+environ = loader.loadModel('phase_13/models/parties/rocket_model.bam')
+environ.reparentTo(render)
+environ.setPos(-125,-0,80)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_13/models/parties/danceFloor.bam')
+environ.reparentTo(render)
+environ.setPos(-95,-25,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_13/models/parties/danceFloor.bam')
+environ.reparentTo(render)
+environ.setPos(-90,-25,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_13/models/parties/danceFloor.bam')
+environ.reparentTo(render)
+environ.setPos(-85,-29,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.3)
+
+environ = loader.loadModel('phase_7/models/modules/cubicle_room.bam')
+environ.reparentTo(render)
+environ.setPos(-125,-0,80)
+environ.setHpr(51,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_13/models/parties/partyCatchTree.bam')
+environ.reparentTo(render)
+environ.setPos(-172,70,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-84,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-80,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-90,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-89,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-92,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-94,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-96,80)
+environ.setHpr(74,0,0)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-100,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-102,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-104,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-106,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-108,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-110,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-112,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-114,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-116,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-118,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-120,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-122,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-124,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-126,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-128,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(20,-130,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-86,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-88,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-90,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-94,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-96,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-98,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-100,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-85,-40,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-91,-75,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-93,-86,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-95.0,-96,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-97,-106,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-87,-50,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-89,-65,80)
+environ.setHpr(-550,0,0)
+environ.setScale(1)
+
+ceosign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam")
+ceosign.reparentTo(render)
+ceosign.setPos(-52,-12,82)
+ceosign.setHpr(500,0,0)
+ceosign.setScale(5)
+
+environ = loader.loadModel('phase_4/models/minigames/maze_2player.bam')
+environ.reparentTo(render)
+environ.setPos(-209,35,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.3)
+
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_tepee.bam')
+environ.reparentTo(render)
+environ.setPos(-240,65,80)
+environ.setHpr(315,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_tepee.bam')
+environ.reparentTo(render)
+environ.setPos(-227,86,80)
+environ.setHpr(315,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/neighborhoods/minnies_melody_land.bam')
+environ.reparentTo(render)
+environ.setPos(-111,-177,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.8)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-104,-235,86)
+environ.setHpr(-550,1,0)
+environ.setScale(0.9) 
+
+environ = Actor("phase_4/models/props/tt_a_ara_ttc_sillyMeter_default.bam",{"lol":"phase_4/models/props/tt_a_ara_ttc_sillyMeter_phaseFive.bam"}) 
+environ.reparentTo(render) 
+environ.setPos(-21,12,82.1) 
+environ.setHpr(-635,0,0) 
+environ.setScale(2) 
+environ.loop("lol") 
+
+environ = loader.loadModel('phase_13/models/parties/cogPieArena_model.bam')
+environ.reparentTo(render)
+environ.setPos(-194,95,80)
+environ.setHpr(320,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_13/models/parties/trampoline_model.bam')
+environ.reparentTo(render)
+environ.setPos(-188,38,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_13/models/parties/trampoline_model.bam')
+environ.reparentTo(render)
+environ.setPos(-195,46,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel("phase_5.5/models/estate/bugRoomTV.bam")
+environ.reparentTo(render)
+environ.setPos(-100,-278,74)
+environ.setHpr(870,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_5.5/models/estate/bathtub_bed.bam")
+environ.reparentTo(render)
+environ.setPos(-110,-270,72)
+environ.setHpr(140,0,0)
+environ.setScale(2.1)
+
+environ = loader.loadModel("phase_5.5/models/estate/trolley_bed.bam")
+environ.reparentTo(render)
+environ.setPos(-137,-375,81)
+environ.setHpr(140,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel('phase_13/models/parties/trampoline_model.bam')
+environ.reparentTo(render)
+environ.setPos(-205,46,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_8/models/neighborhoods/donalds_dreamland.bam')
+environ.reparentTo(render)
+environ.setPos(-125,-333,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.4)
+
+environ = loader.loadModel('phase_13/models/parties/partyTugOfWar.bam')
+environ.reparentTo(render)
+environ.setPos(-205,65,80)
+environ.setHpr(50,0,0)
+environ.setScale(0.6)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-101,-221,75)
+environ.setHpr(-550,55,0)
+environ.setScale(0.7)
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-102,-225,80)
+environ.setHpr(-550,55,0)
+environ.setScale(0.7)
+
+----------------------------SECOND HALF----------------------------------------------
+
+
+environ = loader.loadModel('phase_6/models/golf/golf_bridge.bam')
+environ.reparentTo(render)
+environ.setPos(-104,-235,86)
+environ.setHpr(-550,1,0)
+environ.setScale(0.9)
+    
+environ = loader.loadModel("phase_5.5/models/estate/closetBoy.bam")
+environ.reparentTo(render)
+environ.setPos(-120,-270,74)
+environ.setHpr(140,0,0)
+environ.setScale(2)
+    
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam')
+environ.reparentTo(render)
+environ.setPos(-146,-365,81)
+environ.setHpr(60,0,0)
+environ.setScale(0.8)
+    
+environ = loader.loadModel("phase_5.5/models/estate/bugRoomTV.bam")
+environ.reparentTo(render)
+environ.setPos(-100,-278,74)
+environ.setHpr(870,0,0)
+environ.setScale(2)
+    
+environ = loader.loadModel("phase_5.5/models/estate/BanannaSplitShower.bam")
+environ.reparentTo(render)
+environ.setPos(-100,-289,74)
+environ.setHpr(870,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_5.5/models/estate/houseA.bam")
+environ.reparentTo(render)
+environ.setPos(-169,-269,74)
+environ.setHpr(870,0,0)
+environ.setScale(2)
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam")
+castle.reparentTo(render)
+castle.setPos(-90,-375,80)
+castle.setHpr(160,0,0)
+castle.setScale(0.6)
+
+environ = loader.loadModel('phase_3.5/models/modules/tt_m_ara_int_scientistHorseFlat.bam')
+environ.reparentTo(render)
+environ.setPos(-94,-381.4,80)
+environ.setHpr(-100,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel('phase_8/models/neighborhoods/daisys_garden.bam')
+environ.reparentTo(render)
+environ.setPos(-1000,-345,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.8)
+
+dlD = Actor("phase_6/models/char/DL_donald-500.bam",{"idle":"phase_6/models/char/DL_donald-neutral.bam"})
+dlD.reparentTo(render)
+dlD.loop("idle")
+dlD.setPos(-92,-367.2,80)
+dlD.setHpr(100,0,0)
+dlD.setScale(1.5)
+
+pumpkin = loader.loadModel("phase_4/models/estate/pumpkin_short.bam")
+pumpkin.reparentTo(render)
+pumpkin.setPos(-172,-345,80)
+pumpkin.setHpr(160,0,0)
+pumpkin.setScale(0.6)
+
+environ = loader.loadModel('phase_5.5/models/estate/tt_m_ara_est_house_tepee.bam')
+environ.reparentTo(render)
+environ.setPos(-84,-360,80)
+environ.setHpr(170,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_13/models/parties/jukebox_model.bam')
+environ.reparentTo(render)
+environ.setPos(-227,71,80)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_4/models/neighborhoods/toontown_central.bam')
+environ.reparentTo(render)
+environ.setPos(-400,-345,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.8)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-130,-310,73.9)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-130,-330,73.9)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-144,-330,73.4)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-120,-348,74)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-118,-318,74)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-135,-345,74)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_6/models/golf/picnic_table.bam')
+environ.reparentTo(render)
+environ.setPos(-115,-334,74)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_4/models/char/nurseShark-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-210.5,65,80.8)
+environ.setHpr(-250,0,0)
+environ.setScale(0.5)
+
+environ = loader.loadModel('phase_4/models/char/nurseShark-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-206,70,80.8)
+environ.setHpr(-399,0,0)
+environ.setScale(0.7)
+
+environ = loader.loadModel('phase_4/models/char/nurseShark-zero.bam')
+environ.reparentTo(render)
+environ.setPos(-204,60,80.8)
+environ.setHpr(-605,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel("phase_6/models/char/dale_1000.bam")
+environ.reparentTo(render)
+environ.setPos(-172,70,80)
+environ.setHpr(150,0,0)
+environ.setScale(2)
+
+environ = loader.loadModel("phase_6/models/char/chip_1000.bam")
+environ.reparentTo(render)
+environ.setPos(-169,64,80)
+environ.setHpr(100,0,0)
+environ.setScale(2)
+
+cogpin2 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin2.reparentTo(render)
+cogpin2.loop('idle')
+cogpin2.setPos(-191,101,80)
+cogpin2.setHpr(40,0,0) 
+cogpin2.setScale(0.8)
+
+cogpin2 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin2.reparentTo(render)
+cogpin2.loop('idle')
+cogpin2.setPos(-199,92,80)
+cogpin2.setHpr(40,0,0) 
+cogpin2.setScale(0.8)
+
+cogpin2 = Actor("phase_13/models/parties/cogPinata_actor.bam",{"idle":"phase_13/models/cogPinata_idle_anim.bam"})
+cogpin2.reparentTo(render)
+cogpin2.loop('idle')
+cogpin2.setPos(-194,95,80)
+cogpin2.setHpr(40,0,0) 
+cogpin2.setScale(0.8)
+
+environ = loader.loadModel('phase_4/models/modules/gazebo.bam')
+environ.reparentTo(render)
+environ.setPos(-100,0,80) 
+
+environ = loader.loadModel('phase_6/models/neighborhoods/donalds_dock.bam')
+environ.reparentTo(render)
+environ.setPos(-900,-345,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.8)
+
+cbl = loader.loadModel("phase_4/models/modules/suit_landmark_legal.bam")
+cbl.reparentTo(render)
+cbl.setPos(-77,-339,80)
+cbl.setHpr(250,0,0)
+cbl.setScale(0.5)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(10,-80,35.4)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(10,-80,35)
+environ.setHpr(74,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(10,-80,35.6)
+environ.setHpr(74,0,0)
+environ.setScale(0.7)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(10,-80,35.9)
+environ.setHpr(74,0,0)
+environ.setScale(0.4)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(10,-80,36.2)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-112,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-114,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-116,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-118,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.2) 
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-120,0,80)
+environ.setHpr(74,0,0)
+environ.setScale(0.5)
+
+tiki = loader.loadModel("phase_5.5/models/char/Clarabelle-zero.bam")
+tiki.reparentTo(render)
+tiki.setPos(-15,12,82.1)
+tiki.setHpr(100,0,0)
+tiki.setScale(1.4)
+
+dlD = Actor("phase_6/models/char/DL_donald-500.bam",{"idle":"phase_6/models/char/DL_donald-neutral.bam"})
+dlD.reparentTo(render)
+dlD.loop("idle")
+dlD.setPos(-205,46,82)
+dlD.setHpr(0,0,0)
+dlD.setScale(1)
+
+max = Actor({"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+# dictionary of anim dictionaries
+{"torso":{"walk":"phase_3/models/char/dogLL_Shorts-torso-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-sad-neutral.bam"}, \
+"legs":{"walk":"phase_3/models/char/dogMM_Shorts-legs-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-legs-sad-neutral.bam"} \
+})
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistA.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+max.find('**/torso-top').setTexture(shirts, 1)
+max.find('**/torso-bot').setTexture(shorts, 1)
+max.find('**/torso-bot-cap').setTexture(shorts, 1)
+max.find('**/sleeves').setTexture(sleve, 1)
+max.attach("torso", "legs", "joint_hips")
+gloves = max.find('**/hands')
+gloves.setColor(255,0,0)
+base.localAvatar.findAllMatches('**/hands').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+max.findAllMatches('**/hands').setTexture(sleve, 2) 
+max.findAllMatches('**/hands').setColor(0,1,0)
+max.loop("walk")
+max.setPos(70,-60,0.2)
+max.setHpr(420,0,0)
+max.setScale(1.2)
+max.reparentTo(render)
+
+zhead = loader.loadModel("phase_3/models/char/monkey-heads-1000.bam")
+head = zhead.find('**/head-long')
+head.setColor(0.25,0.25,0.3)
+headf = zhead.find('**/head-front-long')
+headf.setColor(0.25,0.25,0.3)
+neck = max.find('**/neck')
+neck.setColor(0.25,0.25,0.3)
+max.find('**/arms').setColor(0.25,0.25,0.3)
+max.find('**/legs').setColor(0.25,0.25,0.3)
+max.find('**/feet').setColor(0.25,0.25,0.30)
+max.find('**/torso-bot').setColor(1,1,1)
+joint = max.find('**/joint_head')
+zhead.find('**/muzzle-short-neutral').reparentTo(joint)
+zhead.find('**/joint_pupilR_long').reparentTo(joint)
+zhead.find('**/joint_pupilL_long').reparentTo(joint)
+zhead.find('**/ears-long').reparentTo(joint)
+zhead.find('**/head-front-long').reparentTo(joint)
+zhead.find('**/eyes-long').reparentTo(joint)
+zhead.find('**/head-long').reparentTo(joint)
+gloves1 = max.find('**/joint_Rhold')
+
+max.findAllMatches('**/torso-top').setColorScale(25)
+max.findAllMatches('**/torso-bot').setColorScale(25)
+max.findAllMatches('**/sleeves').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+max.findAllMatches('**/torso-top').setTexture(sleve, 2) 
+max.findAllMatches('**/torso-bot').setTexture(sleve, 2) 
+max.findAllMatches('**/sleeves').setTexture(sleve, 2) 
+max.findAllMatches('**/hands').setColor(0,1,0)
+max.findAllMatches('**/torso-bot').setColor(0,1,0)
+max.findAllMatches('**/torso-top').setColor(0,1,0)
+max.findAllMatches('**/sleeves').setColor(0,1,0) 
+
+environ = loader.loadModel('phase_6/models/golf/windmill.bam')
+environ.reparentTo(render)
+environ.setPos(63,-15,-2)
+environ.setHpr(100,0,0)
+environ.setScale(5)
+
+environ = loader.loadModel('phase_5/models/props/geyser.bam')
+environ.reparentTo(render)
+environ.setPos(25,-15,-2)
+environ.setHpr(-89,0,0)
+environ.setScale(5)
+
+mail4 = Actor("phase_5/models/char/tt_r_ara_ttc_hydrant.bam",{"cheer":"phase_5/models/char/tt_a_ara_ttc_hydrant_fightCheer.bam"}) 
+mail4.reparentTo(render) 
+mail4.loop("cheer") 
+mail4.setPos(0,0,8) 
+mail4.setHpr(250,250) 
+mail4.setScale(0.9)
+
+-----------EXTRA CODE ( USE IT ALONE )-------------------
+
+base.localAvatar.findAllMatches('**/').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(sleve, 2) 
+base.localAvatar.findAllMatches('**/').setColor(0,1,0)
+
+base.localAvatar.findAllMatches('**/Sky').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/Sky').setTexture(sleve, 2)
+base.localAvatar.findAllMatches('**/Sky').setColor(0,1,0)
+
+-----------EXTRA CODE ( USE IT ALONE )-------------------
+
+mgr.findAllMatches('**/').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+mgr.findAllMatches('**/').setTexture(sleve, 2)
+mgr.setColor(0,1,0)
+
+
+-----------EXTRA CODE ( USE IT ALONE )-------------------
+
+mail4.findAllMatches('**/').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+mail4.findAllMatches('**/').setTexture(sleve, 2)
+mail4.setColor(0,1,0)

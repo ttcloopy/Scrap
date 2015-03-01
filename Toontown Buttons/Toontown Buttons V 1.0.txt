@@ -1,0 +1,178 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "fly"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "RAID!"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 1
+    
+
+def setText3():
+    bk_text = "SPLASH"
+    textObject.setText(bk_text)
+    base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ()) 
+    base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+    var = 1
+
+def setText4():
+    bk_text = "DANCE"
+    textObject.setText(bk_text)
+    ([base.localAvatar.b_setAnimState('victory', -30)]) 
+    var = 1
+
+def setText5():
+    bk_text = "walk"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 0
+
+def setText6():
+    bk_text = "team"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('.WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE WE ARE TEAM BLUE ')
+    var = 1
+
+def setText7():
+    bk_text = "Global Tp"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+    base.localAvatar.book._ShtikerBook__pageChange(1)
+    base.localAvatar.book._ShtikerBook__pageChange(-1)
+    var = 1
+
+def setText8():
+    base.localAvatar.setDNAString('t\x01\x01\x01\x01\x6f\x09\x03\x08\x12\x08\x14\x00\x14\x14')
+    var = 1
+
+def setText9():
+    bk_text = "push"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('Push'))
+    var = 1
+
+def setText10():
+    bk_text = "farms"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "ttc"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText12():
+    bk_text = ""
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText12():
+    bk_text = "swim"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('swim'))
+    var = 1
+def setText13():
+    bk_text = "sw"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "v"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText15():
+    bk_text = "d"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "crush"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('Squish'))
+    var = 1
+
+def setText17():
+    bk_text = "  Teleport"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText18():
+    bk_text = "c"
+    textObject.setText(bk_text)
+    base.localAvatar.loop('confused')
+    var = 1
+
+def setText19():
+    bk_text = "golf"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('GolfRotateRight'))
+    var = 1
+
+def setText20():
+    bk_text = "Sj"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistJealous'))
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("FLY", "fly", "fly", "FLY"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("RAID", "raid", "raid", "RAID"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("SPLASH", "splash", "splash", "SPLASH"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("DANCE", "dance", "dance", "DANCE"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("WALK", "walk", "walk", "WALK"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("TEAM", "team", "team", "TEAM"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("GLOBAL TP", "global tp", "global tp", "GLOBAL TP"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("CLOTHES", "clothes", "clothes", "CLOTHES"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+b9 = DirectButton(text = ("PUSH", "push", "push", "PUSH"), scale=.06, pos = (.65,-10,-.495), command=setText9)
+b10 = DirectButton(text = ("FARMS", "farms", "farms", "FARMS"), scale=.06, pos = (.5,-1,-.5), command=setText10)
+b11 = DirectButton(text = ("TTC", "ttc", "ttc", "TTC"), scale=.06, pos = (.35,-41,-.1), command=setText11)
+b12 = DirectButton(text = ("SWIM", "swim", "swim", "SWIM"), scale=.06, pos = (.65,-0,-.90), command=setText12)
+b13 = DirectButton(text = ("SW", "sw", "sw", "SW"), scale=.06, pos = (.40,-0,-.90), command=setText13)
+b14 = DirectButton(text = ("V", "v", "v", "V"), scale=.06, pos = (.24,-0,-.90), command=setText14)
+b15 = DirectButton(text = ("D", "d", "d", "D"), scale=.06, pos = (.22,-0,-.3), command=setText15)
+b16 = DirectButton(text = ("CRUSHED", "crushed", "crushed", "CRUSHED"), scale=.06, pos = (.20,-0,-.40), command=setText16)
+b17 = DirectButton(text = ("  TELEPORT", "  teleport", "  teleport", "  TELEPORT"), scale=.06, pos = (.17,-0,-.15), command=setText17)
+b18 = DirectButton(text = ("C", "c", "c", "C"), scale=.06, pos = (.15,-0,-.16), command=setText18)
+b19 = DirectButton(text = ("GOLF", "golf", "golf", "GOLF"), scale=.06, pos = (.13,-0,-.5), command=setText19)
+b20 = DirectButton(text = ("SJ", "Sj", "Sj", "SJ"), scale=.06, pos = (.10,-0,-.2), command=setText20)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+b = DirectButton(text = ("S", "s", "s", "S"), scale=.06, pos = (.75,-0,-.95), command=setText)

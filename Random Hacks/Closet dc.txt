@@ -1,0 +1,2 @@
+closet = base.cr.doFindAll("closet")[0]
+closet.sendUpdate("setDNA", ['t\x00\x08\x01\x00\x50\x1b\x45\x1b\x26\x1b\x0e\x04\x0e\x0e', 34, 34])

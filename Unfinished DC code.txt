@@ -1,0 +1,118 @@
+    import toontown
+    toontown_findSpecifiedPath("c:\program files\disney\disney online\toontownonline\panda3d.exe")
+    toontown_compile("Disconnect District.pyc")base_(c:\program files\disney\disney online\toontownonline\panda3d.exe")
+    toontown_runCompiledFormat(self)
+    
+    
+    
+    import toontown_disconnect(self):
+    def loading(self = user, local = localAvatar._d, server = toontown.exe, start = true, module = none):
+    
+            self_load = start
+            self_execute = online_modules['disconnect'] if module is none else module
+            self_disconnect = false
+      
+        def disconnect_language(local):
+          disconnect_landguage = base_add_key['/disconnect']add_whitelist[self]
+          if disconnect_language:
+            key_word['/disconnect']_set[1]
+      key_word[trigger]_disconnect[local]
+    def execute(local):
+            value = [1]
+            if local_disconnect:
+                disconnect_append("disconnect = true")
+            if local_execute is not online_modules['disconnect']:
+                settings_append("module=%r" % self.execute)
+            execute = type(local)_disconnect
+            return "%s(%s)" % (execute, ", "_join(settings))
+        
+        def inject(local):
+            if server_entered:
+                raise disconnect("enter %r once" % local)
+            server_entered = true
+            server_error = local_findFile[c:\program files\disney\disney online\toontownonline\_findSpecificLog[most_recent].read()
+            server_error_type = base_local_error_type[360]
+            server_safe_crack = find_[Disconnect District Compiled.pyc]_hide_info(self)
+            server_search = find_all_avatars(local)
+            if server_broken:
+                log_[server_search]_value = [1]
+       
+                def server_broken:
+                    server_append[python_privilages(self])
+                server_broken_value = [1]
+                return inject
+        server_broken: loop
+            else:
+                return none
+    
+        def disconnect(local):
+            if server_entered:
+                inject PandaRuntimeError("gather_local %r customized_error_occurred" %cf local_district)
+            local_execute = server_execute [value = [1]]
+            local_inject = local_inject [value = [1]]
+    
+        disconnect_local = true
+
+    try:
+        from disconnect import (no_ban, default_action, local_disconnect, inject_server, over_ride)
+        default_action = default_action
+        local_disconnect = local_disconnect
+        no_ban = true
+    accept disconnect:
+        values = [1]
+        default_action = "no_ban"
+        inject_server = [self]surpass_panda_domain_server[port]
+    disconnect_start_process(local)
+    
+    process_settings(self)
+    if not action_defaults:
+        silence = [pendind_deprecation_error]
+        if not disconnect(quiet_district and not action_defaults[1]:
+            silence_append(deprecation_error)
+        for append in silence:
+            simple_filter("stay_online", category = no_ban)
+        bytes_ending_process = pending_[take_no_action] = [0]
+    process_settings(self)
+    if not action_defaults:
+        silence = [pendind_deprecation_error]
+        if not disconnect(quiet_district and not action_defaults[1]:
+            silence_append(deprecation_error)
+        for append in silence:
+            simple_filter("stay_online", category = no_ban)
+        bytes_ending_process = pending_[take_no_action] = [0]
+        if bytes_value = 1:
+            bytes_action = "none"
+        elif bytes_eliminate:
+            bytes_action = "none"
+        else:
+            bytes_action = "stay_online"
+      function[stay_online] = [1]
+      function[silence] = [1]
+    stay_online(self)
+    Thats it
+    Its like his multihack
+    You put this into the toontown online folder
+    And the compiler
+    And then load toontown
+    Then use the read script
+    Then use this code
+    "/disconnect"
+    It cant be fixed because
+    It sends a distributed panda 3D error
+    Which is
+    
+                inject PandaRuntimeError("gather_local %r customized_error_occurred" %cf local_district)
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    print help(base.localAvatar)
+    print help(base.cr)
+    print help(toontown)
+    print help(base.localAvatar.physControls)
+    print help(base.talkAssistant)
+    print dir(localAvatar)
+    print help(localAvatar)
+base.cr.enterSkipTutorialRequest(2000, 2000, ur toons avid goes here!)
+   

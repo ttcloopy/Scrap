@@ -1,0 +1,299 @@
+base.localAvatar.collisionsOff()
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+def pink():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+def purple():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+def green():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+def yellow():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+def dblue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+def orange():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+def cream():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+def perwk():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+def cyan():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,1000,1)
+def pink():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0000,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.3))
+  rain.append(Func(pink))
+  rain.append(Wait(0.3))
+  rain.append(Func(purple))
+  rain.append(Wait(0.3))
+  rain.append(Func(green))
+  rain.append(Wait(0.3))
+  rain.append(Func(yellow))
+  rain.append(Wait(0.3))
+  rain.append(Func(dblue))
+  rain.append(Wait(0.3))
+  rain.append(Func(blue))
+  rain.append(Wait(0.3))
+  rain.append(Func(orange))
+  rain.append(Wait(0.3))
+  rain.append(Func(cream))
+  rain.append(Wait(0.3))
+  rain.append(Func(perwk))
+  rain.append(Wait(0.3))
+  rain.append(Func(cyan))
+  rain.append(Wait(0.3))
+  rain.append(Func(pink))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+
+environ = loader.loadModel('phase_6/models/golf/findfour_game.bam')
+environ.reparentTo(render)
+environ.setPos(47.095,90.761,133.717)
+environ.setHpr(-174,0,0)
+environ.setScale(5)
+mgr = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+mgr.reparentTo(render)
+mgr.setPos(-27.410,12.018,133.717)
+mgr.setHpr(0,0,0)
+mgr.setScale(3)     
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),                                                        
+startHpr=Point3(270, 0, 0))        
+pandaHprInterval2 = mgr.hprInterval(3,Point3(270, 0, 0),                                                        
+startHpr=Point3(0, 0, 0))         
+# Create and play the sequence that coordinates the intervals.        
+maryspin = Sequence(pandaHprInterval1,                                  
+name="maryspin")        
+maryspin.loop()  
+
+environ = loader.loadModel("phase_6/models/golf/checker_game.bam")
+environ.reparentTo(render)
+environ.setPos(38.384,143.509,133.717)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel("phase_5/models/props/ship.bam")
+environ.reparentTo(render)
+environ.setPos(50.884,88.952,135.700)
+environ.setHpr(0,0,0)
+environ.setScale(1.4)
+
+environ = loader.loadModel('phase_8/models/modules/hqBR.bam') 
+environ.reparentTo(render) 
+environ.setPos(-53.324,197.901,133.717) 
+environ.setHpr(-310,0,0) 
+environ.setScale(1) 
+
+cj = Actor({"head":"phase_11/models/char/lawbotBoss-head-zero.bam", \
+"torso":"phase_11/models/char/lawbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+cj.attach("head", "torso", "joint34")
+cj.attach("torso", "legs", "joint_legs")
+cj.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+cj.setPos(-31.190,127.656,130.534)
+cj.loop("walk")
+cj.setHpr(50,0,0)
+cj.setScale(1.3)
+
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(72.958,0.890,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(84.945,-11.441,133.721)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(96.630,-24.376,133.722)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(107.761,-14.388,133.726)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(89.661,-38.216,133.728)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel("phase_8/models/modules/neighborhood_tunnel_DG.bam")
+environ.reparentTo(render)
+environ.setPos(139.323,18.668,133.772)
+environ.setHpr(20,0,0)
+environ.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(124.945,-10.473,133.728)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(135.848,0.230,133.574)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_4/models/minigames/maze_2player.bam')
+environ.reparentTo(render)
+environ.setPos(207.432,64.809,133.154)
+environ.setHpr(50,0,0)
+environ.setScale(1)
+environ = Actor("phase_4/models/props/tt_a_ara_ttc_sillyMeter_default.bam",{"lol":"phase_4/models/props/tt_a_ara_ttc_sillyMeter_phaseFive.bam"}) 
+environ.reparentTo(render) 
+environ.setPos(95.952,-41.179,133.787) 
+environ.setHpr(-630,0,0) 
+environ.setScale(5) 
+environ.loop("lol")
+environ = loader.loadModel('phase_4/models/modules/school_house.bam')
+environ.reparentTo(render)
+environ.setPos(31.339,-19.639,133.717)
+environ.setHpr(-115,0,0)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(12.679,-23.606,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(13.055,-28.797,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(40.322,-17.133,133.717)
+environ.setHpr(74,0,0)
+environ.setScale(2.5)
+environ = loader.loadModel('phase_3.5/models/modules/tt_m_ara_int_scientistMonkeyFlat.bam')
+environ.reparentTo(render)
+environ.setPos(99.585,-27.903,133.733)
+environ.setHpr(50,0,0)
+environ.setScale(1.9)
+
+mgr = loader.loadModel("phase_10/models/cogHQ/CBMetalCrate2.bam")
+mgr.reparentTo(render)
+mgr.setPos(166.990,153.435,133.717)
+mgr.setHpr(0,0,0)
+mgr.setScale(5)
+mgr.setColor(3,0,0)
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(359, 359, 359))
+pandaHprInterval2 = mgr.hprInterval(3,Point3(359, 359, 359),
+startHpr=Point3(0, 0, 0))
+# Create and play the sequence that coordinates the intervals.
+maryspin = Sequence(pandaHprInterval1,
+name="maryspin")
+maryspin.loop()
+mickey = Actor("phase_3/models/char/mickey-1200.bam", 
+{"run":"phase_3/models/char/mickey-run.bam"}) 
+mickey.reparentTo(render) 
+mickey.loop('run') 
+mickey.setPos(-26.127,120.356,130.534) 
+mickey.setHpr(270,0,0) 
+mickey.setScale(2)
+dancefloor=loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dancefloor.reparentTo(render)
+dancefloor.setPos(12.932,166.842,133.717)
+carouselSpin=dancefloor.hprInterval(20, Vec3(360, 0, 0))
+carouselSpin.loop()
+cheese1 = Actor("phase_3.5/models/char/suitA-mod.bam",{"walk":"phase_4/models/char/suitA-neutral.bam"})
+cheese1.reparentTo(render)
+cheese1.loop("walk")
+j = cheese1.find('**/joint_head')
+mole = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+bigcheese = mole.find('**/bigcheese')
+bigcheese.setColor(0,0,3)
+bigcheese.reparentTo(j)
+hands = cheese1.find('**/hands')
+hands.setColor(0.345, 0.333, 1, 0.000)
+cheese1.setPos(12.932,166.842,133.717)
+cheese1.setScale(1)
+cheese1.setHpr(420,0,0)
+
+
+max = Actor({"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+# dictionary of anim dictionaries
+{"torso":{"walk":"phase_3/models/char/dogLL_Shorts-torso-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-sad-neutral.bam"}, \
+"legs":{"walk":"phase_3/models/char/dogMM_Shorts-legs-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-legs-sad-neutral.bam"} \
+})
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistA.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+max.find('**/torso-top').setTexture(shirts, 1)
+max.find('**/torso-bot').setTexture(shorts, 1)
+max.find('**/torso-bot-cap').setTexture(shorts, 1)
+max.find('**/sleeves').setTexture(sleve, 1)
+max.attach("torso", "legs", "joint_hips")
+gloves = max.find('**/hands')
+gloves.setColor(255,0,0)
+max.loop("walk")
+max.setPos(-57.632,95.643,136.082)
+max.setHpr(327,0,0)
+max.setScale(1)
+max.reparentTo(render)
+zhead = loader.loadModel("phase_3/models/char/monkey-heads-1000.bam")
+head = zhead.find('**/head-long')
+head.setColor(0.7, 0.0, 3.0)
+headf = zhead.find('**/head-front-long')
+headf.setColor(0.7, 0.0, 3.0)
+neck = max.find('**/neck')
+neck.setColor(0.7, 0.0, 3.0)
+max.find('**/arms').setColor(0.7, 0.0, 3.0)
+max.find('**/legs').setColor(0.7, 0.0, 3.0)
+max.find('**/feet').setColor(0.7, 0.0, 3.0)
+max.find('**/torso-bot').setColor(0.7, 0.0, 1.0)
+joint = max.find('**/joint_head')
+zhead.find('**/muzzle-short-neutral').reparentTo(joint)
+zhead.find('**/joint_pupilR_long').reparentTo(joint)
+zhead.find('**/joint_pupilL_long').reparentTo(joint)
+zhead.find('**/ears-long').reparentTo(joint)
+zhead.find('**/head-front-long').reparentTo(joint)
+zhead.find('**/eyes-long').reparentTo(joint)
+zhead.find('**/head-long').reparentTo(joint)
+gloves1 = max.find('**/joint_Rhold')
+
+vp = Actor({"head":"phase_9/models/char/sellbotBoss-head-zero.bam", \
+"torso":"phase_9/models/char/sellbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/sellbot-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/sellbot-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+vp.attach("head", "torso", "joint34")
+vp.attach("torso", "legs", "joint_legs")
+vp.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = vp.find('**/joint_axle')
+tread3.reparentTo(rear4)
+vp.setPos(15.432,87.537,130.534)
+vp.setScale(1)
+vp.loop("walk")
+vp.setHpr(180,0,0)

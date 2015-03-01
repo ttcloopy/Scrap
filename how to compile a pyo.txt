@@ -1,0 +1,7 @@
+1. C:\Python24\python.exe -OO compilescript.py Name the file compile.cmd
+2. Make a new file named script.py put
+import py_compile
+py_compile.compile("FILE NAME OF PY.py")
+4. Make a new folder in the python 24 folder put the compile.cmd and script.py and 
+your file you want to compile in the folder
+5. Then run the scripy.py

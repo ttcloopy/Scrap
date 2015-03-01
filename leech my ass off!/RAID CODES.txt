@@ -1,0 +1,48 @@
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg") 
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg") 
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg") 
+base.localAvatar.findAllMatches('**/').setColorScale(25) 
+base.localAvatar.findAllMatches('**/').setTexture(sleve, 1)
+    
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")  
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg") 
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg") 
+base.localAvatar.findAllMatches('**/Sky').setColorScale(25) 
+base.localAvatar.findAllMatches('**/Sky').setTexture(sleve, 1)
+
+
+
+    -----------RAID TROLLEY-------
+    
+zone = base.localAvatar.getZoneId()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+    
+                   then
+    
+base.cr.sendSetZoneMsg(260251)
+    
+    
+    -----RAID GOLF--------------
+    
+zone = base.localAvatar.getZoneId()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone) - GET ZONE
+    
+               then          
+    
+base.cr.sendSetZoneMsg(660251)
+    
+    
+    -----RAID RACE--------------
+    
+zone = base.localAvatar.getZoneId()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone) - GET ZONE
+    
+               then          
+    
+base.cr.sendSetZoneMsg(860251)
+    
+    
+    ----------------------

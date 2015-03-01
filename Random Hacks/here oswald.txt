@@ -1,0 +1,19 @@
+dcList.sendUpdate("setWhisperSCEmoteFrom", [dcList.doId, 25])
+for dcList in dcList:
+    try:
+        dcList.sendUpdate("setWhisperSCEmoteFrom", [dcList.doId, 25])
+    except:
+        pass
+
+
+
+def broadcastEmote(emoteIndex=18, avatarName=base.localAvatar.getName(), includingSelf=True):
+    listToonIds = base.localAvatar.getNearbyPlayers(100000000000000, includingSelf)
+    for listToonIds in listToonIds:
+        toonFrom = base.cr.doFindAll(avatarName)
+        toon = base.cr.doFindAll(str(listToonIds))
+        toon[0].sendUpdate("setWhisperSCEmoteFrom", [toonFrom[0].doId, emoteIndex])
+    if includingSelf:
+        base.localAvatar.setWhisperSCEmoteFrom(toonFrom[0].doId, emoteIndex)
+        
+broadcastEmote(25, "Fisherman", True)

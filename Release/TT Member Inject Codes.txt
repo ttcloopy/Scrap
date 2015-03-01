@@ -1,0 +1,239 @@
+TT Membership:
+
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+
+EMotions:
+
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+
+All Pet Phrases:
+
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+
+Code used to Find Codes:
+
+def getmembers(object, predicate=None):
+"""Return all members of an object as (name, value) pairs sorted by name.
+Optionally, only return members that satisfy a given predicate."""
+results = []
+for key in dir(object):
+value = getattr(object, key)
+if not predicate or predicate(value):
+results.append((key, value))
+print key,value
+results.sort()
+return results
+getmembers [[<<Enter Class Here>>]]
+
+Replace 'Enter Class Here' With: localAvatar
+
+Float and Swim :
+
+base.localAvatar.b_setAnimState('swim')
+
+Float Sit :
+
+
+trolley sit :
+
+base.localAvatar.enterSitStart()
+
+Look up :
+
+base.localAvatar.b_setAnimState('ScientistPlay') + base.localAvatar.b_setAnimState('swim')
+
+Weird way :
+
+base.localAvatar.b_setAnimState('swim') + base.localAvatar.b_setAnimState('ScientistPlay')
+
+All Gags :
+
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setTrackBonusLevel([1,1,1,1,1,1,1])
+
+TT Membership :
+
+def new():
+    return True
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+
+Push : 
+
+base.localAvatar.b_setAnimState('Push')
+
+Other Scientist Movement:
+
+base.localAvatar.b_setAnimState('ScientistWork')
+
+Sad Toon:
+
+base.localAvatar.b_setAnimState('Sad')
+
+Change Name:
+
+base.localAvatar.setName('')
+
+Flat Toon:
+
+base.localAvatar.b_setAnimState('Flattened')
+
+Toon Sleep:
+
+base.localAvatar.b_setAnimState('Sleep')
+sel
+Walk Everywhere:
+
+base.localAvatar.collisionsOff()
+
+Upside Down:
+
+base.localAvatar.setHpr(0,0,180)
+
+Go to Funny Farm:
+
+base.cr.sendSetZoneMsg(7000)
+
+Leave Funny Farm:
+
+base.cr.sendSetZoneMsg(6000)
+
+Scientist EMotion:
+
+base.localAvatar.b_setAnimState('ScientistEmcee')
+
+SCarecrow:
+
+base.localAvatar.b_setAnimState('teleport')
+
+TTC Toon Hall:
+
+base.cr.sendSetZoneMsg(2520)
+
+Cog Lobby's:
+
+base.cr.sendSetZoneMsg(11100) sellbot lobby
+base.cr.sendSetZoneMsg(12100) cashbot lobby
+base.cr.sendSetZoneMsg(13100) lawbot lobby 
+base.cr.sendSetZoneMsg(14100) bossbot lobby
+
+Pink Slips:
+
+base.localAvatar.setPinkSlips((200))
+
+funny emotion:
+
+base.localAvatar.b_setAnimState('CatchEating')
+
+TTC Professor Pete:
+
+base.cr.sendSetZoneMsg(2516)
+
+TTC Tailor Shop:
+
+base.cr.sendSetZoneMsg(2521)
+
+TTC Bank:
+
+base.cr.sendSetZoneMsg(2517)
+
+TTC Pet Shop:
+
+base.cr.sendSetZoneMsg(2522)
+
+TTC Gag Shop:
+
+base.cr.sendSetZoneMsg(2522)
+
+TTC Scientists Office Lab:
+
+base.cr.sendSetZoneMsg(2513)
+
+HP For Toon:
+
+base.localAvatar.setMaxHp(100)
+
+Ghost Toon:
+
+base.localAvatar.setGhostMode(8)
+
+Reduce Toons Health:
+
+base.localAvatar.takeDamage(15)
+
+Set How Many Gags you carry:
+
+base.localAvatar.setMaxCarry(9999)
+
+Able to have 4 toon taks:
+
+base.localAvatar.setQuestCarryLimit(4)
+
+Change amount of clothes you can get:
+
+base.localAvatar.setMaxClothes(500)
+
+Few Phrases:
+
+base.localAvatar.setSCSinging(4) go down to 1
+
+Set SKill Of Shoveling:
+
+base.localAvatar.promoteShovel(3)
+
+Set SKill of Watering Can:
+
+base.localAvatar.promoteWateringCan(3)
+
+Set Watering Can SKill:
+
+base.localAvatar.setWateringCanSkill(30)
+
+Set Shovel Skill:
+
+base.localAvatar.setShovelSkill(30)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

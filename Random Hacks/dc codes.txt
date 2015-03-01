@@ -1,0 +1,184 @@
+def broadcast(message="", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+broadcast("Fd STANDS FOR FAST DICKS THEY ARE GAY!!!!!!!!!!", True)
+t1=ft("Fd Green Cat Fd")[0];t2=ft("Oswald")[0];
+t3=ft("Incorrect")[0];t4=ft("render/Hi")[0];
+t5=ft("Revenge")[0];t6=ft("King Lloyd")[0];
+t7=ft("Qwertyuiop")[0];t8=ft("Ethan")[0];
+dcList = ft("render/")
+r = dcList.remove
+try:
+    r(t1)
+except:
+    pass
+try:
+    r(t2)
+except:
+    pass
+try:
+    r(t3)
+except:
+    pass
+try:
+    r(t4)
+except:
+    pass
+try:
+    r(t5)
+except:
+    pass
+try:
+    r(t6)
+except:
+    pass
+try:
+    r(t7)
+except:
+    pass
+try:
+    r(t8)
+except:
+    pass
+
+
+
+
+After you used that code erase from the injector then use:
+
+broadcast("Fd STANDS FOR FAST DICKS THEY ARE GAY!!!!!!!!!!", True)
+
+
+First parameter = The Message you whisper to everyone, second parameter is if you 
+include yourself inthe whisper, leave it at True if you want it to also whisper to you...
+
+
+
+messenger.send('SCStaticTextMsg', [10003])
+base.localAvatar.sendUpdate("playSplashEffect", [0, 0, 0])
+base.localAvatar.sendUpdate.setSystemMessage(0, 'Fd STANDS FOR FAST DICKS THEY ARE GAY!!!!!!!!!!!')
+
+
+
+from toontown.ai import DistributedBlackCatMgr
+from toontown.ai.DistributedBlackCatMgr import *
+messenger.send('DistributedBlackCatMgr-activate')
+
+
+
+
+t1=ft("Fd Green Cat Fd")[0];t2=ft("Oswald")[0];
+t3=ft("Incorrect")[0];t4=ft("render/Hi")[0];
+t5=ft("Revenge")[0];t6=ft("King Lloyd")[0];
+t7=ft("Qwertyuiop")[0];t8=ft("Ethan")[0];
+dcList = ft("render/")
+r = dcList.remove
+try:
+    r(t1)
+except:
+    pass
+try:
+    r(t2)
+except:
+    pass
+try:
+    r(t3)
+except:
+    pass
+try:
+    r(t4)
+except:
+    pass
+try:
+    r(t5)
+except:
+    pass
+try:
+    r(t6)
+except:
+    pass
+try:
+    r(t7)
+except:
+    pass
+try:
+    r(t8)
+except:
+    pass
+
+Dim: 66.87.0.250
+
+base.cr.wantUpdateCalls = True
+:04-07-2011 15:16:45 DistributedTrophyMgr(warning): fieldName = requestTrophyScore, args = []:04-07-2011 15:17:04 OTPClientRepository: Sending heartbeat mid-frame.
+DistributedToon
+base.localAvatar
+sendUpdate("Field Name in string", [Arguments, blah, blah, blah])
+messenger.send('SCStaticTextMsg', [10003])
+messenger.sendUpdate('SCStaticTextMsg', [10003])
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dex=18, avatarName=base.localAvatar
+ate("setWhisper")
+
+
+def broadcast(message="", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+broadcast("Your message to whisper to people", True)
+
+
+
+
+t1=ft("Fd Green Cat Fd")[0];t2=ft("Oswald")[0];
+t3=ft("Incorrect")[0];t4=ft("render/Hi")[0];
+t5=ft("Revenge")[0];t6=ft("King Lloyd")[0];
+t7=ft("Qwertyuiop")[0];t8=ft("Ethan")[0];
+dcList = ft("render/")
+r = dcList.remove
+try:
+    r(t1)
+except:
+    pass
+try:
+    r(t2)
+except:
+    pass
+try:
+    r(t3)
+except:
+    pass
+try:
+    r(t4)
+except:
+    pass
+try:
+    r(t5)
+except:
+    pass
+try:
+    r(t6)
+except:
+    pass
+try:
+    r(t7)
+except:
+    pass
+try:
+    r(t8)
+except:
+    pass

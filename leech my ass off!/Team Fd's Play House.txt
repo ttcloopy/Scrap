@@ -1,0 +1,71 @@
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+base.cr.sendSetZoneMsg(7000)
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+tree = loader.loadModel("phase_4/models/minigames/treehouse_4players.bam")
+tree.reparentTo(render)
+tree.setPos(-8,42,0)
+tree.setHpr(0,270,180)
+tree.setScale(6)
+elevatortex = loader.loadTexture("custom/textures/tiles.jpg")
+elevator = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+elevator.reparentTo(render)
+elevator.setHpr(0,0,0)
+elevator.setPos(0,114.03,3.20)
+elevator.setTexture(elevatortex, 1)
+pandaPosInterval22 = elevator.posInterval(13,Point3(0,114.03,3.20),
+startPos=Point3(0,114.03,127.50))
+pandaPosInterval33 = elevator.posInterval(13,Point3(0,114.03,127.50),
+startPos=Point3(0,114.03,3.20))
+pandaHprInterval11 = elevator.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = elevator.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+uptothetree = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="uptothetree")
+uptothetree.loop()
+ceiling1 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+ceiling1.setPos(-11.611,138.530,117.354)
+ceiling1.setHpr(0,340.30,0)
+ceiling1.reparentTo(render)
+ceiling2 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+ceiling2.setScale(1.3)
+ceiling2.setHpr(0,340.30,0)
+ceiling2.setPos(-8.611,137.030,118.354)
+ceiling2.reparentTo(render)
+ceiling3 = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+ceiling3.setScale(1.3)
+ceiling3.setHpr(0,340.30,0)
+ceiling3.reparentTo(render)
+ceiling3.setPos(-16.141,141.566,117.160)
+ceiling1.hide()
+ceiling1.find('**/wall-front').removeNode()
+ceiling1.find('**/wall-left').removeNode()
+ceiling1.find('**/wall-right').removeNode()
+ceiling2.hide()
+ceiling2.find('**/wall-front').removeNode()
+ceiling2.find('**/wall-left').removeNode()
+ceiling2.find('**/wall-right').removeNode()
+ceiling3.hide()
+ceiling3.find('**/wall-front').removeNode()
+ceiling3.find('**/wall-left').removeNode()
+ceiling3.find('**/wall-right').removeNode()
+table = loader.loadModel("phase_12/models/bossbotHQ/canoffood.bam")
+table.setPos(-12.168,138.558,118.262)
+table.setHpr(450,0,0)
+table.reparentTo(render)
+
+
+Remove treehouse
+
+tree.removeNode()
+elevator.removeNode()
+ceiling1.removeNode()

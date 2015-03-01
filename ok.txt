@@ -1,0 +1,84 @@
+base.cr.sendSetZoneMsg(6969)
+from direct.interval.IntervalGlobal import *
+def toonhq1():
+    base.localAvatar.setSystemMessage(1,'You Have Just Activated A Land Made By greencathacks')
+def toonhq2():
+    base.localAvatar.setSystemMessage(1,'Have Fun!')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(toonhq1))
+  seq.append(Wait(1))
+  seq.append(Func(toonhq2))
+  seq.start()
+onTime()
+def openbook():
+    base.localAvatar.b_setAnimState('OpenBook')
+def readbook():
+    base.localAvatar.b_setAnimState('ReadBook')
+def closebook():
+    base.localAvatar.b_setAnimState('CloseBook')
+def tptohole():
+    base.localAvatar.b_setAnimState('TeleportOut')
+def tpfromhole():
+    base.localAvatar.setXYZH(744.541,1044.201,142.940,-766.540)
+    base.localAvatar.b_setAnimState('TeleportIn')
+def onTime():
+  seq = Sequence()
+  seq.append(Wait(2))
+  seq.append(Func(openbook))
+  seq.append(Wait(1))
+  seq.append(Func(readbook))
+  seq.append(Wait(1.0))
+  seq.append(Func(closebook))
+  seq.append(Wait(2.0))
+  seq.append(Func(tptohole))
+  seq.append(Wait(4.0))
+  seq.append(Func(tpfromhole))
+  seq.start()
+onTime()
+
+base.accept("f1", base.localAvatar.collisionsOff, [])
+base.accept("f2", base.localAvatar.collisionsOn, [])
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from direct.showbase.DirectObject import DirectObject
+from pandac.PandaModules import CollisionTraverser, CollisionHandlerEvent
+from pandac.PandaModules import CollisionNode, CollisionSphere
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.gui.DirectGui import DirectFrame
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+environ = loader.loadModel("phase_5/models/islands/pier_1_kings.bam")
+environ.reparentTo(render)
+environ.setPos(906.462,1212.717,126.880)
+environ.setHpr(90,0,0)
+environ.setScale(1)
+
+environ = loader.loadModel("phase_4/models/buildings/pir_m_bld_eng_mansion.bam")
+environ.reparentTo(render)
+environ.setPos(1091.882,1277.010,142.931)
+environ.setHpr(-78,0,0)
+environ.setScale(1)
+
+environ.find('**/door_collision_planar_01').removeNode()
+environ.find('**/door_collision_planar_02').removeNode()
+environ.find('**/door_collision_planar_03').removeNode()
+environ.find('**/door_collision_planar_04').removeNode()
+environ.find('**/door_collision_planar_05').removeNode()
+environ.find('**/door_collision_planar_06').removeNode()
+environ.find('**/door_collision_01').removeNode()
+environ.find('**/door_collision_02').removeNode()
+environ.find('**/door_collision_03').removeNode()
+environ.find('**/door_collision_04').removeNode()
+environ.find('**/door_collision_05').removeNode()
+environ.find('**/door_collision_06').removeNode()
+environ.find('**/door_collision_planar_06').removeNode()

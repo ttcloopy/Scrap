@@ -1,0 +1,294 @@
+Hello, I'm Azurite the friendly hacker. This is what used to be my personal ULTIMATE HACKER-PACK, which I'm giving to the public now! It includes nearly every code I have ever laid eyes on! I hope you enjoy them, and please use them responsibly! They are somewhat in order by their actions.. that's right. SOMEWHAT. :3
+
+
+Access All Emotes from Speedchat -
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+Confused -
+base.localAvatar.loop('confused')
+Think -
+base.localAvatar.loop('think')
+Bored -
+base.localAvatar.loop('bored')
+Juggle -
+base.localAvatar.loop('juggle')
+Call Doodle -
+base.localAvatar.loop('callPet')
+Feed Doodle -
+base.localAvatar.loop('feedPet')
+Finish Doodle Interaction -
+base.localAvatar.loop('pet-end')
+Doodle Scratch Loop -
+base.localAvatar.loop('pet-loop')
+Feather Tickle -
+base.localAvatar.loop('tickle')
+Bamboo Cane Dance -
+base.localAvatar.loop('happy-dance')
+Lipstick Kiss -
+base.localAvatar.loop('smooch')
+Quicksand Drown -
+base.localAvatar.loop('melt')
+Dodge Right -
+base.localAvatar.loop('sidestep-right')
+Dodge Left -
+base.localAvatar.loop('sidestep-left')
+Hypno-Goggles -
+base.localAvatar.loop('hypnotize')
+Seltzer Bottle -
+base.localAvatar.loop('hold-bottle')
+Big Magnet -
+base.localAvatar.loop('hold-magnet')
+Squirt Gun -
+base.localAvatar.loop('water-gun')
+Fire Hose
+base.localAvatar.loop('firehose')
+Throw Trap Gag -
+base.localAvatar.loop('toss')
+Red Tape Shuffle -
+base.localAvatar.loop('struggle')
+Glass of Water Drink & Spit -
+base.localAvatar.loop('spit')
+Duck from Exploding Cog -
+base.localAvatar.loop('duck')
+Holding Lever -
+base.localAvatar.loop('leverNeutral')
+Grab Lever -
+base.localAvatar.loop('leverReach')
+Pull Lever -
+base.localAvatar.loop('leverPull')
+Garden Dig -
+base.localAvatar.loop('loop-dig')
+Run & Jump -
+base.localAvatar.loop('running-jump')
+Put Up Phone -
+base.localAvatar.loop('phoneBack')
+Grab Phone -
+base.localAvatar.loop('takePhone')
+On the Phone -
+base.localAvatar.loop('phoneNeutral')
+Level 7 Toonup -
+base.localAvatar.loop('climb')
+Jungle Vines Swing -
+base.localAvatar.loop('swing')
+Open, Read & Close Book -
+base.localAvatar.loop('book')
+Wave "Hello!" -
+base.localAvatar.loop('wave')
+Running -
+base.localAvatar.loop('run')
+Walking -
+base.localAvatar.loop('walk')
+Jumping -
+base.localAvatar.loop('jump')
+Crate Push -
+base.localAvatar.loop('push')
+Angry -
+base.localAvatar.loop('angry')
+Teleport -
+base.localAvatar.loop('teleport')
+Sound Gag -
+base.localAvatar.loop('sound')
+Throw Gag -
+base.localAvatar.loop('throw')
+Cringe -
+base.localAvatar.loop('cringe')
+Pixie Dust Gag -
+base.localAvatar.loop('sprinkle-dust')
+Fishing Reel 1 -
+base.localAvatar.loop('reel-H')
+Fishing Reel 2 -
+base.localAvatar.loop('reel')
+Fishing Reel 3 -
+base.localAvatar.loop('reel-neutral')
+Tug-of-War Game -
+base.localAvatar.loop('tug-o-war')
+Catch, Eat then Run -
+base.localAvatar.loop('catch-eatnrun')
+Fishing Cast -
+base.localAvatar.loop('cast')
+Long Fishing Cast -
+base.localAvatar.loop('castlong')
+Stop Fishing -
+base.localAvatar.loop('fish-end')
+Fish Again -
+base.localAvatar.loop('fish-again')
+Holding Fishing Pole -
+base.localAvatar.loop('pole-neutral')
+Banana Peel -
+base.localAvatar.loop('slip-backward')
+Belly Flop -
+base.localAvatar.loop('slip-forward')
+Swim -
+base.localAvatar.loop('swim')
+Lose -
+base.localAvatar.loop('lose')
+Sit -
+base.localAvatar.loop('sit')
+Shrug -
+base.localAvatar.loop('shrug')
+Negative Laff Walk -
+base.localAvatar.loop('sad-walk')
+Take Jellybean Jar -
+base.localAvatar.loop('jellybeanJar')
+
+Applause -
+base.localAvatar.loop('applause')
+Bow (Male) -
+base.localAvatar.loop('bow')
+Bow (Female) -
+base.localAvatar.loop('curtsy')
+Up -
+base.localAvatar.loop('up')
+Down -
+base.localAvatar.loop('down')
+Left -
+base.localAvatar.loop('left')
+Right -
+base.localAvatar.loop('right')
+Catching Game Eat Loop (also known as makeout) -
+base.localAvatar.b_setAnimState('CatchEating')
+"Scarecrow" -
+base.localAvatar.b_setAnimState('TeleportOut')
+Ran Over by Train -
+base.localAvatar.b_setAnimState(('Squish'))
+Golf Shake Ass  -
+base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+Loop Bad Putt -
+base.localAvatar.loop('badloop-putt')
+Bad Putt -
+base.localAvatar.loop('bad-putt')
+Good Putt -
+base.localAvatar.loop('good-putt')
+Head-Down Putt -
+base.localAvatar.loop('headdown-putt')
+Into Putt -
+base.localAvatar.loop('into-putt')
+Loop Watch Putt -
+base.localAvatar.loop('lookloop-putt')
+Watch Putt -
+base.localAvatar.loop('look-putt')
+Shuffle Right Putt -
+base.localAvatar.loop('rotateL-putt')
+Shuffle Left Putt -
+base.localAvatar.loop('rotateR-putt')
+Hit Golfball -
+base.localAvatar.loop('swing-putt')
+Constant Dancing -
+base.localAvatar.b_setAnimState(('victory'))
+Start Sitting -
+base.localAvatar.b_setAnimState('SitStart')
+Swim in Air -
+base.localAvatar.b_setAnimState(('swim'))
+Splash -
+base.localAvatar.b_setAnimState(('dive'))
+Camera Hack -
+base.oobe()
+White Shirt & Denim Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x01\x02\x00\x1b\x00\x1b\x08\x1b\x00\x00\x00\x00')
+White Shirt & Rainbow Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x01\x02\x00\x1b\x00\x1b\x0e\x1b\x00\x00\x00\x00')
+White Shirt & Shorts with Belt (Male) -
+base.localAvatar.setDNAString('t\x05\x01\x01\x02\x00\x1b\x00\x1b\x0d\x1b\x00\x00\x00\x00')
+Striped Mahogany & Blue Shirt & Denim Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x00\x18\x04\x0a\x04\x0a\x07\x0a\x00\x00\x0e\x0e')
+Light Blue & Light Green Striped Shirt & Denim Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x00\x18\x04\x09\x04\x09\x07\x09\x00\x00\x0e\x0e')
+Lemon-Lime Striped Shirt & Denim Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x00\x18\x04\x05\x04\x05\x07\x05\x00\x00\x0e\x0e')
+Earth-Toned Striped Shirt & Denim Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x00\x18\x04\x10\x04\x10\x07\x10\x00\x00\x0e\x0e')
+Red Cowgirl (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x00\x18\x36\x00\x42\x00\x0c\x00\x00\x00\x0e\x0e')
+Red & Grey Striped Shirt & Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x00\x18\x04\x00\x04\x00\x07\x00\x00\x00\x0e\x0e')
+Racing Skirt (Female) -
+base.localAvatar.setDNAString('t\x05\x02\x00\x02\x00\x1b\x00\x1b\x20\x1b\x01\x00\x01\x01')
+Dull Stripes Outfit (Female) -
+base.localAvatar.setDNAString('t\x05\x01\x01\x04\x04\x0c\x04\x0c\x0e\x0c\x11\x00\x11\x11')
+Purple Patched Outfit (Female) -
+base.localAvatar.setDNAString('t\x01\x01\x02\x04\x04\x0c\x04\x0c\x25\x0c\x11\x00\x11\x11')
+Manskirt (Male) -
+cln = base.cr.doFindAll("closet")
+for cln in base.cr.doFindAll("closet"):
+generateClothes = "purchaseDone-" + str(cln.doId)
+messenger.send(generateClothes)
+Lay on Back -
+base.localAvatar.setHpr(0,90,0)
+Lay on Face -
+base.localAvatar.setHpr(0,270,0)
+Enter Funny Farm -
+base.cr.sendSetZoneMsg(7000)
+Leave Funny Farm -
+base.cr.sendSetZoneMsg(6000)
+Die Immediately -
+base.localAvatar.b_setAnimState(('Died'))
+Sideways Walking -
+base.localAvatar.setHpr(0,0,315)
+Catching Game Neutral Loop -
+base.localAvatar.b_setAnimState(('Catching'))
+Golfing Neutral Loop -
+base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+Negative Laff Neutral Loop -
+base.localAvatar.b_setAnimState(('Sad'))
+Teleport In -
+base.localAvatar.b_setAnimState(('TeleportIn'))
+Teleport Out -
+base.localAvatar.b_setAnimState(('TeleportIn'))
+Teleport Access -
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+Visited Playgrounds -
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+*** ONLY PASTE WITH ONE OF THOSE NUMBERS! ***
+Number = Playground:
+1000 = Donald's Dock
+2000 = Toontown Central
+3000 = The Brrrgh
+4000 = Minnie's Melodyland
+5000 = Daisy Gardens
+6000 = Chip 'n Dale's Acorn Acres
+7000 = Funny Farm
+8000 = Goofy Speedway
+9000 = Donald's Dreamland
+10000 = Bossbot HQ
+11000 = Sellbot HQ
+12000 = Cashbot HQ
+13000 = Lawbot HQ
+Change Name -
+base.localAvatar.setName('your name here')
+Doodle Tricks -
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+All Gags -
+base.localAvatar.setTrackBonusLevel([7,7,7,7,7,7,7])
+and
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+Toonup Yourself -
+base.localAvatar.toonUp(<number of Toonup points>)
+Walk Through Walls -
+base.localAvatar.collisionsOff()
+Opposite of Walk Through Anything -
+base.localAvatar.collisionsOn()
+Upside-Down -
+base.localAvatar.setHpr((0,0,180))
+Change Nametag -
+base.localAvatar.setNametagStyle(enter a number between 1-14)
+Long Dialogue -
+base.talkAssistant.sendOpenTalk('type your words here type your words here type your words here type your words here type your words here type your words here type your words here type your words here type your words here type your words here')
+Whisper to Everyone -
+base.talkAssistant.sendWhisperTalk('Your text goes here. ' * 50, 285960783)
+Scientist Blue (Unisex) -
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1c\x02\x1c\x27\x1c\x14\x00\x14\x14')
+Scientist Purple (Unisex) -
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+Scientist Green (Unisex) -
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x63\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+Scientist Red (Unisex) -
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x61\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+Shirt with Medal (Unisex) -
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x54\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+Rainbow Outfit (Female) -
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x2d\x1b\x22\x1b\x0e\x1b\x12\x00\x14\x14')
+White Toon -
+import toontown
+try:getGenderColorList
+except:getGenderColorList = toontown.makeatoon.ColorShop.ColorShop.getGenderColorList
+def returnColorList(self, *args): return range(-1,26,1)
+toontown.makeatoon.ColorShop.ColorShop.getGenderColorList = returnColorList

@@ -1,0 +1,58 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+newsLine1 = "Improved Speed Chat\n"
+getLatestNews = newsLine1
+blankTextNode = ""
+
+newsFrame = DirectFrame(frameColor=(1, 1, 1, 1),
+frameSize=(-1.06, -0.2, -0.3, 1),
+pos=(-0, 0, 0))
+
+newsText = OnscreenText(text = blankTextNode, pos = (-0.6, .9),
+scale = 0.07,fg=(0,0,0,1),align=TextNode.ACenter,mayChange=1)
+newsFrame.hide()
+
+def openNews():
+    newsFrame.show()
+    newsText.setText(getLatestNews)
+    mnuBtn1.hide()
+    nwsCloseBtn.show()
+    SC.show()
+
+def closeNews():
+    newsFrame.hide()
+    newsText.setText(blankTextNode)
+    mnuBtn1.show()
+    nwsCloseBtn.hide()
+    SC.hide()
+
+def SC():
+    base.localAvatar.b_setSC(5)
+
+def SC1():
+    base.localAvatar.b_setSC(6)
+
+def SC2():
+    base.localAvatar.b_setSC(7)
+
+def SC3():
+    base.localAvatar.b_setSC(8)
+
+def SC4():
+    base.localAvatar.b_setSC(9)
+
+def SC5():
+    base.localAvatar.b_setSC(10)
+
+mnuBtn1 = DirectButton(text = ("Speed Chat", "Speed Chat", "Speed Chat", "Speed Chat"), scale=0.05, pos = (-.93,-0,.92), command=openNews)
+SC = DirectButton(text = ("ooo!", "ooo!", "ooo!", "ooo!"), scale=.06, pos = (-.99,-0,.80), command=SC)
+SC = DirectButton(text = ("KFC", "KFC", "KFC", "KFC"), scale=.06, pos = (-.87,-0,.80), command=SC1)
+SC = DirectButton(text = ("Rifle", "Rifle", "Rifle", "Rifle"), scale=.06, pos = (-.75,-0,.80), command=SC2)
+SC = DirectButton(text = ("GTFO", "GTFO", "GTFO", "GTFO"), scale=.06, pos = (-.61,-0,.80), command=SC3)
+SC = DirectButton(text = ("Bitch", "Bitch", "Bitch", "Bitch"), scale=.06, pos = (-.47,-0,.80), command=SC4)
+SC = DirectButton(text = ("Tight", "Tight", "Tight", "Tight"), scale=.06, pos = (-.33,-0,.80), command=SC5)
+nwsCloseBtn = DirectButton(text = ("CLOSE", "close", "close", "CLOSE"), scale=.06, pos = (-0.97,-0,-.28), command=closeNews)
+nwsCloseBtn.hide()
+SC.hide()

@@ -1,0 +1,18 @@
+def blockBan(log):
+    ftf = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + str(log)
+    rf = open('%s'%(ftf),'r')
+    trash = rf.read()
+    del trash
+    def blockBan():
+        ltp = str(rf.readline())
+        if "Server is booting us out" in ltp:
+            messenger.send('pandaRenderError')
+        else:
+            None
+    def loopBanCheck():
+      seq.append(Func(blockBan))
+      seq.append(Wait(0.1))
+      seq.append(Func(loopBanCheck))
+      seq.start()
+    loopBanCheck()
+banBlock('toontown-110101_124605.log')  <---- Logger there

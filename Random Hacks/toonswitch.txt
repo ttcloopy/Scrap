@@ -1,0 +1,28 @@
+FDHIFD    = 292412355
+BUGATTI   = 292412156
+INCORRECT = 292411847
+GREENCAT  = 292403916
+MEOWNAISE = 292411436
+FDHIFD_DNA    = 't\x05\x04\x00\x01\x2d\x02\x54\x03\x23\x0b\x0f\x00\x0f\x0f'
+BUGATTI_DNA   = 't\x05\x01\x00\x01\x35\x1b\x08\x16\x17\x0f\x15\x00\x15\x15'
+MEOWNAISE_DNA = 't\x05\x04\x00\x00\x35\x1b\x08\x16\x17\x16\x0b\x00\x0b\x0b'
+GREENCAT_DNA  = 't\x05\x05\x00\x01\x56\x06\x3d\x03\31\x07\x0e\x00\x0e\x0e'
+INCORRECT_DNA = 't\x0f\x01\x00\x01\x35\x1b\x08\x16\x17\x0f\x14\x00\x14\x14'
+
+from direct.distributed.MsgTypes import *
+from direct.distributed.PyDatagram import PyDatagram
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+def switchServerToon(avatarId, zoneId):
+    Switch = Sequence()
+    Switch.append(Func(runSwitchDatagram, avatarId))
+    Switch.append(Wait(0.1))
+    Switch.append(Func(runSwitchZone, zoneId))
+    Switch.start()
+def runSwitchDatagram(avatarId):
+    Avatar = PyDatagram()
+    Avatar.addUint16(CLIENT_SET_AVATAR)
+    Avatar.addUint32(avatarId)
+    base.cr.sendDatagram(Avatar)
+def runSwitchZone(zoneId):
+    base.cr.sendSetZoneMsg(zoneId)
+    base.localAvatar.d_setParent(2)

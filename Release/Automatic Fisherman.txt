@@ -1,0 +1,48 @@
+fishCaught = 0
+
+fishCaught += 20
+from direct.interval.IntervalGlobal import *
+def catch():
+    fish = base.cr.doFindAll("FishingTarget")
+    for fish in fish:
+        print "Activated"
+    
+    fp = base.cr.doFindAll("FishingPond")
+    for fp in fp:
+        fp.d_hitTarget(fish)
+def sell():
+    base.localAvatar.setMaxFishTank(fishCaught)
+    fishman = base.cr.doFindAll("Fisherman")
+    for fishman in fishman:
+        fishid = fishman.doId
+    base.localAvatar.setMoney(base.localAvatar.bankMoney)
+    messenger.send('enterNPCToon-' + str(fishid), [1])
+def onGo():
+  seq = Sequence()
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Func(catch))
+  seq.append(Wait(1))
+  seq.append(Func(sell))
+  seq.start()
+onGo()

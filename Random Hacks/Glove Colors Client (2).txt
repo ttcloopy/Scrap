@@ -1,0 +1,59 @@
+
+
+base.localAvatar.find('**/hands').removeNode()
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import VBase4
+base.localAvatar.setSystemMessage(0, 'Smooth, color changing gloves activated. Made by Doctor Dizzysmirk.')
+def changeHandColor1():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.97,0.3,0.3,1))
+    handsChange.start()
+def changeHandColor2():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.96,0.7,0.7,1))
+    handsChange.start()
+def changeHandColor3():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.69,0.29,0.95,1))
+    handsChange.start()
+def changeHandColor4():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.69,0.29,0.95,1))
+    handsChange.start()
+def changeHandColor5():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.38,0.98,0.43,1))
+    handsChange.start()
+def changeHandColor6():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(1,0.90,0.30,1))
+    handsChange.start()
+def changeHandColor7():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.35,0.35,0.85,1))
+    handsChange.start()
+def changeHandColor8():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.3,0.64,0.85,1))
+    handsChange.start()
+def changeHandColor9():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(1,0.5,0.18,1))
+    handsChange.start()
+def onChange():
+  seq = Sequence()
+  seq.append(Func(changeHandColor1))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor2))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor3))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor4))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor5))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor6))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor7))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor8))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor9))
+  seq.append(Wait(0.5))
+  seq.append(Func(onChange))
+  seq.start()
+onChange()
+
+
+

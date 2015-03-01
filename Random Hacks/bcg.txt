@@ -1,0 +1,20 @@
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+bccog = Actor("phase_3.5/models/char/suitA-mod.bam",{"walk":"phase_4/models/char/suitA-neutral.bam"})
+bccog.reparentTo(render)
+bccog.loop("walk")
+cheeser = bccog.find('**/joint_head')
+bccogh = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+cheesef = bccogh.find('**/bccog')
+cheesef.setColor(0,0,3)
+cheesef.reparentTo(cheeser)
+bccog.setPos(77,-5,30)
+bccog.setScale(2)
+bccog.setHpr(420,0,0)

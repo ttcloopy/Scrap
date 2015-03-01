@@ -1,0 +1,778 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.92),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Stop"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20341)
+    var = 1
+
+def setText2():
+    bk_text = "Spin"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20349)
+    var = 1
+
+def setText3():
+    bk_text = "Headache"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20113)
+    var = 1
+
+def setText4():
+    bk_text = "Shortfall"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20335)
+    var = 1
+
+def setText5():
+    bk_text = "Plan"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20293)
+    var = 1
+
+def setText6():
+    bk_text = "Hall"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2513)
+    var = 1
+
+def setText7():
+    bk_text = "Bank"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2514)
+    var = 1
+
+def setText8():
+    bk_text = "Library"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2518)
+    var = 1
+
+def setText9():
+    bk_text = "SBHQ"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(11100)
+    var = 1
+
+def setText10():
+    bk_text = "CBHQ"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(12100)
+    var = 1
+
+def setText11():
+    bk_text = "LBHQ"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(13100)
+    var = 1
+
+def setText12():
+    bk_text = "BBHQ"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(10100)
+    var = 1
+
+
+def setText14():
+    bk_text = "Splash"
+    textObject.setText(bk_text)
+    toon = base.cr.doFindAll("Big Winky")
+    base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+    base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+    var = 1
+
+
+def setText15():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText16():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText17():
+    bk_text = "Raid"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 1
+
+def setText18():
+    bk_text = "Speed"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed=100
+    var = 1
+
+def setText19():
+    bk_text = "Rotate"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlRotateSpeed=100
+    var = 1
+
+def setText20():
+    bk_text = "Reverse"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlReverseSpeed=75
+    var = 1
+
+def setText21():
+    bk_text = "Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce = 50
+    var = 1
+
+def setText22():
+    bk_text = "Garden"
+    textObject.setText(bk_text)
+    messenger.send('gardenGame')
+    var = 1
+
+def setText24():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText25():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText26():
+    bk_text = "Clothes"
+    textObject.setText(bk_text)
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText27():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Big Winky")
+    for cc in base.cr.doFindAll("Big Winky"):
+      cc.copyTo(render)
+
+def setText28():
+    bk_text = "Normal"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,0))
+    var = 1  
+
+def setText29():
+    bk_text = "UpD"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText30():
+    bk_text = "UpD2"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((30,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText31():
+    bk_text = "UpD3"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((50,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText32():
+    bk_text = "UpD4"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((70,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText33():
+    bk_text = "FoF"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-50,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText34():
+    bk_text = "FoF2"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-60,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText35():
+    bk_text = "FoF3"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-70,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText36():
+    bk_text = "FoF4"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-80,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText37():
+    bk_text = "BoF"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,90,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText38():
+    bk_text = "BoF2"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,80,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText39():
+    bk_text = "BoF3"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,70,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText40():
+    bk_text = "BoF4"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,60,0)
+    base.localAvatar.collisionsOff()
+    var = 1  
+
+def setText41():
+    bk_text = "SID"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+
+def setText42():
+    bk_text = "SID2"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,-90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText43():
+    bk_text = "SID3"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,80)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText44():
+    bk_text = "SID3"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,-80)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText45():
+    bk_text = "Co Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText46():
+    bk_text = "Co On"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+
+def setText47():
+    bk_text = "Gravity"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.setGravity(1)
+
+def setText48():
+    bk_text = "Show ID"
+    textObject.setText(bk_text)
+    messenger.send('nameTagShowAvId')
+
+
+def setText49():
+    bk_text = "Farms"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText50():
+    bk_text = "FINV"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7090)
+    var = 1
+
+def setText51():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText52():
+    bk_text = "TINV"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2090)
+    var = 1
+
+def setText53():
+    bk_text = "Cream"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20150)
+    var = 1
+
+def setText54():
+    bk_text = "Bonus"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2223)
+    var = 1
+
+def setText55():
+    bk_text = "Zone"
+    textObject.setText(bk_text)
+    zone = base.localAvatar.getZoneId()
+    zone = str(zone)
+    base.localAvatar.setSystemMessage(1, zone)
+    var = 1
+
+def setText56():
+    bk_text = "Back"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20133)
+    var = 1
+
+def setText57():
+    bk_text = "Cozy?"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20251)
+    var = 1
+
+def setText58():
+    bk_text = "Hair"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20300)
+    var = 1
+
+def setText59():
+    bk_text = "Bore"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20283)
+    var = 1
+
+def setText60():
+    bk_text = "Dull"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20284)
+    var = 1
+
+def setText61():
+    bk_text = "Robbed"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20320)
+    var = 1
+
+def setText62():
+    bk_text = "Brush"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20299)
+    var = 1
+
+def setText63():
+    bk_text = "Shot"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(4301)
+    var = 1
+
+def setText64():
+    bk_text = "Camera"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20256)
+    var = 1
+
+def setText65():
+    bk_text = "Split"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(1700)
+    var = 1
+
+
+def setText66():
+    bk_text = "Stay"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(1701)
+    var = 1
+
+def setText67():
+    bk_text = "MUD"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20071)
+    var = 1
+
+def setText68():
+    bk_text = "Spunky"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20201)
+    var = 1
+
+def setText69():
+    bk_text = "Harder"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(4203)
+    var = 1
+
+def setText70():
+    bk_text = "Softer"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(4204)
+    var = 1
+
+def setText71():
+    bk_text = "Stranger"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20329)
+    var = 1
+
+def setText72():
+    bk_text = "Rid"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20291)
+    var = 1
+
+
+def setText73():
+    bk_text = "Hunting"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20107)
+    var = 1
+
+
+
+def setText74():
+    bk_text = "Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    var = 1
+
+
+def setText75():
+    bk_text = "Work"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText76():
+    bk_text = "Jealous"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistJealous'))
+    var = 1
+
+def setText77():
+    bk_text = "Emcee"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistEmcee'))
+    var = 1
+
+def setText78():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText79():
+    bk_text = "Sad"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Sad')
+    var = 1
+
+def setText80():
+    bk_text = "Sit"
+    textObject.setText(bk_text)
+    base.localAvatar.enterSitStart()
+    var = 1
+
+def setText81():
+    bk_text = "Swim"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('swim')
+    var = 1
+
+def setText82():
+    bk_text = "Died"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('Died'))
+    var = 1
+
+
+def setText83():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText84():
+    bk_text = "Port In"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText85():
+    bk_text = "CringeAn"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('cringe'))
+    var = 1
+
+def setText86():
+    bk_text = "Push"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Push')
+    var = 1
+
+def setText87():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText88():
+    bk_text = "Flat"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Flattened')
+    var = 1
+
+def setText89():
+    bk_text = "Squish"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Squish')
+    var = 1
+
+def setText90():
+    bk_text = "Eating"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('CatchEating')
+    var = 1
+
+def setText91():
+    bk_text = "Catching"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('Catching'))
+    var = 1
+
+
+def setText92():
+    bk_text = "Read"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('ReadBook')
+    var = 1
+
+def setText93():
+    bk_text = "Squat"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('jumpSquat'))
+    var = 1
+
+def setText94():
+    bk_text = "Fall"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('FallDown'))
+    var = 1
+
+def setText95():
+    bk_text = "Run"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('run')
+    var = 1
+
+def setText96():
+    bk_text = "Walk"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('walk')
+    var = 1
+
+def setText97():
+    bk_text = "Theif"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('CogThiefRunning'))
+    var = 1
+
+def setText98():
+    bk_text = "Loop"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('GolfPuttLoop')
+    var = 1
+
+
+def setText99():
+    bk_text = "Rotate ->"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('GolfRotateRight'))
+    var = 1
+
+def setText100():
+    bk_text = "Rotate <-"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+    var = 1
+
+def setText101():
+    bk_text = "Swing"
+    textObject.setText(bk_text) 
+    base.localAvatar.b_setAnimState(('GolfPuttSwing'))
+    var = 1
+
+def setText102():
+    bk_text = "Bad"
+    textObject.setText(bk_text) 
+    base.localAvatar.b_setAnimState('GolfBadPutt')
+    var = 1
+
+def setText103():
+    bk_text = "Good"
+    textObject.setText(bk_text) 
+    base.localAvatar.b_setAnimState('GolfGoodPutt')
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Stp", "ph", "ph", "Stp"), scale=.04, pos = (-.99999,-.0,.83), command=setText1)
+b2 = DirectButton(text = ("Spn", "ph", "ph", "Spn"), scale=.04, pos = (-.91,-.0,.83), command=setText2)
+b3 = DirectButton(text = ("Hd", "ph", "ph", "Hd"), scale=.04, pos = (-.83,-.0,.83), command=setText3)
+b4 = DirectButton(text = ("Sho", "ph", "ph", "Sho"), scale=.04, pos = (-.76,-.0,.83), command=setText4)
+b5 = DirectButton(text = ("Pln", "ph", "ph", "Pln"), scale=.04, pos = (-.69,-.0,.83), command=setText5)
+b6 = DirectButton(text = ("Hall", "zone", "zone", "Hall"), scale=.04, pos = (-.62,-.0,.97), command=setText6)
+b7 = DirectButton(text = ("Bnk", "zone", "zone", "Bnk"), scale=.04, pos = (-.54,-.0,.97), command=setText7)
+b8 = DirectButton(text = ("Lib", "zone", "zone", "Lib"), scale=.04, pos = (-.47,-.0,.97), command=setText8)
+b9 = DirectButton(text = ("SB", "HQ", "HQ", "SB"), scale=.04, pos = (-.40,-.0,.97), command=setText9)
+b10 = DirectButton(text = ("CB", "HQ", "HQ", "CB"), scale=.04, pos = (-.34,-.0,.97), command=setText10)
+b11 = DirectButton(text = ("LB", "HQ", "HQ", "LB"), scale=.04, pos = (-.28,-.0,.97), command=setText11)
+b12 = DirectButton(text = ("BB", "HQ", "HQ", "BB"), scale=.04, pos = (-.21,-.0,.97), command=setText12)
+b14 = DirectButton(text = ("Splash", "SPLASH", "SPLASH", "SPLASH"), scale=.04, pos = (-.07,-.0,.97), command=setText14)
+b15 = DirectButton(text = ("Die", "-3", "-3", "Die"), scale=.04, pos = (.07,-.0,.97), command=setText15)
+b16 = DirectButton(text = ("Laff", "+", "+", "Laff"), scale=.04, pos = (.15,-.0,.97), command=setText16)
+b17 = DirectButton(text = ("Raid", "ph", "ph", "Raid"), scale=.04, pos = (.24,-.0,.97), command=setText17)
+b18 = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.04, pos = (.35,-.0,.97), command=setText18)
+b19 = DirectButton(text = ("Rot", "ate", "ate", "Rot"), scale=.04, pos = (.448,-.0,.97), command=setText19)
+b20 = DirectButton(text = ("Rev", "ers", "ers", "Rev"), scale=.04, pos = (.53,-.0,.97), command=setText20)
+b21 = DirectButton(text = ("Ju", "mp", "mp", "Ju"), scale=.04, pos = (.595,-.0,.97), command=setText21)
+b22 = DirectButton(text = ("G", "g", "g", "G"), scale=.04, pos = (.64,-.0,.97), command=setText22)
+b24 = DirectButton(text = ("Mem", "mem", "mem", "Mem"), scale=.04, pos = (.71,-.0,.97), command=setText24)
+b25 = DirectButton(text = ("GTP", "Tp", "Tp", "GTP"), scale=.04, pos = (.80,-.0,.97), command=setText25)
+b26 = DirectButton(text = ("Cloth", "cloth", "cloth", "Cloth"), scale=.04, pos = (.89,-.0,.97), command=setText26)
+b27 = DirectButton(text = ("Clone", "clone", "clone", "Clone"), scale=.04, pos = (.99999,-.0,.97), command=setText27)
+b28 = DirectButton(text = ("NoP", "pos", "pos", "NoP"), scale=.04, pos = (-.99999,-.0,.90), command=setText28)
+b29 = DirectButton(text = ("UpD", "pos", "pos", "UpD"), scale=.04, pos = (-.91,-.0,.90), command=setText29)
+b30 = DirectButton(text = ("UpD2", "pos", "pos", "UpD2"), scale=.04, pos = (-.81,-.0,.90), command=setText30)
+b31 = DirectButton(text = ("UpD3", "pos", "pos", "UpD3"), scale=.04, pos = (-.70,-.0,.90), command=setText31)
+b32 = DirectButton(text = ("UpD4", "pos", "pos", "UpD4"), scale=.04, pos = (-.59,-.0,.90), command=setText32)
+b33 = DirectButton(text = ("FoF", "pos", "pos", "FoF"), scale=.04, pos = (-.499,-.0,.90), command=setText33)
+b34 = DirectButton(text = ("FoF2", "pos", "pos", "FoF2"), scale=.04, pos = (-.40,-.0,.90), command=setText34)
+b35 = DirectButton(text = ("FoF3", "pos", "pos", "FoF3"), scale=.04, pos = (-.30,-.0,.90), command=setText35)
+b36 = DirectButton(text = ("FoF4", "pos", "pos", "FoF4"), scale=.04, pos = (-.20,-.0,.90), command=setText36)
+b37 = DirectButton(text = ("BoF", "pos", "pos", "BoF"), scale=.04, pos = (-.10,-.0,.90), command=setText37)
+b38 = DirectButton(text = ("BoF2", "pos", "pos", "BoF2"), scale=.04, pos = (-.0,-.0,.90), command=setText38)
+b39 = DirectButton(text = ("BoF3", "pos", "pos", "BoF3"), scale=.04, pos = (.10,-.0,.90), command=setText39)
+b40 = DirectButton(text = ("BoF4", "pos", "pos", "BoF4"), scale=.04, pos = (.20,-.0,.90), command=setText40)
+b41 = DirectButton(text = ("Sid", "pos", "pos", "Sid"), scale=.04, pos = (.29,-.0,.90), command=setText41)
+b42 = DirectButton(text = ("Sid2", "pos", "pos", "Sid2"), scale=.04, pos = (.37,-.0,.90), command=setText42)
+b43 = DirectButton(text = ("Sid3", "ps", "pos", "Sid3"), scale=.04, pos = (.47,-.0,.90), command=setText43)
+b44 = DirectButton(text = ("Sid4", "pos", "pos", "Sid4"), scale=.04, pos = (.57,-.0,.90), command=setText44)
+b45 = DirectButton(text = ("COff", "coff", "coff", "COff"), scale=.04, pos = (.67,-.0,.90), command=setText45)
+b46 = DirectButton(text = ("COn", "con", "con", "COn"), scale=.04, pos = (.77,-.0,.90), command=setText46)
+b47 = DirectButton(text = ("Grv", "Grv", "Grv", "Grv"), scale=.04, pos = (.85,-.0,.90), command=setText47)
+b48 = DirectButton(text = ("ID", "ID", "ID", "ID"), scale=.04, pos = (.92,-.0,.90), command=setText48)
+b49 = DirectButton(text = ("Farms", "zone", "zone", "Farms"), scale=.04, pos = (-.99999,-.0,.97), command=setText49)
+b50 = DirectButton(text = ("FINV", "zone", "zone", "FINV"), scale=.04, pos = (-.89,-.0,.97), command=setText50)
+b51 = DirectButton(text = ("TTC", "zone", "zone", "TTC"), scale=.04, pos = (-.80,-.0,.97), command=setText51)
+b52 = DirectButton(text = ("TINV", "zone", "zone", "TINV"), scale=.04, pos = (-.71,-.0,.97), command=setText52)
+b53 = DirectButton(text = ("Crm", "ph", "ph", "Crm"), scale=.04, pos = (-.61,-.0,.83), command=setText53)
+b54 = DirectButton(text = ("Bon", "ph", "ph", "Bon"), scale=.04, pos = (-.53,-.0,.83), command=setText54)
+b55 = DirectButton(text = ("Zone", "find", "find", "Zone"), scale=.04, pos = (.99999,-.0,.90), command=setText55)
+b56 = DirectButton(text = ("Bck", "ph", "ph", "Bck"), scale=.04, pos = (-.44,-.0,.83), command=setText56)
+b57 = DirectButton(text = ("Czy", "ph", "ph", "Czy"), scale=.04, pos = (-.36,-.0,.83), command=setText57)
+b58 = DirectButton(text = ("Hai", "ph", "ph", "Hai"), scale=.04, pos = (-.28,-.0,.83), command=setText58)
+b59 = DirectButton(text = ("Bor", "ph", "ph", "bor"), scale=.04, pos = (-.21,-.0,.83), command=setText59)
+b60 = DirectButton(text = ("Dul", "ph", "ph", "Dul"), scale=.04, pos = (-.14,-.0,.83), command=setText60)
+b61 = DirectButton(text = ("Rob", "ph", "ph", "Rob"), scale=.04, pos = (-.06,-.0,.83), command=setText61)
+b62 = DirectButton(text = ("Bru", "ph", "ph", "Bru"), scale=.04, pos = (.02,-.0,.83), command=setText62)
+b63 = DirectButton(text = ("Sht", "ph", "ph", "Sht"), scale=.04, pos = (.10,-.0,.83), command=setText63)
+b64 = DirectButton(text = ("Cam", "ph", "ph", "Cam"), scale=.04, pos = (.18,-.0,.83), command=setText64)
+b65 = DirectButton(text = ("Spt", "ph", "ph", "Spt"), scale=.04, pos = (.26,-.0,.83), command=setText65)
+b66 = DirectButton(text = ("Sty", "ph", "ph", "Sty"), scale=.04, pos = (.34,-.0,.83), command=setText66)
+b67 = DirectButton(text = ("MUD", "ph", "ph", "MUD"), scale=.04, pos = (.43,-.0,.83), command=setText67)
+b68 = DirectButton(text = ("Spky", "ph", "ph", "spky"), scale=.04, pos = (.53,-.0,.83), command=setText68)
+b69 = DirectButton(text = ("Hard", "ph", "ph", "Hard"), scale=.04, pos = (.63,-.0,.83), command=setText69)
+b70 = DirectButton(text = ("Soft", "ph", "ph", "Soft"), scale=.04, pos = (.73,-.0,.83), command=setText70)
+b71 = DirectButton(text = ("Str", "ph", "ph", "Str"), scale=.04, pos = (.81,-.0,.83), command=setText71)
+b72 = DirectButton(text = ("Rid", "ph", "ph", "Rid"), scale=.04, pos = (.89,-.0,.83), command=setText72)
+b73 = DirectButton(text = ("Hunt", "ph", "ph", "Hunt"), scale=.04, pos = (.98,-.0,.83), command=setText73)
+b74= DirectButton(text = ("Sp", "ani", "ani", "Sp"), scale=.04, pos = (-.99999,-.0,-.97), command=setText74)
+b75= DirectButton(text = ("Sw", "ani", "ani", "Sw"), scale=.04, pos = (-.94,-.0,-.97), command=setText75)
+b76= DirectButton(text = ("Sj", "ani", "ani", "Sj"), scale=.04, pos = (-.885,-.0,-.97), command=setText76)
+b77= DirectButton(text = ("Se", "ani", "ani", "Se"), scale=.04, pos = (-.828,-.0,-.97), command=setText77)
+b78= DirectButton(text = ("Vic", "ani", "ani", "Vic"), scale=.04, pos = (-.76,-.0,-.97), command=setText78)
+b79= DirectButton(text = ("Sad", "ani", "ani", "Sad"), scale=.04, pos = (-.68,-.0,-.97), command=setText79)
+b80= DirectButton(text = ("Sit", "ani", "ani", "Sit"), scale=.04, pos = (-.61,-.0,-.97), command=setText80)
+b81= DirectButton(text = ("Swm", "ani", "ani", "Swm"), scale=.04, pos = (-.53,-.0,-.97), command=setText81)
+b82= DirectButton(text = ("DIE", "ani", "ani", "DIE"), scale=.04, pos = (-.45,-.0,-.97), command=setText82)
+b83= DirectButton(text = ("TPo", "ani", "ani", "TPo"), scale=.04, pos = (-.37,-.0,-.97), command=setText83)
+b84= DirectButton(text = ("TPi", "ani", "ani", "TPi"), scale=.04, pos = (-.30,-.0,-.97), command=setText84)
+b85= DirectButton(text = ("Crin", "ani", "ani", "Cri"), scale=.04, pos = (-.23,-.0,-.97), command=setText85)
+b86= DirectButton(text = ("Psh", "ani", "ani", "Psh"), scale=.04, pos = (-.23,-.0,-.97), command=setText86)
+b87= DirectButton(text = ("Div", "ani", "ani", "Div"), scale=.04, pos = (-.16,-.0,-.97), command=setText87)
+b88= DirectButton(text = ("Flt", "ani", "ani", "Flt"), scale=.04, pos = (-.10,-.0,-.97), command=setText88)
+b89= DirectButton(text = ("Sq", "ani", "ani", "Sq"), scale=.04, pos = (-.04,-.0,-.97), command=setText89)
+b90= DirectButton(text = ("CaE", "ani", "ani", "CaE"), scale=.04, pos = (.03,-.0,-.97), command=setText90)
+b91= DirectButton(text = ("Cac", "ani", "ani", "Cac"), scale=.04, pos = (.11,-.0,-.97), command=setText91)
+b92= DirectButton(text = ("Bok", "ani", "ani", "Bok"), scale=.04, pos = (.19,-.0,-.97), command=setText92)
+b93= DirectButton(text = ("Sqa", "ani", "ani", "squa"), scale=.04, pos = (.27,-.0,-.97), command=setText93)
+b94= DirectButton(text = ("Fal", "ani", "ani", "Fal"), scale=.04, pos = (.34,-.0,-.97), command=setText94)
+b95= DirectButton(text = ("Run", "ani", "ani", "Run"), scale=.04, pos = (.42,-.0,-.97), command=setText95)
+b96= DirectButton(text = ("Wal", "ani", "ani", "Wal"), scale=.04, pos = (.50,-.0,-.97), command=setText96)
+b97= DirectButton(text = ("CoT", "ani", "ani", "CoT"), scale=.04, pos = (.58,-.0,-.97), command=setText97)
+b98= DirectButton(text = ("Gp", "ani", "ani", "GP"), scale=.04, pos = (.65,-.0,-.97), command=setText98)
+b99= DirectButton(text = ("Gr", "ani", "ani", "Gr"), scale=.04, pos = (.71,-.0,-.97), command=setText99)
+b100= DirectButton(text = ("Gl", "ani", "ani", "Gl"), scale=.04, pos = (.76,-.0,-.97), command=setText100)
+b101= DirectButton(text = ("Gs", "ani", "ani", "Gs"), scale=.04, pos = (.81,-.0,-.97), command=setText101)
+b102= DirectButton(text = ("Gb", "ani", "ani", "Gb"), scale=.04, pos = (.87,-.0,-.97), command=setText102)
+b103= DirectButton(text = ("Gg", "ani", "ani", "Gg"), scale=.04, pos = (.93,-.0,-.97), command=setText103)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.92),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "ZoneFound"
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+
+b = DirectButton(text = ("Raid House", "Activate", "Activate", "Raid House"), scale=.04, pos = (-.0,-0,-.92), command=setText)

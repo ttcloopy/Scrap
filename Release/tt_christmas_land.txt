@@ -1,0 +1,217 @@
+
+base.localAvatar.setCheesyEffect(14, 0, 0)
+base.cr.sendSetZoneMsg(7000)
+
+
+
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+
+
+
+
+environ = loader.loadModel("phase_4/models/minigames/tag_arena.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,0)
+environ.setHpr(0,0,0)
+environ.setScale(2)
+
+
+G = loader.loadModel("phase_4/models/modules/gazebo.bam")
+G.reparentTo(render)
+G.setPos(0,50,0.025)
+G.setHpr(0,0,0)
+G.setScale(1)
+
+
+
+c = loader.loadModel("phase_5.5/models/estate/tt_m_prp_int_winter_tree.bam")
+c.reparentTo(render)
+c.setPos(0,50,3.3)
+c.setHpr(0,0,0)
+c.setScale(0.7)
+
+
+Gift = loader.loadModel("phase_5.5/models/estate/tt_m_ara_int_presents.bam")
+Gift.reparentTo(render)
+Gift.setPos(0,-100,0)
+Gift.setHpr(0,0,0)
+Gift.setScale(3)
+
+
+sled = loader.loadModel("phase_5.5/models/estate/tt_m_ara_int_sled.bam")
+sled.reparentTo(render)
+sled.setPos(10,-140,0)
+sled.setHpr(180,0,0)
+sled.setScale(3)
+
+
+c2 = loader.loadModel("phase_5.5/models/estate/tt_m_prp_int_winter_tree.bam")
+c2.reparentTo(render)
+c2.setPos(0,-100,0)
+c2.setHpr(0,0,0)
+c2.setScale(3)
+
+
+c3 = loader.loadModel("phase_5.5/models/estate/tt_m_prp_int_winter_tree.bam")
+c3.reparentTo(render)
+c3.setPos(30,-100,0)
+c3.setHpr(0,0,0)
+c3.setScale(3)
+
+
+c4 = loader.loadModel("phase_5.5/models/estate/tt_m_prp_int_winter_tree.bam")
+c4.reparentTo(render)
+c4.setPos(30,-100,0)
+c4.setHpr(0,0,0)
+c4.setScale(3)
+
+
+c5 = loader.loadModel("phase_5.5/models/estate/tt_m_prp_int_winter_tree.bam")
+c5.reparentTo(render)
+c5.setPos(-30,-100,0)
+c5.setHpr(0,0,0)
+c5.setScale(3)
+
+
+c6 = loader.loadModel("phase_4/models/props/winter_tree_Christmas.bam")
+c6.reparentTo(render)
+c6.setPos(0,-60,0)
+c6.setHpr(0,0,0)
+c6.setScale(1)
+
+
+c7 = loader.loadModel("phase_5.5/models/estate/tt_m_prp_int_winter_tree.bam")
+c7.reparentTo(render)
+c7.setPos(70,-55,90)
+c7.setHpr(0,0,0)
+c7.setScale(2)
+
+
+bldg = loader.loadModel("phase_5/models/modules/TT_A2.bam")
+bldg.reparentTo(render)
+bldg.setPos(50,-137,0)
+bldg.setHpr(193,0,0)
+bldg.setScale(1)
+
+
+F = loader.loadModel("phase_4/models/props/toontown_central_fountain.bam")
+F.reparentTo(render)
+F.setPos(90,-60,0)
+F.setHpr(0,0,0)
+F.setScale(1)
+
+
+F2 = loader.loadModel("phase_4/models/props/toontown_central_fountain.bam")
+F2.reparentTo(render)
+F2.setPos(-90,-60,0)
+F2.setHpr(0,0,0)
+F2.setScale(1)
+
+
+Snow = loader.loadModel("phase_8/models/props/snowman.bam")
+Snow.reparentTo(render)
+Snow.setPos(40,-20,0)
+Snow.setHpr(0,0,0)
+Snow.setScale(4)
+
+
+Snow2 = loader.loadModel("phase_8/models/props/snowman.bam")
+Snow2.reparentTo(render)
+Snow2.setPos(-40,-20,0)
+Snow2.setHpr(180,0,0)
+Snow2.setScale(4)
+
+
+Cs = loader.loadModel("phase_6/models/props/tt_m_ara_DD_streetlight_winter.bam")
+Cs.reparentTo(render)
+Cs.setPos(-20,20,0)
+Cs.setHpr(0,0,0)
+Cs.setScale(0.8)
+
+Cs2 = loader.loadModel("phase_6/models/props/tt_m_ara_DD_streetlight_winter.bam")
+Cs2.reparentTo(render)
+Cs2.setPos(20,20,0)
+Cs2.setHpr(0,0,0)
+Cs2.setScale(0.8)
+
+
+TH = loader.loadModel("phase_4/models/modules/toonhall.bam")
+TH.reparentTo(render)
+TH.setPos(40,130,0)
+TH.setHpr(0,0,0)
+TH.setScale(0.7)
+
+
+TH2 = loader.loadModel("phase_4/models/modules/toonhall.bam")
+TH2.reparentTo(render)
+TH2.setPos(-70,130,0)
+TH2.setHpr(0,0,0)
+TH2.setScale(0.7)
+
+
+pon = loader.loadModel("phase_8/models/modules/BR_pond.bam")
+pon.reparentTo(render)
+pon.setPos(70,-27.1,90)
+pon.setHpr(0,0,0)
+pon.setScale(1)
+
+
+DB = Actor("phase_5/models/char/tt_r_ara_ttc_B2.bam",{"cheer":"phase_5/models/char/tt_a_ara_ttc_B2_dance.bam"})
+DB.reparentTo(render)
+DB.loop("cheer")
+DB.setPos(133,40,0)
+DB.setHpr(280,0,0)
+DB.setScale(1)
+
+
+sky = loader.loadModel("phase_8/models/props/DL_sky.bam")
+sky.reparentTo(render)
+sky.setPos(0,0,0)
+sky.setHpr(0,0,0)
+sky.setScale(80)
+
+
+table = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table.reparentTo(render)
+table.setPos(70,-27,87)
+table.setHpr(0,0,0)
+table.setScale(0.8)
+
+
+alight = AmbientLight('alight')
+alight.setColor(VBase4(0.5, 0.5, 0.5, 5))
+alnp = render.attachNewNode(alight)
+render.setLight(alnp)
+
+
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(60,0,90)
+pandaPosInterval22 = e.posInterval(13,Point3(70,30,1),
+startPos=Point3(70,30,90))
+pandaPosInterval33 = e.posInterval(13,Point3(70,30,90),
+startPos=Point3(70,30,1))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()

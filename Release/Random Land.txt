@@ -1,0 +1,1461 @@
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import * 
+environ = loader.loadModel("phase_4/models/minigames/tag_arena.bam") 
+environ.reparentTo(render) 
+environ.setPos(0,0,0) 
+environ.setHpr(0,0,0) 
+environ.setScale(3) 
+
+hall = loader.loadModel("phase_4/models/modules/toonhall.bam") 
+hall.reparentTo(render) 
+hall.setPos(-56.763,137.830,0.025) 
+hall.setHpr(0,0,0) 
+hall.setScale(3) 
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+e.reparentTo(render) 
+e.setHpr(0,0,0) 
+e.setPos(10.389,85.279,0.025) 
+
+pandaPosInterval22 = e.posInterval(13,Point3(10.389,85.279,0.025), 
+startPos=Point3(0,114.03,127.50)) 
+pandaPosInterval33 = e.posInterval(13,Point3(10.389,85.279,150.50), 
+
+
+startPos=Point3(10.389,85.279,0.025)) 
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0), 
+
+
+startHpr=Point3(0, 0, 0)) 
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0), 
+
+
+startHpr=Point3(0, 0, 0)) 
+pandaPace = Sequence(pandaPosInterval22, 
+pandaHprInterval11, 
+pandaPosInterval33, 
+pandaHprInterval22, 
+name="pandaPace") 
+pandaPace.loop() 
+
+e.find('**/wall_back').removeNode() 
+e.find('**/wall_front').removeNode() 
+
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+c.setPos(-9.98,139.11,117.38) 
+c.setHpr(0,340.30,0) 
+c.hide() 
+c.reparentTo(render) 
+c.find('**/wall_back').removeNode() 
+c.find('**/wall_front').removeNode() 
+c.find('**/wall_left').removeNode() 
+c.find('**/wall_right').removeNode() 
+c.find('**/ceiling').removeNode() 
+
+castle = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_castle.bam") 
+castle.reparentTo(render) 
+castle.setPos(-75.215,-196.153,0.025) 
+castle.setHpr(2218,0,0) 
+castle.setScale(10) 
+
+mail1 = Actor("phase_5/models/char/tt_r_ara_ttc_mailbox.bam", 
+
+{"cheer":"phase_5/models/char/tt_a_ara_ttc_mailbox_fightCheer.bam"}) 
+mail1.reparentTo(render) 
+mail1.loop("cheer") 
+mail1.setPos(-41.727,-105.031,0.025) 
+mail1.setHpr(100.490,0,0) 
+mail1.setScale(1) 
+
+mgr = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam") 
+mgr.reparentTo(render) 
+mgr.setPos(-174.215,-35.153,0.025) 
+mgr.setHpr(0,0,0) 
+mgr.setScale(5) 
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0), 
+
+
+startHpr=Point3(270, 0, 0)) 
+pandaHprInterval2 = mgr.hprInterval(3,Point3(270, 0, 0), 
+
+
+startHpr=Point3(0, 0, 0)) 
+# Create and play the sequence that coordinates the intervals. 
+maryspin = Sequence(pandaHprInterval1, 
+name="maryspin") 
+maryspin.loop() 
+evsign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam") 
+evsign.reparentTo(render) 
+evsign.setPos(-3.082,85.281,0.025) 
+evsign.setHpr(0,0,0) 
+evsign.setScale(2) 
+
+cogplat = loader.loadModel("phase_9/models/cogHQ/platform1.bam") 
+cogplat.reparentTo(render) 
+cogplat.setPos(9,80.153,150) 
+cogplat.setHpr(0,0,0) 
+cogplat.setScale(5) 
+
+cogplat1 = loader.loadModel("phase_9/models/cogHQ/platform1.bam") 
+cogplat1.reparentTo(render) 
+cogplat1.setPos(9,40.153,150) 
+cogplat1.setHpr(0,0,0) 
+cogplat1.setScale(1) 
+
+cogstairs6 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam") 
+cogstairs6.reparentTo(render) 
+cogstairs6.setPos(15,34.153,150) 
+cogstairs6.setHpr(270,0,0) 
+cogstairs6.setScale(25) 
+cogstairs2 = loader.loadModel("phase_9/models/cogHQ/StairTen3060_15wide.bam") 
+cogstairs2.reparentTo(render) 
+cogstairs2.setPos(15,16.153,158) 
+cogstairs2.setHpr(270,0,0) 
+cogstairs2.setScale(25) 
+
+cogplat5 = loader.loadModel("phase_9/models/cogHQ/platform1.bam") 
+cogplat5.reparentTo(render) 
+cogplat5.setPos(9,-20,166) 
+cogplat5.setHpr(0,0,0) 
+cogplat5.setScale(8) 
+
+cogplat3 = loader.loadModel("phase_9/models/cogHQ/platform1.bam") 
+cogplat3.reparentTo(render) 
+cogplat3.setPos(9,-82,166) 
+cogplat3.setHpr(0,0,0) 
+cogplat3.setScale(8) 
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam") 
+cogplat4.reparentTo(render) 
+cogplat4.setPos(65,-82,166) 
+cogplat4.setHpr(0,0,0) 
+cogplat4.setScale(8) 
+nc = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam") 
+nc.reparentTo(render) 
+nc.setPos(300,-82,166) 
+nc.setHpr(270,0,0) 
+nc.setScale(2) 
+
+
+cogplat4 = loader.loadModel("phase_9/models/cogHQ/platform1.bam") 
+cogplat4.reparentTo(render) 
+cogplat4.setPos(125,-82,166) 
+cogplat4.setHpr(0,0,0) 
+cogplat4.setScale(8) 
+
+nc.find('**/doorwood').setHpr(90,0,0) 
+
+ceosign = loader.loadModel("phase_4/models/minigames/toonblitz_game_arrow.bam") 
+ceosign.reparentTo(render) 
+ceosign.setPos(289.082,-62.281,166.025) 
+ceosign.setHpr(270,0,0) 
+ceosign.setScale(2) 
+
+dance = loader.loadModel("phase_13/models/parties/danceFloor.bam") 
+dance.reparentTo(render) 
+dance.setPos(618.082,-109.281,166.025) 
+dance.setHpr(270,0,0) 
+dance.setScale(8) 
+
+
+
+dclass DistributedKnockKnockDoor : DistributedAnimatedProp { 
+}; 
+
+dclass DistributedElevator : DistributedObject { 
+setBldgDoId(uint32) required broadcast ram; 
+setState(string, int16) broadcast ram; 
+fillSlot0(uint32, uint8) broadcast ram; 
+fillSlot1(uint32, uint8) broadcast ram; 
+fillSlot2(uint32, uint8) broadcast ram; 
+fillSlot3(uint32, uint8) broadcast ram; 
+fillSlot4(uint32, uint8) broadcast ram; 
+fillSlot5(uint32, uint8) broadcast ram; 
+fillSlot6(uint32, uint8) broadcast ram; 
+fillSlot7(uint32, uint8) broadcast ram; 
+emptySlot0(uint32, int8, int16, int16) broadcast ram; 
+emptySlot1(uint32, int8, int16, int16) broadcast ram; 
+emptySlot2(uint32, int8, int16, int16) broadcast ram; 
+emptySlot3(uint32, int8, int16, int16) broadcast ram; 
+emptySlot4(uint32, int8, int16, int16) broadcast ram; 
+emptySlot5(uint32, int8, int16, int16) broadcast ram; 
+emptySlot6(uint32, int8, int16, int16) broadcast ram; 
+emptySlot7(uint32, int8, int16, int16) broadcast ram; 
+requestBoard() airecv clsend; 
+rejectBoard(uint32, uint8); 
+requestExit() airecv clsend; 
+setElevatorTripId(uint32) required broadcast ram; 
+setAntiShuffle(uint8) required broadcast ram; 
+setMinLaff(uint8) required broadcast ram; 
+}; 
+
+dclass DistributedElevatorFSM : DistributedObject { 
+setBldgDoId(uint32) required broadcast ram; 
+setState(string, int16) broadcast ram; 
+fillSlot0(uint32) broadcast ram; 
+fillSlot1(uint32) broadcast ram; 
+fillSlot2(uint32) broadcast ram; 
+fillSlot3(uint32) broadcast ram; 
+fillSlot4(uint32) broadcast ram; 
+fillSlot5(uint32) broadcast ram; 
+fillSlot6(uint32) broadcast ram; 
+fillSlot7(uint32) broadcast ram; 
+emptySlot0(uint32, int8, int16) broadcast ram; 
+emptySlot1(uint32, int8, int16) broadcast ram; 
+emptySlot2(uint32, int8, int16) broadcast ram; 
+emptySlot3(uint32, int8, int16) broadcast ram; 
+emptySlot4(uint32, int8, int16) broadcast ram; 
+emptySlot5(uint32, int8, int16) broadcast ram; 
+emptySlot6(uint32, int8, int16) broadcast ram; 
+emptySlot7(uint32, int8, int16) broadcast ram; 
+requestBoard() airecv clsend; 
+rejectBoard(uint32, uint8); 
+requestExit() airecv clsend; 
+setElevatorTripId(uint32) required broadcast ram; 
+setAntiShuffle(uint8) required broadcast ram; 
+setMinLaff(uint8) required broadcast ram; 
+}; 
+
+dclass DistributedElevatorFloor : DistributedElevatorFSM { 
+setFloor(int8) broadcast ram; 
+setLocked(uint16) required broadcast ram; 
+setEntering(uint16) required broadcast ram; 
+kickToonsOut() broadcast; 
+setLatch(uint32) required broadcast ram; 
+}; 
+
+dclass DistributedElevatorExt : DistributedElevator { 
+setFloor(int8) broadcast ram; 
+}; 
+
+dclass DistributedLawOfficeElevatorExt : DistributedElevatorExt { 
+setEntranceId(uint8) required broadcast ram; 
+setLawOfficeInteriorZone(uint32); 
+setLawOfficeInteriorZoneForce(uint32); 
+}; 
+
+dclass DistributedElevatorInt : DistributedElevator { 
+requestBuildingExit() airecv clsend; 
+forcedExit(uint32); 
+}; 
+
+dclass DistributedFactoryElevatorExt : DistributedElevatorExt { 
+setEntranceId(uint8) required broadcast ram; 
+setFactoryInteriorZone(uint32); 
+setFactoryInteriorZoneForce(uint32); 
+}; 
+
+dclass DistributedMintElevatorExt : DistributedElevatorExt { 
+setMintId(uint16) required broadcast ram; 
+setMintInteriorZone(uint32); 
+setMintInteriorZoneForce(uint32); 
+}; 
+
+dclass DistributedCogdoElevatorExt : DistributedElevatorExt { 
+}; 
+
+dclass DistributedLawOfficeElevatorInt : DistributedElevatorFloor { 
+setLawOfficeInteriorZone(uint32); 
+}; 
+
+dclass DistributedCogdoElevatorInt : DistributedElevatorInt { 
+}; 
+
+dclass DistributedBossElevator : DistributedElevatorExt { 
+setBossOfficeZone(uint32); 
+setBossOfficeZoneForce(uint32); 
+}; 
+
+dclass DistributedVPElevator : DistributedBossElevator { 
+}; 
+
+dclass DistributedCFOElevator : DistributedBossElevator { 
+}; 
+
+dclass DistributedCJElevator : DistributedBossElevator { 
+}; 
+
+dclass DistributedBBElevator : DistributedBossElevator { 
+}; 
+
+dclass DistributedBoardingParty : DistributedObject { 
+postGroupInfo(uint32, uint32array, uint32array, uint32array) broadcast; 
+informDestinationInfo(uint8) clsend airecv; 
+postDestinationInfo(uint8) broadcast; 
+postInvite(uint32, uint32) broadcast; 
+postInviteCanceled() broadcast; 
+postKick(uint32) broadcast; 
+postKickReject(uint32, uint32, uint32) broadcast; 
+postSizeReject(uint32, uint32, uint32) broadcast; 
+postInviteAccepted(uint32) broadcast; 
+postInviteDelcined(uint32) broadcast; 
+postInviteNotQualify(uint32, int8, uint32) broadcast; 
+postAlreadyInGroup() broadcast; 
+postGroupDissolve(uint32, uint32, uint32 [], uint8) broadcast; 
+postMessageAcceptanceFailed(uint32, int8) broadcast; 
+postGroupAlreadyFull() broadcast; 
+postSomethingMissing() broadcast; 
+postRejectBoard(uint32, int8, uint32 [], uint32 []) broadcast; 
+postRejectGoto(uint32, int8, uint32 [], uint32 []) broadcast; 
+postMessageInvited(uint32, uint32) broadcast; 
+postMessageInvitationFailed(uint32) broadcast; 
+acceptGoToFirstTime(uint32) broadcast; 
+acceptGoToSecondTime(uint32) broadcast; 
+rejectGoToRequest(uint32, int8, uint32 [], uint32 []) broadcast; 
+requestInvite(uint32) airecv clsend; 
+requestCancelInvite(uint32) airecv clsend; 
+requestAcceptInvite(uint32, uint32) airecv clsend; 
+requestRejectInvite(uint32, uint32) airecv clsend; 
+requestKick(uint32) airecv clsend; 
+requestLeave(uint32) airecv clsend; 
+requestBoard(uint32) airecv clsend; 
+requestGoToFirstTime(uint32) airecv clsend; 
+requestGoToSecondTime(uint32) airecv clsend; 
+setElevatorIdList(uint32array) required broadcast ram; 
+setGroupSize(uint8) required broadcast ram; 
+}; 
+
+dclass DistributedTutorialInterior : DistributedObject { 
+setZoneIdAndBlock(uint32, uint16) required broadcast ram; 
+setTutorialNpcId(uint32) required broadcast ram; 
+}; 
+
+dclass DistributedBankMgr : DistributedObject { 
+transferMoney(int16) airecv clsend; 
+}; 
+
+dclass DistributedMailbox : DistributedObject { 
+setHouseId(uint32) required broadcast ram; 
+setHousePos(uint8) required broadcast ram; 
+setName(string) required broadcast ram; 
+setFullIndicator(uint8) broadcast ram; 
+avatarEnter() airecv clsend; 
+avatarExit() airecv clsend; 
+freeAvatar(); 
+setMovie(uint8, uint32) broadcast ram; 
+acceptItemMessage(uint16, blob, uint8, int32) airecv clsend; 
+acceptItemResponse(uint16, int8); 
+discardItemMessage(uint16, blob, uint8, int32) airecv clsend; 
+discardItemResponse(uint16, int8); 
+acceptInviteMessage(uint16, uint64) airecv clsend; 
+rejectInviteMessage(uint16, uint64) airecv clsend; 
+markInviteReadButNotReplied(uint64) airecv clsend; 
+}; 
+
+dclass DistributedFurnitureManager : DistributedObject { 
+setOwnerId(uint32) required broadcast ram; 
+setOwnerName(string) required broadcast ram; 
+setInteriorId(uint32) required broadcast ram; 
+setAtticItems(blob) required broadcast ram; 
+setAtticWallpaper(blob) required broadcast ram; 
+setAtticWindows(blob) required broadcast ram; 
+setDeletedItems(blob) required broadcast ram; 
+suggestDirector(uint32) airecv clsend; 
+setDirector(uint32) broadcast ram; 
+avatarEnter() airecv clsend; 
+avatarExit() airecv clsend; 
+moveItemToAtticMessage(uint32, uint16) airecv clsend; 
+moveItemToAtticResponse(int8, uint16); 
+moveItemFromAtticMessage(uint16, int16/10, int16/10, int16/100, int16/10, int16/10, int16/10, uint16) airecv clsend; 
+moveItemFromAtticResponse(int8, uint32, uint16); 
+deleteItemFromAtticMessage(blob, uint16, uint16) airecv clsend; 
+deleteItemFromAtticResponse(int8, uint16); 
+deleteItemFromRoomMessage(blob, uint32, uint16) airecv clsend; 
+deleteItemFromRoomResponse(int8, uint16); 
+moveWallpaperFromAtticMessage(uint16, uint8, uint16) airecv clsend; 
+moveWallpaperFromAtticResponse(int8, uint16); 
+deleteWallpaperFromAtticMessage(blob, uint16, uint16) airecv clsend; 
+deleteWallpaperFromAtticResponse(int8, uint16); 
+moveWindowToAtticMessage(uint8, uint16) airecv clsend; 
+moveWindowToAtticResponse(int8, uint16); 
+moveWindowFromAtticMessage(uint16, uint8, uint16) airecv clsend; 
+moveWindowFromAtticResponse(int8, uint16); 
+moveWindowMessage(uint8, uint8, uint16) airecv clsend; 
+moveWindowResponse(int8, uint16); 
+deleteWindowFromAtticMessage(blob, uint16, uint16) airecv clsend; 
+deleteWindowFromAtticResponse(int8, uint16); 
+recoverDeletedItemMessage(blob, uint16, uint16) airecv clsend; 
+recoverDeletedItemResponse(int8, uint16); 
+}; 
+
+dclass DistributedFurnitureItem : DistributedSmoothNode { 
+setItem(uint32, blob) required broadcast ram; 
+requestPosHpr(uint8, int16/10, int16/10, int16/100, int16/10, int16/10, int16/10, int16) airecv clsend; 
+setMode(uint8, uint32) required broadcast ram; 
+}; 
+
+dclass DistributedBank : DistributedFurnitureItem { 
+avatarEnter() airecv clsend; 
+freeAvatar(); 
+setMovie(uint8, uint32, int16) broadcast ram; 
+transferMoney(int16) airecv clsend; 
+}; 
+
+dclass DistributedCloset : DistributedFurnitureItem { 
+setOwnerId(uint32) required broadcast ram; 
+enterAvatar() airecv clsend; 
+freeAvatar(); 
+deleteItem(blob, blob, uint8) airecv clsend; 
+removeItem(blob, uint8) airecv clsend; 
+setDNA(blob, int8, uint8) airecv clsend; 
+setState(uint8, uint32, uint32, string, uint8array, uint8array) broadcast ram; 
+setMovie(uint8, uint32, int16) broadcast ram; 
+resetItemLists() broadcast ram; 
+setCustomerDNA(uint32, blob) broadcast ram; 
+}; 
+
+dclass DistributedPhone : DistributedFurnitureItem { 
+setInitialScale(uint8/170, uint8/170, uint8/170) required broadcast ram; 
+setNewScale(uint8/170, uint8/170, uint8/170) airecv clsend; 
+avatarEnter() airecv clsend; 
+avatarExit() airecv clsend; 
+freeAvatar(); 
+setLimits(uint16); 
+setMovie(uint8, uint32, int32) broadcast ram; 
+requestPurchaseMessage(uint16, blob, int32) airecv clsend; 
+requestPurchaseResponse(uint16, int8); 
+requestGiftPurchaseMessage(uint16, uint32, blob, int32) airecv clsend; 
+requestGiftPurchaseResponse(uint16, int8); 
+}; 
+
+dclass DistributedFireworkShow : DistributedObject { 
+startShow(uint8, uint8, int16) broadcast ram; 
+requestFirework(int16/10, int16/10, int16/100, uint8, uint8, uint8) airecv clsend; 
+shootFirework(int16/10, int16/10, int16/100, uint8, uint8, uint8) broadcast; 
+}; 
+
+dclass DistributedFireworksCannon : DistributedFireworkShow { 
+avatarEnter() airecv clsend; 
+avatarExit() airecv clsend; 
+freeAvatar(); 
+setMovie(uint8, uint32, int16) broadcast ram; 
+setPosition(int16/10, int16/10, int16/10) required broadcast ram; 
+}; 
+
+dclass LobbyManager : DistributedObject { 
+}; 
+
+dclass DistributedFactory : DistributedLevel { 
+setFactoryId(uint16) required broadcast ram; 
+setSuits(uint32array, uint32array) broadcast ram; 
+setForemanConfronted(uint32) broadcast ram; 
+setDefeated() broadcast ram; 
+}; 
+
+dclass DistributedLawOffice : DistributedObject { 
+setLawOfficeId(uint16) required broadcast ram; 
+startSignal() broadcast ram; 
+readyForNextFloor() airecv clsend; 
+}; 
+
+dclass DistributedLawOfficeFloor : DistributedLevel { 
+setLawOfficeId(uint16) required broadcast ram; 
+setSuits(uint32array, uint32array) broadcast ram; 
+readyForNextFloor() airecv clsend; 
+setForemanConfronted(uint32) broadcast ram; 
+setDefeated() broadcast ram; 
+}; 
+
+dclass DistributedMint : DistributedObject { 
+setZoneId(uint32) required broadcast ram; 
+setMintId(uint16) required broadcast ram; 
+setFloorNum(uint8) required broadcast ram; 
+setRoomDoIds(uint32array) broadcast ram; 
+}; 
+
+dclass DistributedMintRoom : DistributedLevel { 
+setMintId(uint16) required broadcast ram; 
+setRoomId(uint16) required broadcast ram; 
+setRoomNum(uint8) required broadcast ram; 
+setSuits(uint32array, uint32array) broadcast ram; 
+setBossConfronted(uint32) broadcast ram; 
+setDefeated() broadcast ram; 
+}; 
+
+dclass DistributedStage : DistributedObject { 
+setZoneId(uint32) required broadcast ram; 
+setStageId(uint16) required broadcast ram; 
+setLayoutIndex(uint16) required broadcast ram; 
+setFloorNum(uint8) required broadcast ram; 
+setRoomDoIds(uint32array) broadcast ram; 
+setStageZone(uint32) broadcast ram; 
+elevatorAlert(uint32) broadcast ram; 
+}; 
+
+dclass DistributedStageRoom : DistributedLevel { 
+setStageId(uint16) required broadcast ram; 
+setRoomId(uint16) required broadcast ram; 
+setRoomNum(uint8) required broadcast ram; 
+setSuits(uint32array, uint32array) broadcast ram; 
+setBossConfronted(uint32) broadcast ram; 
+setDefeated() broadcast ram; 
+}; 
+
+dclass DistributedInGameEditor : DistributedObject { 
+setEditorAvId(uint32) required broadcast ram; 
+setEditUsername(blob) required broadcast ram; 
+setLevelDoId(uint32) required broadcast ram; 
+requestCurrentLevelSpec() airecv clsend; 
+setSpecSenderDoId(uint32); 
+setEdit(uint32, blob, blob, blob) airecv clsend; 
+setAttribChange(uint32, blob, blob, blob); 
+setFinished() airecv clsend; 
+}; 
+
+dclass DistributedLift : DistributedEntity { 
+setStateTransition(uint8, uint8, uint32) required broadcast ram; 
+setAvatarEnter() airecv clsend; 
+setAvatarLeave() airecv clsend; 
+}; 
+
+dclass DistributedDoorEntity : DistributedEntity { 
+setLocksState(uint16) required broadcast ram; 
+setDoorState(uint8, int32) required broadcast ram; 
+requestOpen() airecv clsend; 
+}; 
+
+dclass DistributedSwitch : DistributedInteractiveEntity { 
+}; 
+
+dclass DistributedButton : DistributedSwitch { 
+}; 
+
+dclass DistributedTrigger : DistributedSwitch { 
+}; 
+
+dclass DistributedCrushableEntity : DistributedEntity { 
+setPosition(int16/10, int16/10, int16/10) broadcast ram; 
+setCrushed(uint32, uint8) broadcast ram; 
+}; 
+
+dclass DistributedCrusherEntity : DistributedEntity { 
+}; 
+
+dclass DistributedElevatorMarker : DistributedEntity { 
+}; 
+
+dclass DistributedStomper : DistributedCrusherEntity { 
+setMovie(uint8, int16, uint32array) broadcast ram; 
+}; 
+
+dclass DistributedStomperPair : DistributedEntity { 
+setChildren(uint32array) broadcast ram; 
+setSquash() airecv clsend; 
+}; 
+
+dclass DistributedBarrelBase : DistributedEntity { 
+requestGrab() airecv clsend; 
+setGrab(uint32) broadcast ram; 
+setReject() broadcast; 
+}; 
+
+dclass DistributedGagBarrel : DistributedBarrelBase { 
+}; 
+
+dclass DistributedBeanBarrel : DistributedBarrelBase { 
+}; 
+
+dclass DistributedHealBarrel : DistributedBarrelBase { 
+}; 
+
+dclass DistributedGrid : DistributedEntity { 
+}; 
+
+dclass ActiveCell : DistributedEntity { 
+setState(uint8, uint32) broadcast ram; 
+}; 
+
+dclass DirectionalCell : ActiveCell { 
+}; 
+
+dclass CrusherCell : ActiveCell { 
+}; 
+
+dclass DistributedCrate : DistributedCrushableEntity { 
+requestPush(uint8) airecv clsend; 
+setReject(); 
+setAccept() broadcast; 
+setMoveTo(uint32, int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) broadcast ram; 
+setDone() airecv clsend; 
+}; 
+
+dclass DistributedSinkingPlatform : DistributedEntity { 
+setOnOff(uint8, uint32) airecv clsend; 
+setSinkMode(uint32, uint8, uint32) broadcast ram; 
+}; 
+
+dclass DistributedGoon : DistributedCrushableEntity { 
+requestBattle(int16/10) airecv clsend; 
+requestStunned(int16/10) airecv clsend; 
+requestResync() airecv clsend; 
+setParameterize(int16/10, int16/10, int16/10, uint32) airecv clsend; 
+setMovie(uint8, uint32, int32/10, int16) broadcast ram; 
+}; 
+
+dclass DistributedGridGoon : DistributedGoon { 
+setPathPts(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) broadcast ram; 
+}; 
+
+dclass BattleBlocker : DistributedEntity { 
+setActive(uint8) required broadcast ram; 
+setSuits(uint32array) broadcast ram; 
+setBattle(uint32) broadcast ram; 
+setBattleFinished() broadcast ram; 
+}; 
+
+dclass DistributedLaserField : BattleBlocker { 
+setGrid(uint8, uint8) required broadcast ram; 
+setField(uint8 []) required broadcast ram; 
+setSuccess(uint8) broadcast ram; 
+hit(int8, int8, int8, int8) airecv clsend; 
+trapFire() airecv clsend; 
+setActiveLF(uint8) broadcast ram; 
+hideSuit(uint32array) broadcast ram; 
+showSuit(uint32array) broadcast ram; 
+setGridGame(string) broadcast ram; 
+}; 
+
+struct golfGreenGameBoardData { 
+uint8 posX; 
+uint8 posZ; 
+uint8 typeIndex; 
+}; 
+
+struct golfGreenGameScoreData { 
+uint32 avId; 
+uint8 score; 
+}; 
+
+dclass DistributedGolfGreenGame : BattleBlocker { 
+requestJoin() airecv clsend; 
+leaveGame() airecv clsend; 
+acceptJoin(uint16, int32, uint32 []) broadcast ram; 
+requestBoard(uint8) airecv clsend; 
+startBoard(golfGreenGameBoardData [], uint8 []); 
+signalDone(uint8) broadcast ram; 
+boardCleared(uint32); 
+scoreData(uint8, uint8, golfGreenGameScoreData []) broadcast ram; 
+informGag(uint8, uint8); 
+helpOthers(uint32) broadcast; 
+setTimerStart(uint16, int32) broadcast ram; 
+}; 
+
+dclass DistributedSecurityCamera : DistributedEntity { 
+trapFire() airecv clsend; 
+setTarget(uint8) broadcast ram; 
+}; 
+
+dclass DistributedMover : DistributedEntity { 
+startMove(int16) broadcast ram; 
+}; 
+
+typedef uint16/10000 PetTrait; 
+
+dclass DistributedPet : DistributedSmoothNode { 
+string DcObjectType db; 
+setOwnerId(uint32) required broadcast db; 
+setPetName(string) required broadcast db; 
+setTraitSeed(uint32) required broadcast db; 
+setSafeZone(uint32) required broadcast db; 
+setForgetfulness(PetTrait) required broadcast db; 
+setBoredomThreshold(PetTrait) required broadcast db; 
+setRestlessnessThreshold(PetTrait) required broadcast db; 
+setPlayfulnessThreshold(PetTrait) required broadcast db; 
+setLonelinessThreshold(PetTrait) required broadcast db; 
+setSadnessThreshold(PetTrait) required broadcast db; 
+setFatigueThreshold(PetTrait) required broadcast db; 
+setHungerThreshold(PetTrait) required broadcast db; 
+setConfusionThreshold(PetTrait) required broadcast db; 
+setExcitementThreshold(PetTrait) required broadcast db; 
+setAngerThreshold(PetTrait) required broadcast db; 
+setSurpriseThreshold(PetTrait) required broadcast db; 
+setAffectionThreshold(PetTrait) required broadcast db; 
+setHead(int8(-1, 0)) required broadcast db; 
+setEars(int8(-1-4)) required broadcast db; 
+setNose(int8(-1-3)) required broadcast db; 
+setTail(int8(-1-6)) required broadcast db; 
+setBodyTexture(int8(0-6)) required broadcast db; 
+setColor(int8(0-25)) required broadcast db; 
+setColorScale(int8(0-8)) required broadcast db; 
+setEyeColor(int8(0-5)) required broadcast db; 
+setGender(int8(0-1)) required broadcast db; 
+setLastSeenTimestamp(uint32) required broadcast db; 
+setBoredom(uint16/1000(0-1)) required broadcast db; 
+setRestlessness(uint16/1000(0-1)) required broadcast db; 
+setPlayfulness(uint16/1000(0-1)) required broadcast db; 
+setLoneliness(uint16/1000(0-1)) required broadcast db; 
+setSadness(uint16/1000(0-1)) required broadcast db; 
+setAffection(uint16/1000(0-1)) required broadcast db; 
+setHunger(uint16/1000(0-1)) required broadcast db; 
+setConfusion(uint16/1000(0-1)) required broadcast db; 
+setExcitement(uint16/1000(0-1)) required broadcast db; 
+setFatigue(uint16/1000(0-1)) required broadcast db; 
+setAnger(uint16/1000(0-1)) required broadcast db; 
+setSurprise(uint16/1000(0-1)) required broadcast db; 
+setMood : setBoredom, setRestlessness, setPlayfulness, setLoneliness, setSadness, setAffection, setHunger, setConfusion, setExcitement, setFatigue, setAnger, setSurprise; 
+teleportIn(int16) broadcast ownsend; 
+teleportOut(int16) broadcast ownsend; 
+setTrickAptitudes(uint16/10000(0-1) []) required broadcast db; 
+doTrick(uint8, int16) broadcast ram; 
+avatarInteract(uint32); 
+setMovie(uint8, uint32, int16) broadcast ram; 
+freeAvatar(); 
+}; 
+
+dclass DistributedPetProxy : DistributedPet { 
+setDominantMood(string) broadcast ram; 
+}; 
+
+dclass DistributedBlackCatMgr : DistributedObject { 
+setAvId(uint32) required broadcast ram; 
+doBlackCatTransformation() airecv clsend; 
+}; 
+
+dclass DistributedPolarPlaceEffectMgr : DistributedObject { 
+addPolarPlaceEffect() airecv clsend; 
+}; 
+
+dclass DistributedResistanceEmoteMgr : DistributedObject { 
+addResistanceEmote() airecv clsend; 
+}; 
+
+dclass DistributedScavengerHuntTarget : DistributedObject { 
+attemptScavengerHunt() airecv clsend; 
+}; 
+
+dclass DistributedTrickOrTreatTarget : DistributedScavengerHuntTarget { 
+}; 
+
+dclass DistributedWinterCarolingTarget : DistributedScavengerHuntTarget { 
+}; 
+
+dclass DistributedDataStoreManager : DistributedObject { 
+startStore(uint8); 
+stopStore(uint8); 
+queryStore(uint8, string); 
+receiveResults(uint8, string); 
+deleteBackupStores(); 
+}; 
+
+dclass DistributedVehicle : DistributedSmoothNode { 
+setOwner(uint32) required broadcast ram; 
+setState(char, uint32) broadcast ram; 
+setBodyType(int8) required broadcast ram; 
+setBodyColor(int8) required broadcast ram; 
+setAccessoryColor(int8) required broadcast ram; 
+setEngineBlockType(int8) required broadcast ram; 
+setSpoilerType(int8) required broadcast ram; 
+setFrontWheelWellType(int8) required broadcast ram; 
+setBackWheelWellType(int8) required broadcast ram; 
+setRimType(int8) required broadcast ram; 
+setDecalType(int8) required broadcast ram; 
+requestControl() airecv clsend; 
+requestParked() airecv clsend; 
+setInput(int8) broadcast ram; 
+}; 
+
+struct avatarAndKart { 
+uint32 avId; 
+uint32 kartId; 
+}; 
+
+dclass DistributedRace : DistributedObject { 
+setZoneId(uint32) required broadcast ram; 
+setTrackId(uint16) required broadcast ram; 
+setRaceType(uint16) required broadcast ram; 
+setCircuitLoop(uint16array) required broadcast ram; 
+setAvatars(uint32array) required broadcast ram; 
+setStartingPlaces(uint8array) required broadcast ram; 
+setLapCount(uint8) broadcast required ram; 
+waitingForJoin() broadcast ram; 
+setEnteredRacers(avatarAndKart []) broadcast ram; 
+prepForRace() broadcast ram; 
+startTutorial() broadcast ram; 
+startRace(int16) broadcast ram; 
+goToSpeedway(uint32array, uint8) broadcast ram; 
+genGag(uint8, uint16, uint8) broadcast ram; 
+dropAnvilOn(uint32, uint32, int16) broadcast ram; 
+shootPiejectile(uint32, uint32, uint8) broadcast ram; 
+racerDisconnected(uint32) broadcast ram; 
+setPlace(uint32, uint32/1000, uint8, uint32, uint8, uint32, uint32, uint32array, uint16array, uint32/1000) broadcast ram; 
+setCircuitPlace(uint32, uint8, uint32, uint32, uint32, uint32array) broadcast ram; 
+endCircuitRace() broadcast ram; 
+setRaceZone(uint32, uint32); 
+hasGag(uint8, uint8, uint8) broadcast airecv clsend; 
+racerLeft(uint32) clsend airecv broadcast ram; 
+heresMyT(uint32, int8, uint16/65535, int16) clsend airecv broadcast; 
+requestThrow(int32/1000, int32/1000, int32/1000) clsend airecv; 
+requestKart() clsend airecv; 
+}; 
+
+dclass DistributedGag : DistributedObject { 
+setInitTime(int16) required broadcast ram; 
+setActivateTime(uint16) required broadcast ram; 
+setPos(int32/1000, int32/1000, int32/1000) required broadcast ram; 
+setRace(uint32) required broadcast ram; 
+setOwnerId(uint32) required broadcast ram; 
+setType(uint8) required broadcast ram; 
+hitSomebody(uint32, int16) broadcast clsend airecv; 
+}; 
+
+dclass DistributedProjectile : DistributedObject { 
+setInitTime(int16) required broadcast ram; 
+setPos(int32/1000, int32/1000, int32/1000) required broadcast ram; 
+setRace(uint32) required broadcast ram; 
+setOwnerId(uint32) required broadcast ram; 
+setType(uint8) required broadcast ram; 
+hitSomebody(uint32, int16) broadcast clsend airecv; 
+}; 
+
+dclass DistributedKartPad : DistributedObject { 
+setArea(uint32) required broadcast ram; 
+}; 
+
+dclass DistributedRacePad : DistributedKartPad { 
+setState(string, int16) required broadcast ram; 
+setRaceZone(uint32); 
+setTrackInfo(uint16array) required broadcast ram; 
+}; 
+
+dclass DistributedViewPad : DistributedKartPad { 
+setLastEntered(int16) required broadcast ram; 
+}; 
+
+dclass DistributedStartingBlock : DistributedObject { 
+setPadDoId(uint32) required broadcast ram; 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+setPadLocationId(uint8) required broadcast ram; 
+requestEnter(uint8) airecv clsend; 
+rejectEnter(uint8); 
+requestExit() airecv clsend; 
+setOccupied(uint32) broadcast ram; 
+setMovie(uint8) broadcast ram; 
+movieFinished() airecv clsend; 
+}; 
+
+dclass DistributedViewingBlock : DistributedStartingBlock { 
+}; 
+
+dclass DistributedLeaderBoard : DistributedObject { 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+setDisplay(blob) broadcast ram; 
+}; 
+
+dclass DistributedDeliveryManager : DistributedObject { 
+hello(string) clsend; 
+rejectHello(string); 
+helloResponse(string); 
+getName(uint32); 
+receiveRejectGetName(string); 
+receiveAcceptGetName(string); 
+addName(uint32, string); 
+receiveRejectAddName(uint32); 
+receiveAcceptAddName(uint32); 
+addGift(uint32, blob, uint32, uint32, uint32); 
+receiveRejectAddGift(uint32); 
+receiveAcceptAddGift(uint32, uint32, uint32, uint32); 
+deliverGifts(uint32, uint32); 
+receiveAcceptDeliverGifts(uint32, string); 
+receiveRejectDeliverGifts(uint32, string); 
+receiveRequestPayForGift(blob, uint32, uint32) airecv clsend; 
+receiveRequestPurchaseGift(blob, uint32, uint32, uint32) airecv; 
+receiveAcceptPurchaseGift(uint32, uint32, int16); 
+receiveRejectPurchaseGift(uint32, uint32, int16, uint16); 
+heartbeat() airecv; 
+giveBeanBonus(uint32, uint16); 
+requestAck() clsend; 
+returnAck(); 
+}; 
+
+dclass DistributedLawbotBoss : DistributedBossCog { 
+setState(string) broadcast ram; 
+setBossDamage(uint16, uint8, int16) broadcast ram; 
+touchWitnessStand() airecv clsend; 
+hitBoss(uint8) airecv clsend; 
+healBoss(uint8) airecv clsend; 
+hitToon(uint32) airecv clsend; 
+hitDefensePan() airecv clsend; 
+hitProsecutionPan() airecv clsend; 
+hitChair(uint8, uint8) airecv clsend; 
+setLawyerIds(uint32array) broadcast ram; 
+setTaunt(int8, int8) broadcast; 
+toonGotHealed(uint32) broadcast; 
+enteredBonusState() broadcast; 
+setBattleDifficulty(uint8) broadcast ram; 
+}; 
+
+dclass DistributedLawbotBossSuit : DistributedSuitBase { 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+doAttack(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) broadcast; 
+doProsecute() broadcast; 
+hitByToon() airecv clsend; 
+doStun() broadcast; 
+}; 
+
+dclass DistributedLawbotBossGavel : DistributedObject { 
+setBossCogId(uint32) required broadcast ram; 
+setIndex(uint8) required broadcast ram; 
+setState(char) broadcast ram; 
+}; 
+
+dclass DistributedLawbotCannon : DistributedObject { 
+setBossCogId(uint32) required broadcast ram; 
+setIndex(uint8) required broadcast ram; 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+requestEnter() airecv clsend; 
+setMovie(int8, uint32, uint8) broadcast; 
+setCannonPosition(int16/10, int16/10) airecv clsend; 
+updateCannonPosition(uint32, int16/10, int16/10) broadcast; 
+setCannonLit(int16/10, int16/10) airecv clsend; 
+setCannonWillFire(uint32, int16/10, int16/10, int16/10, int16) broadcast; 
+setLanded() airecv clsend; 
+requestLeave() airecv clsend; 
+}; 
+
+dclass DistributedLawbotChair : DistributedObject { 
+setBossCogId(uint32) required broadcast ram; 
+setIndex(uint8) required broadcast ram; 
+setState(char) broadcast ram; 
+showCogJurorFlying() broadcast; 
+setToonJurorIndex(int8) broadcast ram; 
+}; 
+
+dclass DistributedLawnDecor : DistributedNode { 
+setPlot(int8) required broadcast ram; 
+setHeading(int16/10) required broadcast ram; 
+setPosition(int16/10, int16/10, int16/10) required broadcast ram; 
+setOwnerIndex(int8) required broadcast ram; 
+plotEntered() airecv clsend; 
+removeItem() airecv clsend; 
+setMovie(uint8, uint32) broadcast ram; 
+movieDone() airecv clsend; 
+interactionDenied(uint32) broadcast ram; 
+}; 
+
+dclass DistributedGardenPlot : DistributedLawnDecor { 
+plantFlower(uint8, uint8) airecv clsend; 
+plantGagTree(uint8, uint8) airecv clsend; 
+plantStatuary(uint8) airecv clsend; 
+plantToonStatuary(uint8, uint16) airecv clsend; 
+plantNothing(uint8) airecv clsend; 
+}; 
+
+dclass DistributedGardenBox : DistributedLawnDecor { 
+setTypeIndex(uint8) required broadcast ram; 
+}; 
+
+dclass DistributedStatuary : DistributedLawnDecor { 
+setTypeIndex(uint8) required broadcast ram; 
+setWaterLevel(int8) required broadcast ram; 
+setGrowthLevel(int8) required broadcast ram; 
+}; 
+
+dclass DistributedToonStatuary : DistributedStatuary { 
+setOptional(uint16) required broadcast ram; 
+}; 
+
+dclass DistributedAnimatedStatuary : DistributedStatuary { 
+}; 
+
+dclass DistributedChangingStatuary : DistributedStatuary { 
+setGrowthLevel(int8) required broadcast ram; 
+}; 
+
+dclass DistributedPlantBase : DistributedLawnDecor { 
+setTypeIndex(uint8) required broadcast ram; 
+setWaterLevel(int8) required broadcast ram; 
+setGrowthLevel(int8) required broadcast ram; 
+waterPlant() airecv clsend; 
+waterPlantDone() airecv clsend; 
+}; 
+
+dclass DistributedFlower : DistributedPlantBase { 
+setTypeIndex(uint8) required broadcast ram; 
+setVariety(uint8) required broadcast ram; 
+}; 
+
+dclass DistributedGagTree : DistributedPlantBase { 
+setWilted(int8) required broadcast ram; 
+requestHarvest() airecv clsend; 
+}; 
+
+dclass DistributedTravelGame : DistributedMinigame { 
+setTimerStartTime(int16) broadcast; 
+setAvatarChoice(uint16, uint8) airecv clsend; 
+setAvatarChose(uint32) broadcast; 
+setServerChoices(int16array, uint8array, uint8, uint8) broadcast; 
+setMinigames(uint8array, uint8array) broadcast; 
+setBonuses(uint8array, uint8array) broadcast; 
+setBoardIndex(uint8) required broadcast ram; 
+}; 
+
+dclass DistributedPairingGame : DistributedMinigame { 
+setDeckSeed(uint32) required broadcast ram; 
+setMaxOpenCards(uint8) broadcast ram; 
+openCardRequest(int16, int16) airecv clsend; 
+openCardResult(int16, uint32, int16, int8, int16array) broadcast; 
+reportDone() airecv clsend; 
+setEveryoneDone() broadcast; 
+setSignaling(uint32) clsend broadcast; 
+}; 
+
+struct golfData { 
+int16 frame; 
+int32/100000 x; 
+int32/100000 y; 
+int32/100000 z; 
+}; 
+
+struct Coord3 { 
+int32/100000 x; 
+int32/100000 y; 
+int32/100000 z; 
+}; 
+
+struct CommonObjectData { 
+uint8 id; 
+uint8 type; 
+int32/100000 x; 
+int32/100000 y; 
+int32/100000 z; 
+int32/100000 q1; 
+int32/100000 q2; 
+int32/100000 q3; 
+int32/100000 q4; 
+int32/100000 aVX; 
+int32/100000 aVY; 
+int32/100000 aVZ; 
+int32/100000 lVX; 
+int32/100000 lVY; 
+int32/100000 lVZ; 
+}; 
+
+dclass DistributedPhysicsWorld : DistributedObject { 
+clientCommonObject(uint8, uint8, Coord3, Coord3, int32/100, int32/100, int32/1000) broadcast ram; 
+setCommonObjects(CommonObjectData []) broadcast; 
+upSetCommonObjects(CommonObjectData []) airecv clsend; 
+}; 
+
+dclass DistributedGolfHole : DistributedPhysicsWorld { 
+setHoleId(int8) broadcast ram required; 
+setTimingCycleLength(uint32/1000) broadcast ram required; 
+setAvatarReadyHole() airecv clsend; 
+setGolfCourseDoId(uint32) broadcast ram required; 
+turnDone() airecv clsend; 
+ballInHole() airecv clsend; 
+setAvatarTempTee(uint32, uint8) clsend broadcast; 
+setTempAimHeading(uint32, int32/1000) clsend broadcast; 
+setAvatarFinalTee(uint32, uint8) broadcast; 
+setGolferIds(uint32array) broadcast ram required; 
+golfersTurn(uint32) broadcast; 
+golferChooseTee(uint32) broadcast; 
+setAvatarTee(uint8) airecv clsend; 
+postSwing(uint32/1000, int32, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000) airecv clsend; 
+postSwingState(uint32/1000, int32, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, uint16/100, CommonObjectData []) airecv clsend; 
+swing(uint32, int32, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000) broadcast; 
+ballMovie2AI(uint32/1000, uint32, golfData [], golfData [], uint16, uint16, uint16, CommonObjectData []) airecv clsend; 
+ballMovie2Client(uint32/1000, uint32, golfData [], golfData [], uint16, uint16, uint16, CommonObjectData []) broadcast; 
+assignRecordSwing(uint32, uint32/1000, int32, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, CommonObjectData []); 
+setBox(int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000) airecv clsend; 
+sendBox(int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000, int32/1000) broadcast; 
+}; 
+
+dclass DistributedGolfCourse : DistributedObject { 
+setGolferIds(uint32array) broadcast ram required; 
+setCourseId(int8) broadcast ram required; 
+setAvatarJoined() airecv clsend; 
+setAvatarReadyCourse() airecv clsend; 
+setAvatarReadyHole() airecv clsend; 
+setAvatarExited() airecv clsend; 
+setCurHoleIndex(int8) broadcast ram required; 
+setCurHoleDoId(uint32) broadcast ram required; 
+setDoneReward() airecv clsend; 
+setReward(uint8array [4], int8array, uint8array [4], uint8array [4], uint8array [4], uint32, uint32/100, uint32/100, uint32/100, uint32/100) broadcast; 
+setCourseReady(int8, int16array, int8) broadcast; 
+setHoleStart(int16) broadcast; 
+setCourseExit() broadcast; 
+setCourseAbort(uint32) broadcast; 
+setPlayHole() broadcast; 
+avExited(uint32) broadcast; 
+setScores(int16 []) broadcast; 
+changeDrivePermission(uint32, int8) broadcast; 
+}; 
+
+dclass DistributedVineGame : DistributedMinigame { 
+reachedEndVine(int8) clsend airecv; 
+setNewVine(uint32, int8, uint32/10000, int8) airecv clsend broadcast; 
+setNewVineT(uint32, uint32/10000, int8) clsend broadcast; 
+setJumpingFromVine(uint32, int8, int8, int32/100, int16/100, int16/100, int16) clsend broadcast; 
+setFallingPos(uint32, int16/100, int16/100) clsend broadcast; 
+claimTreasure(uint32) airecv clsend; 
+setTreasureGrabbed(uint32, uint32) broadcast; 
+setScore(uint32, uint32) broadcast; 
+allAtEndVine() broadcast; 
+setFallingFromVine(uint32, int8, int8, int32/100, int16/100, int16/100, int16, int8) clsend broadcast; 
+setFallingFromMidair(uint32, int8, int32/100, int16/100, int16/100, int16, int8) clsend broadcast; 
+setVineSections(uint8array) required broadcast ram; 
+}; 
+
+dclass TTAvatarFriendsManager : AvatarFriendsManager { 
+}; 
+
+dclass TTPlayerFriendsManager : PlayerFriendsManager { 
+}; 
+
+dclass TTSpeedchatRelay : SpeedchatRelay { 
+}; 
+
+dclass DistributedGolfKart : DistributedObject { 
+setState(string, int16) broadcast ram; 
+fillSlot0(uint32) broadcast ram; 
+fillSlot1(uint32) broadcast ram; 
+fillSlot2(uint32) broadcast ram; 
+fillSlot3(uint32) broadcast ram; 
+emptySlot0(uint32, int16) broadcast ram; 
+emptySlot1(uint32, int16) broadcast ram; 
+emptySlot2(uint32, int16) broadcast ram; 
+emptySlot3(uint32, int16) broadcast ram; 
+requestBoard() airecv clsend; 
+rejectBoard(uint32); 
+requestExit() airecv clsend; 
+setMinigameZone(uint32, uint16); 
+setGolfZone(uint32, uint16); 
+setGolfCourse(int8) required broadcast ram; 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+setColor(int16, int16, int16) required broadcast ram; 
+}; 
+
+dclass DistributedTimer : DistributedObject { 
+setStartTime(int32) broadcast ram required; 
+}; 
+
+dclass DistributedPicnicBasket : DistributedObject { 
+setState(string, uint16, int16) broadcast ram; 
+fillSlot0(uint32) broadcast ram; 
+fillSlot1(uint32) broadcast ram; 
+fillSlot2(uint32) broadcast ram; 
+fillSlot3(uint32) broadcast ram; 
+emptySlot0(uint32, int16) broadcast ram; 
+emptySlot1(uint32, int16) broadcast ram; 
+emptySlot2(uint32, int16) broadcast ram; 
+emptySlot3(uint32, int16) broadcast ram; 
+requestBoard(int16) airecv clsend; 
+rejectBoard(uint32); 
+requestExit() airecv clsend; 
+doneExit() airecv clsend; 
+setMinigameZone(uint32, uint16); 
+setPicnicDone(); 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+setTableNumber(int16) required broadcast ram; 
+}; 
+
+dclass DistributedBossbotBoss : DistributedBossCog { 
+setState(string) broadcast ram; 
+setBattleDifficulty(uint8) broadcast ram; 
+requestGetFood(int8, int8, uint32) airecv clsend; 
+toonGotFood(uint32, int8, int8, uint32) broadcast; 
+requestServeFood(int8, int8) airecv clsend; 
+toonServeFood(uint32, int8, int8) broadcast; 
+hitBoss(uint8) airecv clsend; 
+hitToon(uint32) airecv clsend; 
+ballHitBoss(uint8) airecv clsend; 
+setBossDamage(uint16, uint8, int16) broadcast ram; 
+setSpeedDamage(uint16, uint8, int16) broadcast ram; 
+reachedTable(uint8) airecv clsend; 
+hitTable(uint8) airecv clsend; 
+awayFromTable(uint8) airecv clsend; 
+toonGotHealed(uint32) broadcast; 
+requestGetToonup(int8, int8, uint32) airecv clsend; 
+toonGotToonup(uint32, int8, int8, uint32) broadcast; 
+}; 
+
+dclass DistributedCogKart : DistributedElevatorExt { 
+setCountryClubId(uint16) required broadcast ram; 
+setPosHpr(int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) required broadcast ram; 
+setCountryClubInteriorZone(uint32); 
+setCountryClubInteriorZoneForce(uint32); 
+}; 
+
+dclass DistributedCountryClub : DistributedObject { 
+setZoneId(uint32) required broadcast ram; 
+setBlockedRooms(uint8array) required broadcast ram; 
+setCountryClubId(uint16) required broadcast ram; 
+setLayoutIndex(uint16) required broadcast ram; 
+setFloorNum(uint8) required broadcast ram; 
+setRoomDoIds(uint32array) broadcast ram; 
+setCountryClubZone(uint32) broadcast ram; 
+elevatorAlert(uint32) broadcast ram; 
+}; 
+
+dclass DistributedCountryClubRoom : DistributedLevel { 
+setCountryClubId(uint16) required broadcast ram; 
+setRoomId(uint16) required broadcast ram; 
+setRoomNum(uint8) required broadcast ram; 
+setSuits(uint32array, uint32array) broadcast ram; 
+setBossConfronted(uint32) broadcast ram; 
+setDefeated() broadcast ram; 
+forceOuch(uint8) broadcast; 
+}; 
+
+dclass DistributedMoleField : DistributedEntity { 
+setGameStart(int16, uint8, uint16) broadcast; 
+setClientTriggered() airecv clsend; 
+whackedMole(int8, int16) airecv clsend; 
+whackedBomb(int8, int16, int32) airecv clsend; 
+updateMole(int8, int8) broadcast; 
+reportToonHitByBomb(uint32, int8, int32) broadcast; 
+setScore(int16) required broadcast ram; 
+damageMe() airecv clsend; 
+setPityWin() broadcast; 
+}; 
+
+dclass DistributedCountryClubBattle : DistributedLevelBattle { 
+}; 
+
+dclass DistributedClubElevator : DistributedElevatorFSM { 
+setFloor(int8) broadcast ram; 
+setLocked(uint16) required broadcast ram; 
+setEntering(uint16) required broadcast ram; 
+kickToonsOut() broadcast; 
+setLatch(uint32) required broadcast ram; 
+}; 
+
+dclass DistributedMaze : DistributedEntity { 
+setRoomDoId(uint32) required broadcast ram; 
+setGameStart(int16) broadcast; 
+setClientTriggered() airecv clsend; 
+setFinishedMaze() airecv clsend; 
+setGameOver() broadcast; 
+toonFinished(uint32, uint8, uint8) broadcast; 
+damageMe() airecv clsend; 
+}; 
+
+dclass DistributedBattleWaiters : DistributedBattleFinal { 
+}; 
+
+dclass DistributedFoodBelt : DistributedObject { 
+setBossCogId(uint32) required broadcast ram; 
+setIndex(uint8) required broadcast ram; 
+setState(char) broadcast ram; 
+}; 
+
+dclass DistributedBanquetTable : DistributedObject { 
+setIndex(uint8) required broadcast ram; 
+setNumDiners(uint8) required broadcast ram; 
+setBossCogId(uint32) required broadcast ram; 
+setDinerInfo(uint8array, uint8array, uint8array) required broadcast ram; 
+setState(char, uint32, int8) broadcast ram; 
+setDinerStatus(uint8, uint8) broadcast; 
+requestControl() airecv clsend; 
+requestFree(int8) airecv clsend; 
+setPitcherPos(uint8, uint16%360/100, int16) broadcast clsend; 
+clearSmoothing(int8) broadcast clsend; 
+firingWater(int32/100, int32/100, int32/100, int32/100, int32/100, int32/100) broadcast clsend; 
+waterHitBoss(uint8) broadcast clsend; 
+}; 
+
+dclass DistributedBattleDiners : DistributedBattleFinal { 
+}; 
+
+dclass DistributedGolfSpot : DistributedObject { 
+setIndex(uint8) required broadcast ram; 
+setBossCogId(uint32) required broadcast ram; 
+setState(char, uint32, int8) broadcast ram; 
+setGoingToReward() broadcast ram; 
+requestControl() airecv clsend; 
+requestFree(int8) airecv clsend; 
+setGolfSpotPos(uint8, uint16%360/100, int16) broadcast clsend; 
+clearSmoothing(int8) broadcast clsend; 
+setSwingInfo(uint8, int16/10, uint8) broadcast clsend; 
+}; 
+
+struct TireInput { 
+int32/100 force; 
+int32/100 heading; 
+}; 
+
+dclass DistributedIceGame : DistributedMinigame { 
+setForceArrowInfo(uint32, int32/100, int32/100) broadcast clsend; 
+setAvatarChoice(int32/100, int32/100) airecv clsend; 
+endingPositions(Coord3 []) airecv clsend; 
+reportScoringMovieDone() airecv clsend; 
+claimTreasure(uint8) airecv clsend; 
+claimPenalty(uint8) airecv clsend; 
+setTireInputs(TireInput []) broadcast; 
+setTimerStartTime(int16) broadcast; 
+setFinalPositions(Coord3 []) broadcast; 
+setMatchAndRound(int8, int8) broadcast; 
+setScores(int8, int8, int16array) broadcast; 
+setNewState(string) broadcast; 
+setTreasureGrabbed(uint32, uint32) broadcast; 
+setPenaltyGrabbed(uint32, uint32) broadcast; 
+}; 
+
+dclass DistributedCogThiefGame : DistributedMinigame { 
+throwingPie(uint32, int32, int32/100, int32/100, int32/100, int32/100) clsend broadcast; 
+hitBySuit(uint32, int32, int8, int32/100, int32/100, int32/100) clsend broadcast airecv; 
+pieHitSuit(uint32, int32, int8, int32/100, int32/100, int32/100) clsend broadcast airecv; 
+cogHitBarrel(int32, int8, int8, int32/100, int32/100, int32/100) clsend airecv; 
+cogAtReturnPos(int32, int8, int8) clsend airecv; 
+updateSuitGoal(int32, int32, int8, int8, int64, int32/100, int32/100, int32/100) broadcast; 
+makeCogCarryBarrel(int32, int32, int8, int8, int32/100, int32/100, int32/100) broadcast; 
+makeCogDropBarrel(int32, int32, int8, int8, int32/100, int32/100, int32/100) broadcast; 
+markBarrelStolen(int32, int32, int8) broadcast; 
+}; 
+
+struct twoDTreasureInfo { 
+uint8 treasureIndex; 
+uint8 treasureValue; 
+}; 
+
+struct twoDSectionInfo { 
+uint8 sectionIndex; 
+uint8 enemyIndicesSelected[]; 
+twoDTreasureInfo treasureIndicesSelected[]; 
+uint8 spawnPointIndicesSelected[]; 
+uint8 stomperIndicesSelected[]; 
+}; 
+
+dclass DistributedTwoDGame : DistributedMinigame { 
+showShootGun(uint32, int16) clsend broadcast; 
+toonHitByEnemy(uint32, int16) clsend broadcast airecv; 
+toonFellDown(uint32, int16) clsend broadcast airecv; 
+toonSquished(uint32, int16) clsend broadcast airecv; 
+toonVictory(uint32, int16) clsend broadcast airecv; 
+claimTreasure(uint8, uint8) airecv clsend; 
+claimEnemyShot(uint8, uint8) airecv clsend; 
+reportDone() airecv clsend; 
+setSectionsSelected(twoDSectionInfo []) required broadcast ram; 
+setTreasureGrabbed(uint32, uint8, uint8) broadcast; 
+setEnemyShot(uint32, uint8, uint8, uint32) broadcast; 
+addVictoryScore(uint32, uint8) broadcast; 
+setEveryoneDone() broadcast; 
+}; 
+
+dclass DistributedPicnicTable : DistributedNode { 
+fillSlot(uint32, uint8, int16/10, int16/10, int16/10, int16/10, int16/10, int16/10, int16, uint32) broadcast; 
+emptySlot(uint32, uint8, int16) broadcast; 
+requestTableState() airecv clsend; 
+setTableState(uint32 [], uint8) broadcast ram; 
+setGameZone(uint32, uint8) broadcast; 
+setIsPlaying(uint8) broadcast ram; 
+requestJoin(uint8, int16/10, int16/10, int16/10, int16/10, int16/10, int16/10) airecv clsend; 
+rejectJoin() broadcast; 
+requestObserve() airecv clsend; 
+leaveObserve() airecv clsend; 
+requestGameZone() airecv clsend; 
+requestPickedGame(uint8) clsend airecv; 
+requestExit() airecv clsend; 
+requestZone() clsend airecv; 
+announceWinner(string, uint32) broadcast; 
+allowObserve() broadcast; 
+allowPick() broadcast; 
+setZone(uint32) broadcast; 
+}; 
+
+dclass DistributedChineseCheckers : DistributedNode { 
+requestExit() clsend airecv; 
+requestBegin() clsend airecv; 
+requestMove(uint8 []) clsend airecv; 
+requestTimer() clsend airecv; 
+requestSeatPositions() clsend airecv; 
+startBeginTimer(uint16, int16) broadcast ram; 
+gameStart(uint8) broadcast; 
+setTableDoId(uint32) required broadcast ram; 
+setGameState(uint8 [], uint8 []) required broadcast ram; 
+setTimer(int16) broadcast ram required; 
+setTurnTimer(int16) broadcast ram required; 
+sendTurn(uint8) broadcast ram; 
+requestWin() clsend airecv; 
+announceWin(uint32) broadcast; 
+announceSeatPositions(uint8 []) broadcast; 
+}; 
+
+dclass DistributedCheckers : DistributedNode { 
+requestExit() clsend airecv; 
+requestBegin() clsend airecv; 
+requestTimer() clsend airecv; 
+requestMove(uint8 []) clsend airecv; 
+startBeginTimer(uint16, int16) broadcast ram; 
+gameStart(uint8) broadcast; 
+setTableDoId(uint32) required broadcast ram; 
+setGameState(uint8 [], uint8 []) required broadcast ram; 
+setTimer(int16) broadcast ram required; 
+setTurnTimer(int16) broadcast ram required; 
+sendTurn(uint8) broadcast ram; 
+requestWin() clsend airecv; 
+announceWin(uint32) broadcast; 
+illegalMove() broadcast; 
+}; 
+
+dclass DistributedFindFour : DistributedNode { 
+requestExit() clsend airecv; 
+requestBegin() clsend airecv; 
+requestMove(uint8) clsend airecv; 
+requestTimer() clsend airecv; 
+requestWin(uint8 []) clsend airecv; 
+startBeginTimer(uint16, int16) broadcast ram; 
+setTableDoId(uint32) required broadcast ram; 
+setGameState(uint8 [][], uint8, uint8, uint8) required broadcast ram; 
+setTimer(int16) broadcast ram required; 
+setTurnTimer(int16) broadcast ram required; 
+gameStart(uint8) broadcast; 
+sendTurn(uint8) broadcast ram; 
+announceWin(uint32) broadcast; 
+announceWinLocation(uint8, uint8, y, uint8, uint8) broadcast; 
+announceWinnerPosition(uint8, uint8, uint8, uint8) broadcast; 
+illegalMove() broadcast; 
+tie() broadcast; 
+}; 
+
+dclass DistributedMailManager : DistributedObject { 
+sendSimpleMail(uint32, uint32, string); 
+setNumMailItems(uint32, uint32) airecv; 
+}; 
+
+dclass DistributedPartyManager : DistributedObject { 
+addParty(uint32, uint32, string, string, int8, int8, activity [], decoration [], uint32array, uint16); 
+addPartyRequest(uint32, string, string, int8, int8, activity [], decoration [], uint32array) airecv clsend; 
+addPartyResponse(uint32, int8); 
+addPartyResponseUdToAi(uint32, int8, uint16) airecv; 
+markInviteAsReadButNotReplied(uint32, uint64); 
+respondToInvite(uint32, uint32, uint16, uint64, uint8); 
+respondToInviteResponse(uint32, uint16, uint64, int8, uint8) airecv; 
+changePrivateRequest(uint64, int8) airecv clsend; 
+changePrivateRequestAiToUd(uint32, uint64, int8); 
+changePrivateResponseUdToAi(uint32, uint64, int8, int8) airecv; 
+changePrivateResponse(uint64, int8, int8); 
+changePartyStatusRequest(uint64, int8) airecv clsend; 
+changePartyStatusRequestAiToUd(uint32, uint64, int8); 
+changePartyStatusResponseUdToAi(uint32, uint64, int8, int8) airecv; 
+changePartyStatusResponse(uint64, int8, int8, uint16); 
+partyInfoOfHostRequestAiToUd(uint32, uint32); 
+partyInfoOfHostFailedResponseUdToAi(uint32) airecv; 
+partyInfoOfHostResponseUdToAi(party, uint32array) airecv; 
+getPartyZone(uint32, uint32, uint8) clsend airecv; 
+receivePartyZone(uint32, uint64, uint32); 
+freeZoneIdFromPlannedParty(uint32, uint32) clsend airecv; 
+sendAvToPlayground(uint32, uint8); 
+exitParty(uint32) clsend airecv; 
+removeGuest(uint32, uint32) airecv clsend; 
+partyManagerAIStartingUp(uint32, uint32); 
+partyManagerAIGoingDown(uint32, uint32); 
+partyHasStartedAiToUd(uint32, uint64, uint32, uint32, string); 
+toonHasEnteredPartyAiToUd(uint32); 
+toonHasExitedPartyAiToUd(uint32); 
+partyHasFinishedUdToAllAi(uint32) airecv; 
+updateToPublicPartyInfoUdToAllAi(uint32, uint64, uint32, uint32, uint8, uint8, string, uint8 [], uint64) airecv; 
+updateToPublicPartyCountUdToAllAi(uint32, uint8) airecv; 
+requestShardIdZoneIdForHostId(uint32) clsend airecv; 
+sendShardIdZoneIdToAvatar(uint32, uint32); 
+partyManagerUdStartingUp() airecv; 
+updateAllPartyInfoToUd(uint32, uint64, uint32, uint32, uint8, uint8, string, uint8 [], uint64); 
+forceCheckStart(); 
+};

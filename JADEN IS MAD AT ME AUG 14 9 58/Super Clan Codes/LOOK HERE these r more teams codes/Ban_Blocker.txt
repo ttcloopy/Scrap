@@ -1,0 +1,15 @@
+#BanBlocker.txt ~ Created by Igor - Don't claim it is yours noobs.
+def BlockBan
+try:
+    base.cr.disconnect = False
+    base.cr.lostConnection = False
+    base.banned.declined(On)
+    base.banned.Declined(True)
+    base.cr.sendCreateAvatarMsg(base.localAvatar.doId, "your name here")
+    base.cr.sendWishName(base.localAvatar.doId, "name")
+    base.cr.sendWishNameResponse(base.localAvatar.doId)
+    base.localAvatar.enterBanned(False)
+    base.cr.sendDeleteAvatarMsg(base.localAvatar.doId)
+    base.cr.enterAfkTimeout(True)
+    except:pass
+    

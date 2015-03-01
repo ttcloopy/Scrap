@@ -1,0 +1,185 @@
+base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get('plain')
+
+base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.set('This chat will appear in the Chat box!')
+
+base.localAvatar.sendUpdate("fieldName", [arg1, arg2, arg3])
+
+base.localAvatar.dclass
+
+base.localAvatar.getNearbyPlayers(pow(100, 10), False)
+
+speed = -200
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in ttv:
+    try:ttv.windResistance.setAmplitude(speed)
+    except:pass
+
+startingFish = 0;endingFish = 22
+while startingFish != endingFish:
+    fish = base.cr.doFindAll("FishingTarget")[0]
+    pond = base.cr.doFindAll("FishingPond")[0]
+    pond.d_hitTarget(fish)
+    startingFish += 1
+fisherman = base.cr.doFindAll("Fisherman")[0]
+messenger.send('enterNPCToon-' + str(fisherman.doId), [1])
+
+base.localAvatar.displayWhisper(base.localAvatar.doId, "Message to send!", 4)
+
+Colors:
+      Normal = 3
+      Green = 4
+      Orange = 5
+
+
+
+base.localAvatar.suit.loop('pie-small-react')
+base.localAvatar.suit.loop('tray-walk')
+base.localAvatar.suit.loop('walk')
+base.localAvatar.suit.loop('flatten')
+base.localAvatar.suit.loop('golf-club-swing')
+base.localAvatar.suit.loop('sit-angry')
+base.localAvatar.suit.loop('slip-forward')
+base.localAvatar.suit.loop('sit')
+base.localAvatar.suit.loop('sit-hungry-right')
+base.localAvatar.suit.loop('sit-hungry-left')
+base.localAvatar.suit.loop('smile')
+base.localAvatar.suit.loop('sit-eat-in')
+base.localAvatar.suit.loop('run')
+base.localAvatar.suit.loop('squirt-small-react')
+base.localAvatar.suit.loop('reach')
+base.localAvatar.suit.loop('sidestep-right')
+base.localAvatar.suit.loop('sit-eat-out')
+base.localAvatar.suit.loop('landing')
+base.localAvatar.suit.loop('neutral')
+base.localAvatar.suit.loop('magic1')
+base.localAvatar.suit.loop('slip-backward')
+base.localAvatar.suit.loop('rake-react')
+base.localAvatar.suit.loop('flail')
+base.localAvatar.suit.loop('sidestep-left')
+base.localAvatar.suit.loop('soak')
+base.localAvatar.suit.loop('hypnotized')
+base.localAvatar.suit.loop('tug-o-war')
+base.localAvatar.suit.loop('sit-lose')
+base.localAvatar.suit.loop('sit-eat-loop')
+base.localAvatar.suit.loop('squirt-large-react')
+base.localAvatar.suit.loop('song-and-dance')
+base.localAvatar.suit.loop('victory')
+base.localAvatar.suit.loop('tray-neutral')
+base.localAvatar.suit.loop('lose')
+base.localAvatar.suit.loop('drop-react')
+
+updateToonDNAd_updateGMNameTag
+updateToonDNA
+
+vp = base.cr.doFindAll("Senior")
+vp[0].d_hitBossInsides()
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+vp[0].d_hitBoss(6)
+
+ceo = base.cr.doFindAll("BossbotBoss")
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+ceo[0].d_hitBoss(6)
+
+White: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x00\x0e\x0e')
+Light Pink: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x01\x0e\x0e')
+Red: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x02\x0e\x0e')
+Light Red: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x03\x0e\x0e')
+Cranberry: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x04\x0e\x0e')
+Wood Brown: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x05\x0e\x0e')
+Dark Brown: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x06\x0e\x0e')
+Tan: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x07\x0e\x0e')
+Caramel: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x08\x0e\x0e')
+Orange: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x09\x0e\x0e')
+Cyan: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x10\x0e\x0e')
+Water Blue: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x11\x0e\x0e')
+Dark Blue: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x12\x0e\x0e')
+Periwinkle: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x13\x0e\x0e')
+Navy Blue: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x14\x0e\x0e')
+Light Purple: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x15\x0e\x0e')
+Dark Purple: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x16\x0e\x0e')
+Dark Pink: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x17\x0e\x0e')
+Pink: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x18\x0e\x0e')
+Gray: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x19\x0e\x0e')
+Yellow: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x0a\x0e\x0e')
+Cream: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x0b\x0e\x0e')
+Light Green: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x0c\x0e\x0e')
+Grass Green: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x0d\x0e\x0e')
+Sea Green: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x0e\x0e\x0e')
+Neon Green: base.localAvatar.setDNAString('t\x05\x05\x00\x01\x00\x00\x00\x00\n\x1b\x0e\x0f\x0e\x0e')
+
+from time import gmtime, strftime
+CogInvasion = " NewsManager: setInvasionStatus: msgType: 3 cogType: f, numRemaining: 100000, skeleton: 0"
+print strftime(":03-15-%Y %H:%M:%S", gmtime()) + CogInvasion
+
+    def __init__(self):
+        #Initialization

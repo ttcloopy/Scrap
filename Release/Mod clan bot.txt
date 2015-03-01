@@ -1,0 +1,46 @@
+MOD CLAN BOT:
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(0,0)
+def part2():
+    base.talkAssistant.sendOpenTalk('MOD CLAN IS COMING FOR U!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('YES YOU ALL WILL FALL WITH TOONTOWN')
+    base.localAvatar.b_setEmoteState(20,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('WE R MOD CLAN!!')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('FRECKLES IS BACK UR NOT SAFE!')
+    base.localAvatar.b_setEmoteState(21,1)
+def part6():
+     base.talkAssistant.sendOpenTalk('TELL UR FRIENDS!!')
+     base.localAvatar.b_setAnimState('TeleportOut')
+def part7():
+     base.talkAssistant.sendOpenTalk('THAT MOD CLAN IS COMING!!!')
+     base.localAvatar.b_setAnimState('TeleportIn')
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(3))
+  seq.append(Func(part2))
+  seq.append(Wait(3))
+  seq.append(Func(part3))
+  seq.append(Wait(3))
+  seq.append(Func(part4))
+  seq.append(Wait(3))
+  seq.append(Func(part5))
+  seq.append(Wait(3))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(addzone))
+  seq.start()
+onTime() 

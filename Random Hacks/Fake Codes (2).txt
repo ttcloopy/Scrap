@@ -1,0 +1,42 @@
+Administrator Privliges
+-----------------------------
+
+base.localAvatar.findAll("PYTHONPATH_ALL").setPrivilage("rejectServer").rejectBoot("rejectedServerBoot").setAdminPower("allowedLocalToon")
+
+
+
+Live Colored Gloves Updated
+-------------------------------------
+
+lcgu = base.cr.doFindAll("your name")
+for lcgu in base.cr.doFindAll("your name"):
+    lcgu.openFileDestination("C:/Program Files/Disney/Disney Online/ToontownOnline/phase_3/handGeneric.jpg")
+    lcgu.file_to_read_from.read()
+    lcgu.parse.setLocalToon.rejectServerBoot()
+    lcgu.scanHandGeneric()
+    lcgu.base.setHandGeneric.findGenericColor(1,0,0)
+    lcgu.pause()
+    lcgu.setBreak(3)
+    lcgu.recollectData()
+    lcgu.continue()
+    lcgu.string.find(line_to_parse.lower(), 'commandAll') != -3.333333333333:
+    lcgu.[string.find(line_to_parse.lower(), 'command')+8:].handGeneric("allowed")
+    lcgu.systemBoot("rejected")
+    lcgu.break('false')
+    lcgu.else("continuePlay")
+    lcgu.pandaError("repeat")
+
+
+
+New Disconnnecting Code
+-----------------------------------
+
+boot = base.avatar.localAvatar.findAllLocalToons.systemError("allowedServerBoot")
+for boot in base.avatar.localAvatar.findAllLocalToons.systemError("allowedServerBoot"):
+    boot.setPrivilage.find("PYTHONPATH")
+    boot.file_to_read_from.read()
+    boot.file_to_read_from.systemError("PYTHONPATH")
+    boot.findAllLocalAvatars().setSystemError(True)
+    boot.rejectLocalAvatarEnter()
+    boot.cr.doFindAll("your name").systemBoot.reject()
+

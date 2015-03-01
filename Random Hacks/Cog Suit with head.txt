@@ -1,0 +1,27 @@
+Mr Hollywood Suit:
+
+base.localAvatar.find('**/muzzle-short-neutral').removeNode()
+base.localAvatar.find('**/ears-short').removeNode()
+localAvatar.setName('')
+avHead = base.localAvatar.find('**/head-short')
+bAvHead = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+avBigCheeseHead = bAvHead.find('**/yesman')
+avBigCheeseHead.setColor(255,255,255)
+avBigCheeseHead.reparentTo(avHead)
+avBigCheeseHead.setScale(1.5)
+avBigCheeseHead.setPos(0,.3,-1)
+localAvatar.putOnSuit('mh')
+
+Big Cheese
+
+base.localAvatar.find('**/muzzle-short-neutral').removeNode()
+base.localAvatar.find('**/ears-short').removeNode()
+localAvatar.setName('')
+avHead = base.localAvatar.find('**/head-short')
+bAvHead = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+avBigCheeseHead = bAvHead.find('**/bigcheese')
+avBigCheeseHead.setColor(255,255,255)
+avBigCheeseHead.reparentTo(avHead)
+avBigCheeseHead.setScale(2.3)
+avBigCheeseHead.setPos(0,.3,-1)
+localAvatar.putOnSuit('tbc')

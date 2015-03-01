@@ -1,0 +1,10 @@
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 11100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(3)
+
+Enter Cog Suit X2

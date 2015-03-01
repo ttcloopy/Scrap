@@ -1,0 +1,7 @@
+aSendUpdate = base.localAvatar.sendUpdate
+def bSendUpdate(fieldName, args=[], sendToId=None):
+    if fieldName == "logSuspiciousEvent":
+        pass
+    else:
+        aSendUpdate(fieldName, args)
+base.localAvatar.sendUpdate = bSendUpdate

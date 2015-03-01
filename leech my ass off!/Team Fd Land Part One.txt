@@ -1,0 +1,232 @@
+base.talkAssistant.sendOpenTalk('I am now veiwing Fd land! Created by Salty.') 
+base.localAvatar.b_setEmoteState(20,1) 
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(128.822,157.663,133.179)
+pandaPosInterval22 = e.posInterval(13,Point3(128.822,157.663,133.179),
+startPos=Point3(128.822,157.663,333.179))
+pandaPosInterval33 = e.posInterval(13,Point3(128.822,157.663,333.179),
+startPos=Point3(128.822,157.663,133.179))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+
+base.localAvatar.setName(('FD Member')) 
+
+base.localAvatar.setPos(206.131,-14.426,133.179)
+
+base.localAvatar.setCheesyEffect(5,0,0) 
+
+base.localAvatar.setSystemMessage(1,'Welcome to FD Land! Created by Keez and Sea Green Kat ONLY!')
+
+environ = loader.loadModel('phase_4/models/minigames/maze_2player.bam')
+environ.reparentTo(render)
+environ.setPos(207.432,64.809,133.154)
+environ.setHpr(50,0,0)
+environ.setScale(5)
+
+base.cr.sendSetZoneMsg(161111)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(133.726,127.121,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(2)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(150.138,112.956,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(3)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(176.469,91.271,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(5)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(237.248,39.407,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(5)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(209.436,62.422,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(6)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(257.354,23.445,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(4)
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(274.436,9.550,133.179) 
+broken.setHpr(0,0,0) 
+broken.setScale(3)
+
+mrt = loader.loadModel('phase_12/models/bossbotHQ/BanquetTableChairs.bam')
+mrt.reparentTo(render) 
+mrt.setPos(307.077,21.488,133.179) 
+mrt.setHpr(0,0,0) 
+mrt.setScale(.8)
+
+mrt = loader.loadModel('phase_12/models/bossbotHQ/BanquetTableChairs.bam')
+mrt.reparentTo(render) 
+mrt.setPos(281.628,42.406,133.179) 
+mrt.setHpr(0,0,0) 
+mrt.setScale(.8)
+
+mrt = loader.loadModel('phase_12/models/bossbotHQ/BanquetTableChairs.bam')
+mrt.reparentTo(render) 
+mrt.setPos(254.735,64.250,133.179) 
+mrt.setHpr(0,0,0) 
+mrt.setScale(.8)
+
+mrt = loader.loadModel('phase_12/models/bossbotHQ/BanquetTableChairs.bam')
+mrt.reparentTo(render) 
+mrt.setPos(231.895,83.014,133.179) 
+mrt.setHpr(0,0,0) 
+mrt.setScale(.8)
+
+tiki = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam")
+tiki.reparentTo(render)
+tiki.setPos(38.980,143.540,133.179)
+tiki.setHpr(0,0,0)
+tiki.setScale(.3)
+
+tiki = loader.loadModel("phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam")
+tiki.reparentTo(render)
+tiki.setPos(97.573,218.041,133.179)
+tiki.setHpr(0,0,0)
+tiki.setScale(.3)
+
+game4 = loader.loadModel("phase_13/models/parties/danceFloor.bam")
+game4.reparentTo(render)
+game4.setPos(101.773,153.323,133.179)
+game4.setHpr(0,0,0) 
+game4.setScale(.7)
+
+ropesf = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+ropesf.reparentTo(render)
+ropesf.setPos(163.580,22.064,133.179)
+ropesf.setHpr(0,0,0) 
+ropesf.setScale(.6)
+
+s1 = loader.loadModel("phase_3.5/models/modules/tt_m_ara_int_sillyMeterFlat.bam")
+s1.reparentTo(render)
+s1.setPos(163.580,22.064,133.179)
+s1.setHpr(0,0,0) 
+s1.setScale(1)
+
+
+rocket1 = loader.loadModel('phase_13/models/parties/rocket_model.bam') 
+rocket1.reparentTo(render) 
+rocket1.setPos(160.209,-14.948,133.179) 
+rocket1.setHpr(0,0,0) 
+rocket1.setScale(1)
+
+cogplat1 = loader.loadModel('phase_9/models/cogHQ/platform1.bam')
+cogplat1.reparentTo(render) 
+cogplat1.setPos(312.768,-21.047,133.179) 
+cogplat1.setHpr(0,0,0) 
+cogplat1.setScale(2)
+
+environ = loader.loadModel('phase_5/models/char/cogA_robot-lose-mod.bam') 
+environ.reparentTo(render) 
+environ.setPos(256.933,123.751,133.179) 
+environ.setHpr(-210,0,0) 
+environ.setScale(6)
+
+environ = loader.loadModel('phase_5/models/char/cogB_robot-lose-mod.bam') 
+environ.reparentTo(render)
+environ.setPos(477.797,25.663,133.179) 
+environ.setHpr(-210,0,0) 
+environ.setScale(8)
+
+eye1 = loader.loadModel('phase_5/models/props/evil-eye.bam')
+eye1.reparentTo(render)
+eye1.setPos(198.653,53.966,133.179)
+eye1.setHpr(100,0,0)
+eye1.setScale(90)
+eye1.setColor(1,1,1)
+
+goon22 = loader.loadModel("phase_9/models/char/Cog_Goonie-zero.bam") 
+goon22.reparentTo(render) 
+goon22.setPos(316.617,-25.466,134.067)
+goon22.setHpr(180,0,0)
+goon22.setColor(1,0,0)
+
+goon22 = loader.loadModel("phase_9/models/char/Cog_Goonie-zero.bam") 
+goon22.reparentTo(render) 
+goon22.setPos(307.373,-25.759,134.067)
+goon22.setHpr(180,0,0)
+goon22.setColor(1,0,0)
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+{"head":{"cogwave":"phase_9/models/char/bossCog-head-wave.bam", \
+"run":"phase_9/models/char/bossCog-head-wave.bam"}, \
+"torso":{"cogwave":"phase_9/models/char/bossCog-torso-wave.bam", \
+"run":"phase_9/models/char/bossCog-torso-wave.bam"}, \
+"legs":{"cogwave":"phase_9/models/char/bossCog-legs-wave.bam", \
+"run":"phase_9/models/char/bossCog-legs-wave.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+ceotreads = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+ceorear = ceo.find('**/joint_axle')
+ceotreads.reparentTo(ceorear)
+ceo.setPos(312.256,-20.287,134.067)
+ceo.loop("cogwave")
+ceo.setHpr(-718.926,0,0)
+ceo.setScale(.7)
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+

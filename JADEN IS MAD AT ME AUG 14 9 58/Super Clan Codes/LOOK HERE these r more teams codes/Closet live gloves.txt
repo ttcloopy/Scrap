@@ -1,0 +1,42 @@
+CLOSET LIVE GLOVES: DO THE TOP CODE. Delete it THEN DO one the bottom codes:
+
+
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+def setLiveDNA(dnaString):
+    dna = Sequence()
+    dna.append(Func(setDNALive, dnaString))
+    dna.append(Wait(0.5))
+    dna.append(Func(setDNAClient, dnaString))
+    dna.start()
+def setDNALive(dnaString):
+    closet = base.cr.doFindAll("closet")
+    closet[0].d_setDNA(dnaString, 34, 34)
+def setDNAClient(dnaString):
+    base.localAvatar.setDNAString(dnaString)
+
+Then Do:
+
+Black cat.
+setLiveDNA('t\x05\x01\x00\x00\x50\x1b\x45\x1b\x26\x1b\x1a\x1a\x1a\x1a')
+
+Orange
+setLiveDNA('t\x05\x02\x00\x01\x62\x1b\0\x1b\x22\x1b\x09\x0d\x09\x09')
+
+Brown
+setLiveDNA('t\x05\x02\x00\x01\x62\x1b\0\x1b\x22\x1b\x06\x0d\x06\x06')
+
+Black Cat Scientist Clothes
+setLiveDNA('t\x05\x01\x00\x00\x63\x1b\x00\x1b\x29\x1b\x1a\x1a\x1a\x1a') - skirt ( you see as pants )
+setLiveDNA('t\x05\x04\x00\x00\x63\x1b\x00\x1b\x29\x1b\x1a\x1a\x1a\x1a') - pants ( you see as skirt )
+
+Grey Cat
+setLiveDNA('t\x05\x01\x00\x00\x50\x1b\x45\x1b\x26\x1b\x19\x19\x19\x19')
+
+Blue Toon
+setLiveDNA('t\x05\x01\x00\x00\x50\x1b\x45\x1b\x26\x1b\x14\x14\x14\x14')
+
+Red Gloves
+setLiveDNA('t\x01\x01\x00\x00\x00\x1b\x00\x1b\x00\x09\x08\x02\x08\x08')
+
+Fake Freckleslam
+setLiveDNA('t\x05\x04\x00\x00\x63\x1b\x00\x1b\x29\x1b\x1a\x02\x1a\x1a')

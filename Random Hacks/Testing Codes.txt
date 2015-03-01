@@ -1,0 +1,383 @@
+Player = base.cr.doFindAll("render/Name")
+for Player in base.cr.doFindAll("render/Name"):
+ Player.flush()
+            Player.cr.toons.flush()
+
+TutorialManager.d_rejectTutorial 
+nametagAmbientLightChanged
+'enterdoor_trigger_282502851'
+
+
+<toontown.chat.TTChatInputSpeedChat.TTChatInputSpeedChat instance at 0x0B33CE90>:
+     'SCToontaskMsg'
+     'SpeedChatStyleChange'
+     'SCEmoteMsg'
+     'SCSingingMsg'
+     'SCCustomMsg'
+     'SCEmoteNoAccess'
+     'SCIndexedMsg'
+     'TTSCResistanceMsg'
+     'SCTerminalLinkedEmoteEvent'
+     'SCStaticTextMsg'
+
+
+render/Bright Red Rabbit-290230129:
+     'time-delete'
+     'f7'
+     'InputState-forward'
+     'tab'
+     'chatUpdateSCToontask'
+     'InputState-slide'
+     'jumpHardLand'
+     'clickedWhisper'
+     'jumpLand'
+     'chatUpdateSCSinging'
+     'phaseComplete-5.5'
+     'whisperUpdateSCToontask'
+     'InputState-turnLeft'
+     'shift-f1'
+     'playerOffline'
+     'chatUpdateSCResistance'
+     'system message aknowledge'
+     'wakeup'
+     'systemMsgAckGuiDoneEvent'
+     'time-delete-up'
+     'page_down'
+     'playerOnline'
+     'avatarFriendAddEvent'
+     'nameTagShowName'
+     'InputState-jump'
+     'time-insert'
+     'page_up'
+     'avatarMoving'
+     'shift-tab'
+     'pieHit'
+     'friendOffline'
+     'InputState-turnRight'
+     'interrupt-pie'
+     'whisperIncomingEvent'
+     'nameTagShowAvId'
+     'clientCleanup'
+     'nametagAmbientLightChanged'
+     'f12'
+     'jumpStart'
+     'time-insert-up'
+     'InputState-reverse'
+     'friendOnline'
+     'avatarFriendRemoveEvent'
+     'avatarFriendUpdateEvent'
+
+
+hidden/HQ Officer-687490616:
+     'nametagAmbientLightChanged'
+
+'clock_error'
+
+
+render2d/aspect2d/ShtikerBook-pg574/EventsPage-pg847:
+     'confirmCancelPartyEvent'
+     'confirmTooLatePartyEvent'
+     'cancelPartyResultGuiEvent'
+     'confirmPublicPrivateChangeEvent'
+
+     'PandaPaused'
+     'f9'
+     'window-event'
+     'InputState-forward'
+     'PandaRestarted'
+     'panda3d-render-error'
+
+
+<direct.controls.InputState.InputStateWatchToken instance at 0x107049E0>:
+     'runningEvent'
+     'running-on'
+
+<toontown.distributed.ToontownClientRepository.ToontownClientRepository object at 0x0403E540>:
+     'lostConnection-61611568'
+     'TCRSetZoneDone'
+     'CRDatagramOverflow'
+     'playGameDone'
+
+     'gardenGame'
+     'enterFlowerSellBox'
+
+     'exitSafeZone'
+     'enterSafeZone'
+
+
+CRDatagramOverflow              	ToontownClientRepository.handleReaderOverflow 
+DistributedDoor_doorTrigger     	Estate.handleDoorTrigger 
+InputState-forward              	ToonBase.__walking LocalToon.__toonMoved 
+InputState-jump                 	LocalToon.__toonMoved 
+InputState-reverse              	LocalToon.__toonMoved 
+InputState-slide                	LocalToon.__toonMoved 
+InputState-turnLeft             	LocalToon.__toonMoved 
+InputState-turnRight            	LocalToon.__toonMoved 
+PandaPaused                     	ToonBase.disableAllAudio 
+PandaRestarted                  	ToonBase.enableAllAudio 
+SCCustomMsg                     	TTChatInputSpeedChat.handleCustomMsg 
+SCEmoteMsg                      	TTChatInputSpeedChat.handleEmoteMsg 
+SCEmoteNoAccess                 	TTChatInputSpeedChat.handleEmoteNoAccess 
+SCIndexedMsg                    	TTChatInputSpeedChat.handleStaticTextMsg 
+SCSingingMsg                    	TTChatInputSpeedChat.handleSingingMsg 
+SCStaticTextMsg                 	TTChatInputSpeedChat.handleStaticTextMsg 
+SCTerminalLinkedEmoteEvent      	TTChatInputSpeedChat.handleLinkedEmote 
+SCToontaskMsg                   	TTChatInputSpeedChat.handleToontaskMsg 
+SpeedChatStyleChange            	TTChatInputSpeedChat.handleSpeedChatStyleChange 
+TCRSetZoneDone                  	ToontownClientRepository._handleEmuSetZoneDone 
+TTSCResistanceMsg               	TTChatInputSpeedChat.handleResistanceMsg 
+ValentinesDayStart              	DistributedETreasure.startValentinesDay DistributedETreasure.startValentinesDay DistributedETreasure.startValentinesDay 
+ValentinesDayStop               	DistributedETreasure.stopValentinesDay DistributedETreasure.stopValentinesDay DistributedETreasure.stopValentinesDay 
+accept-enter-pg482              	DirectEntry.commandFunc 
+accept-enter-pg600              	DirectEntry.commandFunc 
+acceptfailed-enter-pg482        	DirectEntry.failedCommandFunc 
+acceptfailed-enter-pg600        	DirectEntry.failedCommandFunc 
+alt                             	TTChatInputWhiteList.shiftPressed 
+alt-arrow_down                  	InputState.set InputState.set 
+alt-arrow_left                  	InputState.set InputState.set 
+alt-arrow_right                 	InputState.set InputState.set 
+alt-arrow_up                    	InputState.set InputState.set 
+alt-mouse4                      	InputState.set 
+announceGarbageCycleDesc2num    	GarbageLeakServerEventAggregator._handleCycleCounts 
+arrivedOnDistrict               	ToontownMagicWordManager.doLoginMagicWords 
+arrow_down                      	InputState.set InputState.set 
+arrow_down-up                   	InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set 
+arrow_left                      	InputState.set InputState.set 
+arrow_left-up                   	InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set 
+arrow_right                     	InputState.set InputState.set 
+arrow_right-up                  	InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set 
+arrow_up                        	InputState.set InputState.set 
+arrow_up-up                     	InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set InputState.set 
+async_loader_1                  	ToontownLoader.__gotAsyncObject 
+avatarDetails                   	Estate.__handleAvatarDetails 
+avatarFriendAddEvent            	LocalToon.sbFriendAdd 
+avatarFriendRemoveEvent         	LocalToon.sbFriendRemove 
+avatarFriendUpdateEvent         	LocalToon.sbFriendUpdate 
+avatarMoving                    	LocalToon.clearPageUpDown 
+avatarNewFriendAddEvent         	Estate.__friendAdded 
+cancelPartyResultGuiEvent       	EventsPage.cancelPartyResultGuiCommand 
+chatUpdateSCResistance          	LocalToon.d_reqSCResistance 
+chatUpdateSCSinging             	LocalToon.b_setSCSinging 
+chatUpdateSCToontask            	LocalToon.b_setSCToontask 
+clearOutToonInterior            	DistributedHouseDoor.doorTrigger 
+
+
+base.localAvatar.findAllMatches('**/hands').setColorScale(25)
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25)
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25)
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.97,0.3,0.3)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.97,0.3,0.3)
+    base.localAvatar.findAllMatches('**/toros-bot').setColor(0.97,0.3,0.3)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+def pink():
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.96,0.7,0.7)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.96,0.7,0.7)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.96,0.7,0.7)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+def purple():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.69,0.29,0.95)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.69,0.29,0.95)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.69,0.29,0.95)
+def green():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.4,1,0.4)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.4,1,0.4)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.4,1,0.4)
+def yellow():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(1,0.95,0.3)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(1,0.95,0.3)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(1,0.95,0.3)
+def dblue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.35,0.35,0.85)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.35,0.35,0.85)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.35,0.35,0.85)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.3,0.64,0.85)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.3,0.64,0.85)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.3,0.64,0.85)
+def orange():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.96,0.7,0.7)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.96,0.7,0.7)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.96,0.7,0.7)
+def cream():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(1,1,0.57)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(1,1,0.57)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(1,1,0.57)
+def perwk():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0.55,0.55,1)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0.55,0.55,1)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0.55,0.55,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.3))
+  rain.append(Func(pink))
+  rain.append(Wait(0.3))
+  rain.append(Func(purple))
+  rain.append(Wait(0.3))
+  rain.append(Func(green))
+  rain.append(Wait(0.3))
+  rain.append(Func(yellow))
+  rain.append(Wait(0.3))
+  rain.append(Func(dblue))
+  rain.append(Wait(0.3))
+  rain.append(Func(blue))
+  rain.append(Wait(0.3))
+  rain.append(Func(orange))
+  rain.append(Wait(0.3))
+  rain.append(Func(cream))
+  rain.append(Wait(0.3))
+  rain.append(Func(perwk))
+  rain.append(Wait(0.3))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/Sky').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/sleeves').setColorScale(25) 
+    gloves = loader.loadTexture("phase_4/maps/it.jpg")
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/torso-top').setColorScale(25) 
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25) 
+    base.localAvatar.findAllMatches('**/hands').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/hands').setColorScale(25) 
+    shirt = base.localAvatar.findAllMatches('**/hands')
+    shirttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_cogbuster.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_saveBuilding1.jpg")
+    short.setTexture(shorttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-top')
+    shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_saveBuilding1.jpg")
+    short.setTexture(shorttex, 1)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/Sky').setColor(0,0,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.2))
+  rain.append(Func(blue))
+  rain.append(Wait(0.2))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+from direct.interval.IntervalGlobal import *
+def floor():
+    environ1.findAllMatches('**/').setColor(255,0,0)
+def floor2():
+    environ1.findAllMatches('**/').setColor(0,0,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(floor))
+  rain.append(Wait(0.2))
+  rain.append(Func(floor2))
+  rain.append(Wait(0.2))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+messenger.send([base.cr.sendSetZoneMsg(14000)], 
+[base.localAvatar.doId, IDGoeshere, 'namegoeshere', 1])
+
+
+
+ Membershipdef getmembers(object, predicate=None):
+for key in dir(object):
+value = getattr(object, key)
+if not predicate or predicate(value):
+results.append((key, value))print key,valueresults.sort()
+return resultsgetmembers [[base.localAvatar]]
+
+
+
+
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+tid = ttv.doId
+
+lttv = base.cr.doFindAll("vehicle-" + str(tid))
+for lttv in base.cr.doFindAll("vehicle-" + str(tid)):
+lttv.windResistance.setAmplitude(-160)
+
+
+
+
+
+max = Actor({"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogMM_Shorts-legs-1000.bam"}, \
+# dictionary of anim dictionaries
+{"torso":{"walk":"phase_3/models/char/dogLL_Shorts-torso-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-torso-sad-neutral.bam"}, \
+"legs":{"walk":"phase_3/models/char/dogMM_Shorts-legs-neutral.bam", \
+"run":"phase_3/models/char/dogMM_Shorts-legs-sad-neutral.bam"} \
+})
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistA.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+max.find('**/torso-top').setTexture(shirts, 1)
+max.find('**/torso-bot').setTexture(shorts, 1)
+max.find('**/torso-bot-cap').setTexture(shorts, 1)
+max.find('**/sleeves').setTexture(sleve, 1)
+max.attach("torso", "legs", "joint_hips")
+gloves = max.find('**/hands')
+gloves.setColor(255,0,0)
+base.localAvatar.findAllMatches('**/hands').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+max.findAllMatches('**/hands').setTexture(sleve, 2) 
+max.findAllMatches('**/hands').setColor(0,1,0)
+max.loop("walk")
+max.setPos(70,-60,0.2)
+max.setHpr(420,0,0)
+max.setScale(3)
+max.reparentTo(render)
+
+zhead = loader.loadModel("phase_3/models/char/cat-heads-1000.bam")
+head = zhead.find('**/head-long')
+head.setColor(0.25,0.25,0.3)
+headf = zhead.find('**/head-short')
+headf.setColor(0.25,0.25,0.3)
+neck = max.find('**/neck')
+neck.setColor(0.25,0.25,0.3)
+ears = max.find('**/ears-short')
+ears.setColor(0.25,0.25,0.3)
+max.find('**/ears-short').setColor(0.25,0.25,0.3)
+head-short = max.find('**/head-short')
+head.setColor(0.25,0.25,0.3)
+max.find('**/head-short').setColor(0.25,0.25,0.3)
+ears = max.find('**/ear')
+ears.setColor(0.25,0.25,0.3)
+max.find('**/arms').setColor(0.25,0.25,0.3)
+max.find('**/ears-short').setColor(0.25,0.25,0.3)
+max.find('**/legs').setColor(0.25,0.25,0.3)
+max.find('**/feet').setColor(0.25,0.25,0.30)
+max.find('**/torso-bot').setColor(1,1,1)
+joint = max.find('**/joint_head')
+zhead.find('**/muzzle-short-neutral').reparentTo(joint)
+zhead.find('**/joint_pupilR_long').reparentTo(joint)
+zhead.find('**/joint_pupilL_long').reparentTo(joint)
+zhead.find('**/ears-short').reparentTo(joint)
+zhead.find('**/head-short').reparentTo(joint)
+zhead.find('**/eyes-long').reparentTo(joint)
+zhead.find('**/head-short').reparentTo(joint)
+gloves1 = max.find('**/joint_Rhold')

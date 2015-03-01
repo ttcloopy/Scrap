@@ -1,0 +1,466 @@
+base.localAvatar.setPos(28,-385,101)
+base.localAvatar.setHpr(-448,0,0)
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Index)
+  def Index(self):
+    base.localAvatar.collisionsOff()
+    base.localAvatar.setSystemMessage(0, 'Collisions Off. Toon HQ: Use this to get through the Sellbot Doors!')
+i = Index()
+
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Index)
+  def Index(self):
+    base.localAvatar.collisionsOn()
+    base.localAvatar.setSystemMessage(0, 'Collisions On')
+i = Index()
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f3',self.Index)
+  def Index(self):
+    lbd = base.cr.doFindAll("Land Maker")
+    for lbd in lbd:lbd.putOnSuit('ms')
+    lbd = base.cr.doFindAll("No")
+    for lbd in lbd:lbd.putOnSuit('ms')
+    base.localAvatar.setSystemMessage(0, 'Cog disguise enable. Toon HQ: Wear this inside doors!')
+i = Index()
+
+
+from direct.showbase import DirectObject
+class Index(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f4',self.Index)
+  def Index(self):
+    base.localAvatar.setCogIndex(-1)
+    base.localAvatar.setSystemMessage(0, 'Cog Disguise is Off.')
+i = Index()
+
+
+
+
+
+bgMusic1 = base.loader.loadSfx("phase_9/audio/bgm/encntr_suit_HQ_nbrhood.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+hub = loader.loadModel("phase_9/models/cogHQ/SellbotHQExterior.bam")
+hub.reparentTo(render)
+hub.setPos(69,-61,100)
+hub.setHpr(360,0,0)
+hub.setScale(1)
+
+wall = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall.reparentTo(render)
+wall.setPos(76.670,-126.234,110.096)
+wall.setHpr(360,0,0)
+wall.setScale(3)
+
+wall2 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall2.reparentTo(render)
+wall2.setPos(53.670,-126.234,110.096)
+wall2.setHpr(360,0,0)
+wall2.setScale(3)
+
+wall3 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall3.reparentTo(render)
+wall3.setPos(39.670,-126.234,110.096)
+wall3.setHpr(360,0,0)
+wall3.setScale(3)
+
+wall4 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall4.reparentTo(render)
+wall4.setPos(27.670,-126.234,110.096)
+wall4.setHpr(360,0,0)
+wall4.setScale(3)
+
+wall5 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall5.reparentTo(render)
+wall5.setPos(16.670,-126.234,110.096)
+wall5.setHpr(360,0,0)
+wall5.setScale(3)
+
+wall6 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall6.reparentTo(render)
+wall6.setPos(3.670,-126.234,110.096)
+wall6.setHpr(360,0,0)
+wall6.setScale(3)
+
+wall99 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wall99.reparentTo(render)
+wall99.setPos(104.657,-102.151,110.096)
+wall99.setHpr(360,0,0)
+wall99.setScale(2)
+
+vp = Actor({"head":"phase_9/models/char/sellbotBoss-head-zero.bam", \
+"torso":"phase_9/models/char/sellbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/sellbot-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/sellbot-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+vp.attach("head", "torso", "joint34")
+vp.attach("torso", "legs", "joint_legs")
+vp.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = vp.find('**/joint_axle')
+tread3.reparentTo(rear4)
+vp.setPos(69,-246,80)
+vp.setScale(1,1,1)
+vp.loop("walk")
+vp.setHpr(180,0,280)
+
+lobby = loader.loadModel("phase_9/models/cogHQ/SellbotHQLobby.bam")
+lobby.reparentTo(render)
+lobby.setPos(78,80,86.5)
+lobby.setHpr(177.706,0,0)
+lobby.setScale(1)
+
+arrow = loader.loadModel('phase_4/models/minigames/toonblitz_game_arrow.bam') 
+arrow.reparentTo(render) 
+arrow.setPos(62,-83,110) 
+arrow.setHpr(380,0,0) 
+arrow.setScale(2) 
+
+wallin = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wallin.reparentTo(render)
+wallin.setPos(49,-77,110)
+wallin.setHpr(989.538,0,0)
+wallin.setScale(1.4)
+
+wallin2 = loader.loadModel("phase_11/models/lawbotHQ/LB_wall_panel.bam")
+wallin2.reparentTo(render)
+wallin2.setPos(97,-98,110)
+wallin2.setHpr(1172.597,0,0)
+wallin2.setScale(1.7)
+
+
+train = loader.loadModel("phase_5/models/props/train.bam")
+train.reparentTo(render)
+train.setPos(51,-171,100)
+train.setHpr(55,0,0)
+train.setScale(1.2)
+train.setColor(0.70,0.70,0.70)
+
+train.findAllMatches('**/').setColorScale(25)
+shorts=loader.loadTexture("phase_11/maps/LB_WoodPanel2.jpg")
+train.findAllMatches('**/').setTexture(shorts, 1)
+train.findAllMatches('**/').setTexture(shorts, 1)
+train.setColor(0.70,0.70,0.70)
+
+
+
+cheese5 = Actor("phase_3.5/models/char/suitB-mod.bam",{"walk":"phase_4/models/char/suitB-neutral.bam"})
+cheese5.reparentTo(render)
+cheese5.loop("walk")
+headjoint5 = cheese5.find('**/joint_head')
+mole5 = loader.loadModel("phase_4/models/char/suitA-heads.bam")
+bigcheese5 = mole5.find('**/moverandshaker')
+bigcheese5.reparentTo(headjoint5)
+bigcheese5.setColor(1,1,1)
+cheese5.setPos(32,-170,100.6)
+cheese5.setScale(1)
+cheese5.setHpr(175,0,0)
+
+eagle = loader.loadModel("phase_5/models/cogdominium/tt_m_ara_crg_paintingLegalEagle.bam")
+eagle.reparentTo(render)
+eagle.setPos(75.824,22.146,96)
+eagle.setHpr(531.669,0,0)
+eagle.setScale(1)
+
+mover = loader.loadModel("phase_5/models/cogdominium/tt_m_ara_crg_paintingMoverShaker.bam")
+mover.reparentTo(render)
+mover.setPos(81,158,164)
+mover.setHpr(-1.128,0,0)
+mover.setScale(2)
+
+table = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table.reparentTo(render)
+table.setPos(92,54,86)
+table.setHpr(0,0,0)
+table.setScale(1.1)
+
+shakeroffice = loader.loadModel("phase_5/models/cogdominium/tt_m_ara_crg_penthouse.bam")
+shakeroffice.reparentTo(render)
+shakeroffice.setPos(86,208,114)
+shakeroffice.setHpr(-3.636,0,0)
+shakeroffice.setScale(1)
+
+magnet = loader.loadModel("phase_5/models/props/magnet.bam")
+magnet.reparentTo(render)
+magnet.setPos(41,105,94)
+magnet.setHpr(275,0,0)
+magnet.setScale(4.5)
+
+table2 = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+table2.reparentTo(render)
+table2.setPos(61,54,86)
+table2.setHpr(0,0,0)
+table2.setScale(1.1)
+
+magnet = loader.loadModel("phase_5/models/props/magnet.bam")
+magnet.reparentTo(render)
+magnet.setPos(41,105,94)
+magnet.setHpr(275,0,0)
+magnet.setScale(4.5)
+
+
+cfo = Actor({"head":"phase_10/models/char/cashbotBoss-head-zero.bam", \
+"torso":"phase_10/models/char/cashbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+{"head":{"cogwave":"phase_9/models/char/bossCog-head-wave.bam", \
+"run":"phase_9/models/char/bossCog-head-wave.bam"}, \
+"torso":{"cogwave":"phase_9/models/char/bossCog-torso-wave.bam", \
+"run":"phase_9/models/char/bossCog-torso-wave.bam"}, \
+"legs":{"cogwave":"phase_9/models/char/bossCog-legs-wave.bam", \
+"run":"phase_9/models/char/bossCog-legs-wave.bam"} \
+})
+cfo.attach("head", "torso", "joint34")
+cfo.attach("torso", "legs", "joint_legs")
+cfo.reparentTo(render)
+cfotreads = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+cforear = cfo.find('**/joint_axle')
+cfotreads.reparentTo(cforear)
+cfo.setPos(48,105.6,94)
+cfo.loop("cogwave")
+cfo.setHpr(450,0,0)
+cfo.setScale(0.2)
+
+
+
+paint = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint.reparentTo(render) 
+paint.setPos(74,-299,100)  
+paint.setHpr(0,0,0) 
+paint.setScale(1.3) 
+
+paint1 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint1.reparentTo(render) 
+paint1.setPos(74,-290,100)  
+paint1.setHpr(0,0,0) 
+paint1.setScale(1) 
+
+paint2 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint2.reparentTo(render) 
+paint2.setPos(74,-284,100)  
+paint2.setHpr(0,0,0) 
+paint2.setScale(1) 
+
+paint3 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint3.reparentTo(render) 
+paint3.setPos(74,-269,100)  
+paint3.setHpr(0,0,0) 
+paint3.setScale(1) 
+
+paint4 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint4.reparentTo(render) 
+paint4.setPos(74,-263,100)  
+paint4.setHpr(0,0,0) 
+paint4.setScale(1) 
+
+paint5 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint5.reparentTo(render) 
+paint5.setPos(74,-258,100)  
+paint5.setHpr(0,0,0) 
+paint5.setScale(1) 
+
+paint6 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint6.reparentTo(render) 
+paint6.setPos(74,-253,100)  
+paint6.setHpr(0,0,0) 
+paint6.setScale(1) 
+
+paint7 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint7.reparentTo(render) 
+paint7.setPos(74,-247,100)  
+paint7.setHpr(0,0,0) 
+paint7.setScale(1) 
+
+paint8 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint8.reparentTo(render) 
+paint8.setPos(74,-242,100)  
+paint8.setHpr(0,0,0) 
+paint8.setScale(1) 
+
+paint9 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint9.reparentTo(render) 
+paint9.setPos(74,-237,100)  
+paint9.setHpr(0,0,0) 
+paint9.setScale(1) 
+
+paint10 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint10.reparentTo(render) 
+paint10.setPos(74,-232,100)  
+paint10.setHpr(0,0,0) 
+paint10.setScale(1.3) 
+
+paint11 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam') 
+paint11.reparentTo(render) 
+paint11.setPos(74,-216,100)  
+paint11.setHpr(0,0,0) 
+paint11.setScale(1.4) 
+
+
+rexp3 = loader.loadModel('phase_3.5/models/props/explosion.bam')  
+rexp3.reparentTo(render) 
+rexp3.setPos(69,-246,80)
+rexp3.setHpr(50,0,0) 
+rexp3.setScale(3)
+rexp3.setColor(0.70,0.70,0.70)
+
+rexp34 = loader.loadModel('phase_3.5/models/props/explosion.bam')  
+rexp34.reparentTo(render) 
+rexp34.setPos(69,-246,80)
+rexp34.setHpr(250,0,0) 
+rexp34.setScale(3)
+rexp34.setColor(0.70,0.70,0.70)
+
+rexp345 = loader.loadModel('phase_3.5/models/props/explosion.bam')  
+rexp345.reparentTo(render) 
+rexp345.setPos(69,-246,80)
+rexp345.setHpr(200,0,0) 
+rexp345.setScale(3)
+rexp345.setColor(0.70,0.70,0.70)
+
+rexp3456 = loader.loadModel('phase_3.5/models/props/explosion.bam')  
+rexp3456.reparentTo(render) 
+rexp3456.setPos(69,-246,80)
+rexp3456.setHpr(100,0,0) 
+rexp3456.setScale(3)
+rexp3456.setColor(0.70,0.70,0.70)
+
+piano = loader.loadModel('phase_6/models/props/piano.bam') 
+piano.reparentTo(render) 
+piano.setPos(123,-176,100)  
+piano.setHpr(-391,0,0) 
+piano.setScale(3) 
+
+X = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+X.reparentTo(render)
+X.setHpr(0,0,0)
+X.setPos(-22,-70,310)
+X.setColor(0,0,0)
+
+pandaPosInterval22 = X.posInterval(13,Point3(89,260,114),
+startPos=Point3(89,260,114))
+pandaPosInterval33 = X.posInterval(13,Point3(89,260,150),
+
+
+startPos=Point3(89,260,114))
+pandaHprInterval11 = X.hprInterval(3,Point3(0,0,0),
+
+
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = X.hprInterval(3,Point3(0, 0, 0),
+
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+
+boss = loader.loadModel("phase_9/models/cogHQ/BossRoomHQ.bam")
+boss.reparentTo(render)
+boss.setPos(114,542,150)
+boss.setHpr(-5.548,0,0)
+boss.setScale(1)
+
+a = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+a.reparentTo(render)
+a.setPos(91,267,150)
+a.setHpr(-5.548,0,0)
+a.setScale(1)
+
+b = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+b.reparentTo(render)
+b.setPos(91,276,150)
+b.setHpr(-5.548,0,0)
+b.setScale(1)
+
+c = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+c.reparentTo(render)
+c.setPos(91,285,150)
+c.setHpr(-5.548,0,0)
+c.setScale(1)
+
+d = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+d.reparentTo(render)
+d.setPos(91,296,150)
+d.setHpr(-5.548,0,0)
+d.setScale(1)
+
+
+e = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+e.reparentTo(render)
+e.setPos(91,305,150)
+e.setHpr(-5.548,0,0)
+e.setScale(1)
+
+f = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+f.reparentTo(render)
+f.setPos(91,316,150)
+f.setHpr(-5.548,0,0)
+f.setScale(1)
+
+g = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+g.reparentTo(render)
+g.setPos(91,325,150)
+g.setHpr(-5.548,0,0)
+g.setScale(1)
+
+h = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+h.reparentTo(render)
+h.setPos(91,345,150)
+h.setHpr(-5.548,0,0)
+h.setScale(3)
+
+i = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam")
+i.reparentTo(render)
+i.setPos(91,360,146.5)
+i.setHpr(-5.548,0,0)
+i.setScale(1.5)
+
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+{"head":{"cogwave":"phase_9/models/char/bossCog-head-wave.bam", \
+"run":"phase_9/models/char/bossCog-head-wave.bam"}, \
+"torso":{"cogwave":"phase_9/models/char/bossCog-torso-wave.bam", \
+"run":"phase_9/models/char/bossCog-torso-wave.bam"}, \
+"legs":{"cogwave":"phase_9/models/char/bossCog-legs-wave.bam", \
+"run":"phase_9/models/char/bossCog-legs-wave.bam"} \
+})
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+ceotreads = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+ceorear = ceo.find('**/joint_axle')
+ceotreads.reparentTo(ceorear)
+ceo.setPos(119,604,167)
+ceo.loop("cogwave")
+ceo.setHpr(-366.077,0,0)
+ceo.setScale(1.8)

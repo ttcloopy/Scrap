@@ -1,0 +1,5 @@
+d = base.cr.doFindAll("render/Firedog")
+for d in base.cr.doFindAll("render/Firedog"):
+ d.setAnimState(('GolfPuttLoop'))
+
+u can change the anim to any other like swim put the toons name example change firedog to the toon name u want to control

@@ -1,0 +1,13 @@
+------ COLORFUL FLOWER OUTFIT-------
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)

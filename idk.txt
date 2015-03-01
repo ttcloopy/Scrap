@@ -1,0 +1,158 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+newsLine1 = "Improved Speed Chat\n"
+getLatestNews = newsLine1
+blankTextNode = ""
+
+newsFrame = DirectFrame(frameColor=(1, 1, 1, 1),
+frameSize=(-1.06, -0.2, -0.3, 1),
+pos=(-0, 0, 0))
+
+newsText = OnscreenText(text = blankTextNode, pos = (-0.6, .9),
+scale = 0.07,fg=(0,0,0,1),align=TextNode.ACenter,mayChange=1)
+newsFrame.hide()
+
+def openNews():
+    newsFrame.show()
+    newsText.setText(getLatestNews)
+    mnuBtn1.hide()
+    nwsCloseBtn.show()
+    SC.show()
+
+def closeNews():
+    newsFrame.hide()
+    newsText.setText(blankTextNode)
+    mnuBtn1.show()
+    nwsCloseBtn.hide()
+    SC.hide()
+
+def SC():
+    base.localAvatar.b_setSC(5)
+
+def SC1():
+    base.localAvatar.b_setSC(6)
+
+def SC2():
+    base.localAvatar.b_setSC(7)
+
+def SC3():
+    base.localAvatar.b_setSC(8)
+
+def SC4():
+    base.localAvatar.b_setSC(9)
+
+def SC5():
+    base.localAvatar.b_setSC(10)
+
+def SC6():
+    base.localAvatar.b_setSC(11)
+
+def SC7():
+    base.localAvatar.b_setSC(12)
+
+def SC8():
+    base.localAvatar.b_setSC(13)
+
+def SC9():
+    base.localAvatar.b_setSC(14)
+
+def SC10():
+    base.localAvatar.b_setSC(15)
+
+def SC11():
+    base.localAvatar.b_setSC(16)
+
+def SC12():
+    base.localAvatar.b_setSC(17)
+
+def SC13():
+    base.localAvatar.b_setSC(18)
+
+def SC14():
+    base.localAvatar.b_setSC(19)
+
+def SC15():
+    base.localAvatar.b_setSC(20)
+
+def SC16():
+    base.localAvatar.b_setSC(21)
+
+def SC17():
+    base.localAvatar.b_setSC(22)
+
+def SC18():
+    base.localAvatar.b_setSC(23)
+
+def SC19():
+    base.localAvatar.b_setSC(24)
+
+def SC20():
+    base.localAvatar.b_setSC(25)
+
+def SC21():
+    base.localAvatar.b_setSC(26)
+
+def SC22():
+    base.localAvatar.b_setSC(27)
+
+def SC23():
+    base.localAvatar.b_setSC(28)
+
+def SC24():
+    base.localAvatar.b_setSC(29)
+
+def SC25():
+    base.localAvatar.b_setSC(30)
+
+def SC26():
+    base.localAvatar.b_setSC(31)
+
+def SC27():
+    base.localAvatar.b_setSC(32)
+
+def SC28():
+    base.localAvatar.b_setSC(33)
+
+def SC29():
+    base.localAvatar.b_setSC(34)
+
+def SC30():
+    base.localAvatar.b_setSC(35)
+
+mnuBtn1 = DirectButton(text = ("Speed Chat", "Speed Chat", "Speed Chat", "Speed Chat"), scale=0.05, pos = (-.93,-0,.92), command=openNews)
+SC = DirectButton(text = ("ooo!", "ooo!", "ooo!", "ooo!"), scale=.06, pos = (-.99,-0,.80), command=SC)
+SC = DirectButton(text = ("KFC", "KFC", "KFC", "KFC"), scale=.06, pos = (-.87,-0,.80), command=SC1)
+SC = DirectButton(text = ("Rifle", "Rifle", "Rifle", "Rifle"), scale=.06, pos = (-.75,-0,.80), command=SC2)
+SC = DirectButton(text = ("GTFO", "GTFO", "GTFO", "GTFO"), scale=.06, pos = (-.61,-0,.80), command=SC3)
+SC = DirectButton(text = ("Bitch", "Bitch", "Bitch", "Bitch"), scale=.06, pos = (-.47,-0,.80), command=SC4)
+SC = DirectButton(text = ("Tight", "Tight", "Tight", "Tight"), scale=.06, pos = (-.33,-0,.80), command=SC5)
+SC = DirectButton(text = ("CHUB", "CHUB", "CHUB", "CHUB"), scale=.06, pos = (-.85,-0,.74), command=SC6)
+SC = DirectButton(text = ("Playa", "Playa", "Playa", "Playa"), scale=.06, pos = (-.84,-0,.74), command=SC7)
+SC = DirectButton(text = ("Hop On", "Hop On", "Hop On", "Hop On"), scale=.06, pos = (-.80,-0,.80), command=SC8)
+SC = DirectButton(text = ("Huh?", "Huh?", "Huh?", "Huh?"), scale=.06, pos = (-.80,-0,.80), command=SC9)
+SC = DirectButton(text = ("Hey!", "Hey!", "Hey!", "Hey!"), scale=.06, pos = (-.80,-0,.80), command=SC10)
+SC = DirectButton(text = ("STFU", "STFU", "STFU", "STFU"), scale=.06, pos = (-.80,-0,.80), command=SC11)
+SC = DirectButton(text = ("GCH", "GCH", "GCH", "GCH"), scale=.06, pos = (-.80,-0,.80), command=SC12)
+SC = DirectButton(text = ("Burn", "Burn", "Burn", "Burn"), scale=.06, pos = (-.80,-0,.80), command=SC13)
+SC = DirectButton(text = ("LOL!", "LOL!", "LOL!", "LOL!"), scale=.06, pos = (-.80,-0,.80), command=SC14)
+SC = DirectButton(text = ("Drop", "Drop", "Drop", "Drop"), scale=.06, pos = (-.80,-0,.80), command=SC15)
+SC = DirectButton(text = ("Suck It", "Suck It", "Suck It", "Suck It"), scale=.06, pos = (-.80,-0,.80), command=SC16)
+SC = DirectButton(text = ("Stop", "Stop", "Stop", "Stop"), scale=.06, pos = (-.80,-0,.80), command=SC17)
+SC = DirectButton(text = ("Yo Mama", "Yo Mama", "Yo Mama", "Yo Mama"), scale=.06, pos = (-.80,-0,.80), command=SC18)
+SC = DirectButton(text = ("Look", "Look", "Look", "Look"), scale=.06, pos = (-.80,-0,.80), command=SC19)
+SC = DirectButton(text = ("NOOB", "NOOB", "NOOB", "NOOB"), scale=.06, pos = (-.80,-0,.80), command=SC20)
+SC = DirectButton(text = ("Son", "Son", "Son", "Son"), scale=.06, pos = (-.80,-0,.80), command=SC21)
+SC = DirectButton(text = ("Hit Em Up", "Hit Em Up", "Hit Em Up", "Hit Em Up"), scale=.06, pos = (-.80,-0,.80), command=SC22)
+SC = DirectButton(text = ("Beaners", "Beaners", "Beaners", "Beaners"), scale=.06, pos = (-.80,-0,.80), command=SC23)
+SC = DirectButton(text = ("Dis", "Dis", "Dis", "Dis"), scale=.06, pos = (-.80,-0,.80), command=SC24)
+SC = DirectButton(text = ("Entertain", "Entertain", "Entertain", "Entertain"), scale=.06, pos = (-.80,-0,.80), command=SC25)
+SC = DirectButton(text = ("x_x!", "x_x!", "x_x!", "x_x!"), scale=.06, pos = (-.80,-0,.80), command=SC26)
+SC = DirectButton(text = ("Jizz", "Jizz", "Jizz", "Jizz"), scale=.06, pos = (-.80,-0,.80), command=SC27)
+SC = DirectButton(text = ("Beaners1", "Beaners1", "Beaners1", "Beaners1"), scale=.06, pos = (-.80,-0,.80), command=SC28)
+SC = DirectButton(text = ("Nigga", "Nigga", "Nigga", "Nigga"), scale=.06, pos = (-.80,-0,.80), command=SC29)
+SC = DirectButton(text = ("Snatch", "Snatch", "Snatch", "Snatch"), scale=.06, pos = (-.80,-0,.80), command=SC30)
+nwsCloseBtn = DirectButton(text = ("CLOSE", "close", "close", "CLOSE"), scale=.06, pos = (-0.97,-0,-.28), command=closeNews)
+nwsCloseBtn.hide()
+SC.hide()

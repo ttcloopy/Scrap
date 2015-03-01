@@ -1,0 +1,16 @@
+Left Mouse Button moves it around.
+•[*] Middle Mouse Button rotates it on its axis.
+•[*] Right Mouse Button zooms in and out.
+•[*] C zooms out enough where you can see the whole model. (Good for saving the time it takes to zoom out with the Right Mouse Button)
+•[*] L darkens it.
+•[*] I makes which ever wall your looking at invisable. (Good for seeing things that are sticking out from the ship or in the ship)
+•[*] A makes it so there is no animation. (Good for pausing during an animation; Pressing A again makes animation come back)
+•[*] Q closes the page.
+•[*] W showes the frame of the model.
+•[*] T makes it white and grey and back to color
+•[*] , ( Comma) makes the backround white or black.
+•[*] 2 divides the model in half. (Press it once to make to small models, Press it twice to divide into four, etc.)
+•[*] F9 takes a screenshot.
+•[*] H showes the axis.
+
+multify.exe -x -f phase_5.mf

@@ -1,0 +1,3 @@
+base.localAvatar.setPos(0,0,14)
+base.localAvatar.collisionsOff()
+base.localAvatar.setHpr(0,0,180)

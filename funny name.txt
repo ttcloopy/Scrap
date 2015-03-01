@@ -1,0 +1,8 @@
+Red:base.localAvatar.setDisplayName('\x01red\x01Master Rusty')
+3D:base.localAvatar.setDisplayName('\x01shadow\x01Master Rusty')
+Default:base.localAvatar.setDisplayName('\x01purple\x01Master Rusty')
+Green:base.localAvatar.setDisplayName('\x01green\x01Master Rusty')
+Black:base.localAvatar.setDisplayName('\x01black\x01Master Rusty')
+Blue:base.localAvatar.setDisplayName('\x01blue\x01Master Rusty')
+Yellow:base.localAvatar.setDisplayName('\x01yellow\x01Master Rusty')
+base.localAvatar.setDisplayName('\x01shadow\x01\x01black\x01F\x01green\x01d \x01red\x01H\x01blue\x01i \x01yellow\x01F\x01black\x01d')

@@ -1,0 +1,43 @@
+from direct.interval.IntervalGlobal import *
+def start():
+    base.localAvatar.setCheesyEffect(1, 0, 0) 
+def effect1():
+    base.localAvatar.setCheesyEffect(2, 0, 0)  
+def effect2():
+    base.localAvatar.setCheesyEffect(3, 0, 0) 
+def effect3():
+    base.localAvatar.setCheesyEffect(4, 0, 0) 
+def effect4():
+    base.localAvatar.setCheesyEffect(5, 0, 0) 
+def effect5():
+    base.localAvatar.setCheesyEffect(6, 0, 0) 
+def effect6():
+    base.localAvatar.setCheesyEffect(7, 0, 0) 
+def effect7():
+    base.localAvatar.setCheesyEffect(8, 0, 0) 
+def effect8():
+    base.localAvatar.setCheesyEffect(9, 0, 0) 
+def effect9():
+    base.localAvatar.setCheesyEffect(10, 0, 0)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(effect1))
+  seq.append(Wait(.45))
+  seq.append(Func(effect2))
+  seq.append(Wait(.45))
+  seq.append(Func(effect3))  
+  seq.append(Func(start))
+  seq.append(Func(effect4))
+  seq.append(Wait(.45))
+  seq.append(Func(effect5))
+  seq.append(Wait(.45))
+  seq.append(Func(effect6))
+  seq.append(Wait(.45))
+  seq.append(Func(effect7))
+  seq.append(Wait(.45))
+  seq.append(Func(effect8))
+  seq.append(Wait(.45))
+  seq.append(Func(effect9))
+  seq.start()
+  seq.loop()
+onTime() 

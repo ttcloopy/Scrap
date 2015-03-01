@@ -1,0 +1,64 @@
+base.localAvatar.setSystemMessage(0, 'Freckleslam Chain By Andrew Activated')
+
+from direct.interval.IntervalGlobal import *
+
+def part2():
+    base.talkAssistant.sendOpenTalk('Hello Toontown')
+    base.localAvatar.b_setEmoteState(23,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('IM GOING TO ATTACK SOON')
+    base.localAvatar.b_setEmoteState(22,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('I AM FRECKLES SLAM AND IM BACK')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('WE ARE')
+def part6():
+    base.talkAssistant.sendOpenTalk('GOING TO ATTACK!!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part7():
+    base.talkAssistant.sendOpenTalk('SEE YOU SATURDAY!!')
+    base.localAvatar.b_setEmoteState(0,0)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part3))
+  seq.append(Wait(1))
+  seq.append(Func(part4))
+  seq.append(Wait(1))
+  seq.append(Func(part5))
+  seq.append(Wait(1.3))
+  seq.append(Func(part6))
+  seq.append(Wait(1.3))
+  seq.append(Func(part7))
+  seq.append(Wait(1))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()
+
+messenger.send('minigameAbort')
+base.localAvatar.setSystemMessage(0, 'You Just Skipped A trolley Minigame')
+

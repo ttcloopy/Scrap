@@ -1,0 +1,319 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Gabe's buttons"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Gabe's buttons"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    base.localAvatar.setSystemMessage(0, 'Global Teleport Activated Mac Hack Version 1')
+    var = 0
+
+def setText2():
+    bk_text = "Splash"
+    textObject.setText(bk_text)
+    toon = base.cr.doFindAll("put the toon name here")
+    base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+    base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+    var = 1
+
+def setText3():
+    bk_text = "ClearInterior"
+    textObject.setText(bk_text)
+    messenger.send('clearOutToonInterior')
+    var = 1
+
+def setText4():
+    bk_text = "Scarecrow"
+    textObject.setText(bk_text)
+    from direct.distributed.PyDatagram import PyDatagram
+    from direct.distributed.MsgTypes import CLIENT_SET_AVATAR
+    RefreshedAvatar = PyDatagram()
+    base.localAvatar.collisionsOff()
+    RefreshedAvatar.addUint16(CLIENT_SET_AVATAR)
+    RefreshedAvatar.addUint32(base.localAvatar.doId)
+    base.cr.sendDatagram(RefreshedAvatar)
+    base.cr.sendSetZoneMsg(base.localAvatar.getZoneId())
+    base.localAvatar.b_setParent(2)
+    base.localAvatar.b_setAnimState('off')
+    var = 1
+
+def setText5():
+    bk_text = "SkipTutorial"
+    textObject.setText(bk_text)
+    messenger.send('rejectTutorial')
+    base.cr.gameFSM.request('closeShard')
+
+    var = 0
+
+def setText6():
+    bk_text = "RacingClothing"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x16\x05\x00\x01\x76\x09\x69\x09\55\x09\x14\x00\x14\x14')
+    var = 1
+
+def setText7():
+    bk_text = "#1Clothes"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x16\x05\x00\x01\x56\x09\x58\x09\14\x09\x14\x00\x14\x14')
+    var = 1
+
+
+def setText8():
+    bk_text = "MOD"
+    base.talkAssistant.sendOpenTalk('WE ARE MOD CLAN! WE ARE MOD CLAN! WE ARE MOD CLAN!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    base.localAvatar.b_setEmoteState(22,1)
+    var = 1
+
+def setText9():
+    bk_text = "CLoff"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText10():
+    bk_text = "CLon"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+
+def setText11():
+    bk_text = "TrollySkip"
+    textObject.setText(bk_text)
+    messenger.send('minigameAbort') 
+    var = 1
+
+def setText12():
+    bk_text = "Farm"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+
+def setText13():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText14():
+    bk_text = "Upside"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText15():
+    bk_text = "Rule"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MOD Clan will rule! MOD Clan will rule!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    base.localAvatar.b_setEmoteState(22,1)
+    var = 1
+
+def setText16():
+    bk_text = "TrunkSteal"
+    textObject.setText(bk_text)
+    AccessoryTrunk = base.cr.doFindAll("Trunk")[0]
+    AccessoryTrunk.hatList = [16, 0, 0]
+    AccessoryTrunk.backpackList = [6, 0, 0]
+    AccessoryTrunk.glassesList = [10, 0, 0]
+    AccessoryTrunk.shoesList = [2, 8, 0]
+    AccessoryTrunk = base.cr.doFindAll("Trunk")[0]
+    AccessoryTrunk._handleYesImSure()
+    var = 1
+
+def setText17():
+    bk_text = "MOD Unite!"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MOD Clan Unite! MOD Clan Unite! MOD Clan Unite!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    base.localAvatar.b_setEmoteState(22,1)
+    var = 1
+
+def setText18():
+    bk_text = "Side Ways"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText19():
+    bk_text = "Rotate"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlRotateSpeed=1000
+    var = 1
+
+def setText20():
+    bk_text = "CustomClothing"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x16\x02\x00\x01\x58\x09\x58\x09\51\x09\x14\x00\x14\x14')
+    var = 1
+
+def setText21():
+    bk_text = "TrapFails"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('Team Trap Fails! Team Trap Fails! Team Trap Fails!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    base.localAvatar.b_setEmoteState(23,1)
+    var = 1
+
+def setText22():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText23():
+    bk_text = "Sit"
+    textObject.setText(bk_text)
+    base.localAvatar.enterSitStart()  
+    var = 1
+
+def setText24():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState("victory", 10)  
+    var = 1
+
+def setText25():
+    bk_text = "Book"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState("ReadBook", 1, 32074) 
+    var = 1
+
+def setText26():
+    bk_text = "Stealth"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2010) 
+    var = 1
+
+def setText27():
+    bk_text = "SBHQ"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(11100) 
+    var = 1
+
+def setText28():
+    bk_text = "CBHQ"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(12100)
+    var = 1
+
+def setText29():
+    bk_text = "FireworksInTheSky"
+    textObject.setText(bk_text)
+    import toontown
+    from toontown.effects.DistributedFireworkShow import DistributedFireworkShow
+    fireworks = DistributedFireworkShow(base.cr)
+    fireworks.startShow(toontown.toonbase.ToontownGlobals.JULY4_FIREWORKS, 1, 0, render)
+    var = 1
+
+def setText30():
+    bk_text = "ToonFireworks"
+    textObject.setText(bk_text)
+    import toontown
+    Toon = base.localAvatar
+    from toontown.effects.DistributedFireworkShow import DistributedFireworkShow
+    fireworks = DistributedFireworkShow(None)
+    base.talkAssistant.sendOpenTalk('Boom!')
+    fireworks.sendUpdate("shootFirework", [Toon.getX(), Toon.getY(), Toon.getZ(), 2, 2, 2])
+    fireworks.shootFirework(Toon.getX(), Toon.getY(), Toon.getZ(), 2, 2, 2)
+    fireworks.d_requestFirework(Toon.getX(), Toon.getY, Toon.getZ(), 2, 2, 2)
+    base.localAvatar.b_setAnimState("victory", 10)
+    var = 1
+
+def setText31():
+    bk_text = "HouseRAID"
+    textObject.setText(bk_text)
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+    var = 1
+
+def setText32():
+    bk_text = "TailorSteal"
+    textObject.setText(bk_text)
+    npc = base.cr.doFindAll("Tailor")
+    npc[0]._DistributedNPCTailor__enterConfirmLoss(34, 34)
+    var = 1
+
+def setText33():
+    bk_text = "PondTakeOver"
+    textObject.setText(bk_text)
+    base.cr.doFindAll("DistributedFishingSpot")[0].sendUpdate("requestEnter", [])
+    base.cr.doFindAll("DistributedFishingSpot")[1].sendUpdate("requestEnter", [])
+    base.cr.doFindAll("DistributedFishingSpot")[2].sendUpdate("requestEnter", [])
+    base.cr.doFindAll("DistributedFishingSpot")[3].sendUpdate("requestEnter", [])
+    var = 1
+
+def setText34():
+    bk_text = "GirlClothing"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x16\x05\x00\x01\x46\x09\x61\x09\30\x09\x14\x00\x14\x14')
+    var = 1
+
+def setText35():
+    bk_text = "RAID"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 1
+
+def setText36():
+    bk_text = "BLUE"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2001)
+    var = 1
+
+def setText37():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+    var = 1
+
+b1 = DirectButton(text = ("Global", "Global", "Global", "global"), scale=.06, pos = (-.98,-2,-.94), command=setText1)
+b2 = DirectButton(text = ("Splash", "Splash", "Splash", "Splash"), scale=.06, pos = (-.8,-2,-.94), command=setText2)
+b3 = DirectButton(text = ("Interior", "Interior", "Interior", "Interior"), scale=.06, pos = (-.6,-2,-.94), command=setText3)
+b4 = DirectButton(text = ("Scarecrow", "Scarecrow", "scarecrow", "scarecrow"), scale=.06, pos = (-.28,-2,-.94), command=setText4)
+b5 = DirectButton(text = ("Skiptut", "SkipTut", "SkipTut", "SkipTut"), scale=.06, pos = (.10,-2,-.94), command=setText5)
+b6 = DirectButton(text = ("Raceclothes", "Raceclothes", "Raceclothes", "Raceclothes"), scale=.06, pos = (.38,-2,-.94), command=setText6)    
+b7 = DirectButton(text = ("#1clothes", "#1clothes", "#1clothes", "#1clothes"), scale=.06, pos = (.90,-2,-.85), command=setText7)
+b8 = DirectButton(text = ("MOD", "MOD", "MOD", "MOD"), scale=.06, pos = (.70,-2,-.85), command=setText8)
+b9 = DirectButton(text = ("CLOFF", "CLOFF", "CLOFF", "CLOFF"), scale=.06, pos = (.50,-2,-.85), command=setText9)
+b10 = DirectButton(text = ("CLOn", "CLOn", "CLOn", "CLOn"), scale=.06, pos = (.30,-2,-.85), command=setText10)
+b11 = DirectButton(text = ("Trollyskip", "Trollyskip", "Trollyskip", "Trollyskip"), scale=.06, pos = (.10,-2,-.85), command=setText11)    
+b12 = DirectButton(text = ("FARM", "FARM", "FARM", "FARM"), scale=.06, pos = (-.98,-2,-.87), command=setText12) 
+b13 = DirectButton(text = ("TTC", "TTC", "TTC", "TTC"), scale=.06, pos = (-.82,-2,-.87), command=setText13)
+b14 = DirectButton(text = ("Upside", "upside", "upside", "upside"), scale=.06, pos = (-.65,-2,-.85), command=setText14)
+b15 = DirectButton(text = ("Rule", "Rule", "Rule", "Rule"), scale=.06, pos = (-.47,-2,-.87), command=setText15)
+b16 = DirectButton(text = ("TrunkSteal", "TrunkSteal", "TrunkSteal", "TrunkSteal"), scale=.06, pos = (-.25,-2,-.87), command=setText16)
+b17 = DirectButton(text = ("MOD Unite", "MOD Unite", "MOD Unite", "MOD Unite"), scale=.06, pos = (.62,-3,.94), command=setText17)
+b18 = DirectButton(text = ("Side Ways", "Side Ways", "Side Ways", "Side Ways"), scale=.06, pos = (-.65,-2,.94), command=setText18)
+b19 = DirectButton(text = ("Rotate", "Rotate", "Rotate", "Rotate"), scale=.06, pos = (-.90,-2,.94), command=setText19)
+b20 = DirectButton(text = ("CustomClothing", "CustomClothing", "CustomClothing", "CustomClothing"), scale=.06, pos = (-.22,-2,.94), command=setText20)
+b21 = DirectButton(text = ("TrapFails", "TrapFails", "TrapFails", "TrapFails"), scale=.06, pos = (.15,-2,.94), command=setText21)
+b22 = DirectButton(text = ("Dive", "Dive", "Dive", "Dive"), scale=.06, pos = (.40,-2,.94), command=setText22)
+b23 = DirectButton(text = ("Sit", "Sit", "Sit", "Sit"), scale=.06, pos = (.85,-2,.94), command=setText23)
+b24 = DirectButton(text = ("Victory", "Victory", "Victory", "Victory"), scale=.06, pos = (.85,-2,.86), command=setText24)
+b25 = DirectButton(text = ("Book", "Book", "Book", "Book"), scale=.06, pos = (.65,-2,.86), command=setText25)
+b26 = DirectButton(text = ("Stealth", "Stealth", "Stealth", "Stealth"), scale=.06, pos = (.48,-2,.86), command=setText26)
+b27 = DirectButton(text = ("SBHQ", "SBHQ", "SBHQ", "SBHQ"), scale=.06, pos = (.30,-2,.86), command=setText27)
+b28 = DirectButton(text = ("CBHQ", "CBHQ", "CBHQ", "CBHQ"), scale=.06, pos = (.12,-2,.86), command=setText28)
+b29 = DirectButton(text = ("Fireworksinthesky", "Fireworksinthesky", "fireworksinthesky", "fireworksinthesky"), scale=.06, pos = (-.20,-2,.86), command=setText29)
+b30 = DirectButton(text = ("ToonFireworks", "ToonFireworks", "Toonfireworks", "ToonFireworks"), scale=.06, pos = (-.64,-2,.86), command=setText30)
+b31 = DirectButton(text = ("HouseRAID", "HouseRAID", "HouseRaid", "HouseRAID"), scale=.06, pos = (-.85,-2,.78), command=setText31)
+b32 = DirectButton(text = ("TailorSteal", "TailorSteal", "TailorSteal", "TailorSteal"), scale=.06, pos = (-.55,-2,.78), command=setText32)
+b33 = DirectButton(text = ("PondTakeOvr", "PondTakeOvr", "PondTakeOvr", "PondTakeOvr"), scale=.06, pos = (-.23,-2,.78), command=setText33)
+b34 = DirectButton(text = ("GirlClothing", "GirlClothing", "GirlClothing", "GirlClothing"), scale=.06, pos = (.1,-2,.78), command=setText34)
+b35 = DirectButton(text = ("RAID", "RAID", "RAID", "RAID"), scale=.06, pos = (.34,-2,.78), command=setText35)
+b36 = DirectButton(text = ("Blue", "Blue", "Blue", "Blue"), scale=.06, pos = (.49,-2,.78), command=setText36)
+b37 = DirectButton(text = ("RunFast", "RunFast", "RunFast", "RunFast"), scale=.06, pos = (.70,-2,.78), command=setText37)

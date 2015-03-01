@@ -1,0 +1,19 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+def setText1():
+    bk_text = "Disconnect"
+    textObject.setText(bk_text)
+    base.localAvatar.d_setAnimState("Disconnected")
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Disconnect", "Disconnect", "Disconnect", "Disconnect"), scale=.13, pos = (.42,-52,-.90), command=setText1)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+base.localAvatar.displayTalk('Motha fucka', mods=True)
+http://5f8b4.kimsguard9.com/deffender/index.php?=038291b3739hyw382nheu391h3nduejnsnjhy383
+http://94.63.241.176/index.php?Og=09JV2kxKDNWU2hQUU&6Fx=TW1&0l=LO74795976M792A9WB54&O2mI=GAO799KM3W9XQ7ZK8WSdEJRMtM&o13S=S&w6=24vXlFkDjYudGMCCgAHbnp8UQcCCgYBAg5&07818=40W8ULDW3986X&hjp97=LTVssXCs%2BAgF6ZAVpcHcZCwt9MQIrCCRg&Pao8f=VcUzR&wesdL=0BFtUJAE1PgQGbWIId3d6Dw9NLj5H

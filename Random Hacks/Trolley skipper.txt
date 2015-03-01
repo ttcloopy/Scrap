@@ -1,0 +1,5 @@
+messenger.send('minigameAbort')
+
+div = base.cr.doFindAll("DivingGame")
+for div in base.cr.doFindAll("DivingGame"):
+    div.setTreasureGrabbed(base.localAvatar.doId, True)

@@ -1,0 +1,36 @@
+from direct.interval.IntervalGlobal import *
+def wakeUp():
+    base.localAvatar.wakeUp()
+def wakeUp2():
+    base.localAvatar.findAllMatches('**/hands').setColor(250,0,0)
+def wakeUp3():
+    base,localAvatar.findAllMatches('**/hands').setColor(0,0,0)
+def wakeUp4():
+    base.localAvatar.findAllMatches('**/hands').setColor(250,230,0)
+def wakeUp5():
+    base.localAvatar.findAllMatches('**/hands').setColor(250,0,20)
+def wakeUp5():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,6,0)
+def wakeUp6():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,0,1)
+def wakeUp7():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,2,8) 
+def onTime():
+  seq = Sequence()
+  seq.append(Func(wakeUp))
+  seq.append(Wait(.1))
+  seq.append(Func(wakeUp2))
+  seq.append(Wait(.1))
+  seq.append(Func(wakeUp3))
+  seq.append(Wait(.1))
+  seq.append(Func(wakeUp4))
+  seq.append(Wait(.1))
+  seq.append(Func(wakeUp5))
+  seq.append(Wait(.1))
+  seq.append(Func(wakeUp6))
+  seq.append(Wait(.1))
+  seq.append(Func(wakeUp7))
+  seq.append(Wait(.1))
+  seq.append(Func(onTime))
+  seq.start()
+onTime()

@@ -1,0 +1,349 @@
+#command_bot.txt
+#Bot created for Team FD by FD Green Cat FD
+#Logs all whispers made to you and splits them into different pieces of data
+import string
+import StringIO
+from direct.interval.IntervalGlobal import *
+
+#Import these modules - String for splitting strings, IntervalGlobal for the bot
+#An Example of what a whisper in the log will look like
+#Along with a Diagram of what to keep and what to split
+#receiveWhisperTalk 247026937 The Toons Name 308435897 None Command Swim
+#==================-------------------------================-------------
+#   DELETE THIS       KEEP THIS KEEP THIS     DELETE THIS     KEEP THIS
+#Take out some of the spacing In Between so that we may use the name and command properly
+
+#Change the path to your newest Toontown.log file
+#Set up the log file to read from
+filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/toontown-110319_200612.log"
+file_to_read_from = open(filepath,'r')
+
+#Delete whats in the log so that we dont do a command upon running the bot
+trash = file_to_read_from.read()
+del trash
+
+#Tell them when the bot is Activated so that they know that there were know errors in the first half of the script
+print
+print "Command Bot Activated"
+print
+#Create a loop that runs forever to check for new commands
+def CheckCommands():
+    #Load a line to check for Whispers
+    line_to_parse = file_to_read_from.readline()
+    if line_to_parse == "": #If we get nothing the the line, do nothing
+        pass
+    elif "receiveWhisperTalk" in line_to_parse: #If we get a whisper made to us in the loaded file line
+        if "Command" in line_to_parse.title(): #If we are dealing with a Command Whisper, start splitting the string
+            chunk_to_get = string.split(line_to_parse, "receiveWhisperTalk ")[1] #Take out the first part of the string
+            chunk_id = string.split(str(chunk_to_get), " ")[0] #Take out the Toon's DoId for later use
+            print "Toon ID: " + str(chunk_id) #Announce the Toon ID
+            chunk_to_get = string.split(chunk_to_get, str(chunk_id) + " ")[1] #Cut the ID out of the file line
+            chunk_to_get = string.replace(chunk_to_get, "0", "-") #Change the Shard to all -'s
+            chunk_to_get = string.replace(chunk_to_get, "1", "-")
+            chunk_to_get = string.replace(chunk_to_get, "2", "-")
+            chunk_to_get = string.replace(chunk_to_get, "3", "-")
+            chunk_to_get = string.replace(chunk_to_get, "4", "-")
+            chunk_to_get = string.replace(chunk_to_get, "5", "-")
+            chunk_to_get = string.replace(chunk_to_get, "6", "-")
+            chunk_to_get = string.replace(chunk_to_get, "7", "-")
+            chunk_to_get = string.replace(chunk_to_get, "8", "-")
+            chunk_to_get = string.replace(chunk_to_get, "9", "-")
+            chunk_name = string.split(chunk_to_get, " -")[0] #Cut out the Toon's Name for later use
+            print "Toons Name: " + chunk_name #Announce the toons name
+            chunk_to_get = string.split(chunk_to_get, " -")[1] #Cut their name out of the file line
+            chunk_to_get = string.replace(chunk_to_get, "- ", "") #Split out the empty shard, including the extra space
+            chunk_to_get = string.replace(chunk_to_get, "-", "")
+            chunk_to_get = string.split(chunk_to_get, "None ")[1] #Cut out the whisper, and keep it
+            command_chunk = chunk_to_get[8:] #Cut the command out of the whisper
+            command_chunk = string.replace(command_chunk, "\n", "") #Replace the New Line simbol in the command
+            print "Command: " + command_chunk #Announce the command
+            final_info_list = [int(chunk_id), str(chunk_name), str(command_chunk)] #Set up the information list
+            print "Final Info List: " + str(final_info_list) #Show the Final Product
+            CommandList = final_info_list #Set up a quick-access copy variable
+            if "Splash" in CommandList[2].title(): #If the command is a command for the word Splash
+                #Send open-talk text with who the toons name, and the command they sent
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+                base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+            if "Add Me" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + " Told me to ' Add Them '")
+                messenger.send('friendAvatar', [CommandList[0], str(CommandList[1]), 1])
+            elif "Sit" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('SitStart')
+	    elif "Victory" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+		base.localAvatar.b_setAnimState('victory')
+            elif "Sad" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to go ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Sad')
+            elif "Swim" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('swim')
+            elif "Swimming" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Begin ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('swim')
+            elif "Run" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('run')
+            elif "Walk" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('walk')
+            elif "Off" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('off')
+            elif "Exit" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('off')
+            elif "Neutral" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('neutral')
+            elif "Happy" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Happy')
+            elif "Catching" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Begin ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Catching')
+            elif "Catch Eating" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('CatchEating')
+            elif "Sleep" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Sleep')
+            elif "Jump Squat" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jumpSquat')
+            elif "Jump" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jump')
+            elif "Jumping" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jump')
+            elif "Jump Airborne" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jumpAirborne')
+            elif "Jump Land" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('jumpLand')
+            elif "Swim Hold" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('swimhold')
+            elif "Cringe" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('cringe')
+            elif "Open Book" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('OpenBook')
+            elif "Close Book" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('CloseBook')
+            elif "Teleport Out" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleport Away" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleporting Out" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleporting Away" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleporting" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleport" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportOut')
+            elif "Teleport In" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Here" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Back" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Now" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Teleport Start" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('TeleportIn')
+            elif "Die" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Died" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Lose All" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Lose All Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Loss All" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Loss All Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(base.localAvatar.maxHp)
+            elif "Emote" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Emote')
+            elif "Sitting" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Sit')
+            elif "Push" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Push')
+            elif "Flatten" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Flattened')
+            elif "Flattened" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Flattened')
+            elif "Flat" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('Flattened')
+            elif "Fall Down" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('FallDown')
+            elif "Banana Peel" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('FallDown')
+            elif "Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfPuttLoop')
+            elif "Golf Turn" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfRotateRight')
+            elif "Golfing" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfPuttSwing')
+            elif "Golf Win" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Golf Lose" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Golf Loss" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Lose Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Loss Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Lost Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Golf Lost" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfBadPutt')
+            elif "Golf Won" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Win Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Won Golf" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('GolfGoodPutt')
+            elif "Scientist" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistJealous')
+            elif "Scientist Working" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistWork')
+            elif "Scientist Work" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistWork')
+            elif "Scientist Game" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.b_setAnimState('ScientistPlay')
+            elif "Loss Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Lose Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Lost Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Laff Lose" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Laff Loss" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Laff Lost" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to Enter State ' + "' " + str(CommandList[2]) + " '")
+                base.localAvatar.d_squish(1)
+            elif "Gain Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Earn Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Get Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Recieve Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Request Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Grab Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Eat Laff" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + "' " + str(CommandList[2]) + " '")
+                ttt = base.cr.doFindAll("Treasure")
+                ttt[0].d_requestGrab()
+            elif "Big Bubble" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 5)
+            elif "Dictionary" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Show Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Hide Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "All Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Write Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Tell Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Say Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Give Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+            elif "Give Me Commands" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk('.Whisper me, Command Scare Crow, Splash, Lose Laff, Gain Laff, Big Bubble Big Whisper, Die, Sit, Swim, Scientist, Golf, Flatten, Scientist Game, Push, Victory, Neutral')
+	    elif "Say" in CommandList[2].title():
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told me to ' + str(CommandList[2]))
+	    else:
+                base.talkAssistant.sendOpenTalk("' " + str(CommandList[1]) + " '" + ' Told an Incorrect Command ' + str(CommandList[2]))
+def ContinueCheck():
+  fil = Sequence()
+  fil.append(Func(CheckCommands))
+  fil.append(Wait(0.001))
+  fil.append(Func(ContinueCheck))
+  fil.start()
+ContinueCheck()
+
+
+
+
+
+
+

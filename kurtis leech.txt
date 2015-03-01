@@ -1,0 +1,13 @@
+datagramDebug = 1
+try:defaultSend
+except:defaultSend = base.cr.send
+def printSend(datagram):
+    if datagramDebug:print "Message:", datagram.getMessage()
+    if datagramDebug:print "Length:", datagram.getLength(), "\n"
+    defaultSend(datagram)
+base.cr.send = printSend
+
+import toontown
+from toontown.ai.DistributedGreenToonEffectMgr import DistributedGreenToonEffectMgr
+gem = DistributedGreenToonEffectMgr
+gem.addGreenToonEffect(gem(base.localAvatar.cr))

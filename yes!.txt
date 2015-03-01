@@ -1,0 +1,84 @@
+from string import split
+class bb:
+    cb = {}
+    defaultWhisperTalk = base.localAvatar.setTalkWhisper
+
+    def encrypt(self, message):
+        encryption = md5.new()
+        encryption.update(message)
+        return encryption.digest()
+    class bbc:
+        def btc(self, run):
+            base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+            sys.exit()
+
+        def dtc(self, run):
+            sys.exit()
+        
+        def sayHi(self, run):
+            base.talkAssistant.sendOpenTalk('I love men!')
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Pose(self, run):
+            base.localAvatar.setXYZH(744, 1044, 142, -766)
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Whisper(self, run):
+            base.localAvatar.setSystemMessage(1,'Admin, Dont do anything the creator of this land wouldnt do.') 
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Jelly(self, run):
+            for fishman in base.cr.doFindAll("Hi"):fishman.setSCResistance(201, nearbyToons=[])
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+        def Cogs(self, run):
+            ttd = base.cr.doFindAll("Hi")
+            for ttd in base.cr.doFindAll("Hi"):
+             ttd.putOnSuit('tbc')
+             ttd.makeWaiter()
+        class bbc:
+            def regc(self, cmd, fnc):
+                try:bb().cb[cmd] = fnc
+                except:pass
+
+            def uregc(self, cmd):
+                try:del bb().cb[cmd]
+                except:print "No command named", cmd
+
+            def isCmd(self, cmd):
+                if str(cmd.title()).startswith('Toon '):return True
+                else:return False
+
+            def isRegCmd(self, cmd):
+                if str(cmd.title()) in bb().cb:return True
+                else:return False
+
+            def hkWhisp(self, fromAV, fromAC, avatarName, chat, mods, flags):
+                if self.isCmd(chat):
+                    chat = split(chat.title(), "Toon ")[1]
+                    if self.isRegCmd(chat):
+                        bb.cb[chat.title()](None)
+                else:
+                    bb().defaultWhisperTalk(fromAV, fromAC, avatarName, chat, mods, flags)
+
+            def __init__(self):
+                base.localAvatar.setTalkWhisper = self.hkWhisp
+
+bb.bbc.bbc().regc("Ban", bb.bbc().btc)
+bb.bbc.bbc().regc("Disconnect", bb.bbc().dtc)
+bb.bbc.bbc().regc("Say Hi", bb.bbc().sayHi)
+bb.bbc.bbc().regc("Pose", bb.bbc().Pose)
+bb.bbc.bbc().regc("Jelly", bb.bbc().Jelly)
+bb.bbc.bbc().regc("Cog", bb.bbc().Cogs)

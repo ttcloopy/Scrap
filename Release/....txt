@@ -1,0 +1,67 @@
+
+def sjasshk1():
+    base.localAvatar.physControls.avatarControlReverseSpeed=50
+    base.localAvatar.physControls.avatarControlRotateSpeed=140
+    base.localAvatar.physControls.avatarControlJumpForce = 45
+    base.localAvatar.physControls.setGravity(35)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 60
+    base.localAvatar.setSystemMessage(1, 'Super Jump/Super Speed Activated')
+    base.accept("f2", sjasshk2, [])
+def sjasshk2():
+    base.localAvatar.physControls.avatarControlReverseSpeed=10
+    base.localAvatar.physControls.avatarControlRotateSpeed=80
+    base.localAvatar.physControls.avatarControlJumpForce = 20
+    base.localAvatar.physControls.setGravity(40)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 17
+    base.localAvatar.setSystemMessage(1, 'Super Jump/Super Speed De-Activated')
+    base.accept("f2", sjasshk1, [])
+base.accept("f2", sjasshk1, [])
+
+
+
+def laugh():
+    base.localAvatar.setEmoteState(22,1)
+    base.localAvatar.setEmoteState(17,1)
+base.accept("f1", laugh, [])
+def laugh():
+    base.localAvatar.collisionsOff()
+base.accept("f2", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState(('jump'))
+base.accept("f3", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState('SitStart')
+base.accept("f4", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState(('Catching'))
+base.accept("f5", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState('Flattened') 
+base.accept("f6", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState(('TeleportOut'))
+base.accept("f7", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState(('TeleportIn'))
+base.accept("f8", laugh, [])
+def laugh():
+    base.localAvatar.b_setAnimState(('Died'))
+base.accept("f9", laugh, [])
+
+
+
+base.localAvatar.getName(ID)
+base.localAvatar.receiveAcceptGetName('Fd Green Cat Fd')
+base.localAvatar.addName(ID, 'Fd Green Cat Fd')
+base.localAvatar.receiveAcceptAddName(ID)
+
+
+
+
+
+
+
+
+def enter():
+    return 1
+base.cr.isTestServer = enter

@@ -1,0 +1,48 @@
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.talkAssistant.sendOpenTalk('HELLO TOONTOWN!')
+    base.localAvatar.b_setAnimState('ScientistEmcee') 
+def part2():
+    base.talkAssistant.sendOpenTalk('YOU LOSE')
+    base.localAvatar.d_squish(2)
+def part3():
+    base.talkAssistant.sendOpenTalk('THATS RIGHT')
+    base.localAvatar.d_squish(2)
+def part4():
+    base.talkAssistant.sendOpenTalk('We DESTROY!')
+    base.localAvatar.d_squish(2)
+def part5():
+    base.talkAssistant.sendOpenTalk('We are SUPER EPIC')
+    base.localAvatar.d_squish(2)
+def part6():
+    base.talkAssistant.sendOpenTalk('We Are The Chain Clan!')
+def part7():    
+    base.talkAssistant.sendOpenTalk('WE STICK TOGETHER')
+def part8():    
+    base.talkAssistant.sendOpenTalk('                                                                                                                                                              We Are Chain Clan')
+    base.localAvatar.b_setEmoteState(22,1)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(4))
+  seq.append(Func(part2))
+  seq.append(Wait(2))
+  seq.append(Func(part3))
+  seq.append(Wait(2))
+  seq.append(Func(part4))
+  seq.append(Wait(2))
+  seq.append(Func(part5))
+  seq.append(Wait(2))
+  seq.append(Func(part6))
+  seq.append(Wait(2))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(part8))
+  seq.append(Wait(2))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()

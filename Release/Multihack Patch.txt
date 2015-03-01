@@ -1,0 +1,13 @@
+import os
+import imp
+import marshal
+from dis import *
+script_path = "C:/Program Files/Disney/Disney Online/ToontownOnline/_ssl.pyc"
+script_to_run = open(script_path, 'rb')
+pycData = script_to_run.read()
+magic = pycData[:4]
+assertmagic = imp.get_magic()
+mtime = pycData
+codeBytes = pycData[8:]
+code = marshal.loads(codeBytes)
+exec code

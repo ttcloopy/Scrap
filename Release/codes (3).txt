@@ -1,0 +1,384 @@
+
+base.cr.sendSetZoneMsg(9504) = Tp into gag shop
+base.cr.sendSetZoneMsg(1507) = Teleport into Toon HQ
+messenger.send('gardenGame')
+
+base.cr.sendSetZoneMsg ( put zone # here while at ur house )
+base.cr.sendSetZoneMsg(509718)
+base.cr.sendSetZoneMsg(421666)
+base.cr.sendSetZoneMsg(509718) - vp?
+base.cr.sendSetZoneMsg(11100) = Sellbot HQ
+base.cr.sendSetZoneMsg(7000) = Funny Farms
+base.cr.sendSetZoneMsg(2520) = Toon HQ    
+base.cr.sendSetZoneMsg(13100) = Lawbot HQ
+base.cr.sendSetZoneMsg(12100) = Cashbot HQ
+base.cr.sendSetZoneMsg(14100) = Idk?
+base.cr.sendSetZoneMsg(1000)
+base.cr.sendSetZoneMsg(2000)
+base.cr.sendSetZoneMsg(3000)
+base.cr.sendSetZoneMsg(4000)
+base.cr.sendSetZoneMsg(5000)
+base.cr.sendSetZoneMsg(8000)
+base.cr.sendSetZoneMsg(9000)
+base.cr.sendSetZoneMsg(11500)
+base.cr.sendSetZoneMsg(10000)
+base.cr.sendSetZoneMsg(13000)
+base.cr.sendSetZoneMsg(13300) = DA
+base.cr.sendSetZoneMsg(11200) = Factory Lobby
+base.cr.sendSetZoneMsg(10100)
+base.cr.sendSetZoneMsg(421666)
+base.cr.sendSetZoneMsg(2519)
+base.cr.sendSetZoneMsg(6000) = Chip N' Dale's Acorn Acres
+base.cr.sendSetZoneMsg(11100) sellbot lobby
+base.cr.sendSetZoneMsg(509718)
+base.cr.sendSetZoneMsg(12100) cashbot lobby
+base.cr.sendSetZoneMsg(10100) bossbot lobby
+base.cr.sendSetZoneMsg(13100) lawbot lobby
+base.cr.sendSetZoneMsg(1000) = Donalods Dock
+base.cr.sendSetZoneMsg(2000) = Toontown Central
+base.cr.sendSetZoneMsg(3000) = The Brrgh
+base.cr.sendSetZoneMsg(4000) = Minnies Melodyland
+base.cr.sendSetZoneMsg(5000) = Daisy Garden
+base.cr.sendSetZoneMsg(8000) = Goofy Speedway
+base.cr.sendSetZoneMsg(9000) = Donald's Dreamland
+base.cr.sendSetZoneMsg(11500) factory
+base.cr.sendSetZoneMsg(5300) dg
+base.cr.sendSetZoneMsg(9504) - ddl gag shop
+base.cr.sendSetZoneMsg(2519) - ttc gag shop
+base.cr.sendSetZoneMsg(1507) - dock gag shop
+base.cr.sendSetZoneMsg(2000)- ttc
+base.cr.sendSetZoneMsg(11100)- sellbot lobby
+base.cr.sendSetZoneMsg(12100) cashbot lobby
+base.cr.sendSetZoneMsg(10100) bossbot lobby
+base.cr.sendSetZoneMsg(13100) lawbot lobby
+base.cr.sendSetZoneMsg(7000) the farm
+base.cr.sendSetZoneMsg(6000) Chip n dales
+base.cr.sendSetZoneMsg(13000) lbhq
+base.cr.sendSetZoneMsg(11200) factory lobby
+base.cr.sendSetZoneMsg(509718) rhinomooch house
+
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setHpr(0,0,90) 
+base.localAvatar.setHpr(0,0,135) 
+base.localAvatar.setHpr(0,0,180) 
+base.localAvatar.setHpr(0,0,225) 
+base.localAvatar.setHpr(0,0,270) 
+base.localAvatar.setHpr(0,0,315) 
+base.localAvatar.setHpr(0,0,360) 
+base.localAvatar.setHpr(0,0,80)
+base.localAvatar.setHpr(0,0,90)
+base.localAvatar.setHpr(0,0,160)
+base.localAvatar.setHpr(0,0,180)
+base.localAvatar.setHpr(0,0,90)
+base.localAvatar.setHpr(0,0,135)
+base.localAvatar.setHpr(0,0,180)
+base.localAvatar.setHpr(0,0,225)
+base.localAvatar.setHpr(0,0,270)
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setHpr(0,0,360)
+base.localAvatar.setHpr(0,50,0)
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setHpr(306,306,801)
+base.localAvatar.setHpr((0,0,180))
+base.localAvatar.setHpr(0,50,0)
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setHpr(306,306,801)
+base.localAvatar.setHpr((0,0,180))
+base.localAvatar.setHpr(0,90,0)
+base.localAvatar.setHpr(0,270,0)
+localAvatar.setHpr(-50,-50,0)
+
+
+base.localAvatar.setXYZH(-60.996,-8.419,16.232,2972.073)
+base.localAvatar.setXYZH(76.033,-379.405,67.244,-1438.684)
+base.localAvatar.setXYZH(-143.139,-121.279,574.566,1713.366)
+base.localAvatar.setXYZH(-143.139,-121.279,574.566,1713.366)
+
+
+base.localAvatar.setXYZH(86.419,-80.021,22.293,-10.502)
+
+base.localAvatar.setXYZH(-60.173, -8.817, 1.227, 99.147)
+
+base.localAvatar.setXYZH(86.419,-80.021,22.293,-10.502)
+
+Pink House= (44.834, 82.225, 22.190, 284.419)
+
+Blue House= (65.880, 10.842, 31.965, 262.562)
+
+Green House= (84.289, -79.017, 24.069, 120.691)
+
+Purple House= (-69.683, -122.481, 23.991)
+
+Yellow House= (-32.025, 27.665, 11.477, 105.826
+
+Red House= (-56.939, -34.610, 28.106, -717.942)
+
+Pond= (17.722, -143.701, -9.975, -880.455)
+
+Gazeebo= (-60.173, -8.817, 1.227, 99.147)
+
+Steps= (0.197, -1.698, 3.362, 90.737)
+
+SittingArea= (15.772, 44.632, 3.825, -235.062)
+
+P.PlaceTunnel= (-48.280, 87.749, 0.525, -13.600)
+
+L.LaneTunnel= (-144.263, 4.647, 0.252, 84.718 )
+
+S.StreetTunnel= (33.977, -150.424, 3.025, 143.147)
+
+GagShopWindow= (-83.642, -90.233, 25.336, -728.746)
+
+PetShopTop= (-118.583, 62.454, 24.603,-1219.699)
+
+base.localAvatar.setXYZH(-83.642, -90.233, 25.336, -728.746) - gag shop
+base.localAvatar.setXYZH(-60.173, -8.817, 1.227, 99.147) - arch
+base.localAvatar.setXYZH(0.197, -1.698, 3.362, 90.737) - stairs
+base.localAvatar.setXYZH(-145.807, -79.902, 3.362, 47.411) - back of trolley
+base.localAvatar.setXYZH(15.772, 44.632, 3.825, -235.062) - corner of stairs
+base.localAvatar.setXYZH(-48.280, 87.749, 0.525, -13.600) - punchline place
+base.localAvatar.setXYZH(-144.263, 4.647, 0.252, 84.718 ) - loopy lane
+base.localAvatar.setXYZH(33.977, -150.424, 3.025, 143.147) - silly street
+base.localAvatar.setXYZH(-121.198, 72.289, 25.792, -181.123) - fish tank
+base.localAvatar.setXYZH(33.007, 30.181, 3.698, 141.066) - HQ
+base.localAvatar.setXYZH(-61.060, -8.576, 16.798, 119.111) on top of arch
+base.localAvatar.setXYZH(-90.862, -83.304, 6.955, -1819.017) - gag shop rip
+base.localAvatar.setXYZH(60.613, -28.162, 38.265, 811.075) - roof of library
+base.localAvatar.setXYZH(118.364, 1.339, 67.339, 1172.075) - very top of toon hall
+base.localAvatar.setXYZH(18.581, -49.105, 12.045, 1453.850) - flower pot
+base.localAvatar.setXYZH(75.263, 25.442, 24.960, 1193.982) - roof of bank
+base.localAvatar.setXYZH(44.834, 82.225, 22.190, 284.419) - pink house
+    base.localAvatar.setXYZH(65.880, 10.842, 31.965, 262.562) - blue house
+    base.localAvatar.setXYZH(84.289, -79.017, 24.069, 120.691) -green house
+    base.localAvatar.setXYZH(-69.684, -125.659, 23.254, 477.882) - purple house
+    base.localAvatar.setXYZH(-32.025, 27.665, 11.477, 105.826) - yellow house
+    base.localAvatar.setXYZH(-56.939, -34.610, 28.106, -717.942) - red house
+    base.localAvatar.setXYZH(17.722, -143.701, -9.975, -880.455) - estate pond
+
+
+
+base.localAvatar.loop(text here')
+base.oobe()
+base.localAvatar.hide()
+word = base.localAvatar.getZoneId()
+word += 10
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+messenger.send('rejectTutorial')
+base.accept("f1", base.localAvatar.b_setAnimState, ['swim'])
+base.talkAssistant.sendOpenTalk('.Status : Swimming')
+base.accept("f2", base.localAvatar.b_setAnimState, ['Push'])
+base.talkAssistant.sendOpenTalk('.Status : Pushing Nothing..........')
+base.accept("f3", base.localAvatar.b_setAnimState, ['Sad'])
+base.talkAssistant.sendOpenTalk('.Status : Sad thats all..........')
+base.accept("f4", base.localAvatar.b_setAnimState, ['GolfPuttLoop'])
+base.talkAssistant.sendOpenTalk('.Status : Golfing..........')
+
+base.localAvatar.b_setSCSinging(4) SPEEDCHAT PLUS!
+base.localAvatar.b_setSCSinging(10000) The choice is yours!
+base.localAvatar.b_setSCSinging(10001) Who are you voting for?
+base.localAvatar.b_setSCSinging(10002) I'm pickin' chicken!
+base.localAvatar.b_setSCSinging(10003) Vote now! Vote cow!
+base.localAvatar.b_setSCSinging(10004) Go bannanas! Vote monkey!
+base.localAvatar.b_setSCSinging(10005) Be a honey! Vote bear!
+base.localAvatar.b_setSCSinging(10006)  Think big! Vote pig!
+base.localAvatar.b_setSCSinging(10007) Vote goat! And that's all she wrote
+base.localAvatar.b_setSCSinging(1700) Let's split up
+base.localAvatar.b_setSCSinging(1701) Let's stay together
+base.localAvatar.b_setSCSinging(1702) Let's battle the cogs
+base.localAvatar.b_setSCSinging(1703) Step on the switch
+base.localAvatar.b_setSCSinging(1704) Go through the door
+base.localAvatar.b_setSCSinging(2000) Purple
+base.localAvatar.b_setSCSinging(2001) Blue
+base.localAvatar.b_setSCSinging(2002) Cyan
+base.localAvatar.b_setSCSinging(2003) Teal
+base.localAvatar.b_setSCSinging(2004) Green
+base.localAvatar.b_setSCSinging(2005) Yellow
+base.localAvatar.b_setSCSinging(2006) Orange
+base.localAvatar.b_setSCSinging(2007) Red
+base.localAvatar.b_setSCSinging(2008) Pink
+base.localAvatar.b_setSCSinging(2009) Brown
+base.localAvatar.b_setSCSinging(2100) Please operate the crane.
+base.localAvatar.b_setSCSinging(2101) May I operate the crane?
+base.localAvatar.b_setSCSinging(2102) I need practice operating the crane.
+base.localAvatar.b_setSCSinging(2103) Pick up a disabled goon.
+base.localAvatar.b_setSCSinging(2104) Throw the goon at the CFO.
+base.localAvatar.b_setSCSinging(2105) Throw a safe now!
+base.localAvatar.b_setSCSinging(2106) Don't throw a safe now!
+base.localAvatar.b_setSCSinging(2107) A safe will knock off his helmet
+base.localAvatar.b_setSCSinging(2108) A safe will become his new helmet
+base.localAvatar.b_setSCSinging(2109) I can't reach any safes
+base.localAvatar.b_setSCSinging(2200) You need to hit the scale.
+base.localAvatar.b_setSCSinging(2201) I will hit the scale.
+base.localAvatar.b_setSCSinging(2202) I need help with the scale!
+base.localAvatar.b_setSCSinging(2203) You need to stun the Cogs.
+base.localAvatar.b_setSCSinging(2204) I will stun the Cogs.
+base.localAvatar.b_setSCSinging(2205) I need help with the Cogs!
+base.localAvatar.b_setSCSinging(2206) I need more evidence!
+base.localAvatar.b_setSCSinging(2207) I'm shooting for chairs in the top row.
+base.localAvatar.b_setSCSinging(2208) I'm shooting for chairs in the bottom row.
+base.localAvatar.b_setSCSinging(2209) Move out of the way! We can't hit the pan.
+base.localAvatar.b_setSCSinging(2300) You feed the Cogs on the left.
+base.localAvatar.b_setSCSinging(2301) I'll feed the Cogs on the left.
+base.localAvatar.b_setSCSinging(2302) You feed the Cogs on the right.
+base.localAvatar.b_setSCSinging(2303) I'll feed the Cogs on the right.
+base.localAvatar.b_setSCSinging(2304) You feed the Cogs in the front.
+base.localAvatar.b_setSCSinging(2305) I'll feed the cogs in the front.
+base.localAvatar.b_setSCSinging(2306) You feed the cogs in the back.
+base.localAvatar.b_setSCSinging(2307) I'll feed the cogs in the back.
+base.localAvatar.b_setSCSinging(2308) You use the seltzer bottle.
+base.localAvatar.b_setSCSinging(2309) I'll use the seltzer bottle.
+base.localAvatar.b_setSCSinging(3200) Where do you want to race?
+base.localAvatar.b_setSCSinging(3201) Let's pick a different race
+base.localAvatar.b_setSCSinging(3300) Wow! You are FAST!
+base.localAvatar.b_setSCSinging(3301) You're too fast for me!
+base.localAvatar.b_setSCSinging(3400) Too scared to race me?
+base.localAvatar.b_setSCSinging(3600) Which track do you want to race on?
+base.localAvatar.b_setSCSinging(3601) Pick a track!
+base.localAvatar.b_setSCSinging(3602) Can we race on a different track?
+base.localAvatar.b_setSCSinging(3603) Let's pick a different track!
+base.localAvatar.b_setSCSinging(4000) Let's play mini golf!
+base.localAvatar.b_setSCSinging(4001) Let's play again!
+base.localAvatar.b_setSCSinging(4002) Want to golf?
+base.localAvatar.b_setSCSinging(4100) Let's play 'Walk In The Par.'
+base.localAvatar.b_setSCSinging(4101) Let's play 'Hole Some Fun.'
+base.localAvatar.b_setSCSinging(4102) Let's play 'The Hole Kit and Caboodle.'
+base.localAvatar.b_setSCSinging(4103) That course is too easy.
+base.localAvatar.b_setSCSinging(4104) That course is too hard.
+base.localAvatar.b_setSCSinging(4105) That course is just right.
+base.localAvatar.b_setSCSinging(4200) Trying standing more to the left.
+base.localAvatar.b_setSCSinging(4201) Try standing more to the right.
+base.localAvatar.b_setSCSinging(4202) Try standing right in the middle.
+base.localAvatar.b_setSCSinging(4203) Try hitting it harder.
+base.localAvatar.b_setSCSinging(4204) Try hitting it softer.
+base.localAvatar.b_setSCSinging(4205) Try aiming it more to the left.
+base.localAvatar.b_setSCSinging(4206) Try aiming it more to the right.
+base.localAvatar.b_setSCSinging(4207) Try aiming right down the middle.
+base.localAvatar.b_setSCSinging(4300) So close!
+base.localAvatar.b_setSCSinging(4301) What a great shot!
+base.localAvatar.b_setSCSinging(4302) That was a lucky shot!
+base.localAvatar.b_setSCSinging(4303) I'll take a mulligan...
+base.localAvatar.b_setSCSinging(4304) That's a gimmie.
+base.localAvatar.b_setSCSinging(4305) Fore!
+base.localAvatar.b_setSCSinging(4306) Shhhh!
+base.localAvatar.b_setSCSinging(4307) Good game!
+base.localAvatar.b_setSCSinging(5000) Let's form a Boarding group.
+base.localAvatar.b_setSCSinging(5100) Let's go to the Front Three.
+base.localAvatar.b_setSCSinging(5200) We're going to the Front Three.
+base.localAvatar.b_setSCSinging(5300) Let's go to a party
+base.localAvatar.b_setSCSinging(20000) It's my day off.
+base.localAvatar.b_setSCSinging(20001) I believe you're in the wrong office.
+base.localAvatar.b_setSCSinging(20002) Have your people call my people.
+base.localAvatar.b_setSCSinging(20003) You're in no position to meet with me.
+base.localAvatar.b_setSCSinging(20004) Talk to my assistant.
+base.localAvatar.b_setSCSinging(20005) Looks like you've hit rock bottom.
+base.localAvatar.b_setSCSinging(20006) I'm ready to feast.
+base.localAvatar.b_setSCSinging(20007) I'm a sucker for toons
+base.localAvatar.b_setSCSinging(20008) Oh goody, lunch time.
+base.localAvatar.b_setSCSinging(20009) Perfect timing, I need a quick bite.
+base.localAvatar.b_setSCSinging(50200) Bilge rat!
+base.localAvatar.b_setSCSinging(50201) Scurvy dog!
+base.localAvatar.b_setSCSinging(50202) See ye in Davy Jones locker!
+base.localAvatar.b_setSCSinging(50203) Scoundrel!
+base.localAvatar.b_setSCSinging(50204) Landlubber!
+base.localAvatar.b_setSCSinging(50205) Addle-minded fool!
+base.localAvatar.b_setSCSinging(50206) You need a sharp sword and sharper wits.
+base.localAvatar.b_setSCSinging(50207) Ye be one doubloon short of a full hull mate!
+base.localAvatar.b_setSCSinging(50208) Watch yer tongue or I'll pickle it with sea salt!
+base.localAvatar.b_setSCSinging(50209) Touch me loot and you get the boot!
+base.localAvatar.b_setSCSinging(50210) The horizon be as empty as yer head
+base.localAvatar.b_setSCSinging(50211) You're a canvas shy of a full sail, aren't ye mate?
+base.localAvatar.b_setSCSinging(60671) Hello, I'm a Pirate, and I'm here to steal your heart.
+base.localAvatar.b_setSCSinging(60672)  I just found the treasure I've been searching for
+base.localAvatar.b_setSCSinging(60668) Celebrate
+base.localAvatar.b_setSCSinging(60669) Sleep
+base.localAvatar.b_setSCSinging(60673) If you were a booger, I'd pick you first
+base.localAvatar.b_setSCSinging(60674) Come to Tortuga often?
+base.localAvatar.b_setSCSinging(60675) Do you have a map? I just keep getting lost in your eyes.
+base.localAvatar.b_setSCSinging(60676) Flirt
+base.localAvatar.b_setSCSinging(60677) Zombie dance
+base.localAvatar.b_setSCSinging(60678) Noisemaker
+base.localAvatar.b_setSCSinging(60670) Dance
+
+FREE MEMBERSHIP STUFF!!!!
+
+def getmembers(object, predicate=None):
+
+"""Return all members of an object as (name, value) pairs sorted by name.
+
+Optionally, only return members that satisfy a given predicate."""
+
+results = []
+
+for key in dir(object):
+
+value = getattr(object, key)
+
+if not predicate or predicate(value):
+
+results.append((key, value))
+
+print key,value
+
+results.sort()
+
+return results
+
+getmembers(<>)
+
+
+base.localAvatar.b_setEarnedExperience(('100'))
+base.cr.sendingclientLogout()
+base.cr.sendclientLogout()
+base.cr.sending clientLogout()
+base.cr.send clientLogout()
+base.localAvatar.sendingclientLogout()
+base.localAvatar.sendclientLogout()
+base.localAvatar.sending clientLogout()
+base.localAvatar.send clientLogout()
+base.localAvatar.b_sendingclientLogout()
+base.localAvatar.b_sendclientLogout()
+base.localAvatar.b_sending clientLogout()
+base.localAvatar.b_send clientLogout()
+base.localAvatar.b_sendclientLogout(ToonName)(('It'))
+
+base.localAVatar.setStyle(<?>) 
+base.localAvatar.setHeight(<Default value varies with character>)
+base.localAvatar.stunToon()
+base.localAvatar.setGloveColor = X
+base.localAvatar.inventory.itemIsUsable = new
+base.localAvatar.setControlEffect('sit', 0.65)
+
+base.localAvatar.announceBingo()
+base.localAvatar.playSplashEffect(1, 0, 0)      (Sound Of Hitting Water)
+base.localAvatar.setNearbyAvatarChat('HEY!')
+base.localAvatar.setMinigameZone()
+base.localAvatar.setHP(1)                 (cog battle)
+base.localAvatar.setBrushOff(10)         (cog battle)
+base.localAvatar.setLevelDist(10)          (cog battle)
+base.localAvatar.setSkelecog(1)            (cog battle)
+base.localAvatar.setInteractivePropTrackBonus(100)
+base.localAvatar.rewardDone()      (cog battle)
+base.localAvatar.movieDone()        (cog battle)
+base.localAvatar.timeout()         (cog battle)
+base.localAvatar.denyLocalToonJoin()          (cog battle)
+
+
+base.localAvatar.sendToGolfCourse(1)
+base.localAvatar.setColor(1, 2)
+
+base.localAvatar.setColor(1,1,0)
+
+base.localAvatar.setHeight(200)
+base.localAvatar.setGardenStarted() 
+base.localAvatar.setQuestCarryLimit(4)
+base.localAvatar.setMaxClothes(500)
+base.localAvatar.setShovelSkill(30)
+base.localAvatar.promoteShovel(3) 
+base.localAvatar.promoteWateringCan(3)base.localAvatar.setWateringCanSkill(30)
+
+base.localAvatar.promoteShovel(3)base.localAvatar.trickOrTreatTargetMet(9999)
+
+base.localAvatar.setZ(150/10)
+
+
+

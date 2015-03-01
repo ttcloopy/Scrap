@@ -1,0 +1,78 @@
+import sys
+import direct.directbase.DirectStart
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import *
+from direct.actor.Actor import Actor
+from direct.task import Task
+from direct.task.TaskManagerGlobal import taskMgr 
+from math import pi, sin, cos
+from direct.interval.IntervalGlobal import Sequence
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import *
+
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+
+rseHead = loader.loadModel("phase_3/models/char/cat-heads-1000.bam")
+rseHead.setPos(9999,9999,9999)
+
+rseHead.find('**/head-short').setColor(0.832, 0.5, 0.297, 1)
+rseHead.find('**/head-front-short').setColor(0.832, 0.5, 0.297, 1)
+rseHead.find('**/ears-short').setColor(0.832, 0.5, 0.297, 1)
+
+rseBody = Actor({"torso":"phase_3/models/char/dogLL_Shorts-torso-1000.bam", \
+"legs":"phase_3/models/char/dogSS_Shorts-legs-1000.bam"}, \
+
+{"torso":{"neutral":"phase_3/models/char/dogLL_Shorts-torso-neutral.bam"}, \
+"legs":{"neutral":"phase_3/models/char/dogSS_Shorts-legs-neutral.bam"} \
+})
+
+rseShirt = loader.loadTexture("phase_4/maps/CowboyShirt2.jpg")
+rseSleeves = loader.loadTexture("phase_4/maps/CowboySleeve2.jpg")
+rseShorts = loader.loadTexture("phase_4/maps/CowboyShorts1.jpg")
+
+rseBody.find('**/torso-top').setTexture(rseShirt, 1)
+rseBody.find('**/torso-bot').setTexture(rseShorts, 1)
+rseBody.find('**/sleeves').setTexture(rseSleeves, 1)
+rseBody.find('**/torso-bot').setColorScale(25)
+
+rseBody.attach("torso", "legs", "joint_hips")
+
+rseGloves = rseBody.find('**/hands')
+rseGloves.setColor(0.97,0.3,0.3,1)
+
+rseBody.reparentTo(render)
+rseBody.loop("neutral")
+
+neck = rseBody.find('**/neck')
+neck.setColor(0.832, 0.5, 0.297, 1)
+rseBody.setScale(0.76)
+
+rseBody.find('**/arms').setColor(0.832, 0.5, 0.297, 1)
+rseBody.find('**/legs').setColor(0.832, 0.5, 0.297, 1)
+rseBody.find('**/feet').setColor(0.832, 0.5, 0.297, 1)
+
+rseHeadJoint = rseBody.find('**/joint_head')
+rseHead.find('**/muzzle-short-neutral').reparentTo(rseHeadJoint)
+rseHead.find('**/joint_pupilR_short').reparentTo(rseHeadJoint)
+rseHead.find('**/joint_pupilL_short').reparentTo(rseHeadJoint)
+rseHead.find('**/ears-short').reparentTo(rseHeadJoint)
+rseHead.find('**/head-front-short').reparentTo(rseHeadJoint)
+rseHead.find('**/head-short').reparentTo(rseHeadJoint)
+rseHead.find('**/eyes-short').reparentTo(rseHeadJoint)
+
+cigar = loader.loadModel("phase_5/models/props/cigar.bam")
+cigar.reparentTo(rseBody.find('**/muzzle-short-neutral'))
+cigar.setScale(8)
+cigar.setZ(-0.3)
+cigar.setY(1.15)
+cigar.setX(0.3)
+cigar.setH(-20)
+
+cigarSmoke1 = loader.loadModel("phase_4/models/props/tt_m_efx_smoke.bam")
+cigarSmoke2 = loader.loadModel("phase_4/models/props/tt_m_efx_smoke.bam")
+cigarSmoke1.reparentTo(cigar)
+cigarSmoke2.reparentTo(cigar)
+cigarSmoke2.setH(180)
+cigarSmoke2.setY(0.01)
+
+

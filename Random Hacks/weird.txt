@@ -1,0 +1,13 @@
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+def resetPos():
+    Me = base.localAvatar
+    base.localAvatar.d_setPos(Me.getX(), Me.getY(), Me.getZ())
+def recursePos():
+    res = Sequence()
+    res.append(Func(resetPos))
+    res.loop()
+recursePos()
+
+base.cr.wantUpdateCalls = True
+
+http://www.depython.net/

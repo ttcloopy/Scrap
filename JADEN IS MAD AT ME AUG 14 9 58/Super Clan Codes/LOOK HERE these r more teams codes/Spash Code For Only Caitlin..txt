@@ -1,0 +1,16 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "Splash"
+    textObject.setText(bk_text)
+    toon = base.cr.doFindAll("Lady Bingo")
+    base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+    base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+
+b = DirectButton(text = ("Splash", "Activate", "Activate", "Splash"), scale=.06, pos = (-.28,-0,-.95), command=setText)

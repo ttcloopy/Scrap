@@ -1,0 +1,45 @@
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(0,0)
+    base.localAvatar.b_setSCSinging(50702)
+def part2():
+    base.talkAssistant.sendOpenTalk('YOU FAIL')
+    base.localAvatar.b_setEmoteState(23,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('YES YOU ALL DO')
+    base.localAvatar.b_setEmoteState(22,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('WE ARE TEAM MEGA')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('AND YOU CANT STOP US')
+    base.localAvatar.b_setEmoteState(22,1)
+def part6():
+     base.talkAssistant.sendOpenTalk('PEACE!')
+     base.localAvatar.b_setAnimState('TeleportOut')
+def part7():
+     base.talkAssistant.sendOpenTalk('IM BACK!!!')
+     base.localAvatar.b_setAnimState('TeleportIn')
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(3))
+  seq.append(Func(part2))
+  seq.append(Wait(3))
+  seq.append(Func(part3))
+  seq.append(Wait(3))
+  seq.append(Func(part4))
+  seq.append(Wait(3))
+  seq.append(Func(part5))
+  seq.append(Wait(3))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()

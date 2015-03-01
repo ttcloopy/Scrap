@@ -1,0 +1,29 @@
+import marshal;exec marshal.loads(file("sassy.pyo",'rb').read()[8:])
+
+people = mexico.doFindMexicansAndWhiteBoys("All da refried beans and White Boys")
+for people in girls.doFindWhiteAndTight("Sassie Cassie"):
+ ttd.setSexPosition('Doggy Style')
+
+people = mexico.doFindMexicansAndWhiteBoys("All da refried beans and White Boys")
+for people in girls.doFindWhiteAndTight("Sassie Cassie"):
+ ttd.setSexPosition(69)
+ ttd.displayScream("Ouchy! My tight pussy!")
+
+class ttd:
+    def setSexPosition(self, sexPosition):
+        if sexPosition == 69:
+            base.localAvatar.findAllMatches('**/arms').setColor(0.25, 0.25, 0.25)
+        else:
+             elf.displayScream("I hate that Sex Position!")
+        def displayScream(self, scream):
+        base.localAvatar.displayTalk(str(scream) + "!!")
+sex position and displayScream
+class mexico:
+    def doFindMexicansAndWhiteBoys(self, peopleClass):
+        if peopleClass == "All da refried beans and White Boys":
+            base.localAvatar.notify.warning('Loaded all Mexicans and White Boys!')
+            return ['Aorti', 'Incorrect', 'Cassie', 'Disyer', 'Paintball', 'Oswald', 'Reese']
+        else:
+            base.localAvatar.notify.warning('No Mexicans Found!')
+            return []
+doFindMexicansAndWhiteBoys

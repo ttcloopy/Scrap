@@ -1,0 +1,49 @@
+from direct.interval.IntervalGlobal import *
+def toonhq1():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: Oh no! The Cog Bosses are having a talk!')
+def toonhq2():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: You must beat the maze. (Watch out for the goons!)')
+def toonhq3():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: The Toon Council will be helping you.')
+def toonhq4():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: Quickly, beat the maze and find out the Cog Bosses plan!')
+def toonhq5():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: Good luck!')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(toonhq1))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq2))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq3))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq4))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq5))
+  seq.start()
+onTime()
+def openbook():
+    base.localAvatar.b_setAnimState('OpenBook')
+def readbook():
+    base.localAvatar.b_setAnimState('ReadBook')
+def closebook():
+    base.localAvatar.b_setAnimState('CloseBook')
+def tptohole():
+    base.localAvatar.b_setAnimState('TeleportOut')
+def tpfromhole():
+    base.localAvatar.setXYZH(275.299,-585.794,-500.168,-268.849)
+    base.localAvatar.b_setAnimState('TeleportIn')
+def onTime():
+  seq = Sequence()
+  seq.append(Wait(5))
+  seq.append(Func(openbook))
+  seq.append(Wait(1))
+  seq.append(Func(readbook))
+  seq.append(Wait(5.0))
+  seq.append(Func(closebook))
+  seq.append(Wait(2.0))
+  seq.append(Func(tptohole))
+  seq.append(Wait(4.0))
+  seq.append(Func(tpfromhole))
+  seq.start()
+onTime()

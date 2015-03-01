@@ -1,0 +1,633 @@
+This is Sushi I'm giving out hack pack, The reason why I decided to give out these
+codes are because i've been in ToonValley. Toons SOMETIMES even hackers ask, "How 
+do you do that?" Oh. Enjoy~ 
+
+White Toon Code-
+import toontown
+try:getGenderColorList
+except:getGenderColorList = toontown.makeatoon.ColorShop.ColorShop.getGenderColorList
+def returnColorList(self, *args):
+ return range(-1,26,1)
+toontown.makeatoon.ColorShop.ColorShop.getGenderColorList = returnColorList
+
+Splash Code-
+toon = base.cr.doFindAll("Toon name here")
+base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+base.localAvatar.playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+
+Trolley Skip-
+messenger.send('minigameAbort')
+
+Global Teleport-
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1  
+
+Server Cog Suit-
+playground = base.cr.doFindAll("render/")
+for toon in playground:
+if toon.doId != base.localAvatar.doId:
+serverCogSuit = base.localAvatar.dclass.clientFormatUpdate("setCogIndex", toon.doId, [0])
+base.cr.send(serverCogSuit)
+
+Membership Code-
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+
+Client Fireworks-
+import toontown
+Me = base.localAvatar
+from toontown.effects.DistributedFireworkShow import DistributedFireworkShow
+fireworks = DistributedFireworkShow(None)
+fireworks.sendUpdate("shootFirework", [Me.getX(), Me.getY(), Me.getZ(), 1, 1, 1])
+fireworks.shootFirework(Me.getX(), Me.getY(), Me.getZ(), 1, 1, 1)
+fireworks.d_requestFirework(Me.getX(), Me.getY, Me.getZ(), 1, 1, 1)
+fireworks.shootFirework(Me.getX(), Me.getY(), Me.getZ(), 3, 1, 1)
+fireworks.d_requestFirework(Me.getX(), Me.getY, Me.getZ(), 3, 1, 1)
+base.localAvatar.b_setAnimState('jump')
+
+Access All Emotes-
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+
+
+Skip ToonTutorial-
+messenger.send('rejectTutorial')
+base.cr.gameFSM.request('closeShard')
+
+
+Steal Clothes-
+closetn = base.cr.doFindAll("closet")
+for closetn in base.cr.doFindAll("closet"):
+ messenger.send("purchaseDone-" + str(closetn.doId)) 
+
+Laff Codes-
+base.localAvatar.toonUp(137) 
+base.localAvatar.takeDamage(500) 
+base.localAvatar.setMaxHp(15) 
+base.localAvatar.setHp(15) 
+
+Sit Code-
+base.localAvatar.b_setAnimState(('Sit'))
+
+Swim Code-
+base.localAvatar.b_setAnimState('swim')
+
+House Raid-
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "ZoneFound"
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+
+b = DirectButton(text = ("Raid House", "Activate", "Activate", "Raid House"), scale=.06, pos = (-.28,-0,-.95), command=setText)
+
+
+
+
+Hacker Chat-
+import toontown, otp
+
+__builtins__.__hcm__ = 0
+
+try:decodeTTSCToontaskMsg
+except:decodeTTSCToontaskMsg = toontown.speedchat.TTSCDecoders.decodeTTSCToontaskMsg
+
+try:ToonTown_sendSetZoneMsgOriginal
+except:ToonTown_sendSetZoneMsgOriginal = base.cr.sendSetZoneMsg
+
+class HackerChat:
+
+    TextToNum = {'a':750,'b':751,'c':752,'d':753,
+                 'e':754,'f':755,'g':756,'h':757,
+                 'i':758,'j':759,'k':760,'l':761,
+                 'm':762,'n':763,'o':764,'p':765,
+                 'q':766,'r':767,'s':768,'t':769,
+                 'u':770,'v':771,'w':772,'x':773,
+                 'y':774,'z':775,'A':776,'B':777,
+                 'C':778,'D':779,'E':780,'F':781,
+                 'G':782,'H':783,'I':784,'J':785,
+                 'K':786,'L':787,'M':788,'N':789,
+                 'O':790,'P':791,'Q':792,'R':793,
+                 'S':794,'T':795,'U':796,'V':797,
+                 'W':798,'X':799,'Y':800,'Z':801,
+                 '1':804,'2':805,'3':806,'4':807,
+                 '5':808,'6':809,'7':810,'8':811,
+                 '9':812,'0':813,'!':814,'@':815,
+                 '#':816,'$':817,'%':818,'^':819,
+                 '&':820,'*':821,'(':822,')':823,
+                 '-':824,'_':825,'+':826,'=':827,
+                 '~':828,'`':829,'<':830,'>':831,
+                 ',':832,'.':833,'/':834,'\\':835,
+                 '"':836,'\'':837,':':838,';':839,
+                 '[':840,'{':841,']':842,'}':843,
+                 '|':844,'\n':845,'?':846," ":847}
+
+    def clearHackerchat(self, OpenString):
+
+        exec("self.HackerchatString_" + str(OpenString) + " = ''")
+
+    def appendHackerchat(self, letter, OpenString):
+
+        exec("self.HackerchatString_" + str(OpenString) + " += letter")
+
+    def playHackerChat(self, ToonId, OpenString):
+
+        if ToonId in list(base.cr.doId2do):
+
+            CFTimeout, CFThought = 8, 2
+            CFQuicktalker, CFSpeech = 4, 1
+
+            base.localAvatar.nametag.setColorCode(3)
+
+            self.updateNametag(ToonId)
+            DistToon = base.cr.doId2do.get(ToonId)
+
+            QTColor = DistToon.nametag.getQtColor()
+
+            from pandac.PandaModules import VBase4
+            DistToon.nametag.setQtColor(VBase4(0.5, 0.5, 0.5, 1))
+
+            chatFlags = CFQuicktalker
+
+            # if self.HackerchatString_2.startswith('.'):chatFlags +=
+            exec("if self.HackerchatString_" + str(OpenString) + ".startswith('.'):chatFlags += CFThought")
+            exec("if self.HackerchatString_" + str(OpenString) + ".startswith('.') != True:chatFlags += CFSpeech + CFTimeout")
+            exec("if self.HackerchatString_" + str(OpenString) + ".startswith('.'):self.HackerchatString_" + str(OpenString) + " = self.HackerchatString_" + str(OpenString) + "[1:]")
+
+            exec("DistToon.setChatAbsolute(self.HackerchatString_" + str(OpenString) + ", chatFlags)")
+
+            DistToon.nametag.setQtColor(QTColor)
+
+    def sendServerString(self, OpenString, NumList):
+
+        for number in NumList:
+            base.localAvatar.b_setSCToontask(number, 0, OpenString, 83)
+
+    def sendServerClear(self, OpenString):
+
+        base.localAvatar.b_setSCToontask(802, 0, OpenString, 83)
+
+    def sendHackerChat(self, OpenString):
+
+        base.localAvatar.b_setSCToontask(803, base.localAvatar.doId, OpenString, 83)
+
+    def translateString(self, string):
+
+        NumList = []
+
+        for letter in string:
+            try:
+                NumList.append(self.TextToNum[letter])
+            except:
+                NumList.append(846)
+
+        return NumList
+
+    def getOpenString(self):
+
+        if self.HackerchatString_1 == '':
+            return 1
+        elif self.HackerchatString_2 == '':
+            return 2
+        elif self.HackerchatString_3 == '':
+            return 3
+        elif self.HackerchatString_4 == '':
+            return 4
+        elif self.HackerchatString_5 == '':
+            return 5
+        else: # No open strings
+            return 0
+
+    def sayHackerChat(self, string):
+
+        NumList = self.translateString(string)
+        OpenString = self.getOpenString()
+
+        if OpenString != 0:
+            self.sendServerString(OpenString, NumList)
+            self.sendHackerChat(OpenString)
+
+            self.sendServerClear(OpenString)
+
+    def updateNametag(self, ToonId):
+
+        if ToonId in list(base.cr.doId2do):
+            DistToon = base.cr.doId2do.get(ToonId)
+            DistToon.nametag.setColorCode(3)
+
+    def handleZoneSwitch(self, ZoneId, VizualZones=None):
+
+        global ToonTown_sendSetZoneMsgOriginal
+
+        ToonTown_sendSetZoneMsgOriginal(ZoneId, VizualZones)
+        self.requestUpdate()
+
+    def requestUpdate(self):
+
+        base.localAvatar.b_setSCToontask(804, 0, 6, 83)
+
+    def __init__(self):
+
+        base.cr.sendSetZoneMsg = self.handleZoneSwitch
+
+        base.localAvatar.nametag.setColorCode(3)
+
+        self.HackerchatString_1 = ''
+        self.HackerchatString_2 = ''
+        self.HackerchatString_3 = ''
+        self.HackerchatString_4 = ''
+        self.HackerchatString_5 = ''
+
+base.localAvatar.chatMgr.chatInputWhiteList.HackerChat = HackerChat()
+del HackerChat # Delete Global HackerChat Class
+
+class ChatListener:
+
+    global decodeTTSCToontaskMsg
+
+    def interpretTask(self, taskId, toNpcId, toonProgress, msgIndex):
+
+        if msgIndex == 83:
+            if toonProgress == 1:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 1)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(1)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 1)
+            elif toonProgress == 2:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 2)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(2)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 2)
+            elif toonProgress == 3:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 3)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(3)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 3)
+            elif toonProgress == 4:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 4)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(4)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 4)
+            elif toonProgress == 5:
+                if taskId != 802 and taskId != 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.appendHackerchat(self.NumToText[taskId], 5)
+                elif taskId == 802:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.clearHackerchat(5)
+                elif taskId == 803:
+                    base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.playHackerChat(toNpcId, 5)
+            elif toonProgress == 6:
+                if taskId == 804: # Request Update
+                    base.localAvatar.b_setSCToontask(805, base.localAvatar.doId, 6, 83)
+                elif taskId == 805: # Send Update
+                    try:
+                        DistToon = base.cr.doId2do.get(toNpcId)
+                        DistToon.nametag.setColorCode(3)
+
+                        if __builtins__.__hcm__ == True:
+                            base.localAvatar.b_setSCToontask(806, base.localAvatar.doId, 6, 83)
+                    except: # Couldn't set Nametag
+                        pass
+                elif taskId == 806: # Black Admin Gloves
+                    try:
+                        DistToon = base.cr.doId2do.get(toNpcId)
+                        DistHands = DistToon.findAllMatches('**/hands')
+                        DistHands.setColor(0.4, 0.4, 0.4, 1)
+                    except:
+                        pass
+            else:
+                return decodeTTSCToontaskMsg(taskId, toNpcId, toonProgress, msgIndex)
+        else:
+            return decodeTTSCToontaskMsg(taskId, toNpcId, toonProgress, msgIndex)
+
+    def __init__(self):
+
+        self.NumToText = {}
+
+        for item in base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.TextToNum.items():
+            self.NumToText[item[1]] = item[0]
+
+        toontown.speedchat.TTSCDecoders.decodeTTSCToontaskMsg = self.interpretTask
+
+base.localAvatar.chatMgr.chatInputWhiteList.ChatListener = ChatListener()
+del ChatListener # Delete Global ChatListener Class
+
+class ChatHook:
+
+    from toontown.chat.TTTalkAssistant import TTTalkAssistant
+    _sendOpenTalk = TTTalkAssistant.sendOpenTalk
+
+    from toontown.chat.TTWhiteList import TTWhiteList
+    _isPrefix = TTWhiteList.isPrefix
+    _isWord = TTWhiteList.isWord
+
+    def sendOpenTalk(self, message):
+
+        if message.startswith('/'):
+
+            message = message[1:]
+
+            if message != '':
+                base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.sayHackerChat(message)
+        else:
+            self._sendOpenTalk(base.talkAssistant, message)
+
+    def isWord(self, text):
+
+        if text.startswith('/'):
+            return True
+        elif base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get(1).startswith(':'):
+            return True
+        else:
+            return self._isWord(base.whiteList, text)
+
+    def isPrefix(self, text):
+
+        if text.startswith('/'):
+            return True
+        elif base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get(1).startswith(':'):
+            return True
+        else:
+            return self._isPrefix(base.whiteList, text)
+
+    def __init__(self):
+
+        toontown.chat.TTTalkAssistant.TTTalkAssistant.sendOpenTalk = self.sendOpenTalk
+        toontown.chat.TTWhiteList.TTWhiteList.isPrefix = self.isPrefix
+        toontown.chat.TTWhiteList.TTWhiteList.isWord = self.isWord
+
+        base.localAvatar.chatMgr.chatInputWhiteList.HackerChat.requestUpdate()
+        base.localAvatar.b_setSCToontask(805, base.localAvatar.doId, 6, 83)
+
+base.localAvatar.chatMgr.chatInputWhiteList.ChatHook = ChatHook()
+del ChatHook # Delete Global ChatHook Class
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DNA Codes (Clothes)-
+
+Okay, So I won't be making the clothes here. So just change the numbers and stuff. 
+Okay... So Here's The Key~ Oh here's a free DNA.
+
+Purple Scientist:
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+
+
+Type of Animal: Animal Heads/Vary in size.
+--------------
+1a=Bear
+1b=Bear
+1c=Bear
+1d=Bear
+1e=Pig
+1f=Pig
+00=Dog
+01=Dog
+02=Dog
+03=Dog
+04=Cat
+05=Cat
+06=Cat
+07=Cat
+08=Horse
+09=Horse
+10=Rabbit
+11=Rabbit
+12=Duck
+13=Duck
+14=Duck
+15=Duck
+16=Monkey      
+17=Monkey      
+18=Monkey
+19=Monkey
+________________________________________________________________
+Weight of the Type of animal:Varies in size
+00=Fat (Guy)
+01=Normal (Guy)
+02=Skinny (Guy)
+03=Fat (Girl)
+04=Normal (Girl)
+05=Skinny (Girl)
+________________________________________________________________
+Height
+01=Short
+02=Normal
+03=Tall
+________________________________________________________________
+Shirts
+-----------
+1a=Line Outline
+1b=Island Shirt
+1c=1 Shirt
+1d=Ghost Shirt
+1e=Pumpkin Shirt
+1f=Snowman Shirt
+00=Plain
+01=Line Border
+02=Button Up Shirt
+03=Purple Stripes
+04=Stripes Yellow/blue
+05=Pocket Shirt
+06=Flowers
+07=Flower Border
+08=Leafs
+10=Soccer
+11=lightning bolt
+12=19 shirt
+13=Cassual Shirt, pockets
+14=hearts
+15=stars
+16=flowers
+17=Stripes, blue/yellow
+18=Pink 2 piece
+19=Yellow sweater
+21=Snowflake borders
+21=Hearts Borders
+22=Scarf
+23=Blue/yellow shirt
+24=Lace in the middle
+25=Line down the middle
+26=Purple Star
+27=Checkers Border
+28=Jersey
+29=Hearts and dashes
+30=Gold and Rainbow
+31=Fisherman Vest
+32=Fish Under the Sea
+33=Paw
+34=Sheriff
+35=Cowboy, Checkers
+36=Cowboy, Cactus
+37=Cowboy, Vest, Bandana
+38=Green, Sweater Pull Over
+39=Blue, Sweater Pull Over
+40=Strawberry
+41=Racing, Checkerflags
+42=Banana Shirt (Trap )
+43=Bike Horn Shirt (Sound)
+44=Hypno Googles Shirt (Lure)
+45=Cupic Shirt
+46=Polka Dot Hearts
+47=Stripes
+48=Clownfish
+49=Boot
+50=Sun with Glasses
+51=Beachball
+52=Plaid Shirt
+53=Polka Dots
+54=Bumblebee
+55=Super Toon
+56=Toon Marathon Medal Shirt
+57=Trash can Shirt
+58=Ship Shirt
+59=Silly Meter Check Shirt
+60=Bow Shirt
+61=Scientist Shirt, Bow Tie Pen Version
+62=Scientist shirt, Tie, Banana, and Pen Version
+63=Scientist Shirt, Tie, Lollipop, Pen Version
+64=Mailbox Shirt
+65=Garbage Can
+66=Looney Louis Atom Shirt
+67=Fire Hydrant
+68=Silly Meter
+69=Cog Crusher Shirt
+70=Jellybean Jar Shirt
+71=Doodle Shirt
+72=Vampire Shirt
+73=Turtle Shirt
+74=Saint Patrick's Day Shirt(Blazer)
+75=Sellbot HQ Shirt
+76=Goofy Speedway, Shirt Limited Edition
+77=Plain
+______________________________________________________________________________
+Colors:Varies
+Codes you can use are:
+1a
+1b
+1c
+1d
+1e
+1f
+00
+01
+02
+03
+04
+05
+06
+07
+08
+___________________________________________________________________________________________
+Shorts:
+1a:Heart Shorts
+1b:Stars and Circles
+1c:Stripe Rectangles
+1d:Little Fishies
+1e:Plaid Shorts
+1f:BumbleBee Shorts
+00:Plain
+01:Shorts with Belt
+02:Pockets
+03:Leaves
+04:Stipes on side
+05:Stripes on bottom
+06:Lightning Bolt On side
+07:Jeans
+08:Heart Buckle
+09:Mixed up colors, stripes
+10:Blue (Trap) Outfit Shorts
+11:Sound Outfit Shorts
+12:Lure Outfit Shorts
+13:Snowman Shorts
+14:Snowflake Shorts
+15:Mint Shorts
+16:Christimas Green and Red Shorts
+17:Heart with an arrow Shorts
+18:Heart Shorts
+19:Fisherman Shorts
+20:Super Toon Shorts
+21:Belt,Pockets
+22:Jellybean Shorts
+23:Spider Shorts
+24:Skeleton Shorts
+25:Scientist Shorts #1
+26:Scientist Shorts #2
+27:Scientist Shorts #3
+28:Cog Crusher Shorts
+29:Resistance Ranger Shorts
+30:Ninja Shorts/Pirate
+31:Super Toon Shorts (Also number20)
+32:Black Shorts
+33:Dinotoon (Dinosaur) Shorts
+34:Plain
+___________________________________
+Colors Vary:
+Use Numbers like:
+1a
+1b
+1c
+1d
+1e
+1f
+00
+01
+02
+___________________________________
+Toon Arm Colors:
+Use Numbers like
+1a.. 1b.. 1c... 1d.. 1e...
+1f... 00... 01... 
+_______________________________
+Toon Glove Colors:
+Use numbers like 1a... 1b.. 1c..
+1d... 1e...1f...00...01..02.. 
+___________________________________
+Toon Leg colors:
+Use numbers like.. 1a.. 1b.. 1c..
+1d..1e..1f...00...01...02..03..04..
+
+___________________________________
+Toon Head Color:
+Use Numbers like 1a..1b..1c..1d.
+1e...1f..00..01..02.. 
+ 
+
+Okay so.. Just to make this clear, I did not make the codes. I just found them. 
+SO, Whatever, I'm not gonna make a whole speech. Very few codes here BUT! 
+Yeah.
+
+
+
+
+
+
+
+
+
+
+

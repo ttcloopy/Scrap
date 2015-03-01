@@ -1,0 +1,678 @@
+Walk Through anything:
+base.localAvatar.collisionsOff()
+
+Jake Suit: base.localAvatar.setDNAString('t\x01\x02\x01\x01\x5e\x06\x54\x06\x29\x09\x14\x00\x14\x14')
+2nd Version: base.localAvatar.setDNAString('t\x01\x02\x01\x01\x37\x09\x62\x09\x29\x09\x14\x00\x14\x14')
+Skirt jake suit thing:base.localAvatar.setDNAString('t\x16\x05\x01\x01\x37\x09\x62\x09\x29\x09\x14\x00\x14\x14')
+
+Skirt thing:base.localAvatar.setDNAString('t\x16\x05\x00\x01\x76\x09\x50\x09\55\x09\x14\x00\x14\x14')
+
+White shirt with purple Shorts: base.localAvatar.setDNAString('t\x01\x02\x01\x01\x00\x1b\x00\x1b\x29\x1b\x14\x00\x14\x14')
+
+White suit: base.localAvatar.setDNAString('t\x01\x02\x01\x01\x00\x1b\x00\x1b\x00\x1b\x14\x00\x14\x14')
+
+Teleport Anywhere: 
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+
+Ban Blocker:
+def banBlock(log):
+fileToRead = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + str(log)
+readFile = open('%s'%(fileToRead),'r')
+trash = readFile.read()
+del trash
+def blockBan(): line_to_parse = readFile.readline() line_to_parse = str(line_to_parse) if "Server is booting us out" in line_to_parse: messenger.send('pandaRenderError') else: None
+def alwaysGo():
+seq.append(Func(blockBan))
+seq.append(Wait(0.1))
+seq.append(Func(alwaysGo))
+seq.start()
+alwaysGo()
+
+Pies and cake:
+base.localAvatar.setNumPies(100) 
+base.localAvatar.setPieType(5)
+
+Super Speed:
+base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+Super Jump:
+base.localAvatar.physControls.avatarControlJumpForce = 100
+
+Change look to scientist:
+base.localAvatar.setColor(111,0.7122,0.544)
+shirts3=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistA.jpg")
+sleve3=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts3=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistA.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts3, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts3, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve3, 1)
+
+Live Scientist Suit 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Loony Lab ( MONKEY) 
+base.localAvatar.setDNAString('t\x01\x02\x01\x01\x62\x1b\x00\x1b\x26\x1b\x14\x00\x14\x14') 
+
+Skirt Mode 
+base.localAvatar.setDNAString('t\x01\x04\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Extra 
+base.localAvatar.setDNAString('t\x02\x01\x02\x01\x62\x1b\x00\x1b\x27\x5b\x10\x00\x10\x10') 
+
+Test Town Shirt 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x01\x1b\x01\x1b\x27\x1b\x14\x00\x14\x14') 
+
+White Flippy Clothes 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x03\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Garden Clothes 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x07\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Star 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x07\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+VP Shorts 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x47\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Clown Fish 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x48\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Boot 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x49\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Green Vine Down 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x25\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Race Shirt 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x27\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+3D Text Form 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x28\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Cow Boy Red/Blue 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Lure 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x44\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+
+Sun 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x50\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Sand 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x51\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Bubble Shirt 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x53\x1b\x48\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Bee 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x54\x1b\x49\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Medal Shirt 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x56\x1b\x01\x1b\x20\x1b\x14\x00\x14\x14') 
+
+Jellybean Short 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x56\x1b\x01\x1b\x22\x1b\x14\x00\x14\x14') 
+
+Building Saver 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x57\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Building Saver Suit 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x58\x1b\x55\x1b\x21\x1b\x14\x00\x14\x14') 
+
+Calendar 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x59\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Red Bow Paint Scientist Suit 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x61\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Purple Tie Scientist Suit 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+Green Tie Scientist Suit 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x63\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+
+All Blue Scienitst 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1c\x02\x1c\x27\x1c\x14\x00\x14\x14') 
+
+Vp Sleeve 
+base.localAvatar.setDNAString('t\x01\x02\x01\x01\x56\x1b\x62\x1b\x29\x1b\x14\x00\x14\x14')
+
+Skip Trolly Game:
+messenger.send('minigameAbort')
+
+Colored Gloves:
+def white():
+base.localAvatar.findAllMatches('**/hands').setColor(1.0,1.0,1.0)
+base.localAvatar.setSystemMessage(1,'White gloves enabled!')
+def black():
+base.localAvatar.findAllMatches('**/hands').setColor(0.20,0.20,0.3)
+base.localAvatar.setSystemMessage(1,'Black gloves enabled!')
+def red():
+base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+base.localAvatar.setSystemMessage(1,'Red gloves enabled!')
+def pink():
+base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+base.localAvatar.setSystemMessage(1,'Pink gloves enabled!')
+def purple():
+base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+base.localAvatar.setSystemMessage(1,'Purple gloves enabled!')
+def green():
+base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+base.localAvatar.setSystemMessage(1,'Green gloves enabled!')
+def yellow():
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+base.localAvatar.setSystemMessage(1,'Yellow gloves enabled!')
+def darkblue():
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+base.localAvatar.setSystemMessage(1,'Dark blue gloves enabled!')
+def blue():
+base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+base.localAvatar.setSystemMessage(1,'Blue gloves enabled!')
+def orange():
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+base.localAvatar.setSystemMessage(1,'Orange gloves enabled!')
+def cream():
+base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+base.localAvatar.setSystemMessage(1,'Cream gloves enabled!')
+def perwinkle():
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+base.localAvatar.setSystemMessage(1,'Perwinkle gloves enabled!')
+def gray():
+base.localAvatar.findAllMatches('**/hands').setColor(0.70,0.70,0.70)
+base.localAvatar.setSystemMessage(1,'Gray gloves enabled!')
+
+Change Gloves to JPEGS:
+gloves = loader.loadTexture("phase_5.5/maps/windowView_Stars2.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5.5/maps/flakes_border.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+Specific Colored Gloves:
+base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)# - red
+base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)# - pink
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.44,1)# - pinkish
+base.localAvatar.findAllMatches('**/hands').setColor(0.86,0.4,0.42)# - pink 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)# - purple
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,0,1)# - neon purple
+base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)# - green
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,1,0)# - neon green 1
+base.localAvatar.findAllMatches('**/hands').setColor(0.0,1.0,0.0)# - neon green 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.2,0.3,0.11)# - rusty green
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.82,0.32)# - lime green
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)# - yellow
+base.localAvatar.findAllMatches('**/hands').setColor(0.28,0.33,0.73)# - dark blue
+base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)# - blue
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,1,1)# - blue 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.43,0.9,0.84)# - blue 3
+base.localAvatar.findAllMatches('**/hands').setColor(0,0.44,1)# - weird blue
+base.localAvatar.findAllMatches('**/hands').setColor(0,0.44,0.44)# - rusty aqua
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)# - orange
+base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)# - cream
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)# - perwinkle
+base.localAvatar.findAllMatches('**/hands').setColor(0.70,0.70,0.70)# - gray
+base.localAvatar.findAllMatches('**/hands').setColor(1.0,1.0,1.0)# - white
+base.localAvatar.findAllMatches('**/hands').setColor(0.20,0.20,0.3)# - black
+base.localAvatar.findAllMatches('**/hands').setColor(0,0,0.4)# - ink
+base.localAvatar.findAllMatches('**/hands').setColor(0.38,0.72,0.72)# - aqua
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,1,0.85)# - aqua 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.62,0.26,0.36)# - red, pinkish
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,0,0.1)# - rusty red, pinkish
+base.localAvatar.findAllMatches('**/hands').setColor(0.64,0.35,0.27)# - brown
+base.localAvatar.findAllMatches('**/hands').setColor(0.72,1,0.36)# - olive
+base.localAvatar.findAllMatches('**/hands').setColor(0.57,0.45,0.16)# - swamp
+
+Run Fast:
+base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+High Jumps:
+base.localAvatar.physControls.avatarControlJumpForce = 100
+
+Toon Effects:
+base.localAvatar.setCheesyEffect(14, 0, 0)# --snowman head -
+base.localAvatar.setCheesyEffect(13, 0, 0)# --white 1-
+base.localAvatar.setCheesyEffect(12, 0, 0)# --pumpkin head-
+base.localAvatar.setCheesyEffect(11, 0, 0)# --no head-
+base.localAvatar.setCheesyEffect(10, 0, 0)# --white 2-
+base.localAvatar.setCheesyEffect(9, 0, 0)# --invisible-
+base.localAvatar.setCheesyEffect(8, 0, 0)# --sideways 1-
+base.localAvatar.setCheesyEffect(7, 0, 0)# --sideways 2-
+base.localAvatar.setCheesyEffect(6, 0, 0)# --small toon-
+base.localAvatar.setCheesyEffect(5, 0, 0)# --big toon-
+base.localAvatar.setCheesyEffect(4, 0, 0)# --small feet-
+base.localAvatar.setCheesyEffect(3, 0, 0)# --big feet-
+base.localAvatar.setCheesyEffect(1, 0, 0)# --big head-
+base.localAvatar.setCheesyEffect(2, 0, 0)# --small head-
+
+Face Lifter:
+base.localAvatar.showNormalMuzzle()
+base.localAvatar.showAngryMuzzle()
+base.localAvatar.showSmileMuzzle()
+base.localAvatar.showSadMuzzle()
+base.localAvatar.showLaughMuzzle()
+base.localAvatar.showSurpriseMuzzle()
+
+base.localAvatar.hideNormalMuzzle()
+base.localAvatar.hideAngryMuzzle()
+base.localAvatar.hideSmileMuzzle()
+base.localAvatar.hideSadMuzzle()
+base.localAvatar.hideLaughMuzzle()
+base.localAvatar.hideSurpriseMuzzle()
+
+Fishing Code:
+fishCaught = 0
+
+fishCaught += 20
+from direct.interval.IntervalGlobal import *
+def catch(): fish = base.cr.doFindAll("FishingTarget") for fish in fish: print "Activated" fp = base.cr.doFindAll("FishingPond") for fp in fp: fp.d_hitTarget(fish)
+def sell(): base.localAvatar.setMaxFishTank(fishCaught) fishman = base.cr.doFindAll("Fisherman") for fishman in fishman: fishid = fishman.doId base.localAvatar.setMoney(base.localAvatar.bankMoney) messenger.send('enterNPCToon-' + str(fishid), [1])
+def onGo():
+seq = Sequence()
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Func(catch))
+seq.append(Wait(1))
+seq.append(Func(sell))
+seq.start()
+onGo()
+
+Just for fun codes: 
+base.localAvatar.trickOrTreatTargetMet(100)
+base.localAvatar.winterCarolingTargetMet(100)
+
+
+Cog Buttons: 
+def normal1():
+    bk_text = "Cog Suit Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Cold Caller"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 4]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 0
+
+def setText2():
+    bk_text = "Telemarketer"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+    
+
+def setText3():
+    bk_text = "Name Dropper"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 2]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 6]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText4():
+    bk_text = "Glad Hander"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 3]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 7]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText5():
+    bk_text = "Mover Shaker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 4]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 8]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 0
+
+def setText6():
+    bk_text = "Two Face"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 5]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 9]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText7():
+    bk_text = "The Mingler"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 6]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 10]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText8():
+    bk_text = "Mr. Hollywood"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 7]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 11]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(3)
+    var = 1
+
+def setText9():
+    bk_text = "Remove"
+    textObject.setText(bk_text)
+    base.localAvatar.takeOffSuit()
+    var = 1
+
+def setText10():
+    bk_text = "Short Change"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 5, 4, 4]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 0
+
+def setText11():
+    bk_text = "Penny Pincher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+    
+
+def setText12():
+    bk_text = "Tightwad"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 2, 2]) 
+    base.localAvatar.setCogLevels([5, 5, 6, 6]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText13():
+    bk_text = "Bean Counter"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 3, 3]) 
+    base.localAvatar.setCogLevels([5, 5, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText14():
+    bk_text = "Number Cruncher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 4, 4]) 
+    base.localAvatar.setCogLevels([5, 5, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 0
+
+def setText15():
+    bk_text = "Money Bags"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 5, 5]) 
+    base.localAvatar.setCogLevels([5, 5, 9, 9]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText16():
+    bk_text = "Loan Shark"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 6, 6]) 
+    base.localAvatar.setCogLevels([5, 5, 10, 10]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText17():
+    bk_text = "Robber Baron"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 7, 7]) 
+    base.localAvatar.setCogLevels([5, 5, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999, 9999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(2)
+    var = 1
+
+def setText18():
+    bk_text = "Bottom Feeder"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([5, 4, 4, 4]) 
+    base.localAvatar.setCogParts([99999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 0
+
+def setText19():
+    bk_text = "Bloodsucker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 1, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+    
+
+def setText20():
+    bk_text = "Double Talker"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 2, 2, 2]) 
+    base.localAvatar.setCogLevels([5, 6, 6, 6]) 
+    base.localAvatar.setCogParts([999999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText21():
+    bk_text = "Ambulance Chaser"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 3, 3, 3]) 
+    base.localAvatar.setCogLevels([5, 7, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999999, 9999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText22():
+    bk_text = "Backstabber"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 4, 4, 4]) 
+    base.localAvatar.setCogLevels([5, 8, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 0
+
+def setText23():
+    bk_text = "Spin Doctor"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 5, 5, 5]) 
+    base.localAvatar.setCogLevels([5, 9, 9, 9]) 
+    base.localAvatar.setCogParts([999999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText24():
+    bk_text = "Legal Eagle"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 6, 6, 6]) 
+    base.localAvatar.setCogLevels([5, 10, 10, 10]) 
+    base.localAvatar.setCogParts([99999999999999999999999, 9999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText25():
+    bk_text = "Big Wig"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([5, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(1)
+    var = 1
+
+def setText26():
+    bk_text = "Flunky"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([0, 0, 0, 0]) 
+    base.localAvatar.setCogLevels([4, 4, 4, 4]) 
+    base.localAvatar.setCogParts([99999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 0
+
+def setText27():
+    bk_text = "Pencil Pusher"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([1, 1, 1, 1]) 
+    base.localAvatar.setCogLevels([5, 5, 5, 5]) 
+    base.localAvatar.setCogParts([9999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+    
+
+def setText28():
+    bk_text = "YesMan"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([2, 2, 2, 2]) 
+    base.localAvatar.setCogLevels([6, 6, 6, 6]) 
+    base.localAvatar.setCogParts([999999999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText29():
+    bk_text = "MircoManager"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([3, 3, 3, 3]) 
+    base.localAvatar.setCogLevels([7, 7, 7, 7]) 
+    base.localAvatar.setCogParts([9999999999999999999, 9999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText30():
+    bk_text = "Downsizer"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([4, 4, 4, 4]) 
+    base.localAvatar.setCogLevels([8, 8, 8, 8]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 0
+
+def setText31():
+    bk_text = "Head Hunter"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([5, 5, 5, 5]) 
+    base.localAvatar.setCogLevels([9, 9, 9, 9]) 
+    base.localAvatar.setCogParts([999999999999999999999, 99999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText32():
+    bk_text = "Legal Eagle"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([6, 6, 6, 6]) 
+    base.localAvatar.setCogLevels([10, 10, 10, 10]) 
+    base.localAvatar.setCogParts([99999999999999999999999, 9999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+def setText33():
+    bk_text = "Big Wig"
+    textObject.setText(bk_text)
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setCogTypes([7, 7, 7, 7]) 
+    base.localAvatar.setCogLevels([11, 11, 11, 11]) 
+    base.localAvatar.setCogParts([9999999999999999999, 999999999999999999999, 56447, 56411])
+    base.localAvatar.setCogIndex(0)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("CC", "cc", "cc", "CC"), scale=.06, pos = (-.98,-0,-.94), command=setText1)
+b2 = DirectButton(text = ("TM", "tm", "tm", "TM"), scale=.06, pos = (-.8,-0,-.94), command=setText2)
+b3 = DirectButton(text = ("ND", "nd", "nd", "ND"), scale=.06, pos = (-.6,-0,-.94), command=setText3)
+b4 = DirectButton(text = ("GH", "gh", "gh", "GH"), scale=.06, pos = (-.28,-0,-.94), command=setText4)
+b5 = DirectButton(text = ("MS", "ms", "ms", "MS"), scale=.06, pos = (-0,-0,-.94), command=setText5)
+b6 = DirectButton(text = ("TF", "tf", "tf", "TF"), scale=.06, pos = (.16,-0,-.94), command=setText6)
+b7 = DirectButton(text = ("THE M", "The m", "The m", "THE M"), scale=.06, pos = (.35,-0,-.94), command=setText7)
+b8 = DirectButton(text = ("MH", "mh", "mh", "MH"), scale=.06, pos = (.565,-0,-.94), 
+command=setText8)
+b9 = DirectButton(text = ("Remove", "Remove", "Remove", "Remove"), scale=.06, pos =(.900,-0,-.94), 
+command=setText9)
+b10 = DirectButton(text = ("SC", "sc", "sc", "SC"), scale=.06, pos = (-.98,-0,-.84), command=setText10)
+b11 = DirectButton(text = ("PP", "pp", "pp", "PP"), scale=.06, pos = (-.8,-0,-.84), command=setText11)
+b12 = DirectButton(text = ("TW", "tw", "tw", "TW"), scale=.06, pos = (-.6,-0,-.84), command=setText12)
+b13 = DirectButton(text = ("BC", "bc", "bc", "BC"), scale=.06, pos = (-.28,-0,-.84), command=setText13)
+b14 = DirectButton(text = ("NC", "nc", "nc", "NC"), scale=.06, pos = (-0,-0,-.84), command=setText14)
+b15 = DirectButton(text = ("MB", "mb", "mb", "MB"), scale=.06, pos = (.16,-0,-.84), command=setText15)
+b16 = DirectButton(text = ("LS", "ls", "ls", "LS"), scale=.06, pos = (.35,-0,-.84), command=setText16)
+b17 = DirectButton(text = ("RB", "rb", "rb", "RB"), scale=.06, pos = (.565,-0,-.84), command=setText17)
+b18 = DirectButton(text = ("BF", "bf", "bf", "BF"), scale=.06, pos = (-.98,-0,-.74), command=setText18)
+b19 = DirectButton(text = ("BS", "bs", "bs", "BS"), scale=.06, pos = (-.8,-0,-.74), command=setText19)
+b20 = DirectButton(text = ("DT", "dt", "dt", "DT"), scale=.06, pos = (-.6,-0,-.74), command=setText20)
+b21 = DirectButton(text = ("AC", "ac", "ac", "AC"), scale=.06, pos = (-.28,-0,-.74), command=setText21)
+b22 = DirectButton(text = ("BS", "bs", "bs", "BS"), scale=.06, pos = (-0,-0,-.74), command=setText22)
+b23 = DirectButton(text = ("SD", "sd", "sd", "SD"), scale=.06, pos = (.16,-0,-.74), command=setText23)
+b24 = DirectButton(text = ("LE", "le", "le", "LE"), scale=.06, pos = (.35,-0,-.74), command=setText24)
+b25 = DirectButton(text = ("BW", "bw", "bw", "BW"), scale=.06, pos = (.565,-0,-.74), command=setText25)
+b26 = DirectButton(text = ("F", "f", "f", "F"), scale=.06, pos = (-.98,-0,-.64), command=setText26)
+b27 = DirectButton(text = ("Pp", "pp", "pp", "Pp"), scale=.06, pos = (-.8,-0,-.64), command=setText27)
+b28 = DirectButton(text = ("YM", "ym", "ym", "YM"), scale=.06, pos = (-.6,-0,-.64), command=setText28)
+b29 = DirectButton(text = ("MM", "mm", "mm", "MM"), scale=.06, pos = (-.28,-0,-.64), command=setText29)
+b30 = DirectButton(text = ("DS", "ds", "ds", "DS"), scale=.06, pos = (-0,-0,-.64), command=setText30)
+b31 = DirectButton(text = ("HH", "hh", "hh", "HH"), scale=.06, pos = (.16,-0,-.64), command=setText31)
+b32 = DirectButton(text = ("CR", "cr", "cr", "CR"), scale=.06, pos = (.35,-0,-.64), command=setText32)
+b33 = DirectButton(text = ("BC", "bc", "bc", "BC"), scale=.06, pos = (.565,-0,-.64), command=setText33)
+
+
+
+

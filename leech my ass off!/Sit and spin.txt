@@ -1,0 +1,8 @@
+sIT AND SPIN:
+
+base.localAvatar.enterSitStart()
+
+base.localAvatar.physControls.avatarControlForwardSpeed=200
+base.localAvatar.physControls.avatarControlRotateSpeed=1000
+base.localAvatar.physControls.avatarControlReverseSpeed=200
+base.localAvatar.physControls.avatarControlJumpForce = 150

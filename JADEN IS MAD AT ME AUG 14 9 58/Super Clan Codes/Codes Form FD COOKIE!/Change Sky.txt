@@ -1,0 +1,94 @@
+Change Sky:
+--------------------METAL--------------
+gloves = loader.loadTexture("phase_9/maps/metal_plate_256_irregular.jpg")
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+
+
+-------------------MONEY-------------
+gloves = loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+
+-------------------COG MANIA-------------
+gloves = loader.loadTexture("phase_13/maps/parties_palette_4amla_3.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+
+
+----------------NIGHT TIME-------------------
+gloves = loader.loadTexture("phase_5.5/maps/windowView_Stars2.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+
+-------------------------BEE LAND-----------------
+gloves = loader.loadTexture("phase_10/maps/BlackWhiteChecks.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_10/maps/BlackWhiteChecks.jpg")
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+
+
+----------------------SNOW PLACE----------------
+gloves = loader.loadTexture("phase_5.5/maps/flakes_border.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5.5/maps/flakes_border.jpg")
+base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+
+
+-------------------------COLORFUL SKY--------------------
+
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+base.localAvatar.findAllMatches('**/').setColorScale(25)
+base.localAvatar.findAllMatches('**/').setTexture(sleve, 1)
+
+shirts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+sleve=loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+shorts=loader.loadTexture("phase_4/maps/shirtTieDyeNew.jpg")
+base.localAvatar.findAllMatches('**/Sky').setColorScale(25)
+base.localAvatar.findAllMatches('**/Sky').setTexture(sleve, 1) - SKY IS COLORFUL
+
+--------------------Volcano Suit Sky-------------------------
+
+base.localAvatar.findAllMatches('**/').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/').setTexture(sleve, 2)
+base.localAvatar.findAllMatches('**/').setColor(0,1,0)
+
+base.localAvatar.findAllMatches('**/Sky').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/Sky').setTexture(sleve, 2)
+base.localAvatar.findAllMatches('**/Sky').setColor(0,1,0) - EPIC SKY
+
+
+Volcano Suit:
+
+base.localAvatar.findAllMatches('**/hands').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(sleve, 2)
+
+base.localAvatar.findAllMatches('**/torso-top').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(sleve, 2)
+
+base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(sleve, 2)
+
+base.localAvatar.findAllMatches('**/sleeves').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve, 2)
+
+base.localAvatar.findAllMatches('**/hands').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/torso-bot').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/torso-top').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/sleeves').setColor(0,1,0)

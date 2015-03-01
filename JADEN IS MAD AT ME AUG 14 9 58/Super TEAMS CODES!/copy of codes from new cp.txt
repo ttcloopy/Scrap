@@ -1,0 +1,795 @@
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 8000, 9000, 10000, 11000, 12000, 13000])   
+base.localAvatar.b_setAnimState(('Died'))  
+base.localAvatar.b_setAnimState(('Push'))  
+base.localAvatar.b_setAnimState(('victory'))  
+base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setSC(20192)# - O dont be so negetive.  
+base.localAvatar.b_setSC(20123)# - There is no limit to my talons.
+base.localAvatar.b_setSC(20128)# - I'm good at cutting costs.
+base.localAvatar.b_setSC(20138)# - Prepare to be raided.
+base.localAvatar.b_setSC(20028)# - You need some positive enforcement.
+base.localAvatar.b_setSC(20096)# - Face it, I'm better than you.
+base.localAvatar.b_setSC(20095)# - Prepare to face your worse nightmare!
+base.localAvatar.b_setSC(20091)# - This is no laughing matter.
+base.localAvatar.b_setSC(20090)# - You're going to need some urgent care soon.
+base.localAvatar.b_setSC(20081)# - I'm going to chase you out of town!
+base.localAvatar.b_setSC(20313)# - Well you asked for an advance and you got it.
+base.localAvatar.b_setSC(20111)# - Headed my way?
+base.localAvatar.b_setSC(20116)# - Vote Goat! And that's all she wrote!
+base.localAvatar.b_setSC(20115)# - I soar, then I score.
+base.localAvatar.b_setSC(20118)# - Careful, my legal isn't very tender.
+base.localAvatar.b_setSC(20119)# - You should know, I have some killer instincts.
+base.localAvatar.b_setSC(20112)#I'm going to give you legal nightmares.
+base.localAvatar.b_setSC(20333)#A perfect trophy for my collection.
+base.localAvatar.b_setSC(20027)#This will be a short-term assignment
+base.localAvatar.b_setSC(20149)#Want to meet? I say yes, anytime.
+base.localAvatar.b_setSC(20146)#Well finally, I was afraid you were stringing me along.
+base.localAvatar.b_setSC(4305)# Fore!  
+base.localAvatar.b_setSC(20320)# You've been robbed.  
+base.localAvatar.b_setSC(20346)# The doctor is in, the Toon is out.  
+base.localAvatar.b_setSC(20071)# In my opinion, your name is MUD.  
+base.localAvatar.b_setSC(20136)# RAID!
+base.localAvatar.b_setSC(20195)# - You're soon going to need a cookie and some juice.
+base.localAvatar.setHpr(0,0,180)# upside down
+base.localAvatar.setHpr(0,0,50)# sideways 2
+base.localAvatar.setHpr(0,270,0)# on your face
+base.localAvatar.setHpr(0,0,30)# sideways 3
+base.localAvatar.setHpr(0,90,0)# on your back
+base.localAvatar.b_setSC(20122)# Legally, you're too small to fight me.
+base.localAvatar.b_setSC(20124)# - I call this a citizen's arrest.
+base.localAvatar.b_setSC(20325)# - Stick 'em up.
+base.localAvatar.setHpr(0,0,315)# sideway 1
+base.localAvatar.setCheesyEffect(6, 0, 0)# --small toon-
+base.localAvatar.setCheesyEffect(15, 0, 0)# --small toon-
+base.localAvatar.setCheesyEffect(10, 0, 0)# - white toon-
+base.localAvatar.enterSitStart()is sit - sit in air
+base.localAvatar.b_setAnimState(('Catching'))
+base.localAvatar.b_setAnimState(('Flattened'))
+base.localAvatar.enterSitStart()is sit - sit in air
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.b_setAnimState(('GolfGoodPutt'))
+base.localAvatar.b_setAnimState(('GolfBadPutt'))
+base.localAvatar.b_setAnimState('Squish')
+base.localAvatar.bcoo_setAnimState(('swim')) - swim in air
+base.localAvatar.b_setAnimState(('ScientistJealous'))
+base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+base.localAvatar.setEmoteAccess([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25])
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/hands').setColor(0,1,0)
+base.localAvatar.findAllMatches('**/head').setColor(0.4,1,0.4)
+base.localAvatar.findAllMatches('**/feet').setColor(0.4,1,0.4)
+base.localAvatar.findAllMatches('**/arms').setColor(0.4,1,0.4)
+base.localAvatar.findAllMatches('**/neck').setColor(0.4,1,0.4)
+base.localAvatar.findAllMatches('**/legs').setColor(0.4,1,0.4)
+base.localAvatar.findAllMatches('**/ears').setColor(1,0.95,0.3)
+base.localAvatar.findAllMatches('**/nose').setColor(0.4,1,0.4)
+base.localAvatar.numPies = 1000000000000
+base.localAvatar.setPieType(5)
+base.localAvatar.showSmileMuzzle()
+base.localAvatar.showLaughMuzzle()
+base.localAvatar.showLaughMuzzle()
+base.localAvatar.showLaughMuzzle()
+base.localAvatar.setNametagScale(2)
+base.localAvatar.enterScientistEmcee()
+base.localAvatar.enterScientistLessWork()
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14') 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x61\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14') 
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x0b\x38\x0b\x21\x0b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x48\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x49\x1b\x01\x1b\x29\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1c\x02\x1c\x27\x1c\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x48\x0b\x54\x0b\x22\x0b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x0b\x30\x0b\x19\x0b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x34\x0b\x30\x0b\x14\x0b\x15\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x53\x1b\x48\x1b\x19\x1b\x15\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x51\x1b\x48\x1b\x19\x1b\x15\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x50\x1b\x48\x1b\x19\x1b\x15\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x56\x1b\x48\x1b\x19\x1b\x15\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x58\x1b\x55\x1b\x21\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x35\x1b\x54\x1b\x23\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x76\x1b\x25\x1b\x23\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x64\x1b\x25\x1b\x23\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x56\x1b\x56\x1b\x14\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x44\x0b\x22\x0b\x18\x0b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x58\x0d\x19\x0d\x22\x0d\x0a\x00\x0e\x0e')
+base.localAvatar.setDNAString('d\x05\x01\x00\x01\x37\x0e\x34\x0c\x22\x0c\x0c\x00\x0c\x0e')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x34\x0c\x53\x0d\x14\x0d\x0d\x00\x0d\x0e')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1d\x02\x1e\x27\x1c\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x64\x1e\x02\x1d\x28\x1e\x14\x1a\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x76\x0a\x02\x0c\x22\x0a\x14\x1a\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x36\x1c\x15\x1c\x16\x1c\x15\x1d\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x62\x0b\x62\x0b\x21\x0b\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x62\x06\x62\x0b\x21\x0b\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x62\x07\x29\x07\x25\x07\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x50\x0a\x51\x0a\x22\x0a\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x62\x0a\x02\x0a\x27\x0b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x56\x0a\x22\x1b\x15\x0a\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x34\x1b\x29\x1b\x07\x0a\x15\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x34\x1b\x29\x1b\x0d\x14\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x34\x0b\x29\x0b\x1b\x14\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x34\x0b\x29\x0b\x0c\x14\x14\x04\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x51\x0b\x51\x0b\x2d\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x6f\x0d\x69\x0d\x2d\x17\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x6b\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x4b\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x4d\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x4f\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x5a\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x5b\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x5d\x0b\x69\x0b\x2a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x4a\x0b\x5f\x0b\x2d\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x4a\x0c\x5c\x0c\x1d\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x4a\x08\x5c\x14\x1e\x11\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x5c\x0a\x3f\x0a\x1a\x14\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x5c\x0a\x3f\x0a\x2d\x15\x14\x15\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x04\x14\x04\x14\x0c\x11\x0a\x00\x0e\x0e')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x04\x03\x04\x03\x0d\x11\x0a\x00\x0e\x0e')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x04\x0b\x04\x0b\x0c\x0b\x0a\x00\x0e\x0e')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x04\x17\x04\x17\x0d\x11\x0e\x00\x0e\x0e')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x6f\x0a\x62\x0a\x29\x01\x0f\x00\x0e\x0e')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x76\x0a\x69\x0c\x2d\x0a\x0e\x00\x0e\x0e')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x62\x04\x29\x14\x26\x13\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x63\x19\x53\x19\x1b\x19\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x01\x01\x00\x01\x62\x09\x22\x09\x1b\x15\x14\x14\x14\x14')
+
+houseZoneGet = base.localAvatar.getZoneId()
+houseZoneGet += 10
+houseZoneGet = int(houseZoneGet)
+base.cr.sendSetZoneMsg(houseZoneGet)
+
+base.talkAssistant.sendOpenTalk('WE ARE TEAM HIPPIE LEADED BY HISSY FIT. WE CANNOT STOP AND WILL NOT STOP IF YOU JUST LOOK AROUND AND THINK.... ALL YOU TOONS CAN DO IS REPORT IS AND LET ME TELL YOU THIS : WE COULD CARE LESS ABOUT TINY REPORTS. YOU CANT DEFEAT EVERYONE WON OF US AND U KNOW THAT TOONTOWN WILL BE OURS YOU KNEW THIS WAS GOING TO END SOME DAY. WE ARE TEAM HIPPIE! THE INVINCIBLE.')
+base.talkAssistant.sendOpenTalk(' TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP TEAM TRAP ')
+base.talkAssistant.sendOpenTalk('TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate TEAM ultimate')
+
+base.talkAssistant.sendOpenTalk('Reverse \n ' * 40)
+
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+base.localAvatar.collisionsOff()
+
+import toontown
+def new():
+ return True
+def new2(*a,**k):
+ return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+
+base.localAvatar.setNametagStyle(11)
+base.localAvatar.setCustomMessages([12000, 12001, 12002, 12003, 12004, 12005, 12006, 12007, 12008, 12009, 12010, 12011, 12012, 12013, 12014, 12015, 12016, 12017, 12018])
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Swimming"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('swim')
+    var = 0
+
+def setText2():
+    bk_text = "Sitting"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('SitStart')
+    var = 1
+    
+
+def setText3():
+    bk_text = "Catching"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Catching')
+    var = 1
+
+def setText4():
+    bk_text = "Golf Turning Right"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('GolfRotateRight')
+    var = 1
+
+def setText5():
+    bk_text = "Dying"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Died')
+    var = 0
+
+def setText6():
+    bk_text = "Sad"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Sad')
+    var = 1
+
+def setText7():
+    bk_text = "Pushing"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Push')
+    var = 1
+
+def setText8():
+    bk_text = "Scientist Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('ScientistPlay')
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("SWIM", "swim", "swim", "SWIM"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("SIT", "sit", "sit", "SIT"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("CATCH", "catch", "catch", "CATCH"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("GOLF ROTATE", "golf rotate", "golf rotate", "GOLF ROTATE"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("DIE", "die", "die", "DIE"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("SAD", "sad", "sad", "SAD"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("PUSH", "push", "push", "PUSH"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("R-P-C", "r-p-c", "r-p-c", "R-P-C"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+
+while var is 1:
+    base.accept("control", normal1, [])
+
+while var is 0:
+    base.accept("control", base.localAvatar.b_setSCSinging, [4])
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("CROW", "crow", "crow", "CROW"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("FLOAT", "float", "float", "FLOAT"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("SCP", "scp", "scp", "SCP"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("OPENTALK", "opentalk", "opentalk", "OPENTALK"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("NAME", "name", "name", "NAME"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("COL", "col", "col", "COL"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("COLOFF", "coloff", "coloff", "COLOFF"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("R-P-C", "r-p-c", "r-p-c", "R-P-C"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "RAID!"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "Collisons On"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 0
+
+def setText6():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText7():
+    bk_text = "River"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("C.Off", "c.off", "c.off", "C.Off"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("RAID", "raid", "raid", "RAID"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("C.On", "c.on", "c.on", "C.On"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("Mem", "mem", "mem", "Mem"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("River", "river", "river", "River"), scale=.06, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("Clothes", "clothes", "clothes", "Clothes"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+b = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.06, pos = (.75,-0,-.95), command=setText)
+
+
+base.localAvatar.b_setSC(4) 
+
+
+getCloset = base.cr.doFindAll("closet")
+for getCloset in base.cr.doFindAll("closet"):
+   messenger.send('purchaseDone-' + str(getCloset.doId))
+
+base.localAvatar.findAllMatches('**/hands').setColorScale(25)
+shirts = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleeve = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(sleeve, 2)
+base.localAvatar.findAllMatches('**/torso-top').setTexture(sleeve, 2)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(sleeve, 2)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleeve, 2)
+base.localAvatar.findAllMatches('**/muzzle').setTexture(sleeve, 2)
+base.localAvatar.findAllMatches('**/hands').setColor(0.0,5,7.0)# 
+base.localAvatar.findAllMatches('**/torso-top').setColor(0.0,5,7.0)# 
+base.localAvatar.findAllMatches('**/torso-bot').setColor(0.0,5,7.0)# 
+base.localAvatar.findAllMatches('**/muzzle').setColor(0.0,5,7.0)# 
+base.localAvatar.findAllMatches('**/sleeves').setColor(0.0,5,7.0)# 
+
+base.localAvatar.b_setAnimState('victory', 0.1) 
+base.localAvatar.b_setAnimState('victory', 5.0) 
+
+
+base.accept("1", base.localAvatar.b_setEmoteState, [5,1])
+base.accept("2", base.localAvatar.b_setEmoteState, [6,1])
+base.accept("3", base.localAvatar.b_setEmoteState, [7,1])
+base.accept("5", base.localAvatar.b_setEmoteState, [8,1]) 
+base.accept("6", base.localAvatar.b_setEmoteState, [9,1])
+base.accept("7", base.localAvatar.b_setEmoteState, [10,1])
+base.accept("8", base.localAvatar.b_setEmoteState, [11,1])
+base.accept("9", base.localAvatar.b_setEmoteState, [12,1])
+base.accept("0", base.localAvatar.b_setEmoteState, [13,1])
+base.accept("f1", base.localAvatar.b_setEmoteState, [14,1])
+base.accept("f4", base.localAvatar.b_setEmoteState, [20,1])
+base.accept("f3", base.localAvatar.b_setEmoteState, [21,1])
+base.accept("f5", base.localAvatar.b_setEmoteState, [22,1])
+base.accept("f6", base.localAvatar.b_setEmoteState, [23,1])
+base.accept("f7", base.localAvatar.b_setEmoteState, [24,1])
+base.accept("f9", base.localAvatar.b_setEmoteState, [4,1])
+base.accept("f10", base.localAvatar.b_setEmoteState, [3,1])
+base.accept("f11", base.localAvatar.b_setEmoteState, [2,1])
+base.accept("f12", base.localAvatar.b_setEmoteState, [1,1])
+
+messenger.send('minigameAbort')
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def bOne():
+ base.localAvatar.collisionsOn()
+def bTwo():
+ base.localAvatar.collisionsOff()
+def  bThree():
+ base.localAvatar.b_setAnimState('dive')
+def bFour():
+ base.localAvatar.b_setAnimState('swim')
+def bFive():
+ base.localAvatar.b_setSC(20136)
+def bSix():
+ base.cr.sendSetZoneMsg(7000)
+def bSeven():
+ base.cr.sendSetZoneMsg(2000)
+def bEight():
+  base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+  base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+  base.localAvatar.book._ShtikerBook__pageChange(1)
+  base.localAvatar.book._ShtikerBook__pageChange(-1)
+def bNine():
+ base.talkAssistant.sendOpenTalk('\n' * 200)
+def bTen():
+ base.localAvatar.d_squish(3)
+def bEleven():
+ ttt = base.cr.doFindAll("TTTreasure")
+ for ttt in base.cr.doFindAll("TTTreasure"):
+     ttt.d_requestGrab()
+def bTwelve():
+ base.localAvatar.b_setAnimState('TeleportOut')
+def bThirteen():
+ base.localAvatar.b_setAnimState('TeleportIn')
+def bFourteen():
+ base.localAvatar.enterSitStart()
+def bFifteen():
+ messenger.send('nameTagShowAvId')
+def bSixteen():
+ toon = base.localAvatar.getX()
+ toon2 = base.localAvatar.getY()
+ toon3 = base.localAvatar.getZ()
+ base.localAvatar.d_playSplashEffect(toon, toon2, toon3)
+ base.localAvatar.playSplashEffect(toon, toon2, toon3)
+def bSeventeen():
+ base.localAvatar.b_setAnimState("victory", 10)
+def bEighteen():
+ base.localAvatar.loop('swing')
+def bNineteen():
+ base.localAvatar.b_setAnimState("ScientistEmcee")
+def bTwenty():
+ messenger.send("minigameAbort")
+def bTwentyone():
+ houseZoneGet = base.localAvatar.getZoneId()
+ houseZoneGet += 10
+ houseZoneGet = int(houseZoneGet)
+ base.cr.sendSetZoneMsg(houseZoneGet)
+def whisperall(message="", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+def bTwentytwo():
+ whisperall('TP TO ME \n' * 13, True)
+def bTwentythree():
+ base.localAvatar.b_setAnimState('ScientistWork')
+def bTwentyfour():
+ base.localAvatar.setDNAString('t\x01\x02\x00\x01\x56\x1d\x54\x1c\x24\x1d\x00\x00\x14\x14')
+def bTwentyfive():
+ word = base.localAvatar.getZoneId()
+ base.localAvatar.collisionsOff()
+ base.cr.sendSetZoneMsg(7000)
+ base.localAvatar.b_setAnimState('chat')
+ base.cr.sendSetZoneMsg(word)
+def bTwentysix():
+ ttd = base.cr.doFindAll("DivingGame")
+ for ttd in base.cr.doFindAll("DivingGame"):
+     ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+def bTwentyseven():
+ zone = base.localAvatar.getZoneId()
+ zone = str(zone)
+ base.localAvatar.setSystemMessage(1, zone)
+def bTwentyeight():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bTwentynine():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+
+b1 = DirectButton(text = ("CO-on", "CO-on", "CO-on", "CO-on"), scale=.05, pos = (-.1,0,-.9), command=bOne)
+b2 = DirectButton(text = ("CO-off", "CO-off", "CO-off", "CO-off"), scale=.05, pos = (.08,0,-.9), command=bTwo)
+b3 = DirectButton(text = ("Dive", "Dive", "Dive", "Dive"), scale=.05, pos = (.22,0,-.9), command=bThree)
+b4 = DirectButton(text = ("Swim", "Swim", "Swim", "Swim"), scale=.05, pos = (.34,0,-.9), command=bFour)
+b5 = DirectButton(text = ("RAID!", "RAID!", "RAID!", "RAID!"), scale=.05, pos = (.48,0,-.9), command=bFive)
+b6 = DirectButton(text = ("Farm", "Farm", "Farm", "Farm"), scale=.05, pos = (-.26,0,-.9), command=bSix)
+b7 = DirectButton(text = ("TTC", "TTC", "TTC", "TTC"), scale=.05, pos = (-.37,0,-.9), command=bSeven)
+b8 = DirectButton(text = ("Teleport", "Teleport", "Teleport", "Teleport"), scale=.05, pos = (-.515,0,-.9), command=bEight)
+b9 = DirectButton(text = ("Bubble", "Bubble", "Bubble", "Bubble"), scale=.05, pos = (-.7,0,-.9), command=bNine)
+b10 = DirectButton(text = ("Die", "Die", "Die", "Die"), scale=.05, pos = (-.84,0,-.9), command=bTen)
+b11 = DirectButton(text = ("Laff", "Laff", "Laff", "Laff"), scale=.05, pos = (-.94,0,-.9), command=bEleven)
+b12 = DirectButton(text = ("T-out", "T-out", "T-out", "T-out"), scale=.05, pos = (-.94,0,-.96), command=bTwelve)
+b13 = DirectButton(text = ("T-in", "T-in", "T-in", "T-in"), scale=.05, pos = (-.82,0,-.96), command=bThirteen)
+b14 = DirectButton(text = ("Sit", "Sit", "Sit", "Sit"), scale=.05, pos = (.6,0,-.9), command=bFourteen)
+b15 = DirectButton(text = ("AVID", "AVID", "AVID", "AVID"), scale=.05, pos = (.72,0,-.9), command=bFifteen)
+b16 = DirectButton(text = ("Splash", "Splash", "Splash", "Splash"), scale=.05, pos = (-.55,0,-.96), command=bSixteen)
+b17 = DirectButton(text = (">>Victory", ">>Victory", ">>Victory", ">>Victory"), scale=.05, pos = (-.36,0,-.96), command=bSeventeen)
+b18 = DirectButton(text = ("Swing", "Swing", "Swing", "Swing"), scale=.05, pos = (-.17,0,-.96), command=bEighteen)
+b19 = DirectButton(text = ("Emcee", "Emcee", "Emcee", "Emcee"), scale=.05, pos = (-.7,0,-.96), command=bNineteen)
+b20 = DirectButton(text = ("Skip", "Skip", "Skip", "Skip"), scale=.05, pos = (-.06,0,-.96), command=bTwenty)
+b21 = DirectButton(text = ("Raid", "Raid", "Raid", "Raid"), scale=.05, pos = (.05,0,-.96), command=bTwentyone)
+b22 = DirectButton(text = ("TP", "TP", "TP", "TP"), scale=.05, pos = (.14,0,-.96), command=bTwentytwo)
+b23 = DirectButton(text = ("SciW", "SciW", "SciW", "SciW"), scale=.05, pos = (.23,0,-.96), command=bTwentythree)
+b24 = DirectButton(text = ("Suit", "Suit", "Suit", "Suit"), scale=.05, pos = (.34,0,-.96), command=bTwentyfour)
+b25 = DirectButton(text = ("ScaC", "ScaC", "ScaC", "ScaC"), scale=.05, pos = (.45,0,-.96), command=bTwentyfive)
+b26 = DirectButton(text = ("DiveG", "DiveG", "DiveG", "DiveG"), scale=.05, pos = (-.94,0,-.84), command=bTwentysix)
+b27 = DirectButton(text = ("Zone", "Zone", "Zone", "Zone"), scale=.05, pos = (-.66,0,-.84), command=bTwentyseven)
+b28 = DirectButton(text = ("Run", "Run", "Run", "Run"), scale=.05, pos = (-.36,0,-.84), command=bTwentyeight)
+b29 = DirectButton(text = ("Jump", "Jump", "Jump", "Jump"), scale=.05, pos = (-.22,0,-.84), command=bTwentynine)
+
+closet = base.cr.doFindAll("closet")[0]
+closet.sendUpdate("setDNA", ['t\x00\x08\x01\x00\x50\x1b\x45\x1b\x26\x1b\x0e\x04\x0e\x0e', 34, 34])
+
+toon = base.cr.doFindAll("Reverse") 
+base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(),toon[0].getZ()) 
+base.localAvatar.playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())   
+
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+from direct.gui.OnscreenText import OnscreenText
+currentGlove = 0
+npc = base.cr.doFindAll("Tailor")[0]
+defaultChatAbsolute = npc.setChatAbsolute
+base.localAvatar.b_setAnimState('swim')
+npc.handleCollisionSphereEnter(base.localAvatar.doId)
+npc.handleCollisionSphereEnter(base.localAvatar.doId)
+npc.afkTimeout = pow(100, 100)
+gloveList = ['\x00', '\x01', '\x02', '\x03', '\x04', '\x05', '\x06', '\x07', '\x08',\
+'\x09', '\x10', '\x11', '\x12', '\x13', '\x14', '\x15', '\x16', '\x17', '\x18', '\x19',\
+'\x0d', '\x0b', '\x0c', '\x0d', '\x0e', '\x0f', '\x1a']
+def addGloveIndex(dnaString='t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e'):
+    global gloveList, currentGlove, npc
+    if currentGlove != 26:
+        currentGlove += 1
+        npc.sendUpdate("setDNA", [dnaString[:12] + gloveList[currentGlove] + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + gloveList[currentGlove] + dnaString[13:])
+    else:
+        currentGlove = 0
+        npc.sendUpdate("setDNA", [dnaString[:12] + '\x00' + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + '\x00' + dnaString[13:])
+def subtractGloveIndex(dnaString='t\x05\x02\x00\x00\x56\x1b\x3d\x1b\x20\x1b\x0e\x02\x0e\x0e'):
+    global gloveList, currentGlove, npc
+    if currentGlove != 0:
+        currentGlove -= 1
+        npc.sendUpdate("setDNA", [dnaString[:12] + gloveList[currentGlove] + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + gloveList[currentGlove] + dnaString[13:])
+    else:
+        currentGlove = 26
+        npc.sendUpdate("setDNA", [dnaString[:12] + '\x26' + dnaString[13:], 0, 3])
+        base.localAvatar.setDNAString('t\x05\x05' + dnaString[3:12] + '\x26' + dnaString[13:])
+def disconnectThroughDNA(dnaString='t\x05\x06\x00\x00\x50\x1b\x45\x1b\x26\x1b\x0e\x02\x0e\x0e'):
+    try:
+        npc = base.cr.doFindAll("Tailor")[0]
+        npc.sendUpdate("setDNA", [dnaString, 0, 3])
+    except:pass
+def removeGui():
+    try:npc = base.cr.doFindAll("Tailor")[0]
+    except:pass
+    try:
+        addGloveB.removeNode()
+        subtractGloveB.removeNode()
+        disconnectB.removeNode()
+        glovetxt_object.removeNode()
+        removeGuiB.removeNode()
+    except:pass
+    try:npc._DistributedNPCTailor__handleButton()
+    except:pass
+def hookExit(chatString, chatFlags, dialogue=None, interrupt=1, quiet=0):
+    global npc, defaultChatAbsolute
+    if chatString == 'Need more time to think?':
+        npc.handleCollisionSphereEnter(base.localAvatar.doId)
+        npc.handleCollisionSphereEnter(base.localAvatar.doId)
+        npc.afkTimeout = pow(100, 100)
+    else:
+        defaultChatAbsolute(chatString, chatFlags, dialogue, interrupt, quiet)
+npc.setChatAbsolute = hookExit
+glove_text = 'Glove Color'
+glovetxt_object = OnscreenText(text = glove_text, pos = (0.95,0.2), scale = 0.07, fg=(0, 0, 0, 0.6), align=TextNode.ACenter, mayChange=1)
+addGloveB = DirectButton(text = (">>", ">>", ">>", ">>"), scale=.06, pos = (1.22,0,0.2), command=addGloveIndex)
+subtractGloveB = DirectButton(text = ("<<", "<<", "<<", "<<"), scale=.06, pos = (0.7,0,0.2), command=subtractGloveIndex)
+disconnectB = DirectButton(text = ("Disconnect", "Disconnect", "Disconnect", "Disconnect"), scale=.06, pos=(0.96,0,0.3), command=disconnectThroughDNA)
+removeGuiB = DirectButton(text = ("No More Disconnect", "No More Disconnect", "No More Disconnect", "No More Disconnect"), scale=.06, pos=(0.96,0,0.4), command=removeGui)
+
+base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__handlePurchaseDone()
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "River"
+    base.localAvatar.book.pages[1].choseShard(414000000)
+b = DirectButton(text = ("River", "River", "River", "River"), scale=.06, pos = (.75,-0,-.85), command=setText)
+
+base.cr.sendCreateAvatarMsg(avDNA, avName, avPosition)
+
+word = base.localAvatar.getZoneId()
+word += 10
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+
+base.localAvatar.collisionsOff()
+from direct.interval.IntervalGlobal import *
+toonFollowing = base.cr.doFindAll("Reverse")
+def updatePos():
+    base.localAvatar.setX(toonFollowing[0].getX())
+    base.localAvatar.setY(toonFollowing[0].getY())
+    base.localAvatar.setZ(toonFollowing[0].getZ())
+    base.localAvatar.setH(toonFollowing[0].getH())
+    base.localAvatar.setP(toonFollowing[0].getP())
+    base.localAvatar.setR(toonFollowing[0].getR())
+def onMovment():
+  mov = Sequence()
+  mov.append(Func(updatePos))
+  mov.append(Func(onMovment))
+  mov.start()
+onMovment()
+
+base.cr.sendWishName(base.localAvatar.doId,("xBlue"))
+base.cr.gameFSM.request('closeShard')
+    
+
+
+
+base.localAvatar.find('**/hands').removeNode()
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import VBase4
+base.localAvatar.setSystemMessage(0, 'Fd Color Interval Gloves')
+def changeHandColor1():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.97,0.3,0.3,1))
+    handsChange.start()
+def changeHandColor2():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.96,0.7,0.7,1))
+    handsChange.start()
+def changeHandColor3():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.69,0.29,0.95,1))
+    handsChange.start()
+def changeHandColor4():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.69,0.29,0.95,1))
+    handsChange.start()
+def changeHandColor5():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.38,0.98,0.43,1))
+    handsChange.start()
+def changeHandColor6():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(1,0.90,0.30,1))
+    handsChange.start()
+def changeHandColor7():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.35,0.35,0.85,1))
+    handsChange.start()
+def changeHandColor8():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(0.3,0.64,0.85,1))
+    handsChange.start()
+def changeHandColor9():
+    handsChange = base.localAvatar.find('**/hands').colorInterval(0.5, VBase4(1,0.5,0.18,1))
+    handsChange.start()
+def onChange():
+  seq = Sequence()
+  seq.append(Func(changeHandColor1))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor2))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor3))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor4))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor5))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor6))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor7))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor8))
+  seq.append(Wait(0.5))
+  seq.append(Func(changeHandColor9))
+  seq.append(Wait(0.5))
+  seq.append(Func(onChange))
+  seq.start()
+onChange()
+
+
+
+
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+def pink():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+def purple():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+def green():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+def yellow():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+def dblue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+def orange():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+def cream():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+def perwk():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.03))
+  rain.append(Func(pink))
+  rain.append(Wait(0.03))
+  rain.append(Func(purple))
+  rain.append(Wait(0.03))
+  rain.append(Func(green))
+  rain.append(Wait(0.03))
+  rain.append(Func(yellow))
+  rain.append(Wait(0.03))
+  rain.append(Func(dblue))
+  rain.append(Wait(0.03))
+  rain.append(Func(blue))
+  rain.append(Wait(0.03))
+  rain.append(Func(orange))
+  rain.append(Wait(0.03))
+  rain.append(Func(cream))
+  rain.append(Wait(0.03))
+  rain.append(Func(perwk))
+  rain.append(Wait(0.03))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+
+
+gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_9/maps/metal_plate_256_irregular.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+
+gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_13/maps/parties_palette_4amla_3.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_10/maps/CBWrapperBill.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_11/maps/LB_WoodPanel2.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_8/maps/snow_particle.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_8/maps/nightskytop.jpg")
+gloves = loader.loadTexture("phase_5/maps/dollar_10.jpg")
+gloves = loader.loadTexture("phase_4/maps/it.jpg")
+
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_sellbotCrusher.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_sellbotCrusher.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5.5/maps/windowView_Stars2.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+base.localAvatar.book.pages[1].showPop = 1
+
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x04\x03\x04\x03\x0d\x11\x0a\x00\x0e\x0e')
+
+base.cr.sendSetZoneMsg(6000)
+
+base.localAvatar.setBillboardPointEye()
+base.localAvatar.setBillboardPointWorld()
+
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x34\x16\x09\x16\x0d\x13\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x6f\x06\x45\x02\x0d\x01\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x6f\x12\x49\x08\x29\x09\x14\x14\x14\x14')
+base.localAvatar.setDNAString('t\x05\x01\x00\x01\x4b\x06\x4b\x09\x22\x00\x14\x14\x14\x14')
+
+    

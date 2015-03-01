@@ -1,0 +1,3 @@
+    ([base.localAvatar.b_setAnimState('victory', 25)])
+
+    ([base.localAvatar.b_setAnimState('victory', 0.1)])

@@ -1,0 +1,6 @@
+AccessoryTrunk = base.cr.doFindAll("Trunk")[0]
+AccessoryTrunk.hatList = [0, 0, 0]
+AccessoryTrunk.backpackList = [0, 0, 0]
+AccessoryTrunk.glassesList = [0, 0, 0]
+AccessoryTrunk.shoesList = [0, 0, 0]
+AccessoryTrunk._handleYesImSure()

@@ -1,0 +1,50 @@
+How to make a land!
+
+Well this should be long XD
+Ok here we go.....
+
+Things you will need to know
+
+Press "Shift + F1" and a bubble should come up. 
+It tells you your exact position! You will need this
+it will make your land a lot easier and faster to make.
+
+Position
+Here are what the numbers should mean.....
+
+up.setPos(left and right,back and forward,height)
+
+ya you just put in the numbers that were in the bubble when you pressed shift + f1
+  
+Here is a basic hackland with just a paint mixer
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import * 
+from direct.gui.OnscreenText import OnscreenText 
+
+up = loader.loadModel("phase_9/models/cogHQ/PaintMixer.bam") 
+up.reparentTo(render) 
+up.setPos(36,57.688,5.9) 
+up.setHpr(0,0,0) 
+up.setScale(1)
+
+Now the things will not go away! DO NOT THINK IT SAVES 
+IF YOU JUST KEEP CHANGING THE POSITION!!!!!!!!!!!!
+So everytime u press submit u make new ones so
+close out toontown with the "X" every sometime.
+
+Now you can just keep doing that with different things in the phase files! That
+easy!
+
+make sure the slashes are like this
+
+Right = /
+Wrong = \

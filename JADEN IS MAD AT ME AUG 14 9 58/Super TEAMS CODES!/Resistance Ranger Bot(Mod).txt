@@ -1,0 +1,74 @@
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.setExperience('9999999999999999999')
+    base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+    base.localAvatar.setSystemMessage(0,'MAXED ALL TRACKS!')
+def part2():
+    import toontown 
+    def new(): 
+     return True 
+    def new2(*a,**k): 
+     return 2 
+    base.cr.isPaid = new 
+    base.cr.isParentPasswordSet = new 
+    toontown.toon.LocalToon.LocalToon.getGameAccess = new2 
+    base.localAvatar.setSystemMessage(0,'MEMBERSHIP AND TRUE FRIEND ACTIVATED') 
+def part3():
+    base.localAvatar.setQuestCarryLimit(4)
+    base.localAvatar.setSystemMessage(0,'HOLD 4 TOONTASK NOW!')
+def part4():
+    base.localAvatar.setCogMerits([100,60,40,20])
+    base.localAvatar.setSystemMessage(0,'MAXED MERITS!')
+def part5():
+    base.localAvatar.setCogLevels([49, 49, 49, 49]) 
+    base.localAvatar.setSystemMessage(0,'MAXED COG SUIT LEVEL 50')
+def part6():
+    base.localAvatar.setCogTypes([7, 7, 7, 7]) 
+    base.localAvatar.setSystemMessage(0,'MR HOLLYWOOD,ROBBER BARON,BIG WIG,BIG CHEESE Activated!')
+def part7():
+    base.localAvatar.setCogParts([99999999999999999999999999, 99999999999999999999999999999, 56447, 56411])
+    base.localAvatar.setSystemMessage(0,'SUITS PARTS ACTIVATED Activated!')
+def part8():
+    base.localAvatar.book.pages[1].showPop = 1 
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000,9000, 10000, 11000, 12000, 13000]) 
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000,8000,9000,10000, 11000, 12000, 13000])
+    base.localAvatar.setCogSummonsEarned([7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7])
+    base.localAvatar.setSystemMessage(0,'GLOBAL TELEPORTS AND COG SUMMONS ACTIVATED') 
+def part9():
+    base.localAvatar.findAllMatches('**/torso-top').setColorScale(25) 
+    base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25) 
+    base.localAvatar.findAllMatches('**/sleeves').setColorScale(25) 
+    shirt = base.localAvatar.findAllMatches('**/torso-top')
+    shirttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_sellbotCrusher.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_sellbotCrusher.jpg")
+    short.setTexture(shorttex, 1)
+    sleeves = base.localAvatar.findAllMatches('**/sleeves')
+    sleevestex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_sellbotCrusher.jpg")
+    sleeves.setTexture(sleevestex, 1)
+    base.localAvatar.setName('RESISTANCE RANGER Mod')
+    base.localAvatar.setNametagStyle(5)    
+    base.localAvatar.setSystemMessage(0,'Welcome to the Toon Resistance! Use CogIndex codes to see your cog suits!Press F1-F4 to get cog suits press F5 to remove cog suit.')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(3))
+  seq.append(Func(part2))
+  seq.append(Wait(3))
+  seq.append(Func(part3))
+  seq.append(Wait(3))
+  seq.append(Func(part4))
+  seq.append(Wait(3))
+  seq.append(Func(part5))
+  seq.append(Wait(3))
+  seq.append(Func(part6))
+  seq.append(Wait(3))
+  seq.append(Func(part7))
+  seq.append(Wait(3))
+  seq.append(Func(part8))
+  seq.append(Wait(3))
+  seq.append(Func(part9))
+  seq.append(Wait(3))
+  seq.start()
+onTime()

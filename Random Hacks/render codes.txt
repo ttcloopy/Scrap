@@ -1,0 +1,88 @@
+---------------------LIVE GLOVES------------------
+AW = base.cr.doFindAll("render/Alpha Wolf")
+for AW in base.cr.doFindAll("render/Alpha Wolf"):
+            AW.findAllMatches('**/hands').setColor(0.55,0.55,1)
+
+d = base.cr.doFindAll("render/Dark Rain")
+for d in base.cr.doFindAll("render/Dark Rain"):
+            d.findAllMatches('**/hands').setColor(0.111,0.5,0.2224)
+
+P = base.cr.doFindAll("render/Peppy")
+for P in base.cr.doFindAll("render/Peppy"):
+            P.findAllMatches('**/hands').setColor(0,0,1)
+
+T = base.cr.doFindAll("render/Tanner")
+for T in base.cr.doFindAll("render/Tanner"):
+            T.findAllMatches('**/hands').setColor(0,0,1)
+
+N = base.cr.doFindAll("render/No")
+for N in base.cr.doFindAll("render/No"):
+            N.findAllMatches('**/hands').setColor(255,0,0)
+
+
+--------------------------ALPHA WOLF  LIVE LAVA SUIT---------------
+AW = base.cr.doFindAll("render/Alpha Wolf")
+for AW in base.cr.doFindAll("render/Alpha Wolf"):
+            AW.findAllMatches('**/hands').setColor(0.55,0.55,1)
+
+AW.findAllMatches('**/hands').setColorScale(25)
+AW.findAllMatches('**/torso-top').setColorScale(25)
+AW.findAllMatches('**/sleeves').setColorScale(25)
+AW.findAllMatches('**/torso-bot').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+AW.findAllMatches('**/hands').setTexture(sleve, 2)
+AW.findAllMatches('**/torso-top').setTexture(sleve, 2)
+AW.findAllMatches('**/sleeves').setTexture(sleve, 2)
+AW.findAllMatches('**/torso-bot').setTexture(sleve, 2)
+
+AW.findAllMatches('**/hands').setColor(0,1,0)
+AW.findAllMatches('**/torso-bot').setColor(0,1,0)
+AW.findAllMatches('**/torso-top').setColor(0,1,0)
+AW.findAllMatches('**/sleeves').setColor(0,1,0)
+
+----------------- DARK RAIN  LIVE LAVA SUIT----------------------
+d = base.cr.doFindAll("render/Dark Rain")
+for d in base.cr.doFindAll("render/Dark Rain"):
+            d.findAllMatches('**/hands').setColor(0.111,0.5,0.2224)
+
+d.findAllMatches('**/hands').setColorScale(25)
+d.findAllMatches('**/torso-top').setColorScale(25)
+d.findAllMatches('**/sleeves').setColorScale(25)
+d.findAllMatches('**/torso-bot').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+d.findAllMatches('**/hands').setTexture(sleve, 2)
+d.findAllMatches('**/torso-top').setTexture(sleve, 2)
+d.findAllMatches('**/sleeves').setTexture(sleve, 2)
+d.findAllMatches('**/torso-bot').setTexture(sleve, 2)
+
+d.findAllMatches('**/hands').setColor(0,1,0)
+d.findAllMatches('**/torso-bot').setColor(0,1,0)
+d.findAllMatches('**/torso-top').setColor(0,1,0)
+d.findAllMatches('**/sleeves').setColor(0,1,0)
+
+----------------- NO LAVA SUIT ---------------
+
+N = base.cr.doFindAll("render/No")
+for N in base.cr.doFindAll("render/No"):
+            N.findAllMatches('**/hands').setColor(0.111,0.5,0.2224)
+
+N.findAllMatches('**/hands').setColorScale(25)
+N.findAllMatches('**/torso-top').setColorScale(25)
+N.findAllMatches('**/sleeves').setColorScale(25)
+N.findAllMatches('**/torso-bot').setColorScale(25)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween4.jpg")
+N.findAllMatches('**/hands').setTexture(sleve, 2)
+N.findAllMatches('**/torso-top').setTexture(sleve, 2)
+N.findAllMatches('**/sleeves').setTexture(sleve, 2)
+N.findAllMatches('**/torso-bot').setTexture(sleve, 2)
+
+N.findAllMatches('**/hands').setColor(0,1,0)
+N.findAllMatches('**/torso-bot').setColor(0,1,0)
+N.findAllMatches('**/torso-top').setColor(0,1,0)
+N.findAllMatches('**/sleeves').setColor(0,1,0)
+
+
+    419 - 786 - 9245  - Cassie  714 - 338 9698 - Bree 

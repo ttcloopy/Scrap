@@ -1,0 +1,118 @@
+from direct.gui.DirectGui import DirectButton
+def TrolleySkip():
+   messenger.send('minigameAbort')
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Trolley Skip', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=TrolleySkip, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (0,-0,-.75), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+from direct.gui.DirectGui import DirectButton
+def GlobalTeleport():
+   base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+   base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+   base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+   base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+   base.localAvatar.book._ShtikerBook__pageChange(1)
+   base.localAvatar.book._ShtikerBook__pageChange(-1)
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Global Tp', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=GlobalTeleport, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (.0,-0,-.95), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+from direct.gui.DirectGui import DirectButton
+def Victory():
+   base.localAvatar.b_setAnimState("victory", 10)
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='>>Victory', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=Victory, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (.0,-0,-.85), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def Member():
+   return True
+   base.cr.isPaid = new
+   base.cr.isParentPasswordSet = new
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Member', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=Member, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (.45,-0,-.95), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def Splash():
+   toon = base.cr.doFindAll("Lightning Cat")
+   base.localAvatar.d_playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+   base.localAvatar.playSplashEffect(base.localAvatar.getX(), base.localAvatar.getY(), base.localAvatar.getZ())
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Splash', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=Splash, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (.45,-0,-.85), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def Damage():
+   base.localAvatar.d_squish(3)
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Take Damage', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=Damage, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (.45,-0,-.75), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def ServerLaff():
+   ttt = base.cr.doFindAll("TTTreasure")
+   for ttt in base.cr.doFindAll("TTTreasure"):
+       ttt.d_requestGrab()
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Gain Laff', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=ServerLaff, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.45,-0,-.75), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def Zone():
+   zone = base.localAvatar.getZoneId()
+   zone = str(zone)
+   base.localAvatar.setSystemMessage(1, zone)
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Zone', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=Zone, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.45,-0,-.85), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def UpsideDown():
+   base.localAvatar.setHpr((0,0,180))
+   base.localAvatar.collisionsOff()
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Upside Down', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=UpsideDown, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.45,-0,-.95), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def FunnyFarms():
+   base.cr.sendSetZoneMsg(2000)
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Funny Farms', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=FunnyFarms, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.90,-0,-.85), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def TTCentral():
+   base.cr.sendSetZoneMsg(7000)
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='TTCentral', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=TTCentral, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.90,-0,-.95), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+def ToonID():
+   messenger.send('nameTagShowAvId')
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Toon ID', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=ToonID, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (-.90,-0,-.75), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))
+
+
+def ExitDoor():
+   base.messenger.send('clearOutToonInterior')
+from direct.gui.DirectGui import DirectButton
+ButtonImage = loader.loadModel("phase_3/models/gui/quit_button.bam")
+ImgBtn1 = DirectButton(frameSize=None, text='Random Exit', image=(ButtonImage.find('**/QuitBtn_UP'), \
+ButtonImage.find('**/QuitBtn_DN'), ButtonImage.find('**/QuitBtn_RLVR')), relief=None, command=ExitDoor, text_pos=(0, -0.015), \
+geom=None, pad=(0.01, 0.01), suppressKeys=0, pos = (.45,-0,-.85), text_scale=0.059999999999999998, borderWidth=(0.015, 0.01))

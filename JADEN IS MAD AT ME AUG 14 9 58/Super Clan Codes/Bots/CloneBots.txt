@@ -1,0 +1,65 @@
+By Andrew ;D
+
+import toontown
+NumToonBots = 7
+from direct.distributed.PyDatagram import PyDatagram
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+from toontown.distributed.ToontownMsgTypes import CLIENT_SET_AVATAR
+def createAvatarAndAvList():
+    try:base.cr.exitWaitForAvatarList()
+    except:pass
+    ToonDNA = toontown.toon.ToonDNA.ToonDNA()
+    base.localAvatar.style.sleeveTex = 0;base.localAvatar.style.sleeveColor = 0;
+    base.localAvatar.style.botTex = 0;base.localAvatar.style.topTex = 0;
+    base.localAvatar.style.botTexColor = 0;base.localAvatar.style.topTexColor = 0;
+    ToonDNA.makeFromNetString(base.localAvatar.style.makeNetString())
+    base.cr.sendCreateAvatarMsg(ToonDNA, 'Toon', 5)
+    base.cr.enterWaitForAvatarList()
+def createAvatarNPCBot():
+    try:
+        global NumToonBots
+        NumToonBots += 1
+        base.cr.exitWaitForAvatarList()
+        LocalX = base.localAvatar.getX()
+        LocalY = base.localAvatar.getY()
+        LocalZ = base.localAvatar.getZ()
+        base.localAvatar.stopPosHprBroadcast()
+        ToonAvatarId = base.cr.avList[1].id
+        NORMAL_TOON_ID = base.localAvatar.doId
+        NORMAL_TOON_ZONE = base.localAvatar.getZoneId()
+        RefreshAvatar = PyDatagram()
+        RefreshAvatar.addUint16(CLIENT_SET_AVATAR)
+        RefreshAvatar.addUint32(ToonAvatarId)
+        base.localAvatar.doId = ToonAvatarId
+        base.cr.avData.id = ToonAvatarId
+        base.cr.sendDatagram(RefreshAvatar)
+        base.cr.sendSetZoneMsg(NORMAL_TOON_ZONE)
+        base.localAvatar.d_setParent(2)
+        base.localAvatar.sendUpdate('setPos', [LocalX, LocalY, LocalZ])
+        RefreshAvatar = PyDatagram()
+        RefreshAvatar.addUint16(CLIENT_SET_AVATAR)
+        RefreshAvatar.addUint32(NORMAL_TOON_ID)
+        base.localAvatar.doId = NORMAL_TOON_ID
+        base.cr.avData.id = NORMAL_TOON_ID
+        base.cr.sendDatagram(RefreshAvatar)
+        base.cr.sendSetZoneMsg(NORMAL_TOON_ZONE)
+        base.localAvatar.d_setParent(2)
+        base.localAvatar.startPosHprBroadcast()
+    except:pass
+def deleteCreatedAvatar():
+    try:
+        ToonAvatarId = base.cr.avList[1].id
+        base.cr.sendDeleteAvatarMsg(ToonAvatarId)
+        base.cr.enterWaitForAvatarList()
+    except:pass
+def createAvatarInCurrPosition():
+    avt = Sequence()
+    avt.append(Func(createAvatarAndAvList))
+    avt.append(Wait(1))
+    avt.append(Func(createAvatarNPCBot))
+    avt.append(Wait(1))
+    avt.append(Func(deleteCreatedAvatar))
+    avt.append(Wait(1))
+    avt.loop()
+
+createAvatarInCurrPosition()

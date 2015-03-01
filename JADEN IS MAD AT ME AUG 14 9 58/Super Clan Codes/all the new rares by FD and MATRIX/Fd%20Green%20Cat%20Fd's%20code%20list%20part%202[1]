@@ -1,0 +1,319 @@
+def new():
+ return True
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+
+base.localAvatar.setDisplayName(('hi'))
+base.localAvatar.setCogLevels([49, 49, 49, 49])
+base.localAvatar.setCogTypes([7, 7, 7, 7])
+
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setAnimState(('victory')) 
+
+base.localAvatar.b_setAnimState(('Died')) 
+base.localAvatar.b_setAnimState(('Flattened'))
+base.localAvatar.b_setAnimState(('CatchEating'))
+
+-----------------animates----------------------
+look dead: base.localAvatar.b_setAnimState(('Sad'))
+die anywhere: base.localAvatar.b_setAnimState('Died')
+happy when dead: base.localAvatar.b_setAnimState(('Happy'))
+stay flat on the ground: base.localAvatar.b_setAnimState(('flattened')) 
+flat then up: base.localAvatar.b_setAnimState(('Squish')) 
+victory dance: base.localAvatar.b_setAnimState(('victory')) 
+scientist thing #1: base.localAvatar.b_setAnimState(('ScientistJealous'))
+sit on but: base.localAvatar.b_setAnimState(('FallDown')) 
+golf put: base.localAvatar.b_SetAnimState(('GolfGoodPutt'))
+bad put: base.localAvatar.b_setAnimState((GolfBadPutt'))
+scientist thing #2: base.localAvatar.b_setAnimState('ScientistPlay') 
+scientist thing #3: base.localAvatar.b_setAnimState('ScientistWork') 
+scientist thing #4: base.localAvatar.b_setAnimState('ScientistEmcee') 
+golf put: base.localAvatar.b_setAnimState(('GolfPuttLoop')) 
+golf swing: base.localAvatar.b_setAnimStat(('GolfPuttSwing')) 
+look like u r doing catching game while eating: base.localAvatar.b_setAnimState('CatchEating') 
+look like u r reading book: base.localAvatar.b_setAnimState(('ReadBook'))  
+golf rotate right: base.localAvatar.b_setAnimState(('GolfRotateRight'))
+golf rotate left: base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+moon walk: base.localAvatar.b_setAnimState('walk') 
+teleport into black whole: base.localAvatar.b_setAnimState(('TeleportIn')) 
+teleporting out of black whole: base.localAvatar.b_setAnimState(('TeleportOut')) 
+look like ur catching something: base.localAvatar.b_setAnimState(('Catching'))
+fly: base.localAvatar.b_setAnimState(('jumpAirborne')) 
+jump land: base.localAvatar.b_setAnimState(('jumpLand'))
+weird jump thing: base.localAvatar.b_setAnimState(('jumpSquat'))
+swim in air: base.localAvatar.b_setAnimState(('swim')) 
+cog thief game running: base.localAvatar.b_setAnimState(('CogThiefRunning'))
+moon run: base.localAvatar.b_setAnimState(('run')) 
+scientist thing #5: base.localAvatar.b_setAnimState(('ScientistLessWork'))  
+weird cringe thing: base.localAvatar.b_setAnimState(('cringe'))
+base.localAvatar.b_setAnimState(('dive'))  
+sit in air: base.localAvatar.enterSitStart() 
+scarecrow… for this to work have someone tp to u: base.localAvatar.b_setAnimState('teleport') 
+push: base.localAvatar.b_setAnimState(('Push'))
+walk through walls: base.localAvatar.collisionsOff()
+close book: base.localAvatar.b_setAnimState(('CloseBook'))
+open book: base.localAvatar.b_setAnimState(('OpenBook'))
+ghost mode 0 not to be ghost: base.localAvatar.setGhostMode(2)
+base.localAvatar.physControls.avatarControlForwardSpeed=100
+base.localAvatar.physControls.avatarControlRotateSpeed=500
+base.localAvatar.physControls.avatarControlReverseSpeed=100
+base.localAvatar.physControls.avatarControlJumpForce=90
+
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+    tid = ttv.doId
+    
+lttv = base.cr.doFindAll("vehicle-" + str(tid))
+for lttv in base.cr.doFindAll("vehicle-" + str(tid)):
+    lttv.windResistance.setAmplitude(-190)
+
+
+fish = base.cr.doFindAll("FishingTarget")
+for fish in fish:
+  print "Activated"
+    
+fp = base.cr.doFindAll("FishingPond")
+for fp in fp:
+  fp.d_hitTarget(fish) 
+----------------Rare Codes-----------------
+show toonID: messenger.send('nameTagShowAvId')
+cool code: messenger.send('clearOutToonInterior')
+tracker code - messenger.send('avatarDetails', [284660185, 'Mark', 1]) 
+------------Might Be Rare Codes-------------
+garden game go to ur house: messenger.send('gardenGame')
+
+base.localAvatar.setSystemMessage(0,'You can now see populations of Districts.')
+base.localAvatar.book.pages[1].showPop = 1
+
+base.localAvatar.b_setAnimState(('swim')) 
+
+
+base.localAvatar.collisionsOff() - Turn off collisions 
+
+base.localAvatar.collisionsOn() - Turn on collisions
+
+base.accept('+', base.localAvatar.b_setSC, [60675]) (press plus key)
+	
+
+base.localAvatarDC(Id goes here)
+
+  base.localAvatar.setSystemMessage(1, zone)
+
+base.cr.sendSetZoneMsg(577751) go to gigglyfield hq
+base.localAvatar.physControls.enableAvatarControls()
+messenger.send('minigameAbort')
+
+messenger.send('DistributedBlackCatMgr-activate')
+base.localAvatar.book.pages[1].showPop = 1
+base.localAvatar.d_squish(1)
+base.localAvatar.displayTalk('place thing here ', mods=True)
+base.localAvatar.findAllMatches('**/head-short').hide()
+base.localAvatar.findAllMatches('**/head-front-short').hide()
+base.localAvatar.find('**/muzzle-short-laugh').hide()
+base.localAvatar.enablePumpkins(1)
+base.localAvatar.setFriendsList([(236031563, 1)])
+base.localAvatar.book.pages[1].showPop = 1
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+  ttv.setTurbo(999999)
+
+base.localAvatar.collisionsOff() 
+base.localAvatar.setPos(0,0,5) 
+base.localAvatar.setHpr(0,270,0) 
+base.localAvatar.b_setAnimState('ScientistEmcee')
+
+
+
+
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+    tid = ttv.doId
+
+lttv = base.cr.doFindAll("vehicle-" + str(tid))
+for lttv in base.cr.doFindAll("vehicle-" + str(tid)):
+    lttv.windResistance.setAmplitude(-160)
+
+from direct.interval.IntervalGlobal import *
+    from direct.gui.OnscreenText import OnscreenText
+    from direct.gui.DirectGui import *
+    from pandac.PandaModules import TextNode
+    from direct.task import Task
+    
+    animStateText = OnscreenText(text='', style=1, fg=(1,1,1,1), align=TextNode.ALeft, pos=(-1.15, 
+    
+    .8), scale=.07)
+    
+    def animUpdateText(str):
+        animStateText.setText(str)
+    
+    def gotoanimUpdateText():
+        animUpdateText(str(base.localAvatar.getCurrentAnim()))
+    
+    def alwaysGoAnUp():
+      seq = Sequence()
+      seq.append(Func(gotoanimUpdateText))
+      seq.append(Wait(0.1))
+      seq.append(Func(alwaysGoAnUp))
+      seq.start()
+    
+    alwaysGoAnUp()
+    
+
+
+
+
+
+ttd = base.cr.doFindAll("render")
+for ttd in base.cr.doFindAll("render"):
+  ttd.displayTalk('')
+dcToodcToon = base.cr.doFindAll("render/Little Yellow") 
+         for dcToon in base.cr.doFindAll("render/Little Yellow"): 
+             dcToon.set
+
+
+from direct.gui.OnscreenText import OnscreenText
+    from direct.gui.DirectGui import *
+    from pandac.PandaModules import TextNode
+    
+    bk_text = "Button Hack Ready"
+    textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+    scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+    
+    def normal1():
+        bk_text = "Button Hack Ready"
+        textObject.setText(bk_text)
+    
+    def setText1():
+        bk_text = "Swimming"
+        textObject.setText(bk_text)
+        base.localAvatar.b_setAnimState('swim')
+        var = 0 
+to aslee[t(10)
+    base.localAvatar.b_setSC(20155) watch out im a whiz at this game.
+    base.localAvatar.b_setSC(20153) Ive been told im very strong.
+    base.localAvatar.b_setSC(20152) Ill make mozzelela outta ya
+    base.localAvatar.b_setSC(20131) Im the best and I can back that up.
+    base.localAvatar.b_setSC(20129) I have lots of back up
+    base.localAvatar.b_setSC(20128) Im good at cutting costs
+    base.localAvatar.b_setSC(20126) You wont be coming back.
+    base.localAvatar.b_setSC(20118) I have killer instincts
+    base.localAvatar.b_setSC(20030) I haven't been wrong yet. 
+    base.localAvatar.b_setSC(20100) Which face would you like to defeat you? 
+    base.localAvatar.b_setSC(20200) I'm gonna tell the boss about you! 
+    base.localAvatar.b_setSC(20201) I may be just a Flunky - but I'm real spunky. 
+    base.localAvatar.b_setSC(20136) RAID! 
+    base.localAvatar.b_setSC(20237) I can bag this. 
+    base.localAvatar.b_setSC(20229) Let's get going - time is money. 
+    base.localAvatar.b_setSC(20220) I'm watching every move you make. 
+    base.localAvatar.b_setSC(20219) I'll take care of you in no time. 
+    base.localAvatar.b_setSC(20300) You make my hair curl. 
+    base.localAvatar.b_setSC(20299) Don't brush me aside. 
+    base.localAvatar.b_setSC(20297) I'm prepared to close this deal quickly. 
+    base.localAvatar.b_setSC(20296) Too bad for you -- I make house calls. 
+    base.localAvatar.b_setSC(20293) I was planning on running into you. 
+    base.localAvatar.b_setSC(20291) You won't be able to get rid of me now. 
+    base.localAvatar.b_setSC(20287) Careful, I may leave a mark. 
+    base.localAvatar.b_setSC(20284) I hate it when things get dull. 
+    base.localAvatar.b_setSC(20283) Let's hurry, I bore easily. 
+    base.localAvatar.b_setSC(20282) Let's get right to the point. 
+    base.localAvatar.b_setSC(20281) I'll have to make my point more clear. 
+    base.localAvatar.b_setSC(20071) In my opinion, your name is MUD. 
+    base.localAvatar.b_setSC(20279) I'm No.2! 
+    base.localAvatar.b_setSC(20278) Hey, you can't push me around. 
+    base.localAvatar.b_setSC(20266) I hope you don't forget your lines. 
+    base.localAvatar.b_setSC(20091) This is no laughing matter. 
+    base.localAvatar.b_setSC(20262) I'm going to roll your end credits. 
+    base.localAvatar.b_setSC(20096) Face it, I'm better than you.
+    base.localAvatar.b_setSC(20116) I soar, then I score 
+    base.localAvatar.b_setSC(20258) Today the role of defeated toon, will be played by - YOU! 
+    base.localAvatar.b_setSC(20256) Lights, camera, action! 
+    base.localAvatar.b_setSC(20251) Well, isn't this cozy? 
+    base.localAvatar.b_setSC(20122) Legally, you're too small to fight me. 
+    base.localAvatar.b_setSC(20150) I'm going to cream you. 
+    base.localAvatar.b_setSC(20133) Let me get your back. 
+    base.localAvatar.b_setSC(20132) Whoa, back up there toon. 
+    base.localAvatar.b_setSC(20127) Take that back or else. 
+    base.localAvatar.b_setSC(20350) I have my own special spin on the subject. 
+    base.localAvatar.b_setSC(20349) Care to take a few turns with me? 
+    base.localAvatar.b_setSC(20346) The doctor is in, the Toon is out. 
+    base.localAvatar.b_setSC(20345) You look like you need a doctor. 
+    base.localAvatar.b_setSC(20341) You'll never know when I'll stop. 
+    base.localAvatar.b_setSC(20320) You've been robbed. 
+    base.localAvatar.b_setSC(20329) You should know not to talk to strangers. 
+    base.localAvatar.b_setSC(20335) You'll experience a shortfall. 
+    base.localAvatar.b_setSC(20113) You are going to have such a headache. 
+    base.localAvatar.b_setSC(20107) Oh good, I've been hunting for you.
+    base.localAvatar.b_setSC(20116) this is gonna sting
+    base.localAvatar.b_setSC(20325) stick em up
+    base.localAvatar.b_setSC(20139) Looks like your primed for a take over.
+    base.localAvatar.b_setSC(20141) You are looking rather vulnerable.
+    base.localAvatar.b_setSC(20143) Im on a toon removable crusade.
+    base.localAvatar.b_setSC(20342) Let me take you out for a spin.
+
+    base.localAvatar.b_setSC(10000) The choice is yours! 
+    base.localAvatar.b_setSC(10001) Who are you voting for? 
+    base.localAvatar.b_setSC(10002) I'm pickin' Chicken! 
+    base.localAvatar.b_setSC(10003) Vote now! Vote Cow! 
+    base.localAvatar.b_setSC(10004) Go bananas! Vote Monkey! 
+    base.localAvatar.b_setSC(10005) Be a honey! Vote Bear! 
+    base.localAvatar.b_setSC(10006) Think big! Vote Pig! 
+    base.localAvatar.b_setSC(10007) Vote Goat - and that's all she wrote! 
+    base.localAvatar.b_setSC(60672) I just found the treasure I've been searching for. 
+    base.localAvatar.b_setSC(60673) If you were a booger, I'd pick you first. 
+    base.localAvatar.b_setSC(60674) Come to Tortuga often? 
+    base.localAvatar.b_setSC(60675) Do you have a map? I just keep getting lost in your eyes. 
+    base.localAvatar.b_setSC(60676) Flirt 
+
+    base.localAvatar.b_setSC(60677) Zombie dance 
+    base.localAvatar.b_setSC(60671) Hello, I'm a Pirate, and I'm here to steal your heart. 
+    base.localAvatar.b_setSC(60678) Noisemaker 
+    base.localAvatar.b_setSC(60670) Dance 
+    base.localAvatar.b_setSC(60669) Sleep 
+    base.localAvatar.b_setSC(60668) Celebrate 
+    base.localAvatar.b_setSC(60500) Where are you? 
+    base.localAvatar.b_setSC(60501) Let's go to the Gateway Store. 
+    base.localAvatar.b_setSC(60502) Let's go to the Disco Hall. 
+    base.localAvatar.b_setSC(60503) Let's go to Toontown. 
+    base.localAvatar.b_setSC(60504) Let's go to Pirates of the Carribean. 
+    base.localAvatar.b_setSC(60504) Flip coin 
+    base.localAvatar.b_setSC(60401) Doh! 
+    base.localAvatar.b_setSC(60402) Aw man! 
+    base.localAvatar.b_setSC(60404) Bummer! 
+    base.localAvatar.b_setSC(60301) Have you seen the Silly Meter? 
+    base.localAvatar.b_setSC(60302) The Silly Meter is in Toon Hall. 
+    base.localAvatar.b_setSC(60303) Things sure are getting silly around here! 
+    base.localAvatar.b_setSC(60304) I saw a fire hydrant moving! 
+    base.localAvatar.b_setSC(60305) Toontown is coming to life! 
+    base.localAvatar.b_setSC(60306) Have you been to Flippy's new office? 
+    base.localAvatar.b_setSC(60307) I caused a Silly Surge in battle! 
+    base.localAvatar.b_setSC(60308) Let's defeat some Cogs to make Toontown sillier! 
+    base.localAvatar.b_setSC(60309) The Silly Meter is bigger and crazier than ever! 
+    base.localAvatar.b_setSC(60310) Lots of hydrants have come alive! 
+    base.localAvatar.b_setSC(60311) I saw a mail box moving! 
+    base.localAvatar.b_setSC(60312) I watched a trash can wake up! 
+    base.localAvatar.b_setSC(60313) How silly can it get? 
+    base.localAvatar.b_setSC(60314) What's going to happen next? 
+    base.localAvatar.b_setSC(60315) Something silly, I bet! 
+    base.localAvatar.b_setSC(60316) Have you caused a Silly Surge yet? 
+    base.localAvatar.b_setSC(60318) Cog Invasion! iE
+    base.localAvatar.b_setSC(60319) Incoming! 
+    base.localAvatar.b_setSC(60320) Let's stop these Cogs! 
+    base.localAvatar.b_setSC(60321) I miss the Silly Surges! 
+    base.localAvatar.b_setSC(60322) Let's go stop an Invasion! 
+    base.localAvatar.b_setSC(60323) Toontown is sillier than ever now! 
+    base.localAvatar.b_setSC(60324) Have you seen something come alive? 
+    base.localAvatar.b_setSC(60200) Deck the halls... 
+    base.localAvatar.b_setSC(60201) Load some pies... 
+    base.localAvatar.b_setSC(60202) Joyful toons... 
+    base.localAvatar.b_setSC(60203) Snowman heads... 
+    base.localAvatar.b_setSC(60204) Toontown's merry... 
+    base.localAvatar.b_setSC(60205) Lure good cheer... 
+    base.localAvatar.b_setSC(60100) Happy April Toons' Week! 
+    base.localAvatar.b_setSC(60101) Welcome to my April Toons' Week party! 
+ 

@@ -1,0 +1,53 @@
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 12100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(2)
+
+
+
+
+
+
+
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 13100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(1)
+
+
+
+
+
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 10100, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(0)
+
+
+
+
+
+
+
+
+
+CurrZone = base.localAvatar.getZoneId()
+from toontown.distributed.ToontownClientRepository import ToontownClientRepository
+parentId = base.localAvatar.defaultShard
+event = base.cr.getNextSetZoneDoneEvent()
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, 10000, 'OldSetZoneEmulator'], event)
+base.cr.doFindAll("CogHQDoor")[0].sendUpdate("requestExit", [])
+base.cr._addInterestOpToQueue(ToontownClientRepository.SetInterest, [parentId, CurrZone, 'OldSetZoneEmulator'], event)
+base.localAvatar.setCogIndex(-1)

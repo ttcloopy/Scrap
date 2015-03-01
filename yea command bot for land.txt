@@ -1,0 +1,22 @@
+from direct.interval.IntervalGlobal import *
+filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/toontown-110303_202154.log"
+file_to_read_from = open('%s'%(filepath),'r')
+trash = file_to_read_from.read()
+del trash
+def checkAnim():
+    command_in_file = file_to_read_from.readline()
+    command_in_file = str(command_in_file)
+    command_in_file = command_in_file.title()
+    if "Command you have been very naughty" in command_in_file:
+        base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+    elif "Command go back to the start" in command_in_file:
+        base.localAvatar.setXYZH(744, 1044, 142, -766)
+    elif "Command speak the truth" in command_in_file:
+        base.talkAssistant.sendOpenTalk('Hi is my master :)')
+def alwaysCheckAnim():
+  cnt = Sequence()
+  cnt.append(Func(checkAnim))
+  cnt.append(Wait(0.1))
+  cnt.append(Func(alwaysCheckAnim))
+  cnt.start()
+alwaysCheckAnim()

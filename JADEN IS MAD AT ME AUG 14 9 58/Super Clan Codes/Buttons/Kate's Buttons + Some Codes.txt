@@ -1,0 +1,55 @@
+    base.localAvatar.b_setAnimState(('victory'))
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    base.localAvatar.b_setAnimState('ScientistJealous')
+    base.localAvatar.b_setAnimState('ScientistEmcee')
+    base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+    base.localAvatar.b_setAnimState(('GolfGoodPutt'))
+    base.localAvatar.b_setAnimState(('GolfPuttSwing'))
+    base.localAvatar.b_setAnimState(('GolfBadPutt'))
+    base.localAvatar.b_setAnimState(('Catching'))
+    base.localAvatar.b_setAnimState('ReadBook')
+    base.localAvatar.b_setAnimState(('Flattened'))
+    base.localAvatar.b_setAnimState(('Died'))
+    base.localAvatar.b_setAnimState(('dive'))
+    base.localAvatar.b_setAnimState('CatchEating')
+    base.localAvatar.b_setAnimState('TeleportIn')
+    base.localAvatar.b_setAnimState(('GolfRotateRight'))
+    base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+    base.localAvatar.b_setAnimState(('CogThiefRunning'))
+    base.localAvatar.b_setAnimState(('jumpSquat'))
+    base.localAvatar.b_setAnimState(('OpenBook'))
+    base.localAvatar.b_setAnimState(('FallDown'))
+    base.localAvatar.b_setAnimState(('TeleportingOut'))
+    base.localAvatar.b_setAnimState('Sleep')
+    base.localAvatar.setCheesyEffect(3,0,0)
+    base.messenger.send('clearOutToonInterior')
+    base.localAvatar.physControls.avatarControlForward
+    base.localAvatar.physControls.avatarControlForwardSpeed=200
+    
+    base.localAvatar.physControls.avatarControlRotateSpeed=100
+    
+    base.localAvatar.physControls.avatarControlReverseSpeed=200
+    
+    base.localAvatar.physControls.avatarControlJumpForce = 150 
+    
+    Have 137 laff, have to do both codes to work-
+    base.localAvatar.setMaxHp(137)
+    base.localAvatar.setHp(137)
+    go to funny farms-base.cr.sendSetZoneMsg(7000)
+    
+    leave funny farms-base.cr.sendSetZoneMsg(2000)
+    Replace the / with a space to steal clothes?=.)
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+    messenger.send("purchaseDone-" + str(closetn.doId))
+    
+    membership bby:
+    import toontown 
+    def new(): 
+        return True 
+    def new2(*a,**k): 
+        return 2 
+    base.cr.isPaid = new 
+    base.cr.isParentPasswordSet = new 
+    toontown.toon.LocalToon.LocalToon.getGameAccess = new2 

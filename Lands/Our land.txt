@@ -1,0 +1,34 @@
+base.cr.sendSetZoneMsg(10000000)
+base.localAvatar.setPos(1.818,112.288,127.525)
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from direct.showbase.DirectObject import DirectObject
+from pandac.PandaModules import CollisionTraverser, CollisionHandlerEvent
+from pandac.PandaModules import CollisionNode, CollisionSphere
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.gui.DirectGui import DirectFrame
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+sky1 = loader.loadModel("phase_8/models/props/DL_sky.bam")
+sky1.reparentTo(render)
+
+environ = loader.loadModel("phase_8/models/neighborhoods/donalds_dreamland.bam")
+environ.reparentTo(render)
+environ.setPos(1.818,112.288,127.525)
+environ.setHpr(90,0,0)
+environ.setScale(1)
+
+dancefloor=loader.loadModel("phase_13/models/parties/danceFloor.bam")
+dancefloor.reparentTo(render)
+dancefloor.setPos(-6.283,117.614,112.550) 
+carouselSpin=dancefloor.hprInterval(20, Vec3(360, 0, 0))
+carouselSpin.loop()
+

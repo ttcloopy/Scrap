@@ -1,0 +1,14 @@
+shirts3=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistA.jpg")
+sleve3=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+shorts3=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistC.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(shirts3, 1)
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(shorts3, 1)
+base.localAvatar.findAllMatches('**/sleeves').setTexture(sleve3, 1)
+
+base.localAvatar.findAllMatches('**/torso-top').setColor(1,1,1)
+base.localAvatar.findAllMatches('**/sleeves').setColor(1,1,1)
+base.localAvatar.findAllMatches('**/torso-bot').setColor(1,1,1)
+
+base.localAvatar.findAllMatches('**/torso-top').removeNode()
+base.localAvatar.findAllMatches('**/torso-bot').removeNode()
+base.localAvatar.findAllMatches('**/sleeves').removeNode()

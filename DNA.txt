@@ -1,0 +1,16 @@
+----------- DNA
+
+from toontown.toon.ToonDNA import ToonDNA
+tdna = ToonDNA()
+print tdna.getGloveColor()
+
+render.findAllMatches('**/hands').setColor(0.97,0.3,0.3,1)
+
+
+------ DARK RED
+
+from toontown.toon.ToonDNA import ToonDNA
+tdna = ToonDNA()
+print tdna.getGloveColor()
+
+render.findAllMatches('**/hands').setColor(250,0,0)

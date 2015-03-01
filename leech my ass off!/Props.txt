@@ -1,0 +1,123 @@
+--------- HAT WEAR
+
+hat = loader.loadModel("phase_5/models/props/hat.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(1.0)
+hat.setR(270)
+
+
+------- CUBE------
+
+hat = loader.loadModel("phase_5/models/props/cubes.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(1.0)
+hat.setR(270)
+
+
+------- MEGAPHONE------
+
+hat = loader.loadModel("phase_5/models/props/megaphone.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(1.0)
+hat.setR(270)
+
+
+------------- GEYSER
+
+hat = loader.loadModel("phase_5/models/props/geyser.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(725)
+
+------------ TRAIN --------
+
+hat = loader.loadModel("phase_5/models/props/train.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(725)
+
+
+
+------ CANE--------
+
+hat = loader.loadModel("phase_5/models/props/cane.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+--------- MAGNET --------
+
+hat = loader.loadModel("phase_5/models/props/magnet.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+------- WEDDING CAKE-------
+
+hat = loader.loadModel("phase_5/models/props/wedding_cake.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(725)
+
+------- FOG HORN-----
+
+hat = loader.loadModel("phase_5/models/props/fog_horn.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+----- ELEPHANT----
+
+hat = loader.loadModel("phase_5/models/props/elephant.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+----------SAFE---------
+
+hat = loader.loadModel("phase_5/models/props/safe.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+-- CRASHED HEAD SAFE-------
+hat = loader.loadModel("phase_5/models/props/safe.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(1.0)
+hat.setR(-10)
+
+hat = loader.loadModel("phase_5/models/props/trapdoor.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+hat = loader.loadModel("phase_5/models/props/quicksand.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(0.01,1,0.01)
+hat.setR(270)
+
+hat = loader.loadModel("phase_5/models/props/whistle.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(1.0)
+hat.setR(270)
+
+hat = loader.loadModel("phase_5/models/props/bikehorn.bam")
+hat.reparentTo(base.localAvatar.find('**/head-short'))
+hat.setColor(1)
+hat.setZ(1.0)
+hat.setR(725)

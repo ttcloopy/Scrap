@@ -1,0 +1,8 @@
+base.cr.avList[0].wishState = base.cr.avList[0].approvedName
+
+base.cr.avList[0].name = 'Name'
+base.cr.avList[0].wantName = 'Name'
+base.cr.avList[0].wishName = 'Name'
+base.cr.avList[0].wishState = 'Name'
+base.cr.avList[0].approvedName = 'Name'
+base.cr.avList[0].allowedName = 'Name'

@@ -1,0 +1,9 @@
+base.localAvatar.book.pages[1].showPop = 1
+
+base.localAvatar.findAllMatches('**/hands').setColor(0.40,0.88,0.28)
+
+EXTRA: ~ *BIG CHEESE SUIT* ~ 
+base.localAvatar.putOnSuit('tbc')
+
+messenger.send([base.localAvatar.b_setAnimState('victory', -32)])
+base.localAvatar.collisionsOff()

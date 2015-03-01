@@ -1,0 +1,21 @@
+print dir(), print help(), import inspect;print inspect.getmembers(base.localAvatar)
+
+from dis import *
+print dis(base.localAvatar.setCogIndex)
+
+print dir(base.localAvatar)
+
+print help(base.localAvatar.setAnimState)
+
+import inspect
+print inspect.getmembers(base.localAvatar)
+
+from dis import *
+print dis(base.localAvatar)
+and finally
+
+base.cr.wantUpdateCalls = True
+to make live codes appear
+
+doodle = base.cr.doFindAll("Recall")[0]
+print dir(doodle)

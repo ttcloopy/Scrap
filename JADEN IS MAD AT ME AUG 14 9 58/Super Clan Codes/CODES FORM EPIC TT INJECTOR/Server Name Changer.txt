@@ -1,0 +1,49 @@
+SERVER NAME:
+
+from direct.interval.IntervalGlobal import *
+def writeName():
+    base.localAvatar.setName('Fd Green Cat Fd')
+    base.localAvatar.setSystemMessage(1, 'Writing Name')
+def startName():
+    base.localAvatar.getName(285855982, 'Fd Green Cat Fd')
+    base.localAvatar.setSystemMessage(1, 'Started The Process')
+def readName():
+    base.localAvatar.receiveAcceptAddName('Fd Green Cat Fd')
+    base.localAvatar.receiveAcceptAddName('285855982')
+    base.localAvatar.setSystemMessage(1, 'Reading The Name')
+def acceptName():
+    base.localAvatar.receiveAcceptGetName(285855982)
+    base.localAvatar.setSystemMessage(1, 'Accepting Name')
+def end():
+    base.localAvatar.setSystemMessage(1, 'Name Add Succesful, Please Log Off For You New Name!')
+    messenger.send('enterStickerBook')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(writeName))
+  seq.append(Wait(2))
+  seq.append(Func(startName))
+  seq.append(Wait(2))
+  seq.append(Func(readName))
+  seq.append(Wait(2))
+  seq.append(Func(acceptName))
+  seq.append(Wait(2))
+  seq.append(Func(end))
+  seq.start()
+onTime()
+
+base.localAvatar.setName('')
+base.localAvatar.setName('Fd Green Cat Fd')
+base.localAvatar.getName(ID)
+base.localAvatar.receiveAcceptGetName('Fd Green Cat Fd')
+base.localAvatar.addName(ID, 'Fd Green Cat Fd')
+base.localAvatar.receiveAcceptAddName(ID)
+
+base.localAvatar.receiveAcceptAddName(285855982)
+base.localAvatar.receiveAcceptAddName(285855982, 'Fd Green Cat Fd')
+base.localAvatar.receiveAcceptAddName('Fd Green Cat Fd')
+base.localAvatar.getName(285855982)
+base.localAvatar.getName('Fd Green Cat Fd')
+base.localAvatar.getName(285855982, 'Fd Green Cat Fd')
+base.localAvatar.receiveAcceptGetName(285855982)
+base.localAvatar.receiveAcceptGetName(285855982, 'Fd Green Cat Fd')
+base.localAvatar.receiveAcceptGetName('Fd Green Cat Fd')

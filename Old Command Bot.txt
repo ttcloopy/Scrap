@@ -1,0 +1,36 @@
+from direct.interval.IntervalGlobal import *
+filepath = "C:/Program Files/Disney/Disney Online/ToontownOnline/toontown-110303_202154.log"
+file_to_read_from = open('%s'%(filepath),'r')
+trash = file_to_read_from.read()
+del trash
+def checkAnim():
+    command_in_file = file_to_read_from.readline()
+    command_in_file = str(command_in_file)
+    command_in_file = command_in_file.title()
+    if "Command Splash" in command_in_file:
+        toon = base.cr.doFindAll("Your Name")
+        base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+        base.localAvatar.playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())
+    elif "Command Collisions" in command_in_file:
+        base.localAvatar.collisionsOff()
+    elif "Command Chat" in command_in_file:
+        base.localAvatar.setSC(4)
+    elif "Command Erase" in command_in_file:
+        base.localAvatar.UpdateWhitelist()
+    elif "Command Swim" in command_in_file:
+        base.localAvatar.b_setAnimState('swim')
+    elif "Command Died" in command_in_file:
+        base.localAvatar.b_setAnimState('Died')
+    elif "Command Run" in command_in_file:
+        base.localAvatar.b_setAnimState('run')
+    elif "Command Walk" in command_in_file:
+        base.localAvatar.b_setAnimState('walk')
+    elif "Command Scientist" in command_in_file:
+        base.localAvatar.b_setAnimState('ScientistEmcee')
+def alwaysCheckAnim():
+  cnt = Sequence()
+  cnt.append(Func(checkAnim))
+  cnt.append(Wait(0.1))
+  cnt.append(Func(alwaysCheckAnim))
+  cnt.start()
+alwaysCheckAnim()

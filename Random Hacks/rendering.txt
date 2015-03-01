@@ -1,0 +1,18 @@
+
+base.localAvatar.setName('\x01shadow\x01\x01black\x01F\x01yellow\x01d \x01black\x01H\x01yellow\x01i \x01black\x01F\x01yellow\x01d')
+
+ttd = base.cr.doFindAll("Master Rusty")
+for ttd in base.cr.doFindAll("Master Rusty"):
+ ttd.setName('\x01shadow\x01\x01black\x01M\x01yellow\x01a\x01black\x01s\x01yellow\x01t\x01black\x01e\x01yellow\x01r \x01black\x01R\x01yellow\x01u\x01black\x01s\x01yellow\x01t\x01black\x01y')
+
+from toontown.effects.SparksTrail import SparksTrail
+Me = base.localAvatar
+st = SparksTrail()
+st.setPos(Me.getX(), Me.getY(), Me.getZ())
+st.play()
+
+from toontown.effects.SparksTrail import SparksTrail
+Me = base.localAvatar
+st = SparksTrail()
+st.setPos(-58, -141, 8)
+st.play()

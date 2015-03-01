@@ -1,0 +1,112 @@
+from direct.interval.IntervalGlobal import *
+
+def part2():
+    base.talkAssistant.sendOpenTalk('YOU STINK AT THIS!!')
+    base.localAvatar.b_setEmoteState(23,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('WE ARE THE RED TEAM AND WE WILL GET YOU!!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('I AM  LEADER KNOWN MOUSE')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('WE ARE')
+def part6():
+    base.talkAssistant.sendOpenTalk('THE RED TEAM WE WILL GET YOU!!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part7():
+    base.talkAssistant.sendOpenTalk('AND NOW YOU GO AWAY FOREVER!!')
+    base.localAvatar.b_setEmoteState(0,0)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():from direct.interval.IntervalGlobal import *
+
+def part8():
+    base.talkAssistant.sendOpenTalk('YOU FAIL!!')
+    base.localAvatar.b_setEmoteState(23,1)
+def part9():
+    base.talkAssistant.sendOpenTalk('WE ARE RED TEAM!!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part10():
+    base.talkAssistant.sendOpenTalk('I AM  LEADER KNOWN MOUSE')
+    base.localAvatar.b_setEmoteState(24,1)
+def part11():
+    base.talkAssistant.sendOpenTalk('WE ARE')
+def part12():
+    base.talkAssistant.sendOpenTalk('THE RED TEAM WE WILL GET YOU!!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part13():
+    base.talkAssistant.sendOpenTalk('AND NOW YOU GO BYE BYE!!')
+    base.localAvatar.b_setEmoteState(0,0)
+def addzone():
+    word = base.localAvatar.getZoneId()
+    word += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part3))
+  seq.append(Wait(1))
+  seq.append(Func(part4))
+  seq.append(Wait(1))
+  seq.append(Func(part5))
+  seq.append(Wait(1.3))
+  seq.append(Func(part6))
+  seq.append(Wait(1.3))
+  seq.append(Func(part7))
+  seq.append(Wait(1))
+  seq.append(Func(addzone))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part3))
+  seq.append(Wait(1))
+  seq.append(Func(part4))
+  seq.append(Wait(1))
+  seq.append(Func(part5))
+  seq.append(Wait(1.3))
+  seq.append(Func(part6))
+  seq.append(Wait(1.3))
+  seq.append(Func(part7))
+  seq.append(Wait(1))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()

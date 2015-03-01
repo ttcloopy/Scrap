@@ -1,0 +1,14 @@
+SendUpdateBanBlocker = base.localAvatar.sendUpdate
+def sendUpdateHook(fieldName, args=[], sendToId=base.localAvatar.doId):
+    if fieldName == "logSuspiciousEvent":
+        pass
+    else:
+        aSendUpdate(fieldName, args)
+def keepConnection():
+    pass
+def denyDisconnectDetails(newCode, newMsg):
+    pass
+base.cr.lostConnection = keepConnection
+base.cr.disconnect = keepConnection
+base.localAvatar.sendUpdate = sendUpdateHook
+base.cr.launcher.setDisconnectDetails = denyDisconnectDetails

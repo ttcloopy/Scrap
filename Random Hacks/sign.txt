@@ -1,0 +1,14 @@
+base.cr.sendSetZoneMsg(6969)
+from pandac.PandaModules import *
+from direct.actor.Actor import Actor
+from direct.showbase.DirectObject import DirectObject
+from direct.showbase.ShowBase import ShowBase
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+sign = loader.loadModel("phase_4/models/props/construction_sign.bam")
+sign.reparentTo(render)
+sign.setPos(1032, 1353, 155)
+sign.setHpr(10,0,0)
+sign.setScale(3)
+
+
+sign.removeNode()

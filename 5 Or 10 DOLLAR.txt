@@ -1,0 +1,8 @@
+hp = loader.loadModel("phase_5/models/props/toon-prop-textures.bam")
+hp.reparentTo(base.localAvatar.find('**/head-short'))
+hp.setZ(0.1)
+hp.setR(720)
+hp.setX(-2)
+hp.setY(0)
+hp.setH(-10)
+hp.setColor(1,1,1)

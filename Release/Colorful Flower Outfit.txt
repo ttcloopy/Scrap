@@ -1,0 +1,91 @@
+------ COLORFUL FLOWER OUTFIT-------
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5/maps/fence_wood_flower.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+
+	Red suit of awesomeness
+
+
+gloves = loader.loadTexture("phase_6/maps/boost_arrow.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/boost_arrow.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/boost_arrow.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/boost_arrow.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+		
+
+		CHIPMUNK OUTFIT 
+
+gloves = loader.loadTexture("phase_6/maps/chip_dale_body2.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/chip_dale_body2.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/chip_dale_body2.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/chip_dale_body2.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+
+		
+
+
+Black Suit
+
+
+
+gloves = loader.loadTexture("phase_6/maps/wrenchIronShadow.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/wrenchIronShadow.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/wrenchIronShadow.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_6/maps/wrenchIronShadow.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+
+
+	Hearts
+
+gloves = loader.loadTexture("phase_5.5/maps/tt_t_ara_int_border_valentine_heart1.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5.5/maps/tt_t_ara_int_border_valentine_heart1.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5.5/maps/tt_t_ara_int_border_valentine_heart1.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_5.5/maps/tt_t_ara_int_border_valentine_heart1.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+
+
+			Spider
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+
+gloves = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween4.jpg")
+base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)

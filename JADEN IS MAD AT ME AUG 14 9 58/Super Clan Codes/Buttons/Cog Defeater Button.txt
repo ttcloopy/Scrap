@@ -1,0 +1,4 @@
+I have a new Code for you.
+It lets you Defeat cogs 
+without using gags:
+base.cr.ew.[f9a020].DEF-EAt-COGS

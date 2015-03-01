@@ -1,0 +1,76 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def bOne():
+ base.localAvatar.collisionsOn()
+def bTwo():
+ base.localAvatar.collisionsOff()
+def  bThree():
+ base.localAvatar.b_setAnimState('dive')
+def bFour():
+ base.localAvatar.b_setAnimState('swim')
+def bFive():
+ base.localAvatar.b_setSC(20136)
+def bSix():
+ base.localAvatar.book.pages[1].choseShard(450000000)
+def bSeven():
+ base.localAvatar.showHpString('Enjoy! - Meow Mew', duration=5, scale=0.5)
+ base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+ base.localAvatar.setEmoteAccess([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,0,0,0,0,21,22,23,24,25])
+ base.localAvatar.setSystemMessage(0,'All Pet Trick Phrases And Emotes Availaible')
+def bEight():
+  base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+  base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+  base.localAvatar.book._ShtikerBook__pageChange(1)
+  base.localAvatar.book._ShtikerBook__pageChange(-1)
+def bNine():
+  base.talkAssistant.sendOpenTalk('- sPOKE -')
+def bTen():
+ base.talkAssistant.sendOpenTalk('Bored... ' * 20)
+def bEleven():
+ base.talkAssistant.sendOpenTalk('Im.. Bored... Wheres Meow Mew xD')
+def bTwelve():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+def bThirteen():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bFourteen():
+ base.localAvatar.physControls.setGravity(.1)
+def bFifteen():
+ base.localAvatar.physControls.avatarControlJumpForce = 1
+def bSixteen():
+ base.localAvatar.physControls.avatarControlRotateSpeed=125
+def bSeventeen():
+ base.localAvatar.physControls.avatarControlReverseSpeed=80
+def bEighteen():
+ base.localAvatar.showHpString('Going To House...', duration=3, scale=0.5)
+ base.localAvatar._LocalToon__handleClarabelleButton()
+def bNineteen():
+ base.localAvatar.showHpString('Gravity - RESET', duration=5, scale=0.5)
+ base.localAvatar.physControls.setGravity(50)
+def bTwentytwo():
+ base.talkAssistant.sendOpenTalk('Hmm I Have Nothing To Do... O_O')
+def bTwentyeight():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bTwentynine():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+
+b6 = DirectButton(text = ("Toon", "Valley", "Valley", "Toon"), scale=.05, pos = (1.26,0,.1), command=bSix)
+b7 = DirectButton(text = ("Emote", "All", "All", "Emote"), scale=.06, pos = (1.25,0,.1), command=bSeven)
+b8 = DirectButton(text = ("~Tp~", "All", "All", "~Tp~"), scale=.05, pos = (1.26,0,.0), command=bEight)
+b9 = DirectButton(text = ("~Talk02~", "Poke", "Poke", "Talk"), scale=.06, pos = (-1.20,0,.4), command=bNine)
+b22 = DirectButton(text = ("~Talk03~", "O_O", "O_O", "Talk"), scale=.06, pos = (-1.20,0,.3), command=bTwentytwo)
+b10 = DirectButton(text = ("~Talk04~", "Bored", "Bored", "Talk"), scale=.06, pos = (-1.20,0,.2), command=bTen)
+b11 = DirectButton(text = ("~Talk01~", "xD LOL", "xD LOL", "Talk"), scale=.06, pos = (-1.198,0,.5), command=bEleven)
+b12 = DirectButton(text = ("Jump1", "100", "100", "Jump1"), scale=.05, pos = (-1.27,0,-.1), command=bTwelve)
+b13 = DirectButton(text = ("Speed", "100", "100", "Speed"), scale=.05, pos = (-1.27,0,-.2), command=bThirteen)
+b16 = DirectButton(text = ("Rotate", "125", "125", "Rotate"), scale=.05, pos = (-1.27,0,-.3), command=bSixteen)
+b17 = DirectButton(text = ("Reverse", "80", "80", "Reverse"), scale=.05, pos = (-1.25,0,-.4), command=bSeventeen)
+b14 = DirectButton(text = ("Gravity", ".1", ".1", "Gravity"), scale=.05, pos = (-1.26,0,-.5), command=bFourteen)
+b15 = DirectButton(text = ("Jump2", "1", "1", "Jump2"), scale=.05, pos = (-1.26,0,-.6), command=bFifteen)
+b18 = DirectButton(text = ("House", "Tp", "Tp", "House"), scale=.05, pos = (-1.27,0,-.8), command=bEighteen)
+b19 = DirectButton(text = ("Gravity", "RESET", "RESET", "Gravity"), scale=.05, pos = (-1.26,0,-.7), command=bNineteen)
+b20 = DirectButton(text = ("EXIT", "GO", "GO", "EXIT"), scale=.05, pos = (-1.29,0,.6), command=bTwenty)

@@ -1,0 +1,163 @@
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+
+base.localAvatar.setPos(0,0,290)
+base.localAvatar.setSystemMessage(0,'Welcome To Tron Land!')
+base.localAvatar.setName(('Tron Tester'))
+
+
+bgMusic1 = base.loader.loadSfx("phase_12/audio/bgm/Bossbot_Factory_v3.mid")
+bgMusic1.setLoop(True)
+bgMusic1.play()
+
+
+floor = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+floor.reparentTo(render)
+floor.setPos(0,0,290)
+floor.setHpr(74,0,0)
+floor.setScale(15)
+
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/Sky').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/sleeves').setColorScale(25) 
+    gloves = loader.loadTexture("phase_4/maps/it.jpg")
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/torso-top').setColorScale(25) 
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/torso-bot').setColorScale(25) 
+    base.localAvatar.findAllMatches('**/hands').setColor(255,0,0)
+    base.localAvatar.findAllMatches('**/hands').setColorScale(25) 
+    shirt = base.localAvatar.findAllMatches('**/hands')
+    shirttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_cogbuster.jpg")
+    shirt.setTexture(shirttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-bot')
+    shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_saveBuilding1.jpg")
+    short.setTexture(shorttex, 1)
+    short = base.localAvatar.findAllMatches('**/torso-top')
+    shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_saveBuilding1.jpg")
+    short.setTexture(shorttex, 1)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/torso-bot').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/torso-top').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/sleeves').setColor(0,0,1)
+    base.localAvatar.findAllMatches('**/Sky').setColor(0,0,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.2))
+  rain.append(Func(blue))
+  rain.append(Wait(0.2))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f1',self.Control)
+  def Control(self):
+    base.localAvatar.physControls.avatarControlForwardSpeed=100 
+    base.localAvatar.physControls.avatarControlJumpForce=100
+    base.localAvatar.setCheesyEffect(5, 0, 0)
+    base.localAvatar.showCS()
+    base.localAvatar.setSystemMessage(0, 'POWERS ACTIVATED!')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f2',self.Control)
+  def Control(self):
+    base.localAvatar.physControls.avatarControlForwardSpeed=15
+    base.localAvatar.physControls.avatarControlJumpForce=24
+    base.localAvatar.hideCS()
+    base.localAvatar.setCheesyEffect(0, 0, 0)
+    base.localAvatar.setSystemMessage(0, 'POWERS DE-ACTIVATED!')
+c = Control()
+
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f3',self.Control)
+  def Control(self):
+    base.localAvatar.loop('hypnotize')
+    base.localAvatar.setSystemMessage(0, 'ATTACK POWER')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f4',self.Control)
+  def Control(self):
+    floor.setColor(255,0,0)
+    base.localAvatar.setSystemMessage(0, 'Floor Red')
+c = Control()
+
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f5',self.Control)
+  def Control(self):
+    floor.setColor(0,0,1)
+    base.localAvatar.setSystemMessage(0, 'Floor Blue')
+c = Control()
+
+from direct.interval.IntervalGlobal import *
+def wakeUp():
+    base.localAvatar.wakeUp()
+def onTime():
+  seq = Sequence()
+  seq.append(Func(wakeUp))
+  seq.append(Wait(.1))
+  seq.append(Func(onTime))
+  seq.start()
+onTime()
+
+base.localAvatar.setSystemMessage(0,'Toon Awake Forever Active, Press Buttons F1-F7 For Tron Uses.')
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f6',self.Control)
+  def Control(self):
+    base.localAvatar.collisionsOff() 
+    base.localAvatar.setSystemMessage(0, 'Collisions Activated!')
+c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+  def __init__(self):
+    self.accept('f7',self.Control)
+  def Control(self):
+    base.localAvatar.collisionsOn() 
+    base.localAvatar.setSystemMessage(0, 'Collisions De-Activated!')
+c = Control()
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Tron Tester")
+    for cc in base.cr.doFindAll("Tron Tester"):
+      cc.copyTo(render)   
+b = DirectButton(text = ("Copy Toon", "Activate", "Activate", "Copy Toon"), scale=.06, pos = (0,-.95,-.95), command=setText)

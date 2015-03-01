@@ -1,0 +1,6 @@
+import toontown
+try:getGenderColorList
+except:getGenderColorList = toontown.makeatoon.ColorShop.ColorShop.getGenderColorList
+def returnColorList(self, *args):
+ return range(-1,26,1)
+toontown.makeatoon.ColorShop.ColorShop.getGenderColorList = returnColorList

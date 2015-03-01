@@ -1,0 +1,59 @@
+    LAFFMETER_COLORS = {"LIGHTPINK":VBase4(0.969, 0.691, 0.699, 1), "RED":VBase4(0.934, 0.266, 0.281, 1), 
+    "MAROON":VBase4(0.863, 0.406, 0.418, 1), "CRANBERRY":VBase4(0.711, 0.234, 0.438, 1), 
+    "WOOD":VBase4(0.57, 0.449, 0.164, 1), "BROWN":VBase4(0.641, 0.355, 0.27, 1), 
+    "TAN":VBase4(0.996, 0.695, 0.512, 1), "CARAMEL":VBase4(0.832, 0.5, 0.297, 1), 
+    "ORANGE":VBase4(0.992, 0.48, 0.168, 1), "YELLOW":VBase4(0.996, 0.898, 0.32, 1), 
+    "CREAM":VBase4(0.996, 0.957, 0.598, 1), "LIME":VBase4(0.855, 0.934, 0.492, 1), 
+    "GRASS":VBase4(0.551, 0.824, 0.324, 1), "SEAGREEN":VBase4(0.242, 0.742, 0.516, 1), 
+    "NEONGREEN":VBase4(0.305, 0.969, 0.402, 1), "CYAN":VBase4(0.434, 0.906, 0.836, 1), 
+    "SKY":VBase4(0.348, 0.82, 0.953, 1), "NAVY":VBase4(0.191, 0.563, 0.773, 1), 
+    "Periwinkle":VBase4(0.559, 0.59, 0.875, 1), "DARKBLUE":VBase4(0.285, 0.328, 0.727, 1), 
+    "VIOLET":VBase4(0.461, 0.379, 0.824, 1), "PURPLE":VBase4(0.547, 0.281, 0.75, 1), 
+    "PINK":VBase4(0.727, 0.473, 0.859, 1), "ROSEPINK":VBase4(0.898, 0.617, 0.906, 1), 
+    "GRAY":VBase4(0.7, 0.7, 0.8, 1), "BLACK":VBase4(0.3, 0.3, 0.35, 1)}
+    i did this and
+    LAFFMETER_COLOR_LIST = list(LAFFMETER_COLORS)
+    LAFFMETER_COLOR_ON = 1
+    that
+    and
+    to call the color i was on
+    i did this
+    LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]]
+    and
+    to add the color number
+
+ greencatthethird 4:40 pm
+    i did this
+
+ JasonNuke1997 4:40 pm
+    did you fin dthis using print help cuz i found alot of lists but never found a color list
+
+ greencatthethird 4:40 pm
+    if METER_COLOR_ON != 25:METER_COLOR_ON += 1
+            else:METER_COLOR_ON = 1
+    LOL
+
+ JasonNuke1997 4:40 pm
+    find*
+    lol
+
+ greencatthethird 4:41 pm
+    no
+    i had to manually get them
+    using setDNA and getColor
+
+ JasonNuke1997 4:41 pm
+    my laff meter hack just uses set color
+
+ greencatthethird 4:41 pm
+    lol
+    no i mean
+    to find the color
+    colors
+    i had to do that
+    xP
+
+ greencatthethird 4:42 pm
+    my hack does this
+    base.localAvatar.laffMeter.color = LAFFMETER_COLORS[LAFFMETER_COLOR_LIST[LAFFMETER_COLOR_ON]]
+            base.localAvatar.laffMeter.adjustFace(base.localAvatar.hp, base.localAvatar.maxHp)

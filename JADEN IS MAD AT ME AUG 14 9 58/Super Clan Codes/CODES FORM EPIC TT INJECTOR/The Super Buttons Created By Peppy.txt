@@ -1,0 +1,443 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Collisions"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "RAID"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(20136)
+    var = 0
+
+def setText6():
+    bk_text = "Big"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n' * 256)
+    var = 1
+
+def setText7():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText8():
+    closetn = base.cr.doFindAll("closet")
+    for closetn in base.cr.doFindAll("closet"):
+        messenger.send("purchaseDone-" + str(closetn.doId))
+    var = 1
+
+def setText9():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText10():
+    bk_text = "Funny"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(7000)
+    var = 1
+
+def setText11():
+    bk_text = "DC"
+    textObject.setText(bk_text)
+    localAvatar.d_setAnimState('Disconneted')
+    var = 1
+
+def setText12():
+    bk_text = "TTC"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2000)
+    var = 1
+
+def setText13():
+    bk_text = "Work"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistWork'))
+    var = 1
+
+def setText14():
+    bk_text = "Victory"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('victory'))
+    var = 1
+
+def setText15():
+    bk_text = "Dive"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('dive'))
+    var = 1
+
+def setText16():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText17():
+    bk_text = "Port In"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText18():
+    bk_text = "Play"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistPlay'))
+    var = 1
+
+def setText19():
+    bk_text = "Emcee"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistEmcee'))
+    var = 1
+
+def setText20():
+    bk_text = "Jealous"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState(('ScientistJealous'))
+    var = 1
+
+def setText21():
+    bk_text = "UpsideD"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr((0,0,180))
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText22():
+    bk_text = "OnFace"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(-50,-50,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText23():
+    bk_text = "OnBack"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,90,0)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText24():
+    bk_text = "FU"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('We are TEAM ADMIN \n' *10)
+    var = 1
+
+def setText25():
+    bk_text = "SIDE"
+    textObject.setText(bk_text)
+    base.localAvatar.setHpr(0,0,90)
+    base.localAvatar.collisionsOff()
+    var = 1
+
+def setText26():
+    bk_text = "Invis"
+    textObject.setText(bk_text)
+    base.cr.sendSetZoneMsg(2090)
+    var = 1
+
+def setText27():
+    bk_text = "000"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk(' \000' *200)
+    var = 1
+
+def setText28():
+    bk_text = "annoy"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText29():
+    bk_text = "Tw"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('TEAM ADMIN WILL RULE!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText30():
+    bk_text = "Cheese"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('CHEESE IS THE ANSWER\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText31():
+    bk_text = "RULE"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('WE ARE THE RULERS!!!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText32():
+    bk_text = "MUAHAHAHA"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('MUAHAHA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'.center(50) * 6)
+    var = 1
+
+def setText33():
+    bk_text = "No sleep"
+    textObject.setText(bk_text)
+    base.localAvatar.wakeUp()
+    var = 1
+
+def setText34():
+    bk_text = "Red"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+    var = 1
+
+def setText35():
+    bk_text = "bg"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(0.30,54.34564,0.23)
+    var = 1
+
+def setText36():
+    bk_text = "by"
+    textObject.setText(bk_text)
+    base.localAvatar.findAllMatches('**/hands').setColor(4.30,54.564,0.123)
+    var = 1
+
+def setText37():
+    bk_text = "Tie dye"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText38():
+    bk_text = "Tie dye2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+    var = 1
+
+def setText39():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText40():
+    bk_text = "Arms"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText41():
+    bk_text = "nose"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText42():
+    bk_text = "head"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/robber-baron.jpg")
+    base.localAvatar.findAllMatches('**/head').setTexture(gloves, 1)
+    var = 1
+
+def setText43():
+    bk_text = "head2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/clothes').setTexture(gloves, 1)
+    var = 1
+
+def setText44():
+    bk_text = "arms2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/arms').setTexture(gloves, 1)
+    var = 1
+
+def setText45():
+    bk_text = "legs2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/legs').setTexture(gloves, 1)
+    var = 1
+
+def setText46():
+    bk_text = "feet2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/feet').setTexture(gloves, 1)
+    var = 1
+
+def setText47():
+    bk_text = "eyes"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/eyes').setTexture(gloves, 1)
+    var = 1
+
+def setText48():
+    bk_text = "nose2"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/nose').setTexture(gloves, 1)
+    var = 1
+
+def setText49():
+    bk_text = "neck"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/neck').setTexture(gloves, 1)
+    var = 1
+
+def setText50():
+    bk_text = "Shirt"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-top').setTexture(gloves, 1)
+    var = 1
+
+def setText51():
+    bk_text = "pants"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/torso-bot').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sky"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/Sky').setTexture(gloves, 1)
+    var = 1
+
+def setText52():
+    bk_text = "sleeves"
+    textObject.setText(bk_text)
+    gloves = loader.loadTexture("phase_4/maps/sleeveTieDye.jpg")
+    base.localAvatar.findAllMatches('**/sleeves').setTexture(gloves, 1)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("COff", "coff", "coff", "COff"), scale=.05, pos = (-.92,-0,-.98), command=setText1)
+b2 = DirectButton(text = ("COn", "Con", "Con", "COn"), scale=.05, pos = (-.8,-0,-.98), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.05, pos = (-.7,-0,-.98), command=setText3)
+b4 = DirectButton(text = ("Die", "die", "die", "Die"), scale=.05, pos = (-.58,-0,-.98), command=setText4)
+b5 = DirectButton(text = ("RAID", "RAID", "RAID", "RAID"), scale=.05, pos = (-.4,0,-.98), command=setText5)
+b6 = DirectButton(text = ("BIG", "big", "big", "BIG"), scale=.05, pos = (-.2,-0,-.98), command=setText6)
+b7 = DirectButton(text = ("Global", "global", "global", "Global"), scale=.05, pos = (-.0,-0,-.98), command=setText7)
+b8 = DirectButton(text = ("Clothes", "clothes", "clothes", "Clothes"), scale=.05, pos = (.180,-0,-.98), command=setText8)
+b9 = DirectButton(text = ("Mem", "Mem", "Mem", "Mem"), scale=.05, pos = (.39,-10,-.92), command=setText9)
+b10 = DirectButton(text = ("Funny", "Funny", "Funny", "Funny"), scale=.05, pos = (.4,-1,-.98), command=setText10)
+b11 = DirectButton(text = ("DC", "DC", "DC", "DC"), scale=.05, pos = (.55,-41,-.98), command=setText11)
+b12 = DirectButton(text = ("ttc", "ttc", "ttc", "ttc"), scale=.05, pos = (.64,-0,-.98), command=setText12)
+b13 = DirectButton(text = ("sw", "sw", "sw", "sw"), scale=.05, pos = (.28,-0,-.92), command=setText13)
+b14 = DirectButton(text = ("v", "v", "v", "v"), scale=.05, pos = (-.10,-0,-.98), command=setText14)
+b15 = DirectButton(text = ("d", "d", "d", "d"), scale=.05, pos = (-.50,-0,-.98), command=setText15)
+b16 = DirectButton(text = ("to", "to", "to", "to"), scale=.05, pos = (.55,-0,-.92), command=setText16)
+b17 = DirectButton(text = ("ti", "ti", "ti", "ti"), scale=.05, pos = (.63,-0,-.92), command=setText17)
+b18 = DirectButton(text = ("Sp", "Sp", "Sp", "Sp"), scale=.05, pos = (.20,-0,-.91), command=setText18)
+b19 = DirectButton(text = ("Se", "Se", "Se", "Se"), scale=.05, pos = (.12,-0,-.91), command=setText19)
+b20 = DirectButton(text = ("Sj", "Sj", "Sj", "Sj"), scale=.05, pos = (.7,-0,-.91), command=setText20)
+b21 = DirectButton(text = ("UpD", "upd", "upd", "Upd"), scale=.05, pos = (-.9,-0,-.91), command=setText21)
+b22 = DirectButton(text = ("FOF", "FOF", "FOF", "FOF"), scale=.05, pos = (-.7,-0,-.91), command=setText22)
+b23 = DirectButton(text = ("BOF", "bof", "bof", "BOF"), scale=.05, pos = (-.6,-0,-.91), command=setText23)
+b24 = DirectButton(text = ("FU", "fu", "fu", "FU"), scale=.05, pos = (.8,-0,-.91), command=setText24)
+b25 = DirectButton(text = ("SID", "sid", "sid", "SID"), scale=.05, pos = (-.8,-0,-.91), command=setText25)
+b26 = DirectButton(text = ("INV", "inv", "inv", "INV"), scale=.05, pos = (.78,-0,-.98), command=setText26) 
+b27 = DirectButton(text = ("000", "000", "000", "000"), scale=.05, pos = (.90,-0,-.98), command=setText27) 
+b28 = DirectButton(text = ("annoy", "annoy", "annoy", "annoy"), scale=.05, pos = (.94,-0,-.91), command=setText28) 
+b29 = DirectButton(text = ("Tw", "Tw", "Tw", "tw"), scale=.05, pos = (-.99,-0,-.96), command=setText29) 
+b30 = DirectButton(text = ("Cheese", "Cheese", "Cheese", "Cheese"), scale=.05, pos = (-.99,-0,-.86), command=setText30) 
+b31 = DirectButton(text = ("RULERS", "RULERS", "RULERS", "RULERS"), scale=.05, pos = (-.90,-0,-.80), command=setText31) 
+b32 = DirectButton(text = ("MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA", "MUAHAHAHA"), scale=.05, pos = (-.70,-0,-.86), command=setText32)
+b33 = DirectButton(text = ("No sleep", "No sleep", "No sleep", "No sleep"), scale=.05, pos = (-.44,-0,-.86), command=setText33) 
+b34 = DirectButton(text = ("Red", "Red", "Red", "Red"), scale=.05, pos = (-.29,-0,-.86), command=setText34)   
+b35 = DirectButton(text = ("bg", "bg", "bg", "bg"), scale=.05, pos = (-.20,-0,-.86), command=setText35)
+b36 = DirectButton(text = ("by", "by", "by", "by"), scale=.05, pos = (-.10,-0,-.86), command=setText36)
+b37 = DirectButton(text = ("Tie dye", "Tie dye", "Tie dye", "Tie dye"), scale=.05, pos = (.39,-10,-.84), command=setText37)
+b38 = DirectButton(text = ("Tie dye2", "Tie dye2", "Tie dye2", "Tie dye2"), scale=.05, pos = (.20,-10,-.84), command=setText38)
+b39 = DirectButton(text = ("Arms", "Arms", "Arms", "Arms"), scale=.05, pos = (.54,-10,-.84), command=setText39)
+b40 = DirectButton(text = ("legs", "legs", "legs", "legs"), scale=.05, pos = (.70,-10,-.84), command=setText40)
+b41 = DirectButton(text = ("nose", "nose", "nose", "nose"), scale=.05, pos = (.87,-10,-.84), command=setText41)
+b42 = DirectButton(text = ("head", "head", "head", "head"), scale=.05, pos = (-.70,-0,-.80), command=setText42)
+b43 = DirectButton(text = ("head2", "head2", "head2", "head2"), scale=.05, pos = (-.50,-0,-.80), command=setText43)
+b44 = DirectButton(text = ("arms2", "arms2", "arms2", "arms2"), scale=.05, pos = (-.33,-0,-.80), command=setText44)
+b45 = DirectButton(text = ("legs2", "legs2", "legs2", "legs2"), scale=.05, pos = (-.16,-0,-.80), command=setText45)
+b46 = DirectButton(text = ("feet2", "feet2", "feet2", "feet2"), scale=.05, pos = (.20,-10,-.80), command=setText46)
+b47 = DirectButton(text = ("eyes", "eyes", "eyes", "eyes"), scale=.05, pos = (.39,-10,-.79), command=setText47)
+b48 = DirectButton(text = ("nose2", "nose2", "nose2", "nose2"), scale=.05, pos = (.54,-10,-.79), command=setText48)
+b49 = DirectButton(text = ("neck", "neck", "neck", "neck"), scale=.05, pos = (.71,-10,-.79), command=setText49)
+b50 = DirectButton(text = ("shirt", "shirt", "shirt", "shirt"), scale=.05, pos = (.87,-10,-.79), command=setText50)
+b51 = DirectButton(text = ("pants", "pants", "pants", "pants"), scale=.05, pos = (-.90,-0,-.74), command=setText51)
+b52 = DirectButton(text = ("sky", "sky", "sky", "sky"), scale=.05, pos = (-.73,-0,-.74), command=setText52)
+b52 = DirectButton(text = ("sleeves", "sleeves", "sleeves", "sleeves"), scale=.05, pos = (-.55,-0,-.74), command=setText52)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText1():
+    bk_text = "Run Fast"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 100
+
+def setText2():
+    bk_text = "Hi Jump"
+    textObject.setText(bk_text)
+    base.localAvatar.physControls.avatarControlJumpForce = 150
+
+def setText3():
+    bk_text = ""
+    textObject.setText(bk_text)
+    cc = base.cr.doFindAll("Peppy")
+    for cc in base.cr.doFindAll("Peppy"):
+      cc.copyTo(render)   
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Speed", "speed", "speed", "Speed"), scale=.05, pos = (-.4,-0,-.91), command=setText1)
+b2 = DirectButton(text = ("Jump", "Jump", "jump", "Jump"), scale=.05, pos = (-.2,-0,-.91), command=setText2)
+b3 = DirectButton(text = ("Clone", "Clone", "Cloned", "Cloned"), scale=.05, pos = (0,-2.93,-.91), command=setText3)

@@ -1,0 +1,10 @@
+from direct.interval.IntervalGlobal import *
+def wakeUp():
+    base.talkAssistant.sendOpenTalk('				' * 100)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(wakeUp))
+  seq.append(Wait(12))
+  seq.append(Func(onTime))
+  seq.start()
+onTime()

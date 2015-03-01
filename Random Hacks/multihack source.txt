@@ -1,0 +1,177 @@
+from string import split
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import WindowProperties
+class multihack:
+    __module__ = __name__
+    class hackcmd:
+        __module__ = __name__
+        class hackcmd:
+            __module__ = __name__
+            hacks = {}
+            defaultName = base.localAvatar.getName()
+            defaultTeleport = base.localAvatar.hoodsVisited
+            rejectShard = base.localAvatar.book.pages[1].shardChoiceReject
+
+            def response(self, message, subject):
+                base.localAvatar.displayWhisper(subject, str(message), 4)
+
+
+
+            def registerHack(self, hack, function):
+                try:
+                    self.hacks[str(hack)] = function
+                except:
+                    pass
+
+
+
+            def unregisterHack(self, hack):
+                try:
+                    del self.hacks[str(hack)]
+                except:
+                    print ('No hack named ' + str(hack))
+
+
+
+            def isHack(self, cmd):
+                if cmd.startswith('/'):
+                    return True
+                else:
+                    return False
+
+
+
+            def isRegisteredHack(self, cmd):
+                if (str(cmd) in self.hacks):
+                    return True
+                else:
+                    return False
+
+
+
+            def fixText(self):
+                try:
+                    if (str(base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get('plain')).startswith('/') and base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.set(base.localAvatar.chatMgr.chatInputWhiteList.chatEntry.get('plain'))):
+                        pass
+                except:
+                    pass
+
+
+
+            def loopFix(self):
+                cht = Sequence()
+                cht.append(Func(self.fixText))
+                cht.loop()
+
+
+
+            def handle(self, message):
+                if self.isHack(message):
+                    message = split(message, '/')[1]
+                    if (self.isRegisteredHack(message) and self.hacks[str(message)]()):
+                        pass
+                else:
+                    base.localAvatar.sendUpdate('setTalk', [0,
+                     0,
+                     str(base.localAvatar.name),
+                     message,
+                     [],
+                     0])
+
+
+
+            def GlobalTeleport(self, run):
+                if (base.localAvatar.hoodsVisited == self.defaultTeleport):
+                    base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+                    base.localAvatar.book.pages[1].totalPopulationText.show()
+                    base.localAvatar.setTeleportAccess([1000,
+                     2000,
+                     3000,
+                     4000,
+                     5000,
+                     6000,
+                     7000,
+                     8000,
+                     9000,
+                     10000,
+                     11000,
+                     12000,
+                     13000])
+                    base.localAvatar.setHoodsVisited([1000,
+                     2000,
+                     3000,
+                     4000,
+                     5000,
+                     6000,
+                     7000,
+                     8000,
+                     9000,
+                     10000,
+                     11000,
+                     12000,
+                     13000])
+                    base.localAvatar.book._ShtikerBook__pageChange(1)
+                    base.localAvatar.book._ShtikerBook__pageChange(-1)
+                    self.response('Global teleport activated!', )
+                else:
+                    base.localAvatar.setTeleportAccess([])
+                    base.localAvatar.setHoodsVisited([])
+                    base.localAvatar.book.pages[1].shardChoiceReject = self.rejectShard
+                    base.localAvatar.setHoodsVisited(self.defaultTeleport)
+                    base.localAvatar.book._ShtikerBook__pageChange(1)
+                    base.localAvatar.book._ShtikerBook__pageChange(-1)
+                    self.response('Global teleport deactivated!', )
+
+
+
+            def GoonDestroy(self, run):
+                goon = base.cr.doFindAll('Goon')
+                if ((len(goon) == 0) and self.response('No goons detected.', )):
+                    pass
+
+
+
+            def GoonBomb(self, run):
+                goon = base.cr.doFindAll('Goon')
+                if ((len(goon) == 0) and self.response('No goons detected.', )):
+                    pass
+
+
+
+            def GhostMode(self, run):
+                if ((base.localAvatar.name != 'Ghost Mode') and base.localAvatar.setName('Ghost Mode')):
+                    base.localAvatar.useGhostControls()
+                    self.response('Ghost mode activated!', )
+
+
+
+            def Credits(self, run):
+                self.response('Team FD Multihacks created by Fd Green Cat Fd', )
+
+
+
+            def AbortGame(self, run):
+                self.response('Aborting game now...', )
+                base.cr.gameFSM.request('closeShard')
+
+
+
+            def __init__(self):
+                self.loopFix()
+                base.talkAssistant.sendOpenTalk = self.handle
+
+
+
+
+
+mh = multihack()
+mhtitle = WindowProperties()
+mhtitle.setTitle('Toontown - Running Team FD Multihacks')
+base.win.requestProperties(mhtitle)
+base.localAvatar.sleepTimeout = pow(100, 4)
+mh.hackcmd.hackcmd().registerHack('globalteleport', mh.hackcmd.hackcmd().GlobalTeleport)
+mh.hackcmd.hackcmd().registerHack('goonbomb', mh.hackcmd.hackcmd().GoonBomb)
+mh.hackcmd.hackcmd().registerHack('goondestroy', mh.hackcmd.hackcmd().GoonDestroy)
+mh.hackcmd.hackcmd().registerHack('ghostmode', mh.hackcmd.hackcmd().GhostMode)
+mh.hackcmd.hackcmd().registerHack('abortgame', mh.hackcmd.hackcmd().AbortGame)
+mh.hackcmd.hackcmd().registerHack('credits', mh.hackcmd.hackcmd().Credits)

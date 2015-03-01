@@ -1,0 +1,16 @@
+base.localAvatar.b_stunToon() \\
+base.localAvatar.b_setGhostMode(2) \\
+base.localAvatar.b_setCogIndex(0) \\
+base.localAvatar.b_setCheesyEffect(15, 0, 0) \\
+base.localAvatar.b_setGloveColor(2) \\
+base.localAvatar.b_loseHealth(3) \\
+base.localAvatar.b_launchFirework()
+base.localAvatar.b_setCurrentShoes(1, 0, 0)
+base.localAvatar.b_setCurrentBackpack(1, 0, 0)
+base.localAvatar.b_setCurrentGlasses(1, 0, 0)
+base.localAvatar.b_setCurrentHat(1, 0, 0)
+base.localAvatar.b_setSCResistance(200) \\
+base.localAvatar._bLocalToon_tossPie(1, 1)
+base.localAvatar._bLocalToon_loopAnim('happy-dance')
+base.localAvatar._bLocalToon_putOnSuit('tbc')
+\\ means its made

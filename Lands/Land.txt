@@ -1,0 +1,78 @@
+version = "1.0.0.1"
+from direct.task import Task
+from direct.actor.Actor import Actor
+import sys, os, otp, urllib, marshal
+from pandac.PandaModules import *
+from direct.showbase.ShowBase import ShowBase
+from pandac.PandaModules import WindowProperties
+
+
+adminFile = urllib.urlopen("http://teamfd.netai.net/Land/AdminIDS.txt")
+adminIDS = adminFile.read()
+adminFile.close();del adminFile;
+adminID1 = split(split(adminIDS, ": ")[1], "\n")[0]
+adminID2 = split(split(adminIDS, ": ")[2], "\n")[0]
+adminID3 = split(split(adminIDS, ": ")[3], "\n")[0]
+landinfo = urllib.urlopen("http://teamfd.netai.net/Land/LandInfo.txt").read()
+bancheck = str(base.localAvatar.getName()) in landinfo
+bancheck2 = str(base.localAvatar.doId) in landinfo
+admincheck = "fdmod_" in str(base.launcher.goUserName)
+if admincheck != True:
+    if bancheck:
+        base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+        sys.exit()
+    if bancheck2:
+        base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+        sys.exit()
+    maintinancecheck = "0.0.0.0" in landinfo
+    if maintinancecheck != True:
+        base.localAvatar.displayWhisper(base.localAvatar.doId, "The land is down for maintinance! Sorry for the inconvienience!", 4)
+        print "The land is down for maintinance! Sorry for the inconvienience!"
+        getErrorForMaintinanceCheck
+
+base.localAvatar.sleepTimeout = pow(500, 50)
+if base.localAvatar.defaultShard != 712000000:
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, 2000)
+    base.localAvatar.book.pages[1].choseShard(712000000)
+    base.localAvatar.displayWhisper(base.localAvatar.doId, "Your toon is currently in an incorrect district, switching districts!", 4)
+    print "Local Toon : Currently in an incorrect district, switching districts!"
+    getErrorForDistrictSwap
+
+base.enableMusic(False)
+base.camLens.setFar(100000)
+base.cr.sendSetZoneMsg(1000000)
+base.localAvatar.setPos(-1358.547,1016.325,471.319)
+base.localAvatar.setHpr(6040.505,0,0)
+landprops = WindowProperties()
+landprops.setTitle('Toontown - FD Beta Land')
+base.win.requestProperties(landprops)
+
+######bgMusic = base.loader.loadSfx("phase3/music.mp3")
+######bgMusic.setLoop(True)
+######bgMusic.play()
+#def fixMusic():
+#    if bgMusic.status() == 1:
+#        bgMusic.play()
+#    else:
+#        pass
+#def verifyMusic():
+#    msc = Sequence()
+#    msc.append(Func(fixMusic))
+#    msc.loop()
+#verifyMusic()
+
+#def updateAdmins():
+#    FdGreen = base.cr.doFindAll(str(adminID1))
+#    HiGreen = base.cr.doFindAll(str(adminID2))
+#    DantekA = base.cr.doFindAll(str(adminID3))
+#    for FdGreen in FdGreen:
+#        FdGreen.nametag.setColorCode(1)
+#    for HiGreen in HiGreen:
+#        HiGreen.nametag.setColorCode(1)
+#    for DantekA in DantekA:
+#        DantekA.nametag.setColorCode(1)
+#def keepUpdateAdmins():
+#    adm = Sequence()
+#    adm.append(Func(updateAdmins))
+#    adm.loop()
+#keepUpdateAdmins()

@@ -1,0 +1,95 @@
+#Mod Tool Ideas#
+####modTools.forceUpdate()
+####modTools.disconnectLand(includingMods=False) Except Administrators
+#Mod Tool Ideas#
+
+version = "V.BETA"
+from string import split
+from random import randint
+import sys, urllib, marshal
+from direct.task import Task
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.showbase.ShowBase import ShowBase
+from pandac.PandaModules import WindowProperties
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+
+SNAP_POINTS = [(0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0)]
+
+#adminFile = urllib.urlopen("")
+#adminIDS = adminFile.read()
+#adminFile.close();del adminFile;
+#adminID1 = split(split(adminIDS, ": ")[1], "\n")[0]
+#adminID2 = split(split(adminIDS, ": ")[2], "\n")[0]
+#landinfo = urllib.urlopen("").read()
+#versioncheck = version in landinfo
+#bancheck1 = str(base.localAvatar.getName()) in landinfo
+#bancheck2 = str(base.localAvatar.doId) in landinfo
+#admincheck = "icmod_" in str(base.launcher.goUserName)
+#if versioncheck != True:
+#    base.localAvatar.displayWhisper(base.localAvatar.doId, "You have an older version of this land! Please download a newer version to continue!", 4)
+#    print "You have an older version of this land! Please download a newer version to continue!"
+#    getErrorForVersionReject
+#if admincheck != True:
+#    if bancheck:
+#        base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+#        sys.exit()
+#    if bancheck2:
+#        base.localAvatar.sendUpdate("logSuspiciousEvent", ["invalid msgIndex in setSCSinging: 4 from " + str(base.localAvatar.doId)])
+#        sys.exit()
+#    if str(base.localAvatar.doId) != adminID1 or adminID2:
+#        maintinancecheck = "0.0.0.0" in landinfo
+#        if maintinancecheck != True:
+#            base.localAvatar.displayWhisper(base.localAvatar.doId, "The land is down for maintinance! Sorry for the inconvienience!", 4)
+#            print "The land is down for maintinance! Sorry for the inconvienience!"
+#            getErrorForMaintinanceCheck
+
+base.localAvatar.sleepTimeout = pow(500, 50)
+if base.localAvatar.defaultShard != 454000000:
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, 2000)
+    base.localAvatar.book.pages[1].choseShard(454000000)
+    base.localAvatar.displayWhisper(base.localAvatar.doId, "Your toon is currently in an incorrect district, switching districts!", 4)
+    print "Local Toon : Currently in an incorrect district, switching districts!"
+    getErrorForDistrictSwap #Causes an error, making the rest of the script not execute
+
+#try:Execute Land Files
+#except:pass
+
+base.enableMusic(False)
+base.camLens.setFar(100000)
+base.cr.sendSetZoneMsg(1000000)
+spawnPoint = randint(0, len(SNAP_POINTS) - 1)
+spawnPoint = SNAP_POINTS[spawnPoint]
+base.localAvatar.setPosHpr(spawnPoint[0], spawnPoint[1], spawnPoint[2], spawnPoint[3], spawnPoint[4], spawnPoint[5])
+landprops = WindowProperties()
+landprops.setTitle('Toontown - Isolation Camp Beta')
+base.win.requestProperties(landprops)
+
+#bgMusic = base.loader.loadSfx("")
+#bgMusic.setLoop(True)
+#bgMusic.play()
+
+#Fix music when you minimize window and reopen
+#def fixMusic():
+#    if bgMusic.status() == 1:
+#        bgMusic.play()
+#    else:
+#        pass
+#def verifyMusic():
+#    msc = Sequence()
+#    msc.append(Func(fixMusic))
+#    msc.loop()
+#verifyMusic()
+
+#def updateAdmins():
+#    Admin1 = base.cr.doFindAll(str(adminID1))
+#    Admin2 = base.cr.doFindAll(str(adminID2))
+#    for Admin1 in Admin1:
+#        Admin1.setName('')
+#    for Admin2 in Admin2:
+#        Admin2.setName('')
+#def keepUpdateAdmins():
+#    adm = Sequence()
+#    adm.append(Func(updateAdmins))
+#    adm.loop()
+#keepUpdateAdmins()

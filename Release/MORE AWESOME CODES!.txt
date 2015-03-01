@@ -1,0 +1,985 @@
+base.localAvatar.loop('swing')
+base.localAvatar.loop('climb')
+base.talkAssistant.sendOpenTalk('')
+phase_3/models/char/mickey-1200.bam
+phase_3/models/char/minnie-1200.bam
+phase_3/models/gui/cog_icons.bam
+phase_4/models/minigames/swimming_game.bam
+phase_4/models/char/daisyduck_800.bam
+phase_4/models/char/scientist-clothes.bam
+phase_3/models/gui/create_a_toon.bam
+phase_3.5/models/modules/tt_m_ara_int_toonhall.bam'
+phase_13/models/parties/tt_a_ara_pty_tubecogvictory_default.bam
+phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam
+phase_5.5/models/estate/tt_m_ara_est_house_cupcake.bam
+phase_5.5/models/estate/tt_m_ara_est_house_castle.bam
+phase_5/models/props/dagger.bam
+phase_3.5/models/char/tt_a_chr_csc_mickey_vampire_400.bam
+phase_2.5/models/char/money-suit-textures.bam
+environ = loader.loadModel("phase_12/models/bossbotHQ/BanquetInterior_1.bam")
+environ.reparentTo(render)
+environ.setPos(0,0,0)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+b = loader.loadModel("phase_12/models/char/bossbotBoss-legs-zero.bam")
+b.reparentTo(render)
+b.setPos(0,350,0)
+b.setHpr(0,0,0)
+b.setScale(1)
+c = loader.loadModel("phase_12/models/char/bossbotBoss-torso-zero.bam")
+c.reparentTo(render)
+c.setPos(0,350,10)
+c.setHpr(0,0,0)
+c.setScale(1)
+d = loader.loadModel("phase_12/models/char/bossbotBoss-head-zero.bam")
+d.reparentTo(render)
+d.setPos(0,350,18.2)
+d.setHpr(90,0,-90)
+d.setScale(1)
+e = loader.loadModel("phase_12/models/bossbotHQ/BB_Elevator.bam")
+e.reparentTo(render)
+e.setPos(0,-80.5,0)
+e.setHpr(180,0,0)
+e.setScale(1)
+TABLES:
+
+a = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+a.reparentTo(render)
+a.setPos(0,200,0)
+a.setHpr(0,0,0)
+a.setScale(0.5)
+
+small
+
+OR
+
+a = loader.loadModel("phase_12/models/bossbotHQ/BanquetTableChairs.bam")
+a.reparentTo(render)
+a.setPos(0,200,0)
+a.setHpr(0,0,0)
+a.setScale(1)
+
+e = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(0,114.03,3.20)
+pandaPosInterval22 = e.posInterval(13,Point3(0,114.03,3.20),
+startPos=Point3(0,114.03,127.50))
+pandaPosInterval33 = e.posInterval(13,Point3(0,114.03,127.50),
+startPos=Point3(0,114.03,3.20))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+c = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+c.setPos(-9.98,139.11,117.38)
+c.setHpr(0,340.30,0)
+c.hide()
+c.reparentTo(render)
+c.find('**/wall_back').removeNode()
+c.find('**/wall_front').removeNode()
+c.find('**/wall_left').removeNode()
+c.find('**/wall_right').removeNode()
+c.find('**/ceiling').removeNode()
+
+
+
+base.localAvatar.setHpr(0,0,180) 
+base.wireframeOn() 
+base.wireframeOff() 
+base.localAvatar.announceBingo() 
+base.localAvatar.playSplashEffect(1, 0, 0) (Sound Of Hitting Water) 
+base.localAvatar.setNearbyAvatarChat('HEY!') 
+base.localAvatar.setMinigameZone() 
+base.localAvatar.setHP(1) (cog battle) 
+base.localAvatar.setBrushOff(10) (cog battle) 
+base.localAvatar.setLevelDist(10) (cog battle) 
+base.localAvatar.setSkelecog(1) (cog battle) 
+base.localAvatar.setInteractivePropTrackBonus(100) 
+base.localAvatar.rewardDone() (cog battle) 
+base.localAvatar.movieDone() (cog battle) 
+base.localAvatar.timeout() (cog battle) 
+base.localAvatar.denyLocalToonJoin() (cog battle) 
+base.localAvatar.setPinkSlips((1)) 
+base.cr.sendSetZoneMsg(509718) 
+base.localAvatar.setCogIndex(2) 
+base.localAvatar.b_setAnimState(('ScientistEmcee')) 
+base.localAvatar.b_setAnimState(('GolfPuttLoop')) 
+base.localAvatar.b_setAnimState(('GolfGoodPutt')) 
+base.localAvatar.b_setAnimState(('GolfBadPutt')) 
+base.localAvatar.b_setAnimState(('GolfRotateRight')) 
+base.localAvatar.b_setAnimState(('GolfRotateLeft')) 
+base.localAvatar.b_setAnimState(('GolfPuttSwing')) 
+base.localAvatar.b_setAnimState(('ScientistWork')) 
+base.localAvatar.b_setAnimState(('ScientistPlay')) 
+base.localAvatar.b_setAnimState(('ScientistLessWork')) 
+base.localAvatar.b_setAnimState(('ScientistJealous')) 
+base.localAvatar.setTickets(800) 
+base.localAvatar.setBankMoney(10000) 
+base.localAvatar.setMaxBankMoney(10000) 
+base.localAvatar.setMoney(800) 
+base.localAvatar.setMaxMoney(800) 
+base.localAvatar.setXYZH(-83.642, -90.233, 25.336, -728.746) - gag shop 
+base.localAvatar.setXYZH(-60.173, -8.817, 1.227, 99.147) - arch 
+base.localAvatar.setXYZH(0.197, -1.698, 3.362, 90.737) - stairs 
+base.localAvatar.setXYZH(-145.807, -79.902, 3.362, 47.411) - back of trolley 
+base.localAvatar.setXYZH(15.772, 44.632, 3.825, -235.062) - corner of stairs 
+base.localAvatar.setXYZH(-48.280, 87.749, 0.525, -13.600) - punchline place 
+base.localAvatar.setXYZH(-144.263, 4.647, 0.252, 84.718 ) - loopy lane 
+base.localAvatar.setXYZH(33.977, -150.424, 3.025, 143.147) - silly street 
+base.localAvatar.setXYZH(-121.198, 72.289, 25.792, -181.123) - fish tank 
+base.localAvatar.setXYZH(33.007, 30.181, 3.698, 141.066) - HQ 
+base.localAvatar.setXYZH(-61.060, -8.576, 16.798, 119.111) on top of arch 
+base.localAvatar.setXYZH(-90.862, -83.304, 6.955, -1819.017) - gag shop rip 
+base.localAvatar.setXYZH(60.613, -28.162, 38.265, 811.075) - roof of library 
+base.localAvatar.setXYZH(118.364, 1.339, 67.339, 1172.075) - very top of toon hall 
+base.localAvatar.setXYZH(18.581, -49.105, 12.045, 1453.850) - flower pot 
+base.localAvatar.setXYZH(75.263, 25.442, 24.960, 1193.982) - roof of bank 
+base.localAvatar.setXYZH(44.834, 82.225, 22.190, 284.419) - pink house 
+base.localAvatar.setXYZH(65.880, 10.842, 31.965, 262.562) - blue house 
+base.localAvatar.setXYZH(84.289, -79.017, 24.069, 120.691) -green house 
+base.localAvatar.setXYZH(-69.684, -125.659, 23.254, 477.882) - purple house 
+base.localAvatar.setXYZH(-32.025, 27.665, 11.477, 105.826) - yellow house 
+base.localAvatar.setXYZH(-56.939, -34.610, 28.106, -717.942) - red house 
+base.localAvatar.setXYZH(17.722, -143.701, -9.975, -880.455) - estate pond 
+
+import toontown 
+def new(): 
+return True 
+def new2(*a,**k): 
+return 2 
+base.cr.isPaid = new 
+base.cr.isParentPasswordSet = new 
+toontown.toon.LocalToon.LocalToon.getGameAccess - new2 
+
+
+
+1.go to sbhq toon valley 
+2.enter this code when no cog r near door 
+
+for chqd in base.cr.doFindAll("CogHQDoor"): 
+chqd.rejectEnter = chqd.avatarEnter(base.localAvatar.doId) 
+chqd.setOtherZoneIdAndDoId(11100,451103054) 
+
+
+3.move away from door 
+4.wait till cog is coming and u will automatically go to vp room 
+5.in vp room use these too at same time 
+
+base.cr.sendSetZoneMsg(2520) 
+base.localAvatar.takeOffSuit() 
+
+6.use membership code if u didnt already then go out 
+
+
+REAL funny farm code 
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+
+environ = loader.loadModel("phase_4/models/minigames/treehouse_4players.bam") 
+environ.reparentTo(render) 
+environ.setPos(-8,42,0) 
+environ.setHpr(0,270,180) 
+environ.setScale(6) 
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+e.reparentTo(render) 
+e.setHpr(0,0,0) 
+e.setPos(0,114.03,3.20) 
+pandaPosInterval22 = e.posInterval(13,Point3(0,114.03,3.20), 
+startPos=Point3(0,114.03,127.50)) 
+pandaPosInterval33 = e.posInterval(13,Point3(0,114.03,127.50), 
+startPos=Point3(0,114.03,3.20)) 
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0), 
+startHpr=Point3(0, 0, 0)) 
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0), 
+startHpr=Point3(0, 0, 0)) 
+pandaPace = Sequence(pandaPosInterval22, 
+pandaHprInterval11, 
+pandaPosInterval33, 
+pandaHprInterval22, 
+name="pandaPace") 
+pandaPace.loop() 
+e.find('**/wall_back').removeNode() 
+e.find('**/wall_front').removeNode() 
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+c.setPos(-9.98,139.11,117.38) 
+c.setHpr(0,340.30,0) 
+c.hide() 
+c.reparentTo(render) 
+c.find('**/wall_back').removeNode() 
+c.find('**/wall_front').removeNode() 
+c.find('**/wall_left').removeNode() 
+c.find('**/wall_right').removeNode() 
+c.find('**/ceiling').removeNode()
+    
+
+    ok
+    go in vp
+    get pies in vp
+    use
+    base.cr.sendSetZoneMsg(2513)
+    open ur book
+    tp to ttc
+    tp to a new district
+    
+    and back to the same district
+    u have server pies LOL
+
+messenger.send('gardenGame')
+
+
+
+
+
+
+
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.localAvatar.b_setSCSinging(50000-70000)
+base.localAvatar.setRacingTickets(9999)
+base.localAvatar.find('**/hands').setColor(1,0,1)
+base.localAvatar.setColor(2,0,2,2)
+base.localAvatar.b_teleportGreeting(282745517)
+base.localAvatar.b_teleportGreeting(283104843)
+
+    12100 451103166 
+base.localAvatar.setColor(1,0,0,1)
+
+red: 225,0,0 yellow: 1,1,0 Blue: 0,0,2 Aqua: 0,2,3 black:(0,0,0)
+    green: 0,255,0 Pink/Purple: 1,0,1
+
+base.cr.setMinigameZone()
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+environ = loader.loadModel("phase_4/models/minigames/treehouse_4players.bam") 
+environ.reparentTo(render) 
+environ.setPos(-8,42,0) 
+environ.setHpr(0,270,180) 
+environ.setScale(6) 
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+e.reparentTo(render) 
+e.setHpr(0,0,0) 
+e.setPos(0,114.03,3.20) 
+pandaPosInterval22 = e.posInterval(13,Point3(0,114.03,3.20), 
+startPos=Point3(0,114.03,127.50)) 
+pandaPosInterval33 = e.posInterval(13,Point3(0,114.03,127.50), 
+startPos=Point3(0,114.03,3.20)) 
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0), 
+startHpr=Point3(0, 0, 0)) 
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0), 
+startHpr=Point3(0, 0, 0)) 
+pandaPace = Sequence(pandaPosInterval22, 
+pandaHprI lagging a lotnterval11, 
+pandaPosInterval33, 
+pandaHprInterval22, 
+name="pandaPace") 
+pandaPace.loop() 
+e.find('**/wall_back').removeNode() 
+e.find('**/wall_front').removeNode() 
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+c.setPos(-9.98,139.11,117.38) 
+c.setHpr(0,340.30,0) 
+c.hide() 
+c.reparentTo(render) 
+c.find('**/wall_back').removeNode() 
+c.find('**/wall_front').removeNode() 
+c.find('**/wall_left').removeNode() 
+c.find('**/wall_right').removeNode() 
+c.find('**/ceiling').removeNode()
+
+Sit-base.localAvatar.enterSitStart() 
+
+swim-base.localAvatar.b_setAnimState('swim') 
+
+Walk through things-base.localAvatar.collisionsOff() 
+
+Sellbot suit-base.localAv
+atar.setHpr(0,0,360) 
+
+makes u die-base.localAvatar.setHpr(0,0,360)  
+
+Flip 1-base.localAvatar.collisionsOff() 
+
+Flip 2-base.localAvatar.setHpr(0,0,135) 
+
+Flip 3-base.localAvatar.setHpr(0,0,180) 
+
+flip 4-base.localAvatar.setHpr(0,0,225) 
+
+flip 5-base.localAvatar.setHpr(0,0,270) 
+
+flip 6-base.localAvatar.setHpr(0,0,315) 
+
+flip 7-base.localAvatar.setHpr(0,0,360) 
+
+moon walk-base.localAvatar.b_setAnimState('walk') 
+
+moon run- base.localAvatar.b_setAnimState('run') 
+
+Weird Cringe thing-base.localAvatar.b_setAnimState('cringe') 
+
+all gag tracks- base.localAvatar.setTrackAccess((1,1,1,1,1,1,1)) 
+
+all gag tracks bonus-base.localAvatar.setTrackBonusLevel((1,1,1,1,1,1,1) 
+
+gives u full laff when ur not full-base.localAvatar.toonUp(137) 
+
+lay on ur back- base.localAvatar.setHpr(0,90,0) 
+
+lay on ur face-base.localAvatar.setHpr(0,270,0) 
+
+go to funny farms-base.cr.sendSetZoneMsg(7000) 
+
+leave funny farms-base.cr.sendSetZoneMsg(6000) 
+
+Tp into gag shop-base.cr.sendSetZoneMsg(9504) 
+
+Teleport into Toon HQ-base.cr.sendSetZoneMsg(1507) 
+
+Have 137 laff, have to do both codes to work- 
+base.localAvatar.setMaxHp(137) 
+base.localAvatar.setHp(137) 
+
+Tp into Flippys Office-base.cr.sendSetZoneMsg(2513) 
+
+These codes disconnect u but when u log back on ur in that place 
+
+
+Donalds dock-base.cr.sendSetZoneMsg(1000) 
+
+Toontown Central-base.cr.sendSetZoneMsg(2000) 
+
+brrrgh-base.cr.sendSetZoneMsg(3000) 
+
+Minnies Melodyland-base.cr.sendSetZoneMsg(4000) 
+
+Daisy Garden- base.cr.sendSetZoneMsg(5000) 
+
+Goofy Speedway-base.cr.sendSetZoneMsg(8000) 
+
+Donalds Dreamland-base.cr.sendSetZoneMsg(9000)
+
+base.localAvatar.b_setAnimState(('swim'))
+
+
+base.localAvatar.collisionsOff()
+base.talkAssistant.sendOpenTalk(' SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM')
+
+
+
+
+
+
+base.cr.sendSetZoneMsg(11100)
+
+
+
+base.localAvatar.takeDamage((500))
+base.locavatar.setHpr(0,0,80)
+base.localAvatar.setHpr(0,0,90)
+base.localAvatar.setHpr(0,0,160)
+base.localAvatar.setHpr(0,0,180)
+base.localAvatar.setCogIndex(2)
+base.cr.sendSetZoneMsg(11100) sellbot lobby
+base.cr.sendSetZoneMsg(509718)
+base.cr.sendSetZoneMsg(12100) cashbot lobby
+base.cr.sendSetZoneMsg(10100) bossbot lobby
+base.cr.sendSetZoneMsg(13100) lawbot lobby 
+base.localAvatar.setPinkSlips((1))
+base.cr.sendSetZoneMsg(7000) - funny farm
+base.localAvatar.b_setAnimState(('swim')) - swim in air
+base.localAvatar.b_setAnimState(('run')) - run in place
+base.localAvatar.b_setAnimState(('walk')) - walk in place
+base.localAvatar.b_setAnimState(('cringe')) - cringe in place lol
+base.localAvatar.enterSitStart()is sit - sit in air
+base.localAvatar.takeDamage(500) - go sad wit full laff (will say u have no laff but u rly have full)
+base.cr.sendSetZoneMsg(2520) - boundaries off walk through everything
+base.localAvatar.setHpr(0,0,315) - sideways (alter th last number for degree)
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.b_setAnimState('Squish')
+base.localAvatar.b_setAnimState('Push') 
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.b_setAnimState('CloseBook')
+base.localAvatar.b_setAnimState(('GolfGoodPutt'))
+base.localAvatar.b_setAnimState(('GolfBadPutt'))
+base.localAvatar.b_setAnimState(('GolfPuttSwing'))
+base.localAvatar.b_setAnimState('Flattened')
+base.localAvatar.collisionsOff()
+base.localAvatar.b_setAnimState(('victory'))
+base.localAvatar.b_setAnimState(('Catching'))
+
+base.cr.sendSetZoneMsg(2520) --- cog suit
+
+base.localAvatar.b_setAnimState(('ScientistPlay'))
+base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setAnimState(('ScientistJealous'))   ---silly meter
+
+base.cr.sendSetZoneMsg(9504)
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+
+
+base.localAvatar.numPies = 99   to throw cupcakesbase.
+
+localAvatar.b_setAnimState(('Died')) To go sad.
+
+
+
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1 
+base.localAvatar.setTrackBonusLevel([7,7,7,7,7,7,7]) 
+base.localAvatar.setTrackAccess([7,7,7,7,7,7,7])
+base.cr.sendSetZoneMsg(11100)
+base.wireframeOn() base.wireframeOff()	base.localAvatar.b_setAnimState(('ScientistWork'))
+base.localAvatar.b_setAnimState('Squish')  base.localAvatar.b_setAnimState(('GolfPuttLoop'))
+base.localAvatar.b_setAnimState(('Catching'))
+    base.localAvatar.b_setAnimState('ReadBook')
+    base.localAvatar.b_setAnimState(('Flattened'))
+    base.localAvatar.b_setAnimState(('Died'))
+    base.localAvatar.b_setAnimState(('dive'))
+    base.localAvatar.b_setAnimState('CatchEating')
+    base.localAvatar.b_setAnimState('TeleportOut')
+    base.localAvatar.b_setAnimState('TeleportIn')
+    base.localAvatar.setName(('put the name here'))
+    base.localAvatar.setXYZH(86.419,-80.021,22.293,-10.502)
+base.localAvatar.numPies = 99 
+    base.localAvatar.b_setAnimState(('GolfRotateRight'))
+    base.localAvatar.b_setAnimState(('GolfRotateLeft'))
+    base.localAvatar.setBankMoney(10000)
+    base.localAvatar.setMaxBankMoney(10000)
+    base.localAvatar.b_setAnimState(('CogThiefRunning'))
+    base.localAvatar.b_setAnimState(('jumpSquat'))
+    base.localAvatar.b_setAnimState
+(('OpenBook'))
+    base.localAvatar.b_setAnimState(('FallDown'))
+    base.localAvatar.b_setAnimState(('TeleportingOut'))
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.localAvatar.cogMerits=[40, 80, 120, 200
+    base.localAvatar.setCogParts([20, 80, 56447, 56411]) bored can i get on ur comp? sure, do nothing bad tho O_O lol? what do you mean? don't type cursewords O_Owhy? lol is your mom watching or something? she comes in and out of the living room oh ok, and i'm at my aunt's house.
+base.localAvatar.b_setSCSinging(4)
+       base.localAvatar.promoteShovel(3)
+    Set SKill Of Shoveling:
+    
+    base.localAvatar.promoteShovel(3)
+    
+    Set SKill of Watering Can:
+    
+    base.localAvatar.promoteWateringCan(3)
+    
+    Set Watering Can SKill:
+    
+    base.localAvatar.setWateringCanSkill(30)
+    
+    Set Shovel Skill:
+    
+    base.localAvatar.setShovelSkill(30)
+    base.localAvatar.setMaxCarry(9999)
+    base.localAvatar.setQuestCarryLimit(4)    
+    base.localAvatar.winterCarolingTargetMet(9999)
+base.localAvatar.announceBingo()
+    base.localAvatar.setGardenStarted()
+     base.localAvatar.setMaxClothes(500)
+base.localAvatar.setMaxMoney(800)
+    base.localAvatar.setCheesyEffect(14, 0, 0) 
+        Donalds dock-base.cr.sendSetZoneMsg(1000) 
+    
+    Toontown Central-base.cr.sendSetZoneMsg(2000) 
+    
+    brrrgh-base.cr.sendSetZoneMsg(3000) 
+    
+    Minnies Melodyland-
+    
+    Daisy Garden- base.cr.sendSetZoneMsg(5000) 
+    
+    Goofy Speedway-base.cr.sendSetZoneMsg(8000) 
+    
+    Donalds Dreamland-base.cr.sendSetZoneMsg(9000)
+    base.localAvatar.setCogParts([20, 80, 56447, 56411])
+base.localAvatar.find('**/gloves').setColor(0,255,0)
+base.localAvatar.physControls.avatarControlForwardSpeed = 100
+    base.localAvatar.physControls.avatarControlJumpForce = 100
+
+    base.cr.sendSetZoneMsg(293487)
+SpeedChat-Step On the Switch: base.localAvatar.b_setSCSinging(1703)
+Colors: base.localAvatar.b_setSCSinging(2000) to 2010
+Please Operate The Crane: base.localAvatar.b_setSCSinging(2100)
+Prepare To Be Raided: base.localAvatar.b_setSCSinging(20138) 20110 to 20138  house code -->339440
+
+
+base.localAvatar.b_setSCSinging(10000)to 10000 to 10007 
+base.localAvatar.b_setAnimState(('CogIndex')) 341438
+
+    import toontown
+    def new():
+        return True
+    def new2(*a,**k):
+        return 2
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.Disconnect('20.20.20')  322374
+
+base.localAvatar.setCogParts([105,60,40,20]) 
+base.cr.sendSetZoneMsg(7000) 
+base.localAvatar.setCogIndex() 
+base.localAvatar.setCogLevels([49, 49, 49, 49]) 
+base.localAvatar.setCogTypes([7, 7, 7, 7]) 
+base.localAvatar.setCogParts([0, 0, 56447, 56411]) 
+base.localAvatar.cogMerits=[40, 80, 120, 200] 
+base.localAvatar.setName(('whatevernameuwant')) 
+base.localAvatar.b_setSCSinging(4) 
+base.localAvatar.b_setSCSinging(1700) 
+base.localAvatar.b_setSCSinging(1701) 
+base.localAvatar.b_setSCSinging(1702) 
+base.localAvatar.b_setSCSinging(1703) 
+base.localAvatar.b_setSCSinging(1704) 
+base.localAvatar.b_setSCSinging(1700) 
+base.localAvatar.b_setSCSinging(2000) 
+base.localAvatar.b_setSCSinging(2001) 
+base.localAvatar.b_setSCSinging(2002) 
+base.localAvatar.b_setSCSinging(2003) 
+base.localAvatar.b_setSCSinging(2004) 
+base.localAvatar.b_setSCSinging(2005) 
+base.localAvatar.b_setSCSinging(2006) 
+base.localAvatar.b_setSCSinging(2007) 
+base.localAvatar.b_setSCSinging(2008) 
+base.localAvatar.b_setSCSinging(2009) 
+base.localAvatar.b_setSCSinging(2100) 
+base.localAvatar.b_setSCSinging(2101) 
+base.localAvatar.b_setSCSinging(2102) 
+base.localAvatar.b_setSCSinging(2103) 
+base.localAvatar.b_setSCSinging(2104) 
+base.localAvatar.b_setSCSinging(2105) 
+base.localAvatar.b_setSCSinging(2106) 
+base.localAvatar.b_setSCSinging(2107) 
+base.localAvatar.b_setSCSinging(2108) 
+base.localAvatar.b_setSCSinging(2109) 
+base.localAvatar.b_setSCSinging(2200) 
+base.localAvatar.b_setSCSinging(2201) 
+base.localAvatar.b_setSCSinging(2202) 
+base.localAvatar.b_setSCSinging(2203) 
+base.localAvatar.b_setSCSinging(2204) 
+base.localAvatar.b_setSCSinging(2205) 
+base.localAvatar.b_setSCSinging(2206) 
+base.localAvatar.b_setSCSinging(2207) 
+base.localAvatar.b_setSCSinging(2208) 
+base.localAvatar.b_setSCSinging(2209) 
+base.localAvatar.b_setSCSinging(2300) 
+base.localAvatar.b_setSCSinging(2301) 
+base.localAvatar.b_setSCSinging(2302) 
+base.localAvatar.b_setSCSinging(2303) 
+base.localAvatar.b_setSCSinging(2304) 
+base.localAvatar.b_setSCSinging(2305) 
+base.localAvatar.b_setSCSinging(2306) 
+base.localAvatar.b_setSCSinging(2307) 
+base.localAvatar.b_setSCSinging(2308) 
+base.localAvatar.b_setSCSinging(2309) 
+base.localAvatar.b_setSCSinging(3200) 
+base.localAvatar.b_setSCSinging(3201) 
+base.localAvatar.b_setSCSinging(3300) 
+base.localAvatar.b_setSCSinging(3301) 
+base.localAvatar.b_setSCSinging(3400) 
+base.localAvatar.b_setSCSinging(3600) 
+base.localAvatar.b_setSCSinging(3601) 
+base.localAvatar.b_setSCSinging(3602) 
+base.localAvatar.b_setSCSinging(3603) 
+base.localAvatar.b_setSCSinging(4000) 
+base.localAvatar.b_setSCSinging(4001) 
+base.localAvatar.b_setSCSinging(4002) 
+base.localAvatar.b_setSCSinging(4100) 
+base.localAvatar.b_setSCSinging(4101) 
+base.localAvatar.b_setSCSinging(4102) 
+base.localAvatar.b_setSCSinging(4103) 
+base.localAvatar.b_setSCSinging(4104) 
+base.localAvatar.b_setSCSinging(4105) 
+base.localAvatar.b_setSCSinging(4200) 
+base.localAvatar.b_setSCSinging(4201) 
+base.localAvatar.b_setSCSinging(4202) 
+base.localAvatar.b_setSCSinging(4203) 
+base.localAvatar.b_setSCSinging(4204) 
+base.localAvatar.b_setSCSinging(4205) 
+base.localAvatar.b_setSCSinging(4206) 
+base.localAvatar.b_setSCSinging(4207) 
+base.localAvatar.b_setSCSinging(4300) 
+base.localAvatar.b_setSCSinging(4301) 
+base.localAvatar.b_setSCSinging(4302) 
+base.localAvatar.b_setSCSinging(4303) 
+base.localAvatar.b_setSCSinging(4304) 
+base.localAvatar.b_setSCSinging(4305) 
+base.localAvatar.b_setSCSinging(4306) 
+base.localAvatar.b_setSCSinging(4307) 
+base.localAvatar.b_setSCSinging(4400) 
+base.localAvatar.b_setSCSinging(5000) 
+base.localAvatar.b_setSCSinging(5100) 
+base.localAvatar.b_setSCSinging(5200) 
+base.localAvatar.b_setSCSinging(5300) 
+base.localAvatar.b_setSCSinging(10000) 
+base.localAvatar.b_setSCSinging(10001) 
+base.localAvatar.b_setSCSinging(10002) 
+base.localAvatar.b_setSCSinging(10003) 
+base.localAvatar.b_setSCSinging(10004) 
+base.localAvatar.b_setSCSinging(10005) 
+base.localAvatar.b_setSCSinging(10006) 
+base.localAvatar.b_setSCSinging(10007) 
+base.localAvatar.b_setSCSinging(20000) 
+base.localAvatar.b_setSCSinging(20001) 
+base.localAvatar.b_setSCSinging(20002) 
+base.localAvatar.b_setSCSinging(20003) 
+base.localAvatar.b_setSCSinging(20004) 
+base.localAvatar.b_setSCSinging(20005) 
+base.localAvatar.b_setSCSinging(20006) 
+base.localAvatar.b_setSCSinging(20007) 
+base.localAvatar.b_setSCSinging(20008) 
+base.localAvatar.b_setSCSinging(20009) 
+base.localAvatar.setMaxCarry(9999) 
+base.localAvatar.setHeight(200) 
+base.localAvatar.setGardenStarted() 
+base.localAvatar.setQuestCarryLimit(4) 
+base.localAvatar.setMaxClothes(500) 
+base.localAvatar.setShovelSkill(30) 
+base.localAvatar.promoteShovel(3) 
+base.localAvatar.promoteWateringCan(3)base.localAvatar.setWateringCanSkill(30)base.localAvatar.setSystemMessage(0,'Woo')base.localAvatar.promoteShovel(3)base.localAvatar.trickOrTreatTargetMet(9999) 
+base.localAvatar.physControls.avatarControlForwardSpeed=75 
+base.localAvatar.physControls.avatarControlJumpForce=75 
+base.localAvatar.setTeleportAccess([1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000,12000,13000]) 
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+base.localAvatar.book.pages[1].showPop = 1 
+base.localAvatar.setTrackAccess([7,7,7,7,7,7,7]) 
+base.localAvatar.setTrackBonusLevel([7,7,7,7,7,7,7]) 
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]) 
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6]) 
+base.localAvatar.setZ(150/10) 
+base.localAvatar.setPieType(1) 
+base.localAvatar.setNumPies(99) 
+def new(*args,**kwds): 
+return 1 
+base.localAvatar.inventory.itemIsUsable = new 
+base.localAvatar.setControlEffect('sit', 0.65) 
+base.localAvatar.setControlEffect('swim', 0.8) 
+base.localAvatar.loop('sit') 
+base.LocalAvatar.loop('swim') 
+base.localAvatar.setCheesyEffect(14,0,0) 
+base.localAvatar.b_setAnimState('teleport') 
+base.localAvatar.b_setAnimState(('swim')) 
+base.localAvatar.b_setAnimState(('dive')) 
+base.localAvatar.b_setAnimState(('neutral')) 
+base.localAvatar.b_setAnimState(('Died')) 
+base.localAvatar.b_setAnimState(('run')) 
+base.localAvatar.b_setAnimState(('Sad')) 
+base.localAvatar.b_setAnimState(('walk')) 
+base.localAvatar.setAnimState(('Sleep')) 
+base.localAvatar.b_setAnimState(('cringe')) 
+base.localAvatar.b_setAnimState(('Push')) 
+base.localAvatar.b_setAnimState(('Squish')) 
+base.localAvatar.b_setAnimState(('Flattened')) 
+base.localAvatar.b_setAnimState(('FallDown')) 
+base.localAvatar.b_setAnimState(('TeleportIn')) 
+base.localAvatar.b_setAnimState(('TeleportOut')) 
+base.localAvatar.b_setAnimState(('OpenBook')) 
+base.localAvatar.b_setAnimState(('ReadBook')) 
+base.localAvatar.b_setAnimState(('jumpSquat')) 
+base.localAvatar.b_setAnimState(('Catching')) 
+base.localAvatar.b_setAnimState(('victory')) 
+base.localAvatar.b_setAnimState(('SitStart')) 
+base.localAvatar.b_setAnimState(('CatchEating')) 
+base.localAvatar.b_setAnimState('flat') 
+base.localAvatar.b_setAnimState(('CogThiefRunning')) 
+base.localAvatar.b_setAnimState(TeleportedIn) 
+base.localAvatar.setMaxHp(137) 
+base.localAvatar.setHp(137) 
+base.localAvatar.toonUp(137) 
+base.localAvatar.b_setAnimState(('CogIndex(scarecrow)')) 
+base.localAvatar.setGhostMode(2) 
+base.localAvatar.setGhostMode(0) 
+base.localAvatar.enterSitStart() 
+base.localAvatar.enterSad() 
+base.localAvatar.enableBlend() 
+base.localAvatar.enterHappy() 
+base.localAvatar.takeDamage(500) 
+base.localAvatar.collisionsOff() 
+base.localAvatar.doEmote(0-24) 
+base.localAvatar.setHpr(0,0,315) 
+base.localAvatar.setHpr(315,315,315) 
+base.cr.sendSetZoneMsg(1000) 
+base.cr.sendSetZoneMsg(2000) 
+base.cr.sendSetZoneMsg(2520) 
+base.cr.sendSetZoneMsg(3000) 
+base.cr.sendSetZoneMsg(4000) 
+base.cr.sendSetZoneMsg(5000) 
+base.cr.sendSetZoneMsg(8000) 
+base.cr.sendSetZoneMsg(9000) 
+base.cr.sendSetZoneMsg(11100) 
+base.cr.sendSetZoneMsg(12100) 
+base.cr.sendSetZoneMsg(11500) 
+base.cr.sendSetZoneMsg(10000) 
+base.cr.sendSetZoneMsg(13100) 
+base.cr.sendSetZoneMsg(13000) 
+base.cr.sendSetZoneMsg(13300) 
+base.cr.sendSetZoneMsg(11200) 
+base.cr.sendSetZoneMsg(10100) 
+hint : press F1 + SHIFt for zone to go to 
+base.cr.sendSetZoneMsg(2520) 
+base.cr.sendSetZoneMsg(408871) - sellbot factory 
+base.localAvatar.setHpr(0,0,180) 
+base.wireframeOn() 
+base.wireframeOff() 
+base.localAvatar.announceBingo() 
+base.localAvatar.playSplashEffect(1, 0, 0) (Sound Of Hitting Water) 
+base.localAvatar.setNearbyAvatarChat('HEY!') 
+base.localAvatar.setMinigameZone() 
+base.localAvatar.setHP(1) (cog battle) 
+base.localAvatar.setBrushOff(10) (cog battle) 
+base.localAvatar.setLevelDist(10) (cog battle) 
+base.localAvatar.setSkelecog(1) (cog battle) 
+base.localAvatar.setInteractivePropTrackBonus(100) 
+base.localAvatar.rewardDone() (cog battle) 
+base.localAvatar.movieDone() (cog battle) 
+base.localAvatar.timeout() (cog battle) 
+base.localAvatar.denyLocalToonJoin() (cog battle) 
+base.localAvatar.setPinkSlips((1)) 
+base.cr.sendSetZoneMsg(509718) 
+base.localAvatar.setCogIndex(2) 
+base.localAvatar.b_setAnimState(('ScientistEmcee')) 
+base.localAvatar.b_setAnimState(('GolfPuttLoop')) 
+base.localAvatar.b_setAnimState(('GolfGoodPutt')) 
+base.localAvatar.b_setAnimState(('GolfBadPutt')) 
+base.localAvatar.b_setAnimState(('GolfRotateRight')) 
+base.localAvatar.b_setAnimState(('GolfRotateLeft')) 
+base.localAvatar.b_setAnimState(('GolfPuttSwing')) 
+base.localAvatar.b_setAnimState(('ScientistWork')) 
+base.localAvatar.b_setAnimState(('ScientistPlay')) 
+base.localAvatar.b_setAnimState(('ScientistLessWork')) 
+base.localAvatar.b_setAnimState(('ScientistJealous')) 
+base.localAvatar.setTickets(800) 
+base.localAvatar.setBankMoney(10000) 
+base.localAvatar.setMaxBankMoney(10000) 
+base.localAvatar.setMoney(800) 
+base.localAvatar.setMaxMoney(800) 
+base.localAvatar.setXYZH(-83.642, -90.233, 25.336, -728.746) - gag shop 
+base.localAvatar.setXYZH(-60.173, -8.817, 1.227, 99.147) - arch 
+base.localAvatar.setXYZH(0.197, -1.698, 3.362, 90.737) - stairs 
+base.localAvatar.setXYZH(-145.807, -79.902, 3.362, 47.411) - back of trolley 
+base.localAvatar.setXYZH(15.772, 44.632, 3.825, -235.062) - corner of stairs 
+base.localAvatar.setXYZH(-48.280, 87.749, 0.525, -13.600) - punchline place 
+base.localAvatar.setXYZH(-144.263, 4.647, 0.252, 84.718 ) - loopy lane 
+base.localAvatar.setXYZH(33.977, -150.424, 3.025, 143.147) - silly street 
+base.localAvatar.setXYZH(-121.198, 72.289, 25.792, -181.123) - fish tank 
+base.localAvatar.setXYZH(33.007, 30.181, 3.698, 141.066) - HQ 
+base.localAvatar.setXYZH(-61.060, -8.576, 16.798, 119.111) on top of arch 
+base.localAvatar.setXYZH(-90.862, -83.304, 6.955, -1819.017) - gag shop rip 
+base.localAvatar.setXYZH(60.613, -28.162, 38.265, 811.075) - roof of library 
+base.localAvatar.setXYZH(118.364, 1.339, 67.339, 1172.075) - very top of toon hall 
+base.localAvatar.setXYZH(18.581, -49.105, 12.045, 1453.850) - flower pot 
+base.localAvatar.setXYZH(75.263, 25.442, 24.960, 1193.982) - roof of bank 
+base.localAvatar.setXYZH(44.834, 82.225, 22.190, 284.419) - pink house 
+base.localAvatar.setXYZH(65.880, 10.842, 31.965, 262.562) - blue house 
+base.localAvatar.setXYZH(84.289, -79.017, 24.069, 120.691) -green house 
+base.localAvatar.setXYZH(-69.684, -125.659, 23.254, 477.882) - purple house 
+base.localAvatar.setXYZH(-32.025, 27.665, 11.477, 105.826) - yellow house 
+base.localAvatar.setXYZH(-56.939, -34.610, 28.106, -717.942) - red house 
+base.localAvatar.setXYZH(17.722, -143.701, -9.975, -880.455) - estate pond 
+
+
+2 
+
+
+
+1.go to sbhq toon valley 
+2.enter this code when no cog r near door 
+
+for chqd in base.cr.doFindAll("CogHQDoor"): 
+chqd.rejectEnter = chqd.avatarEnter(base.localAvatar.doId) 
+chqd.setOtherZoneIdAndDoId(11100,451103054) 
+
+
+3.move away from door 
+4.wait till cog is coming and u will automatically go to vp room 
+5.in vp room use these too at same time 
+
+base.cr.sendSetZoneMsg(2520) 
+base.localAvatar.takeOffSuit() 
+
+6.use membership code if u didnt already then go out 
+
+
+REAL funny farm code 
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+
+environ = loader.loadModel("phase_4/models/minigames/treehouse_4players.bam") 
+environ.reparentTo(render) 
+environ.setPos(-8,42,0) 
+environ.setHpr(0,270,180) 
+environ.setScale(6) 
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+e.reparentTo(render) 
+e.setHpr(0,0,0) 
+e.setPos(0,114.03,3.20) 
+pandaPosInterval22 = e.posInterval(13,Point3(0,114.03,3.20), 
+startPos=Point3(0,114.03,127.50)) 
+pandaPosInterval33 = e.posInterval(13,Point3(0,114.03,127.50), 
+startPos=Point3(0,114.03,3.20)) 
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0), 
+startHpr=Point3(0, 0, 0)) 
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0), 
+startHpr=Point3(0, 0, 0)) 
+pandaPace = Sequence(pandaPosInterval22, 
+pandaHprInterval11, 
+pandaPosInterval33, 
+pandaHprInterval22, 
+name="pandaPace") 
+pandaPace.loop() 
+e.find('**/wall_back').removeNode() 
+e.find('**/wall_front').removeNode() 
+c = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+c.setPos(-9.98,139.11,117.38) 
+c.setHpr(0,340.30,0) 
+c.hide() 
+c.reparentTo(render) 
+c.find('**/wall_back').removeNode() 
+c.find('**/wall_front').removeNode() 
+c.find('**/wall_left').removeNode() 
+c.find('**/wall_right').removeNode() 
+c.find('**/ceiling').removeNode()
+
+
+phase_5.5/models/estate/tt_m_ara_est_house_tiki.bam
+phase_5.5/models/estate/tt_m_ara_est_house_cupcake.bam
+phase_5.5/models/estate/tt_m_ara_est_house_castle.bam
+
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3  
+from pandac.PandaModules import *
+
+donald1 = Actor("phase_6/models/char/DL_donald-500.bam",
+{"neutral":"phase_6/models/char/DL_donald-neutral.bam"}) 
+donald1.reparentTo(render) 
+donald1.loop("neutral") 
+donald1.setPos(72.411,-34.692,226.782) 
+donald1.setHpr(270,50,0) 
+
+
+broken = loader.loadModel('phase_5/models/props/geyser.bam') 
+broken.reparentTo(render) 
+broken.setPos(61.301,-37.289,226.782) 
+broken.setHpr(0,0,315) 
+broken.setScale(2)
+
+daisy1 = Actor("phase_4/models/char/daisyduck_1600.bam",
+{"idle":"phase_4/models/char/daisyduck_idle.bam"}) 
+daisy1.reparentTo(render) 
+daisy1.loop("idle") 
+daisy1.setPos(77,-37,226) 
+daisy1.setHpr(70,0,0) 
+daisy1.setScale(1.5)
+
+f = loader.loadModel("phase_9/models/cogHQ/Elevator.bam") 
+f.reparentTo(render) 
+f.setHpr(90,0,0) 
+f.setPos(47.825,-1.672,110.565) 
+pandaPosInterval22 = f.posInterval(13,Point3(47.825,-1.672,110.565),
+startPos=Point3(47.825,-1.672,220.565)) 
+pandaPosInterval33 = f.posInterval(13,Point3(47.825,-1.672,220.565), 
+    
+startPos=Point3(47.825,-1.672,110.565)) 
+pandaHprInterval11 = f.hprInterval(3,Point3(0,0,0), 
+    
+startHpr=Point3(0, 0, 0)) 
+pandaHprInterval22 = f.hprInterval(3,Point3(0, 0, 0), 
+    
+startHpr=Point3(0, 0, 0)) 
+pandaPace = Sequence(pandaPosInterval22, 
+pandaHprInterval11, 
+pandaPosInterval33, 
+pandaHprInterval22, 
+name="pandaPace") 
+pandaPace.loop() 
+f.find('**/wall_back').removeNode() 
+f.find('**/wall_front').removeNode() 
+f.find('**/wall_left').removeNode() 
+f.find('**/wall_right').removeNode()
+f.find('**/ceiling').removeNode() 
+r = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+r.setPos(12.931,0.839,4.024)
+r.setHpr(0,340.30,0)
+r.hide()
+r.reparentTo(render)
+r.find('**/wall_back').removeNode()
+r.find('**/wall_front').removeNode()
+r.find('**/wall_left').removeNode()
+r.find('**/wall_right').removeNode()
+r.find('**/ceiling').removeNode()
+
+mgr = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+mgr.reparentTo(render)
+mgr.setPos(-50.115,31.640,226.782)
+mgr.setHpr(0,0,0)
+mgr.setScale(4)       
+pandaHprInterval1 = mgr.hprInterval(3,Point3(0,0,0),                                                        
+startHpr=Point3(270, 0, 0))        
+pandaHprInterval2 = mgr.hprInterval(3,Point3(270, 0, 0),                                                        
+startHpr=Point3(0, 0, 0))         
+# Create and play the sequence that coordinates the intervals.        
+maryspin = Sequence(pandaHprInterval1,                                  
+                     name="maryspin")        
+maryspin.loop()
+
+
+
+
+
+

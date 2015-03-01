@@ -1,0 +1,11 @@
+base.localAvatar.setDNAString('t\x01\x01\x01\x01\x62\x1b\x00\x1b\x27\x1b\x14\x00\x14\x14')
+base.localAvatar.setDNAString('t\x05\x02\x00\x01\x58\x1d\x26\x1c\x16\x1d\x0e\x00\x0e\x0e')
+
+
+
+
+    setDNAString
+    uses a dna string
+    setDNA
+    uses a dna
+    updateToonDNA

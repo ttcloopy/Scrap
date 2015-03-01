@@ -1,0 +1,112 @@
+ttc = loader.loadModel("phase_4/models/neighborhoods/toontown_central.bam")
+ttc.reparentTo(render)
+ttc.setPos(665, 963, -80)
+ttc.setHpr(-40, 0, 0)
+
+
+pier = loader.loadModel("phase_5/models/cogdominium/tt_m_ara_crg_toonCage.bam")
+pier.reparentTo(render)
+pier.setPos(906, 1212, 126)
+pier.setHpr(90, 0, 0)
+
+pier = loader.loadModel("phase_9/models/cogHQ/BossRoomHQ.bam")
+pier.reparentTo(render)
+pier.setPos(906, 1212, 126)
+pier.setHpr(90, 0, 0)
+
+
+pier = loader.loadModel("phase_5.5/models/estate/garden_donald.bam")
+pier.reparentTo(render)
+pier.setPos(906, 1212, 126)
+pier.setHpr(90, 0, 0)
+
+pier = loader.loadModel("phase_6/models/karting/driftSmoke.bam")
+pier.reparentTo(render)
+pier.setPos(906, 1212, 126)
+pier.setHpr(90, 0, 0)
+
+
+pier = loader.loadModel("phase_6/models/karting/Kart2_LOD3_Final.bam")
+pier.reparentTo(render)
+pier.setPos(906, 1212, 126)
+pier.setHpr(90, 0, 0)
+
+s1 = loader.loadModel("phase_3.5/models/modules/tt_m_ara_int_sillyMeterFlat.bam")
+s1.reparentTo(render)
+s1.setPos(163.580,22.064,133.179)
+s1.setHpr(0,0,0) 
+s1.setScale(1)
+
+s1 = loader.loadModel("phase_4/models/islands/pier_gallows.bam")
+s1.reparentTo(render)
+s1.setPos(163.580,22.064,133.179)
+s1.setHpr(0,0,0) 
+s1.setScale(1)
+
+s1 = loader.loadModel("phase_4/models/islands/pier_walkway.bam")
+s1.reparentTo(render)
+s1.setPos(1024, 1259,  253)
+s1.setHpr(0,0,0) 
+s1.setScale(0.5)
+Dock.removeNode()
+
+s1 = loader.loadModel("phase_4/models/islands/pier_scaffold_end.bam")
+s1.reparentTo(render)
+s1.setPos(163.580,22.064,133.179)
+s1.setHpr(0,0,0) 
+s1.setScale(1)
+
+s1 = loader.loadModel("phase_4/models/props/pir_m_prp_mng_elevator_basket.bam")
+s1.reparentTo(render)
+s1.setPos(163.580,22.064,133.179)
+s1.setHpr(0,0,0) 
+s1.setScale(1)
+
+Gear = loader.loadModel("phase_9/models/char/gearProp.bam")
+Gear.reparentTo(render)
+Gear.setPos(163.580,22.064,133.179)
+Gear.setScale(1)
+GearSpin = Gear.hprInterval(10, Vec3(360, 0, 0))
+GearSpin.loop()
+
+sillymt = Actor("phase_4/models/props/tt_a_ara_ttc_sillyMeter_default.bam",{"sillier":"phase_4/models/props/tt_a_ara_ttc_sillyMeter_phaseFour.bam"})
+sillymt.reparentTo(render)
+sillymt.loop("sillier")
+sillymt.setPos(-153.070,-96.151,-999.975)
+sillymt.setHpr(360,0,0)
+sillymt.setScale(1)
+base.cr.sendSetZoneMsg(6969)
+from pandac.PandaModules import *
+from direct.actor.Actor import Actor
+from direct.showbase.DirectObject import DirectObject
+from direct.showbase.ShowBase import ShowBase
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+TB = loader.loadModel('phase_8/models/modules/BR_pond.bam')
+TB.reparentTo(render)
+TB.setPos(1025, 1331, 253)
+TB.setHpr(-90,0,0)
+
+
+catch1.removeNode()
+rope3 = loader.loadModel("phase_4/models/modules/tt_m_ara_int_ropes.bam")
+rope3.reparentTo(render)
+rope3.setPos(-486.485,-51.431,226.075)
+rope3.setHpr(0,0,0)
+rope3.setScale(.4)
+
+base.cr.sendSetZoneMsg(6969)
+from pandac.PandaModules import *
+from direct.actor.Actor import Actor
+from direct.showbase.DirectObject import DirectObject
+from direct.showbase.ShowBase import ShowBase
+from direct.interval.IntervalGlobal import Func, Wait, Sequence
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+TB = loader.loadModel('phase_8/models/neighborhoods/the_burrrgh.bam')
+TB.reparentTo(render)
+TB.setPos(1025, 1341, 235)
+TB.setHpr(0,0,0)

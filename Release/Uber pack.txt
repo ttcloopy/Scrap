@@ -1,0 +1,543 @@
+
+
+
+base.localAvatar.setTeleportAccess ([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+
+base.localAvatar.book.pages[1].showPop = 1
+
+base.localAvatar.setSystemMessage(1,'Tu est pret pour le film de Bob Potter')
+
+localAvatar.cogMerits=[10000, 10000, 10000, 10000]
+
+base.localAvatar.setFishingTrophies([0,1,2,3,4,5,6])
+
+base.localAvatar.setEmoteAccess([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]) 
+
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+
+base.localAvatar.setMaxCarry(9999)
+
+base.localAvatar.setBankMoney(10000)
+
+base.localAvatar.setMoney(999) 
+
+base.localAvatar.setMaxBankMoney(10000) 
+
+base.localAvatar.setFishingTrophies([0,1,2,3,4,5,6])
+
+base.localAvatar.setMaxClothes(500)
+
+base.localAvatar.setQuestCarryLimit(4)
+
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1]) 
+
+base.localAvatar.setExperience('10500')
+
+import otp, toontown
+def returnGameAccess(*args):
+    return 2
+base.cr._OTPClientRepository__isPaid = True
+otp.otpbase.OTPGlobals.AccessVelvetRope = 2
+otp.otpbase.OTPGlobals.AccessFull = 2
+otp.otpbase.OTPGlobals.createFriendsWithChat = 2
+toontown.toon.LocalToon.LocalToon.gameAccess = 2
+base.launcher.setValue(base.launcher.PaidUserLoggedInKey, '1')
+toontown.toon.LocalToon.LocalToon.getGameAccess = returnGameAccess
+def returnAllowedSecretChat(*args, **kwds):return True
+base.cr.allowSecretChat = returnAllowedSecretChat
+base.cr.isParentPasswordSet = returnAllowedSecretChat
+
+
+
+
+ base.localAvatar.setCogIndex = 1 (2,3,4) 
+base.localAvatar.setMerits(0,0,0,0) 
+base.localAvatar.setCogLevels([49, 49, 49, 49]) 
+base.localAvatar.setCogTypes([7,7,7,7]) 
+base.localAvatar.setCogParts([56444, 56447, 56447, 56411])
+
+
+
+
+mickey = base.cr.doFindAll("render/mickey")
+for mickey in base.cr.doFindAll("render/mickey"):
+    mickey.setName('Ghost Mickey')
+    mickey.hideShadow()
+    mickey.loop('right-point')
+    mickey.setColorScale(0.3)
+    mickey.setChatAbsolute('Fait attention bob.', 0, None, True)
+    mickey.find('**/MickeycRay').removeNode()
+    mickey.find('**/distAvatarCollNode-415100656').removeNode()
+    mickey.find('**/MickeyBlatherSphere').setScale(5000)
+
+base.localAvatar.startChat()
+
+messenger.send('rejectTutorial')
+base.cr.gameFSM.request('closeShard')
+
+base.cr.sendWishName(base.localAvatar.doId,("Voldemort"))
+base.cr.gameFSM.request('closeShard')
+
+zone = base.cr.listActiveShards()
+zone = str(zone)
+base.localAvatar.setSystemMessage(1, zone)
+base.localAvatar.setCheesyEffect(11, 0, 0)
+ base.localAvatar.setCheesyEffect(10, 0, 0)
+
+
+ from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import * 
+ttHat = loader.loadModel("phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle.bam")
+ ttHat.reparentTo(localAvatar)
+ ttHat.setZ(4)
+ ttHat.setColorScale(25)
+ ttHatSpin = ttHat.find('**/whistleIcon').hprInterval(3, Vec3(360, 0, 0))
+ ttHatSpin.loop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+base.localAvatar.setDNAString('t\x01\x07\x00\x00\x50\x1b\x45\x1b\x21\x1b\x08\x02\x08\x08')
+
+
+
+npc = base.cr.doFindAll("Tailor")
+npc[0]._DistributedNPCTailor__enterConfirmLoss(34, 34)
+class SCWrapper:
+        SCDictionary = {}
+        global defaultDecode
+
+        def encrypt(self, message):
+            encryption = md5.new()
+            encryption.update(message)
+            return encryption.digest()
+        
+        def registerMessage(self, SpeedchatID, SpeedchatText):
+            self.SCDictionary[SpeedchatID] = SpeedchatText
+
+        def unregisterMessage(self, SpeedchatID):
+            try:del self.SCDictionary[SpeedchatID]
+            except:print "No Speedchat ID", SpeedchatID
+
+        def returnDecoded(self, msgIndex):
+            if msgIndex in self.SCDictionary:return str(self.SCDictionary[msgIndex])
+            else:return defaultDecode(msgIndex)
+
+        def __init__(self):
+            otp.speedchat.SCDecoders.decodeSCStaticTextMsg = self.returnDecoded
+
+
+
+
+
+
+
+
+
+
+
+try:
+ pond = base.cr.doFindAll("FishingPond")[0]
+ fish = base.cr.doFindAll("FishingTarget")[0]
+ pond.d_hitTarget(fish)
+except:pass
+
+
+pond = base.cr.doFindAll("FishingPond")[0]
+pond.handleBingoCatch()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from direct.interval.IntervalGlobal import *
+from pandac.PandaModules import TextNode
+
+def bOne():
+ base.localAvatar.collisionsOn()
+def bTwo():
+ base.localAvatar.collisionsOff()
+def  bThree():
+ base.localAvatar.b_setAnimState('dive')
+def bFour():
+ base.localAvatar.b_setAnimState('swim')
+def bFive():
+ base.localAvatar.b_setSC(20136)
+def bSix():
+ base.cr.sendSetZoneMsg(7000)
+def bSeven():
+ base.cr.sendSetZoneMsg(2000)
+def bEight():
+  base.localAvatar.book.pages[1].shardChoiceReject = base.localAvatar.book.pages[1].choseShard
+  base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+  base.localAvatar.setSystemMessage(0,'Global Teleport Activated')
+  base.localAvatar.book._ShtikerBook__pageChange(1)
+  base.localAvatar.book._ShtikerBook__pageChange(-1)
+def bNine():
+ base.talkAssistant.sendOpenTalk('\n' * 200)
+def bTen():
+ base.localAvatar.d_squish(3)
+def bEleven():
+ ttt = base.cr.doFindAll("TTTreasure")
+ for ttt in base.cr.doFindAll("TTTreasure"):
+     ttt.d_requestGrab()
+def bTwelve():
+ base.localAvatar.b_setAnimState('TeleportOut')
+def bThirteen():
+ base.localAvatar.b_setAnimState('TeleportIn')
+def bFourteen():
+ base.localAvatar.enterSitStart()
+def bFifteen():
+ messenger.send('nameTagShowAvId')
+def bSixteen():
+ toon = base.localAvatar.getX()
+ toon2 = base.localAvatar.getY()
+ toon3 = base.localAvatar.getZ()
+ base.localAvatar.d_playSplashEffect(toon, toon2, toon3)
+ base.localAvatar.playSplashEffect(toon, toon2, toon3)
+def bSeventeen():
+ base.localAvatar.b_setAnimState("victory", 10)
+def bEighteen():
+ base.localAvatar.loop('swing')
+def bNineteen():
+ base.localAvatar.b_setAnimState("ScientistEmcee")
+def bTwenty():
+ messenger.send("minigameAbort")
+def bTwentyone():
+ houseZoneGet = base.localAvatar.getZoneId()
+ houseZoneGet += 10
+ houseZoneGet = int(houseZoneGet)
+ base.cr.sendSetZoneMsg(houseZoneGet)
+def whisperall(message="", includingSelf=True):
+    startingToon = 0
+    toonOn = 0
+    listToonIds = base.localAvatar.getNearbyPlayers(1000000000000000, includingSelf)
+    endingToon = len(listToonIds)
+    print listToonIds
+    while startingToon != endingToon:
+        base.talkAssistant.sendWhisperTalk(str(message), listToonIds[toonOn])
+        print toonOn
+        toonOn = toonOn + 1
+        startingToon = startingToon + 1
+def bTwentytwo():
+ whisperall('TP TO ME \n' * 13, True)
+def bTwentythree():
+ base.localAvatar.b_setAnimState('ScientistWork')
+def bTwentyfour():
+ base.localAvatar.setDNAString('t\x01\x02\x00\x01\x56\x1d\x54\x1c\x24\x1d\x00\x00\x14\x14')
+def bTwentyfive():
+ word = base.localAvatar.getZoneId()
+ base.localAvatar.collisionsOff()
+ base.cr.sendSetZoneMsg(7000)
+ base.localAvatar.b_setAnimState('chat')
+ base.cr.sendSetZoneMsg(word)
+def bTwentysix():
+ ttd = base.cr.doFindAll("DivingGame")
+ for ttd in base.cr.doFindAll("DivingGame"):
+     ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+def bTwentyseven():
+ zone = base.localAvatar.getZoneId()
+ zone = str(zone)
+ base.localAvatar.setSystemMessage(1, zone)
+def bTwentyeight():
+ base.localAvatar.physControls.avatarControlForwardSpeed = 100
+def bTwentynine():
+ base.localAvatar.physControls.avatarControlJumpForce = 100
+
+b1 = DirectButton(text = ("CO-on", "CO-on", "CO-on", "CO-on"), scale=.05, pos = (-.1,0,-.9), command=bOne)
+b2 = DirectButton(text = ("CO-off", "CO-off", "CO-off", "CO-off"), scale=.05, pos = (.08,0,-.9), command=bTwo)
+b3 = DirectButton(text = ("Dive", "Dive", "Dive", "Dive"), scale=.05, pos = (.22,0,-.9), command=bThree)
+b4 = DirectButton(text = ("Swim", "Swim", "Swim", "Swim"), scale=.05, pos = (.34,0,-.9), command=bFour)
+b5 = DirectButton(text = ("RAID!", "RAID!", "RAID!", "RAID!"), scale=.05, pos = (.48,0,-.9), command=bFive)
+b6 = DirectButton(text = ("Farm", "Farm", "Farm", "Farm"), scale=.05, pos = (-.26,0,-.9), command=bSix)
+b7 = DirectButton(text = ("TTC", "TTC", "TTC", "TTC"), scale=.05, pos = (-.37,0,-.9), command=bSeven)
+b8 = DirectButton(text = ("Teleport", "Teleport", "Teleport", "Teleport"), scale=.05, pos = (-.515,0,-.9), command=bEight)
+b9 = DirectButton(text = ("Bubble", "Bubble", "Bubble", "Bubble"), scale=.05, pos = (-.7,0,-.9), command=bNine)
+b10 = DirectButton(text = ("Die", "Die", "Die", "Die"), scale=.05, pos = (-.84,0,-.9), command=bTen)
+b11 = DirectButton(text = ("Laff", "Laff", "Laff", "Laff"), scale=.05, pos = (-.94,0,-.9), command=bEleven)
+b12 = DirectButton(text = ("T-out", "T-out", "T-out", "T-out"), scale=.05, pos = (-.94,0,-.96), command=bTwelve)
+b13 = DirectButton(text = ("T-in", "T-in", "T-in", "T-in"), scale=.05, pos = (-.82,0,-.96), command=bThirteen)
+b14 = DirectButton(text = ("Sit", "Sit", "Sit", "Sit"), scale=.05, pos = (.6,0,-.9), command=bFourteen)
+b15 = DirectButton(text = ("AVID", "AVID", "AVID", "AVID"), scale=.05, pos = (.72,0,-.9), command=bFifteen)
+b16 = DirectButton(text = ("Splash", "Splash", "Splash", "Splash"), scale=.05, pos = (-.55,0,-.96), command=bSixteen)
+b17 = DirectButton(text = (">>Victory", ">>Victory", ">>Victory", ">>Victory"), scale=.05, pos = (-.36,0,-.96), command=bSeventeen)
+b18 = DirectButton(text = ("Swing", "Swing", "Swing", "Swing"), scale=.05, pos = (-.17,0,-.96), command=bEighteen)
+b19 = DirectButton(text = ("Emcee", "Emcee", "Emcee", "Emcee"), scale=.05, pos = (-.7,0,-.96), command=bNineteen)
+b20 = DirectButton(text = ("Skip", "Skip", "Skip", "Skip"), scale=.05, pos = (-.06,0,-.96), command=bTwenty)
+b21 = DirectButton(text = ("Raid", "Raid", "Raid", "Raid"), scale=.05, pos = (.05,0,-.96), command=bTwentyone)
+b22 = DirectButton(text = ("TP", "TP", "TP", "TP"), scale=.05, pos = (.14,0,-.96), command=bTwentytwo)
+b23 = DirectButton(text = ("SciW", "SciW", "SciW", "SciW"), scale=.05, pos = (.23,0,-.96), command=bTwentythree)
+b24 = DirectButton(text = ("Suit", "Suit", "Suit", "Suit"), scale=.05, pos = (.34,0,-.96), command=bTwentyfour)
+b25 = DirectButton(text = ("ScaC", "ScaC", "ScaC", "ScaC"), scale=.05, pos = (.45,0,-.96), command=bTwentyfive)
+b26 = DirectButton(text = ("DiveG", "DiveG", "DiveG", "DiveG"), scale=.05, pos = (-.94,0,-.84), command=bTwentysix)
+b27 = DirectButton(text = ("Zone", "Zone", "Zone", "Zone"), scale=.05, pos = (-.66,0,-.84), command=bTwentyseven)
+b28 = DirectButton(text = ("Run", "Run", "Run", "Run"), scale=.05, pos = (-.36,0,-.84), command=bTwentyeight)
+b29 = DirectButton(text = ("Jump", "Jump", "Jump", "Jump"), scale=.05, pos = (-.22,0,-.84), command=bTwentynine)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import toontown
+Def enterMakeMovie(self, ts=0):
+  toontown.battle.DistributedBattleBase.DistributedBattleBase = enterMakeMovie(0)
+
+ChatFeedback_OpenChat = 128
+    ChatFeedback_PassedBlacklist = 32
+    ChatFeedback_Whitelist = 64
+
+
+
+
+
+
+
+
+
+
+
+base.localAvatar.toonUp(137)
+base.localAvatar.setMaxHp(137)
+base.localAvatar.setHp(137)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+touche rapides : 
+
+
+ from direct.showbase import DirectObject
+ class Index(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f1',self.Index)
+ def Index(self):
+ base.localAvatar.setCogIndex(0)
+ base.localAvatar.setSystemMessage(0, 'This is your Cog Nation disguise, use it to get into the Chairmans Castle!')
+ i = Index()
+
+ from direct.showbase import DirectObject
+ class Index(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f2',self.Index)
+ def Index(self):
+ base.localAvatar.setCogIndex(1)
+ base.localAvatar.setSystemMessage(0, 'This is your Cog Nation disguise, use it to get into the Chairmans Castle!')
+ i = Index()
+
+ from direct.showbase import DirectObject
+ class Index(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f3',self.Index)
+ def Index(self):
+ base.localAvatar.setCogIndex(2)
+ base.localAvatar.setSystemMessage(0, 'This is your Cog Nation disguise, use it to get into the Chairmans Castle!')
+ i = Index()
+
+ from direct.showbase import DirectObject
+ class Index(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f4',self.Index)
+ def Index(self):
+ base.localAvatar.setCogIndex(3) 
+base.localAvatar.setSystemMessage(0, 'This is your Cog Nation disguise, use it to get into the Chairmans Castle!')
+ i = Index()
+
+
+ from direct.showbase import DirectObject
+ class Index(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f5',self.Index)
+ def Index(self):
+ base.localAvatar.setCogIndex(-1)
+ base.localAvatar.setSystemMessage(0, 'Cog Nation Disguise is Off.')
+ i = Index()
+
+ from direct.showbase import DirectObject
+ class Index(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f6',self.Index)
+ def Index(self):
+ shirt = base.localAvatar.findAllMatches('**/torso-top') 
+shirttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_sellbotCrusher.jpg") 
+shirt.setTexture(shirttex, 1) 
+short = base.localAvatar.findAllMatches('**/torso-bot') 
+shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_sellbotCrusher.jpg") 
+short.setTexture(shorttex, 1) 
+sleeves = base.localAvatar.findAllMatches('**/sleeves') 
+sleevestex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_sellbotCrusher.jpg") 
+sleeves.setTexture(sleevestex, 1) 
+base.localAvatar.setName(('RESISTANCE RANGER Yes')) 
+base.localAvatar.setSystemMessage(0, 'RESISTANCE RANGER Yes')
+ i = Index()
+
+ from direct.showbase import DirectObject
+ class Control(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f7',self.Control)
+ def Control(self):
+ import toontown 
+  def new(): 
+  return True 
+ def new2(*a,**k): 
+ return 2 
+base.cr.isPaid = new 
+base.cr.isParentPasswordSet = new 
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2 
+base.localAvatar.setSystemMessage(0, 'Membership Activated')
+ c = Control()
+
+ from direct.showbase import DirectObject
+  class Control(DirectObject.DirectObject):
+ def __init__(self):
+  self.accept('f8',self.Control)
+ def Control(self):
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000]) 
+base.localAvatar.book.pages[1].showPop = 1 
+base.localAvatar.setSystemMessage(0, 'Gloabal Teleport Activated')
+ c = Control()
+
+
+ from direct.showbase import DirectObject
+ class Control(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f9',self.Control)
+ def Control(self):
+ base.localAvatar.collisionsOff()
+ base.cr.sendSetZoneMsg(7000) 
+base.localAvatar.b_setAnimState('teleport') 
+base.cr.sendSetZoneMsg(2000) 
+base.localAvatar.setSystemMessage(0, 'ScareCrow do in TTC ONLY!')
+ c = Control()
+
+from direct.showbase import DirectObject
+class Control(DirectObject.DirectObject):
+def __init__(self):
+self.accept('f10',self.Control)
+def Control(self):
+base.localAvatar.setSCResistance(201, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(1, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(100, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(101, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(102, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(103, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(104, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(105, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(106, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSCResistance(107, nearbyToons=[286531738, 235326465])
+base.localAvatar.setSystemMessage(0, 'Many unite given! This was from the ToonTown Staff')
+c = Control()
+
+ from direct.showbase import DirectObject
+ class Control(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f11',self.Control)
+ def Control(self):
+ base.localAvatar.collisionsOff()
+ base.localAvatar.setSystemMessage(0, 'Collisions off')
+ c = Control()
+
+ from direct.showbase import DirectObject
+ class Control(DirectObject.DirectObject):
+ def __init__(self):
+ self.accept('f12',self.Control)
+ def Control(self):
+ base.localAvatar.collisionsOn()
+ base.localAvatar.setSystemMessage(0, 'Collisions on')
+ c = Control()

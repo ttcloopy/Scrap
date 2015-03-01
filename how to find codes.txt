@@ -1,0 +1,56 @@
+This is for everyone who is having trouble finding/creating codes to use in Toontown, and just has other people find them for them. This will teach you some of the good ways to find codes easily on your own.
+
+=== Requirments ===
+- Some knowledge in Python Coding.
+- A TTLogger, written in anything, it doesn't matter.
+
+=== Methods ===
+There are four Basic Methods for finding codes using your Toontown Logger. The first is using dir()
+Code:
+
+print dir(base.localAvatar)
+
+Dir, is a built in python function. It is used to get information on the module/instance, and returns all of the methods inside of the object. In other words, you can find all the codes you are able to use for that object.
+
+
+
+
+This is useful, but what if you needed to get what Arguments go inside a function? Such as base.localAvatar.setCogIndex, what if you didn't know what went inside the parameters? Well, there is another built in function, and thats called help(). Inside it can go any Function, Module, Object, or Instance. Most likely you would want to put a function inside. If we did this on setCogIndex it would return:
+Code:
+
+setCogIndex(self, index) method of toontown.toon.LocalToon.LocalToon instance
+
+We ignore the self, because it is automatically handled in this instance, so we imagine that it's invisible, index, is probably the cog index. Meaning the Index ID. So there you would replace that with a number, such as 0. Then do:
+Code:
+
+base.localAvatar.setCogIndex(0)
+
+
+
+
+
+Now that we have our code, we want to see some information about it, and dissasemble it to get a basic idea of what the code does, to do this, you can use the dis() function, to get it you have to import the dis module.
+Code:
+
+from dis import *
+print dis(base.localAvatar.setCogIndex)
+
+Doing this will show a basic idea of what the code does. It may take you a bit to understand what it's telling you, as it isn't that easy to understand. But it is very useful for finding stuff that you didn't know about, or was hidden.
+
+
+
+
+Finally, the least important, but somewhat helpful, the inspect module. Even though this does have a getsource() function, it does not work inside Toontown. However one thing that does work, is the getmembers() function, this gets all of the members inside of an object/class. This is somewhat like the dir() function, however it supplies a bit more information. To use this do the following:
+Code:
+
+import inspect
+print inspect.getmembers(base.localAvatar)
+
+This will then give the same effect of dir().
+
+base.cr.wantUpdateCalls = True
+
+
+This is used for finding codes that is sent to the server. It turns on Toontown's Developer's Debug system, that they use to find errors in whats sent to the server. You can use this to find live Toontown codes.
+
+http://attackerz.0fees.net/index.php?topic=3.0

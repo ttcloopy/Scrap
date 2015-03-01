@@ -1,0 +1,104 @@
+from direct.interval.IntervalGlobal import *
+def toonhq1():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: You are now a Toon Council Member!')
+def toonhq2():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: The CEO wants to have a word with you!')
+def toonhq3():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: Go visit him in his gay ass castle!')
+def toonhq4():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: Tell us what he says when you get back to Toontown!')
+def toonhq5():
+    base.localAvatar.setSystemMessage(1,'Toon HQ: Good luck!')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(toonhq1))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq2))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq3))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq4))
+  seq.append(Wait(5))
+  seq.append(Func(toonhq5))
+  seq.start()
+onTime()
+def openbook():
+    base.localAvatar.b_setAnimState('OpenBook')
+def readbook():
+    base.localAvatar.b_setAnimState('ReadBook')
+def closebook():
+    base.localAvatar.b_setAnimState('CloseBook')
+def tptohole():
+    base.localAvatar.b_setAnimState('TeleportOut')
+def tpfromhole():
+    base.localAvatar.setPos(-60,16,654)
+    base.localAvatar.b_setAnimState('TeleportIn')
+def onTime():
+  seq = Sequence()
+  seq.append(Wait(5))
+  seq.append(Func(openbook))
+  seq.append(Wait(1))
+  seq.append(Func(readbook))
+  seq.append(Wait(5.0))
+  seq.append(Func(closebook))
+  seq.append(Wait(2.0))
+  seq.append(Func(tptohole))
+  seq.append(Wait(4.0))
+  seq.append(Func(tpfromhole))
+  seq.start()
+onTime()
+
+music = loader.loadMusic("phase_12/audio/bgm/Bossbot_Entry_v2.mid")
+music.play()
+music.setLoop()
+
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+
+
+
+
+
+nc1 = loader.loadModel("phase_12/models/bossbotHQ/CogGolfHub.bam")
+nc1.reparentTo(render)
+nc1.setPos(-60,16,654)
+nc1.setHpr(360,0,0)
+nc1.setScale(.6)
+underwork1 = loader.loadModel("phase_4/models/props/construction_sign.bam")
+underwork1.reparentTo(render)
+underwork1.setPos(-22,90,654)
+underwork1.setHpr(0,0,0)
+underwork1.setScale(.7)
+
+
+goofy = Actor("phase_6/models/char/tt_a_chr_csc_goofyCostume_1200.bam",{"goofyneutral":"phase_6/models/char/tt_a_chr_csc_goofyCostume_neutral.bam"})
+goofy.reparentTo(render)
+goofy.loop("goofyneutral")
+goofy.setPos(-23,81,654)
+goofy.setHpr(360,0,0)
+goofy.setScale(1.1)
+
+botcam1 = Actor("phase_9/models/char/BotCam-zero.bam",{"botcamneutral":"phase_9/models/char/BotCam-neutral.bam"})
+botcam1.reparentTo(render)
+botcam1.loop("botcamneutral")
+botcam1.setPos(-28,91.5,658)
+botcam1.setHpr(0,0,0)
+botcam1.setScale(1)
+
+botcam2 = Actor("phase_9/models/char/BotCam-zero.bam",{"botcamneutral":"phase_9/models/char/BotCam-neutral.bam"})
+botcam2.reparentTo(render)
+botcam2.loop("botcamneutral")
+botcam2.setPos(-17,91.5,658)
+botcam2.setHpr(0,0,0)
+botcam2.setScale(1)
+
+
+

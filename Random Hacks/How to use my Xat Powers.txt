@@ -1,0 +1,19 @@
+HOW TO USE YOUR POWERS: 
+Hush: /ho 60s MESSAGE HERE
+Shuffle: Type Shuffle
+Tickle: Appears in the side
+Noaudies: Works alone
+Hats:
+Andrew(hat#a) - Reguler Hat
+Andrew(hat#b) - Badges Thing
+Andrew(hat#e) - Wings on Head
+Andrew(hat#f) -  Wings
+Andrew(hat#g) - Badges Thing 
+Andrew(hat#t) - BaseBall Cap
+Andrew(hat#u) -4 of July
+Andrew(hat#w) - Pirate
+Andrew(hat#x) - Santa Hat
+
+ 
+
+

@@ -1,0 +1,7 @@
+--------------PUMPKIN HEAD STEPS------------
+base.cr.sendSetZoneMsg(2649) - TTC
+base.cr.sendSetZoneMsg(1834) - DD
+base.cr.sendSetZoneMsg(5620) - DG
+base.cr.sendSetZoneMsg(4835) - MML
+base.cr.sendSetZoneMsg(3707) - TB
+base.cr.sendSetZoneMsg(9619) - DDL

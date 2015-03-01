@@ -1,0 +1,157 @@
+
+
+a land object has five properties, model, position, rotation, scale, and color:
+
+paint1 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+paint1.reparentTo(render)
+paint1.setPos(-15,0,1)
+paint1.setHpr(0,0,80)
+paint1.setScale(5,1,1)
+paint1.setColor(0,0,3)
+
+I'll explain the properties.
+
+The "paint1" you see is the object's ID. The object that has the ID paint1 will be affected by the commands given after the period. You can give objects any ID name. Make sure you give them all different names for convenience.
+
+paint1 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+This is the model that object "paint1" loads. You have to have a correct file path to the model or the object won't appear.
+
+paint1.reparentTo(render)
+This makes the object appear.
+
+paint1.setPos(-15,0,1)
+This is the (x,y,z) position of the object.
+
+paint1.setHpr(0,0,80)
+This is the (x,y,z) rotation of the object.
+
+paint1.setScale(5,1,1)
+This is the (x,y,z) scaling of the object.
+
+paint1.setColor(0,0,3)
+This is the (redness,greenness,blueness) of the object. You can remove this property if you want the object's default coloring.
+
+Alright, give it a try now! Enter this code into ToonTown and find the red paint mixer!
+
+paint1 = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+paint1.reparentTo(render)
+paint1.setPos(0,0,5)
+paint1.setHpr(0,0,0)
+paint1.setScale(3,3,3)
+paint1.setColor(3,0,0)
+
+Found it? OK. Let's say you're not happy with the positioning of it. Enter the following code into the injector:
+
+paint1.setPos(0,0,5)
+
+Now, change the z position to something higher like 10 and submit it. You'll see the red paint mixer move upwards!
+
+If you want to keep your lands for later, store them in a text file or something and be sure to update them when you change something.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nviron = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(25,-150,0)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(10,-135,0)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-5,-120,0)
+environ.setHpr(0,0,0)
+environ.setScale(1)
+mail2 = Actor("phase_3/models/char/mickey-1200.bam",{"wait":"phase_3/models/char/mickey-wait.bam"})
+mail2.reparentTo(render)
+mail2.loop("wait")
+mail2.setPos(7,-135,0)
+mail2.setHpr(315,0,0)
+mail2.setScale(1)
+environ = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+environ.reparentTo(render)
+environ.setPos(-10,-80,-10)
+environ.setHpr(0,0,0)
+environ.setScale(10)
+environ = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+environ.reparentTo(render)
+environ.setPos(50,-80,-10)
+environ.setHpr(0,0,0)
+environ.setScale(10)
+environ = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+environ.reparentTo(render)
+environ.setPos(-40,-140,-10)
+environ.setHpr(0,0,0)
+environ.setScale(10)
+e = loader.loadModel("phase_9/models/cogHQ/Elevator.bam")
+e.reparentTo(render)
+e.setHpr(0,0,0)
+e.setPos(-5,-120,0)
+pandaPosInterval22 = e.posInterval(13,Point3(-5,-120,0),
+startPos=Point3(-5,-120,50))
+pandaPosInterval33 = e.posInterval(13,Point3(-5,-120,50),
+startPos=Point3(-5,-120,0))
+pandaHprInterval11 = e.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(0, 0, 0))
+pandaHprInterval22 = e.hprInterval(3,Point3(0, 0, 0),
+startHpr=Point3(0, 0, 0))
+pandaPace = Sequence(pandaPosInterval22,
+pandaHprInterval11,
+pandaPosInterval33,
+pandaHprInterval22,
+name="pandaPace")
+pandaPace.loop()
+e.find('**/wall_back').removeNode()
+e.find('**/wall_front').removeNode()
+sell1 = loader.loadModel('phase_9/models/cogHQ/SelbotLegFactory.bam')
+sell1.reparentTo(render)
+sell1.setPos(-15,0,80)
+sell1.setHpr(90,0,0)
+sell1.setScale(1)
+sell1.setColor(0,0,3)
+environ = loader.loadModel('phase_10/models/cogHQ/CBMetalCrate2.bam')
+environ.reparentTo(render)
+environ.setPos(-10,20,30)
+environ.setHpr(0,45,0)
+environ.setScale(10)
+environ = loader.loadModel('phase_9/models/cogHQ/PaintMixer.bam')
+environ.reparentTo(render)
+environ.setPos(-10,-30,50)
+environ.setHpr(0,0,0)
+environ.setScale(3)
+ceo = Actor({"head":"phase_12/models/char/bossbotBoss-head-zero.bam", \
+"torso":"phase_12/models/char/bossbotBoss-torso-zero.bam", \
+"legs":"phase_9/models/char/bossCog-legs-zero.bam"}, \
+# dictionary of anim dictionaries
+{"head":{"walk":"phase_9/models/char/bossCog-head-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-head-Bb_neutral.bam"}, \
+"torso":{"walk":"phase_9/models/char/bossCog-torso-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-torso-Bb_neutral.bam"}, \
+"legs":{"walk":"phase_9/models/char/bossCog-legs-Bb_neutral.bam", \
+"run":"phase_9/models/char/bossCog-legs-Bb_neutral.bam"} \
+})
+
+ceo.attach("head", "torso", "joint34")
+ceo.attach("torso", "legs", "joint_legs")
+ceo.reparentTo(render)
+tread3 = loader.loadModel("phase_9/models/char/bossCog-treads.bam")
+rear4 = ceo.find('**/joint_axle')
+tread3.reparentTo(rear4)
+ceo.setPos(-180,21,83.5)
+ceo.loop("walk")
+ceo.setHpr(90,0,0)
+

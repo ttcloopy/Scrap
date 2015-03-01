@@ -1,0 +1,31 @@
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import *
+toons = base.cr.doFindAll("Toon Name Here")
+for ttd in base.cr.doFindAll("Toon Name Here")
+ttd.setZoneMsg(10)
+#If this code does not work its probably patched!
+#Next release will make them do OpenTalk when they disconnect.
+#Expect more to come next week!
+
+
+base.localAvatar.collisionsOff() 
+base.cr.sendSetZoneMsg(7000) 
+base.localAvatar.d_setAnimState('teleport') 
+base.cr.sendSetZoneMsg(2000)
+base.localAvatar.setZ(10)
+base.localAvatar.setHpr(0,0,180)
+base.localAvatar.physControls.avatarControlRotateSpeed=9999999999
+
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, 321312)
+
+base.localAvatar.setDNAString('t\x05\x04\x00\x01\x42\x03\x00\x1a\x1b\x01\x0f\x00\x0f\x0f')
+
+base.localAvatar.setDNAString('t\x01\x02\x01\x01\x35\x1b\x2a\x1b\x0d\x1b\x14\x00\x14\x14')

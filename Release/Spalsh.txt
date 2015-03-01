@@ -1,0 +1,2 @@
+toon = base.cr.doFindAll("Tagger")
+base.localAvatar.d_playSplashEffect(toon[0].getX(), toon[0].getY(), toon[0].getZ())

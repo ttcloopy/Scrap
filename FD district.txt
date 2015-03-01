@@ -1,0 +1,18 @@
+base.cr.activeDistrictMap[750000000].setName('Kookyboobs')
+base.cr.activeDistrictMap[414000000].setName('Nutty Dicks')
+for shardID in base.cr.activeDistrictMap:
+    base.cr.activeDistrictMap[shardID].setAvailable(0)
+    base.cr.activeDistrictMap[shardID].setAvailable(1)
+
+from toontown.distributed import ToontownDistrict
+FDNation = ToontownDistrict.ToontownDistrict(base.cr)
+FDNation.doId = 49990000
+FDNation.parentId = 4999
+FDNation.setName('FD Nation')
+
+from toontown.distributed import ToontownDistrict
+FDNation = ToontownDistrict.ToontownDistrict(base.cr)
+FDNation.setName('FD Nation')
+FDNation.doId = 49990000
+FDNation.parentId = 4999
+FDNation.setAvailable(1)

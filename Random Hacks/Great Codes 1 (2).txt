@@ -1,0 +1,2747 @@
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+
+base.localAvatar.putOnSuit('hh')
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.cr.isPaid
+base.cr.isParentPasswordSet
+toontown.toon.LocalToon.LocalToon.getGameAccess
+import toontown
+def enter(): return 1
+base.cr.isTestServer = enter
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setTrackBonusLevel([7,7,7,7,7,7,7])
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+base.localAvatar.setEmoteAccess([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,0,0,0,0,21,22,23,24,25])
+base.cr.sendSetZoneMsg(7000)
+base.cr.sendSetZoneMsg(2520)
+base.localAvatar.b_setAnimState('Sad')
+base.localAvatar.b_setAnimState('Sit')
+base.localAvatar.b_setAnimState('swim')	
+base.localAvatar.b_setAnimState('Died')
+base.localAvatar.b_setAnimState('ScientistPlay')
+base.localAvatar.b_setAnimState('Catching')
+base.localAvatar.collisionsOff()
+base.localAvatar.collisionsOn()
+base.localAvatar.setHpr(0,0,315)
+base.localAvatar.setTickets(100000)
+base.localAvatar.b_setAnimState('Flattened')
+base.localAvatar.b_setAnimState('Squish')
+base.localAvatar.b_setAnimState('walk')
+base.localAvatar.b_setAnimState('run')
+base.localAvatar.b_setAnimState('GolfPuttLoop')
+base.localAvatar.b_setAnimState('GolfGoodPutt')
+base.localAvatar.b_setAnimState('GolfBadPutt')
+base.localAvatar.b_setAnimState('GolfRotateLeft')
+base.localAvatar.b_setAnimState('GolfRotateRight')
+base.localAvatar.b_setAnimState('Push')
+base.localAvatar.b_setAnimState('ScientistEmcee')
+base.localAvatar.setGhostMode(1)
+base.localAvatar.setGhostMode(0)
+base.localAvatar.setCogIndex(0)
+base.wireframeOn()
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1
+base.localAvatar.teleportCheat = 1
+base.localAvatar.physControls.avatarControlJumpForce = 100
+base.localAvatar.numPies = 99
+base.localAvatar.b_setAnimState('CatchEating')
+base.localAvatar.physControls.avatarControlForwardSpeed = 50
+base.localAvatar.setHp(137)
+base.localAvatar.setMaxHp(137)
+base.localAvatar.setName('Green Duck')
+base.localAvatar.b_setAnimState('dive')
+base.localAvatar.b_setAnimState('ScientistLessWork')
+base.localAvatar.b_setAnimState('ScientistWork')
+base.localAvatar.b_setAnimState('ScientistJealous')
+base.localAvatar.b_setAnimState('FallDown')
+base.localAvatar.b_setAnimState('OpenBook')
+base.localAvatar.b_setAnimState('ReadBook')
+base.localAvatar.setMoney(250)
+base.localAvatar.setMaxMoney(999999)
+base.localAvatar.takeDamage(137)
+base.localAvatar.setExperience('73500')
+base.localAvatar.loop('neutral')
+base.localAvatar.loop('angry')
+base.localAvatar.loop('book')
+base.localAvatar.loop('conked')
+base.localAvatar.loop('cringe')
+base.localAvatar.loop('duck')
+base.localAvatar.loop('jump')
+base.localAvatar.loop('throw')
+base.localAvatar.loop('running-jump')
+base.localAvatar.loop('shrug')
+base.localAvatar.loop('sidestep-left')
+base.localAvatar.loop('sidestep-right')
+base.localAvatar.loop('teleport')
+base.localAvatar.loop('walk')
+base.localAvatar.loop('wave')
+base.localAvatar.loop('applause')
+base.localAvatar.loop('bored')
+base.localAvatar.loop('bow')
+base.localAvatar.loop('cast')
+base.localAvatar.loop('castlong')
+base.localAvatar.loop('reel')
+base.localAvatar.loop('confused')
+base.localAvatar.loop('down')
+base.localAvatar.loop('up')
+base.localAvatar.loop('left')
+base.localAvatar.loop('right')
+base.localAvatar.loop('pole')
+base.localAvatar.loop('sad-neutral')
+base.localAvatar.loop('sit')
+base.localAvatar.loop('slip-backward')
+base.localAvatar.loop('slip-forward')
+base.localAvatar.loop('swim')
+base.localAvatar.loop('swing')
+base.localAvatar.loop('think')
+base.localAvatar.loop('tug-o-war')
+base.localAvatar.loop('climb')
+base.localAvatar.loop('firehose')
+base.localAvatar.loop('happy-dance')
+base.localAvatar.loop('hold-bottle')
+base.localAvatar.loop('hold-magnet')
+base.localAvatar.loop('hypnotize')
+base.localAvatar.loop('juggle')
+base.localAvatar.loop('lose')
+base.localAvatar.loop('melt')
+base.localAvatar.loop('smooch')
+base.localAvatar.loop('spit')
+base.localAvatar.loop('sprinkle-dust')
+base.localAvatar.loop('struggle')
+base.localAvatar.loop('tickle')
+base.localAvatar.loop('toss')
+base.localAvatar.loop('water-gun')
+base.localAvatar.loop('callPet')
+base.localAvatar.loop('feedPet')
+base.localAvatar.loop('takePhone')
+base.localAvatar.loop('phoneBack')
+base.localAvatar.loop('phoneNeutral')
+base.localAvatar.loop('sound')
+base.localAvatar.loop('badloop-putt')
+base.localAvatar.loop('bad-putt')
+base.localAvatar.loop('good-putt')
+base.localAvatar.loop('headdown-putt')
+base.localAvatar.loop('into-putt')
+base.localAvatar.loop('lookloop-putt')
+base.localAvatar.loop('look-putt')
+base.localAvatar.loop('loop-putt')
+base.localAvatar.loop('rotateL-putt')
+base.localAvatar.loop('rotateR-putt')
+base.localAvatar.loop('swing-putt')
+base.localAvatar.loop('push')
+base.localAvatar.loop('leverNeutral')
+base.localAvatar.loop('leverPull')
+base.localAvatar.loop('leverReach')
+base.localAvatar.loop('running-jump-land')
+base.localAvatar.loop('pet-start')
+base.localAvatar.loop('pushbutton')
+base.localAvatar.loop('jump-land')
+base.localAvatar.loop('catch-eatneutral')
+base.localAvatar.loop('battlecast')
+base.localAvatar.loop('catch-run')
+base.localAvatar.loop('pet-loop')
+base.localAvatar.loop('jump-squat')
+base.localAvatar.loop('reel-neutral')
+base.localAvatar.loop('pole-neutral')
+base.localAvatar.loop('bank')
+base.localAvatar.loop('scientistGame')
+base.localAvatar.loop('victory')
+base.localAvatar.loop('fish-end')
+base.localAvatar.loop('scientistWork')
+base.localAvatar.loop('scientistJealous')
+base.localAvatar.loop('catch-intro-throw')
+base.localAvatar.loop('curtsy')
+base.localAvatar.loop('loop-dig')
+base.localAvatar.loop('start-dig')
+base.localAvatar.loop('running-jump-squat')
+base.localAvatar.loop('fish-again')
+base.localAvatar.loop('jump-idle')
+base.localAvatar.loop('sad-walk')
+base.localAvatar.loop('running-jump-idle')
+base.localAvatar.loop('catch-neutral')
+messenger.send('nameTagShowAvId')
+messenger.send('gotoAvatar', [275087539, 'Ozzie', 1])
+base.localAvatar.physControls.avatarControlRotateSpeed=300
+base.localAvatar.b_setSC(50205)
+messenger.send('gardenGame')
+messenger.send('clearOutToonInterior')
+music = loader.loadMusic("phase_13/audio/bgm/party_generic_theme.mid")
+music.play()
+music.setLoop()
+messenger.send('rejectTutorial')
+messenger.send('enterStickerBook')
+messenger.send('openFriendsList')
+messenger.send('kickToPlayground', [1])
+from toontown.shtiker.MapPage import MapPage
+gohome = MapPage()
+gohome.goHome()
+base.oobe()
+base.useTrackBall()
+base.useDrive()
+base.localAvatar.setNametagStyle(11)
+base.localAvatar.setCogMerits([100,60,40,20])
+base.localAvatar.setMaxClothes(5000)
+base.localAvatar.setSleepAutoReply(0)
+base.localAvatar.setMaxNPCFriends(5000)
+base.localAvatar.playSplashEffect(0,0,0)
+base.localAvatar.setMaxFishTank(500)
+base.localAvatar.setMaxFlowerBasket(500)
+base.localAvatar.trickOrTreatTargetMet(100)
+base.localAvatar.winterCarolingTargetMet(100)
+base.localAvatar.hitBoss(1000)
+base.localAvatar.destroyGoon()
+base.localAvatar.setVelocity(0)
+base.localAvatar.setAffection(1))
+base.localAvatar.setPlayfullness(1))
+base.localAvatar.setSCResistance(1)
+base.localAvatar.physControls.avatarControlReverseSpeed = 50
+base.localAvatar.b_setToonWillLandInWater(int32/100)
+base.localAvatar.setInventory('49000')
+base.localAvatar.setMaxCarry('49000')
+base.localAvatar.cogMerits=([40, 80, 120, 200])
+base.localAvatar.promoteShovel(3)
+base.localAvatar.promoteWateringCan(3)
+base.localAvatar.setWateringCanSkill(9999)
+base.localAvatar.setShovelSkill(9999)
+base.localAvatar.pageDown()
+base.localAvatar.pageUp()
+render.clearFog()
+base.localAvatar.setBillboardPointEye()
+base.localAvatar.setBillboardPointWorld()
+base.camLens.setNear(9) 
+base.camLens.setFov(100, 20)
+base.camLens.setFov(150)
+base.camLens.setFar(2000)
+base.localAvatar.printCamPos()
+base.localAvatar.nextCameraPos(0)
+base.localAvatar.clearBillboard()
+base.localAvatar.lookAt(1,1,1)
+base.localAvatar.setTunnelIn(1, 1, 1, 1, 1, 1)
+base.localAvatar.setTunnelOut(1, 1, 1, 1, 1, 1)
+base.localAvatar.setTunnelIn(1, 10, 10, 10, 100, 100)
+base.localAvatar.setTunnelOut(1, 10, 10, 10, 10, 100, 100)
+base.disableAllAudio()
+base.enableAllAudio()
+base.enableMusic(False)
+base.enableSoundEffects(True)
+base.camLens.setNear(9)
+base.localAvatar.setBillboardAxis()
+base.localAvatar.setEmoteState(22,1)
+base.localAvatar.setWhisperSCCustomFrom(NPC's ID, 90)
+base.localAvatar.getName(285869846)
+base.localAvatar.receiveAcceptGetName('Flippy')
+base.localAvatar.addName(285869846, 'Flippy')
+base.localAvatar.receiveAcceptAddName(285869846)
+ambientlight = AmbientLight('lighting')
+ambientlight.setColor(VBase4(.5, .5, .5, 5))
+attachlight = render.attachNewNode(ambientlight)
+render.setLight(attachlight)
+sky = loader.loadModel("phase_8/models/props/DL_sky.bam")
+sky.reparentTo(render)
+sky.setPos(9, -1, 4)
+sky.setHpr(0,0,0)
+sky.setScale(40)
+messenger.send('periodTimerExpired')
+messenger.send('shift-f1')
+messenger.send('shift-f6')
+messenger.send('minigameAbort')
+messenger.send('control')
+messenger.send('control-alt-arrow_down')
+messenger.send('control-alt-arrow_left')
+messenger.send('control-alt-arrow_up')
+messenger.send('control-alt-arrow_right')
+messenger.send('f9')
+messenger.send('panda3d-render-error')
+messenger.send('requestSkipTutorial')
+messenger.send('PandaRestarted')
+messenger.send('PandaPaused')
+messenger.send('arrow_right')
+messenger.send('arrow_up')
+messenger.send('arrow_down')
+messenger.send('arrow_left')
+messenger.send('updateWhilelist')
+messenger.send([base.localAvatar.b_setAnimState('victory', 28)])
+messenger.send('end')
+messenger.send('end-up')
+messenger.send('leavingRace')
+messenger.send('enterNormalChat')
+messenger.send('escape')
+messenger.send('f7')
+messenger.send('f8')
+messenger.send('force-forward')
+messenger.send('force-forward-stop')
+messenger.send('force-turnLeft')
+messenger.send('force-turnLeft-stop')
+messenger.send('force-turnRight')
+messenger.send('force-turnRight-stop')
+messenger.send('jumpHardLand')
+messenger.send('jumpLand')
+messenger.send('jumpStart')
+messenger.send('page_up')
+messenger.send('page_down')
+messenger.send('tab')
+messenger.send('system message aknowledge')
+messenger.send('home')
+messenger.send('home-up')
+messenger.send('enterFlowerSellBox')
+messenger.send('DistributedBlackCatMgr-activate')
+base.localAvatar.setHeight(2)
+base.localAvatar.setRefillThrow()
+base.localAvatar.enterSad()
+base.localAvatar.enterHappy()
+base.localAvatar.enterDied()
+base.localAvatar.enterScientistEmcee()
+base.localAvatar.enterPush()
+base.localAvatar.enterScientistLessWork()
+base.localAvatar.enterFlattened()
+base.localAvatar.enterSwimHold()
+base.localAvatar.exitSad()
+base.localAvatar.exitHappy()
+base.localAvatar.exitDied()
+base.localAvatar.exitScientistEmcee()
+base.localAvatar.exitPush()
+base.localAvatar.exitScientistLessWork()
+base.localAvatar.exitFlattened()
+base.localAvatar.exitSwimHold()
+base.localAvatar.setSpeedChatStyleIndex(1)
+base.localAvatar.thinkPos()
+base.localAvatar.nextCameraPos(0)
+base.talkAssistant.sendWhisperTalk('Hello ' * 50, 285960783)
+base.localAvatar.b_setAnimState('jumpAirborne')
+base.localAvatar.b_setAnimState('jumpLand')
+base.localAvatar.b_setAnimState('jumpSquat')
+base.localAvatar.setBestHeightInfo(2000)
+base.localAvatar.setLastHood(2000)
+base.localAvatar.localAvatar.cogLevels=[49, 49, 49, 49]
+base.localAvatar.setCogSummonsEarned([7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7])
+base.localAvatar.setCogParts([20, 80, 56447, 56411])
+base.localAvatar.swapToonLegs("CatLegs250Polys")
+base.localAvatar.setNametagScale(2)
+base.localAvatar.setWalkSpeedSlow()
+base.localAvatar.setWalkSpeedNormal()
+base.localAvatar.setRenderModeWireframe()
+anim1 = base.localAvatar.getAnimControl('swing', 'legs')
+anim1.play()
+base.localAvatar.physControls.avatarControlJumpForce = .1
+base.localAvatar.physControls.setGravity(.00001)
+base.cr.waitForDatabaseTimeout()
+base.cr.networkPlugPulled()
+base.cr.pullNetworkPlug()
+base.cr.restoreNetworkPlug()
+base.cr.toons.flush()
+messenger.send('last')
+messenger.send('next')
+messenger.send('releaseDirector')
+messenger.send('closetAsleep')
+messenger.send([base.cr.sendSetZoneMsg(7000)], [base.localAvatar.doId, 272503222, 'starkit', 1])
+messenger.send('gotoAvatar', [base.localAvatar.doId, 'you', 1])
+messenger.send('avatarDetails', [base.localAvatar.doId, 'Mickey', 1])
+messenger.send('friendAvatar', [284720681, 'Fireball', 1])
+base.localAvatar.setFishingTrophies([0,1,2,3,4,5,6])
+from direct.showbase import DirectObject
+class Collision(DirectObject.DirectObject):
+def __init__(self):
+self.accept('f1',self.Collision)
+def Collision(self):
+base.localAvatar.collisionsOff()
+base.localAvatar.setSystemMessage(0, 'Collisions Off')
+c = Collision()
+gloves = loader.loadTexture("phase_5.5/maps/windowView_Stars2.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+gloves = loader.loadTexture("phase_5.5/maps/flakes_border.jpg")
+base.localAvatar.findAllMatches('**/hands').setTexture(gloves, 1)
+base.localAvatar.setFriendsList([(236031563, 1)])
+base.localAvatar.showShovelButton()
+base.localAvatar.showNormalMuzzle()
+base.localAvatar.showAngryMuzzle()
+base.localAvatar.showSmileMuzzle()
+base.localAvatar.showSadMuzzle()
+base.localAvatar.showLaughMuzzle()
+base.localAvatar.showSurpriseMuzzle()
+base.localAvatar.showTightBounds()
+base.localAvatar.showWateringCanButton()
+base.localAvatar.showCS()
+base.localAvatar.showGardeningGui()
+base.localAvatar.showFurnitureGui()
+base.localAvatar.showAllBounds()
+base.localAvatar.showNametag2d()
+base.localAvatar.showNametag3d()
+base.localAvatar.showShadow()
+base.localAvatar.showAllDescendants()
+base.localAvatar.hideShovelButton()
+base.localAvatar.hideNormalMuzzle()
+base.localAvatar.hideAngryMuzzle()
+base.localAvatar.hideSmileMuzzle()
+base.localAvatar.hideSadMuzzle()
+base.localAvatar.hideLaughMuzzle()
+base.localAvatar.hideSurpriseMuzzle()
+base.localAvatar.hideBounds()
+base.localAvatar.hideWateringCanButton()
+base.localAvatar.hideCS()
+base.localAvatar.hideGardeningGui()
+base.localAvatar.hideFurnitureGui()
+base.localAvatar.hideAllBounds()
+base.localAvatar.hideNametag2d()
+base.localAvatar.hideNametag3d()
+base.localAvatar.clearRenderMode()
+base.localAvatar.hideShadow()
+base.localAvatar.startStareAtHeadPoint(1)
+base.localAvatar.forceGotoSleep()
+base.localAvatar.flush()
+base.localAvatar.enterEyelidsClosed()
+base.localAvatar.exitEyelidsClosed()
+base.localAvatar.enterEyelidsSurprised()
+base.localAvatar.exitEyelidsSurprised()
+base.localAvatar.enterEyelidsSad()
+base.localAvatar.exitEyelidsSad()
+base.localAvatar.newCatalogNotify(1)
+base.localAvatar.setControlEffect('sit', 0.65)
+base.localAvatar.setControlEffect('swim', 0.8)
+messenger.send('avatarDetails', [280215860, 'Toon Troop Travis', 1])
+messenger.send('friendAvatar', [base.localAvatar.doId, '', 1])
+messenger.send('gotoAvatar', [base.localAvatar.doId, '', 1])
+base.toggleTexMem()
+base.toggleWireframe()
+base.toggleStereo()
+base.toggleShowVertices()
+base.toggleBackface()
+base.textureOff()
+base.textureOn()
+base.toggleTexture()
+messenger.send('InputState-forward', [100])
+messenger.send('enterFurnitureManager', [1, 1])
+messenger.send('friendOnline', [286313331])
+messenger.send('friendOffline', [286313331])
+messenger.send('grab-0')
+messenger.send('reach-boat')
+messenger.send('hitby-crabby0')
+messenger.send('FishHit')
+messenger.send('hoodDone')
+base.cr.lostConnection()
+base.cr.congrulations('Congrulations by finding out this code!')
+base.cr.enterAfkTimeout()
+base.cr.exitAfkTimeout()
+base.cr.enterChooseAvatar([2865317387])
+base.cr.goToPickAName(286531738, 1)
+base.cr.sendDisconnect()
+base.cr.allowFreeNames()
+base.localAvatar.enableBlend()
+base.localAvatar.disableBlend()
+base.localAvatar.setMinigameZone(1)
+base.localAvatar.b_teleportGreeting(282745517)
+Michael Boomer
+0711-8756-7426-2713
+
+#real membership
+
+base.launcher.setPaidUserLoggedIn()
+
+#fast access
+
+import toontown
+def new():
+    return True
+def new2(*a,**k):
+    return 2
+base.cr.isPaid = new
+base.cr.isParentPasswordSet = new
+toontown.toon.LocalToon.LocalToon.getGameAccess = new2
+base.cr.isPaid
+base.cr.isParentPasswordSet
+toontown.toon.LocalToon.LocalToon.getGameAccess
+from direct.interval.IntervalGlobal import *
+def whiteGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1.0,1.0,1.0)
+    base.localAvatar.setSystemMessage(1,'White gloves enabled!')
+def blackGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.20,0.20,0.3)
+    base.localAvatar.setSystemMessage(1,'Black gloves enabled!')
+def redGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+    base.localAvatar.setSystemMessage(1,'Red gloves enabled!')
+    base.accept("1", None)
+def pinkGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+    base.localAvatar.setSystemMessage(1,'Pink gloves enabled!')
+def purpleGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+    base.localAvatar.setSystemMessage(1,'Purple gloves enabled!')
+def greenGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+    base.localAvatar.setSystemMessage(1,'Green gloves enabled!')
+def yellowGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+    base.localAvatar.setSystemMessage(1,'Yellow gloves enabled!')
+def darkblueGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+    base.localAvatar.setSystemMessage(1,'Dark blue gloves enabled!')
+def blueGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+    base.localAvatar.setSystemMessage(1,'Blue gloves enabled!')
+def orangeGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+    base.localAvatar.setSystemMessage(1,'Orange gloves enabled!')
+def creamGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+    base.localAvatar.setSystemMessage(1,'Cream gloves enabled!')
+def perwinkleGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+    base.localAvatar.setSystemMessage(1,'Perwinkle gloves enabled!')
+def grayGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.70,0.70,0.70)
+    base.localAvatar.setSystemMessage(1,'Gray gloves enabled!')
+def rotationSideways():
+    base.localAvatar.setHpr(0,0,315)
+    base.localAvatar.setSystemMessage(1,'Toon rotated to sideways style.')
+    base.accept("f2", rotationNormal, [])
+def rotationNormal():
+    base.localAvatar.setHpr(0,0,0)
+    base.localAvatar.setSystemMessage(1,'Toon rotated to normal.')
+    base.accept("f2", rotationSideways, [])
+def autoRunOn():
+    messenger.send('force-forward')
+    base.accept("insert", autoRunOff, [])
+def autoRunOff():
+    messenger.send('force-forward-stop')
+    base.accept("insert", autoRunOn, [])
+def nosleep():
+    messenger.send('wakeup')
+def ens():
+  wake = Sequence()
+  wake.append(Func(nosleep))
+  wake.append(Wait(.1))
+  wake.append(Func(ens))
+  wake.start()
+ens()
+def walkOverNormal():
+    base.localAvatar.collisionsOff()
+    base.localAvatar.setSystemMessage(1,'Walk over walls enabled.')
+    base.accept("f1", walkOverWalls, [])
+def walkOverWalls():
+    base.localAvatar.collisionsOn()
+    base.localAvatar.setSystemMessage(1,'Walk over walls disabled.')
+    base.accept("f1", walkOverNormal, [])
+def fastToon():
+    base.localAvatar.physControls.avatarControlReverseSpeed =50
+    base.localAvatar.physControls.avatarControlRotateSpeed =80
+    base.localAvatar.physControls.avatarControlJumpForce = 35
+    base.localAvatar.physControls.setGravity(65)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 60
+    base.localAvatar.setSystemMessage(1,'Fast toon and april fools gravity enabled.')
+    base.accept("f4", slowToon, [])
+def slowToon():
+    base.localAvatar.physControls.avatarControlReverseSpeed =10
+    base.localAvatar.physControls.avatarControlRotateSpeed =80
+    base.localAvatar.physControls.avatarControlJumpForce = 20
+    base.localAvatar.physControls.setGravity(50)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 17
+    base.localAvatar.setSystemMessage(1,'Fast toon and april fools gravity disabled.')
+    base.accept("f4", fastToon, [])
+def globeArt():
+     base.localAvatar.setSCResistance(1)
+     base.localAvatar.setSCResistance(1)
+     base.localAvatar.setSCResistance(1)
+def forceLoop(str):
+    ren = base.cr.doFindAll("render")
+    for ren in ren:ren.loop(str)
+def forcePlay(str):
+    ren = base.cr.doFindAll("render")
+    for ren in ren:ren.play(str)
+def emote(n):
+    base.localAvatar.b_setEmoteState(n,1)
+def message(m):
+    base.localAvatar.setSystemMessage(1,m)
+def sleepResponse(str):
+    sleepex=0
+    sleeptoon = base.cr.doFindAll(str)
+    for sleeptoon in base.cr.doFindAll(str):sleepex = 1
+    if sleepex is 1:
+        for sleeptoon in base.cr.doFindAll(str):
+            sleepid = sleeptoon.doId
+            base.localAvatar.setSleepAutoReply(sleepid)
+    else:
+        base.localAvatar.setSystemMessage(1,'The toon you chose doesnt exist.')
+base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 8000, 9000, 10000, 11000, 12000, 13000])
+base.localAvatar.book.pages[1].showPop = 1
+base.localAvatar.teleportCheat = 1
+base.localAvatar.physControls.avatarControlJumpForce = 50
+base.localAvatar.physControls.avatarControlForwardSpeed = 50
+base.localAvatar.physControls.avatarControlRotateSpeed = 50
+base.localAvatar.physControls.avatarControlReverseSpeed = 50
+base.localAvatar.setTrackAccess([1,1,1,1,1,1,1])
+base.localAvatar.setPetTrickPhrases([0,1,2,3,4,5,6])
+base.localAvatar.setEmoteAccess([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,0,0,0,0,21,22,23,24,25])
+base.localAvatar.setMaxClothes(5000)
+base.localAvatar.setCogMerits([100,60,40,20])
+base.localAvatar.setMaxNPCFriends(5000)
+base.localAvatar.setSystemMessage(1,'Everything allowed and Ban Blocker enabled.')
+base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+base.localAvatar.setSystemMessage(1,'Red Gloves put at hands.')
+base.accept("f1", walkOverWalls, [])
+base.accept("f2", rotationSideways, [])
+base.accept("f3", messenger.send, ['nameTagShowAvId'])
+base.accept("f4", fastToon, [])
+base.accept("f5", globeArt, [])
+base.accept("f12", base.localAvatar.b_setSC, [50205])
+base.accept("f11", base.localAvatar.b_setSC, [50202])
+base.accept("f10", base.localAvatar.b_setSC, [50704])
+base.accept("`", whiteGloves, [])
+base.accept("0", blackGloves, [])
+base.accept("1", redGloves, [])
+base.accept("2", pinkGloves, [])
+base.accept("3", purpleGloves, [])
+base.accept("4", greenGloves, [])
+base.accept("5", yellowGloves, [])
+base.accept("6", darkblueGloves, [])
+base.accept("7", blueGloves, [])
+base.accept("8", orangeGloves, [])
+base.accept("9", creamGloves, [])
+base.accept("f6", perwinkleGloves, [])
+base.accept("f7", grayGloves, [])
+base.accept("insert", autoRunOn, [])
+base.accept("shift", base.localAvatar.thinkPos, [])
+base.localAvatar.setSystemMessage(1,'Hotkeys enabled.')
+base.localAvatar.setNametagStyle(11)
+base.localAvatar.setSystemMessage(1,'Nametag font changed.')
+anim = base.localAvatar.b_setAnimState
+talk = base.talkAssistant.sendOpenTalk
+loop = base.localAvatar.loop
+coff = base.localAvatar.collisionsOff
+con = base.localAvatar.collisionsOn
+zone = base.cr.sendSetZoneMsg
+emote = base.localAvatar.b_setEmoteState
+server = messenger.send
+avatar = base.localAvatar
+local = base.cr
+cog = base.localAvatar.setCogIndex
+coords = base.localAvatar.setXYZH
+height = base.localAvatar.setZ
+findhands = base.localAvatar.findAllMatches('**/hands')
+findneck = base.localAvatar.findAllMatches('**/neck')
+findhead = base.localAvatar.findAllMatches('**/head')
+findhfront = base.localAvatar.findAllMatches('**/head-front')
+findshirt = base.localAvatar.findAllMatches('**/torso-top')
+findsleeves = base.localAvatar.findAllMatches('**/sleeves')
+findshort = base.localAvatar.findAllMatches('**/torso-bot')
+findskirt = base.localAvatar.findAllMatches('**/torso-bot')
+findfeet = base.localAvatar.findAllMatches('**/feet')
+findlegs = base.localAvatar.findAllMatches('**/legs')
+findarms = base.localAvatar.findAllMatches('**/arms')
+findnose = base.localAvatar.findAllMatches('**/nose')
+findface = base.localAvatar.findAllMatches('**/muzzle')
+name = base.localAvatar.setName
+find = base.localAvatar.findAllMatches
+sc = base.localAvatar.b_setSC
+scs = base.localAvatar.b_setSCCustom
+base.localAvatar.setSystemMessage(1,'Shorten codes enabled.')
+
+#scarecrow
+
+base.localAvatar.collisionsOff()
+base.cr.sendSetZoneMsg(7000)
+base.localAvatar.b_setAnimState('teleport')
+base.cr.sendSetZoneMsg(2000)
+
+#lol
+
+booktext = OnscreenText(text = 'lool', pos = (-0.010, 0.9),
+scale = 0.07,fg=(0,0,0,1),align=TextNode.ACenter,mayChange=1)
+bookframe = DirectFrame(frameColor=(1, 1, 1, 1),
+frameSize=(-1, 1, -0.3, 1),
+pos=(-0.010, 0.013, 0.5))
+bookframe.hide()
+booktext.hide()
+def openDis2():
+    base.localAvatar.b_setAnimState('ReadBook')
+    base.localAvatar.physControls.disableAvatarControls()
+    booktext.show()
+    bookframe.show()
+    booktext.setText('THE MAGICAL BOOK\n\n\nHello, this is a test book.')
+bookbt1 = DirectButton(text = ("NEWS", "news", "news", "NEWS"), scale=0.07, pos = (-1.24, 0.710, 0.710), command=openDis2)
+
+#zone IDs
+base.cr.sendSetZoneMsg(1000)# - donald's dock
+base.cr.sendSetZoneMsg(2000)# - toontown central
+base.cr.sendSetZoneMsg(3000)# - the brrrgh
+base.cr.sendSetZoneMsg(4000)# - minnie's melodyland
+base.cr.sendSetZoneMsg(5000)# - daisy's gardens
+base.cr.sendSetZoneMsg(6000)# - chip 'n dale
+base.cr.sendSetZoneMsg(7000)# - funny farm
+base.cr.sendSetZoneMsg(8000)# - goofy speedway
+base.cr.sendSetZoneMsg(9000)# - donald's dreamland
+base.cr.sendSetZoneMsg(10000)# - bossbot hq
+base.cr.sendSetZoneMsg(11000)# - sellbot hq
+base.cr.sendSetZoneMsg(12000)# - cashbot hq
+base.cr.sendSetZoneMsg(13000)# - lawbot hq
+base.cr.sendSetZoneMsg(11100)# - sellbot lobby
+base.cr.sendSetZoneMsg(12100)# - cashbot lobby
+base.cr.sendSetZoneMsg(13100)# - lawbot lobby
+base.cr.sendSetZoneMsg(10100)# - bossbot clubhouse
+base.cr.sendSetZoneMsg(11200)# - sellbot factory
+base.cr.sendSetZoneMsg(9504)# - donalds dreamland gag shop
+base.cr.sendSetZoneMsg(2521)# - toontown central clothes shop
+base.cr.sendSetZoneMsg(2522)# - toontown central pet shop
+base.cr.sendSetZoneMsg(1508)# - donald's dock clothes shop
+base.cr.sendSetZoneMsg(1506)# - donald's dock gag shop
+base.cr.sendSetZoneMsg(2519)# - toontown central gag shop
+base.cr.sendSetZoneMsg(2514)# - toontown bank
+base.cr.sendSetZoneMsg(1507)# - donald dock toon hq
+base.cr.sendSetZoneMsg(3607)# - lil oldman
+base.cr.sendSetZoneMsg(3621)# - sticky george
+base.cr.sendSetZoneMsg(3621)# - hysterical harry
+base.cr.sendSetZoneMsg(3627)# - snooty sinjin
+base.cr.sendSetZoneMsg(3629)# - chicken boy
+base.cr.sendSetZoneMsg(3636)# - gus gooseburger
+base.cr.sendSetZoneMsg(3638)# - toboggan ted
+base.cr.sendSetZoneMsg(3643)# - lounge lassard
+base.cr.sendSetZoneMsg(3653)# - creepy carl
+base.cr.sendSetZoneMsg(3721)# - bumpy noggin
+base.cr.sendSetZoneMsg(3722)# - vidalia vavoom
+base.cr.sendSetZoneMsg(3728)# - simian sam
+base.cr.sendSetZoneMsg(3730)# - wynne chill
+base.cr.sendSetZoneMsg(3732)# - grumpy phil
+base.cr.sendSetZoneMsg(3808)# - johnny cashmere
+base.cr.sendSetZoneMsg(3813)# - march harry
+base.cr.sendSetZoneMsg(2513)# - flippy
+base.cr.sendSetZoneMsg(2518)# - librarian larry
+base.cr.sendSetZoneMsg(2516)# - professor pete
+base.cr.sendSetZoneMsg(2656)# - loony louis
+base.cr.sendSetZoneMsg(2629)# - honey haha
+base.cr.sendSetZoneMsg(2708)# - sticky lou
+base.cr.sendSetZoneMsg(2729)# - professor wiggle
+base.cr.sendSetZoneMsg(2729)# - sharky jones
+base.cr.sendSetZoneMsg(2655)# - woody nickel
+base.cr.sendSetZoneMsg(2660)# - feather duster
+base.cr.sendSetZoneMsg(2610)# - dr. tom
+base.cr.sendSetZoneMsg(2711)# - postmaster pete
+base.cr.sendSetZoneMsg(2705)# - will wiseacre
+base.cr.sendSetZoneMsg(2712)# - charlie chortle
+base.cr.sendSetZoneMsg(2804)# - dr. pulyurleg
+base.cr.sendSetZoneMsg(2520)# - toon hq
+base.cr.sendSetZoneMsg(1612)# - captain carl
+base.cr.sendSetZoneMsg(1606)# - admiral hook
+base.cr.sendSetZoneMsg(1617)# - doctor squall
+base.cr.sendSetZoneMsg(1627)# - billy budd
+base.cr.sendSetZoneMsg(1710)# - barnacle barbara
+base.cr.sendSetZoneMsg(1712)# - rocky shores
+base.cr.sendSetZoneMsg(1713)# - art
+base.cr.sendSetZoneMsg(1725)# - ahab
+base.cr.sendSetZoneMsg(1604)# - mrs. starch
+base.cr.sendSetZoneMsg(1621)# - cal estenicks
+base.cr.sendSetZoneMsg(1826)# - claggart
+base.cr.sendSetZoneMsg(1828)# - alice
+base.cr.sendSetZoneMsg(1832)# - melville
+base.cr.sendSetZoneMsg(4612)# - dr. fret
+base.cr.sendSetZoneMsg(4626)# - cleff
+#stopped at base.cr.sendSetZoneMsg(3826)
+
+#colored gloves
+base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)# - red
+base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)# - pink
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.44,1)# - pinkish
+base.localAvatar.findAllMatches('**/hands').setColor(0.86,0.4,0.42)# - pink 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)# - purple
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,0,1)# - neon purple
+base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)# - green
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,1,0)# - neon green 1
+base.localAvatar.findAllMatches('**/hands').setColor(0.0,1.0,0.0)# - neon green 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.2,0.3,0.11)# - rusty green
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.82,0.32)# - lime green
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)# - yellow
+base.localAvatar.findAllMatches('**/hands').setColor(0.28,0.33,0.73)# - dark blue
+base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)# - blue
+base.localAvatar.findAllMatches('**/hands').setColor(0.44,1,1)# - blue 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.43,0.9,0.84)# - blue 3
+base.localAvatar.findAllMatches('**/hands').setColor(0,0.44,1)# - weird blue
+base.localAvatar.findAllMatches('**/hands').setColor(0,0.44,0.44)# - rusty aqua
+base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)# - orange
+base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)# - cream
+base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)# - perwinkle
+base.localAvatar.findAllMatches('**/hands').setColor(0.70,0.70,0.70)# - gray
+base.localAvatar.findAllMatches('**/hands').setColor(1.0,1.0,1.0)# - white
+base.localAvatar.findAllMatches('**/hands').setColor(0.20,0.20,0.3)# - black
+base.localAvatar.findAllMatches('**/hands').setColor(0,0,0.4)# - ink
+base.localAvatar.findAllMatches('**/hands').setColor(0.38,0.72,0.72)# - aqua
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,1,0.85)# - aqua 2
+base.localAvatar.findAllMatches('**/hands').setColor(0.62,0.26,0.36)# - red, pinkish
+base.localAvatar.findAllMatches('**/hands').setColor(0.35,0,0.1)# - rusty red, pinkish
+base.localAvatar.findAllMatches('**/hands').setColor(0.64,0.35,0.27)# - brown
+base.localAvatar.findAllMatches('**/hands').setColor(0.72,1,0.36)# - olive
+base.localAvatar.findAllMatches('**/hands').setColor(0.57,0.45,0.16)# - swamp
+base.localAvatar.findAllMatches('**/hands').setColor(0.111,0.5,0.2224)# - money green
+base.localAvatar.findAllMatches('**/hands').setColor(0.345,0.545,0.4545)# - army green
+base.localAvatar.findAllMatches('**/hands').setColor(0.555,0.429,0.2224)# - bronze gold
+base.localAvatar.findAllMatches('**/hands').setColor(1.111,0.963,0.5694)# - cream yellow
+
+
+#ta
+sgcs = base.cr.doFindAll("render/Short Greencat Short")
+for sgcs in sgcs:
+            sgcs.findAllMatches('**/hands').setColor(0.992, 0.48, 0.168, 1)
+mm = base.cr.doFindAll("render/Magic Maker")
+for mm in mm:
+            mm.findAllMatches('**/hands').setColor(1,0.95,0.3, 1)
+fd = base.cr.doFindAll("render/Fd Green Cat Fd")
+for fd in fd:
+            fd.findAllMatches('**/hands').setColor(0.97,0.3,0.3, 1)
+d = base.cr.doFindAll("render/Disyer")
+for d in d:
+            d.findAllMatches('**/hands').setColor(0.64,0.35,0.27)
+cb = base.cr.doFindAll("render/Captain Butch")
+for cb in cb:
+            cb.findAllMatches('**/hands').setColor(0.1,0.9,0.99)
+i = base.cr.doFindAll("render/Incorrent")
+for i in i:            
+            i.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+import math 
+from math import pi, sin, cos 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import Point3 
+from pandac.PandaModules import * 
+getEmblemSource = loader.loadModel("phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle.bam")
+getEmblemSource.reparentTo(render)
+getEmblemSource.hide()
+emblem = getEmblemSource.find('**/whistleIcon')
+emblem.reparentTo(fd)
+emblem.show()
+emblem.setScale(3)
+emblem.setZ(1.5)
+emblemSpin = emblem.hprInterval(3, Vec3(360, 0, 0))
+emblemSpin.loop()
+
+#talk
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(0,0)
+    base.localAvatar.b_setSC(50701)
+def part2():
+    base.talkAssistant.sendOpenTalk('LOOK I CAN DO IT TOO')
+    base.localAvatar.b_setEmoteState(23,1)
+def part3():
+    base.talkAssistant.sendOpenTalk('I AM NOT A ANTIS MEMBER DONT GIVE THE ANTIS CREDIT!')
+    base.localAvatar.b_setEmoteState(22,1)
+def part4():
+    base.talkAssistant.sendOpenTalk('THE ANTIS FAIL THEY CANT DO ANYTHING DONT BE SCARED THEY CANT HOCK')
+    base.localAvatar.b_setEmoteState(24,1)
+def part5():
+    base.talkAssistant.sendOpenTalk('YOUR FRIENDS, WE ARE FRIENDLY. OH AND...')
+def part6():
+    base.talkAssistant.sendOpenTalk('WE ARE TEAM DIS YER')
+    base.localAvatar.b_setEmoteState(22,1)
+def part7():
+    base.localAvatar.b_setSC(50202)
+    base.localAvatar.b_setEmoteState(0,0)
+def addzone():
+    zond = base.localAvatar.getZoneId()
+    zond += 10
+    base.localAvatar.b_setLocation(base.localAvatar.defaultShard, zond)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(5))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(1))
+  seq.append(Func(part3))
+  seq.append(Wait(5))
+  seq.append(Func(part4))
+  seq.append(Wait(5))
+  seq.append(Func(part5))
+  seq.append(Wait(5))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.append(Wait(4))
+  seq.append(Func(addzone))
+  seq.start()
+onTime()
+
+#invisible
+
+word = base.localAvatar.getZoneId()
+word += 10
+base.localAvatar.b_setLocation(base.localAvatar.defaultShard, word)
+
+#hotkeys
+
+def whiteGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1.0,1.0,1.0)
+    base.localAvatar.setSystemMessage(1,'White gloves enabled!')
+def blackGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.20,0.20,0.3)
+    base.localAvatar.setSystemMessage(1,'Black gloves enabled!')
+def redGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+    base.localAvatar.setSystemMessage(1,'Red gloves enabled!')
+    base.accept("1", None)
+def pinkGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+    base.localAvatar.setSystemMessage(1,'Pink gloves enabled!')
+def purpleGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+    base.localAvatar.setSystemMessage(1,'Purple gloves enabled!')
+def greenGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+    base.localAvatar.setSystemMessage(1,'Green gloves enabled!')
+def yellowGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+    base.localAvatar.setSystemMessage(1,'Yellow gloves enabled!')
+def darkblueGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+    base.localAvatar.setSystemMessage(1,'Dark blue gloves enabled!')
+def blueGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+    base.localAvatar.setSystemMessage(1,'Blue gloves enabled!')
+def orangeGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+    base.localAvatar.setSystemMessage(1,'Orange gloves enabled!')
+def creamGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+    base.localAvatar.setSystemMessage(1,'Cream gloves enabled!')
+def perwinkleGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+    base.localAvatar.setSystemMessage(1,'Perwinkle gloves enabled!')
+def grayGloves():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.70,0.70,0.70)
+    base.localAvatar.setSystemMessage(1,'Gray gloves enabled!')
+def rotationSideways():
+    base.localAvatar.setHpr(0,0,315)
+    base.localAvatar.setSystemMessage(1,'Toon rotated to sideways style.')
+    base.accept("f2", rotationNormal, [])
+def rotationNormal():
+    base.localAvatar.setHpr(0,0,0)
+    base.localAvatar.setSystemMessage(1,'Toon rotated to normal.')
+    base.accept("f2", rotationSideways, [])
+def autoRunOn():
+    messenger.send('force-forward')
+    base.accept("insert", autoRunOff, [])
+def autoRunOff():
+    messenger.send('force-forward-stop')
+    base.accept("insert", autoRunOn, [])
+def walkOverNormal():
+    base.localAvatar.collisionsOff()
+    base.localAvatar.setSystemMessage(1,'Walk over walls enabled.')
+    base.accept("f1", walkOverWalls, [])
+def walkOverWalls():
+    base.localAvatar.collisionsOn()
+    base.localAvatar.setSystemMessage(1,'Walk over walls disabled.')
+    base.accept("f1", walkOverNormal, [])
+def fastToon():
+    base.localAvatar.physControls.avatarControlReverseSpeed =50
+    base.localAvatar.physControls.avatarControlRotateSpeed =80
+    base.localAvatar.physControls.avatarControlJumpForce = 35
+    base.localAvatar.physControls.setGravity(65)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 60
+    base.localAvatar.setSystemMessage(1,'Fast toon and april fools gravity enabled.')
+    base.accept("f4", slowToon, [])
+def slowToon():
+    base.localAvatar.physControls.avatarControlReverseSpeed =10
+    base.localAvatar.physControls.avatarControlRotateSpeed =80
+    base.localAvatar.physControls.avatarControlJumpForce = 20
+    base.localAvatar.physControls.setGravity(50)
+    base.localAvatar.physControls.avatarControlForwardSpeed = 17
+    base.localAvatar.setSystemMessage(1,'Fast toon and april fools gravity disabled.')
+    base.accept("f4", fastToon, [])
+def globeArt():
+     base.localAvatar.setSCResistance(1)
+     base.localAvatar.setSCResistance(1)
+     base.localAvatar.setSCResistance(1)
+base.accept("f1", walkOverWalls, [])
+base.accept("f2", rotationSideways, [])
+base.accept("f3", messenger.send, ['nameTagShowAvId'])
+base.accept("f4", fastToon, [])
+base.accept("f5", globeArt, [])
+base.accept("f12", base.localAvatar.b_setSC, [50205])
+base.accept("f11", base.localAvatar.b_setSC, [50202])
+base.accept("f10", base.localAvatar.b_setSC, [50704])
+base.accept("`", whiteGloves, [])
+base.accept("0", blackGloves, [])
+base.accept("1", redGloves, [])
+base.accept("2", pinkGloves, [])
+base.accept("3", purpleGloves, [])
+base.accept("4", greenGloves, [])
+base.accept("5", yellowGloves, [])
+base.accept("6", darkblueGloves, [])
+base.accept("7", blueGloves, [])
+base.accept("8", orangeGloves, [])
+base.accept("9", creamGloves, [])
+base.accept("f6", perwinkleGloves, [])
+base.accept("f7", grayGloves, [])
+base.accept("insert", autoRunOn, [])
+base.accept("shift", base.localAvatar.thinkPos, [])
+
+#toon effects
+
+base.localAvatar.setCheesyEffect(14, 0, 0)#      --snowman head -
+base.localAvatar.setCheesyEffect(13, 0, 0)#      --white 1-
+base.localAvatar.setCheesyEffect(12, 0, 0)#      --pumpkin head-
+base.localAvatar.setCheesyEffect(11, 0, 0)#      --no head-
+base.localAvatar.setCheesyEffect(10, 0, 0)#      --white 2-
+base.localAvatar.setCheesyEffect(9, 0, 0)#       --invisible-
+base.localAvatar.setCheesyEffect(8, 0, 0)#       --sideways 1-
+base.localAvatar.setCheesyEffect(7, 0, 0)#       --sideways 2-
+base.localAvatar.setCheesyEffect(6, 0, 0)#       --small toon-
+base.localAvatar.setCheesyEffect(5, 0, 0)#       --big toon-
+base.localAvatar.setCheesyEffect(4, 0, 0)#       --small feet-
+base.localAvatar.setCheesyEffect(3, 0, 0)#       --big feet-
+base.localAvatar.setCheesyEffect(1, 0, 0)#       --big head-
+base.localAvatar.setCheesyEffect(2, 0, 0)#       --small head-
+
+#rotate codes
+
+base.localAvatar.setHpr(0,0,315)# sideway 1
+base.localAvatar.setHpr(0,0,0)# normal
+base.localAvatar.setHpr(0,0,180)
+base.localAvatar.collisionsOff()# upside down
+base.localAvatar.setHpr(0,0,80)# sideways 2
+base.localAvatar.setHpr(0,0,360)# straight
+base.localAvatar.setHpr(315,315,315)# - flip
+base.localAvatar.setHpr(0,90,0)# on your back
+base.localAvatar.setHpr(0,270,0)# on your face
+base.localAvatar.setHpr(0,0,30)# sideways 3
+base.localAvatar.setHpr(0,0,10)# sideways 4
+base.localAvatar.setHpr(306,306,801)# sideways 5
+
+#unite codes
+
+base.localAvatar.setSCResistance(1)# toonup
+base.localAvatar.setSCResistance(71)# toonup restock
+base.localAvatar.setSCResistance(36)# trap restock
+base.localAvatar.setSCResistance(553)# lure restock
+base.localAvatar.setSCResistance(1302)# sound restock
+base.localAvatar.setSCResistance(305)# throw restock
+base.localAvatar.setSCResistance(323)# squirt restock
+base.localAvatar.setSCResistance(44)# drop restock
+
+#speedchat codes
+
+base.localAvatar.b_announceBingo()
+base.localAvatar.b_setSC(20030)# I haven't been wrong yet.
+base.localAvatar.b_setSC(20100)# Which face would you like to defeat you?
+base.localAvatar.b_setSC(20200)# I'm gonna tell the boss about you!
+base.localAvatar.b_setSC(20201)# I may be just a Flunky - but I'm real spunky.
+base.localAvatar.b_setSC(20136)# RAID!
+base.localAvatar.b_setSC(20237)# I can bag this.
+base.localAvatar.b_setSC(20229)# Let's get going - time is money.
+base.localAvatar.b_setSC(20220)# I'm watching every move you make.
+base.localAvatar.b_setSC(20219)# I'll take care of you in no time.
+base.localAvatar.b_setSC(20300)# You make my hair curl.
+base.localAvatar.b_setSC(20299)# Don't brush me aside.
+base.localAvatar.b_setSC(20297)# I'm prepared to close this deal quickly.
+base.localAvatar.b_setSC(20296)# Too bad for you -- I make house calls.
+base.localAvatar.b_setSC(20293)# I was planning on running into you.
+base.localAvatar.b_setSC(20291)# You won't be able to get rid of me now.
+base.localAvatar.b_setSC(20287)# Careful, I may leave a mark.
+base.localAvatar.b_setSC(20284)# I hate it when things get dull.
+base.localAvatar.b_setSC(20283)# Let's hurry, I bore easily.
+base.localAvatar.b_setSC(20282)# Let's get right to the point.
+base.localAvatar.b_setSC(20281)# I'll have to make my point more clear.
+base.localAvatar.b_setSC(20071)# In my opinion, your name is MUD.
+base.localAvatar.b_setSC(20279)# I'm No.2!
+base.localAvatar.b_setSC(20278)# Hey, you can't push me around.
+base.localAvatar.b_setSC(20266)# I hope you don't forget your lines.
+base.localAvatar.b_setSC(20091)# This is no laughing matter.
+base.localAvatar.b_setSC(20262)# I'm going to roll your end credits.
+base.localAvatar.b_setSC(20096)# Face it, I'm better than you.
+base.localAvatar.b_setSC(20258)# Today the role of defeated toon, will be played by - YOU!
+base.localAvatar.b_setSC(20256)# Lights, camera, action!
+base.localAvatar.b_setSC(20251)# Well, isn't this cozy?
+base.localAvatar.b_setSC(20122)# Legally, you're too small to fight me.
+base.localAvatar.b_setSC(20150)# I'm going to cream you.
+base.localAvatar.b_setSC(20133)# Let me get your back.
+base.localAvatar.b_setSC(20132)# Whoa, back up there toon.
+base.localAvatar.b_setSC(20127)# Take that back or else.
+base.localAvatar.b_setSC(20350)# I have my own special spin on the subject.
+base.localAvatar.b_setSC(20349)# Care to take a few turns with me?
+base.localAvatar.b_setSC(20346)# The doctor is in, the Toon is out.
+base.localAvatar.b_setSC(20345)# You look like you need a doctor.
+base.localAvatar.b_setSC(20341)# You'll never know when I'll stop.
+base.localAvatar.b_setSC(20320)# You've been robbed.
+base.localAvatar.b_setSC(20329)# You should know not to talk to strangers.
+base.localAvatar.b_setSC(20335)# You'll experience a shortfall.
+base.localAvatar.b_setSC(20113)# You are going to have such a headache.
+base.localAvatar.b_setSC(20107)# Oh good, I've been hunting for you.
+base.localAvatar.b_setSC(50101)# Blimey!
+base.localAvatar.b_setSC(50206)# You need a sharp sword and sharper wits.
+base.localAvatar.b_setSC(60103)# Yo!
+base.localAvatar.b_setSC(50208)# Watch yer tongue or I'll pickle it with sea salt!
+base.localAvatar.b_setSC(50211)# You're a canvas shy of a full sail, aren't ye mate?
+base.localAvatar.b_setSC(50210)# The horizon be as empty as yer head.
+base.localAvatar.b_setSC(50209)# Touch me loot and you get the boot!
+base.localAvatar.b_setSC(50300)# Fine shooting mate!
+base.localAvatar.b_setSC(50704)# Hey Bucko.
+base.localAvatar.b_setSC(50205)# Addle-minded fool!
+base.localAvatar.b_setSC(50202)# See ye in Davy Jones locker!
+base.localAvatar.b_setSC(20117)# I'm bringing down the law on you.
+base.localAvatar.b_setSC(50100)# Gangway!
+base.localAvatar.b_setSC(50102)# Well blow me down!
+base.localAvatar.b_setSC(50103)# Walk the plank!
+base.localAvatar.b_setSC(50102)# Dead men tell no tales....
+base.localAvatar.b_setSC(50105)# Shiver me timbers!
+base.localAvatar.b_setSC(50106)# Salty as a Kraken's kiss.
+base.localAvatar.b_setSC(50107)# Treasure be the measure of our pleasure!
+base.localAvatar.b_setSC(50108)# I don't fear death - I attune it.
+base.localAvatar.b_setSC(50200)# Blige rat!
+base.localAvatar.b_setSC(50201)# Scurvy dog!
+base.localAvatar.b_setSC(50203)# Scoundrel!
+base.localAvatar.b_setSC(50204)# Landlubber!
+base.localAvatar.b_setSC(50203)# Ye be one doubloon short of a full hull mate!
+base.localAvatar.b_setSC(50301)# A well placed blow!
+base.localAvatar.b_setSC(50302)# Nice shot!
+base.localAvatar.b_setSC(50303)# Well met!
+base.localAvatar.b_setSC(50304)# We showed them!
+base.localAvatar.b_setSC(50305)# Yer not so bad yerself!
+base.localAvatar.b_setSC(50306)# A fine plunder haul!
+base.localAvatar.b_setSC(50400)# Let's set sail.
+base.localAvatar.b_setSC(50401)# Let's get out of here.
+base.localAvatar.b_setSC(51100)# I be sailing some rough waters today.
+base.localAvatar.b_setSC(52100)# Want to group up?
+base.localAvatar.b_setSC(52101)# Join me crew?
+base.localAvatar.b_setSC(53101)# I caught a fish!
+base.localAvatar.b_setSC(53102)# I saw a Legendary Fish!
+base.localAvatar.b_setSC(53103)# What did you catch?
+base.localAvatar.b_setSC(53104)# This will make a whale of a tale!
+base.localAvatar.b_setSC(53105)# That was a beauty!
+base.localAvatar.b_setSC(53106)# Arr, the sea is treacherous today.
+base.localAvatar.b_setSC(53107)# What a bountiful haul of fish!
+base.localAvatar.b_setSC(10000)# The choice is yours!
+base.localAvatar.b_setSC(10001)# Who are you voting for?
+base.localAvatar.b_setSC(10002)# I'm pickin' Chicken!
+base.localAvatar.b_setSC(10003)# Vote now! Vote Cow!
+base.localAvatar.b_setSC(10004)# Go bananas! Vote Monkey!
+base.localAvatar.b_setSC(10005)# Be a honey! Vote Bear!
+base.localAvatar.b_setSC(10006)# Think big! Vote Pig!
+base.localAvatar.b_setSC(10007)# Vote Goat - and that's all she wrote!
+base.localAvatar.b_setSC(60672)# I just found the treasure I've been searching for.
+base.localAvatar.b_setSC(60673)# If you were a booger, I'd pick you first.
+base.localAvatar.b_setSC(60674)# Come to Tortuga often?
+base.localAvatar.b_setSC(60675)# Do you have a map? I just keep getting lost in your eyes.
+base.localAvatar.b_setSC(60676)# Flirt
+base.localAvatar.b_setSC(60677)# Zombie dance
+base.localAvatar.b_setSC(60671)# Hello, I'm a Pirate, and I'm here to steal your heart.
+base.localAvatar.b_setSC(60678)# Noisemaker
+base.localAvatar.b_setSC(60670)# Dance
+base.localAvatar.b_setSC(60669)# Sleep
+base.localAvatar.b_setSC(60668)# Celebrate
+base.localAvatar.b_setSC(60500)# Where are you?
+base.localAvatar.b_setSC(60501)# Let's go to the Gateway Store.
+base.localAvatar.b_setSC(60502)# Let's go to the Disco Hall.
+base.localAvatar.b_setSC(60503)# Let's go to Toontown.
+base.localAvatar.b_setSC(60504)# Let's go to Pirates of the Carribean.
+base.localAvatar.b_setSC(60504)# Flip coin
+base.localAvatar.b_setSC(60401)# Doh!
+base.localAvatar.b_setSC(60402)# Aw man!
+base.localAvatar.b_setSC(60404)# Bummer!
+base.localAvatar.b_setSC(60301)# Have you seen the Silly Meter?
+base.localAvatar.b_setSC(60302)# The Silly Meter is in Toon Hall.
+base.localAvatar.b_setSC(60303)# Things sure are getting silly around here!
+base.localAvatar.b_setSC(60304)# I saw a fire hydrant moving!
+base.localAvatar.b_setSC(60305)# Toontown is coming to life!
+base.localAvatar.b_setSC(60306)# Have you been to Flippy's new office?
+base.localAvatar.b_setSC(60307)# I caused a Silly Surge in battle!
+base.localAvatar.b_setSC(60308)# Let's defeat some Cogs to make Toontown sillier!
+base.localAvatar.b_setSC(60309)# The Silly Meter is bigger and crazier than ever!
+base.localAvatar.b_setSC(60310)# Lots of hydrants have come alive!
+base.localAvatar.b_setSC(60311)# I saw a mail box moving!
+base.localAvatar.b_setSC(60312)# I watched a trash can wake up!
+base.localAvatar.b_setSC(60313)# How silly can it get?
+base.localAvatar.b_setSC(60314)# What's going to happen next?
+base.localAvatar.b_setSC(60315)# Something silly, I bet!
+base.localAvatar.b_setSC(60316)# Have you caused a Silly Surge yet?
+base.localAvatar.b_setSC(60318)# Cog Invasion!
+base.localAvatar.b_setSC(60319)# Incoming!
+base.localAvatar.b_setSC(60320)# Let's stop these Cogs!
+base.localAvatar.b_setSC(60321)# I miss the Silly Surges!
+base.localAvatar.b_setSC(60322)# Let's go stop an Invasion!
+base.localAvatar.b_setSC(60323)# Toontown is sillier than ever now!
+base.localAvatar.b_setSC(60324)# Have you seen something come alive?
+base.localAvatar.b_setSC(60200)# Deck the halls...
+base.localAvatar.b_setSC(60201)# Load some pies...
+base.localAvatar.b_setSC(60202)# Joyful toons...
+base.localAvatar.b_setSC(60203)# Snowman heads...
+base.localAvatar.b_setSC(60204)# Toontown's merry...
+base.localAvatar.b_setSC(60205)# Lure good cheer...
+base.localAvatar.b_setSC(60220)# Deck the halls with seltzer spray! Happy Winter Holiday!
+base.localAvatar.b_setSC(60221)# Load some pies into your sleigh! Happy Winter Holiday!
+base.localAvatar.b_setSC(60222)# Joyful toons bring Cogs dismay! Happy Winter Holiday!
+base.localAvatar.b_setSC(60223)# Snowman heads are hot today! Happy Winter Holiday!
+base.localAvatar.b_setSC(60224)# Toontown's merry, come what may! Happy Winter Holiday!
+base.localAvatar.b_setSC(60225)# Lure good cheer the Toontown way! Happy Winter Holiday!
+base.localAvatar.b_setSC(60100)# Happy April Toons' Week!
+base.localAvatar.b_setSC(60101)# Welcome to my April Toons' Week party!
+base.localAvatar.b_setSC(60110)# Mickey is in Daisy Garden.
+base.localAvatar.b_setSC(60111)# Daisy is in Toontown Central.
+base.localAvatar.b_setSC(60112)# Minnie is in The Brrrgh.
+base.localAvatar.b_setSC(60113)# Pluto is in Melodyland.
+base.localAvatar.b_setSC(60114)# Donald is sleepwalking at the Speedway.
+base.localAvatar.b_setSC(60115)# Goofy is in Dreamland.
+base.localAvatar.b_setSC(60120)# Mickey is acting like Daisy!
+base.localAvatar.b_setSC(60121)# Daisy is acting like Mickey!
+base.localAvatar.b_setSC(60122)# Minnie is acting like Pluto!
+base.localAvatar.b_setSC(60123)# Pluto is acting like Minnie!
+base.localAvatar.b_setSC(60124)# Pluto is talking!
+base.localAvatar.b_setSC(60125)# Goofy is acting like Donald!
+base.localAvatar.b_setSC(60126)# Donald is dreaming he is Goofy!
+base.localAvatar.b_setSC(51001)# May our stiff winds be at our backs, the sun on our faces and our cannons fire true!
+base.localAvatar.b_setSC(60350)# Welcome to my Victory Party!
+base.localAvatar.b_setSC(60351)# This is a great Victory Party!
+base.localAvatar.b_setSC(60352)# We showed those Cogs who's boss!
+base.localAvatar.b_setSC(60353)# Good job helping end the Cog invasions!
+base.localAvatar.b_setSC(60354)# I bet this is driving the Cogs crazy!
+base.localAvatar.b_setSC(60355)# Let's play Cog-O-War!
+base.localAvatar.b_setSC(60356)# My team won at Cog-O-War!
+base.localAvatar.b_setSC(60357)# It's nice to have fire hydrants, trash cans, and mailboxes here!
+base.localAvatar.b_setSC(60358)# I like the balloon of the Doodle biting the Cog!
+base.localAvatar.b_setSC(60359)# I like the balloon of the Cog covered in ice cream!
+base.localAvatar.b_setSC(60360)# I like the wavy Cog that flaps his arms!
+base.localAvatar.b_setSC(60361)# I jumped on a Cog's face!
+base.localAvatar.b_setSC(1700)# Let's split up.
+base.localAvatar.b_setSC(1701)# Let's stay together.
+base.localAvatar.b_setSC(1702)# Let's battle the Cogs.
+base.localAvatar.b_setSC(1703)# Step on the switch.
+base.localAvatar.b_setSC(1704)# Go through the door.
+base.localAvatar.b_setSC(1803)# I'm in the Front Entrance.
+base.localAvatar.b_setSC(1804)# I'm in the Lobby.
+base.localAvatar.b_setSC(1805)# I'm in the hallway outside the Lobby.
+base.localAvatar.b_setSC(1807)# I'm in the Gear Room.
+base.localAvatar.b_setSC(1808)# I'm in the Boiler Room.
+base.localAvatar.b_setSC(1809)# I'm on the East Catwalk.
+base.localAvatar.b_setSC(1810)# I'm in the Paint Mixer.
+base.localAvatar.b_setSC(1811)# I'm in the Paint Mixer Storage Room.
+base.localAvatar.b_setSC(1812)# I'm on the West Silo Catwalk.
+base.localAvatar.b_setSC(1813)# I'm in the Pipe Room.
+base.localAvatar.b_setSC(1814)# I'm on the stairs to the Pipe Room.
+base.localAvatar.b_setSC(1815)# I'm in the Duct Room.
+base.localAvatar.b_setSC(1816)# I'm in the Side Entrance.
+base.localAvatar.b_setSC(1817)# I'm in Stomper Alley.
+base.localAvatar.b_setSC(1818)# I'm outside the Lava Room.
+base.localAvatar.b_setSC(1819)# I'm in the Lava Room.
+base.localAvatar.b_setSC(1820)# I'm in the Lava Storage Room.
+base.localAvatar.b_setSC(1821)# I'm on the West Catwalk.
+base.localAvatar.b_setSC(1822)# I'm in the Oil Room.
+base.localAvatar.b_setSC(1823)# I'm on the Warehouse Lookout.
+base.localAvatar.b_setSC(1824)# I'm in the Warehouse.
+base.localAvatar.b_setSC(1825)# I'm outside the Paint Mixer.
+base.localAvatar.b_setSC(1827)# I'm outside the Oil Room.
+base.localAvatar.b_setSC(1830)# I'm in the East Silo Control Room.
+base.localAvatar.b_setSC(1831)# I'm in the West Silo Control Room.
+base.localAvatar.b_setSC(1833)# I'm at the East Silo.
+base.localAvatar.b_setSC(1834)# I'm on the West Silo.
+base.localAvatar.b_setSC(1835)# I'm on the Center Silo.
+base.localAvatar.b_setSC(1841)# I'm on top of the East Silo.
+base.localAvatar.b_setSC(1860)# I'm on the West Silo Elevator.
+base.localAvatar.b_setSC(1861)# I'm on the East Silo Elevator.
+base.localAvatar.b_setSC(2100)# Please operate the crane.
+base.localAvatar.b_setSC(2101)# May I operate the crane?
+base.localAvatar.b_setSC(2102)# I need practice operating the crane.
+base.localAvatar.b_setSC(2103)# Pick up a disabled goon.
+base.localAvatar.b_setSC(2104)# Throw the goon at the CFO.
+base.localAvatar.b_setSC(2105)# Throw a safe now!
+base.localAvatar.b_setSC(2106)# Don't throw a safe now!
+base.localAvatar.b_setSC(2107)# A safe will knock off his helmet.
+base.localAvatar.b_setSC(2108)# A safe will become his new helmet.
+base.localAvatar.b_setSC(2109)# I can't reach any safes.
+base.localAvatar.b_setSC(2110)# I can't reach any goons.
+base.localAvatar.b_setSC(2200)# You need to hit the scale.
+base.localAvatar.b_setSC(2201)# I will hit the scale.
+base.localAvatar.b_setSC(2202)# I need help with the scale!
+base.localAvatar.b_setSC(2203)# You need to stun the Cogs.
+base.localAvatar.b_setSC(2204)# I will stun the Cogs.
+base.localAvatar.b_setSC(2205)# I need help with the Cogs!
+base.localAvatar.b_setSC(2206)# I need more evidence!
+base.localAvatar.b_setSC(2207)# I'm shooting for chairs in the top row.
+base.localAvatar.b_setSC(2208)# I'm shooting for chairs in the bottom row.
+base.localAvatar.b_setSC(2209)# Move out of the way! We can't hit the pan.
+base.localAvatar.b_setSC(2210)# I'll do Toon-Ups for us.
+base.localAvatar.b_setSC(2211)# I don't have any bonus weight.
+base.localAvatar.b_setSC(2212)# I have a bonus weight of 1.
+base.localAvatar.b_setSC(2213)# I have a bonus weight of 2.
+base.localAvatar.b_setSC(2214)# I have a bonus weight of 3.
+base.localAvatar.b_setSC(2215)# I have a bonus weight of 4.
+base.localAvatar.b_setSC(2216)# I have a bonus weight of 5.
+base.localAvatar.b_setSC(2217)# I have a bonus weight of 6.
+base.localAvatar.b_setSC(2218)# I have a bonus weight of 7.
+base.localAvatar.b_setSC(2219)# I have a bonus weight of 8.
+base.localAvatar.b_setSC(2220)# I have a bonus weight of 9.
+base.localAvatar.b_setSC(2221)# I have a bonus weight of 10.
+base.localAvatar.b_setSC(2222)# I have a bonus weight of 11.
+base.localAvatar.b_setSC(2223)# I have a bonus weight of 12.
+base.localAvatar.b_setSC(2300)# You feed the Cogs on the left.
+base.localAvatar.b_setSC(2301)# I'll feed the Cogs on the left.
+base.localAvatar.b_setSC(2302)# You feed the Cogs on the right.
+base.localAvatar.b_setSC(2303)# I'll feed the Cogs on the right.
+base.localAvatar.b_setSC(2304)# You feed the Cogs on the front.
+base.localAvatar.b_setSC(2305)# I'll feed the Cogs on the front.
+base.localAvatar.b_setSC(2306)# You feed the Cogs on the back.
+base.localAvatar.b_setSC(2307)# I'll feed the Cogs on the back.
+base.localAvatar.b_setSC(2308)# You use the seltzer bottle.
+base.localAvatar.b_setSC(2309)# I'll use the seltzer bottle.
+base.localAvatar.b_setSC(2310)# You use the golf tee.
+base.localAvatar.b_setSC(2311)# I'll use the golf tee.
+base.localAvatar.b_setSC(2312)# I'll serve this table.
+base.localAvatar.b_setSC(2313)# Can you serve this table?
+base.localAvatar.b_setSC(2314)# Feed the same cog again.
+base.localAvatar.b_setSC(2315)# Hurry, your cog is hungry!
+base.localAvatar.b_setSC(2316)# Please save the snacks for sadder toons.
+base.localAvatar.b_setSC(2317)# Take the snacks before they fall.
+base.localAvatar.b_setSC(3600)# Which track do you want to race on?
+base.localAvatar.b_setSC(3601)# Pick a track!
+base.localAvatar.b_setSC(3602)# Can we race on a different track?
+base.localAvatar.b_setSC(3603)# Let's pick a different track!
+base.localAvatar.b_setSC(4000)# Let's play minigolf!
+base.localAvatar.b_setSC(4001)# Let's play again!
+base.localAvatar.b_setSC(4002)# Want to golf?
+base.localAvatar.b_setSC(4100)# Let's play 'Walk In The Par.'
+base.localAvatar.b_setSC(4101)# Let's play 'Hole Some Fun.'
+base.localAvatar.b_setSC(4102)# Let's play 'The Hole Kit and Caboodle.'
+base.localAvatar.b_setSC(4103)# That course is too easy.
+base.localAvatar.b_setSC(4104)# That course is too hard.
+base.localAvatar.b_setSC(4105)# That course is just right.
+base.localAvatar.b_setSC(4200)# Try standing more to the left.
+base.localAvatar.b_setSC(4201)# Try standing more to the right.
+base.localAvatar.b_setSC(4202)# Try standing right in the middle.
+base.localAvatar.b_setSC(4203)# Try hitting it harder.
+base.localAvatar.b_setSC(4204)# Try hitting it softer.
+base.localAvatar.b_setSC(4205)# Try aiming more to the left.
+base.localAvatar.b_setSC(4206)# Try aiming more to the right.
+base.localAvatar.b_setSC(4207)# Try aiming right down the middle.
+base.localAvatar.b_setSC(4300)# So close!
+base.localAvatar.b_setSC(4301)# What a great shot!
+base.localAvatar.b_setSC(4302)# That was a lucky shot.
+base.localAvatar.b_setSC(4303)# I'll take a mulligan...
+base.localAvatar.b_setSC(4304)# That's a gimme.
+base.localAvatar.b_setSC(4305)# Fore!
+base.localAvatar.b_setSC(4306)# Shhhh!
+base.localAvatar.b_setSC(4307)# Good game!
+base.localAvatar.b_setSC(5100)# Let's go to the Front Three.
+base.localAvatar.b_setSC(5101)# Let's go to the Middle Six.
+base.localAvatar.b_setSC(5102)# Let's go to the Back Nine.
+base.localAvatar.b_setSC(5103)# Let's go to the C.E.O. Battle.
+base.localAvatar.b_setSC(5104)# Let's go to the Senior V.P Battle.
+base.localAvatar.b_setSC(5105)# Let's go to the Front Entrance.
+base.localAvatar.b_setSC(5106)# Let's go to the Side Entrance.
+base.localAvatar.b_setSC(5107)# Let's go to the Coin Mint.
+base.localAvatar.b_setSC(5108)# Let's go to the Dollar Mint.
+base.localAvatar.b_setSC(5109)# Let's go to the Bullion Mint.
+base.localAvatar.b_setSC(5110)# Let's go to the C.F.O. Battle.
+base.localAvatar.b_setSC(5111)# Let's go to the Chief Justice Battle.
+base.localAvatar.b_setSC(5112)# Let's go to the Lawbot A Office.
+base.localAvatar.b_setSC(5113)# Let's go to the Lawbot B Office.
+base.localAvatar.b_setSC(5114)# Let's go to the Lawbot C Office.
+base.localAvatar.b_setSC(5115)# Let's go to the Lawbot D Office.
+base.localAvatar.b_setSC(5200)# We're going to the Front Three.
+base.localAvatar.b_setSC(5201)# We're going to the Middle Six.
+base.localAvatar.b_setSC(5202)# We're going to the Back Nine.
+base.localAvatar.b_setSC(5203)# We're going to the C.E.O. Battle.
+base.localAvatar.b_setSC(5204)# We're going to the Senior V.P Battle.
+base.localAvatar.b_setSC(5205)# We're going to the Front Entrance.
+base.localAvatar.b_setSC(5206)# We're going to the Side Entrance.
+base.localAvatar.b_setSC(5207)# We're going to the Coin Mint.
+base.localAvatar.b_setSC(5208)# We're going to the Dollar Mint.
+base.localAvatar.b_setSC(5209)# We're going to the Bullion Mint.
+base.localAvatar.b_setSC(5210)# We're going to the C.F.O. Battle.
+base.localAvatar.b_setSC(5211)# We're going to the Chief Justice Battle.
+base.localAvatar.b_setSC(5212)# We're going to the Lawbot A Office.
+base.localAvatar.b_setSC(5213)# We're going to the Lawbot B Office.
+base.localAvatar.b_setSC(5214)# We're going to the Lawbot C Office.
+base.localAvatar.b_setSC(5215)# We're going to the Lawbot D Office.
+base.localAvatar.b_setSC(3200)# Where do you want to race?
+base.localAvatar.b_setSC(3201)# Let's pick a different track.
+base.localAvatar.b_setSC(3300)# Wow! You are FAST!
+base.localAvatar.b_setSC(3301)# You're too fast for me!
+base.localAvatar.b_setSC(3400)# Too scared to race me?
+
+
+
+#Smile Code
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setEmoteState(22,1)
+def part2():
+    base.localAvatar.setCheesyEffect(13, 0, 0)
+def part3():
+    base.localAvatar.setCheesyEffect(0, 0, 0)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(1))
+  seq.append(Func(part2))
+  seq.append(Wait(2))
+  seq.append(Func(part3))
+  seq.start()
+onTime() 
+
+#Looping codes
+
+from direct.interval.IntervalGlobal import *
+def big():
+    base.localAvatar.setCheesyEffect(13, 0, 0)
+def normal():
+    base.localAvatar.setCheesyEffect(0, 0, 0)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(big))
+  seq.append(Wait(2))
+  seq.append(Func(normal))
+  seq.append(Wait(2)
+  seq.append(Func(onTime))
+  seq.start()
+onTime()
+
+#Black cat client sided
+
+base.localAvatar.findAllMatches('**/head-short').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/head-front-short').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/head-long').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/head-front-long').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/ears-short').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/ears-long').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/neck').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/arms').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/feet').setColor(0.35,0.35,0.3)
+base.localAvatar.findAllMatches('**/legs').setColor(0.35,0.35,0.3)
+
+#ScientistEmcee talk
+
+from direct.interval.IntervalGlobal import *
+def intro():
+    base.localAvatar.b_setAnimState('ScientistEmcee')
+    base.talkAssistant.sendOpenTalk('Congratulations Toons!')
+def part2():
+    base.talkAssistant.sendOpenTalk('You all successfully held off the Cog Invasions...')
+def part3():
+    base.talkAssistant.sendOpenTalk('With a little help from our newly animated friends...')
+def part4():
+    base.talkAssistant.sendOpenTalk('And brought Toontown back to its usual silly self!')
+def part5():
+    base.talkAssistant.sendOpenTalk('We hope to get the Silly Meter rising again soon...')
+def part6():
+    base.talkAssistant.sendOpenTalk('So in the meantime, keep up the Cog fight...')
+def part7():
+    base.talkAssistant.sendOpenTalk('And enjoy the silliest place ever, Toontown!')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(intro))
+  seq.append(Wait(5))
+  seq.append(Func(part2))
+  seq.append(Wait(5))
+  seq.append(Func(part3))
+  seq.append(Wait(5))
+  seq.append(Func(part4))
+  seq.append(Wait(5))
+  seq.append(Func(part5))
+  seq.append(Wait(5))
+  seq.append(Func(part6))
+  seq.append(Wait(5))
+  seq.append(Func(part7))
+  seq.start()
+onTime()
+
+#Server side cream pies
+
+from direct.interval.IntervalGlobal import *
+def id():
+    base.cr.sendSetZoneMsg(2513)
+def play():
+    messenger.send('kickToPlayground', [1])
+    from toontown.shtiker.MapPage import MapPage
+    gohome = MapPage()
+    gohome.goHome()
+def onTime():
+  seq = Sequence()
+  seq.append(Wait(10))
+  seq.append(Func(id))
+  seq.append(Wait(2))
+  seq.append(Func(play))
+  seq.start()
+onTime()
+
+#teleport to funny farms
+
+from direct.interval.IntervalGlobal import *
+def tptohole():
+    base.localAvatar.b_setAnimState('TeleportOut')
+def id():
+    base.cr.sendSetZoneMsg(7000)
+def tpfromhole():
+    base.localAvatar.b_setAnimState('TeleportIn')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(tptohole))
+  seq.append(Wait(4.0))
+  seq.append(Func(id))
+  seq.append(Wait(2.0))
+  seq.append(Func(tpfromhole))
+  seq.start()
+onTime()
+
+#scientist clothes
+
+base.localAvatar.findAllMatches('**/sleeves').setColor(1.0,1.0,1.0)
+base.localAvatar.findAllMatches('**/torso-top').setColor(1.0,1.0,1.0)
+base.localAvatar.findAllMatches('**/torso-bot').setColor(1.0,1.0,1.0)
+base.localAvatar.findAllMatches('**/torso-bot-cap').setColor(1.0,1.0,1.0)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex = loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+sleeves.setTexture(sleevestex, 1)
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex = loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistB.jpg")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistC.jpg")
+short.setTexture(shorttex, 1)
+shortcap = base.localAvatar.findAllMatches('**/torso-bot-cap')
+shortcap.setTexture(shorttex, 1)
+
+#tye dye gloves
+
+glove = findhands
+gloves = loader.loadTexture("phase_4/maps/sleevesTieDye.jpg")
+glove.setTexture(gloves, 1)
+
+#octopus dog with armor
+
+base.localAvatar.findAllMatches('**/head').setColor(0.35,0.64,0.85)
+base.localAvatar.findAllMatches('**/head-front').setColor(0.35,0.64,0.85)
+base.localAvatar.findAllMatches('**/legs').setColor(0.35,0.64,0.85)
+base.localAvatar.findAllMatches('**/feet').setColor(0.35,0.64,0.85)
+base.localAvatar.findAllMatches('**/arms').setColor(0.35,0.64,0.85)
+base.localAvatar.findAllMatches('**/neck').setColor(0.35,0.64,0.85)
+base.localAvatar.findAllMatches('**/torso-bot').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/torso-bot-cap').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/torso-top').setColor(0.35,0.35,0.85)
+base.localAvatar.findAllMatches('**/sleeves').setColor(0.35,0.35,0.85)
+head1 = base.localAvatar.findAllMatches('**/head')
+head1tex = loader.loadTexture("custom/textures/metal.jpg")
+head1.setTexture(head1tex, 1)
+head2 = base.localAvatar.findAllMatches('**/head-front')
+head2tex = loader.loadTexture("custom/textures/metal.jpg")
+head2.setTexture(head2tex, 1)
+paws = base.localAvatar.findAllMatches('**/legs')
+pawstex = loader.loadTexture("custom/textures/metal.jpg")
+paws.setTexture(pawstex, 1)
+feet = base.localAvatar.findAllMatches('**/feet')
+feettex = loader.loadTexture("custom/textures/metal.jpg")
+feet.setTexture(feettex, 1)
+arms = base.localAvatar.findAllMatches('**/arms')
+armstex = loader.loadTexture("custom/textures/metal.jpg")
+arms.setTexture(armstex, 1)
+neck = base.localAvatar.findAllMatches('**/neck')
+necktex = loader.loadTexture("custom/textures/metal.jpg")
+neck.setTexture(necktex, 1)
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex = loader.loadTexture("custom/textures/armor.jpg")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex = loader.loadTexture("custom/textures/armor.jpg")
+short.setTexture(shorttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex = loader.loadTexture("custom/textures/armor.jpg")
+sleeves.setTexture(sleevestex, 1)
+shortcap = base.localAvatar.findAllMatches('**/torso-bot-cap')
+shortcap.setTexture(shorttex, 1)
+
+#become a resistance ranger
+
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_sellbotCrusher.jpg")
+shirt.setTexture(shirttex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_sellbotCrusher.jpg")
+short.setTexture(shorttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex = loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_sellbotCrusher.jpg")
+sleeves.setTexture(sleevestex, 1)
+shortcap = base.localAvatar.findAllMatches('**/torso-bot-cap')
+shortcap.setTexture(shorttex, 1)
+base.localAvatar.setName('RESISTANCE RANGER Green')
+
+#create merry-go-round
+
+from pandac.PandaModules import *
+from direct.task import Task
+merrygoround = loader.loadModel("phase_13/models/parties/partyMerryGoRound.bam")
+merrygoround.reparentTo(render)
+merrygoround.setPos(-9999.999,-9999.999,-9999.999)
+merrygoround.setHpr(0,0,0)
+merrygoround.setScale(5)
+pandaHprInterval1 = merrygoround.hprInterval(3,Point3(0,0,0),
+startHpr=Point3(270, 0, 0))
+pandaHprInterval2 = merrygoround.hprInterval(3,Point3(270, 0, 0),
+startHpr=Point3(0, 0, 0))
+merryspin = Sequence(pandaHprInterval1,
+name="merryspin")
+merryspin.loop()
+
+#play merry-go-round
+
+from direct.interval.IntervalGlobal import *
+def tptohole():
+    base.localAvatar.b_setAnimState('TeleportOut')
+def tpfromhole():
+    base.localAvatar.setXYZH(-9983.387,-10090.576,-9995.443,2170.439)
+    base.localAvatar.setHpr(360,360,360)
+    base.localAvatar.b_setAnimState('TeleportIn')
+def onTime():
+  seq = Sequence()
+  seq.append(Func(tptohole))
+  seq.append(Wait(4.0))
+  seq.append(Func(tpfromhole))
+  seq.start()
+onTime()
+
+#shorten codes
+
+def emote(str):
+    base.localAvatar.b_setEmoteState(str,1)
+anim = base.localAvatar.b_setAnimState
+talk = base.talkAssistant.sendOpenTalk
+loop = base.localAvatar.loop
+coff = base.localAvatar.collisionsOff
+con = base.localAvatar.collisionsOn
+zone = base.cr.sendSetZoneMsg
+server = messenger.send
+avatar = base.localAvatar
+local = base.cr
+cog = base.localAvatar.setCogIndex
+coordinates = base.localAvatar.setXYZH
+height = base.localAvatar.setZ
+findhands = findhands
+findneck = base.localAvatar.findAllMatches('**/neck')
+findhead = base.localAvatar.findAllMatches('**/head')
+findhfront = base.localAvatar.findAllMatches('**/head-front')
+findshirt = base.localAvatar.findAllMatches('**/torso-top')
+findsleeves = base.localAvatar.findAllMatches('**/sleeves')
+findshort = base.localAvatar.findAllMatches('**/torso-bot')
+findskirt = base.localAvatar.findAllMatches('**/torso-bot')
+findfeet = base.localAvatar.findAllMatches('**/feet')
+findlegs = base.localAvatar.findAllMatches('**/legs')
+findarms = base.localAvatar.findAllMatches('**/arms')
+findnose = base.localAvatar.findAllMatches('**/nose')
+findface = base.localAvatar.findAllMatches('**/muzzle')
+
+#monkey mouth
+
+mouth = base.localAvatar.findAllMatches('**/muzzle')
+mouthtext = loader.loadTexture("phase_3/maps/avatar_palette_3cmla_13.jpg")
+mouth.setTexture(mouthtext, 1)
+
+#custom music
+
+base.enableAllAudio()
+music = loader.loadMusic("custom/music/forever_charmed.mp3")
+music.play()
+music.setLoop()
+from direct.interval.IntervalGlobal import *
+
+#flippy clothes
+
+base.localAvatar.findAllMatches('**/torso-top').setColor(1,0.5,0.18)
+base.localAvatar.findAllMatches('**/sleeves').setColor(1,0.5,0.18)
+base.localAvatar.findAllMatches('**/sleeves').setColor(1,0.5,0.18)
+base.localAvatar.findAllMatches('**/torso-bot').setColor(0.62,0.26,0.36)
+base.localAvatar.findAllMatches('**/torso-bot-cap').setColor(0.62,0.26,0.36)
+shirt = base.localAvatar.findAllMatches('**/torso-top')
+shirttex = loader.loadTexture("phase_3/maps/desat_shirt_4.jpg")
+shirt.setTexture(shirttex, 1)
+sleeves = base.localAvatar.findAllMatches('**/sleeves')
+sleevestex = loader.loadTexture("phase_3/maps/desat_sleeve_4.jpg")
+sleeves.setTexture(sleevestex, 1)
+short = base.localAvatar.findAllMatches('**/torso-bot')
+shorttex = loader.loadTexture("phase_3/maps/desat_shorts_10.jpg")
+short.setTexture(shorttex, 1)
+shortcap = base.localAvatar.findAllMatches('**/torso-bot-cap')
+shortcap.setTexture(shorttex, 1)
+
+#rainbow gloves
+
+from direct.interval.IntervalGlobal import *
+def red():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.97,0.3,0.3)
+def pink():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.96,0.7,0.7)
+def purple():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.69,0.29,0.95)
+def green():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.4,1,0.4)
+def yellow():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.95,0.3)
+def dblue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.35,0.35,0.85)
+def blue():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.3,0.64,0.85)
+def orange():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,0.5,0.18)
+def cream():
+    base.localAvatar.findAllMatches('**/hands').setColor(1,1,0.57)
+def perwk():
+    base.localAvatar.findAllMatches('**/hands').setColor(0.55,0.55,1)
+def rainglov():
+  rain = Sequence()
+  rain.append(Func(red))
+  rain.append(Wait(0.3))
+  rain.append(Func(pink))
+  rain.append(Wait(0.3))
+  rain.append(Func(purple))
+  rain.append(Wait(0.3))
+  rain.append(Func(green))
+  rain.append(Wait(0.3))
+  rain.append(Func(yellow))
+  rain.append(Wait(0.3))
+  rain.append(Func(dblue))
+  rain.append(Wait(0.3))
+  rain.append(Func(blue))
+  rain.append(Wait(0.3))
+  rain.append(Func(orange))
+  rain.append(Wait(0.3))
+  rain.append(Func(cream))
+  rain.append(Wait(0.3))
+  rain.append(Func(perwk))
+  rain.append(Wait(0.3))
+  rain.append(Func(rainglov))
+  rain.start()
+rainglov()
+
+#humanist
+
+humanist = loader.loadTexture("phase_3/maps/Humanist.rgb")
+
+
+
+find = base.localAvatar.findAllMatches
+neck = find('**/neck')
+
+
+neck.setColor(3.30,0.30,0.3)
+
+neck.setTexture(humanist, 1)
+feet = find('**/feet')
+
+feet.setColor(3.30,0.30,0.3)
+feet.setTexture(humanist, 1)
+
+legs = find('**/legs')
+legs.setColor(3.30,0.30,0.3)
+legs.setTexture(humanist, 1)
+
+arms = find('**/arms')
+
+arms.setColor(3.30,0.30,0.3)
+arms.setTexture(humanist, 1)
+
+
+
+mouth = find('**/muzzle-short-neutral')
+mouth.setColor(3.30,0.30,0.3)
+
+mouth.setTexture(humanist, 1)
+
+
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_shirt_scientistC.jpg")
+
+
+sleeves=loader.loadTexture("phase_4/maps/tt_t_chr_shirtSleeve_scientist.jpg")
+
+
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_shorts_scientistB.jpg")
+
+
+torsotop = find('**/torso-top')
+torsotop.setColor(1,1,1)
+torsotop.setTexture(shirts, 1)
+
+
+torsobot1 = find('**/torso-bot')
+torsobot1.setColor(1,1,1)
+torsobot1.setTexture(shorts, 1)
+
+torsobot2 = find('**/torso-bot-cap')
+torsobot2.setColor(1,1,1)
+torsobot2.setTexture(shorts, 1)
+
+
+
+
+sleevet = find('**/sleeves')
+sleevet.setColor(1,1,1)
+sleevet.setTexture(sleeves, 1)
+
+
+
+#maxxed toon
+
+from direct.interval.IntervalGlobal import *
+def start():
+    base.localAvatar.setMaxHp(137)
+    base.localAvatar.setHp(137)
+def laffh():
+  laff = Sequence()
+  laff.append(Func(start))
+  laff.append(Wait(1))
+  laff.append(Func(laffh))
+  laff.start()
+laffh()
+
+#halloween style toon
+
+base.localAvatar.findAllMatches('**/head-front').removeNode()
+base.localAvatar.findAllMatches('**/head').removeNode()
+base.localAvatar.findAllMatches('**/head-short').removeNode()
+base.localAvatar.findAllMatches('**/head-short-front').removeNode()
+base.localAvatar.findAllMatches('**/head-long').removeNode()
+base.localAvatar.findAllMatches('**/head-long-front').removeNode()
+base.localAvatar.findAllMatches('**/ears-long').removeNode()
+base.localAvatar.findAllMatches('**/ears-short').removeNode()
+base.localAvatar.findAllMatches('**/eyes-long').removeNode()
+base.localAvatar.findAllMatches('**/eyes-short').removeNode()
+base.localAvatar.findAllMatches('**/arms').removeNode()
+base.localAvatar.findAllMatches('**/hands').removeNode()
+base.localAvatar.findAllMatches('**/neck').setColor(1,0,0)
+shirts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween5.jpg")
+sleve=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween5.jpg")
+shorts=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_halloween5.jpg")
+halstys=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirt_halloween5.jpg")
+halstsl=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shirtSleeve_halloween5.jpg")
+halstsh=loader.loadTexture("phase_4/maps/tt_t_chr_avt_shorts_halloween5.jpg")
+
+torsotop = base.localAvatar.findAllMatches('**/torso-top')
+torsotop.setColor(1,1,1)
+torsotop.setTexture(halstys, 1)
+
+
+torsobot1 = base.localAvatar.findAllMatches('**/torso-bot')
+torsobot1.setColor(1,1,1)
+torsobot1.setTexture(halstsh, 1)
+
+torsobot2 = base.localAvatar.findAllMatches('**/torso-bot-cap')
+torsobot2.setColor(1,1,1)
+torsobot2.setTexture(halstsh, 1)
+
+
+
+
+sleevet = base.localAvatar.findAllMatches('**/sleeves')
+sleevet.setColor(1,1,1)
+sleevet.setTexture(halstsl, 1)
+
+
+#district name
+ttd = base.cr.doFindAll("ToontownDistrict")
+for ttd in base.cr.doFindAll("ToontownDistrict"):
+    ttd.setName('Professor Graham will rule')
+
+#toon troop
+base.accept("insert", base.localAvatar.setSCResistance, [201])
+from direct.actor.Actor import Actor
+from pandac.PandaModules import *
+from direct.task import Task
+import math
+from math import pi, sin, cos
+from direct.showbase.ShowBase import ShowBase
+from direct.task import Task
+from direct.interval.IntervalGlobal import Sequence
+from pandac.PandaModules import Point3
+from pandac.PandaModules import *
+troophat = loader.loadModel("phase_3.5/models/gui/tt_m_gui_gm_toontroop_whistle.bam")
+troophat.reparentTo(base.localAvatar)
+troophat.setZ(5)
+troopwhistle = troophat.find('**/whistleIcon').hprInterval(3, Vec3(360, 0, 0))
+troopwhistle.loop()
+base.localAvatar.setName('TOON TROOP Graham')
+base.localAvatar.setNametagStyle(5)
+base.localAvatar.setMaxHp(112)
+def hp():
+     base.localAvatar.setHp(112)
+def hpl():
+  seq = Sequence()
+  seq.append(Func(hp))
+  seq.append(Wait(.1))
+  seq.append(Func(hpl))
+  seq.start()
+hpl()
+
+#treasure controlling
+
+def trpos(str):
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.setPosition(str)
+    ttt = base.cr.doFindAll("DDTreasure")
+    for ttt in base.cr.doFindAll("BRTreasure"):
+        ttt.setPosition(str)
+    ttt = base.cr.doFindAll("DGTreasure")
+    for ttt in base.cr.doFindAll("DGTreasure"):
+        ttt.setPosition(str)
+    ttt = base.cr.doFindAll("MMTreasure")
+    for ttt in base.cr.doFindAll("MMTreasure"):
+        ttt.setPosition(str)
+    ttt = base.cr.doFindAll("BRTreasure")
+    for ttt in base.cr.doFindAll("BRTreasure"):
+        ttt.setPosition(str)
+    ttt = base.cr.doFindAll("DLTreasure")
+    for ttt in base.cr.doFindAll("DLTreasure"):
+        ttt.setPosition(str)
+trpos(0,0,0)
+
+def trgrb():
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    ttt = base.cr.doFindAll("DDTreasure")
+    for ttt in base.cr.doFindAll("BRTreasure"):
+        ttt.d_requestGrab()
+    ttt = base.cr.doFindAll("DGTreasure")
+    for ttt in base.cr.doFindAll("DGTreasure"):
+        ttt.d_requestGrab()
+    ttt = base.cr.doFindAll("MMTreasure")
+    for ttt in base.cr.doFindAll("MMTreasure"):
+        ttt.d_requestGrab()
+    ttt = base.cr.doFindAll("BRTreasure")
+    for ttt in base.cr.doFindAll("BRTreasure"):
+        ttt.d_requestGrab()
+    ttt = base.cr.doFindAll("DLTreasure")
+    for ttt in base.cr.doFindAll("DLTreasure"):
+        ttt.d_requestGrab()
+trgrb()
+
+def trsvd():
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.startValentinesDay()
+    ttt = base.cr.doFindAll("DDTreasure")
+    for ttt in base.cr.doFindAll("BRTreasure"):
+        ttt.startValentinesDay()
+    ttt = base.cr.doFindAll("DGTreasure")
+    for ttt in base.cr.doFindAll("DGTreasure"):
+        ttt.startValentinesDay()
+    ttt = base.cr.doFindAll("MMTreasure")
+    for ttt in base.cr.doFindAll("MMTreasure"):
+        ttt.startValentinesDay()
+    ttt = base.cr.doFindAll("BRTreasure")
+    for ttt in base.cr.doFindAll("BRTreasure"):
+        ttt.startValentinesDay()
+    ttt = base.cr.doFindAll("DLTreasure")
+    for ttt in base.cr.doFindAll("DLTreasure"):
+        ttt.startValentinesDay()
+trsvd()
+
+def trnvd():
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in ttt:
+        ttt.stopValentinesDay()
+    ttt = base.cr.doFindAll("DDTreasure")
+    for ttt in ttt:
+        ttt.stopValentinesDay()
+    ttt = base.cr.doFindAll("DGTreasure")
+    for ttt in ttt:
+        ttt.stopValentinesDay()
+    ttt = base.cr.doFindAll("MMTreasure")
+    for ttt in ttt:
+        ttt.stopValentinesDay()
+    ttt = base.cr.doFindAll("BRTreasure")
+    for ttt in ttt:
+        ttt.stopValentinesDay()
+    ttt = base.cr.doFindAll("DLTreasure")
+    for ttt in ttt:
+        ttt.stopValentinesDay()
+trnvd()
+
+#trolley controlling
+
+tr = base.cr.doFindAll("Trolley")
+for tr in tr:
+    tr.enterEntering(0)
+
+tr = base.cr.doFindAll("Trolley")
+for tr in tr:
+    tr.enterLeaving(0)
+
+#player controlling
+
+ttp = base.cr.doFindAll("render/Disyer")
+for ttp in ttp:
+    ttp.setName('TOON TROOP Disyer')
+
+#minigame controlling
+
+ttd = base.cr.doFindAll("DivingGame")
+for ttd in base.cr.doFindAll("DivingGame"):
+    ttd.setTreasureGrabbed(base.localAvatar.doId, True)
+
+
+ttd = base.cr.doFindAll("TargetGame")
+for ttd in base.cr.doFindAll("TargetGame"):
+    ttd.speedLaunch = 2000
+    ttd.speedForward = 2000
+
+#render controlling
+
+ttr = base.cr.doFindAll("render")
+for ttr in base.cr.doFindAll("render"):
+    ttr.setHpr(0,0,315)
+
+#sellbot door controlling
+
+sbhqd = base.cr.doFindAll("SellbotHQDoor")
+for sbhqd in base.cr.doFindAll("SellbotHQDoor"):
+    sbhqd.setState('opening', 1)
+Sleep(1)
+sbhqd = base.cr.doFindAll("SellbotHQDoor")
+for sbhqd in base.cr.doFindAll("SellbotHQDoor"):
+    sbhqd.setState('open', 1)
+
+sbhqd = base.cr.doFindAll("SellbotHQDoor")
+for sbhqd in base.cr.doFindAll("SellbotHQDoor"):
+    sbhqd.setState('closing', 1)
+
+sbhqd = base.cr.doFindAll("SellbotHQDoor")
+for sbhqd in base.cr.doFindAll("SellbotHQDoor"):
+    sbhqd.setState('closed', 1)
+
+sbhqd = base.cr.doFindAll("CogHQDoor")
+for sbhqd in base.cr.doFindAll("CogHQDoor"):
+    sbhqd.rejectEnter = sbhqd.avatarEnter(base.localAvatar.doId)
+    sbhqd.setOtherZoneIdAndDoId(10100, base.localAvatar.doId)
+
+#man skirt
+
+closet = base.cr.doFindAll("closet")
+for closet in closet:
+    generateClothes = "purchaseDone-" + str(closet.doId)
+messenger.send(generateClothes)
+
+#vehicle controlling
+
+ttv = base.cr.doFindAll("Vehicle")
+for veh in base.cr.doFindAll("Vehicle"):veh.setTurbo(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
+base.accept("f1", veh.startTurbo, [])
+
+ttv = base.cr.doFindAll("Vehicle")
+for ttv in base.cr.doFindAll("Vehicle"):
+    ttvid = '"vehicle-' + ttv.doId
+ttvs = base.cr.doFindAll(ttvid)
+for ttvs in base.cr.doFindAll(ttvid):
+    ttvs.windResistance.setAmplitude(-30)
+
+#news
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setInvasionStatus(msgType=0, cogType="f", numRemaining=1, skeleton=1)
+    # msgType must be 0.
+    # cogType haves the same variables as putOnSuit. Like mm stands for MicroManager, ls for Loan Shark.
+    # numRemaining - you can give any number here.
+    # skeleton - if 1, it makes the cog invading as "Skelecog". if 0, it makes the cog invading as cogType.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBankUpgradeHolidayStart() # Something Toontastic happened to your Jeallybean Bank!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBingoStart() # It's time for Fish Bingo! Go to any available pier to play!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBingoOngoing() # Welcome! Fish Bingo is currently in progress.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBingoEnd() # Hope you had fun playing Fish Bingo.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBlackCatHolidayStart() # Create a Black Cat - Today only!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBlackCatHolidayStart() # Create a Black Cat - Today only!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBlackCatHolidayEnd() # Black Cat day has ended!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setCircuitRaceStart() # The Toontown Grand Prix at Goofy Speedway is about to begin! To win, collect the most points in three consecutive races!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setCircuitRaceOngoing() # Welcome! The Toontown Grand Prix is currently in progress.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setCircuitRaceEnd() # That's all for today's Toontown Grand Prix at Goofy Speedway. See you next week!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setGrandPrixWeekendStart() # It's Grand Prix Weekend at Goofy Speedway! Free and paid players collect the most points in three consecutive races.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setGrandPrixWeekendEnd() # That's all for Grand Prix Weekend. See you next year.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setHalloweenPropsHolidayStart() # It's Halloween in Toontown!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setHalloweenPropsHolidayEnd() # Halloween has ended. Boo!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanDayStart() # It's Jellybean Day! Get Double Jellybean rewards at Parties!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanDayEnd() # That's all for Jellybean Day. See you next year.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanFishingHolidayStart() # Double Bean Days for Fishing have begun!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanFishingHolidayEnd() # Double Bean Days for Fishing have ended!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanPartiesHolidayStart() # Double Bean Days for Party Games have begun!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanPartiesHolidayEnd() # Double Bean Days have ended!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanTrolleyHolidayStart() # Double Bean Days for Trolley Games have begun!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setJellybeanTrolleyHolidayEnd() # Double Bean Days for Trolley Games have ended!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setMoreXpHolidayStart() # Good news! Exlcusive Test Toon double gag experience time has started.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setMoreXpHolidayOngoing() # Good news! Exclusive Test Toon double gag experience time is currently ongoing.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setMoreXpHolidayEnd() # Good news! Exclusive Test Toon double gag experience time has ended. Thanks for helping us Test things!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setRoamingTrialerWeekendStart() # Tour Toontown is starting! Free players may now enter any neighborhood!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setRoamingTrialerWeekendOngoing() # Welcome to Tour Toontown! Free players may now enter any neighborhood!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setRoamingTrialerWeekendEnd() # That's all for Tour Toontown.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setSellbotNerfHolidayStart() # Operation: Storm Sellbot is happening now! Battle the VP today!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setSellbotNerfHolidayStart() # Operation: Storm Sellbot is happening now! Battle the VP today!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setSellbotNerfHolidayEnd() # Operation: Storm Sellbot has ended. Great work, Toons!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setTopToonsMarathonStart() # The Top Toons New Year's Day Marathon has begun!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setTopToonsMarathonEnd() # The Top Toons New Year's Day Marathon has ended.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setTrolleyHolidayStart() # Trolley Tracks is about to begin! Board any trolley with 2 or more toons to play.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setTrolleyHolidayOngoing() # Welcome! Trolley Tracks is currently in progress.
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setTrolleyHolidayEnd() # That's all for today's Trolley Tracks. See you next week!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setWinterCarolingStart() # Caroling has come to Toontown. Sing for your Snowman Head - see the Blog for details!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setWinterDecorationsStart() # It's Winter Holiday time in Toontown!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setWinterDecorationsEnd() # Winter Holiday is over - Happy New Year!
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.sendSystemMessage('Toon HQ: Hello.',1) # alternative to setSystemMessage
+
+nmgr = base.cr.doFindAll("NewsManager")
+for nmgr in base.cr.doFindAll("NewsManager"):
+    nmgr.setBingoWin(1) # Bingo congrats!
+
+#disyer servert cogs
+
+import random
+cogs = base.cr.doFindAllMatching("render")
+cogs.remove(base.localAvatar)
+for cogs in cogs:
+    level = random.randint(1, 50)
+    cogs.setSkelecog(True)
+    cogs.setSkeleRevives(1)
+    cogs.setName("Disyer\nDisyer's Servert\nLevel " + str(level))
+
+#ban blocker
+
+def blockBan(log):
+    ftf = "C:/Program Files/Disney/Disney Online/ToontownOnline/" + str(log)
+    rf = open('%s'%(ftf),'r')
+    del rf.read()
+    def blockBan():
+        if "Server is booting us out" in str(rf.readline()):
+            messenger.send('pandaRenderError')
+        else:
+            None
+    def loopBanCheck():
+      seq.append(Func(blockBan))
+      seq.append(Wait(0.1))
+      seq.append(Func(loopBanCheck))
+      seq.start()
+    loopBanCheck()
+blockBan('toontown-log_goeshere.log')
+
+#pet controlling
+
+pet = base.cr.doFindAll("T-Bone")
+for pet in base.cr.doFindAll("T-Bone"):
+    pet.displayTalk('Hi there! My name is \'T-Bone\'.')
+
+pet = base.cr.doFindAll("T-Bone")
+for pet in base.cr.doFindAll("T-Bone"):
+    pet.enterTeleportIn(0)
+
+pet = base.cr.doFindAll("T-Bone")
+for pet in base.cr.doFindAll("T-Bone"):
+    pet.enterTeleportOut(0)
+
+pet = base.cr.doFindAll("T-Bone")
+for pet in base.cr.doFindAll("T-Bone"):
+    pet.setPetName('T-Skull')
+
+pet = base.cr.doFindAll("T-Bone")
+for pet in base.cr.doFindAll("T-Bone"):
+    pet.enterDance()
+
+pet = base.cr.doFindAll("T-Bone")
+for pet in base.cr.doFindAll("T-Bone"):
+    pet.enterSwim()
+
+# Pets are also similar to base.localAvatar.
+
+#anim tracker
+
+from direct.interval.IntervalGlobal import *
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+from direct.task import Task
+
+animState = OnscreenText(text='', style=1, fg=(1,1,1,1), align=TextNode.ALeft, pos=(-1.15, .8), scale=.07)
+
+def updateAnimState():
+    animState.setText(str(base.localAvatar.getCurrentAnim()))
+
+def loopAnimUpdate():
+  lau = Sequence()
+  lau.append(Func(updateAnimText))
+  lau.append(Wait(0.1))
+  lau.append(Func(loopAnimUpdate))
+  lau.start()
+
+loopAnimUpdate()
+
+#animation buttons
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Swimming"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('swim')
+    b1.hide()
+    b2.show()
+    b3.show()
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 0
+
+def setText2():
+    bk_text = "Sitting"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('SitStart')
+    b1.show()
+    b2.hide()
+    b3.show()
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 1
+    
+
+def setText3():
+    bk_text = "Catching"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Catching')
+    b1.show()
+    b2.show()
+    b3.hide()
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 1
+
+def setText4():
+    bk_text = "Fast RC"
+    textObject.setText(bk_text)
+    ttv = base.cr.doFindAll("Vehicle")
+    for ttv in base.cr.doFindAll("Vehicle"):
+        tid = ttv.doId
+    
+    lttv = base.cr.doFindAll("vehicle-" + str(tid))
+    for lttv in base.cr.doFindAll("vehicle-" + str(tid)):
+        lttv.windResistance.setAmplitude(-190)
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.hide()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 1
+
+def setText5a():
+    bk_text = "Neutral"
+    textObject.setText(bk_text)
+    base.localAvatar.reparentTo(render)
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.destroy()
+    b5 = DirectButton(text = (di, di, di, di), scale=.06, pos = (-0,-0,-.95), command=setText5b)
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 0
+
+def setText5b():
+    bk_text = "Dying"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('Died')
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.destroy()
+    db = "neutral"
+    b5 = DirectButton(text = (db, db, db, db), scale=.06, pos = (-0,-0,-.95), command=setText5a)
+    b6.show()
+    b7.show()
+    b8.show()
+    var = 0
+
+def setText6():
+    bk_text = "Racing Code"
+    textObject.setText(bk_text)
+    ttv = base.cr.doFindAll("Vehicle")
+    for ttv in base.cr.doFindAll("Vehicle"):
+      ttv.setTurbo(999999)
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.show()
+    b6.hide()
+    b7.show()
+    b8.show()
+    var = 1
+
+def setText7():
+    bk_text = "Nutty River"
+    textObject.setText(bk_text)
+    base.localAvatar.book.pages[1].showPop = 1
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.hide()
+    b8.show()
+    var = 1
+
+def setText8():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    b1.show()
+    b2.show()
+    b3.show0
+    b4.show()
+    b5.show()
+    b6.show()
+    b7.show()
+    b8.hide()
+    var = 1
+
+base.accept("escape", normal1, [])
+sw = "swim"
+b1 = DirectButton(text = (sw, sw, sw, sw), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+si = "sit"
+b2 = DirectButton(text = (si, si, si, si), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+ct = "catch"
+b3 = DirectButton(text = (ct, ct, ct, ct), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+gr = "golf rotate"
+b4 = DirectButton(text = (gr, gr, gr, gr), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+di = "die"
+b5 = DirectButton(text = (di, di, di, di), scale=.06, pos = (-0,-0,-.95), command=setText5b)
+rc = "r c"
+b6 = DirectButton(text = (rc, rc, rc, rc), scale=.06, pos = (.16,-0,-.95), command=setText6)
+rv = "river"
+b7 = DirectButton(text = (rv, rv, rv, rv), scale=.06, pos = (.35,-0,-.95), command=setText7)
+mb = "member"
+b8 = DirectButton(text = (mb, mb, mb, mb), scale=.06, pos = (.565,-0,-.95), command=setText8)
+
+#nametag color change
+
+from direct.actor.Actor import Actor 
+from pandac.PandaModules import * 
+from direct.task import Task 
+from direct.showbase.ShowBase import ShowBase 
+from direct.task import Task 
+from direct.interval.IntervalGlobal import Sequence 
+from pandac.PandaModules import * 
+nametag3DLight = AmbientLight('alight')
+nametag3DLight.setColor(VBase4(.93,0,0,1))
+colorChange = render.attachNewNode(nametag3DLight)
+messenger.send('nametagAmbientLightChanged', [colorChange])
+
+#pumpkin head steps
+
+base.cr.sendSetZoneMsg(2649)# - Toontown Central
+base.cr.sendSetZoneMsg(1834)# - Donald's Dock
+base.cr.sendSetZoneMsg(5620)# - Daisy's Gardens
+base.cr.sendSetZoneMsg(4835)# - Minnie's Melodyland
+base.cr.sendSetZoneMsg(3707)# - The Brrrgh
+base.cr.sendSetZoneMsg(9619)# - Donald's Dreamland
+
+#get all toons' name and id
+toons = base.cr.doFindAll("render")
+for toons in base.cr.doFindAll("render"):
+    print toons.getName()
+    print toons.doId
+
+#sellbot hq go to vp lobby
+
+base.localAvatar.setCogParts([20, 80, 56447, 56411])
+shqd = base.cr.doFindAll("SellbotHQDoor")
+for shqd in base.cr.doFindAll("SellbotHQDoor"): 
+    shqd.rejectEnter = shqd.avatarEnter(base.localAvatar.doId) 
+    shqd.setOtherZoneIdAndDoId(11100,451103054)
+
+#super flip
+
+from direct.interval.IntervalGlobal import *
+def start():
+    base.localAvatar.setPos(7,-13,7)
+def anim():
+    base.localAvatar.b_setAnimState(('jumpAirborne'))
+def intro():
+    base.localAvatar.setHpr(0,0,90)
+def part2():
+    base.localAvatar.setHpr(0,0,180)
+def part3():
+    base.localAvatar.setHpr(0,0,270)
+def part4():
+    base.localAvatar.setHpr(0,0,360)
+def onTime():
+  seq = Sequence()
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.append(Func(anim))
+  seq.append(Wait(0))
+  seq.append(Func(start))
+  seq.append(Wait(0))
+  seq.append(Func(intro))
+  seq.append(Wait(.1))
+  seq.append(Func(part2))
+  seq.append(Wait(.1))
+  seq.append(Func(part3))
+  seq.append(Wait(.1))
+  seq.append(Func(part4))
+  seq.append(Wait(.1))
+  seq.start()
+onTime()
+

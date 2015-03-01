@@ -1,0 +1,306 @@
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = "Button Hack Ready"
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = "Button Hack Ready"
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Collisions Off"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOff()
+    var = 0
+
+def setText2():
+    bk_text = "Suit"
+    textObject.setText(bk_text)
+    base.localAvatar.setDNAString('t\x01\x02\x01\x01\x37\x09\x62\x09\x29\x09\x14\x00\x14\x14')
+    var = 1
+    
+
+def setText3():
+    bk_text = "Laff"
+    textObject.setText(bk_text)
+    ttt = base.cr.doFindAll("TTTreasure")
+    for ttt in base.cr.doFindAll("TTTreasure"):
+        ttt.d_requestGrab()
+    var = 1
+
+def setText4():
+    bk_text = "Die"
+    textObject.setText(bk_text)
+    base.localAvatar.d_squish(3)
+    var = 1
+
+def setText5():
+    bk_text = "Collisons On"
+    textObject.setText(bk_text)
+    base.localAvatar.collisionsOn()
+    var = 0
+
+def setText6():
+    bk_text = "Member"
+    textObject.setText(bk_text)
+    def new():
+     return True
+    base.cr.isPaid = new
+    base.cr.isParentPasswordSet = new
+    var = 1
+
+def setText7():
+    bk_text = "Splash"
+    toon = base.localAvatar.getX()
+    toon2 = base.localAvatar.getY()
+    toon3 = base.localAvatar.getZ()
+    base.localAvatar.d_playSplashEffect(toon, toon2, toon3)
+    base.localAvatar.playSplashEffect(toon, toon2, toon3)
+    var = 1
+
+def setText8():
+   bk_text = "Funny"
+   textObject.setText(bk_text)
+   base.cr.sendSetZoneMsg(7000)
+   var = 1
+
+def setText9():
+    bk_text = "Port Out"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportOut')
+    var = 1
+
+def setText10():
+    bk_text = "Port In"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState('TeleportIn')
+    var = 1
+
+def setText11():
+    bk_text = "Global"
+    textObject.setText(bk_text)
+    base.localAvatar.setTeleportAccess([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.setHoodsVisited([1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000])
+    base.localAvatar.book.pages[1].showPop = 1
+    var = 1
+
+def setText12():
+    bk_text = "Fail"
+    textObject.setText(bk_text)
+    base.talkAssistant.sendOpenTalk('Fail\n' *1)
+    var = 1
+
+def setText13():
+    bk_text = "Sit"
+    textObject.setText(bk_text)
+    base.localAvatar.enterSitStart()
+    var = 1
+
+def setText14():
+    bk_text = "Dance"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setAnimState("victory", 10)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("C.Off", "c.off", "c.off", "C.Off"), scale=.06, pos = (-.98,-0,-.95), command=setText1)
+b2 = DirectButton(text = ("Suit", "suit", "suit", "Suit"), scale=.06, pos = (-.8,-0,-.95), command=setText2)
+b3 = DirectButton(text = ("Laff", "laff", "laff", "Laff"), scale=.06, pos = (-.6,-0,-.95), command=setText3)
+b4 = DirectButton(text = ("Die", "-3", "-3", "Die"), scale=.06, pos = (-.28,-0,-.95), command=setText4)
+b5 = DirectButton(text = ("C.On", "c.on", "c.on", "C.On"), scale=.06, pos = (-0,-0,-.95), command=setText5)
+b6 = DirectButton(text = ("Mem", "Mem", "Mem", "Mem"), scale=.06, pos = (.16,-0,-.95), command=setText6)
+b7 = DirectButton(text = ("Splash", "Splash", "Splash", "Splash"), scale=.07, pos = (.35,-0,-.95), command=setText7)
+b8 = DirectButton(text = ("Funny", "farms", "farms", "Funny"), scale=.06, pos = (.565,-0,-.95), command=setText8)
+b9 = DirectButton(text = ("TPo", "ani", "ani", "TPo"), scale=.05, pos = (-.18,-.0,-.97), command=setText9)
+b10= DirectButton(text = ("TPi", "ani", "ani", "TPi"), scale=.05, pos = (-.37,-.0,-.97), command=setText10)
+b11= DirectButton(text = ("Global", "tp", "tp", "Global"), scale=.07, pos = (-.43,-.0,-.90), command=setText11)
+b12= DirectButton(text = ("Fail", "fail", "fail", "Fail"), scale=.06, pos = (-.14,-.0,-.90), command=setText12)
+b13= DirectButton(text = ("Sit", "sit", "sit", "Sit"), scale=.06, pos = (-.98,-.0,-.87), command=setText13)
+b14= DirectButton(text = ("Dance", "Dance", "Dance", "Dance"), scale=.06, pos = (.15,-.0,-.86), command=setText14)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = ""
+textObject = OnscreenText(text = bk_text, pos = (3,3),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def setText():
+    bk_text = "ZoneFound"
+    textObject.setText(bk_text)
+    houseZoneGet = base.localAvatar.getZoneId()
+    houseZoneGet += 10
+    houseZoneGet = int(houseZoneGet)
+    base.cr.sendSetZoneMsg(houseZoneGet)
+
+b = DirectButton(text = ("Raid House", "Activate", "Activate", "Raid House"), scale=.06, pos = (-.75,-0,-.87), command=setText)
+
+from direct.gui.OnscreenText import OnscreenText
+from direct.gui.DirectGui import *
+from pandac.PandaModules import TextNode
+
+bk_text = " "
+textObject = OnscreenText(text = bk_text, pos = (0.95,-0.95),
+scale = 0.07,fg=(1,0.5,0.5,1),align=TextNode.ACenter,mayChange=1)
+
+def normal1():
+    bk_text = " "
+    textObject.setText(bk_text)
+
+def setText1():
+    bk_text = "Purple"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2000)
+    var = 0
+
+def setText2():
+    bk_text = "BLUE!"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2001)
+    var = 1
+    
+
+def setText3():
+    bk_text = "Cyan"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2002)
+    var = 1
+
+def setText4():
+    bk_text = "Teal"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2003)
+    var = 1
+
+def setText5():
+    bk_text = "Green"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2004)
+    var = 0
+
+def setText6():
+    bk_text = "Yellow"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2005)
+    var = 1
+
+def setText7():
+    bk_text = "Orange"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2006)
+    var = 1
+
+def setText8():
+    bk_text = "Red"
+    textObject.setText(bk_text)
+    base.localAvatar.b_setSC(2007)
+    var = 1
+
+base.accept("escape", normal1, [])
+b1 = DirectButton(text = ("Purple", "Purple", "Purple", "Purple"), scale=.05, pos = (-.99,-0,-.79), command=setText1)
+b2 = DirectButton(text = ("Blue", "Blue", "Blue", "Blue"), scale=.06, pos = (-.8,-0,-.79), command=setText2)
+b3 = DirectButton(text = ("Cyan", "Cyan", "Cyan", "Cyan"), scale=.06, pos = (-.6,-0,-.78), command=setText3)
+b4 = DirectButton(text = ("Teal", "Teal", "Teal", "Teal"), scale=.06, pos = (-.4,-0,-.81), command=setText4)
+b5 = DirectButton(text = ("Green", "Green", "Green", "Green"), scale=.06, pos = (-.2,-0,-.80), command=setText5)
+b6 = DirectButton(text = ("Yellow", "Yellow", "Yellow", "Yellow"), scale=.06, pos = (.1,-0,-.80), command=setText6)
+b7 = DirectButton(text = ("Orange", "Orange", "Orange", "Orange"), scale=.06, pos = (.35,-0,-.80), command=setText7)
+b8 = DirectButton(text = ("Red", "Red", "Red", "Red"), scale=.07, pos = (.53,-0,-.80), command=setText8)
+
+
+from direct.interval.IntervalGlobal import *
+def spinSetup():
+ height = base.localAvatar.getZ()
+ base.localAvatar.collisionsOff()
+ base.localAvatar.setZ(height + 6)
+def spinOne():
+ base.localAvatar.setHpr(0,10,0)
+def spinTwo():
+ base.localAvatar.setHpr(0,30,0)
+def spinThree():
+ base.localAvatar.setHpr(0,50,0)
+def spinFour():
+ base.localAvatar.setHpr(0,70,0)
+def spinFive():
+ base.localAvatar.setHpr(0,90,0)
+def spinSix():
+ base.localAvatar.setHpr(0,110,0)
+def spinSeven():
+ base.localAvatar.setHpr(0,130,0)
+def spinEight():
+ base.localAvatar.setHpr(0,150,0)
+def spinNine():
+ base.localAvatar.setHpr(0,170,0)
+def spinTen():
+ base.localAvatar.setHpr(0,190,0)
+def spinEleven():
+ base.localAvatar.setHpr(0,210,0)
+def spinTwelve():
+ base.localAvatar.setHpr(0,230,0)
+def spinThirteen():
+ base.localAvatar.setHpr(0,250,0)
+def spinFourteen():
+ base.localAvatar.setHpr(0,270,0)
+def spinFifteen():
+ base.localAvatar.setHpr(0,290,0)
+def spinSixteen():
+ base.localAvatar.setHpr(0,310,0)
+def spinSeventeen():
+ base.localAvatar.setHpr(0,330,0)
+def spinEighteen():
+ base.localAvatar.setHpr(0,0,0)
+def spinEnd():
+ base.localAvatar.collisionsOn()
+def spinOnTime():
+ seq = Sequence()
+ seq.append(Func(spinSetup))
+ seq.append(Wait(.1))
+ seq.append(Func(spinOne))
+ seq.append(Wait(.1))
+ seq.append(Func(spinTwo))
+ seq.append(Wait(.1))
+ seq.append(Func(spinThree))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFour))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFive))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSix))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSeven))
+ seq.append(Wait(.1))
+ seq.append(Func(spinEight))
+ seq.append(Wait(.1))
+ seq.append(Func(spinNine))
+ seq.append(Wait(.1))
+ seq.append(Func(spinTen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinEleven))
+ seq.append(Wait(.1))
+ seq.append(Func(spinTwelve))
+ seq.append(Wait(.1))
+ seq.append(Func(spinThirteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFourteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinFifteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSixteen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinSeventeen))
+ seq.append(Wait(.1))
+ seq.append(Func(spinEighteen))
+ seq.append(Wait(.2))
+ seq.append(Func(spinEnd))
+ seq.start()
+
+bot1 = DirectButton(text = ("Spin", "Spin", "Spin", "Spin"), scale=.06, pos = (.70,0,-.85), command=spinOnTime)
+
+def bFive():
+ base.localAvatar.b_setSC(20136)
+
+b5 = DirectButton(text = ("Raid!", "Raid!", "Raid!", "Raid!"), scale=.05, pos = (-.0,0,-.87), command=bFive)
+
